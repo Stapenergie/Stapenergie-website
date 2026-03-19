@@ -1,0 +1,244 @@
+# ============================================================
+#  STAP Energie — Automatische Deploy Pipeline
+#  
+#  Bevat twee agents:
+#  1. Security Agent  — controleert de code vóór publicatie
+#  2. Deploy Agent    — publiceert naar WordPress via REST API
+#
+#  Wordt automatisch gestart zodra je een bestand pusht
+#  naar de 'main' branch op GitHub.
+# ============================================================
+
+name: STAP Energie Deploy Pipeline
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**.html'
+      - 'content/**.json'
+
+jobs:
+
+  # ──────────────────────────────────────────────
+  #  AGENT 1: SECURITY
+  #  Controleert het HTML-bestand op risico's
+  #  voordat er iets live gaat.
+  # ──────────────────────────────────────────────
+  security-check:
+    name: Security Agent
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Bestanden ophalen
+        uses: actions/checkout@v4
+
+      - name: Python installeren
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Security scan uitvoeren
+        run: |
+          python3 << 'EOF'
+          import os, sys, re, glob
+
+          print("🔒 Security Agent gestart...")
+          issues = []
+
+          html_files = glob.glob('**/*.html', recursive=True)
+          if not html_files:
+              print("Geen HTML bestanden gevonden.")
+              sys.exit(0)
+
+          for filepath in html_files:
+              with open(filepath, 'r', encoding='utf-8') as f:
+                  content = f.read()
+
+              print(f"Scannen: {filepath}")
+
+              # Check 1: Geen hardcoded wachtwoorden of API keys
+              patterns = [
+                  (r'password\s*=\s*["\'][^"\']{6,}["\']', 'Mogelijk hardcoded wachtwoord'),
+                  (r'api[_-]?key\s*[:=]\s*["\'][^"\']{10,}["\']', 'Mogelijk hardcoded API key'),
+                  (r'secret\s*[:=]\s*["\'][^"\']{8,}["\']', 'Mogelijk hardcoded secret'),
+                  (r'Bearer\s+[A-Za-z0-9\-_]{20,}', 'Hardcoded Bearer token gevonden'),
+              ]
+              for pattern, message in patterns:
+                  if re.search(pattern, content, re.IGNORECASE):
+                      issues.append(f"[{filepath}] {message}")
+
+              # Check 2: Geen externe scripts van onbekende domeinen
+              script_srcs = re.findall(r'<script[^>]+src=["\']([^"\']+)["\']', content)
+              allowed_domains = [
+                  'fonts.googleapis.com',
+                  'fonts.gstatic.com',
+                  'cdnjs.cloudflare.com',
+                  'cdn.jsdelivr.net',
+                  'unpkg.com',
+                  'esm.sh',
+              ]
+              for src in script_srcs:
+                  if src.startswith('http') or src.startswith('//'):
+                      allowed = any(domain in src for domain in allowed_domains)
+                      if not allowed:
+                          issues.append(f"[{filepath}] Onbekend extern script: {src}")
+
+              # Check 3: Geen iframes naar onbekende bronnen
+              iframes = re.findall(r'<iframe[^>]+src=["\']([^"\']+)["\']', content)
+              for src in iframes:
+                  if src.startswith('http') and 'stapenergie.nl' not in src:
+                      issues.append(f"[{filepath}] Extern iframe gevonden: {src}")
+
+              print(f"  Checks voltooid voor {filepath}")
+
+          if issues:
+              print("\n❌ Security Agent: GEBLOKKEERD — problemen gevonden:")
+              for issue in issues:
+                  print(f"  → {issue}")
+              sys.exit(1)
+          else:
+              print("\n✅ Security Agent: Alle checks geslaagd. Deploy mag doorgaan.")
+          EOF
+
+  # ──────────────────────────────────────────────
+  #  AGENT 2: DEPLOY
+  #  Publiceert het HTML-bestand naar WordPress.
+  #  Wordt alleen uitgevoerd als de security check
+  #  succesvol was.
+  # ──────────────────────────────────────────────
+  deploy-to-wordpress:
+    name: Deploy Agent
+    runs-on: ubuntu-latest
+    needs: security-check
+
+    steps:
+      - name: Bestanden ophalen
+        uses: actions/checkout@v4
+
+      - name: Python installeren
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Requests library installeren
+        run: pip install requests
+
+      - name: Publiceren naar WordPress
+        env:
+          WP_URL: ${{ secrets.WP_URL }}
+          WP_USERNAME: ${{ secrets.WP_USERNAME }}
+          WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
+        run: |
+          python3 << 'EOF'
+          import os, sys, requests, base64, glob, json
+          from datetime import datetime
+
+          print("🚀 Deploy Agent gestart...")
+
+          wp_url      = os.environ['WP_URL'].rstrip('/')
+          wp_user     = os.environ['WP_USERNAME']
+          wp_password = os.environ['WP_APP_PASSWORD']
+
+          # Authenticatie via Base64
+          credentials = f"{wp_user}:{wp_password}"
+          token = base64.b64encode(credentials.encode()).decode()
+          headers = {
+              'Authorization': f'Basic {token}',
+              'Content-Type': 'application/json',
+          }
+
+          # Verbinding testen
+          print(f"Verbinding testen met {wp_url}...")
+          test = requests.get(f"{wp_url}/wp-json/wp/v2/users/me", headers=headers)
+          if test.status_code != 200:
+              print(f"❌ Verbinding mislukt (status {test.status_code})")
+              print(f"   Controleer WP_USERNAME en WP_APP_PASSWORD in GitHub Secrets")
+              sys.exit(1)
+          print(f"✅ Verbonden als: {test.json().get('name', wp_user)}")
+
+          # ── HTML bestanden deployen als pagina's ──
+          html_files = glob.glob('*.html')
+          
+          # Mapping: bestandsnaam → WordPress paginatitel + slug
+          page_map = {
+              'stap-energie-homepage.html': {
+                  'title': 'Homepage',
+                  'slug': 'homepage-claude',
+                  'status': 'draft',  # eerst als concept, jij publiceert zelf
+              },
+          }
+
+          results = []
+
+          for filename in html_files:
+              config = page_map.get(filename, {
+                  'title': filename.replace('.html', '').replace('-', ' ').title(),
+                  'slug': filename.replace('.html', ''),
+                  'status': 'draft',
+              })
+
+              print(f"\nVerwerken: {filename} → '{config['title']}'")
+
+              with open(filename, 'r', encoding='utf-8') as f:
+                  html_content = f.read()
+
+              # Controleer of pagina al bestaat (zoek op slug)
+              search = requests.get(
+                  f"{wp_url}/wp-json/wp/v2/pages",
+                  headers=headers,
+                  params={'slug': config['slug'], 'per_page': 1}
+              )
+              existing = search.json() if search.status_code == 200 else []
+
+              payload = {
+                  'title': config['title'],
+                  'content': html_content,
+                  'slug': config['slug'],
+                  'status': config['status'],
+              }
+
+              if existing:
+                  # Bestaande pagina bijwerken
+                  page_id = existing[0]['id']
+                  response = requests.post(
+                      f"{wp_url}/wp-json/wp/v2/pages/{page_id}",
+                      headers=headers,
+                      json=payload
+                  )
+                  action = "bijgewerkt"
+              else:
+                  # Nieuwe pagina aanmaken
+                  response = requests.post(
+                      f"{wp_url}/wp-json/wp/v2/pages",
+                      headers=headers,
+                      json=payload
+                  )
+                  action = "aangemaakt"
+
+              if response.status_code in [200, 201]:
+                  page_data = response.json()
+                  page_url = page_data.get('link', '')
+                  print(f"  ✅ Pagina {action}: {page_url}")
+                  results.append({'file': filename, 'status': 'succes', 'url': page_url, 'action': action})
+              else:
+                  print(f"  ❌ Fout bij {filename}: {response.status_code}")
+                  print(f"     {response.text[:200]}")
+                  results.append({'file': filename, 'status': 'fout', 'code': response.status_code})
+
+          # Samenvatting
+          print("\n" + "="*50)
+          print(f"Deploy Agent samenvatting — {datetime.now().strftime('%d-%m-%Y %H:%M')}")
+          print("="*50)
+          geslaagd = [r for r in results if r['status'] == 'succes']
+          mislukt  = [r for r in results if r['status'] == 'fout']
+          print(f"✅ Geslaagd: {len(geslaagd)}")
+          print(f"❌ Mislukt:  {len(mislukt)}")
+          for r in geslaagd:
+              print(f"   → {r['file']} ({r['action']}): {r['url']}")
+          if mislukt:
+              sys.exit(1)
+
+          print("\n🎉 Deploy succesvol afgerond!")
+          EOF
