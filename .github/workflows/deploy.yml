@@ -11,6 +11,9 @@
 
 name: STAP Energie Deploy Pipeline
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 on:
   push:
     branches:
@@ -33,11 +36,15 @@ jobs:
     steps:
       - name: Bestanden ophalen
         uses: actions/checkout@v4
+        env:
+          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
       - name: Python installeren
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+        env:
+          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
       - name: Security scan uitvoeren
         run: |
@@ -116,11 +123,15 @@ jobs:
     steps:
       - name: Bestanden ophalen
         uses: actions/checkout@v4
+        env:
+          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
       - name: Python installeren
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+        env:
+          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
       - name: Requests library installeren
         run: pip install requests
