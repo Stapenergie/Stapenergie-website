@@ -1,0 +1,24 @@
+{
+  "site": {
+    "name": "STAP Energie",
+    "tagline": "Energielabels & Verduurzamingsadvies",
+    "url": "https://stapenergie.nl",
+    "primary_color": "#1a6e3c",
+    "accent_color": "#4dc882"
+  },
+  "pages": [
+    {"slug": "homepage", "title": "STAP Energie — Energielabels & Verduurzamingsadvies", "template": "homepage", "status": "publish"},
+    {"slug": "mkb", "title": "MKB & Bedrijven — STAP Energie", "template": "segment", "status": "publish"},
+    {"slug": "particulieren", "title": "Particulieren — STAP Energie", "template": "segment", "status": "publish"},
+    {"slug": "vastgoed", "title": "Vastgoed & Makelaars — STAP Energie", "template": "segment", "status": "publish"},
+    {"slug": "gemeenten", "title": "Gemeenten & Woningstichtingen — STAP Energie", "template": "segment", "status": "publish"},
+    {"slug": "energielabel-woningen", "title": "Energielabels Woningen — STAP Energie", "template": "dienst", "status": "publish"},
+    {"slug": "energielabel-utiliteit", "title": "Energielabels Utiliteit — STAP Energie", "template": "dienst", "status": "publish"},
+    {"slug": "verduurzaming-advies", "title": "Verduurzaming Advies — STAP Energie", "template": "dienst", "status": "publish"},
+    {"slug": "subsidie-advies", "title": "Subsidie Advies — STAP Energie", "template": "dienst", "status": "publish"},
+    {"slug": "energie-inkoop", "title": "Energie Inkoop Advies — STAP Energie", "template": "dienst", "status": "publish"},
+    {"slug": "over-stap-energie", "title": "Over STAP Energie — Erik Dolman", "template": "over", "status": "publish"},
+    {"slug": "contact", "title": "Contact — STAP Energie", "template": "contact", "status": "publish"},
+    {"slug": "blog", "title": "Kennisbank — STAP Energie", "template": "blog", "status": "publish"}
+  ]
+}
