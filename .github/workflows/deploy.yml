@@ -24,23 +24,24 @@ jobs:
           python-version: '3.11'
       - name: Security scan
         run: |
-          python3 -c "
-          import os,sys,re,json,glob
+          python3 << 'EOF'
+          import os, sys, json, glob
           from pathlib import Path
-          print('Security Agent gestart...')
-          issues=[]
-          for fp in glob.glob('content/**/*.json',recursive=True):
-              try: json.load(open(fp)); print(f'  OK JSON: {fp}')
-              except Exception as e: issues.append(f'{fp}: {e}')
-          imgs=list(Path('images').glob('*')) if Path('images').exists() else []
-          print(f'  images/ map: {len(imgs)} bestanden')
-          if not imgs: issues.append('images/ map leeg of niet gevonden')
+          print("Security Agent gestart...")
+          issues = []
+          for fp in glob.glob('content/**/*.json', recursive=True):
+              try:
+                  json.load(open(fp))
+                  print(f"  OK: {fp}")
+              except Exception as e:
+                  issues.append(f"{fp}: {e}")
+          imgs = list(Path('images').glob('*')) if Path('images').exists() else []
+          print(f"  images/: {len(imgs)} bestanden")
           if issues:
-              print('GEBLOKKEERD:')
-              [print(f'  {i}') for i in issues]
+              [print(f"  FOUT: {i}") for i in issues]
               sys.exit(1)
-          print('Security Agent: OK')
-          "
+          print("Security Agent: alle checks OK")
+          EOF
 
   deploy-to-wordpress:
     name: Deploy Agent
@@ -52,151 +53,125 @@ jobs:
         with:
           python-version: '3.11'
       - run: pip install requests
-      - name: Deploy naar WordPress
+      - name: Deploy homepage naar WordPress
         env:
           WP_URL: ${{ secrets.WP_URL }}
           WP_USERNAME: ${{ secrets.WP_USERNAME }}
           WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
         run: |
           python3 << 'PYEOF'
-          import os,sys,json,requests,base64
+          import os, sys, json, requests, base64
           from pathlib import Path
 
-          wp=os.environ['WP_URL'].rstrip('/')
-          user=os.environ['WP_USERNAME']
-          pw=os.environ['WP_APP_PASSWORD']
-          token=base64.b64encode(f"{user}:{pw}".encode()).decode()
-          h={'Authorization':f'Basic {token}'}
+          wp   = os.environ['WP_URL'].rstrip('/')
+          user = os.environ['WP_USERNAME']
+          pw   = os.environ['WP_APP_PASSWORD']
+          tok  = base64.b64encode(f"{user}:{pw}".encode()).decode()
+          h    = {'Authorization': f'Basic {tok}', 'Content-Type': 'application/json'}
 
-          r=requests.get(f"{wp}/wp-json/wp/v2/users/me",headers=h)
-          if r.status_code!=200:
-              print(f"Verbinding mislukt: {r.status_code} {r.text[:200]}")
-              sys.exit(1)
+          # Verbinding testen
+          r = requests.get(f"{wp}/wp-json/wp/v2/users/me", headers=h)
+          if r.status_code != 200:
+              print(f"Verbinding mislukt: {r.status_code}"); sys.exit(1)
           print(f"Verbonden als: {r.json().get('name')}")
 
-          # Alle mogelijke bestandsnamen per sleutel
-          NM={
-            'hero':['hero.png','Hero Gemengd zakelijk pand + PV panelen.png','Hero_Gemengd_zakelijk_pand___PV_panelen.png','Gemengd zakelijk pand + zonnepanelen.png','Gemengd_zakelijk_pand___zonnepanelen.png'],
-            'erik-zakelijk':['erik-zakelijk.png','Over Erik (persoonlijk beeld) Zakelijk.png','Over_Erik__persoonlijk_beeld__Zakelijk.png'],
-            'erik-woning':['erik-woning.png','Over Erik (persoonlijk beeld).png','Over_Erik__persoonlijk_beeld_.png'],
-            'segment-mkb':['segment-mkb.png','Segment MKB.png','Segment_MKB.png'],
-            'segment-particulieren':['segment-particulieren.png','Segment Particulieren.png','Segment_Particulieren.png'],
-            'segment-vastgoed':['segment-vastgoed.png','Segment Vastgoed & Makelaars.png','Segment_Vastgoed___Makelaars.png'],
-            'segment-gemeenten':['segment-gemeenten.png','Segment Gemeenten & Woningstichtingen.png','Segment_Gemeenten___Woningstichtingen.png'],
-            'dienst-subsidie':['dienst-subsidie.png','Diensten-card Subsidie advies.png','Diensten-card_Subsidie_advies.png'],
-            'dienst-inkoop':['dienst-inkoop.png','Diensten-card Energie inkoop.png','Diensten-card_Energie_inkoop.png'],
-            'dienst-verduurzaming':['dienst-verduurzaming.png','Diensten-card Verduurzaming advies.png','Diensten-card_Verduurzaming_advies.png'],
+          # Bestandsnamen -> interne sleutels
+          NAME_MAP = {
+              'hero':                ['hero.png','Hero Gemengd zakelijk pand + PV panelen.png','Hero_Gemengd_zakelijk_pand___PV_panelen.png'],
+              'erik-zakelijk':       ['erik-zakelijk.png','Over Erik (persoonlijk beeld) Zakelijk.png','Over_Erik__persoonlijk_beeld__Zakelijk.png'],
+              'erik-woning':         ['erik-woning.png','Over Erik (persoonlijk beeld).png','Over_Erik__persoonlijk_beeld_.png'],
+              'segment-mkb':         ['segment-mkb.png','Segment MKB.png','Segment_MKB.png'],
+              'segment-particulieren':['segment-particulieren.png','Segment Particulieren.png','Segment_Particulieren.png'],
+              'segment-vastgoed':    ['segment-vastgoed.png','Segment Vastgoed & Makelaars.png','Segment_Vastgoed___Makelaars.png'],
+              'segment-gemeenten':   ['segment-gemeenten.png','Segment Gemeenten & Woningstichtingen.png','Segment_Gemeenten___Woningstichtingen.png'],
+              'dienst-subsidie':     ['dienst-subsidie.png','Diensten-card Subsidie advies.png','Diensten-card_Subsidie_advies.png'],
+              'dienst-inkoop':       ['dienst-inkoop.png','Diensten-card Energie inkoop.png','Diensten-card_Energie_inkoop.png'],
+              'dienst-verduurzaming':['dienst-verduurzaming.png','Diensten-card Verduurzaming advies.png','Diensten-card_Verduurzaming_advies.png'],
           }
-          f2k={name:key for key,names in NM.items() for name in names}
+          f2k = {name: key for key, names in NAME_MAP.items() for name in names}
 
+          # Afbeeldingen uploaden en IDs ophalen
           print("\nAfbeeldingen uploaden...")
-          mids={}
+          mids = {}
           for p in sorted(Path('images').glob('*')):
               if p.suffix.lower() not in ['.png','.jpg','.jpeg','.webp']: continue
-              fn=p.name; sk=f2k.get(fn)
-              if not sk: print(f"  Overgeslagen: {fn}"); continue
-              s=requests.get(f"{wp}/wp-json/wp/v2/media",headers=h,params={'search':sk,'per_page':5})
-              if s.status_code==200 and s.json():
-                  mids[sk]=s.json()[0]['id']; print(f"  Bestaat al: {fn} -> {sk} ID:{mids[sk]}"); continue
-              mt='image/png' if p.suffix.lower()=='.png' else 'image/jpeg'
-              uh={**h,'Content-Disposition':f'attachment; filename="{sk}{p.suffix}"','Content-Type':mt}
-              with open(p,'rb') as f: resp=requests.post(f"{wp}/wp-json/wp/v2/media",headers=uh,data=f.read())
-              if resp.status_code==201:
-                  mids[sk]=resp.json()['id']; print(f"  Geupload: {fn} -> {sk} ID:{mids[sk]}")
-              else: print(f"  Fout {fn}: {resp.status_code} {resp.text[:80]}")
-          print(f"  {len(mids)} afbeeldingen klaar")
-
-          def i(k): return mids.get(k,0)
-
-          def upsert(title,slug,blocks,fid=None):
-              ex=requests.get(f"{wp}/wp-json/wp/v2/pages",headers=h,params={'slug':slug,'per_page':1})
-              pl={'title':title,'slug':slug,'content':blocks,'status':'publish'}
-              if fid: pl['featured_media']=fid
-              ph={**h,'Content-Type':'application/json'}
-              if ex.status_code==200 and ex.json():
-                  pid=ex.json()[0]['id']; r=requests.post(f"{wp}/wp-json/wp/v2/pages/{pid}",headers=ph,json=pl); act="bijgewerkt"
+              sk = f2k.get(p.name)
+              if not sk: print(f"  Overgeslagen: {p.name}"); continue
+              s = requests.get(f"{wp}/wp-json/wp/v2/media", headers=h, params={'search': sk, 'per_page': 5})
+              if s.status_code == 200 and s.json():
+                  mids[sk] = s.json()[0]['id']
+                  print(f"  Bestaat al: {p.name} -> ID {mids[sk]}")
+                  continue
+              mt = 'image/png' if p.suffix.lower() == '.png' else 'image/jpeg'
+              uh = {**h, 'Content-Disposition': f'attachment; filename="{sk}{p.suffix}"', 'Content-Type': mt}
+              del uh['Content-Type']
+              uh['Content-Type'] = mt
+              with open(p, 'rb') as f:
+                  resp = requests.post(f"{wp}/wp-json/wp/v2/media",
+                      headers={**{'Authorization': f'Basic {tok}'}, 'Content-Disposition': f'attachment; filename="{sk}{p.suffix}"', 'Content-Type': mt},
+                      data=f.read())
+              if resp.status_code == 201:
+                  mids[sk] = resp.json()['id']
+                  print(f"  Geupload: {p.name} -> ID {mids[sk]}")
               else:
-                  r=requests.post(f"{wp}/wp-json/wp/v2/pages",headers=ph,json=pl); act="aangemaakt"
-              if r.status_code in[200,201]: print(f"  OK '{title}' {act}: {r.json().get('link','')}")
-              else: print(f"  FOUT '{title}': {r.status_code} {r.text[:120]}")
-              return r.json().get('id') if r.status_code in[200,201] else None
+                  print(f"  Fout {p.name}: {resp.status_code}")
+          print(f"  {len(mids)} afbeeldingen klaar\n")
 
-          def cover(h1,sub,badge,img_id,btn,btn_slug):
-              return f"""<!-- wp:cover {{"dimRatio":60,"minHeight":80,"minHeightUnit":"vh","isDark":true,"mediaId":{img_id}}} --><div class="wp-block-cover" style="min-height:80vh;padding:6rem 5%"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-60 has-background-dim"></span><!-- wp:group {{"layout":{{"type":"constrained","contentSize":"680px"}}}} --><div class="wp-block-group"><!-- wp:paragraph {{"style":{{"typography":{{"fontSize":"0.78rem","letterSpacing":"0.12em","textTransform":"uppercase"}},"color":{{"text":"#4dc882"}}}}}} --><p style="font-size:0.78rem;letter-spacing:0.12em;text-transform:uppercase;color:#4dc882">{badge}</p><!-- /wp:paragraph --><!-- wp:heading {{"level":1,"style":{{"color":{{"text":"#ffffff"}},"typography":{{"fontSize":"clamp(2.2rem,4vw,3.4rem)","fontWeight":"800"}}}}}} --><h1 style="color:#fff;font-size:clamp(2.2rem,4vw,3.4rem);font-weight:800">{h1}</h1><!-- /wp:heading --><!-- wp:paragraph {{"style":{{"color":{{"text":"rgba(255,255,255,0.85)"}}}}}} --><p style="color:rgba(255,255,255,.85)">{sub}</p><!-- /wp:paragraph --><!-- wp:buttons {{"style":{{"spacing":{{"margin":{{"top":"1.5rem"}}}}}}}} --><div class="wp-block-buttons" style="margin-top:1.5rem"><!-- wp:button {{"style":{{"color":{{"background":"#1a6e3c","text":"#ffffff"}},"border":{{"radius":"8px"}}}}}} --><div class="wp-block-button"><a class="wp-block-button__link" href="/{btn_slug}/" style="background:#1a6e3c;color:#fff;border-radius:8px">{btn}</a></div><!-- /wp:button --></div><!-- /wp:buttons --></div><!-- /wp:group --></div><!-- /wp:cover -->"""
+          def mid(k): return mids.get(k, 0)
 
-          def sh(title,label=""):
-              lb=f"""<!-- wp:paragraph {{"style":{{"typography":{{"fontSize":"0.78rem","letterSpacing":"0.12em","textTransform":"uppercase","fontWeight":"600"}},"color":{{"text":"#1a6e3c"}}}}}} --><p style="font-size:0.78rem;letter-spacing:0.12em;text-transform:uppercase;font-weight:600;color:#1a6e3c">{label}</p><!-- /wp:paragraph -->""" if label else ""
-              return lb+f"""<!-- wp:heading {{"level":2,"style":{{"typography":{{"fontSize":"clamp(1.8rem,3.5vw,2.6rem)","fontWeight":"800"}}}}}} --><h2 style="font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800">{title}</h2><!-- /wp:heading -->"""
+          # Homepage data als schone JSON
+          homepage_data = {
+              "page": "homepage",
+              "data": {
+                  "title": "STAP Energie — Energielabels & Verduurzamingsadvies",
+                  "hero_badge": "Energielabel & verduurzamingsadvies voor heel Nederland",
+                  "hero_heading": "Duurzame impact maken is leuk",
+                  "hero_subtext": "STAP Energie helpt ondernemers en woningeigenaren stap voor stap verduurzamen. Van energielabel tot een concreet plan dat past bij jouw situatie, portemonnee en doelen.",
+                  "hero_cta": "Plan een gratis kennismaking",
+                  "hero_image_id": mid('hero'),
+                  "segments": [
+                      {"title": "MKB & Bedrijven", "desc": "Energielabels, inkoop en verduurzaming voor ondernemers.", "slug": "mkb-bedrijven", "image_id": mid('segment-mkb')},
+                      {"title": "Particulieren", "desc": "Energielabel en verduurzamingsadvies voor woningeigenaren.", "slug": "particulieren", "image_id": mid('segment-particulieren')},
+                      {"title": "Vastgoed & Makelaars", "desc": "Labels en WWS-optimalisatie voor vastgoedprofessionals.", "slug": "vastgoed-makelaars", "image_id": mid('segment-vastgoed')},
+                      {"title": "Gemeenten & Woningstichtingen", "desc": "Verduurzaming op schaal voor corporaties en gemeenten.", "slug": "gemeenten-woningstichtingen", "image_id": mid('segment-gemeenten')},
+                  ],
+                  "diensten": [
+                      {"title": "Energielabels woningen", "desc": "Verplicht bij verkoop en verhuur. Snel en officieel geregeld.", "slug": "energielabel-woningen", "image_id": 0},
+                      {"title": "Energielabels utiliteit", "desc": "Verplicht label voor bedrijfspanden en kantoren.", "slug": "energielabel-utiliteit", "image_id": 0},
+                      {"title": "Verduurzaming advies", "desc": "Persoonlijk stappenplan op maat voor uw situatie.", "slug": "verduurzaming-advies", "image_id": mid('dienst-verduurzaming')},
+                      {"title": "Subsidie advies", "desc": "Meer subsidie dan u denkt. Wij brengen uw kansen in kaart.", "slug": "subsidie-advies", "image_id": mid('dienst-subsidie')},
+                      {"title": "Energie inkoop advies", "desc": "Slim inkopen op het juiste moment. Structureel besparen.", "slug": "energie-inkoop-advies", "image_id": mid('dienst-inkoop')},
+                  ],
+                  "erik": {
+                      "name": "Erik Dolman",
+                      "image_id": mid('erik-woning'),
+                      "bio": "Als oprichter van STAP Energie combineer ik ruime ervaring in de energiemarkt met een oprechte passie voor duurzaamheid. Mensen komen naar mij toe omdat ik dingen kan uitleggen en uitzoeken — en dat vind ik mooi.",
+                      "quote": "De natuur is ons grootste kapitaal. Verduurzamen is een verstandige keuze voor het milieu, comfort én je portemonnee.",
+                      "credential": "EPA-adviseur in opleiding (EPUB) — certificering verwacht 2025",
+                  },
+                  "cta": {
+                      "heading": "Klaar voor jouw eerste STAP?",
+                      "subtext": "Gratis kennismakingsgesprek — geen verplichtingen, wel direct waarde.",
+                      "button": "Gratis gesprek inplannen",
+                  }
+              }
+          }
 
-          def card(title,desc,slug,img_id=None):
-              ib=f"""<!-- wp:image {{"id":{img_id},"sizeSlug":"large"}} --><figure class="wp-block-image size-large"><img src="" alt="{title}" class="wp-image-{img_id}" style="border-radius:10px 10px 0 0"/></figure><!-- /wp:image -->""" if img_id else ""
-              return f"""<!-- wp:group {{"style":{{"border":{{"radius":"12px","width":"1px","color":"#d4e9dc"}},"color":{{"background":"#ffffff"}},"spacing":{{"padding":{{"top":"1.5rem","bottom":"1.5rem","left":"1.5rem","right":"1.5rem"}}}}}}}} --><div class="wp-block-group" style="border-radius:12px;border:1px solid #d4e9dc;background:#fff;padding:1.5rem">{ib}<!-- wp:heading {{"level":3,"style":{{"typography":{{"fontSize":"1.1rem","fontWeight":"700"}}}}}} --><h3 style="font-size:1.1rem;font-weight:700">{title}</h3><!-- /wp:heading --><!-- wp:paragraph {{"style":{{"color":{{"text":"#4a6354"}},"typography":{{"fontSize":"0.88rem"}}}}}} --><p style="color:#4a6354;font-size:.88rem">{desc}</p><!-- /wp:paragraph --><!-- wp:paragraph --><p><a href="/{slug}/" style="color:#1a6e3c;font-weight:600;font-size:.85rem">Meer info →</a></p><!-- /wp:paragraph --></div><!-- /wp:group -->"""
+          # Sturen naar de plugin
+          print("Homepage deployen via STAP plugin...")
+          resp = requests.post(
+              f"{wp}/wp-json/stap/v1/deploy",
+              headers=h,
+              json=homepage_data
+          )
 
-          def cta(h2,sub,btn,slug):
-              return f"""<!-- wp:group {{"style":{{"color":{{"background":"#0f1f15"}},"spacing":{{"padding":{{"top":"4rem","bottom":"4rem","left":"5%","right":"5%"}}}}}},"layout":{{"type":"constrained"}}}} --><div class="wp-block-group" style="background:#0f1f15;padding:4rem 5%"><!-- wp:heading {{"textAlign":"center","level":2,"style":{{"color":{{"text":"#ffffff"}},"typography":{{"fontSize":"clamp(1.8rem,3.5vw,2.8rem)","fontWeight":"800"}}}}}} --><h2 class="has-text-align-center" style="color:#fff">{h2}</h2><!-- /wp:heading --><!-- wp:paragraph {{"align":"center","style":{{"color":{{"text":"rgba(255,255,255,0.65)"}}}}}} --><p class="has-text-align-center" style="color:rgba(255,255,255,.65)">{sub}</p><!-- /wp:paragraph --><!-- wp:buttons {{"layout":{{"type":"flex","justifyContent":"center"}},"style":{{"spacing":{{"margin":{{"top":"1.5rem"}}}}}}}} --><div class="wp-block-buttons" style="margin-top:1.5rem"><!-- wp:button {{"style":{{"color":{{"background":"#ffffff","text":"#0f1f15"}},"border":{{"radius":"8px"}}}}}} --><div class="wp-block-button"><a class="wp-block-button__link" href="/{slug}/" style="background:#fff;color:#0f1f15;border-radius:8px;font-weight:600">{btn}</a></div><!-- /wp:button --></div><!-- /wp:buttons --></div><!-- /wp:group -->"""
-
-          def scol(title,desc,pg,img_id):
-              return f"""<!-- wp:column --><div class="wp-block-column"><!-- wp:image {{"id":{img_id},"sizeSlug":"large"}} --><figure class="wp-block-image size-large"><img src="" alt="{title}" class="wp-image-{img_id}" style="border-radius:10px"/></figure><!-- /wp:image --><!-- wp:heading {{"level":3,"style":{{"typography":{{"fontSize":"1.1rem","fontWeight":"700"}}}}}} --><h3 style="font-size:1.1rem;font-weight:700">{title}</h3><!-- /wp:heading --><!-- wp:paragraph {{"style":{{"color":{{"text":"#4a6354"}},"typography":{{"fontSize":"0.88rem"}}}}}} --><p style="color:#4a6354;font-size:.88rem">{desc}</p><!-- /wp:paragraph --><!-- wp:paragraph --><p><a href="/{pg}/" style="color:#1a6e3c;font-weight:600;font-size:.85rem">Meer info →</a></p><!-- /wp:paragraph --></div><!-- /wp:column -->"""
-
-          print("\nPaginas aanmaken...")
-
-          # HOMEPAGE
-          hp=cover("Duurzame impact maken is leuk","STAP Energie helpt ondernemers en woningeigenaren stap voor stap verduurzamen. Van energielabel tot een concreet plan dat past bij jouw situatie, portemonnee en doelen.","Energielabel & verduurzamingsadvies voor heel Nederland",i('hero'),"Plan een gratis kennismaking","contact")
-          hp+=f"""<!-- wp:group {{"style":{{"color":{{"background":"#fff"}},"spacing":{{"padding":{{"top":"4rem","bottom":"4rem","left":"5%","right":"5%"}}}}}},"layout":{{"type":"constrained"}}}} --><div class="wp-block-group" style="background:#fff;padding:4rem 5%">{sh("Voor wie is STAP Energie?","Kies jouw situatie")}<!-- wp:columns {{"style":{{"spacing":{{"blockGap":"1.5rem","padding":{{"top":"2rem"}}}}}}}} --><div class="wp-block-columns" style="padding-top:2rem">{scol("MKB & Bedrijven","Energielabels, inkoop en verduurzaming voor ondernemers.","mkb-bedrijven",i('segment-mkb'))}{scol("Particulieren","Energielabel en verduurzamingsadvies voor woningeigenaren.","particulieren",i('segment-particulieren'))}{scol("Vastgoed & Makelaars","Labels en WWS-optimalisatie voor vastgoedprofessionals.","vastgoed-makelaars",i('segment-vastgoed'))}{scol("Gemeenten & Woningstichtingen","Verduurzaming op schaal voor corporaties en gemeenten.","gemeenten-woningstichtingen",i('segment-gemeenten'))}</div><!-- /wp:columns --></div><!-- /wp:group -->"""
-          hp+=f"""<!-- wp:group {{"style":{{"color":{{"background":"#e8f5ee"}},"spacing":{{"padding":{{"top":"4rem","bottom":"4rem","left":"5%","right":"5%"}}}}}},"layout":{{"type":"constrained"}}}} --><div class="wp-block-group" style="background:#e8f5ee;padding:4rem 5%">{sh("Onze diensten","Wat we doen")}<!-- wp:columns {{"style":{{"spacing":{{"blockGap":"1.2rem","padding":{{"top":"2rem"}}}}}}}} --><div class="wp-block-columns" style="padding-top:2rem"><!-- wp:column --><div class="wp-block-column">{card("Energielabels woningen","Verplicht bij verkoop en verhuur.","energielabel-woningen")}</div><!-- /wp:column --><!-- wp:column --><div class="wp-block-column">{card("Energielabels utiliteit","Verplicht label voor bedrijfspanden.","energielabel-utiliteit")}</div><!-- /wp:column --><!-- wp:column --><div class="wp-block-column">{card("Verduurzaming advies","Persoonlijk stappenplan op maat.","verduurzaming-advies",i('dienst-verduurzaming'))}</div><!-- /wp:column --></div><!-- /wp:columns --><!-- wp:columns {{"style":{{"spacing":{{"blockGap":"1.2rem","padding":{{"top":"1.2rem"}}}}}}}} --><div class="wp-block-columns" style="padding-top:1.2rem"><!-- wp:column --><div class="wp-block-column">{card("Subsidie advies","Meer subsidie dan u denkt.","subsidie-advies",i('dienst-subsidie'))}</div><!-- /wp:column --><!-- wp:column --><div class="wp-block-column">{card("Energie inkoop advies","Slim inkopen, structureel besparen.","energie-inkoop-advies",i('dienst-inkoop'))}</div><!-- /wp:column --><!-- wp:column --><div class="wp-block-column"><!-- wp:group {{"style":{{"border":{{"radius":"12px"}},"color":{{"background":"#0f1f15"}},"spacing":{{"padding":{{"top":"1.5rem","bottom":"1.5rem","left":"1.5rem","right":"1.5rem"}}}}}}}} --><div class="wp-block-group" style="border-radius:12px;background:#0f1f15;padding:1.5rem"><!-- wp:heading {{"level":3,"style":{{"color":{{"text":"#ffffff"}},"typography":{{"fontSize":"1.1rem","fontWeight":"700"}}}}}} --><h3 style="color:#fff;font-size:1.1rem;font-weight:700">Niet zeker wat u nodig heeft?</h3><!-- /wp:heading --><!-- wp:paragraph {{"style":{{"color":{{"text":"rgba(255,255,255,0.6)"}},"typography":{{"fontSize":"0.88rem"}}}}}} --><p style="color:rgba(255,255,255,.6);font-size:.88rem">Plan een gratis kennismakingsgesprek zonder verplichtingen.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p><a href="/contact/" style="color:#4dc882;font-weight:600">Gratis gesprek →</a></p><!-- /wp:paragraph --></div><!-- /wp:group --></div><!-- /wp:column --></div><!-- /wp:columns --></div><!-- /wp:group -->"""
-          hp+=f"""<!-- wp:group {{"style":{{"color":{{"background":"#ffffff"}},"spacing":{{"padding":{{"top":"4rem","bottom":"4rem","left":"5%","right":"5%"}}}}}},"layout":{{"type":"constrained","contentSize":"900px"}}}} --><div class="wp-block-group" style="background:#fff;padding:4rem 5%"><!-- wp:columns {{"style":{{"spacing":{{"blockGap":"4rem"}}}},"verticalAlignment":"center"}} --><div class="wp-block-columns" style="align-items:center"><!-- wp:column {{"width":"45%"}} --><div class="wp-block-column" style="flex-basis:45%"><!-- wp:image {{"id":{i('erik-woning')},"sizeSlug":"large"}} --><figure class="wp-block-image size-large"><img src="" alt="Erik Dolman" class="wp-image-{i('erik-woning')}" style="border-radius:14px"/></figure><!-- /wp:image --></div><!-- /wp:column --><!-- wp:column --><div class="wp-block-column">{sh("Over Erik Dolman","Wie is STAP Energie?")}<!-- wp:paragraph {{"style":{{"color":{{"text":"#4a6354"}},"spacing":{{"margin":{{"top":"1rem"}}}}}}}} --><p style="color:#4a6354;margin-top:1rem">Als oprichter van STAP Energie combineer ik ruime ervaring in de energiemarkt met een oprechte passie voor duurzaamheid. Mensen komen naar mij toe omdat ik dingen kan uitleggen en uitzoeken — en dat vind ik mooi.</p><!-- /wp:paragraph --><!-- wp:paragraph {{"style":{{"typography":{{"fontStyle":"italic"}},"color":{{"text":"#1a6e3c"}}}}}} --><p style="font-style:italic;color:#1a6e3c">"De natuur is ons grootste kapitaal. Verduurzamen is een verstandige keuze voor het milieu, comfort én je portemonnee."</p><!-- /wp:paragraph --><!-- wp:paragraph {{"style":{{"typography":{{"fontSize":"0.82rem","fontWeight":"600"}},"color":{{"text":"#1a6e3c"}}}}}} --><p style="font-size:.82rem;font-weight:600;color:#1a6e3c">EPA-adviseur in opleiding (EPUB) — certificering verwacht 2025</p><!-- /wp:paragraph --><!-- wp:buttons {{"style":{{"spacing":{{"margin":{{"top":"1.5rem"}}}}}}}} --><div class="wp-block-buttons" style="margin-top:1.5rem"><!-- wp:button {{"style":{{"color":{{"background":"#1a6e3c","text":"#ffffff"}},"border":{{"radius":"8px"}}}}}} --><div class="wp-block-button"><a class="wp-block-button__link" href="/over-erik/" style="background:#1a6e3c;color:#fff;border-radius:8px">Meer over Erik →</a></div><!-- /wp:button --></div><!-- /wp:buttons --></div><!-- /wp:column --></div><!-- /wp:columns --></div><!-- /wp:group -->"""
-          hp+=cta("Klaar voor jouw eerste STAP?","Gratis kennismakingsgesprek — geen verplichtingen, wel direct waarde.","Gratis gesprek inplannen","contact")
-          upsert("STAP Energie — Energielabels & Verduurzamingsadvies","homepage",hp,i('hero'))
-
-          # SEGMENT PAGINAS
-          segs=[
-            ("mkb-bedrijven","MKB & Bedrijven","segment-mkb","Als ondernemer heb je te maken met verplichte energielabels, stijgende kosten en echte kansen om te besparen.",
-             [("Energielabel utiliteit","Verplicht voor bedrijfspanden.","energielabel-utiliteit",None),("Verduurzaming advies","Concreet plan op maat.","verduurzaming-advies","dienst-verduurzaming"),("Subsidie advies","Alle regelingen op een rij.","subsidie-advies","dienst-subsidie"),("Energie inkoop advies","Slim inkopen en besparen.","energie-inkoop-advies","dienst-inkoop")]),
-            ("particulieren","Particulieren","segment-particulieren","Een energielabel is verplicht bij verkoop en verhuur. Maar het is ook het startpunt voor slimmer, comfortabeler en goedkoper wonen.",
-             [("Energielabel woning","Verplicht bij verkoop en verhuur.","energielabel-woningen",None),("Verduurzaming advies","Wat levert het op voor jouw woning?","verduurzaming-advies","dienst-verduurzaming"),("Subsidie advies","Welke subsidies zijn er voor jou?","subsidie-advies","dienst-subsidie")]),
-            ("vastgoed-makelaars","Vastgoed & Makelaars","segment-vastgoed","Een actueel energielabel is niet alleen verplicht — het verhoogt de waarde en verhuurbaarheid van uw panden.",
-             [("Energielabel woningen","Snel en professioneel.","energielabel-woningen",None),("Energielabel utiliteit","Voor bedrijfspanden.","energielabel-utiliteit",None),("Verduurzaming advies","Verhoog de waarde.","verduurzaming-advies","dienst-verduurzaming")]),
-            ("gemeenten-woningstichtingen","Gemeenten & Woningstichtingen","segment-gemeenten","Grote verduurzamingsopgaven vragen om een partner die het overzicht bewaakt.",
-             [("Verduurzaming advies","Portefeuilleanalyse.","verduurzaming-advies","dienst-verduurzaming"),("Subsidie advies","Grip op regelingen.","subsidie-advies","dienst-subsidie")]),
-          ]
-          for slug,title,ik,intro,ds in segs:
-              iid=i(ik)
-              bl=cover(title,intro,"STAP Energie",iid,"Gratis adviesgesprek","contact")
-              bl+=f"""<!-- wp:group {{"style":{{"spacing":{{"padding":{{"top":"3rem","bottom":"3rem","left":"5%","right":"5%"}}}}}},"layout":{{"type":"constrained"}}}} --><div class="wp-block-group" style="padding:3rem 5%"><!-- wp:columns {{"style":{{"spacing":{{"blockGap":"1.2rem"}}}}}} --><div class="wp-block-columns">"""
-              for dt,dd,dslug,dik in ds: bl+=f"<!-- wp:column --><div class=\"wp-block-column\">{card(dt,dd,dslug,i(dik) if dik else None)}</div><!-- /wp:column -->"
-              bl+="</div><!-- /wp:columns --></div><!-- /wp:group -->"
-              bl+=cta("Klaar voor jouw eerste STAP?","Gratis kennismakingsgesprek — geen verplichtingen.","Contact opnemen","contact")
-              upsert(f"{title} — STAP Energie",slug,bl,iid)
-
-          # DIENST PAGINAS
-          dp=[
-            ("energielabel-woningen","Energielabel Woningen",None,"Officieel energielabel voor uw woning","Een EPA-adviseur bezoekt uw woning en neemt alle relevante kenmerken op. Het label wordt geregistreerd in EP-online en blijft 10 jaar geldig.",["Verplicht bij verkoop en verhuur","Geregistreerd in EP-online","10 jaar geldig","Inclusief mondeling advies"]),
-            ("energielabel-utiliteit","Energielabel Utiliteit",None,"Verplicht energielabel voor bedrijfspanden","Bedrijfspanden hebben een verplicht energielabel nodig. STAP Energie verzorgt de opname en adviseert direct over verduurzamingskansen.",["Verplicht voor kantoren en bedrijfspanden","EPA-adviseur in opleiding (EPUB 2025)","Bulktarieven beschikbaar","Inclusief verduurzamingsadvies"]),
-            ("verduurzaming-advies","Verduurzaming Advies","dienst-verduurzaming","Persoonlijk stappenplan op maat","Verduurzamen is slim voor het milieu, comfort en portemonnee. We starten met een nulmeting en bouwen een realistisch plan.",["Isolatie (spouwmuur, vloer, dak, glas)","Warmtepomp of hybride installatie","Zonnepanelen en thuisbatterij","Ventilatie en warmteterugwinning"]),
-            ("subsidie-advies","Subsidie Advies","dienst-subsidie","Laat geen subsidie liggen","Er is meer subsidie dan de meeste mensen weten. Wij brengen uw kansen in kaart en helpen bij de aanvraag.",["ISDE — warmtepompen en zonneboilers","SEEH / SVVE — isolatiemaatregelen","Gemeentelijke subsidies","Energiebelasting optimalisatie"]),
-            ("energie-inkoop-advies","Energie Inkoop Advies","dienst-inkoop","Slim inkopen, structureel besparen","Op het juiste moment inkopen bespaart aanzienlijk. Wij adviseren over dynamische tarieven en slimme verbruiksstrategieën.",["Dynamisch vs vast contract advies","Slim verbruik op goedkope momenten","Netcongestie strategie","Toekomstgericht energieplan"]),
-          ]
-          for slug,title,ik,sub,body,usps in dp:
-              iid=i(ik) if ik else None
-              ib=f"""<!-- wp:image {{"id":{iid},"sizeSlug":"large"}} --><figure class="wp-block-image size-large"><img src="" alt="{sub}" class="wp-image-{iid}" style="border-radius:12px"/></figure><!-- /wp:image -->""" if iid else ""
-              ui="".join([f"<!-- wp:list-item --><li>{u}</li><!-- /wp:list-item -->" for u in usps])
-              bl=f"""<!-- wp:group {{"style":{{"spacing":{{"padding":{{"top":"5rem","bottom":"2rem","left":"5%","right":"5%"}}}}}},"layout":{{"type":"constrained","contentSize":"860px"}}}} --><div class="wp-block-group" style="padding:5rem 5% 2rem">{sh(sub)}{ib}<!-- wp:paragraph {{"style":{{"color":{{"text":"#4a6354"}},"spacing":{{"margin":{{"top":"1.5rem","bottom":"1.5rem"}}}}}}}} --><p style="color:#4a6354;margin:1.5rem 0">{body}</p><!-- /wp:paragraph --><!-- wp:list --><ul style="margin-bottom:2rem">{ui}</ul><!-- /wp:list --></div><!-- /wp:group -->"""
-              bl+=cta("Interesse? Plan een gratis gesprek","Wij reageren binnen 24 uur op uw aanvraag.","Gratis gesprek aanvragen","contact")
-              upsert(f"{title} — STAP Energie",slug,bl,iid)
-
-          # OVER ERIK
-          eid=i('erik-woning')
-          eb=f"""<!-- wp:group {{"style":{{"spacing":{{"padding":{{"top":"5rem","bottom":"5rem","left":"5%","right":"5%"}}}}}},"layout":{{"type":"constrained","contentSize":"900px"}}}} --><div class="wp-block-group" style="padding:5rem 5%"><!-- wp:columns {{"style":{{"spacing":{{"blockGap":"4rem"}}}},"verticalAlignment":"center"}} --><div class="wp-block-columns" style="align-items:center"><!-- wp:column {{"width":"45%"}} --><div class="wp-block-column" style="flex-basis:45%"><!-- wp:image {{"id":{eid},"sizeSlug":"large"}} --><figure class="wp-block-image size-large"><img src="" alt="Erik Dolman" class="wp-image-{eid}" style="border-radius:14px"/></figure><!-- /wp:image --></div><!-- /wp:column --><!-- wp:column --><div class="wp-block-column">{sh("Erik Dolman","Oprichter STAP Energie")}<!-- wp:paragraph {{"style":{{"color":{{"text":"#4a6354"}},"spacing":{{"margin":{{"top":"1rem"}}}}}}}} --><p style="color:#4a6354;margin-top:1rem">Als oprichter van STAP Energie combineer ik ruime ervaring in de energiemarkt met een oprechte passie voor duurzaamheid. Ik word blij van mensen helpen, impact maken en ingewikkelde dingen begrijpelijk uitleggen.</p><!-- /wp:paragraph --><!-- wp:paragraph {{"style":{{"typography":{{"fontStyle":"italic"}},"color":{{"text":"#1a6e3c"}}}}}} --><p style="font-style:italic;color:#1a6e3c">"De natuur is ons grootste kapitaal. Verduurzamen is een verstandige keuze voor het milieu, comfort en je portemonnee."</p><!-- /wp:paragraph --><!-- wp:paragraph {{"style":{{"typography":{{"fontSize":"0.82rem","fontWeight":"600"}},"color":{{"text":"#1a6e3c"}}}}}} --><p style="font-size:.82rem;font-weight:600;color:#1a6e3c">EPA-adviseur in opleiding (EPUB) — certificering verwacht 2025</p><!-- /wp:paragraph --><!-- wp:heading {{"level":3}} --><h3>Missie</h3><!-- /wp:heading --><!-- wp:paragraph {{"style":{{"color":{{"text":"#4a6354"}}}}}} --><p style="color:#4a6354">Het leuk maken om duurzame impact te maken. Mensen helpen omschakelen naar een duurzaam en eerlijker systeem.</p><!-- /wp:paragraph --><!-- wp:heading {{"level":3}} --><h3>Visie</h3><!-- /wp:heading --><!-- wp:paragraph {{"style":{{"color":{{"text":"#4a6354"}}}}}} --><p style="color:#4a6354">Het energiesysteem van de toekomst is duurzaam, flexibel en betaalbaar. Groen, betaalbaar en comfortabel wonen en werken voor iedereen.</p><!-- /wp:paragraph --></div><!-- /wp:column --></div><!-- /wp:columns --></div><!-- /wp:group -->"""
-          eb+=cta("Wil je kennismaken?","Plan een vrijblijvend gesprek. Ik help je graag verder.","Gratis gesprek plannen","contact")
-          upsert("Over Erik Dolman — STAP Energie","over-erik",eb,eid)
-
-          # CONTACT
-          cb=f"""<!-- wp:group {{"style":{{"spacing":{{"padding":{{"top":"5rem","bottom":"5rem","left":"5%","right":"5%"}}}}}},"layout":{{"type":"constrained","contentSize":"600px"}}}} --><div class="wp-block-group" style="padding:5rem 5%">{sh("Neem contact op")}<!-- wp:paragraph {{"style":{{"color":{{"text":"#4a6354"}},"spacing":{{"margin":{{"top":"1rem","bottom":"2rem"}}}}}}}} --><p style="color:#4a6354;margin:1rem 0 2rem">Heb je een vraag of wil je een afspraak maken? We reageren binnen 24 uur.</p><!-- /wp:paragraph --><!-- wp:group {{"style":{{"border":{{"radius":"12px"}},"color":{{"background":"#e8f5ee"}},"spacing":{{"padding":{{"top":"1.5rem","bottom":"1.5rem","left":"1.5rem","right":"1.5rem"}}}}}}}} --><div class="wp-block-group" style="border-radius:12px;background:#e8f5ee;padding:1.5rem"><!-- wp:paragraph --><p><strong>E-mail:</strong> <a href="mailto:info@stapenergie.nl">info@stapenergie.nl</a></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>Telefoon:</strong> <a href="tel:+31600000000">06-XXXXXXXX</a></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>Reactietijd:</strong> Binnen 24 uur</p><!-- /wp:paragraph --></div><!-- /wp:group --><!-- wp:html --><form style="display:flex;flex-direction:column;gap:1rem;margin-top:2rem" onsubmit="event.preventDefault();this.innerHTML='<p style=color:#1a6e3c;font-weight:600;padding:1rem>Bedankt! We nemen binnen 24 uur contact op.</p>'"><input type="text" placeholder="Uw naam" required style="padding:.75rem;border:1.5px solid #c8dfd0;border-radius:8px;font-size:.95rem;font-family:inherit"><input type="email" placeholder="E-mailadres" required style="padding:.75rem;border:1.5px solid #c8dfd0;border-radius:8px;font-size:.95rem;font-family:inherit"><input type="tel" placeholder="Telefoonnummer" style="padding:.75rem;border:1.5px solid #c8dfd0;border-radius:8px;font-size:.95rem;font-family:inherit"><select style="padding:.75rem;border:1.5px solid #c8dfd0;border-radius:8px;font-size:.95rem;color:#4a6354;font-family:inherit"><option value="" disabled selected>Waar kan ik u mee helpen?</option><option>Energielabel woning</option><option>Energielabel utiliteit</option><option>Verduurzaming advies</option><option>Subsidie advies</option><option>Energie inkoop advies</option><option>Overig</option></select><textarea placeholder="Uw bericht" rows="4" style="padding:.75rem;border:1.5px solid #c8dfd0;border-radius:8px;font-size:.95rem;resize:vertical;font-family:inherit"></textarea><button type="submit" style="background:#1a6e3c;color:#fff;border:none;padding:.9rem;border-radius:8px;font-size:.95rem;font-weight:500;cursor:pointer">Verstuur bericht</button><p style="font-size:.78rem;color:#4a6354;text-align:center">Vrijblijvend · Geen verplichtingen · Binnen 24 uur reactie</p></form><!-- /wp:html --></div><!-- /wp:group -->"""
-          upsert("Contact — STAP Energie","contact",cb)
-
-          # KENNISBANK
-          kb=f"""<!-- wp:group {{"style":{{"spacing":{{"padding":{{"top":"4rem","bottom":"2rem","left":"5%","right":"5%"}}}}}},"layout":{{"type":"constrained"}}}} --><div class="wp-block-group" style="padding:4rem 5% 2rem">{sh("Kennisbank","Artikelen & inzichten")}<!-- wp:paragraph {{"style":{{"color":{{"text":"#4a6354"}},"spacing":{{"margin":{{"top":"1rem"}}}}}}}} --><p style="color:#4a6354;margin-top:1rem">Praktische kennis over energielabels, verduurzaming, subsidies en de energiemarkt.</p><!-- /wp:paragraph --></div><!-- /wp:group --><!-- wp:query {{"queryId":1,"query":{{"perPage":9,"offset":0,"postType":"post","order":"desc","orderBy":"date"}}}} --><div class="wp-block-query"><!-- wp:post-template --><div style="padding:0 5%"><!-- wp:post-featured-image /--><!-- wp:post-title {{"level":3}} /--><!-- wp:post-excerpt /--><!-- wp:post-date /--></div><!-- /wp:post-template --><!-- wp:query-no-results --><!-- wp:paragraph --><p style="text-align:center;padding:3rem;color:#4a6354">Binnenkort verschijnen hier de eerste artikelen.</p><!-- /wp:paragraph --><!-- /wp:query-no-results --></div><!-- /wp:query -->"""
-          upsert("Kennisbank — STAP Energie","kennisbank",kb)
-
-          print("\n=== Deploy klaar! Alle paginas staan live op stapenergie.nl ===")
+          if resp.status_code == 200:
+              result = resp.json()
+              hp = result.get('results', {}).get('homepage', {})
+              print(f"  Homepage {hp.get('action','?')}: {hp.get('url','')}")
+              print("\nDeploy succesvol!")
+          else:
+              print(f"  Fout: {resp.status_code}")
+              print(f"  {resp.text[:300]}")
+              sys.exit(1)
           PYEOF
