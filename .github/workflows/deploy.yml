@@ -185,7 +185,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Installeer SFTP tool
-        run: sudo apt-get install -y lftp
+        run: sudo apt-get install -y sshpass
       - name: Deploy via SFTP naar nieuw.stapenergie.nl
         env:
           SFTP_HOST: ${{ secrets.SFTP_HOST }}
@@ -195,14 +195,11 @@ jobs:
           echo "🚀 Deploy Agent gestart..."
           echo "  Verbinden met $SFTP_HOST..."
 
-          lftp -u "$SFTP_USER","$SFTP_PASS" sftp://"$SFTP_HOST" << 'LFTP'
-          set sftp:auto-confirm yes
-          set net:max-retries 3
-          set net:timeout 30
+          sshpass -p "$SFTP_PASS" sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null "$SFTP_USER@$SFTP_HOST" << 'SFTP_CMDS'
           pwd
           ls
-          put index.html -o hallo-stap.html
+          put index.html index.html
           bye
-          LFTP
+          SFTP_CMDS
 
-          echo "✅ Deploy Agent: Bestanden succesvol geüpload naar nieuw.stapenergie.nl"
+          echo "✅ Deploy Agent klaar"
