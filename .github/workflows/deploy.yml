@@ -205,7 +205,7 @@ jobs:
             --exclude content/ \
             --exclude images/ \
             --exclude README.md \
-            . /public_html
+            . /domains/nieuw.stapenergie.nl/public_html
           bye
           LFTP
 
