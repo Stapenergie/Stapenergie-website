@@ -196,8 +196,9 @@ jobs:
           echo "  Verbinden met $SFTP_HOST..."
 
           lftp -u "$SFTP_USER","$SFTP_PASS" sftp://"$SFTP_HOST" << 'LFTP'
-          set ssl:verify-certificate no
-          set ftp:ssl-allow yes
+          set sftp:auto-confirm yes
+          set net:max-retries 3
+          set net:timeout 30
           mirror --reverse --delete --verbose \
             --exclude .git/ \
             --exclude .github/ \
