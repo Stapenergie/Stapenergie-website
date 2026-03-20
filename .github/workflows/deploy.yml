@@ -14,6 +14,10 @@ on:
 
 jobs:
 
+  # ══════════════════════════════════════════════
+  #  AGENT 1: SECURITY
+  #  Scant code op hardcoded gevoelige gegevens
+  # ══════════════════════════════════════════════
   security-check:
     name: Security Agent
     runs-on: ubuntu-latest
@@ -25,26 +29,75 @@ jobs:
       - name: Security scan
         run: |
           python3 << 'EOF'
-          import os, sys, json, glob
-          from pathlib import Path
-          print("Security Agent gestart...")
+          import os, sys, re, glob
+
+          print("🔒 Security Agent gestart...")
           issues = []
-          for fp in glob.glob('content/**/*.json', recursive=True):
+          scanned = 0
+
+          all_files = (
+              glob.glob('**/*.html', recursive=True) +
+              glob.glob('**/*.json', recursive=True) +
+              glob.glob('**/*.js', recursive=True) +
+              glob.glob('**/*.php', recursive=True)
+          )
+          skip = ['.git', 'node_modules', 'vendor']
+
+          for filepath in all_files:
+              if any(s in filepath for s in skip):
+                  continue
               try:
-                  json.load(open(fp))
-                  print(f"  OK: {fp}")
-              except Exception as e:
-                  issues.append(f"{fp}: {e}")
-          imgs = list(Path('images').glob('*')) if Path('images').exists() else []
-          print(f"  images/: {len(imgs)} bestanden")
+                  with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
+                      content = f.read()
+              except:
+                  continue
+              scanned += 1
+
+              # Check 1: Hardcoded wachtwoorden
+              for p in [r'password\s*[=:]\s*["\'][^"\']{4,}["\']',
+                        r'wachtwoord\s*[=:]\s*["\'][^"\']{4,}["\']',
+                        r'passwd\s*[=:]\s*["\'][^"\']{4,}["\']']:
+                  if re.search(p, content, re.IGNORECASE):
+                      issues.append(f"[WACHTWOORD] Mogelijk hardcoded wachtwoord in: {filepath}")
+
+              # Check 2: API keys en tokens
+              for p in [r'api[_-]?key\s*[=:]\s*["\'][A-Za-z0-9\-_]{16,}["\']',
+                        r'Bearer\s+[A-Za-z0-9\-_\.]{20,}',
+                        r'sk-[A-Za-z0-9]{32,}',
+                        r'AIza[A-Za-z0-9\-_]{35}']:
+                  if re.search(p, content, re.IGNORECASE):
+                      issues.append(f"[API KEY] Mogelijk hardcoded API key in: {filepath}")
+
+              # Check 3: E-mailadressen buiten toegestane domeinen
+              emails = re.findall(r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b', content)
+              allowed = ['stapenergie.nl', 'example.com']
+              for email in emails:
+                  if email.split('@')[1] not in allowed:
+                      issues.append(f"[EMAIL] Extern e-mailadres ({email}) in: {filepath}")
+
+              # Check 4: BSN-nummers
+              if re.search(r'\b\d{9}\b', content) and \
+                 any(t in content.lower() for t in ['bsn', 'sofinummer']):
+                  issues.append(f"[BSN] Mogelijk BSN-nummer in: {filepath}")
+
+              # Check 5: IBAN-nummers
+              if re.search(r'\bNL\d{2}[A-Z]{4}\d{10}\b', content):
+                  issues.append(f"[IBAN] Mogelijk IBAN-nummer in: {filepath}")
+
+          print(f"  {scanned} bestanden gescand")
           if issues:
-              [print(f"  FOUT: {i}") for i in issues]
+              print("\n❌ Security Agent GEBLOKKEERD:")
+              for i in issues: print(f"  → {i}")
               sys.exit(1)
-          print("Security Agent: alle checks OK")
+          print("✅ Security Agent: Alle checks geslaagd")
           EOF
 
-  deploy-to-wordpress:
-    name: Deploy Agent
+  # ══════════════════════════════════════════════
+  #  AGENT 2: COMPLIANCE OFFICER
+  #  Checkt AVG-conformiteit voor deploy
+  # ══════════════════════════════════════════════
+  compliance-check:
+    name: Compliance Officer Agent
     runs-on: ubuntu-latest
     needs: security-check
     steps:
@@ -52,126 +105,96 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: pip install requests
-      - name: Deploy homepage naar WordPress
-        env:
-          WP_URL: ${{ secrets.WP_URL }}
-          WP_USERNAME: ${{ secrets.WP_USERNAME }}
-          WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
+      - name: AVG compliance scan
         run: |
-          python3 << 'PYEOF'
-          import os, sys, json, requests, base64
-          from pathlib import Path
+          python3 << 'EOF'
+          import os, sys, re, glob
 
-          wp   = os.environ['WP_URL'].rstrip('/')
-          user = os.environ['WP_USERNAME']
-          pw   = os.environ['WP_APP_PASSWORD']
-          tok  = base64.b64encode(f"{user}:{pw}".encode()).decode()
-          h    = {'Authorization': f'Basic {tok}', 'Content-Type': 'application/json'}
+          print("⚖️  Compliance Officer Agent gestart...")
+          issues = []
+          warnings = []
 
-          # Verbinding testen
-          r = requests.get(f"{wp}/wp-json/wp/v2/users/me", headers=h)
-          if r.status_code != 200:
-              print(f"Verbinding mislukt: {r.status_code}"); sys.exit(1)
-          print(f"Verbonden als: {r.json().get('name')}")
+          html_files = glob.glob('**/*.html', recursive=True)
+          if not html_files:
+              print("  Geen HTML bestanden — skip")
+              sys.exit(0)
 
-          # Bestandsnamen -> interne sleutels
-          NAME_MAP = {
-              'hero':                ['hero.png','Hero Gemengd zakelijk pand + PV panelen.png','Hero_Gemengd_zakelijk_pand___PV_panelen.png'],
-              'erik-zakelijk':       ['erik-zakelijk.png','Over Erik (persoonlijk beeld) Zakelijk.png','Over_Erik__persoonlijk_beeld__Zakelijk.png'],
-              'erik-woning':         ['erik-woning.png','Over Erik (persoonlijk beeld).png','Over_Erik__persoonlijk_beeld_.png'],
-              'segment-mkb':         ['segment-mkb.png','Segment MKB.png','Segment_MKB.png'],
-              'segment-particulieren':['segment-particulieren.png','Segment Particulieren.png','Segment_Particulieren.png'],
-              'segment-vastgoed':    ['segment-vastgoed.png','Segment Vastgoed & Makelaars.png','Segment_Vastgoed___Makelaars.png'],
-              'segment-gemeenten':   ['segment-gemeenten.png','Segment Gemeenten & Woningstichtingen.png','Segment_Gemeenten___Woningstichtingen.png'],
-              'dienst-subsidie':     ['dienst-subsidie.png','Diensten-card Subsidie advies.png','Diensten-card_Subsidie_advies.png'],
-              'dienst-inkoop':       ['dienst-inkoop.png','Diensten-card Energie inkoop.png','Diensten-card_Energie_inkoop.png'],
-              'dienst-verduurzaming':['dienst-verduurzaming.png','Diensten-card Verduurzaming advies.png','Diensten-card_Verduurzaming_advies.png'],
-          }
-          f2k = {name: key for key, names in NAME_MAP.items() for name in names}
+          all_html = ""
+          for f in html_files:
+              try:
+                  with open(f, 'r', encoding='utf-8', errors='ignore') as fh:
+                      all_html += fh.read().lower()
+              except:
+                  pass
 
-          # Afbeeldingen uploaden en IDs ophalen
-          print("\nAfbeeldingen uploaden...")
-          mids = {}
-          for p in sorted(Path('images').glob('*')):
-              if p.suffix.lower() not in ['.png','.jpg','.jpeg','.webp']: continue
-              sk = f2k.get(p.name)
-              if not sk: print(f"  Overgeslagen: {p.name}"); continue
-              s = requests.get(f"{wp}/wp-json/wp/v2/media", headers=h, params={'search': sk, 'per_page': 5})
-              if s.status_code == 200 and s.json():
-                  mids[sk] = s.json()[0]['id']
-                  print(f"  Bestaat al: {p.name} -> ID {mids[sk]}")
-                  continue
-              mt = 'image/png' if p.suffix.lower() == '.png' else 'image/jpeg'
-              uh = {**h, 'Content-Disposition': f'attachment; filename="{sk}{p.suffix}"', 'Content-Type': mt}
-              del uh['Content-Type']
-              uh['Content-Type'] = mt
-              with open(p, 'rb') as f:
-                  resp = requests.post(f"{wp}/wp-json/wp/v2/media",
-                      headers={**{'Authorization': f'Basic {tok}'}, 'Content-Disposition': f'attachment; filename="{sk}{p.suffix}"', 'Content-Type': mt},
-                      data=f.read())
-              if resp.status_code == 201:
-                  mids[sk] = resp.json()['id']
-                  print(f"  Geupload: {p.name} -> ID {mids[sk]}")
+          # Check 1: Opt-in in contactformulier
+          has_form = 'form' in all_html and ('input' in all_html or 'textarea' in all_html)
+          if has_form:
+              has_optin = any(t in all_html for t in [
+                  'opt-in','optin','commerci','nieuwsbrief',
+                  'toestemming','akkoord','marketing','benaderen','mailing'])
+              if not has_optin:
+                  issues.append("[AVG] Contactformulier mist opt-in voor commerciële communicatie")
               else:
-                  print(f"  Fout {p.name}: {resp.status_code}")
-          print(f"  {len(mids)} afbeeldingen klaar\n")
+                  print("  ✅ Opt-in gevonden in formulier")
 
-          def mid(k): return mids.get(k, 0)
-
-          # Homepage data als schone JSON
-          homepage_data = {
-              "page": "homepage",
-              "data": {
-                  "title": "STAP Energie — Energielabels & Verduurzamingsadvies",
-                  "hero_badge": "Energielabel & verduurzamingsadvies voor heel Nederland",
-                  "hero_heading": "Duurzame impact maken is leuk",
-                  "hero_subtext": "STAP Energie helpt ondernemers en woningeigenaren stap voor stap verduurzamen. Van energielabel tot een concreet plan dat past bij jouw situatie, portemonnee en doelen.",
-                  "hero_cta": "Plan een gratis kennismaking",
-                  "hero_image_id": mid('hero'),
-                  "segments": [
-                      {"title": "MKB & Bedrijven", "desc": "Energielabels, inkoop en verduurzaming voor ondernemers.", "slug": "mkb-bedrijven", "image_id": mid('segment-mkb')},
-                      {"title": "Particulieren", "desc": "Energielabel en verduurzamingsadvies voor woningeigenaren.", "slug": "particulieren", "image_id": mid('segment-particulieren')},
-                      {"title": "Vastgoed & Makelaars", "desc": "Labels en WWS-optimalisatie voor vastgoedprofessionals.", "slug": "vastgoed-makelaars", "image_id": mid('segment-vastgoed')},
-                      {"title": "Gemeenten & Woningstichtingen", "desc": "Verduurzaming op schaal voor corporaties en gemeenten.", "slug": "gemeenten-woningstichtingen", "image_id": mid('segment-gemeenten')},
-                  ],
-                  "diensten": [
-                      {"title": "Energielabels woningen", "desc": "Verplicht bij verkoop en verhuur. Snel en officieel geregeld.", "slug": "energielabel-woningen", "image_id": 0},
-                      {"title": "Energielabels utiliteit", "desc": "Verplicht label voor bedrijfspanden en kantoren.", "slug": "energielabel-utiliteit", "image_id": 0},
-                      {"title": "Verduurzaming advies", "desc": "Persoonlijk stappenplan op maat voor uw situatie.", "slug": "verduurzaming-advies", "image_id": mid('dienst-verduurzaming')},
-                      {"title": "Subsidie advies", "desc": "Meer subsidie dan u denkt. Wij brengen uw kansen in kaart.", "slug": "subsidie-advies", "image_id": mid('dienst-subsidie')},
-                      {"title": "Energie inkoop advies", "desc": "Slim inkopen op het juiste moment. Structureel besparen.", "slug": "energie-inkoop-advies", "image_id": mid('dienst-inkoop')},
-                  ],
-                  "erik": {
-                      "name": "Erik Dolman",
-                      "image_id": mid('erik-woning'),
-                      "bio": "Als oprichter van STAP Energie combineer ik ruime ervaring in de energiemarkt met een oprechte passie voor duurzaamheid. Mensen komen naar mij toe omdat ik dingen kan uitleggen en uitzoeken — en dat vind ik mooi.",
-                      "quote": "De natuur is ons grootste kapitaal. Verduurzamen is een verstandige keuze voor het milieu, comfort én je portemonnee.",
-                      "credential": "EPA-adviseur in opleiding (EPUB) — certificering verwacht 2025",
-                  },
-                  "cta": {
-                      "heading": "Klaar voor jouw eerste STAP?",
-                      "subtext": "Gratis kennismakingsgesprek — geen verplichtingen, wel direct waarde.",
-                      "button": "Gratis gesprek inplannen",
-                  }
-              }
-          }
-
-          # Sturen naar de plugin
-          print("Homepage deployen via STAP plugin...")
-          resp = requests.post(
-              f"{wp}/wp-json/stap/v1/deploy",
-              headers=h,
-              json=homepage_data
-          )
-
-          if resp.status_code == 200:
-              result = resp.json()
-              hp = result.get('results', {}).get('homepage', {})
-              print(f"  Homepage {hp.get('action','?')}: {hp.get('url','')}")
-              print("\nDeploy succesvol!")
+          # Check 2: Privacyverklaring
+          if not any(t in all_html for t in [
+              'privacyverklaring','privacy policy','privacybeleid',
+              'privacy-policy','privacystatement']):
+              issues.append("[AVG] Geen privacyverklaring gevonden of gelinkt")
           else:
-              print(f"  Fout: {resp.status_code}")
-              print(f"  {resp.text[:300]}")
+              print("  ✅ Privacyverklaring gevonden")
+
+          # Check 3: Cookiemelding bij Analytics
+          has_analytics = any(t in all_html for t in [
+              'google-analytics','gtag','ua-','g-','googletagmanager','_ga'])
+          has_cookie = any(t in all_html for t in [
+              'cookie','cookiemelding','cookiebanner'])
+          if has_analytics and not has_cookie:
+              issues.append("[AVG] Google Analytics aanwezig maar geen cookiemelding")
+          elif has_analytics:
+              print("  ✅ Cookiemelding gevonden")
+          else:
+              print("  ℹ️  Geen analytics — cookiemelding niet vereist")
+
+          # Check 4: KvK-nummer (waarschuwing, geen blokkade)
+          if not any(t in all_html for t in [
+              'kvk','kamer van koophandel','in aanvraag','kvk-nummer']):
+              warnings.append("[AVG] KvK-nummer niet gevonden — acceptabel als 'in aanvraag'")
+          else:
+              print("  ✅ KvK-vermelding gevonden")
+
+          # Check 5: Contactgegevens
+          if not any(t in all_html for t in ['stapenergie.nl','contact']):
+              issues.append("[AVG] Geen contactgegevens gevonden")
+          else:
+              print("  ✅ Contactgegevens gevonden")
+
+          if warnings:
+              print("\n⚠️  Waarschuwingen (deploy gaat door):")
+              for w in warnings: print(f"  → {w}")
+
+          if issues:
+              print("\n❌ Compliance Officer GEBLOKKEERD:")
+              for i in issues: print(f"  → {i}")
               sys.exit(1)
-          PYEOF
+
+          print("\n✅ Compliance Officer: Alle AVG-checks geslaagd")
+          EOF
+
+  # ══════════════════════════════════════════════
+  #  AGENT 3: DEPLOY
+  #  Wordt geconfigureerd in fase 2 (SFTP)
+  # ══════════════════════════════════════════════
+  deploy-to-hosting:
+    name: Deploy Agent
+    runs-on: ubuntu-latest
+    needs: compliance-check
+    steps:
+      - uses: actions/checkout@v4
+      - name: Wacht op SFTP configuratie
+        run: |
+          echo "✅ Security en Compliance checks geslaagd."
+          echo "⏳ Deploy Agent wordt geconfigureerd in fase 2 (SFTP naar Mijndomein)."
+          echo "   Voeg SFTP_HOST, SFTP_USER en SFTP_PASSWORD toe als GitHub Secrets."
