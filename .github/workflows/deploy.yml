@@ -199,13 +199,11 @@ jobs:
           set sftp:auto-confirm yes
           set net:max-retries 3
           set net:timeout 30
-          mirror --reverse --delete --verbose \
-            --exclude .git/ \
-            --exclude .github/ \
-            --exclude content/ \
-            --exclude images/ \
-            --exclude README.md \
-            . /domains/nieuw.stapenergie.nl/public_html
+          ls /
+          ls /domains/
+          ls /domains/nieuw.stapenergie.nl/
+          ls /domains/nieuw.stapenergie.nl/public_html/
+          put index.html -o /domains/nieuw.stapenergie.nl/public_html/stap-test.html
           bye
           LFTP
 
