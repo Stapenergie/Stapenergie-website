@@ -8,8 +8,9 @@ on:
     branches:
       - main
     paths:
-      - 'content/**.json'
+      - '**.html'
       - 'images/**'
+      - 'content/**.json'
       - '.github/workflows/deploy.yml'
 
 jobs:
@@ -53,14 +54,12 @@ jobs:
                   continue
               scanned += 1
 
-              # Check 1: Hardcoded wachtwoorden
               for p in [r'password\s*[=:]\s*["\'][^"\']{4,}["\']',
                         r'wachtwoord\s*[=:]\s*["\'][^"\']{4,}["\']',
                         r'passwd\s*[=:]\s*["\'][^"\']{4,}["\']']:
                   if re.search(p, content, re.IGNORECASE):
                       issues.append(f"[WACHTWOORD] Mogelijk hardcoded wachtwoord in: {filepath}")
 
-              # Check 2: API keys en tokens
               for p in [r'api[_-]?key\s*[=:]\s*["\'][A-Za-z0-9\-_]{16,}["\']',
                         r'Bearer\s+[A-Za-z0-9\-_\.]{20,}',
                         r'sk-[A-Za-z0-9]{32,}',
@@ -68,19 +67,16 @@ jobs:
                   if re.search(p, content, re.IGNORECASE):
                       issues.append(f"[API KEY] Mogelijk hardcoded API key in: {filepath}")
 
-              # Check 3: E-mailadressen buiten toegestane domeinen
               emails = re.findall(r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b', content)
               allowed = ['stapenergie.nl', 'example.com']
               for email in emails:
                   if email.split('@')[1] not in allowed:
                       issues.append(f"[EMAIL] Extern e-mailadres ({email}) in: {filepath}")
 
-              # Check 4: BSN-nummers
               if re.search(r'\b\d{9}\b', content) and \
                  any(t in content.lower() for t in ['bsn', 'sofinummer']):
                   issues.append(f"[BSN] Mogelijk BSN-nummer in: {filepath}")
 
-              # Check 5: IBAN-nummers
               if re.search(r'\bNL\d{2}[A-Z]{4}\d{10}\b', content):
                   issues.append(f"[IBAN] Mogelijk IBAN-nummer in: {filepath}")
 
@@ -127,7 +123,6 @@ jobs:
               except:
                   pass
 
-          # Check 1: Opt-in in contactformulier
           has_form = 'form' in all_html and ('input' in all_html or 'textarea' in all_html)
           if has_form:
               has_optin = any(t in all_html for t in [
@@ -138,7 +133,6 @@ jobs:
               else:
                   print("  ✅ Opt-in gevonden in formulier")
 
-          # Check 2: Privacyverklaring
           if not any(t in all_html for t in [
               'privacyverklaring','privacy policy','privacybeleid',
               'privacy-policy','privacystatement']):
@@ -146,7 +140,6 @@ jobs:
           else:
               print("  ✅ Privacyverklaring gevonden")
 
-          # Check 3: Cookiemelding bij Analytics
           has_analytics = any(t in all_html for t in [
               'google-analytics','gtag','ua-','g-','googletagmanager','_ga'])
           has_cookie = any(t in all_html for t in [
@@ -158,14 +151,12 @@ jobs:
           else:
               print("  ℹ️  Geen analytics — cookiemelding niet vereist")
 
-          # Check 4: KvK-nummer (waarschuwing, geen blokkade)
           if not any(t in all_html for t in [
               'kvk','kamer van koophandel','in aanvraag','kvk-nummer']):
               warnings.append("[AVG] KvK-nummer niet gevonden — acceptabel als 'in aanvraag'")
           else:
               print("  ✅ KvK-vermelding gevonden")
 
-          # Check 5: Contactgegevens
           if not any(t in all_html for t in ['stapenergie.nl','contact']):
               issues.append("[AVG] Geen contactgegevens gevonden")
           else:
@@ -185,7 +176,7 @@ jobs:
 
   # ══════════════════════════════════════════════
   #  AGENT 3: DEPLOY
-  #  Wordt geconfigureerd in fase 2 (SFTP)
+  #  Pusht bestanden via SFTP naar mijn.host
   # ══════════════════════════════════════════════
   deploy-to-hosting:
     name: Deploy Agent
@@ -193,8 +184,28 @@ jobs:
     needs: compliance-check
     steps:
       - uses: actions/checkout@v4
-      - name: Wacht op SFTP configuratie
+      - name: Installeer SFTP tool
+        run: sudo apt-get install -y lftp
+      - name: Deploy via SFTP naar nieuw.stapenergie.nl
+        env:
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+          SFTP_USER: ${{ secrets.SFTP_USER }}
+          SFTP_PASS: ${{ secrets.SFTP_PASS }}
         run: |
-          echo "✅ Security en Compliance checks geslaagd."
-          echo "⏳ Deploy Agent wordt geconfigureerd in fase 2 (SFTP naar Mijndomein)."
-          echo "   Voeg SFTP_HOST, SFTP_USER en SFTP_PASSWORD toe als GitHub Secrets."
+          echo "🚀 Deploy Agent gestart..."
+          echo "  Verbinden met $SFTP_HOST..."
+
+          lftp -u "$SFTP_USER","$SFTP_PASS" sftp://"$SFTP_HOST" << 'LFTP'
+          set ssl:verify-certificate no
+          set ftp:ssl-allow yes
+          mirror --reverse --delete --verbose \
+            --exclude .git/ \
+            --exclude .github/ \
+            --exclude content/ \
+            --exclude images/ \
+            --exclude README.md \
+            . /public_html
+          bye
+          LFTP
+
+          echo "✅ Deploy Agent: Bestanden succesvol geüpload naar nieuw.stapenergie.nl"
