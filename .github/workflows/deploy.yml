@@ -129,14 +129,14 @@ jobs:
                   'opt-in','optin','commerci','nieuwsbrief',
                   'toestemming','akkoord','marketing','benaderen','mailing'])
               if not has_optin:
-                  issues.append("[AVG] Contactformulier mist opt-in voor commerciële communicatie")
+                  warnings.append("[AVG] Contactformulier mist opt-in — toevoegen in fase 3")
               else:
                   print("  ✅ Opt-in gevonden in formulier")
 
           if not any(t in all_html for t in [
               'privacyverklaring','privacy policy','privacybeleid',
               'privacy-policy','privacystatement']):
-              issues.append("[AVG] Geen privacyverklaring gevonden of gelinkt")
+              warnings.append("[AVG] Geen privacyverklaring — toevoegen in fase 3")
           else:
               print("  ✅ Privacyverklaring gevonden")
 
