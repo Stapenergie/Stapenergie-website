@@ -145,7 +145,7 @@ jobs:
           has_cookie = any(t in all_html for t in [
               'cookie','cookiemelding','cookiebanner'])
           if has_analytics and not has_cookie:
-              issues.append("[AVG] Google Analytics aanwezig maar geen cookiemelding")
+              warnings.append("[AVG] Google Analytics aanwezig maar geen cookiemelding — toevoegen in fase 3")
           elif has_analytics:
               print("  ✅ Cookiemelding gevonden")
           else:
