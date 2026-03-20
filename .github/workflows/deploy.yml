@@ -201,6 +201,7 @@ jobs:
           set net:timeout 30
           pwd
           ls
+          put index.html -o hallo-stap.html
           bye
           LFTP
 
