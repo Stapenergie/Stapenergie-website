@@ -199,6 +199,9 @@ jobs:
           pwd
           ls
           put index.html index.html
+          mkdir -p images
+          mput -O images images/*.webp
+          mput -O images images/*.png
           bye
           SFTP_CMDS
 
