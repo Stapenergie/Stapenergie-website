@@ -200,25 +200,34 @@ jobs:
           echo "🚀 Deploy Agent gestart..."
           echo "  Verbinden met $SFTP_HOST..."
 
-          sshpass -p "$SFTP_PASS" sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null "$SFTP_USER@$SFTP_HOST" << 'SFTP_CMDS'
-          pwd
-          ls
-          put index.html index.html
-          bye
-          SFTP_CMDS
+          # Bouw één SFTP batch script dat alles doet in één sessie
+          BATCH_FILE=$(mktemp)
 
-          # Upload images map als die bestanden bevat
-          if ls images/*.webp 2>/dev/null || ls images/*.png 2>/dev/null; then
-            lftp -u "$SFTP_USER","$SFTP_PASS" sftp://"$SFTP_HOST" << 'IMG_CMDS'
-          set sftp:auto-confirm yes
-          mkdir -p images
-          mput -O images images/*.webp
-          mput -O images images/*.png
-          bye
-          IMG_CMDS
-            echo "✅ Afbeeldingen geüpload"
+          # Altijd index.html uploaden
+          echo "put index.html index.html" >> "$BATCH_FILE"
+
+          # Images uploaden als ze aanwezig zijn
+          if ls images/*.webp 2>/dev/null 1>&2 || ls images/*.png 2>/dev/null 1>&2; then
+            echo "mkdir images" >> "$BATCH_FILE"
+            for f in images/*.webp images/*.png; do
+              [ -f "$f" ] && echo "put $f $f" >> "$BATCH_FILE"
+            done
+            echo "ℹ️  Afbeeldingen worden meegestuurd"
           else
-            echo "ℹ️  Geen afbeeldingen om te uploaden"
+            echo "ℹ️  Geen afbeeldingen gevonden — alleen index.html"
           fi
 
-          echo "✅ Deploy Agent klaar"
+          echo "bye" >> "$BATCH_FILE"
+
+          # Één SFTP sessie voor alles
+          sshpass -p "$SFTP_PASS" sftp             -o StrictHostKeyChecking=no             -o UserKnownHostsFile=/dev/null             -b "$BATCH_FILE"             "$SFTP_USER@$SFTP_HOST"
+
+          EXIT_CODE=$?
+          rm -f "$BATCH_FILE"
+
+          if [ $EXIT_CODE -eq 0 ]; then
+            echo "✅ Deploy Agent: alles succesvol geüpload"
+          else
+            echo "❌ Deploy mislukt met exit code $EXIT_CODE"
+            exit $EXIT_CODE
+          fi
