@@ -501,6 +501,8 @@ a    { text-decoration: none; }
     <span class="sec-label">Kies jouw situatie</span>
     <h2 class="sec-title">Voor wie is STAP Energie?</h2>
     <div class="seg-carousel">
+      <button id="seg-prev-btn" class="seg-btn" aria-label="Vorige">&#8249;</button>
+      <button id="seg-next-btn" class="seg-btn" aria-label="Volgende">&#8250;</button>
       <div class="seg-track" id="seg-track">
         <a href="/mkb-bedrijven/" class="seg-card" id="mkb">
           <img src="images/segment-mkb.jpg" alt="MKB & Bedrijven" loading="lazy">
@@ -650,21 +652,8 @@ a    { text-decoration: none; }
   var isMob = false;
   var tx = 0;
 
-  // Maak pijltjes dynamisch aan
-  var prev = document.createElement('button');
-  prev.id = 'seg-prev-btn';
-  prev.className = 'seg-btn';
-  prev.innerHTML = '&#8249;';
-  prev.setAttribute('aria-label', 'Vorige');
-
-  var next = document.createElement('button');
-  next.id = 'seg-next-btn';
-  next.className = 'seg-btn';
-  next.innerHTML = '&#8250;';
-  next.setAttribute('aria-label', 'Volgende');
-
-  carousel.insertBefore(prev, track);
-  carousel.appendChild(next);
+  var prev = document.getElementById('seg-prev-btn');
+  var next = document.getElementById('seg-next-btn');
 
   function cw() { return cards[0] ? cards[0].offsetWidth + 16 : 0; }
 
