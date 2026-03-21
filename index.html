@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>STAP Energie — Energielabels & Verduurzamingsadvies</title>
 <meta name="description" content="STAP Energie helpt ondernemers en woningeigenaren verduurzamen. Officieel energielabel, verduurzamingsadvies en subsidie-advies. 16+ jaar ervaring. Heel Nederland.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
@@ -153,10 +154,14 @@ a    { text-decoration: none; }
    SEGMENTEN CAROUSEL
 ══════════════════════════════════ */
 .seg-section { background: #fff; }
-.seg-shell    { position: relative; margin-top: 2rem; }
-.seg-carousel { overflow: hidden; }
-.seg-track    { display: flex; gap: 1.2rem; transition: transform .45s cubic-bezier(.25,.46,.45,.94); }
-.seg-card     { flex-shrink: 0; }
+.seg-swiper { margin-top: 2rem; padding-bottom: 3rem !important; overflow: hidden; }
+.seg-swiper .swiper-slide { height: auto; box-sizing: border-box; }
+.seg-swiper .swiper-button-prev,
+.seg-swiper .swiper-button-next { color: var(--groen); background: white; width: 40px; height: 40px; border-radius: 50%; box-shadow: var(--shadow); }
+.seg-swiper .swiper-button-prev::after,
+.seg-swiper .swiper-button-next::after { font-size: 1rem; font-weight: 700; }
+.seg-swiper .swiper-pagination-bullet { background: var(--rand); opacity: 1; }
+.seg-swiper .swiper-pagination-bullet-active { background: var(--groen); }
 .seg-card { border: 1.5px solid var(--rand); border-radius: var(--rl); overflow: hidden; transition: border-color .2s, box-shadow .2s, transform .2s; }
 .seg-card:hover { border-color: var(--groen); box-shadow: var(--shadow-lg); transform: translateY(-3px); }
 .seg-card img { width: 100%; height: 140px; object-fit: cover; }
@@ -164,9 +169,7 @@ a    { text-decoration: none; }
 .seg-card-body h3 { font-size: .95rem; font-weight: 700; margin-bottom: .3rem; }
 .seg-card-body p { font-size: .82rem; color: var(--subtekst); margin-bottom: .7rem; line-height: 1.4; }
 .seg-arrow { display: flex; align-items: center; gap: 4px; color: var(--groen); font-size: .82rem; font-weight: 600; }
-.seg-dots { display: none; justify-content: center; gap: 8px; margin-top: 1.2rem; }
-.seg-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--rand); border: none; cursor: pointer; padding: 0; transition: background .2s, width .25s, border-radius .25s; }
-.seg-dot.active { background: var(--groen); width: 24px; border-radius: 4px; }
+
 
 /* ══════════════════════════════════
    OVER ERIK
@@ -226,6 +229,12 @@ a    { text-decoration: none; }
 /* ══════════════════════════════════
    RESPONSIVE — MOBIEL 768px
 ══════════════════════════════════ */
+
+
+
+/* ══════════════════════════════════
+   RESPONSIVE — MOBIEL 768px
+══════════════════════════════════ */
 @media (max-width: 768px) {
   /* Nav */
   .nav-toggle { display: flex; }
@@ -251,31 +260,20 @@ a    { text-decoration: none; }
   .has-dd:hover .dropdown { display: none; }
   .has-dd.open .dropdown { display: block; }
   .dd-item { min-height: 44px; }
-
   /* Hero */
   .hero { min-height: auto; }
   .hero-inner { grid-template-columns: 1fr; padding: 100px 5% 3rem; gap: 2rem; }
   .hero-overlay { background: linear-gradient(180deg, rgba(10,25,16,.8) 0%, rgba(10,25,16,.7) 100%); }
   .hero-form-card { width: 100%; }
-
   /* Diensten */
   .diensten-grid { grid-template-columns: 1fr; }
-
-  /* Segment carousel activeren */
-  .seg-track {
-    display: flex;
-    gap: 1rem;
-    grid-template-columns: unset;
-    width: calc(4 * 82vw + 3 * 1rem);
-  }
-  .seg-card { min-width: 82vw; max-width: 82vw; flex-shrink: 0; }
-  .seg-dots { display: flex; }
-
+  /* Over Erik */
+  .over-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .over-badge { right: 1rem; bottom: 1rem; }
   /* CTA */
   .cta-btns { flex-direction: column; align-items: center; }
   .btn-wit, .btn-wit-out { width: 100%; max-width: 300px; text-align: center; justify-content: center; }
 }
-
 /* ══════════════════════════════════
    RESPONSIVE — KLEIN 480px
 ══════════════════════════════════ */
@@ -294,12 +292,7 @@ a    { text-decoration: none; }
 .form-success-title { font-weight: 700; font-size: 1rem; margin-bottom: .3rem; }
 .form-success-sub { color: var(--subtekst); font-size: .85rem; }
 
-.seg-btn          { position: absolute; top: 38%; transform: translateY(-50%); z-index: 10; width: 44px; height: 44px; border-radius: 50%; background: white; border: 1.5px solid var(--rand); color: var(--groen); display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: var(--shadow); transition: background .2s; font-size: 22px; line-height: 1; }
-.seg-btn:hover    { background: var(--groen-card); box-shadow: var(--shadow-lg); }
-.seg-btn:disabled { opacity: .45; cursor: default; }
-#seg-prev-btn     { left: -22px; }
-#seg-next-btn     { right: -22px; }
-@media (max-width: 900px) { #seg-prev-btn { left: 4px; } #seg-next-btn { right: 4px; } }
+
 </style>
 </head>
 <body>
@@ -502,11 +495,10 @@ a    { text-decoration: none; }
   <div class="container">
     <span class="sec-label">Kies jouw situatie</span>
     <h2 class="sec-title">Voor wie is STAP Energie?</h2>
-    <div class="seg-shell">
-      <button id="seg-prev-btn" class="seg-btn" aria-label="Vorige">&#8249;</button>
-      <div class="seg-carousel">
-        <div class="seg-track" id="seg-track">
-          <a href="/mkb-bedrijven/" class="seg-card" id="mkb">
+    <div class="swiper seg-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a href="/mkb-bedrijven/" class="seg-card">
             <img src="images/segment-mkb.jpg" alt="MKB & Bedrijven" loading="lazy">
             <div class="seg-card-body">
               <h3>MKB & Bedrijven</h3>
@@ -514,7 +506,9 @@ a    { text-decoration: none; }
               <span class="seg-arrow">Meer info →</span>
             </div>
           </a>
-          <a href="/particulieren/" class="seg-card" id="particulieren">
+        </div>
+        <div class="swiper-slide">
+          <a href="/particulieren/" class="seg-card">
             <img src="images/segment-particulieren.jpg" alt="Particulieren" loading="lazy">
             <div class="seg-card-body">
               <h3>Particulieren</h3>
@@ -522,7 +516,9 @@ a    { text-decoration: none; }
               <span class="seg-arrow">Meer info →</span>
             </div>
           </a>
-          <a href="/vastgoed-makelaars/" class="seg-card" id="vastgoed">
+        </div>
+        <div class="swiper-slide">
+          <a href="/vastgoed-makelaars/" class="seg-card">
             <img src="images/segment-vastgoed.jpg" alt="Vastgoed & Makelaars" loading="lazy">
             <div class="seg-card-body">
               <h3>Vastgoed & Makelaars</h3>
@@ -530,7 +526,9 @@ a    { text-decoration: none; }
               <span class="seg-arrow">Meer info →</span>
             </div>
           </a>
-          <a href="/gemeenten-woningstichtingen/" class="seg-card" id="gemeenten">
+        </div>
+        <div class="swiper-slide">
+          <a href="/gemeenten-woningstichtingen/" class="seg-card">
             <img src="images/segment-gemeenten.jpg" alt="Gemeenten & Woningstichtingen" loading="lazy">
             <div class="seg-card-body">
               <h3>Gemeenten & Woningstichtingen</h3>
@@ -540,9 +538,10 @@ a    { text-decoration: none; }
           </a>
         </div>
       </div>
-      <button id="seg-next-btn" class="seg-btn" aria-label="Volgende">&#8250;</button>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>
-    <div class="seg-dots" id="seg-dots"></div>
   </div>
 </section>
 
@@ -634,111 +633,23 @@ a    { text-decoration: none; }
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
 
 
-// ── SEGMENT CAROUSEL ──
-(function() {
-  function initCarousel() {
-    var shell    = document.querySelector('.seg-shell');
-    var carousel = document.querySelector('.seg-carousel');
-    var track    = document.getElementById('seg-track');
-    var cards    = document.querySelectorAll('.seg-card');
-    var dotsWrap = document.getElementById('seg-dots');
-    var prev     = document.getElementById('seg-prev-btn');
-    var next     = document.getElementById('seg-next-btn');
-
-    if (!shell || !carousel || !track || !dotsWrap || !prev || !next || !cards.length) return;
-
-    var tot         = cards.length;
-    var cur         = 0;
-    var timer       = null;
-    var tx          = 0;
-    var resizeTimer = null;
-    var visible, maxIdx, gap;
-
-    function getVisible() {
-      var ww = window.innerWidth;
-      if (ww <= 768) return 1;
-      if (ww <= 900) return 2;
-      return 3;
-    }
-
-    function stopTimer() { if (timer) { clearInterval(timer); timer = null; } }
-    function startTimer() {
-      stopTimer();
-      if (window.innerWidth > 768) return;
-      timer = setInterval(function() {
-        go(cur >= maxIdx ? 0 : cur + 1);
-      }, 4000);
-    }
-
-    function setup() {
-      visible = getVisible();
-      maxIdx  = Math.max(0, tot - visible);
-      gap     = parseFloat(getComputedStyle(track).gap) || 0;
-      var w   = (carousel.offsetWidth - (gap * (visible - 1))) / visible;
-
-      Array.prototype.forEach.call(cards, function(c) {
-        c.style.minWidth = w + 'px';
-        c.style.maxWidth = w + 'px';
-      });
-
-      dotsWrap.innerHTML = '';
-      for (var i = 0; i <= maxIdx; i++) {
-        var d = document.createElement('button');
-        d.className = 'seg-dot' + (i === cur ? ' active' : '');
-        d.dataset.idx = i;
-        d.addEventListener('click', (function(idx) {
-          return function() { go(idx); stopTimer(); startTimer(); };
-        })(i));
-        dotsWrap.appendChild(d);
-      }
-      dotsWrap.style.display = maxIdx === 0 ? 'none' : 'flex';
-
-      go(Math.min(cur, maxIdx));
-    }
-
-    function go(idx) {
-      if (!cards[0] || !cards[0].offsetWidth) return;
-      cur = Math.max(0, Math.min(idx, maxIdx));
-      var cw = cards[0].offsetWidth + gap;
-      track.style.transform = 'translateX(-' + (cur * cw) + 'px)';
-      prev.disabled = (cur === 0);
-      next.disabled = (cur === maxIdx);
-      Array.prototype.forEach.call(
-        dotsWrap.querySelectorAll('.seg-dot'),
-        function(d, i) { d.classList.toggle('active', i === cur); }
-      );
-    }
-
-    prev.addEventListener('click', function() { go(cur - 1); stopTimer(); startTimer(); });
-    next.addEventListener('click', function() { go(cur + 1); stopTimer(); startTimer(); });
-
-    carousel.addEventListener('touchstart', function(e) {
-      tx = e.touches[0].clientX; stopTimer();
-    }, { passive: true });
-    carousel.addEventListener('touchend', function(e) {
-      var diff = tx - e.changedTouches[0].clientX;
-      if (Math.abs(diff) > 40) go(cur + (diff > 0 ? 1 : -1));
-      startTimer();
-    }, { passive: true });
-
-    window.addEventListener('resize', function() {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(function() { setup(); startTimer(); }, 120);
-    });
-
-    setup();
-    startTimer();
+// ── SEGMENT CAROUSEL (Swiper) ──
+new Swiper('.seg-swiper', {
+  slidesPerView: 1.2,
+  spaceBetween: 16,
+  loop: true,
+  autoplay: { delay: 4000, disableOnInteraction: false, pauseOnMouseEnter: true },
+  pagination: { el: '.swiper-pagination', clickable: true },
+  navigation: { prevEl: '.swiper-button-prev', nextEl: '.swiper-button-next' },
+  breakpoints: {
+    600:  { slidesPerView: 2, spaceBetween: 16 },
+    900:  { slidesPerView: 3, spaceBetween: 20 }
   }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initCarousel);
-  } else {
-    initCarousel();
-  }
-})();
+});
 
 // ── HAMBURGER ──
 var toggle   = document.getElementById('nav-toggle');
