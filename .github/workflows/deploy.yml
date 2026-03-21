@@ -200,34 +200,27 @@ jobs:
           echo "🚀 Deploy Agent gestart..."
           echo "  Verbinden met $SFTP_HOST..."
 
-          # Bouw één SFTP batch script dat alles doet in één sessie
-          BATCH_FILE=$(mktemp)
+          # Stap 1: upload index.html (zelfde aanpak als eerder werkend)
+          sshpass -p "$SFTP_PASS" sftp             -o StrictHostKeyChecking=no             -o UserKnownHostsFile=/dev/null             "$SFTP_USER@$SFTP_HOST" << 'SFTP_CMDS'
+          put index.html index.html
+          bye
+          SFTP_CMDS
 
-          # Altijd index.html uploaden
-          echo "put index.html index.html" >> "$BATCH_FILE"
-
-          # Images uploaden als ze aanwezig zijn
-          if ls images/*.webp 2>/dev/null 1>&2 || ls images/*.png 2>/dev/null 1>&2; then
-            echo "mkdir images" >> "$BATCH_FILE"
-            for f in images/*.webp images/*.png; do
-              [ -f "$f" ] && echo "put $f $f" >> "$BATCH_FILE"
-            done
-            echo "ℹ️  Afbeeldingen worden meegestuurd"
-          else
-            echo "ℹ️  Geen afbeeldingen gevonden — alleen index.html"
+          if [ $? -ne 0 ]; then
+            echo "❌ Upload index.html mislukt"
+            exit 1
           fi
+          echo "✅ index.html geüpload"
 
-          echo "bye" >> "$BATCH_FILE"
+          # Stap 2: upload images één voor één (alleen als ze bestaan)
+          for img in images/*.webp images/*.png; do
+            [ -f "$img" ] || continue
+            echo "  Uploaden: $img"
+            sshpass -p "$SFTP_PASS" sftp               -o StrictHostKeyChecking=no               -o UserKnownHostsFile=/dev/null               "$SFTP_USER@$SFTP_HOST" << IMGCMD
+          put $img $img
+          bye
+          IMGCMD
+            echo "  ✅ $img geüpload"
+          done
 
-          # Één SFTP sessie voor alles
-          sshpass -p "$SFTP_PASS" sftp             -o StrictHostKeyChecking=no             -o UserKnownHostsFile=/dev/null             -b "$BATCH_FILE"             "$SFTP_USER@$SFTP_HOST"
-
-          EXIT_CODE=$?
-          rm -f "$BATCH_FILE"
-
-          if [ $EXIT_CODE -eq 0 ]; then
-            echo "✅ Deploy Agent: alles succesvol geüpload"
-          else
-            echo "❌ Deploy mislukt met exit code $EXIT_CODE"
-            exit $EXIT_CODE
-          fi
+          echo "✅ Deploy Agent: klaar"
