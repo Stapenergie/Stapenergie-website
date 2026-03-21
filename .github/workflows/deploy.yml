@@ -191,43 +191,40 @@ jobs:
       - uses: actions/checkout@v4
       - name: Installeer SFTP tool
         run: sudo apt-get install -y sshpass
-      - name: Deploy via SFTP naar nieuw.stapenergie.nl
+      - name: Upload index.html
         env:
           SFTP_HOST: ${{ secrets.SFTP_HOST }}
           SFTP_USER: ${{ secrets.SFTP_USER }}
           SFTP_PASS: ${{ secrets.SFTP_PASS }}
         run: |
-          echo "🚀 Deploy Agent gestart..."
-          echo "  Verbinden met $SFTP_HOST..."
-
-          # Stap 1: upload index.html (zelfde aanpak als eerder werkend)
-          sshpass -p "$SFTP_PASS" sftp             -o StrictHostKeyChecking=no             -o UserKnownHostsFile=/dev/null             "$SFTP_USER@$SFTP_HOST" << 'SFTP_CMDS'
+          echo "Upload index.html..."
+          sshpass -p "$SFTP_PASS" sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null "$SFTP_USER@$SFTP_HOST" << 'EOF_SFTP'
           put index.html index.html
           bye
-          SFTP_CMDS
-
-          if [ $? -ne 0 ]; then
-            echo "❌ Upload index.html mislukt"
-            exit 1
-          fi
-          echo "✅ index.html geüpload"
-
-          # Stap 2: maak images map aan op server
-          sshpass -p "$SFTP_PASS" sftp             -o StrictHostKeyChecking=no             -o UserKnownHostsFile=/dev/null             "$SFTP_USER@$SFTP_HOST" << 'MKDIR_CMDS'
+          EOF_SFTP
+          echo "index.html geupload"
+      - name: Maak images map aan
+        env:
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+          SFTP_USER: ${{ secrets.SFTP_USER }}
+          SFTP_PASS: ${{ secrets.SFTP_PASS }}
+        run: |
+          sshpass -p "$SFTP_PASS" sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null "$SFTP_USER@$SFTP_HOST" << 'EOF_MKDIR'
           mkdir images
           bye
-          MKDIR_CMDS
-
-          # Stap 3: upload images één voor één met geciteerde naam
-          for img in images/*.webp images/*.png; do
+          EOF_MKDIR
+          echo "images map aangemaakt"
+      - name: Upload afbeeldingen
+        env:
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+          SFTP_USER: ${{ secrets.SFTP_USER }}
+          SFTP_PASS: ${{ secrets.SFTP_PASS }}
+        run: |
+          for img in images/*.png images/*.jpg images/*.webp; do
             [ -f "$img" ] || continue
-            filename=$(basename "$img")
-            echo "  Uploaden: $filename"
-            sshpass -p "$SFTP_PASS" sftp               -o StrictHostKeyChecking=no               -o UserKnownHostsFile=/dev/null               "$SFTP_USER@$SFTP_HOST" <<IMGCMD
-put "$img" "images/$filename"
-bye
-IMGCMD
-            echo "  ✅ $filename geüpload"
+            fn=$(basename "$img")
+            echo "Uploaden: $fn"
+            echo -e "put \"$img\" \"images/$fn\"\nbye" | sshpass -p "$SFTP_PASS" sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null "$SFTP_USER@$SFTP_HOST"
+            echo "Klaar: $fn"
           done
-
-          echo "✅ Deploy Agent: klaar"
+          echo "Alle afbeeldingen geupload"
