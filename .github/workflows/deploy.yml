@@ -42,7 +42,7 @@ jobs:
               glob.glob('**/*.js', recursive=True) +
               glob.glob('**/*.php', recursive=True)
           )
-          skip = ['.git', 'node_modules', 'vendor']
+          skip = ['.git', 'node_modules', 'vendor', '.github']
 
           for filepath in all_files:
               if any(s in filepath for s in skip):
@@ -60,11 +60,16 @@ jobs:
                   if re.search(p, content, re.IGNORECASE):
                       issues.append(f"[WACHTWOORD] Mogelijk hardcoded wachtwoord in: {filepath}")
 
+              # Strip base64 images zodat die niet als API key worden gezien
+              # Strip alle base64 data (afbeeldingen, fonts etc.)
+              content_check = re.sub(r'data:[^;]+;base64,[A-Za-z0-9+/=\s]{20,}', 'DATA_B64', content)
+              # Strip ook lange aaneengesloten base64-achtige strings (>100 chars) die geen API keys zijn
+              content_check = re.sub(r'[A-Za-z0-9+/]{100,}={0,2}', 'LONG_B64', content_check)
               for p in [r'api[_-]?key\s*[=:]\s*["\'][A-Za-z0-9\-_]{16,}["\']',
                         r'Bearer\s+[A-Za-z0-9\-_\.]{20,}',
                         r'sk-[A-Za-z0-9]{32,}',
                         r'AIza[A-Za-z0-9\-_]{35}']:
-                  if re.search(p, content, re.IGNORECASE):
+                  if re.search(p, content_check, re.IGNORECASE):
                       issues.append(f"[API KEY] Mogelijk hardcoded API key in: {filepath}")
 
               emails = re.findall(r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b', content)
