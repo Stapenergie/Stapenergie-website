@@ -212,15 +212,22 @@ jobs:
           fi
           echo "✅ index.html geüpload"
 
-          # Stap 2: upload images één voor één (alleen als ze bestaan)
+          # Stap 2: maak images map aan op server
+          sshpass -p "$SFTP_PASS" sftp             -o StrictHostKeyChecking=no             -o UserKnownHostsFile=/dev/null             "$SFTP_USER@$SFTP_HOST" << 'MKDIR_CMDS'
+          mkdir images
+          bye
+          MKDIR_CMDS
+
+          # Stap 3: upload images één voor één met geciteerde naam
           for img in images/*.webp images/*.png; do
             [ -f "$img" ] || continue
-            echo "  Uploaden: $img"
-            sshpass -p "$SFTP_PASS" sftp               -o StrictHostKeyChecking=no               -o UserKnownHostsFile=/dev/null               "$SFTP_USER@$SFTP_HOST" << IMGCMD
-          put $img $img
-          bye
-          IMGCMD
-            echo "  ✅ $img geüpload"
+            filename=$(basename "$img")
+            echo "  Uploaden: $filename"
+            sshpass -p "$SFTP_PASS" sftp               -o StrictHostKeyChecking=no               -o UserKnownHostsFile=/dev/null               "$SFTP_USER@$SFTP_HOST" <<IMGCMD
+put "$img" "images/$filename"
+bye
+IMGCMD
+            echo "  ✅ $filename geüpload"
           done
 
           echo "✅ Deploy Agent: klaar"
