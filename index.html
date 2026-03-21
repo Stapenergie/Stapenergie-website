@@ -154,6 +154,11 @@ a    { text-decoration: none; }
 ══════════════════════════════════ */
 .seg-section { background: #fff; }
 .seg-carousel { position: relative; overflow: hidden; margin-top: 2rem; }
+.seg-prev, .seg-next { position: absolute; top: 40%; transform: translateY(-50%); z-index: 10; width: 44px; height: 44px; border-radius: 50%; background: white; border: 1.5px solid var(--rand); color: var(--groen); display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: var(--shadow); transition: background .2s, box-shadow .2s; }
+.seg-prev:hover, .seg-next:hover { background: var(--groen-card); box-shadow: var(--shadow-lg); }
+.seg-prev { left: -20px; }
+.seg-next { right: -20px; }
+@media (max-width: 900px) { .seg-prev { left: 4px; } .seg-next { right: 4px; } }
 .seg-track { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; transition: transform .45s cubic-bezier(.25,.46,.45,.94); }
 .seg-card { border: 1.5px solid var(--rand); border-radius: var(--rl); overflow: hidden; transition: border-color .2s, box-shadow .2s, transform .2s; }
 .seg-card:hover { border-color: var(--groen); box-shadow: var(--shadow-lg); transform: translateY(-3px); }
@@ -494,6 +499,12 @@ a    { text-decoration: none; }
     <span class="sec-label">Kies jouw situatie</span>
     <h2 class="sec-title">Voor wie is STAP Energie?</h2>
     <div class="seg-carousel">
+      <button class="seg-prev" aria-label="Vorige" onclick="segGoTo(segCurrent-1)">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M12 4l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="seg-next" aria-label="Volgende" onclick="segGoTo(segCurrent+1)">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M8 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
       <div class="seg-track" id="seg-track">
         <a href="/mkb-bedrijven/" class="seg-card" id="mkb">
           <img src="images/segment-mkb.jpg" alt="MKB & Bedrijven" loading="lazy">
@@ -628,62 +639,58 @@ a    { text-decoration: none; }
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // ── SEGMENT CAROUSEL ──
-(function() {
-  var track  = document.getElementById('seg-track');
-  var dots   = document.querySelectorAll('.seg-dot');
-  var cards  = document.querySelectorAll('.seg-card');
-  if (!track || !dots.length) return;
+var segCurrent = 0;
+var segTotal   = 4;
+var segTimer   = null;
+var segMobile  = false;
+var segTouchX  = 0;
 
-  var current = 0;
-  var total   = dots.length;
-  var timer   = null;
-  var touchX  = 0;
-  var isMobile = false;
+function segCardWidth() {
+  var card = document.querySelector('.seg-card');
+  return card ? card.offsetWidth + 16 : 0;
+}
 
-  function cardWidth() {
-    return cards[0] ? cards[0].offsetWidth + 16 : 0;
+function segGoTo(idx) {
+  segCurrent = ((idx % segTotal) + segTotal) % segTotal;
+  var track = document.getElementById('seg-track');
+  if (track && segMobile) {
+    track.style.transform = 'translateX(-' + (segCurrent * segCardWidth()) + 'px)';
   }
-
-  function goTo(idx) {
-    current = ((idx % total) + total) % total;
-    if (isMobile) {
-      track.style.transform = 'translateX(-' + (current * cardWidth()) + 'px)';
-    }
-    dots.forEach(function(d, i) { d.classList.toggle('active', i === current); });
-  }
-
-  function next() { goTo(current + 1); }
-  function stop() { clearInterval(timer); }
-  function start() { stop(); timer = setInterval(next, 4000); }
-
-  dots.forEach(function(d) {
-    d.addEventListener('click', function() {
-      goTo(parseInt(d.dataset.idx, 10));
-      stop(); start();
-    });
+  document.querySelectorAll('.seg-dot').forEach(function(d, i) {
+    d.classList.toggle('active', i === segCurrent);
   });
+}
 
-  var carousel = track.closest('.seg-carousel');
-  if (carousel) {
-    carousel.addEventListener('touchstart', function(e) {
-      touchX = e.touches[0].clientX; stop();
-    }, { passive: true });
-    carousel.addEventListener('touchend', function(e) {
-      var diff = touchX - e.changedTouches[0].clientX;
-      if (Math.abs(diff) > 40) { diff > 0 ? next() : goTo(current - 1); }
-      start();
-    }, { passive: true });
-  }
+function segStop()  { if (segTimer) clearInterval(segTimer); }
+function segStart() { segStop(); segTimer = setInterval(function(){ segGoTo(segCurrent + 1); }, 4000); }
 
-  function init() {
-    isMobile = window.innerWidth <= 768;
-    if (isMobile) { goTo(current); start(); }
-    else           { track.style.transform = ''; stop(); }
-  }
+function segInit() {
+  segMobile = window.innerWidth <= 768;
+  var track = document.getElementById('seg-track');
+  if (!track) return;
+  if (segMobile) { segGoTo(segCurrent); segStart(); }
+  else           { track.style.transform = ''; segStop(); }
+}
 
-  window.addEventListener('load', init);
-  window.addEventListener('resize', init);
-})();
+document.querySelectorAll('.seg-dot').forEach(function(d) {
+  d.addEventListener('click', function() {
+    segGoTo(parseInt(d.dataset.idx, 10));
+    segStop(); segStart();
+  });
+});
+
+var segEl = document.querySelector('.seg-carousel');
+if (segEl) {
+  segEl.addEventListener('touchstart', function(e) { segTouchX = e.touches[0].clientX; segStop(); }, { passive: true });
+  segEl.addEventListener('touchend',   function(e) {
+    var diff = segTouchX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) segGoTo(segCurrent + (diff > 0 ? 1 : -1));
+    segStart();
+  }, { passive: true });
+}
+
+window.addEventListener('load',   segInit);
+window.addEventListener('resize', segInit);
 
 // ── HAMBURGER ──
 var toggle   = document.getElementById('nav-toggle');
