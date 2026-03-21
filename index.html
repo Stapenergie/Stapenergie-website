@@ -155,7 +155,8 @@ a    { text-decoration: none; }
 .seg-section { background: #fff; }
 .seg-carousel { position: relative; overflow: hidden; margin-top: 2rem; }
 
-.seg-track { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; transition: transform .45s cubic-bezier(.25,.46,.45,.94); }
+.seg-track { display: flex; gap: 1.2rem; transition: transform .45s cubic-bezier(.25,.46,.45,.94); }
+.seg-card { flex-shrink: 0; }
 .seg-card { border: 1.5px solid var(--rand); border-radius: var(--rl); overflow: hidden; transition: border-color .2s, box-shadow .2s, transform .2s; }
 .seg-card:hover { border-color: var(--groen); box-shadow: var(--shadow-lg); transform: translateY(-3px); }
 .seg-card img { width: 100%; height: 140px; object-fit: cover; }
@@ -640,56 +641,79 @@ a    { text-decoration: none; }
 
 // ── SEGMENT CAROUSEL ──
 (function() {
-  var carousel = document.querySelector('.seg-carousel');
-  var track    = document.getElementById('seg-track');
-  var dots     = document.querySelectorAll('.seg-dot');
-  var cards    = document.querySelectorAll('.seg-card');
-  if (!carousel || !track) return;
+  function initCarousel() {
+    var carousel = document.querySelector('.seg-carousel');
+    var track    = document.getElementById('seg-track');
+    var dots     = document.querySelectorAll('.seg-dot');
+    var cards    = document.querySelectorAll('.seg-card');
+    var prev     = document.getElementById('seg-prev-btn');
+    var next     = document.getElementById('seg-next-btn');
+    if (!carousel || !track || !prev || !next || !cards.length) return;
 
-  var cur = 0;
-  var tot = cards.length;
-  var timer = null;
-  var isMob = false;
-  var tx = 0;
+    var cur   = 0;
+    var tot   = cards.length;
+    var timer = null;
+    var tx    = 0;
+    var mob   = window.innerWidth <= 768;
 
-  var prev = document.getElementById('seg-prev-btn');
-  var next = document.getElementById('seg-next-btn');
+    // Zet kaartbreedte expliciet
+    function setCardWidths() {
+      mob = window.innerWidth <= 768;
+      var w = mob ? Math.round(window.innerWidth * 0.82) : Math.round((carousel.offsetWidth - (3 * 16)) / 4);
+      cards.forEach(function(c) {
+        c.style.minWidth = w + 'px';
+        c.style.maxWidth = w + 'px';
+      });
+    }
 
-  function cw() { return cards[0] ? cards[0].offsetWidth + 16 : 0; }
+    function cw() {
+      return cards[0] ? cards[0].offsetWidth + 16 : 0;
+    }
 
-  function go(idx) {
-    cur = ((idx % tot) + tot) % tot;
-    if (isMob) { track.style.transform = 'translateX(-' + (cur * cw()) + 'px)'; }
-    dots.forEach(function(d, i) { d.classList.toggle('active', i === cur); });
-  }
+    function go(idx) {
+      cur = ((idx % tot) + tot) % tot;
+      track.style.transform = 'translateX(-' + (cur * cw()) + 'px)';
+      dots.forEach(function(d, i) { d.classList.toggle('active', i === cur); });
+    }
 
-  function stopTimer()  { if (timer) clearInterval(timer); }
-  function startTimer() { stopTimer(); timer = setInterval(function() { go(cur + 1); }, 4000); }
+    function stopTimer()  { if (timer) { clearInterval(timer); timer = null; } }
+    function startTimer() { stopTimer(); timer = setInterval(function() { go(cur + 1); }, 4000); }
 
-  prev.addEventListener('click', function() { go(cur - 1); stopTimer(); startTimer(); });
-  next.addEventListener('click', function() { go(cur + 1); stopTimer(); startTimer(); });
+    prev.addEventListener('click', function() { go(cur - 1); stopTimer(); startTimer(); });
+    next.addEventListener('click', function() { go(cur + 1); stopTimer(); startTimer(); });
 
-  dots.forEach(function(d) {
-    d.addEventListener('click', function() {
-      go(parseInt(d.dataset.idx, 10)); stopTimer(); startTimer();
+    dots.forEach(function(d) {
+      d.addEventListener('click', function() {
+        go(parseInt(d.dataset.idx, 10)); stopTimer(); startTimer();
+      });
     });
-  });
 
-  carousel.addEventListener('touchstart', function(e) { tx = e.touches[0].clientX; stopTimer(); }, { passive: true });
-  carousel.addEventListener('touchend', function(e) {
-    var diff = tx - e.changedTouches[0].clientX;
-    if (Math.abs(diff) > 40) go(cur + (diff > 0 ? 1 : -1));
-    startTimer();
-  }, { passive: true });
+    carousel.addEventListener('touchstart', function(e) {
+      tx = e.touches[0].clientX; stopTimer();
+    }, { passive: true });
+    carousel.addEventListener('touchend', function(e) {
+      var diff = tx - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) go(cur + (diff > 0 ? 1 : -1));
+      startTimer();
+    }, { passive: true });
 
-  function init() {
-    isMob = window.innerWidth <= 768;
-    if (isMob) { go(0); startTimer(); }
-    else       { track.style.transform = ''; stopTimer(); }
+    // Initialiseer meteen
+    setCardWidths();
+    go(0);
+    if (mob) startTimer();
+
+    window.addEventListener('resize', function() {
+      setCardWidths();
+      go(cur);
+    });
   }
 
-  window.addEventListener('load', init);
-  window.addEventListener('resize', init);
+  // Draai direct als DOM klaar is
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCarousel);
+  } else {
+    initCarousel();
+  }
 })();
 
 // ── HAMBURGER ──
