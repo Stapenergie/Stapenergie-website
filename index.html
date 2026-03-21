@@ -154,11 +154,7 @@ a    { text-decoration: none; }
 ══════════════════════════════════ */
 .seg-section { background: #fff; }
 .seg-carousel { position: relative; overflow: hidden; margin-top: 2rem; }
-.seg-prev, .seg-next { position: absolute; top: 40%; transform: translateY(-50%); z-index: 10; width: 44px; height: 44px; border-radius: 50%; background: white; border: 1.5px solid var(--rand); color: var(--groen); display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: var(--shadow); transition: background .2s, box-shadow .2s; }
-.seg-prev:hover, .seg-next:hover { background: var(--groen-card); box-shadow: var(--shadow-lg); }
-.seg-prev { left: -20px; }
-.seg-next { right: -20px; }
-@media (max-width: 900px) { .seg-prev { left: 4px; } .seg-next { right: 4px; } }
+
 .seg-track { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; transition: transform .45s cubic-bezier(.25,.46,.45,.94); }
 .seg-card { border: 1.5px solid var(--rand); border-radius: var(--rl); overflow: hidden; transition: border-color .2s, box-shadow .2s, transform .2s; }
 .seg-card:hover { border-color: var(--groen); box-shadow: var(--shadow-lg); transform: translateY(-3px); }
@@ -296,6 +292,12 @@ a    { text-decoration: none; }
 .form-success-icon { margin: 0 auto 1rem; display: block; }
 .form-success-title { font-weight: 700; font-size: 1rem; margin-bottom: .3rem; }
 .form-success-sub { color: var(--subtekst); font-size: .85rem; }
+
+.seg-btn { position: absolute; top: 38%; transform: translateY(-50%); z-index: 10; width: 44px; height: 44px; border-radius: 50%; background: white; border: 1.5px solid var(--rand); color: var(--groen); display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: var(--shadow); transition: background .2s; font-size: 22px; line-height: 1; }
+.seg-btn:hover { background: var(--groen-card); box-shadow: var(--shadow-lg); }
+#seg-prev-btn { left: -22px; }
+#seg-next-btn { right: -22px; }
+@media (max-width: 900px) { #seg-prev-btn { left: 4px; } #seg-next-btn { right: 4px; } }
 </style>
 </head>
 <body>
@@ -499,12 +501,6 @@ a    { text-decoration: none; }
     <span class="sec-label">Kies jouw situatie</span>
     <h2 class="sec-title">Voor wie is STAP Energie?</h2>
     <div class="seg-carousel">
-      <button class="seg-prev" aria-label="Vorige" onclick="segGoTo(segCurrent-1)">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M12 4l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <button class="seg-next" aria-label="Volgende" onclick="segGoTo(segCurrent+1)">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M8 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
       <div class="seg-track" id="seg-track">
         <a href="/mkb-bedrijven/" class="seg-card" id="mkb">
           <img src="images/segment-mkb.jpg" alt="MKB & Bedrijven" loading="lazy">
@@ -638,59 +634,74 @@ a    { text-decoration: none; }
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+
+
 // ── SEGMENT CAROUSEL ──
-var segCurrent = 0;
-var segTotal   = 4;
-var segTimer   = null;
-var segMobile  = false;
-var segTouchX  = 0;
+(function() {
+  var carousel = document.querySelector('.seg-carousel');
+  var track    = document.getElementById('seg-track');
+  var dots     = document.querySelectorAll('.seg-dot');
+  var cards    = document.querySelectorAll('.seg-card');
+  if (!carousel || !track) return;
 
-function segCardWidth() {
-  var card = document.querySelector('.seg-card');
-  return card ? card.offsetWidth + 16 : 0;
-}
+  var cur = 0;
+  var tot = cards.length;
+  var timer = null;
+  var isMob = false;
+  var tx = 0;
 
-function segGoTo(idx) {
-  segCurrent = ((idx % segTotal) + segTotal) % segTotal;
-  var track = document.getElementById('seg-track');
-  if (track && segMobile) {
-    track.style.transform = 'translateX(-' + (segCurrent * segCardWidth()) + 'px)';
+  // Maak pijltjes dynamisch aan
+  var prev = document.createElement('button');
+  prev.id = 'seg-prev-btn';
+  prev.className = 'seg-btn';
+  prev.innerHTML = '&#8249;';
+  prev.setAttribute('aria-label', 'Vorige');
+
+  var next = document.createElement('button');
+  next.id = 'seg-next-btn';
+  next.className = 'seg-btn';
+  next.innerHTML = '&#8250;';
+  next.setAttribute('aria-label', 'Volgende');
+
+  carousel.insertBefore(prev, track);
+  carousel.appendChild(next);
+
+  function cw() { return cards[0] ? cards[0].offsetWidth + 16 : 0; }
+
+  function go(idx) {
+    cur = ((idx % tot) + tot) % tot;
+    if (isMob) { track.style.transform = 'translateX(-' + (cur * cw()) + 'px)'; }
+    dots.forEach(function(d, i) { d.classList.toggle('active', i === cur); });
   }
-  document.querySelectorAll('.seg-dot').forEach(function(d, i) {
-    d.classList.toggle('active', i === segCurrent);
+
+  function stopTimer()  { if (timer) clearInterval(timer); }
+  function startTimer() { stopTimer(); timer = setInterval(function() { go(cur + 1); }, 4000); }
+
+  prev.addEventListener('click', function() { go(cur - 1); stopTimer(); startTimer(); });
+  next.addEventListener('click', function() { go(cur + 1); stopTimer(); startTimer(); });
+
+  dots.forEach(function(d) {
+    d.addEventListener('click', function() {
+      go(parseInt(d.dataset.idx, 10)); stopTimer(); startTimer();
+    });
   });
-}
 
-function segStop()  { if (segTimer) clearInterval(segTimer); }
-function segStart() { segStop(); segTimer = setInterval(function(){ segGoTo(segCurrent + 1); }, 4000); }
-
-function segInit() {
-  segMobile = window.innerWidth <= 768;
-  var track = document.getElementById('seg-track');
-  if (!track) return;
-  if (segMobile) { segGoTo(segCurrent); segStart(); }
-  else           { track.style.transform = ''; segStop(); }
-}
-
-document.querySelectorAll('.seg-dot').forEach(function(d) {
-  d.addEventListener('click', function() {
-    segGoTo(parseInt(d.dataset.idx, 10));
-    segStop(); segStart();
-  });
-});
-
-var segEl = document.querySelector('.seg-carousel');
-if (segEl) {
-  segEl.addEventListener('touchstart', function(e) { segTouchX = e.touches[0].clientX; segStop(); }, { passive: true });
-  segEl.addEventListener('touchend',   function(e) {
-    var diff = segTouchX - e.changedTouches[0].clientX;
-    if (Math.abs(diff) > 40) segGoTo(segCurrent + (diff > 0 ? 1 : -1));
-    segStart();
+  carousel.addEventListener('touchstart', function(e) { tx = e.touches[0].clientX; stopTimer(); }, { passive: true });
+  carousel.addEventListener('touchend', function(e) {
+    var diff = tx - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) go(cur + (diff > 0 ? 1 : -1));
+    startTimer();
   }, { passive: true });
-}
 
-window.addEventListener('load',   segInit);
-window.addEventListener('resize', segInit);
+  function init() {
+    isMob = window.innerWidth <= 768;
+    if (isMob) { go(0); startTimer(); }
+    else       { track.style.transform = ''; stopTimer(); }
+  }
+
+  window.addEventListener('load', init);
+  window.addEventListener('resize', init);
+})();
 
 // ── HAMBURGER ──
 var toggle   = document.getElementById('nav-toggle');
