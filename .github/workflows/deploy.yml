@@ -199,10 +199,21 @@ jobs:
           pwd
           ls
           put index.html index.html
+          bye
+          SFTP_CMDS
+
+          # Upload images map als die bestanden bevat
+          if ls images/*.webp 2>/dev/null || ls images/*.png 2>/dev/null; then
+            lftp -u "$SFTP_USER","$SFTP_PASS" sftp://"$SFTP_HOST" << 'IMG_CMDS'
+          set sftp:auto-confirm yes
           mkdir -p images
           mput -O images images/*.webp
           mput -O images images/*.png
           bye
-          SFTP_CMDS
+          IMG_CMDS
+            echo "✅ Afbeeldingen geüpload"
+          else
+            echo "ℹ️  Geen afbeeldingen om te uploaden"
+          fi
 
           echo "✅ Deploy Agent klaar"
