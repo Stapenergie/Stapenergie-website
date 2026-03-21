@@ -203,28 +203,25 @@ jobs:
           bye
           EOF_SFTP
           echo "index.html geupload"
-      - name: Maak images map aan
-        env:
-          SFTP_HOST: ${{ secrets.SFTP_HOST }}
-          SFTP_USER: ${{ secrets.SFTP_USER }}
-          SFTP_PASS: ${{ secrets.SFTP_PASS }}
-        run: |
-          sshpass -p "$SFTP_PASS" sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null "$SFTP_USER@$SFTP_HOST" << 'EOF_MKDIR'
-          mkdir images
-          bye
-          EOF_MKDIR
-          echo "images map aangemaakt"
       - name: Upload afbeeldingen
         env:
           SFTP_HOST: ${{ secrets.SFTP_HOST }}
           SFTP_USER: ${{ secrets.SFTP_USER }}
           SFTP_PASS: ${{ secrets.SFTP_PASS }}
         run: |
-          for img in images/*.png images/*.jpg images/*.webp; do
-            [ -f "$img" ] || continue
-            fn=$(basename "$img")
-            echo "Uploaden: $fn"
-            echo -e "put \"$img\" \"images/$fn\"\nbye" | sshpass -p "$SFTP_PASS" sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null "$SFTP_USER@$SFTP_HOST"
-            echo "Klaar: $fn"
-          done
+          sshpass -p "$SFTP_PASS" sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null "$SFTP_USER@$SFTP_HOST" << 'SFTP_IMGS'
+          mkdir images
+          put images/hero.jpg images/hero.jpg
+          put images/gemengd-zakelijk.jpg images/gemengd-zakelijk.jpg
+          put images/erik-zakelijk.jpg images/erik-zakelijk.jpg
+          put images/erik-portret.jpg images/erik-portret.jpg
+          put images/segment-mkb.jpg images/segment-mkb.jpg
+          put images/segment-particulieren.jpg images/segment-particulieren.jpg
+          put images/segment-vastgoed.jpg images/segment-vastgoed.jpg
+          put images/segment-gemeenten.jpg images/segment-gemeenten.jpg
+          put images/dienst-verduurzaming.jpg images/dienst-verduurzaming.jpg
+          put images/dienst-subsidie.jpg images/dienst-subsidie.jpg
+          put images/dienst-inkoop.jpg images/dienst-inkoop.jpg
+          bye
+          SFTP_IMGS
           echo "Alle afbeeldingen geupload"
