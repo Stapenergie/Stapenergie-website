@@ -178,10 +178,9 @@ jobs:
 
   # ══════════════════════════════════════════════
   #  AGENT 3: DEPLOY
-  #  Pusht ALLE bestanden recursief via SFTP
-  #  Werkt automatisch voor nieuwe submappen
-  #  en nieuwe afbeeldingen — geen handmatige
-  #  aanpassing van dit bestand nodig.
+  #  Snel via sshpass + sftp
+  #  Detecteert automatisch alle HTML-bestanden
+  #  en submappen — geen handmatige aanpassing nodig
   # ══════════════════════════════════════════════
   deploy-to-hosting:
     name: Deploy Agent
@@ -190,30 +189,60 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Installeer SFTP tools
-        run: sudo apt-get install -y sshpass lftp
+      - name: Installeer sshpass
+        run: sudo apt-get install -y sshpass
 
-      - name: Upload alle bestanden recursief
+      - name: Genereer SFTP-script
+        run: |
+          python3 << 'PYEOF'
+          import os, glob
+
+          skip = ['.git', '.github', 'node_modules']
+          lines = []
+
+          # Maak alle submappen aan
+          dirs = set()
+          for f in glob.glob('**/*.html', recursive=True):
+              d = os.path.dirname(f)
+              if d and not any(s in d for s in skip):
+                  dirs.add(d)
+          for d in sorted(dirs):
+              lines.append(f'-mkdir {d}')
+
+          # Upload root index.html
+          lines.append('put index.html index.html')
+
+          # Upload alle HTML in submappen
+          for f in sorted(glob.glob('**/*.html', recursive=True)):
+              if any(s in f for s in skip): continue
+              if f == 'index.html': continue
+              lines.append(f'put {f} {f}')
+
+          # Upload images
+          lines.append('-mkdir images')
+          for f in sorted(glob.glob('images/**', recursive=True)):
+              if os.path.isfile(f):
+                  lines.append(f'put {f} {f}')
+
+          lines.append('bye')
+
+          with open('sftp_commands.txt', 'w') as out:
+              out.write('\n'.join(lines))
+
+          print(f"✅ SFTP script — {len(lines)} commando's")
+          for l in lines: print(f"  {l}")
+          PYEOF
+
+      - name: Upload naar server
         env:
           SFTP_HOST: ${{ secrets.SFTP_HOST }}
           SFTP_USER: ${{ secrets.SFTP_USER }}
           SFTP_PASS: ${{ secrets.SFTP_PASS }}
         run: |
-          echo "🚀 Deploy Agent gestart — upload alle bestanden..."
-
-          lftp -c "
-            set ftp:ssl-allow no;
-            set sftp:auto-confirm yes;
-            open sftp://$SFTP_USER:$SFTP_PASS@$SFTP_HOST;
-            mirror --reverse \
-                   --verbose \
-                   --exclude-glob .git/ \
-                   --exclude-glob .github/ \
-                   --exclude-glob '*.md' \
-                   --exclude-glob '*.yml' \
-                   --exclude-glob '*.json' \
-                   . .;
-            bye;
-          "
-
+          echo "🚀 Upload gestart..."
+          sshpass -p "$SFTP_PASS" sftp \
+            -o StrictHostKeyChecking=no \
+            -o UserKnownHostsFile=/dev/null \
+            -b sftp_commands.txt \
+            "$SFTP_USER@$SFTP_HOST"
           echo "✅ Deploy Agent: Alle bestanden geupload"
