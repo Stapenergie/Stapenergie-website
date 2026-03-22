@@ -136,7 +136,7 @@ a    { text-decoration: none; }
    DIENSTEN
 ══════════════════════════════════ */
 .sec-grijs { background: var(--lichtgrijs); }
-.diensten-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2.5rem; }
+.diensten-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 2.5rem; }
 .dienst-card { background: var(--groen-card); border-radius: var(--rl); overflow: hidden; transition: transform .2s, box-shadow .2s; display: block; }
 .dienst-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 .dienst-card-img { width: 100%; height: 180px; object-fit: cover; }
@@ -153,14 +153,13 @@ a    { text-decoration: none; }
    VOOR WIE — SEGMENT GRID
 ══════════════════════════════════ */
 .seg-section { background: #fff; }
-.seg-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin-top: 2rem; }
-.seg-card { border: 1.5px solid var(--rand); border-radius: var(--rl); overflow: hidden; transition: border-color .2s, box-shadow .2s, transform .2s; display: block; }
-.seg-card:hover { border-color: var(--groen); box-shadow: var(--shadow-lg); transform: translateY(-3px); }
-.seg-card img { width: 100%; height: 140px; object-fit: cover; }
-.seg-card-body { padding: 1.1rem; }
-.seg-card-body h3 { font-size: .95rem; font-weight: 700; margin-bottom: .3rem; color: var(--tekst); }
-.seg-card-body p { font-size: .82rem; color: var(--subtekst); margin-bottom: .7rem; line-height: 1.4; }
-.seg-arrow { display: flex; align-items: center; gap: 4px; color: var(--groen); font-size: .82rem; font-weight: 600; }
+.seg-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
+.seg-duo-card { display: flex; align-items: flex-start; gap: 1.2rem; border: 1.5px solid var(--rand); border-radius: var(--rl); padding: 1.8rem; transition: border-color .2s, box-shadow .2s, transform .2s; }
+.seg-duo-card:hover { border-color: var(--groen); box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+.seg-duo-icon { width: 52px; height: 52px; background: var(--groen-card); border-radius: var(--r); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--groen); }
+.seg-duo-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: .4rem; color: var(--tekst); }
+.seg-duo-card p { font-size: .88rem; color: var(--subtekst); margin-bottom: .8rem; line-height: 1.6; }
+.seg-arrow { display: flex; align-items: center; gap: 4px; color: var(--groen); font-size: .88rem; font-weight: 600; }
 
 /* ══════════════════════════════════
    OVER ERIK
@@ -211,7 +210,7 @@ a    { text-decoration: none; }
 @media (max-width: 900px) {
   .usp-grid      { grid-template-columns: 1fr 1fr; }
   .diensten-grid { grid-template-columns: 1fr 1fr; }
-  .seg-grid      { grid-template-columns: 1fr 1fr; }
+  .seg-duo      { grid-template-columns: 1fr 1fr; }
   .over-grid     { grid-template-columns: 1fr; gap: 3rem; }
   .over-badge    { right: 1rem; bottom: 1rem; }
   .footer-grid   { grid-template-columns: 1fr 1fr; gap: 2rem; }
@@ -253,7 +252,7 @@ a    { text-decoration: none; }
 
 @media (max-width: 480px) {
   .usp-grid  { grid-template-columns: 1fr 1fr; }
-  .seg-grid  { grid-template-columns: 1fr; }
+  .seg-duo  { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   .form-row  { grid-template-columns: 1fr; }
 }
@@ -264,10 +263,8 @@ a    { text-decoration: none; }
 
 <!-- Segment bar -->
 <div class="seg-bar">
-  <a href="#mkb" class="active">MKB & Bedrijven</a>
+  <a href="#zakelijk" class="active">Zakelijk</a>
   <a href="#particulieren">Particulieren</a>
-  <a href="#vastgoed">Vastgoed & Makelaars</a>
-  <a href="#gemeenten">Gemeenten & Woningstichtingen</a>
 </div>
 
 <!-- Nav -->
@@ -282,22 +279,24 @@ a    { text-decoration: none; }
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="flex-shrink:0"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
       <div class="dropdown">
-        <a href="/energielabel-woningen/" class="dd-item">Energielabels woningen</a>
-        <a href="/energielabel-utiliteit/" class="dd-item">Energielabels utiliteit</a>
-        <a href="/verduurzaming-advies/" class="dd-item">Verduurzaming advies</a>
-        <a href="/subsidie-advies/" class="dd-item">Subsidie advies</a>
+        <a href="/energielabels/" class="dd-item">Energielabels</a>
+        <a href="/verduurzaming-subsidie/" class="dd-item">Verduurzaming & Subsidie</a>
         <a href="/energie-inkoop-advies/" class="dd-item">Energie inkoop advies</a>
       </div>
     </li>
     <li class="has-dd">
-      <a href="#product-advies">Product & Advies
+      <a href="#voor-wie">Voor wie
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="flex-shrink:0"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
       <div class="dropdown">
-        <a href="/warmtepomp/" class="dd-item">Warmtepomp</a>
-        <a href="/isolatie/" class="dd-item">Isolatie</a>
-        <a href="/cv-ketel/" class="dd-item">CV-ketel</a>
-        <a href="/besparen/" class="dd-item">Besparen</a>
+        <a href="/zakelijk/" class="dd-item">Zakelijk</a>
+        <a href="/particulieren/" class="dd-item">Particulieren</a>
+        <a href="/mkb/" class="dd-item">MKB & Bedrijven</a>
+        <a href="/vastgoed/" class="dd-item">Vastgoed</a>
+        <a href="/makelaars/" class="dd-item">Makelaars</a>
+        <a href="/kantoren/" class="dd-item">Kantoren</a>
+        <a href="/gemeenten-woningstichtingen/" class="dd-item">Gemeenten & Woningstichtingen</a>
+        <a href="/industrie/" class="dd-item">Industrie</a>
       </div>
     </li>
     <li><a href="#over-erik">Over Erik</a></li>
@@ -403,35 +402,19 @@ a    { text-decoration: none; }
     <h2 class="sec-title">Onze diensten</h2>
     <p class="sec-sub">Van verplicht energielabel tot een volledig verduurzamingsplan — STAP Energie regelt het.</p>
     <div class="diensten-grid">
-      <a href="/energielabel-woningen/" class="dienst-card">
-        <img src="images/hero.jpg" alt="Energielabels woningen" class="dienst-card-img" loading="lazy">
+      <a href="/energielabels/" class="dienst-card">
+        <img src="images/hero.jpg" alt="Energielabels" class="dienst-card-img" loading="lazy">
         <div class="dienst-card-body">
-          <h3>Energielabels woningen</h3>
-          <p>Verplicht bij verkoop en verhuur. Snel, officieel en geregistreerd in EP-online. 10 jaar geldig.</p>
+          <h3>Energielabels</h3>
+          <p>Verplicht bij verkoop, verhuur en voor bedrijfspanden. Snel en officieel geregistreerd in EP-online.</p>
           <span class="dienst-link">Meer info →</span>
         </div>
       </a>
-      <a href="/energielabel-utiliteit/" class="dienst-card">
-        <img src="images/gemengd-zakelijk.jpg" alt="Energielabels utiliteit" class="dienst-card-img" loading="lazy">
+      <a href="/verduurzaming-subsidie/" class="dienst-card">
+        <img src="images/dienst-verduurzaming.jpg" alt="Verduurzaming en Subsidie" class="dienst-card-img" loading="lazy">
         <div class="dienst-card-body">
-          <h3>Energielabels utiliteit</h3>
-          <p>Verplicht energielabel voor bedrijfspanden en kantoren. Inclusief direct verduurzamingsadvies.</p>
-          <span class="dienst-link">Meer info →</span>
-        </div>
-      </a>
-      <a href="/verduurzaming-advies/" class="dienst-card">
-        <img src="images/dienst-verduurzaming.jpg" alt="Verduurzaming advies" class="dienst-card-img" loading="lazy">
-        <div class="dienst-card-body">
-          <h3>Verduurzaming advies</h3>
-          <p>Persoonlijk stappenplan op maat. Passend bij jouw situatie, budget en doelen.</p>
-          <span class="dienst-link">Meer info →</span>
-        </div>
-      </a>
-      <a href="/subsidie-advies/" class="dienst-card">
-        <img src="images/dienst-subsidie.jpg" alt="Subsidie advies" class="dienst-card-img" loading="lazy">
-        <div class="dienst-card-body">
-          <h3>Subsidie advies</h3>
-          <p>Er is meer subsidie dan de meeste mensen weten. Wij brengen al jouw kansen in kaart.</p>
+          <h3>Verduurzaming &amp; Subsidie</h3>
+          <p>Persoonlijk stappenplan op maat én alle subsidies in kaart. Verduurzamen wordt een stuk aantrekkelijker.</p>
           <span class="dienst-link">Meer info →</span>
         </div>
       </a>
@@ -456,40 +439,29 @@ a    { text-decoration: none; }
 </section>
 
 <!-- Voor wie -->
-<section class="section seg-section" id="segmenten">
+<section class="section seg-section" id="voor-wie">
   <div class="container">
     <span class="sec-label">Kies jouw situatie</span>
     <h2 class="sec-title">Voor wie is STAP Energie?</h2>
-    <div class="seg-grid">
-      <a href="/mkb-bedrijven/" class="seg-card" id="mkb">
-        <img src="images/segment-mkb.jpg" alt="MKB & Bedrijven" loading="lazy">
-        <div class="seg-card-body">
-          <h3>MKB & Bedrijven</h3>
-          <p>Energielabels, inkoop en verduurzaming voor ondernemers.</p>
+    <p class="sec-sub">Of je nu ondernemer bent of woningeigenaar — STAP Energie heeft een passend aanbod voor jou.</p>
+    <div class="seg-duo">
+      <a href="/zakelijk/" class="seg-duo-card" id="zakelijk">
+        <div class="seg-duo-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="3" y="10" width="22" height="15" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M9 10V8a5 5 0 0110 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <div>
+          <h3>Zakelijk</h3>
+          <p>Voor MKB, vastgoed, makelaars, kantoren, gemeenten, woningstichtingen en industrie. Energielabels, verduurzaming en inkoop op maat.</p>
           <span class="seg-arrow">Meer info →</span>
         </div>
       </a>
-      <a href="/particulieren/" class="seg-card" id="particulieren">
-        <img src="images/segment-particulieren.jpg" alt="Particulieren" loading="lazy">
-        <div class="seg-card-body">
+      <a href="/particulieren/" class="seg-duo-card" id="particulieren">
+        <div class="seg-duo-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 3L4 12h3v11h6v-6h2v6h6V12h3L14 3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </div>
+        <div>
           <h3>Particulieren</h3>
-          <p>Energielabel en verduurzamingsadvies voor woningeigenaren.</p>
-          <span class="seg-arrow">Meer info →</span>
-        </div>
-      </a>
-      <a href="/vastgoed-makelaars/" class="seg-card" id="vastgoed">
-        <img src="images/segment-vastgoed.jpg" alt="Vastgoed & Makelaars" loading="lazy">
-        <div class="seg-card-body">
-          <h3>Vastgoed & Makelaars</h3>
-          <p>Labels en WWS-optimalisatie voor vastgoedprofessionals.</p>
-          <span class="seg-arrow">Meer info →</span>
-        </div>
-      </a>
-      <a href="/gemeenten-woningstichtingen/" class="seg-card" id="gemeenten">
-        <img src="images/segment-gemeenten.jpg" alt="Gemeenten & Woningstichtingen" loading="lazy">
-        <div class="seg-card-body">
-          <h3>Gemeenten & Woningstichtingen</h3>
-          <p>Verduurzaming op schaal voor corporaties en gemeenten.</p>
+          <p>Voor woningeigenaren die een energielabel nodig hebben of hun woning willen verduurzamen. Persoonlijk en zonder gedoe.</p>
           <span class="seg-arrow">Meer info →</span>
         </div>
       </a>
@@ -532,10 +504,10 @@ a    { text-decoration: none; }
     <h2>Klaar voor jouw eerste STAP?</h2>
     <p>Gratis kennismakingsgesprek — geen verplichtingen, wel direct waarde. We reageren binnen 24 uur.</p>
     <div class="cta-btns">
-      <a href="mailto:info@stapenergie.nl" class="btn-wit">Gratis gesprek inplannen</a>
+      <a href="/cdn-cgi/l/email-protection#0a63646c654a797e6b7a6f646f786d636f246466" class="btn-wit">Gratis gesprek inplannen</a>
       <a href="tel:0600000000" class="btn-wit-out">Direct bellen</a>
     </div>
-    <p class="cta-meta">info@stapenergie.nl &nbsp;·&nbsp; Heel Nederland &nbsp;·&nbsp; KvK: in aanvraag</p>
+    <p class="cta-meta"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e28b8c848da291968392878c8790858b87cc8c8e">[email&#160;protected]</a> &nbsp;·&nbsp; Heel Nederland &nbsp;·&nbsp; KvK: in aanvraag</p>
   </div>
 </section>
 
@@ -554,24 +526,22 @@ a    { text-decoration: none; }
       </div>
       <div class="footer-col">
         <h4>Diensten</h4>
-        <a href="/energielabel-woningen/">Energielabels woningen</a>
-        <a href="/energielabel-utiliteit/">Energielabels utiliteit</a>
-        <a href="/verduurzaming-advies/">Verduurzaming advies</a>
-        <a href="/subsidie-advies/">Subsidie advies</a>
+        <a href="/energielabels/">Energielabels</a>
+        <a href="/verduurzaming-subsidie/">Verduurzaming & Subsidie</a>
         <a href="/energie-inkoop-advies/">Energie inkoop advies</a>
       </div>
       <div class="footer-col">
         <h4>Voor wie</h4>
+        <a href="/zakelijk/">Zakelijk</a>
         <a href="/particulieren/">Particulieren</a>
-        <a href="/mkb-bedrijven/">MKB & bedrijven</a>
-        <a href="/vastgoed-makelaars/">Vastgoed & makelaars</a>
-        <a href="/gemeenten-woningstichtingen/">Gemeenten</a>
-        <a href="/gemeenten-woningstichtingen/">Woningstichtingen</a>
+        <a href="/mkb/">MKB & Bedrijven</a>
+        <a href="/kantoren/">Kantoren</a>
+        <a href="/industrie/">Industrie</a>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
         <a href="tel:0600000000">06 – XX XX XX XX</a>
-        <a href="mailto:info@stapenergie.nl">info@stapenergie.nl</a>
+        <a href="/cdn-cgi/l/email-protection#01686f676e4172756071646f64736668642f6f6d"><span class="__cf_email__" data-cfemail="71181f171e3102051001141f14031618145f1f1d">[email&#160;protected]</span></a>
         <a href="/">stapenergie.nl</a>
         <a href="/over-erik/">Over ons</a>
         <a href="/privacyverklaring/">Privacy & AVG</a>
@@ -584,7 +554,7 @@ a    { text-decoration: none; }
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // ── HAMBURGER ──
 var toggle   = document.getElementById('nav-toggle');
 var navLinks = document.getElementById('nav-links');
@@ -619,11 +589,4 @@ function submitForm(e) {
   var form = document.getElementById('hero-form');
   form.innerHTML =
     '<div class="form-success">' +
-    '<svg width="52" height="52" viewBox="0 0 52 52" fill="none" style="margin:0 auto 1rem;display:block"><circle cx="26" cy="26" r="24" fill="#e8f5ed"/><path d="M16 26l7 7 13-13" stroke="#1a5c32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
-    '<p class="form-success-title">Bedankt! We nemen snel contact op.</p>' +
-    '<p class="form-success-sub">Binnen 24 uur ontvang je een reactie.</p>' +
-    '</div>';
-}
-</script>
-</body>
-</html>
+    '<svg width="52" height="52" viewBox="0 0 52 52" fill="none"
