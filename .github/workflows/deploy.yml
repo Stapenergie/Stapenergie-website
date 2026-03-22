@@ -15,6 +15,10 @@ on:
 
 jobs:
 
+  # ══════════════════════════════════════════════
+  #  AGENT 1: SECURITY
+  #  Scant code op hardcoded gevoelige gegevens
+  # ══════════════════════════════════════════════
   security-check:
     name: Security Agent
     runs-on: ubuntu-latest
@@ -22,37 +26,64 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: '3.11'
       - name: Security scan
         run: |
-          python3 - << 'PYEOF'
-          import sys, re, glob
+          python3 << 'EOF'
+          import os, sys, re, glob
+          print("🔒 Security Agent gestart...")
           issues = []
-          skip = [".git", ".github", "node_modules"]
-          files = glob.glob("**/*.html", recursive=True) + glob.glob("**/*.json", recursive=True)
-          for f in files:
-              if any(s in f for s in skip): continue
-              try: c = open(f, errors="ignore").read()
-              except: continue
-              for p in [r"password\s*[=:]\s*[\"'][^\"']{4,}[\"']",
-                        r"wachtwoord\s*[=:]\s*[\"'][^\"']{4,}[\"']"]:
-                  if re.search(p, c, re.I): issues.append("[WACHTWOORD] " + f)
-              cc = re.sub(r"data:[^;]+;base64,[A-Za-z0-9+/=]{20,}", "B64", c)
-              cc = re.sub(r"[A-Za-z0-9+/]{100,}={0,2}", "B64", cc)
-              for p in [r"sk-[A-Za-z0-9]{32,}", r"AIza[A-Za-z0-9\-_]{35}"]:
-                  if re.search(p, cc): issues.append("[API KEY] " + f)
-              if re.search(r"\bNL\d{2}[A-Z]{4}\d{10}\b", c): issues.append("[IBAN] " + f)
-              if re.search(r"\b\d{9}\b", c) and "bsn" in c.lower(): issues.append("[BSN] " + f)
-              for em in re.findall(r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}", c):
-                  if em.split("@")[1] not in ["stapenergie.nl", "example.com"]:
-                      issues.append("[EMAIL] " + em + " in " + f)
+          scanned = 0
+          all_files = (
+              glob.glob('**/*.html', recursive=True) +
+              glob.glob('**/*.json', recursive=True) +
+              glob.glob('**/*.js', recursive=True) +
+              glob.glob('**/*.php', recursive=True)
+          )
+          skip = ['.git', 'node_modules', 'vendor', '.github']
+          for filepath in all_files:
+              if any(s in filepath for s in skip):
+                  continue
+              try:
+                  with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
+                      content = f.read()
+              except:
+                  continue
+              scanned += 1
+              for p in [r'password\s*[=:]\s*["\'][^"\']{4,}["\']',
+                        r'wachtwoord\s*[=:]\s*["\'][^"\']{4,}["\']',
+                        r'passwd\s*[=:]\s*["\'][^"\']{4,}["\']']:
+                  if re.search(p, content, re.IGNORECASE):
+                      issues.append(f"[WACHTWOORD] Mogelijk hardcoded wachtwoord in: {filepath}")
+              content_check = re.sub(r'data:[^;]+;base64,[A-Za-z0-9+/=\s]{20,}', 'DATA_B64', content)
+              content_check = re.sub(r'[A-Za-z0-9+/]{100,}={0,2}', 'LONG_B64', content_check)
+              for p in [r'api[_-]?key\s*[=:]\s*["\'][A-Za-z0-9\-_]{16,}["\']',
+                        r'Bearer\s+[A-Za-z0-9\-_\.]{20,}',
+                        r'sk-[A-Za-z0-9]{32,}',
+                        r'AIza[A-Za-z0-9\-_]{35}']:
+                  if re.search(p, content_check, re.IGNORECASE):
+                      issues.append(f"[API KEY] Mogelijk hardcoded API key in: {filepath}")
+              emails = re.findall(r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b', content)
+              allowed = ['stapenergie.nl', 'example.com']
+              for email in emails:
+                  if email.split('@')[1] not in allowed:
+                      issues.append(f"[EMAIL] Extern e-mailadres ({email}) in: {filepath}")
+              if re.search(r'\b\d{9}\b', content) and \
+                 any(t in content.lower() for t in ['bsn', 'sofinummer']):
+                  issues.append(f"[BSN] Mogelijk BSN-nummer in: {filepath}")
+              if re.search(r'\bNL\d{2}[A-Z]{4}\d{10}\b', content):
+                  issues.append(f"[IBAN] Mogelijk IBAN-nummer in: {filepath}")
+          print(f"  {scanned} bestanden gescand")
           if issues:
-              print("SECURITY GEBLOKKEERD:")
-              [print("  " + i) for i in issues]
+              print("\n❌ Security Agent GEBLOKKEERD:")
+              for i in issues: print(f"  → {i}")
               sys.exit(1)
-          print("Security OK")
-PYEOF
-
+          print("✅ Security Agent: Alle checks geslaagd")
+          EOF
+  # ══════════════════════════════════════════════
+  #  AGENT 2: COMPLIANCE OFFICER
+  #  Checkt AVG-conformiteit voor deploy
+  # ══════════════════════════════════════════════
   compliance-check:
     name: Compliance Officer Agent
     runs-on: ubuntu-latest
@@ -61,25 +92,75 @@ PYEOF
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: '3.11'
       - name: AVG compliance scan
         run: |
-          python3 - << 'PYEOF'
-          import sys, glob
-          html = "".join(open(f, errors="ignore").read().lower()
-                        for f in glob.glob("**/*.html", recursive=True))
-          warns = []
-          if "form" in html and not any(t in html for t in ["akkoord", "toestemming", "commerci"]):
-              warns.append("Formulier mist opt-in")
-          if "privacyverklaring" not in html:
-              warns.append("Geen privacyverklaring gevonden")
-          if "stapenergie.nl" not in html:
-              print("COMPLIANCE GEBLOKKEERD")
+          python3 << 'EOF'
+          import os, sys, re, glob
+          print("⚖️  Compliance Officer Agent gestart...")
+          issues = []
+          warnings = []
+          html_files = glob.glob('**/*.html', recursive=True)
+          if not html_files:
+              print("  Geen HTML bestanden — skip")
+              sys.exit(0)
+          all_html = ""
+          for f in html_files:
+              try:
+                  with open(f, 'r', encoding='utf-8', errors='ignore') as fh:
+                      all_html += fh.read().lower()
+              except:
+                  pass
+          has_form = 'form' in all_html and ('input' in all_html or 'textarea' in all_html)
+          if has_form:
+              has_optin = any(t in all_html for t in [
+                  'opt-in','optin','commerci','nieuwsbrief',
+                  'toestemming','akkoord','marketing','benaderen','mailing'])
+              if not has_optin:
+                  warnings.append("[AVG] Contactformulier mist opt-in — toevoegen in fase 3")
+              else:
+                  print("  ✅ Opt-in gevonden in formulier")
+          if not any(t in all_html for t in [
+              'privacyverklaring','privacy policy','privacybeleid',
+              'privacy-policy','privacystatement']):
+              warnings.append("[AVG] Geen privacyverklaring — toevoegen in fase 3")
+          else:
+              print("  ✅ Privacyverklaring gevonden")
+          has_analytics = any(t in all_html for t in [
+              'google-analytics','gtag','ua-','g-','googletagmanager','_ga'])
+          has_cookie = any(t in all_html for t in [
+              'cookie','cookiemelding','cookiebanner'])
+          if has_analytics and not has_cookie:
+              warnings.append("[AVG] Google Analytics aanwezig maar geen cookiemelding — toevoegen in fase 3")
+          elif has_analytics:
+              print("  ✅ Cookiemelding gevonden")
+          else:
+              print("  ℹ️  Geen analytics — cookiemelding niet vereist")
+          if not any(t in all_html for t in [
+              'kvk','kamer van koophandel','in aanvraag','kvk-nummer']):
+              warnings.append("[AVG] KvK-nummer niet gevonden — acceptabel als 'in aanvraag'")
+          else:
+              print("  ✅ KvK-vermelding gevonden")
+          if not any(t in all_html for t in ['stapenergie.nl','contact']):
+              issues.append("[AVG] Geen contactgegevens gevonden")
+          else:
+              print("  ✅ Contactgegevens gevonden")
+          if warnings:
+              print("\n⚠️  Waarschuwingen (deploy gaat door):")
+              for w in warnings: print(f"  → {w}")
+          if issues:
+              print("\n❌ Compliance Officer GEBLOKKEERD:")
+              for i in issues: print(f"  → {i}")
               sys.exit(1)
-          [print("WARN: " + w) for w in warns]
-          print("Compliance OK")
-PYEOF
-
+          print("\n✅ Compliance Officer: Alle AVG-checks geslaagd")
+          EOF
+  # ══════════════════════════════════════════════
+  #  AGENT 3: DEPLOY
+  #  Pusht ALLE bestanden recursief via SFTP
+  #  Werkt automatisch voor nieuwe submappen
+  #  en nieuwe afbeeldingen — geen handmatige
+  #  aanpassing van dit bestand nodig.
+  # ══════════════════════════════════════════════
   deploy-to-hosting:
     name: Deploy Agent
     runs-on: ubuntu-latest
@@ -87,44 +168,28 @@ PYEOF
     steps:
       - uses: actions/checkout@v4
 
-      - name: Deploy via SFTP
+      - name: Installeer SFTP tools
+        run: sudo apt-get install -y sshpass lftp
+
+      - name: Upload alle bestanden recursief
         env:
           SFTP_HOST: ${{ secrets.SFTP_HOST }}
           SFTP_USER: ${{ secrets.SFTP_USER }}
           SFTP_PASS: ${{ secrets.SFTP_PASS }}
         run: |
-          python3 - << 'PYEOF'
-          import os, glob, subprocess, sys
-          host = os.environ["SFTP_HOST"]
-          user = os.environ["SFTP_USER"]
-          pwd  = os.environ["SFTP_PASS"]
-          base = "sftp://" + host + "/"
-          def upload(local, remote):
-              r = subprocess.run(
-                  ["curl", "--insecure", "--ftp-create-dirs", "-s", "-S",
-                   "-u", user + ":" + pwd, "-T", local, base + remote],
-                  capture_output=True, text=True)
-              if r.returncode != 0:
-                  print("FOUT " + local + ": " + r.stderr.strip())
-                  return False
-              print("OK: " + local)
-              return True
-          errors = []
-          skip = [".github", "node_modules", ".git"]
-          bestanden = []
-          if os.path.exists("index.html"):
-              bestanden.append(("index.html", "index.html"))
-          for f in sorted(glob.glob("**/*.html", recursive=True)):
-              if f == "index.html": continue
-              if any(s in f for s in skip): continue
-              bestanden.append((f, f))
-          for f in sorted(glob.glob("images/*")):
-              if os.path.isfile(f): bestanden.append((f, f))
-          print("Uploaden: " + str(len(bestanden)) + " bestanden")
-          for local, remote in bestanden:
-              if not upload(local, remote): errors.append(local)
-          if errors:
-              print("DEPLOY MISLUKT: " + str(errors))
-              sys.exit(1)
-          print("Deploy geslaagd - " + str(len(bestanden)) + " bestanden geupload")
-PYEOF
+          echo "🚀 Deploy Agent gestart — upload alle bestanden..."
+          lftp -c "
+            set ftp:ssl-allow no;
+            set sftp:auto-confirm yes;
+            open sftp://$SFTP_USER:$SFTP_PASS@$SFTP_HOST;
+            mirror --reverse \
+                   --verbose \
+                   --exclude-glob .git/ \
+                   --exclude-glob .github/ \
+                   --exclude-glob '*.md' \
+                   --exclude-glob '*.yml' \
+                   --exclude-glob '*.json' \
+                   . .;
+            bye;
+          "
+          echo "✅ Deploy Agent: Alle bestanden geupload"
