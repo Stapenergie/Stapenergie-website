@@ -261,6 +261,22 @@ a    { text-decoration: none; }
 .footer-copy { font-size: .78rem; color: rgba(255,255,255,.4); }
 
 /* ══════════════════════════════════
+   KENNISFLOW
+══════════════════════════════════ */
+.kennis-groep-label { font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--groen); margin-bottom: 1rem; display: block; }
+.kennis-groep-label::before { content: '— '; }
+.kennis-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+.kennis-card  { background: #fff; border: 1.5px solid var(--rand); border-radius: var(--rl); padding: 1.4rem; display: flex; flex-direction: column; gap: .8rem; transition: border-color .2s, box-shadow .2s, transform .2s; }
+.kennis-card:hover { border-color: var(--groen); box-shadow: var(--shadow); transform: translateY(-3px); }
+.kennis-icon  { width: 44px; height: 44px; background: var(--groen-card); border-radius: var(--r); display: flex; align-items: center; justify-content: center; color: var(--groen); flex-shrink: 0; }
+.kennis-body  { display: flex; flex-direction: column; gap: .35rem; flex: 1; }
+.kennis-tag   { display: inline-flex; font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--groen); background: var(--groen-card); padding: 2px 8px; border-radius: 100px; width: fit-content; }
+.kennis-card h4 { font-size: .95rem; font-weight: 700; color: var(--tekst); }
+.kennis-card p  { font-size: .83rem; color: var(--subtekst); line-height: 1.6; flex: 1; }
+.kennis-link    { font-size: .83rem; font-weight: 600; color: var(--groen); margin-top: auto; display: inline-flex; align-items: center; gap: 4px; }
+.kennis-groep-label-mt { margin-top: 2.5rem; }
+
+/* ══════════════════════════════════
    RESPONSIVE — TABLET 900px
 ══════════════════════════════════ */
 @media (max-width: 900px) {
@@ -271,6 +287,7 @@ a    { text-decoration: none; }
   .proces-grid      { grid-template-columns: 1fr 1fr; }
   .proces-grid::before { display: none; }
   .regio-grid       { grid-template-columns: 1fr; gap: 2rem; }
+  .kennis-cards     { grid-template-columns: 1fr 1fr; }
   .footer-grid      { grid-template-columns: 1fr 1fr; gap: 2rem; }
 }
 
@@ -307,6 +324,7 @@ a    { text-decoration: none; }
   .btn-wit, .btn-wit-out { justify-content: center; }
   .woning-grid   { grid-template-columns: 1fr; }
   .diensten-grid { grid-template-columns: 1fr; }
+  .kennis-cards   { grid-template-columns: 1fr; }
   .proces-grid   { grid-template-columns: 1fr; }
   .cta-btns { flex-direction: column; align-items: center; }
   .btn-wit, .btn-wit-out { width: 100%; max-width: 300px; text-align: center; }
@@ -495,15 +513,15 @@ a    { text-decoration: none; }
         </div>
         <div class="woning-card-body">
           <h3>Appartement</h3>
-          <p class="woning-sub">Tot ca. 100 m² woonoppervlak. Snelste opname, laagste tarief.</p>
+          <p class="woning-sub">Snel en officieel geregistreerd. Vaste prijs, geen verrassingen.</p>
           <div class="woning-prijzen">
             <div class="prijs-rij">
-              <span class="prijs-label">Tot 60 m²</span>
-              <span class="prijs-val">Op aanvraag</span>
+              <span class="prijs-label">Tot 40 m²</span>
+              <span class="prijs-val">€ 195</span>
             </div>
             <div class="prijs-rij">
-              <span class="prijs-label">60 – 100 m²</span>
-              <span class="prijs-val">Op aanvraag</span>
+              <span class="prijs-label">40 – 100 m²</span>
+              <span class="prijs-val">€ 249</span>
             </div>
           </div>
           <a href="#aanvraag" class="woning-cta">Aanvragen →</a>
@@ -518,19 +536,15 @@ a    { text-decoration: none; }
         </div>
         <div class="woning-card-body">
           <h3>Eengezinswoning</h3>
-          <p class="woning-sub">Rijtjeswoning, twee-onder-een-kap of hoekwoning tot ca. 250 m².</p>
+          <p class="woning-sub">Rijtjeswoning of twee-onder-een-kap. Vaste prijs op woningtype.</p>
           <div class="woning-prijzen">
             <div class="prijs-rij">
-              <span class="prijs-label">100 – 150 m²</span>
-              <span class="prijs-val">Op aanvraag</span>
+              <span class="prijs-label">Tussen woningen</span>
+              <span class="prijs-val">€ 295</span>
             </div>
             <div class="prijs-rij">
-              <span class="prijs-label">150 – 200 m²</span>
-              <span class="prijs-val">Op aanvraag</span>
-            </div>
-            <div class="prijs-rij">
-              <span class="prijs-label">200 – 250 m²</span>
-              <span class="prijs-val">Op aanvraag</span>
+              <span class="prijs-label">Hoekwoning / 2-onder-1-kap</span>
+              <span class="prijs-val">€ 325</span>
             </div>
           </div>
           <a href="#aanvraag" class="woning-cta">Aanvragen →</a>
@@ -544,14 +558,14 @@ a    { text-decoration: none; }
         </div>
         <div class="woning-card-body">
           <h3>Vrijstaande woning</h3>
-          <p class="woning-sub">Grote woning of villa groter dan 250 m². Uitgebreide opname op maat.</p>
+          <p class="woning-sub">Ruime woning of villa. Tot 150 m² vaste prijs, daarboven offerte op maat.</p>
           <div class="woning-prijzen">
             <div class="prijs-rij">
-              <span class="prijs-label">250 – 350 m²</span>
-              <span class="prijs-val">Op aanvraag</span>
+              <span class="prijs-label">Tot 150 m²</span>
+              <span class="prijs-val">€ 345</span>
             </div>
             <div class="prijs-rij">
-              <span class="prijs-label">Groter dan 350 m²</span>
+              <span class="prijs-label">Groter dan 150 m²</span>
               <span class="prijs-val">Offerte op maat</span>
             </div>
           </div>
@@ -666,6 +680,126 @@ a    { text-decoration: none; }
         <h4>Buiten de regio?</h4>
         <p>STAP Energie werkt door heel Nederland. Buiten de directe regio kan een kleine reisvergoeding van toepassing zijn. Vraag gerust naar de mogelijkheden — we denken graag met u mee.</p>
         <a href="#aanvraag" class="btn-groen">Aanvragen →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Kennisflow -->
+<section class="section sec-grijs" id="kennisbank">
+  <div class="container">
+    <span class="sec-label">Verder verduurzamen</span>
+    <h2 class="sec-title">Wat komt er na uw energielabel?</h2>
+    <p class="sec-sub">Een energielabel geeft inzicht — maar de echte winst zit in de vervolgstap. STAP Energie helpt u begrijpen welke maatregelen het meeste opleveren voor uw situatie.</p>
+
+    <div class="kennis-grid" style="margin-top:2.5rem">
+
+      <!-- Populaire vervolgstappen -->
+      <p class="kennis-groep-label">Populaire vervolgstappen na een energielabel</p>
+      <div class="kennis-cards">
+
+        <div class="kennis-card">
+          <div class="kennis-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <div class="kennis-body">
+            <span class="kennis-tag">Verwarming</span>
+            <h4>Warmtepomp</h4>
+            <p>Een warmtepomp vervangt uw cv-ketel en verlaagt uw gasverbruik tot wel 70%. Geschikt voor goed geïsoleerde woningen.</p>
+            <a href="/kennisbank/warmtepomp/" class="kennis-link">Meer lezen →</a>
+          </div>
+        </div>
+
+        <div class="kennis-card">
+          <div class="kennis-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M3 9h18M9 21V9" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <div class="kennis-body">
+            <span class="kennis-tag">Isolatie</span>
+            <h4>Isolatie</h4>
+            <p>Spouwmuur-, vloer- en dakisolatie zijn vaak de meest kosteneffectieve maatregelen. Direct merkbaar in comfort én stookkosten.</p>
+            <a href="/kennisbank/isolatie/" class="kennis-link">Meer lezen →</a>
+          </div>
+        </div>
+
+        <div class="kennis-card">
+          <div class="kennis-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3v1M18.4 5.6l-.7.7M21 12h-1M18.4 18.4l-.7-.7M12 21v-1M5.6 18.4l.7-.7M3 12h1M5.6 5.6l.7.7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <div class="kennis-body">
+            <span class="kennis-tag">Opwekking</span>
+            <h4>Zonnepanelen</h4>
+            <p>Zonnepanelen zijn in de meeste gevallen binnen 7 jaar terugverdiend. Combineer met een thuisbatterij voor maximaal rendement.</p>
+            <a href="/kennisbank/zonnepanelen/" class="kennis-link">Meer lezen →</a>
+          </div>
+        </div>
+
+        <div class="kennis-card">
+          <div class="kennis-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10z" stroke="currentColor" stroke-width="1.5"/><path d="M12 8v4l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <div class="kennis-body">
+            <span class="kennis-tag">Verwarming</span>
+            <h4>HR-ketel vervangen</h4>
+            <p>Een verouderde cv-ketel vervangen door een moderne HR-ketel of hybride warmtepomp is vaak een slimme tussenstap.</p>
+            <a href="/kennisbank/cv-ketel/" class="kennis-link">Meer lezen →</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Slimmer wonen -->
+      <p class="kennis-groep-label kennis-groep-label-mt">Slimmer wonen — de volgende stap</p>
+      <div class="kennis-cards">
+
+        <div class="kennis-card">
+          <div class="kennis-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="2" y="7" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2M12 12v3M10 14h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <div class="kennis-body">
+            <span class="kennis-tag">Opslag</span>
+            <h4>Thuisbatterij</h4>
+            <p>Sla zelf opgewekte zonne-energie op voor gebruik 's avonds of bij piekprijzen. Interessant bij dynamisch energiecontract.</p>
+            <a href="/kennisbank/thuisbatterij/" class="kennis-link">Meer lezen →</a>
+          </div>
+        </div>
+
+        <div class="kennis-card">
+          <div class="kennis-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h11a2 2 0 012 2v3" stroke="currentColor" stroke-width="1.5"/><rect x="9" y="11" width="14" height="10" rx="1" stroke="currentColor" stroke-width="1.5"/><path d="M13 16h2M16 13v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <div class="kennis-body">
+            <span class="kennis-tag">Mobiliteit</span>
+            <h4>Laadpaal thuis</h4>
+            <p>Laad uw elektrische auto slim thuis op — bij voorkeur op uw eigen zonne-energie. Subsidie beschikbaar via SEEH-regeling.</p>
+            <a href="/kennisbank/laadpaal/" class="kennis-link">Meer lezen →</a>
+          </div>
+        </div>
+
+        <div class="kennis-card">
+          <div class="kennis-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <div class="kennis-body">
+            <span class="kennis-tag">Klimaat</span>
+            <h4>Airco / warmte-koud</h4>
+            <p>Een moderne airco koelt in de zomer én verwarmt efficiënt in de winter. Werkt als aanvulling op een warmtepomp of als alternatief.</p>
+            <a href="/kennisbank/airco/" class="kennis-link">Meer lezen →</a>
+          </div>
+        </div>
+
+        <div class="kennis-card">
+          <div class="kennis-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <div class="kennis-body">
+            <span class="kennis-tag">Slim beheer</span>
+            <h4>Energiemanagementsysteem</h4>
+            <p>Een EMS koppelt uw zonnepanelen, batterij, laadpaal en warmtepomp slim aan elkaar. Zo gebruikt u altijd de goedkoopste energie.</p>
+            <a href="/kennisbank/ems/" class="kennis-link">Meer lezen →</a>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
