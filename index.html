@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>STAP Energie — Energielabels & Verduurzamingsadvies</title>
 <meta name="description" content="STAP Energie helpt ondernemers en woningeigenaren verduurzamen. Officieel energielabel, verduurzamingsadvies en subsidie-advies. 16+ jaar ervaring. Heel Nederland.">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
@@ -154,14 +153,7 @@ a    { text-decoration: none; }
    SEGMENTEN CAROUSEL
 ══════════════════════════════════ */
 .seg-section { background: #fff; }
-.seg-swiper { margin-top: 2rem; padding-bottom: 3rem !important; overflow: hidden; }
-.seg-swiper .swiper-slide { height: auto; box-sizing: border-box; }
-.seg-swiper .swiper-button-prev,
-.seg-swiper .swiper-button-next { color: var(--groen); background: white; width: 40px; height: 40px; border-radius: 50%; box-shadow: var(--shadow); }
-.seg-swiper .swiper-button-prev::after,
-.seg-swiper .swiper-button-next::after { font-size: 1rem; font-weight: 700; }
-.seg-swiper .swiper-pagination-bullet { background: var(--rand); opacity: 1; }
-.seg-swiper .swiper-pagination-bullet-active { background: var(--groen); }
+
 .seg-card { border: 1.5px solid var(--rand); border-radius: var(--rl); overflow: hidden; transition: border-color .2s, box-shadow .2s, transform .2s; }
 .seg-card:hover { border-color: var(--groen); box-shadow: var(--shadow-lg); transform: translateY(-3px); }
 .seg-card img { width: 100%; height: 140px; object-fit: cover; }
@@ -495,52 +487,39 @@ a    { text-decoration: none; }
   <div class="container">
     <span class="sec-label">Kies jouw situatie</span>
     <h2 class="sec-title">Voor wie is STAP Energie?</h2>
-    <div class="swiper seg-swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <a href="/mkb-bedrijven/" class="seg-card">
-            <img src="images/segment-mkb.jpg" alt="MKB & Bedrijven" loading="lazy">
-            <div class="seg-card-body">
-              <h3>MKB & Bedrijven</h3>
-              <p>Energielabels, inkoop en verduurzaming voor ondernemers.</p>
-              <span class="seg-arrow">Meer info →</span>
-            </div>
-          </a>
+    <div class="seg-grid">
+      <a href="/mkb-bedrijven/" class="seg-card">
+        <img src="images/segment-mkb.jpg" alt="MKB & Bedrijven" loading="lazy">
+        <div class="seg-card-body">
+          <h3>MKB & Bedrijven</h3>
+          <p>Energielabels, inkoop en verduurzaming voor ondernemers.</p>
+          <span class="seg-arrow">Meer info →</span>
         </div>
-        <div class="swiper-slide">
-          <a href="/particulieren/" class="seg-card">
-            <img src="images/segment-particulieren.jpg" alt="Particulieren" loading="lazy">
-            <div class="seg-card-body">
-              <h3>Particulieren</h3>
-              <p>Energielabel en verduurzamingsadvies voor woningeigenaren.</p>
-              <span class="seg-arrow">Meer info →</span>
-            </div>
-          </a>
+      </a>
+      <a href="/particulieren/" class="seg-card">
+        <img src="images/segment-particulieren.jpg" alt="Particulieren" loading="lazy">
+        <div class="seg-card-body">
+          <h3>Particulieren</h3>
+          <p>Energielabel en verduurzamingsadvies voor woningeigenaren.</p>
+          <span class="seg-arrow">Meer info →</span>
         </div>
-        <div class="swiper-slide">
-          <a href="/vastgoed-makelaars/" class="seg-card">
-            <img src="images/segment-vastgoed.jpg" alt="Vastgoed & Makelaars" loading="lazy">
-            <div class="seg-card-body">
-              <h3>Vastgoed & Makelaars</h3>
-              <p>Labels en WWS-optimalisatie voor vastgoedprofessionals.</p>
-              <span class="seg-arrow">Meer info →</span>
-            </div>
-          </a>
+      </a>
+      <a href="/vastgoed-makelaars/" class="seg-card">
+        <img src="images/segment-vastgoed.jpg" alt="Vastgoed & Makelaars" loading="lazy">
+        <div class="seg-card-body">
+          <h3>Vastgoed & Makelaars</h3>
+          <p>Labels en WWS-optimalisatie voor vastgoedprofessionals.</p>
+          <span class="seg-arrow">Meer info →</span>
         </div>
-        <div class="swiper-slide">
-          <a href="/gemeenten-woningstichtingen/" class="seg-card">
-            <img src="images/segment-gemeenten.jpg" alt="Gemeenten & Woningstichtingen" loading="lazy">
-            <div class="seg-card-body">
-              <h3>Gemeenten & Woningstichtingen</h3>
-              <p>Verduurzaming op schaal voor corporaties en gemeenten.</p>
-              <span class="seg-arrow">Meer info →</span>
-            </div>
-          </a>
+      </a>
+      <a href="/gemeenten-woningstichtingen/" class="seg-card">
+        <img src="images/segment-gemeenten.jpg" alt="Gemeenten & Woningstichtingen" loading="lazy">
+        <div class="seg-card-body">
+          <h3>Gemeenten & Woningstichtingen</h3>
+          <p>Verduurzaming op schaal voor corporaties en gemeenten.</p>
+          <span class="seg-arrow">Meer info →</span>
         </div>
-      </div>
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+      </a>
     </div>
   </div>
 </section>
@@ -633,25 +612,8 @@ a    { text-decoration: none; }
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 
-
-// ── SEGMENT CAROUSEL (Swiper) ──
-document.addEventListener('DOMContentLoaded', function() {
-  new Swiper('.seg-swiper', {
-    slidesPerView: 1.2,
-    spaceBetween: 16,
-    loop: true,
-    autoplay: { delay: 4000, disableOnInteraction: false, pauseOnMouseEnter: true },
-    pagination: { el: '.swiper-pagination', clickable: true },
-    navigation: { prevEl: '.swiper-button-prev', nextEl: '.swiper-button-next' },
-    breakpoints: {
-      600:  { slidesPerView: 2, spaceBetween: 16 },
-      900:  { slidesPerView: 3, spaceBetween: 20 }
-    }
-  });
-});
 
 // ── HAMBURGER ──
 var toggle   = document.getElementById('nav-toggle');
