@@ -192,7 +192,7 @@ jobs:
       - name: Installeer sshpass
         run: sudo apt-get install -y sshpass
 
-      - name: Genereer SFTP-script
+      - name: Genereer SFTP batch script
         run: |
           python3 << 'PYEOF'
           import os, glob
@@ -200,7 +200,7 @@ jobs:
           skip = ['.git', '.github', 'node_modules']
           lines = []
 
-          # Maak alle submappen aan
+          # Submappen aanmaken
           dirs = set()
           for f in glob.glob('**/*.html', recursive=True):
               d = os.path.dirname(f)
@@ -209,16 +209,16 @@ jobs:
           for d in sorted(dirs):
               lines.append(f'-mkdir {d}')
 
-          # Upload root index.html
+          # Root index.html
           lines.append('put index.html index.html')
 
-          # Upload alle HTML in submappen
+          # Alle HTML in submappen
           for f in sorted(glob.glob('**/*.html', recursive=True)):
               if any(s in f for s in skip): continue
               if f == 'index.html': continue
               lines.append(f'put {f} {f}')
 
-          # Upload images
+          # Images
           lines.append('-mkdir images')
           for f in sorted(glob.glob('images/**', recursive=True)):
               if os.path.isfile(f):
@@ -226,10 +226,11 @@ jobs:
 
           lines.append('bye')
 
-          with open('sftp_commands.txt', 'w') as out:
-              out.write('\n'.join(lines))
+          script = '\n'.join(lines)
+          with open('sftp_batch.txt', 'w') as out:
+              out.write(script)
 
-          print(f"✅ SFTP script — {len(lines)} commando's")
+          print(f"SFTP script gegenereerd:")
           for l in lines: print(f"  {l}")
           PYEOF
 
@@ -239,10 +240,12 @@ jobs:
           SFTP_USER: ${{ secrets.SFTP_USER }}
           SFTP_PASS: ${{ secrets.SFTP_PASS }}
         run: |
-          echo "🚀 Upload gestart..."
+          echo "Deploy gestart..."
           sshpass -p "$SFTP_PASS" sftp \
             -o StrictHostKeyChecking=no \
             -o UserKnownHostsFile=/dev/null \
-            -b sftp_commands.txt \
+            -o PreferredAuthentications=password \
+            -o PubkeyAuthentication=no \
+            -b sftp_batch.txt \
             "$SFTP_USER@$SFTP_HOST"
-          echo "✅ Deploy Agent: Alle bestanden geupload"
+          echo "Deploy klaar"
