@@ -211,7 +211,7 @@ a    { text-decoration: none; }
 @media (max-width: 900px) {
   .usp-grid      { grid-template-columns: 1fr 1fr; }
   .diensten-grid { grid-template-columns: 1fr 1fr; }
-  .seg-duo      { grid-template-columns: 1fr 1fr; }
+  .seg-duo       { grid-template-columns: 1fr 1fr; }
   .over-grid     { grid-template-columns: 1fr; gap: 3rem; }
   .over-badge    { right: 1rem; bottom: 1rem; }
   .footer-grid   { grid-template-columns: 1fr 1fr; gap: 2rem; }
@@ -252,10 +252,10 @@ a    { text-decoration: none; }
 }
 
 @media (max-width: 480px) {
-  .usp-grid  { grid-template-columns: 1fr 1fr; }
-  .seg-duo  { grid-template-columns: 1fr; }
+  .usp-grid    { grid-template-columns: 1fr 1fr; }
+  .seg-duo     { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
-  .form-row  { grid-template-columns: 1fr; }
+  .form-row    { grid-template-columns: 1fr; }
 }
 
 </style>
@@ -281,7 +281,7 @@ a    { text-decoration: none; }
       </a>
       <div class="dropdown">
         <a href="/energielabels/" class="dd-item">Energielabels</a>
-        <a href="/verduurzaming-subsidie/" class="dd-item">Verduurzaming & Subsidie</a>
+        <a href="/verduurzaming-subsidie/" class="dd-item">Verduurzaming &amp; Subsidie</a>
         <a href="/energie-inkoop-advies/" class="dd-item">Energie inkoop advies</a>
       </div>
     </li>
@@ -292,11 +292,11 @@ a    { text-decoration: none; }
       <div class="dropdown">
         <a href="/zakelijk/" class="dd-item">Zakelijk</a>
         <a href="/particulieren/" class="dd-item">Particulieren</a>
-        <a href="/mkb/" class="dd-item">MKB & Bedrijven</a>
+        <a href="/mkb/" class="dd-item">MKB &amp; Bedrijven</a>
         <a href="/vastgoed/" class="dd-item">Vastgoed</a>
         <a href="/makelaars/" class="dd-item">Makelaars</a>
         <a href="/kantoren/" class="dd-item">Kantoren</a>
-        <a href="/gemeenten-woningstichtingen/" class="dd-item">Gemeenten & Woningstichtingen</a>
+        <a href="/gemeenten-woningstichtingen/" class="dd-item">Gemeenten &amp; Woningstichtingen</a>
         <a href="/industrie/" class="dd-item">Industrie</a>
       </div>
     </li>
@@ -505,10 +505,10 @@ a    { text-decoration: none; }
     <h2>Klaar voor jouw eerste STAP?</h2>
     <p>Gratis kennismakingsgesprek — geen verplichtingen, wel direct waarde. We reageren binnen 24 uur.</p>
     <div class="cta-btns">
-      <a href="/cdn-cgi/l/email-protection#0a63646c654a797e6b7a6f646f786d636f246466" class="btn-wit">Gratis gesprek inplannen</a>
+      <a href="#contact" class="btn-wit">Gratis gesprek inplannen</a>
       <a href="tel:0600000000" class="btn-wit-out">Direct bellen</a>
     </div>
-    <p class="cta-meta"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e28b8c848da291968392878c8790858b87cc8c8e">[email&#160;protected]</a> &nbsp;·&nbsp; Heel Nederland &nbsp;·&nbsp; KvK: in aanvraag</p>
+    <p class="cta-meta">info@stapenergie.nl &nbsp;·&nbsp; Heel Nederland &nbsp;·&nbsp; KvK: in aanvraag</p>
   </div>
 </section>
 
@@ -528,24 +528,28 @@ a    { text-decoration: none; }
       <div class="footer-col">
         <h4>Diensten</h4>
         <a href="/energielabels/">Energielabels</a>
-        <a href="/verduurzaming-subsidie/">Verduurzaming & Subsidie</a>
+        <a href="/verduurzaming-subsidie/">Verduurzaming &amp; Subsidie</a>
         <a href="/energie-inkoop-advies/">Energie inkoop advies</a>
       </div>
+      <!-- FIX: footer "Voor wie" nu compleet — alle 8 segmenten consistent met nav dropdown -->
       <div class="footer-col">
         <h4>Voor wie</h4>
         <a href="/zakelijk/">Zakelijk</a>
         <a href="/particulieren/">Particulieren</a>
-        <a href="/mkb/">MKB & Bedrijven</a>
+        <a href="/mkb/">MKB &amp; Bedrijven</a>
+        <a href="/vastgoed/">Vastgoed</a>
+        <a href="/makelaars/">Makelaars</a>
         <a href="/kantoren/">Kantoren</a>
+        <a href="/gemeenten-woningstichtingen/">Gemeenten &amp; Woningstichtingen</a>
         <a href="/industrie/">Industrie</a>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
         <a href="tel:0600000000">06 – XX XX XX XX</a>
-        <a href="/cdn-cgi/l/email-protection#01686f676e4172756071646f64736668642f6f6d"><span class="__cf_email__" data-cfemail="71181f171e3102051001141f14031618145f1f1d">[email&#160;protected]</span></a>
+        <a href="mailto:info@stapenergie.nl">info@stapenergie.nl</a>
         <a href="/">stapenergie.nl</a>
         <a href="/over-erik/">Over ons</a>
-        <a href="/privacyverklaring/">Privacy & AVG</a>
+        <a href="/privacyverklaring/">Privacy &amp; AVG</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -555,23 +559,41 @@ a    { text-decoration: none; }
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 // ── HAMBURGER ──
+// FIX: script was afgekapt in vorige versie waardoor alle JS crashte
 var toggle   = document.getElementById('nav-toggle');
 var navLinks = document.getElementById('nav-links');
-if (toggle) {
+
+if (toggle && navLinks) {
   toggle.addEventListener('click', function() {
+    var isOpen = navLinks.classList.contains('open');
     toggle.classList.toggle('open');
     navLinks.classList.toggle('open');
+    toggle.setAttribute('aria-label', isOpen ? 'Menu openen' : 'Menu sluiten');
   });
 }
+
+// Sluit menu bij klik buiten nav
+document.addEventListener('click', function(e) {
+  if (navLinks && toggle && !navLinks.contains(e.target) && !toggle.contains(e.target)) {
+    navLinks.classList.remove('open');
+    toggle.classList.remove('open');
+    toggle.setAttribute('aria-label', 'Menu openen');
+  }
+});
 
 // ── DROPDOWN MOBIEL ──
 document.querySelectorAll('.has-dd > a').forEach(function(link) {
   link.addEventListener('click', function(e) {
     if (window.innerWidth <= 768) {
       e.preventDefault();
-      link.parentElement.classList.toggle('open');
+      var parent = link.parentElement;
+      // Sluit andere open dropdowns
+      document.querySelectorAll('.has-dd.open').forEach(function(el) {
+        if (el !== parent) el.classList.remove('open');
+      });
+      parent.classList.toggle('open');
     }
   });
 });
@@ -590,4 +612,14 @@ function submitForm(e) {
   var form = document.getElementById('hero-form');
   form.innerHTML =
     '<div class="form-success">' +
-    '<svg width="52" height="52" viewBox="0 0 52 52" fill="none"
+    '<svg width="52" height="52" viewBox="0 0 52 52" fill="none" style="margin:0 auto 1rem">' +
+    '<circle cx="26" cy="26" r="25" stroke="#1a5c32" stroke-width="2"/>' +
+    '<path d="M15 26l8 8 14-14" stroke="#1a5c32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>' +
+    '</svg>' +
+    '<div class="form-success-title">Aanvraag ontvangen!</div>' +
+    '<div class="form-success-sub">We reageren binnen 24 uur. Tot snel!</div>' +
+    '</div>';
+}
+</script>
+</body>
+</html>
