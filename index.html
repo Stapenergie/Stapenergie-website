@@ -40,20 +40,15 @@ a    { text-decoration: none; }
 /* ══════════════════════════════════
    UTILITY
 ══════════════════════════════════ */
-.container  { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
 .section    { padding: 80px 0; scroll-margin-top: 80px; }
-.btn-prim   { display: inline-flex; align-items: center; gap: 8px; background: var(--groen); color: #fff; padding: .85rem 2rem; border-radius: 100px; font-size: .95rem; font-weight: 700; border: none; cursor: pointer; font-family: inherit; transition: background .2s, transform .15s; }
-.btn-prim:hover { background: var(--groen-mid); transform: translateY(-2px); }
-.btn-out    { display: inline-flex; align-items: center; gap: 8px; border: 1.5px solid var(--groen); color: var(--groen); padding: .8rem 1.8rem; border-radius: 100px; font-size: .92rem; font-weight: 600; transition: background .2s, color .2s; }
-.btn-out:hover { background: var(--groen); color: #fff; }
 .sec-label  { display: block; font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--groen); margin-bottom: .7rem; }
 .sec-label::before { content: '— '; }
 .sec-title  { font-family: var(--serif); font-size: clamp(1.8rem, 3.5vw, 2.6rem); line-height: 1.15; letter-spacing: -.02em; }
 .sec-sub    { font-size: 1rem; color: var(--subtekst); margin-top: .7rem; max-width: 540px; line-height: 1.7; }
-.check-list { list-style: none; display: flex; flex-direction: column; gap: .55rem; }
-.check-list li { display: flex; align-items: center; gap: 10px; font-size: .9rem; color: rgba(255,255,255,.85); }
-.check-list li::before { content: ''; width: 20px; height: 20px; border-radius: 50%; background: rgba(77,200,130,.25); flex-shrink: 0; background-image: url("data:image/svg+xml,%3Csvg width='11' height='11' viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 5.5l2.5 2.5 4.5-4.5' stroke='%234dc882' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: center; }
-.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.btn-out    { display: inline-flex; align-items: center; gap: 8px; border: 1.5px solid var(--groen); color: var(--groen); padding: .8rem 1.8rem; border-radius: 100px; font-size: .92rem; font-weight: 600; transition: background .2s, color .2s; }
+.btn-out:hover { background: var(--groen); color: #fff; }
+.sr-only    { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
 /* ══════════════════════════════════
    SEGMENT BAR
@@ -69,12 +64,12 @@ a    { text-decoration: none; }
 .nav { position: sticky; top: 0; z-index: 200; background: #fff; border-bottom: 1px solid var(--rand); height: 68px; display: flex; align-items: center; justify-content: space-between; padding: 0 5%; }
 .nav-logo { display: flex; align-items: center; gap: 10px; color: var(--tekst); }
 .nav-logo-mark { width: 36px; height: 36px; background: var(--groen); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.1rem; font-weight: 700; flex-shrink: 0; }
-.nav-logo-text { font-family: 'DM Sans', sans-serif; font-size: 1.2rem; font-weight: 700; letter-spacing: -.01em; }
+.nav-logo-text { font-size: 1.2rem; font-weight: 700; letter-spacing: -.01em; }
 .nav-logo-text span { color: var(--groen); }
 .nav-links { display: flex; align-items: center; gap: 1.8rem; list-style: none; }
 .nav-links a { font-size: .9rem; font-weight: 500; color: var(--subtekst); transition: color .2s; }
 .nav-links a:hover { color: var(--groen); }
-.nav-cta { background: var(--groen) !important; color: #fff !important; padding: .55rem 1.4rem; border-radius: 100px; font-size: .88rem !important; font-weight: 700 !important; transition: background .2s !important; }
+.nav-cta { background: var(--groen) !important; color: #fff !important; padding: .55rem 1.4rem; border-radius: 100px; font-size: .88rem !important; font-weight: 700 !important; }
 .nav-cta:hover { background: var(--groen-mid) !important; }
 .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
 .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--tekst); border-radius: 2px; transition: transform .3s, opacity .3s; }
@@ -85,10 +80,9 @@ a    { text-decoration: none; }
 /* Dropdown */
 .has-dd { position: relative; }
 .has-dd > a { display: flex; align-items: center; gap: 4px; }
-.dropdown { display: none; position: absolute; top: calc(100% + 12px); left: 50%; transform: translateX(-50%); background: #fff; border: 1px solid var(--rand); border-radius: var(--rl); box-shadow: var(--shadow-lg); min-width: 280px; padding: .5rem; z-index: 300; }
+.dropdown { display: none; position: absolute; top: calc(100% + 12px); left: 50%; transform: translateX(-50%); background: #fff; border: 1px solid var(--rand); border-radius: var(--rl); box-shadow: var(--shadow-lg); min-width: 260px; padding: .5rem; z-index: 300; }
 .dropdown::before { content: ''; position: absolute; top: -6px; left: 50%; transform: translateX(-50%) rotate(45deg); width: 12px; height: 12px; background: #fff; border-left: 1px solid var(--rand); border-top: 1px solid var(--rand); }
 .has-dd:hover .dropdown { display: block; }
-.dd-head { font-size: .7rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--subtekst); padding: .5rem 1rem .3rem; }
 .dd-item { display: flex; align-items: center; padding: .65rem 1rem; border-radius: var(--r); font-size: .88rem; font-weight: 500; color: var(--subtekst); transition: color .15s, background .15s; min-height: 44px; }
 .dd-item:hover { color: var(--groen); background: var(--groen-licht); }
 
@@ -99,21 +93,24 @@ a    { text-decoration: none; }
 .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; z-index: 0; }
 .hero-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(10,25,16,.85) 0%, rgba(10,25,16,.6) 50%, rgba(10,25,16,.15) 100%); z-index: 1; }
 .hero-inner { position: relative; z-index: 2; width: 100%; max-width: 1200px; margin: 0 auto; padding: 80px 5%; display: grid; grid-template-columns: 1fr 440px; gap: 3rem; align-items: center; }
-.hero-label { display: inline-flex; align-items: center; background: rgba(255,255,255,.12); color: rgba(255,255,255,.9); font-size: .75rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 4px 14px; border-radius: 100px; margin-bottom: 1.2rem; backdrop-filter: blur(4px); }
+.hero-label { display: inline-flex; align-items: center; background: rgba(255,255,255,.12); color: rgba(255,255,255,.9); font-size: .75rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 4px 14px; border-radius: 100px; margin-bottom: 1.2rem; }
 .hero-title { font-family: var(--serif); font-size: clamp(2.2rem, 4.5vw, 3.8rem); line-height: 1.1; color: #fff; letter-spacing: -.02em; margin-bottom: 1rem; }
-.hero-title em { font-style: normal; color: var(--groen-acc); }
+.hero-title em { font-style: normal; color: #4dc882; }
 .hero-desc { font-size: 1rem; color: rgba(255,255,255,.8); max-width: 480px; line-height: 1.75; margin-bottom: 1.5rem; }
-.hero-checks { margin-bottom: 1.8rem; }
+.hero-checks { list-style: none; margin-bottom: 1.8rem; display: flex; flex-direction: column; gap: .55rem; }
+.hero-checks li { display: flex; align-items: center; gap: 10px; font-size: .9rem; color: rgba(255,255,255,.85); }
+.hero-checks li::before { content: ''; width: 20px; height: 20px; border-radius: 50%; background: rgba(77,200,130,.25); flex-shrink: 0; background-image: url("data:image/svg+xml,%3Csvg width='11' height='11' viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 5.5l2.5 2.5 4.5-4.5' stroke='%234dc882' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: center; }
 .hero-link { display: inline-flex; align-items: center; gap: 6px; color: rgba(255,255,255,.65); font-size: .88rem; border-bottom: 1px solid rgba(255,255,255,.3); padding-bottom: 2px; }
 
 /* Hero formulier */
 .hero-form-card { background: #fff; border-radius: var(--rl); padding: 2rem; box-shadow: 0 16px 60px rgba(0,0,0,.25); }
 .hero-form-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: .25rem; }
 .hero-form-card p { font-size: .85rem; color: var(--subtekst); margin-bottom: 1.3rem; }
+.form-stack { display: flex; flex-direction: column; gap: .75rem; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
 .form-input { width: 100%; padding: .75rem .9rem; border: 1.5px solid var(--rand); border-radius: var(--r); font-size: .88rem; font-family: inherit; outline: none; transition: border-color .15s; background: #fff; }
 .form-input:focus { border-color: var(--groen); }
-.form-select { width: 100%; padding: .75rem .9rem; border: 1.5px solid var(--rand); border-radius: var(--r); font-size: .88rem; font-family: inherit; outline: none; background: #fff; color: var(--subtekst); transition: border-color .15s; }
+.form-select { width: 100%; padding: .75rem .9rem; border: 1.5px solid var(--rand); border-radius: var(--r); font-size: .88rem; font-family: inherit; outline: none; background: #fff; color: var(--subtekst); }
 .form-select:focus { border-color: var(--groen); }
 .form-check { display: flex; align-items: flex-start; gap: 8px; font-size: .75rem; color: var(--subtekst); line-height: 1.4; }
 .form-check input { margin-top: 2px; flex-shrink: 0; accent-color: var(--groen); }
@@ -121,7 +118,9 @@ a    { text-decoration: none; }
 .form-submit { width: 100%; padding: .9rem; background: var(--groen); color: #fff; border: none; border-radius: 100px; font-size: .92rem; font-weight: 700; cursor: pointer; font-family: inherit; transition: background .2s; }
 .form-submit:hover { background: var(--groen-mid); }
 .form-note { text-align: center; font-size: .72rem; color: #9aa5b4; margin-top: .3rem; }
-.form-stack { display: flex; flex-direction: column; gap: .75rem; }
+.form-success { text-align: center; padding: 2rem 0; }
+.form-success-title { font-weight: 700; font-size: 1rem; margin-bottom: .3rem; }
+.form-success-sub { color: var(--subtekst); font-size: .85rem; }
 
 /* ══════════════════════════════════
    USP BALK
@@ -136,32 +135,32 @@ a    { text-decoration: none; }
 /* ══════════════════════════════════
    DIENSTEN
 ══════════════════════════════════ */
+.sec-grijs { background: var(--lichtgrijs); }
 .diensten-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2.5rem; }
-.dienst-card { background: var(--groen-card); border-radius: var(--rl); overflow: hidden; transition: transform .2s, box-shadow .2s; }
+.dienst-card { background: var(--groen-card); border-radius: var(--rl); overflow: hidden; transition: transform .2s, box-shadow .2s; display: block; }
 .dienst-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 .dienst-card-img { width: 100%; height: 180px; object-fit: cover; }
-.dienst-card-img-dark { width: 100%; height: 180px; background: #0f1f15; display: flex; align-items: center; justify-content: center; }
+.dienst-card-dark { background: #0f1f15; }
 .dienst-card-body { padding: 1.4rem; }
-.dienst-card-body h3 { font-size: 1rem; font-weight: 700; margin-bottom: .4rem; }
+.dienst-card-body h3 { font-size: 1rem; font-weight: 700; margin-bottom: .4rem; color: var(--tekst); }
 .dienst-card-body p { font-size: .88rem; color: var(--subtekst); margin-bottom: 1rem; line-height: 1.5; }
-.dienst-link { display: inline-flex; align-items: center; gap: 6px; color: var(--groen); font-size: .88rem; font-weight: 600; }
 .dienst-card-dark .dienst-card-body h3 { color: #fff; }
 .dienst-card-dark .dienst-card-body p { color: rgba(255,255,255,.65); }
-.dienst-card-dark .dienst-link { color: var(--groen-acc); }
+.dienst-link { display: inline-flex; align-items: center; gap: 6px; color: var(--groen); font-size: .88rem; font-weight: 600; }
+.dienst-card-dark .dienst-link { color: #4dc882; }
 
 /* ══════════════════════════════════
-   SEGMENTEN CAROUSEL
+   VOOR WIE — SEGMENT GRID
 ══════════════════════════════════ */
 .seg-section { background: #fff; }
-
-.seg-card { border: 1.5px solid var(--rand); border-radius: var(--rl); overflow: hidden; transition: border-color .2s, box-shadow .2s, transform .2s; }
+.seg-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin-top: 2rem; }
+.seg-card { border: 1.5px solid var(--rand); border-radius: var(--rl); overflow: hidden; transition: border-color .2s, box-shadow .2s, transform .2s; display: block; }
 .seg-card:hover { border-color: var(--groen); box-shadow: var(--shadow-lg); transform: translateY(-3px); }
 .seg-card img { width: 100%; height: 140px; object-fit: cover; }
 .seg-card-body { padding: 1.1rem; }
-.seg-card-body h3 { font-size: .95rem; font-weight: 700; margin-bottom: .3rem; }
+.seg-card-body h3 { font-size: .95rem; font-weight: 700; margin-bottom: .3rem; color: var(--tekst); }
 .seg-card-body p { font-size: .82rem; color: var(--subtekst); margin-bottom: .7rem; line-height: 1.4; }
 .seg-arrow { display: flex; align-items: center; gap: 4px; color: var(--groen); font-size: .82rem; font-weight: 600; }
-
 
 /* ══════════════════════════════════
    OVER ERIK
@@ -172,7 +171,7 @@ a    { text-decoration: none; }
 .over-badge { position: absolute; bottom: -1.5rem; right: -1.5rem; background: var(--groen); color: #fff; border-radius: var(--rl); padding: 1.2rem 1.5rem; box-shadow: var(--shadow-lg); }
 .over-badge .num { font-family: var(--serif); font-size: 2.2rem; line-height: 1; }
 .over-badge .lbl { font-size: .78rem; opacity: .85; margin-top: 2px; }
-.over-quote { border-left: 3px solid var(--groen-acc); padding-left: 1.2rem; font-style: italic; font-size: 1rem; color: var(--subtekst); line-height: 1.6; margin: 1.5rem 0; }
+.over-quote { border-left: 3px solid #4dc882; padding-left: 1.2rem; font-style: italic; font-size: 1rem; color: var(--subtekst); line-height: 1.6; margin: 1.5rem 0; }
 .over-text { font-size: .95rem; color: var(--subtekst); line-height: 1.75; margin-bottom: 1rem; }
 .over-tags { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.2rem 0 1.8rem; }
 .over-tag { background: var(--groen-card); color: var(--groen); font-size: .75rem; font-weight: 600; padding: 4px 12px; border-radius: 100px; }
@@ -180,23 +179,22 @@ a    { text-decoration: none; }
 /* ══════════════════════════════════
    CTA SECTIE
 ══════════════════════════════════ */
-.cta-sec { background: var(--groen); padding: 80px 0; text-align: center; position: relative; overflow: hidden; }
-.cta-sec::before { content: ''; position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; background: rgba(255,255,255,.04); border-radius: 50%; }
-.cta-sec h2 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3rem); color: #fff; margin-bottom: .8rem; letter-spacing: -.02em; position: relative; }
-.cta-sec p { color: rgba(255,255,255,.75); font-size: 1rem; margin-bottom: 2rem; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.7; position: relative; }
-.cta-btns { display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap; position: relative; }
-.btn-wit { background: #fff; color: var(--groen); padding: .9rem 2.2rem; border-radius: 100px; font-size: .95rem; font-weight: 700; transition: transform .15s, box-shadow .15s; }
+.cta-sec { background: var(--groen); padding: 80px 0; text-align: center; }
+.cta-sec h2 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3rem); color: #fff; margin-bottom: .8rem; letter-spacing: -.02em; }
+.cta-sec p { color: rgba(255,255,255,.75); font-size: 1rem; margin-bottom: 2rem; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+.cta-btns { display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+.btn-wit { background: #fff; color: var(--groen); padding: .9rem 2.2rem; border-radius: 100px; font-size: .95rem; font-weight: 700; display: inline-flex; align-items: center; transition: transform .15s, box-shadow .15s; }
 .btn-wit:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
-.btn-wit-out { border: 2px solid rgba(255,255,255,.5); color: #fff; padding: .85rem 2rem; border-radius: 100px; font-size: .92rem; font-weight: 600; transition: border-color .2s, background .2s; }
+.btn-wit-out { border: 2px solid rgba(255,255,255,.5); color: #fff; padding: .85rem 2rem; border-radius: 100px; font-size: .92rem; font-weight: 600; display: inline-flex; align-items: center; transition: border-color .2s, background .2s; }
 .btn-wit-out:hover { border-color: #fff; background: rgba(255,255,255,.1); }
-.cta-meta { margin-top: 1.5rem; font-size: .78rem; color: rgba(255,255,255,.5); position: relative; }
+.cta-meta { margin-top: 1.5rem; font-size: .78rem; color: rgba(255,255,255,.5); }
 
 /* ══════════════════════════════════
    FOOTER
 ══════════════════════════════════ */
 .footer { background: #0a1a0f; color: rgba(255,255,255,.65); padding: 64px 0 0; }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2.5rem; padding-bottom: 48px; }
-.footer-brand { font-family: 'DM Sans', sans-serif; font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 1rem; }
+.footer-brand { font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 1rem; }
 .footer-desc { font-size: .88rem; color: rgba(255,255,255,.55); line-height: 1.7; max-width: 280px; margin-bottom: 1.5rem; }
 .footer-social { display: flex; gap: .8rem; }
 .footer-social a { width: 36px; height: 36px; border-radius: var(--r); background: rgba(255,255,255,.08); display: flex; align-items: center; justify-content: center; transition: background .2s; color: rgba(255,255,255,.7); }
@@ -208,27 +206,21 @@ a    { text-decoration: none; }
 .footer-copy { font-size: .78rem; color: rgba(255,255,255,.4); }
 
 /* ══════════════════════════════════
-   RESPONSIVE — TABLET 900px
+   RESPONSIVE TABLET 900px
 ══════════════════════════════════ */
 @media (max-width: 900px) {
-  .usp-grid       { grid-template-columns: 1fr 1fr; }
-  .diensten-grid  { grid-template-columns: 1fr 1fr; }
-  .over-grid      { grid-template-columns: 1fr; gap: 3rem; }
-  .over-badge     { right: 1rem; bottom: 1rem; }
-  .footer-grid    { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .usp-grid      { grid-template-columns: 1fr 1fr; }
+  .diensten-grid { grid-template-columns: 1fr 1fr; }
+  .seg-grid      { grid-template-columns: 1fr 1fr; }
+  .over-grid     { grid-template-columns: 1fr; gap: 3rem; }
+  .over-badge    { right: 1rem; bottom: 1rem; }
+  .footer-grid   { grid-template-columns: 1fr 1fr; gap: 2rem; }
 }
 
 /* ══════════════════════════════════
-   RESPONSIVE — MOBIEL 768px
-══════════════════════════════════ */
-
-
-
-/* ══════════════════════════════════
-   RESPONSIVE — MOBIEL 768px
+   RESPONSIVE MOBIEL 768px
 ══════════════════════════════════ */
 @media (max-width: 768px) {
-  /* Nav */
   .nav-toggle { display: flex; }
   .nav-links {
     display: none;
@@ -245,45 +237,26 @@ a    { text-decoration: none; }
   .nav-links.open { display: flex; }
   .nav-links li { border-bottom: 1px solid var(--rand); }
   .nav-links li:last-child { border-bottom: none; }
-  .nav-links a { padding: .85rem 0; font-size: .95rem; min-height: 44px; display: flex; align-items: center; }
+  .nav-links a { padding: .85rem 0; font-size: .95rem; display: flex; align-items: center; min-height: 44px; }
   .nav-cta { background: none !important; color: var(--groen) !important; border-radius: 0 !important; }
-  .dropdown { position: static; transform: none; box-shadow: none; border: none; border-radius: 0; min-width: unset; padding: 0 0 .5rem 1rem; }
+  .dropdown { position: static; transform: none; box-shadow: none; border: none; border-radius: 0; padding: 0 0 .5rem 1rem; display: none; }
   .dropdown::before { display: none; }
   .has-dd:hover .dropdown { display: none; }
   .has-dd.open .dropdown { display: block; }
-  .dd-item { min-height: 44px; }
-  /* Hero */
   .hero { min-height: auto; }
   .hero-inner { grid-template-columns: 1fr; padding: 100px 5% 3rem; gap: 2rem; }
   .hero-overlay { background: linear-gradient(180deg, rgba(10,25,16,.8) 0%, rgba(10,25,16,.7) 100%); }
-  .hero-form-card { width: 100%; }
-  /* Diensten */
   .diensten-grid { grid-template-columns: 1fr; }
-  /* Over Erik */
-  .over-grid { grid-template-columns: 1fr; gap: 3rem; }
-  .over-badge { right: 1rem; bottom: 1rem; }
-  /* CTA */
   .cta-btns { flex-direction: column; align-items: center; }
   .btn-wit, .btn-wit-out { width: 100%; max-width: 300px; text-align: center; justify-content: center; }
 }
-/* ══════════════════════════════════
-   RESPONSIVE — KLEIN 480px
-══════════════════════════════════ */
+
 @media (max-width: 480px) {
-  .usp-grid    { grid-template-columns: 1fr 1fr; }
+  .usp-grid  { grid-template-columns: 1fr 1fr; }
+  .seg-grid  { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
-  .form-row    { grid-template-columns: 1fr; }
+  .form-row  { grid-template-columns: 1fr; }
 }
-
-
-.dd-chevron { flex-shrink: 0; vertical-align: middle; margin-left: 2px; }
-.sec-grijs { background: var(--lichtgrijs); }
-.dienst-erik-img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
-.form-success { text-align: center; padding: 2rem 0; }
-.form-success-icon { margin: 0 auto 1rem; display: block; }
-.form-success-title { font-weight: 700; font-size: 1rem; margin-bottom: .3rem; }
-.form-success-sub { color: var(--subtekst); font-size: .85rem; }
-
 
 </style>
 </head>
@@ -303,9 +276,11 @@ a    { text-decoration: none; }
     <div class="nav-logo-mark">S</div>
     <span class="nav-logo-text">STAP <span>Energie</span></span>
   </a>
-  <ul class="nav-links">
+  <ul class="nav-links" id="nav-links">
     <li class="has-dd">
-      <a href="#diensten">Diensten <svg width="12" height="12" viewBox="0 0 12 12" fill="none" class="dd-chevron"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="#diensten">Diensten
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="flex-shrink:0"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
       <div class="dropdown">
         <a href="/energielabel-woningen/" class="dd-item">Energielabels woningen</a>
         <a href="/energielabel-utiliteit/" class="dd-item">Energielabels utiliteit</a>
@@ -315,9 +290,10 @@ a    { text-decoration: none; }
       </div>
     </li>
     <li class="has-dd">
-      <a href="#product-advies">Product & Advies <svg width="12" height="12" viewBox="0 0 12 12" fill="none" class="dd-chevron"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="#product-advies">Product & Advies
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="flex-shrink:0"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
       <div class="dropdown">
-        <div class="dd-head">Verwarmen & isoleren</div>
         <a href="/warmtepomp/" class="dd-item">Warmtepomp</a>
         <a href="/isolatie/" class="dd-item">Isolatie</a>
         <a href="/cv-ketel/" class="dd-item">CV-ketel</a>
@@ -342,14 +318,13 @@ a    { text-decoration: none; }
       <span class="hero-label">Energielabel &amp; verduurzamingsadvies</span>
       <h1 class="hero-title">Duurzame impact<br>maken is <em>leuk</em></h1>
       <p class="hero-desc">STAP Energie helpt ondernemers en woningeigenaren stap voor stap verduurzamen. Van energielabel tot een concreet plan op maat.</p>
-      <ul class="check-list hero-checks">
+      <ul class="hero-checks">
         <li>Officieel erkend energielabel — geregistreerd in EP-online</li>
         <li>16+ jaar ervaring in de energiemarkt</li>
         <li>Reactie binnen 24 uur — heel Nederland</li>
       </ul>
       <a href="#diensten" class="hero-link">Bekijk alle diensten →</a>
     </div>
-
     <div class="hero-form-card" id="contact">
       <h3>Plan een gratis kennismaking</h3>
       <p>Binnen 24 uur reageren wij op je aanvraag.</p>
@@ -437,7 +412,7 @@ a    { text-decoration: none; }
         </div>
       </a>
       <a href="/energielabel-utiliteit/" class="dienst-card">
-        <img src="images/hero.jpg" alt="Energielabels utiliteit" class="dienst-card-img" loading="lazy">
+        <img src="images/gemengd-zakelijk.jpg" alt="Energielabels utiliteit" class="dienst-card-img" loading="lazy">
         <div class="dienst-card-body">
           <h3>Energielabels utiliteit</h3>
           <p>Verplicht energielabel voor bedrijfspanden en kantoren. Inclusief direct verduurzamingsadvies.</p>
@@ -469,9 +444,7 @@ a    { text-decoration: none; }
         </div>
       </a>
       <a href="#contact" class="dienst-card dienst-card-dark">
-        <div class="dienst-card-img-dark">
-          <img src="images/erik-zakelijk.jpg" alt="Erik Dolman" class="dienst-card-img dienst-erik-img" loading="lazy">
-        </div>
+        <img src="images/erik-zakelijk.jpg" alt="Erik Dolman" class="dienst-card-img" loading="lazy">
         <div class="dienst-card-body">
           <h3>Weet je het niet zeker?</h3>
           <p>Plan een gratis kennismakingsgesprek zonder verplichtingen. Ik denk graag met je mee.</p>
@@ -482,52 +455,45 @@ a    { text-decoration: none; }
   </div>
 </section>
 
-<!-- Segmenten -->
+<!-- Voor wie -->
 <section class="section seg-section" id="segmenten">
   <div class="container">
     <span class="sec-label">Kies jouw situatie</span>
     <h2 class="sec-title">Voor wie is STAP Energie?</h2>
-    <div class="seg-shell">
-      <button id="seg-prev-btn" class="seg-btn" aria-label="Vorige">&#8249;</button>
-      <div class="seg-carousel">
-        <div class="seg-track" id="seg-track">
-          <a href="/mkb-bedrijven/" class="seg-card">
-            <img src="images/segment-mkb.jpg" alt="MKB & Bedrijven" loading="lazy">
-            <div class="seg-card-body">
-              <h3>MKB & Bedrijven</h3>
-              <p>Energielabels, inkoop en verduurzaming voor ondernemers.</p>
-              <span class="seg-arrow">Meer info →</span>
-            </div>
-          </a>
-          <a href="/particulieren/" class="seg-card">
-            <img src="images/segment-particulieren.jpg" alt="Particulieren" loading="lazy">
-            <div class="seg-card-body">
-              <h3>Particulieren</h3>
-              <p>Energielabel en verduurzamingsadvies voor woningeigenaren.</p>
-              <span class="seg-arrow">Meer info →</span>
-            </div>
-          </a>
-          <a href="/vastgoed-makelaars/" class="seg-card">
-            <img src="images/segment-vastgoed.jpg" alt="Vastgoed & Makelaars" loading="lazy">
-            <div class="seg-card-body">
-              <h3>Vastgoed & Makelaars</h3>
-              <p>Labels en WWS-optimalisatie voor vastgoedprofessionals.</p>
-              <span class="seg-arrow">Meer info →</span>
-            </div>
-          </a>
-          <a href="/gemeenten-woningstichtingen/" class="seg-card">
-            <img src="images/segment-gemeenten.jpg" alt="Gemeenten & Woningstichtingen" loading="lazy">
-            <div class="seg-card-body">
-              <h3>Gemeenten & Woningstichtingen</h3>
-              <p>Verduurzaming op schaal voor corporaties en gemeenten.</p>
-              <span class="seg-arrow">Meer info →</span>
-            </div>
-          </a>
+    <div class="seg-grid">
+      <a href="/mkb-bedrijven/" class="seg-card" id="mkb">
+        <img src="images/segment-mkb.jpg" alt="MKB & Bedrijven" loading="lazy">
+        <div class="seg-card-body">
+          <h3>MKB & Bedrijven</h3>
+          <p>Energielabels, inkoop en verduurzaming voor ondernemers.</p>
+          <span class="seg-arrow">Meer info →</span>
         </div>
-      </div>
-      <button id="seg-next-btn" class="seg-btn" aria-label="Volgende">&#8250;</button>
+      </a>
+      <a href="/particulieren/" class="seg-card" id="particulieren">
+        <img src="images/segment-particulieren.jpg" alt="Particulieren" loading="lazy">
+        <div class="seg-card-body">
+          <h3>Particulieren</h3>
+          <p>Energielabel en verduurzamingsadvies voor woningeigenaren.</p>
+          <span class="seg-arrow">Meer info →</span>
+        </div>
+      </a>
+      <a href="/vastgoed-makelaars/" class="seg-card" id="vastgoed">
+        <img src="images/segment-vastgoed.jpg" alt="Vastgoed & Makelaars" loading="lazy">
+        <div class="seg-card-body">
+          <h3>Vastgoed & Makelaars</h3>
+          <p>Labels en WWS-optimalisatie voor vastgoedprofessionals.</p>
+          <span class="seg-arrow">Meer info →</span>
+        </div>
+      </a>
+      <a href="/gemeenten-woningstichtingen/" class="seg-card" id="gemeenten">
+        <img src="images/segment-gemeenten.jpg" alt="Gemeenten & Woningstichtingen" loading="lazy">
+        <div class="seg-card-body">
+          <h3>Gemeenten & Woningstichtingen</h3>
+          <p>Verduurzaming op schaal voor corporaties en gemeenten.</p>
+          <span class="seg-arrow">Meer info →</span>
+        </div>
+      </a>
     </div>
-    <div class="seg-dots" id="seg-dots"></div>
   </div>
 </section>
 
@@ -536,24 +502,23 @@ a    { text-decoration: none; }
   <div class="container">
     <div class="over-grid">
       <div class="over-img-wrap">
-        <img src="images/erik-zakelijk.jpg" alt="Erik Dolman" loading="lazy">
+        <img src="images/erik-portret.jpg" alt="Erik Dolman" loading="lazy">
         <div class="over-badge">
           <div class="num">16+</div>
-          <div class="lbl">jaar energie&shy;ervaring</div>
+          <div class="lbl">jaar energie­ervaring</div>
         </div>
       </div>
       <div>
         <span class="sec-label">Wie is STAP Energie?</span>
         <h2 class="sec-title">Erik Dolman,<br>Energiespecialist</h2>
         <blockquote class="over-quote">"De natuur is ons grootste kapitaal. Verduurzamen is een verstandige keuze voor het milieu, comfort én je portemonnee."</blockquote>
-        <p class="over-text">Als oprichter van STAP Energie breng ik meer dan 16 jaar ervaring in de energiemarkt mee. Van Sales Manager bij SEFE Energy tot NieuweStroom, en als voormalig lid van de Raad van Toezicht bij de Stichting Integriteit & Transparantie Energieadvies.</p>
-        <p class="over-text">Die kennis zet ik nu in voor jou. Niet met een standaard verhaal, maar met eerlijk en persoonlijk advies dat écht past bij jouw situatie.</p>
+        <p class="over-text">Als oprichter van STAP Energie breng ik meer dan 16 jaar ervaring in de energiemarkt mee. Van Sales Manager bij SEFE Energy tot NieuweStroom — die kennis zet ik nu in voor jou.</p>
+        <p class="over-text">Niet met een standaard verhaal, maar met eerlijk en persoonlijk advies dat écht past bij jouw situatie.</p>
         <div class="over-tags">
           <span class="over-tag">16+ jaar energiesector</span>
           <span class="over-tag">SEFE Energy</span>
           <span class="over-tag">NieuweStroom</span>
-          <span class="over-tag">Energie-Nederland</span>
-          <span class="over-tag">Raad van Toezicht</span>
+          <span class="over-tag">EPA-adviseur in opleiding</span>
         </div>
         <a href="/over-erik/" class="btn-out">Meer over Erik →</a>
       </div>
@@ -567,10 +532,10 @@ a    { text-decoration: none; }
     <h2>Klaar voor jouw eerste STAP?</h2>
     <p>Gratis kennismakingsgesprek — geen verplichtingen, wel direct waarde. We reageren binnen 24 uur.</p>
     <div class="cta-btns">
-      <a href="/cdn-cgi/l/email-protection#325b5c545d7241465342575c5740555b571c5c5e" class="btn-wit">Gratis gesprek inplannen</a>
+      <a href="mailto:info@stapenergie.nl" class="btn-wit">Gratis gesprek inplannen</a>
       <a href="tel:0600000000" class="btn-wit-out">Direct bellen</a>
     </div>
-    <p class="cta-meta"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="147d7a727b5467607564717a7166737d713a7a78">[email&#160;protected]</a> &nbsp;·&nbsp; Heel Nederland &nbsp;·&nbsp; KvK: in aanvraag</p>
+    <p class="cta-meta">info@stapenergie.nl &nbsp;·&nbsp; Heel Nederland &nbsp;·&nbsp; KvK: in aanvraag</p>
   </div>
 </section>
 
@@ -606,7 +571,7 @@ a    { text-decoration: none; }
       <div class="footer-col">
         <h4>Contact</h4>
         <a href="tel:0600000000">06 – XX XX XX XX</a>
-        <a href="/cdn-cgi/l/email-protection#83eaede5ecc3f0f7e2f3e6ede6f1e4eae6adedef"><span class="__cf_email__" data-cfemail="5b32353d341b282f3a2b3e353e293c323e753537">[email&#160;protected]</span></a>
+        <a href="mailto:info@stapenergie.nl">info@stapenergie.nl</a>
         <a href="/">stapenergie.nl</a>
         <a href="/over-erik/">Over ons</a>
         <a href="/privacyverklaring/">Privacy & AVG</a>
@@ -619,112 +584,10 @@ a    { text-decoration: none; }
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-
-
-// ── SEGMENT CAROUSEL ──
-(function() {
-  function initCarousel() {
-    var shell    = document.querySelector('.seg-shell');
-    var carousel = document.querySelector('.seg-carousel');
-    var track    = document.getElementById('seg-track');
-    var cards    = document.querySelectorAll('.seg-card');
-    var dotsWrap = document.getElementById('seg-dots');
-    var prev     = document.getElementById('seg-prev-btn');
-    var next     = document.getElementById('seg-next-btn');
-
-    if (!shell || !carousel || !track || !dotsWrap || !prev || !next || !cards.length) return;
-
-    var tot         = cards.length;
-    var cur         = 0;
-    var timer       = null;
-    var tx          = 0;
-    var resizeTimer = null;
-    var visible, maxIdx, gap;
-
-    function getVisible() {
-      var ww = window.innerWidth;
-      if (ww <= 768) return 1;
-      if (ww <= 900) return 2;
-      return 3;
-    }
-
-    function stopTimer() { if (timer) { clearInterval(timer); timer = null; } }
-    function startTimer() {
-      stopTimer();
-      if (window.innerWidth > 768) return;
-      timer = setInterval(function() { go(cur >= maxIdx ? 0 : cur + 1); }, 4000);
-    }
-
-    function setup() {
-      visible = getVisible();
-      maxIdx  = Math.max(0, tot - visible);
-      gap     = parseFloat(getComputedStyle(track).gap) || 0;
-      var w   = (carousel.offsetWidth - (gap * (visible - 1))) / visible;
-
-      Array.prototype.forEach.call(cards, function(c) {
-        c.style.minWidth = w + 'px';
-        c.style.maxWidth = w + 'px';
-      });
-
-      dotsWrap.innerHTML = '';
-      for (var i = 0; i <= maxIdx; i++) {
-        var d = document.createElement('button');
-        d.className = 'seg-dot' + (i === cur ? ' active' : '');
-        d.dataset.idx = i;
-        d.addEventListener('click', (function(idx) {
-          return function() { go(idx); stopTimer(); startTimer(); };
-        })(i));
-        dotsWrap.appendChild(d);
-      }
-      dotsWrap.style.display = maxIdx === 0 ? 'none' : 'flex';
-      go(Math.min(cur, maxIdx));
-    }
-
-    function go(idx) {
-      if (!cards[0] || !cards[0].offsetWidth) return;
-      cur = Math.max(0, Math.min(idx, maxIdx));
-      var cw = cards[0].offsetWidth + gap;
-      track.style.transform = 'translateX(-' + (cur * cw) + 'px)';
-      prev.disabled = (cur === 0);
-      next.disabled = (cur === maxIdx);
-      Array.prototype.forEach.call(
-        dotsWrap.querySelectorAll('.seg-dot'),
-        function(d, i) { d.classList.toggle('active', i === cur); }
-      );
-    }
-
-    prev.addEventListener('click', function() { go(cur - 1); stopTimer(); startTimer(); });
-    next.addEventListener('click', function() { go(cur + 1); stopTimer(); startTimer(); });
-
-    carousel.addEventListener('touchstart', function(e) {
-      tx = e.touches[0].clientX; stopTimer();
-    }, { passive: true });
-    carousel.addEventListener('touchend', function(e) {
-      var diff = tx - e.changedTouches[0].clientX;
-      if (Math.abs(diff) > 40) go(cur + (diff > 0 ? 1 : -1));
-      startTimer();
-    }, { passive: true });
-
-    window.addEventListener('resize', function() {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(function() { setup(); startTimer(); }, 120);
-    });
-
-    setup();
-    startTimer();
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initCarousel);
-  } else {
-    initCarousel();
-  }
-})();
-
+<script>
 // ── HAMBURGER ──
 var toggle   = document.getElementById('nav-toggle');
-var navLinks = document.querySelector('.nav-links');
+var navLinks = document.getElementById('nav-links');
 if (toggle) {
   toggle.addEventListener('click', function() {
     toggle.classList.toggle('open');
@@ -733,16 +596,16 @@ if (toggle) {
 }
 
 // ── DROPDOWN MOBIEL ──
-document.querySelectorAll('.has-dd > a').forEach(function(a) {
-  a.addEventListener('click', function(e) {
+document.querySelectorAll('.has-dd > a').forEach(function(link) {
+  link.addEventListener('click', function(e) {
     if (window.innerWidth <= 768) {
       e.preventDefault();
-      a.parentElement.classList.toggle('open');
+      link.parentElement.classList.toggle('open');
     }
   });
 });
 
-// ── SEGMENT BAR ACTIVE ──
+// ── SEGMENT BAR ──
 document.querySelectorAll('.seg-bar a').forEach(function(a) {
   a.addEventListener('click', function() {
     document.querySelectorAll('.seg-bar a').forEach(function(x) { x.classList.remove('active'); });
@@ -753,6 +616,14 @@ document.querySelectorAll('.seg-bar a').forEach(function(a) {
 // ── FORMULIER ──
 function submitForm(e) {
   e.preventDefault();
-  document.getElementById('hero-form').innerHTML =
+  var form = document.getElementById('hero-form');
+  form.innerHTML =
     '<div class="form-success">' +
-    '<svg width="52" height="52" viewBox
+    '<svg width="52" height="52" viewBox="0 0 52 52" fill="none" style="margin:0 auto 1rem;display:block"><circle cx="26" cy="26" r="24" fill="#e8f5ed"/><path d="M16 26l7 7 13-13" stroke="#1a5c32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+    '<p class="form-success-title">Bedankt! We nemen snel contact op.</p>' +
+    '<p class="form-success-sub">Binnen 24 uur ontvang je een reactie.</p>' +
+    '</div>';
+}
+</script>
+</body>
+</html>
