@@ -638,17 +638,19 @@ a    { text-decoration: none; }
 
 
 // ── SEGMENT CAROUSEL (Swiper) ──
-new Swiper('.seg-swiper', {
-  slidesPerView: 1.2,
-  spaceBetween: 16,
-  loop: true,
-  autoplay: { delay: 4000, disableOnInteraction: false, pauseOnMouseEnter: true },
-  pagination: { el: '.swiper-pagination', clickable: true },
-  navigation: { prevEl: '.swiper-button-prev', nextEl: '.swiper-button-next' },
-  breakpoints: {
-    600:  { slidesPerView: 2, spaceBetween: 16 },
-    900:  { slidesPerView: 3, spaceBetween: 20 }
-  }
+document.addEventListener('DOMContentLoaded', function() {
+  new Swiper('.seg-swiper', {
+    slidesPerView: 1.2,
+    spaceBetween: 16,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false, pauseOnMouseEnter: true },
+    pagination: { el: '.swiper-pagination', clickable: true },
+    navigation: { prevEl: '.swiper-button-prev', nextEl: '.swiper-button-next' },
+    breakpoints: {
+      600:  { slidesPerView: 2, spaceBetween: 16 },
+      900:  { slidesPerView: 3, spaceBetween: 20 }
+    }
+  });
 });
 
 // ── HAMBURGER ──
