@@ -487,40 +487,47 @@ a    { text-decoration: none; }
   <div class="container">
     <span class="sec-label">Kies jouw situatie</span>
     <h2 class="sec-title">Voor wie is STAP Energie?</h2>
-    <div class="seg-grid">
-      <a href="/mkb-bedrijven/" class="seg-card">
-        <img src="images/segment-mkb.jpg" alt="MKB & Bedrijven" loading="lazy">
-        <div class="seg-card-body">
-          <h3>MKB & Bedrijven</h3>
-          <p>Energielabels, inkoop en verduurzaming voor ondernemers.</p>
-          <span class="seg-arrow">Meer info →</span>
+    <div class="seg-shell">
+      <button id="seg-prev-btn" class="seg-btn" aria-label="Vorige">&#8249;</button>
+      <div class="seg-carousel">
+        <div class="seg-track" id="seg-track">
+          <a href="/mkb-bedrijven/" class="seg-card">
+            <img src="images/segment-mkb.jpg" alt="MKB & Bedrijven" loading="lazy">
+            <div class="seg-card-body">
+              <h3>MKB & Bedrijven</h3>
+              <p>Energielabels, inkoop en verduurzaming voor ondernemers.</p>
+              <span class="seg-arrow">Meer info →</span>
+            </div>
+          </a>
+          <a href="/particulieren/" class="seg-card">
+            <img src="images/segment-particulieren.jpg" alt="Particulieren" loading="lazy">
+            <div class="seg-card-body">
+              <h3>Particulieren</h3>
+              <p>Energielabel en verduurzamingsadvies voor woningeigenaren.</p>
+              <span class="seg-arrow">Meer info →</span>
+            </div>
+          </a>
+          <a href="/vastgoed-makelaars/" class="seg-card">
+            <img src="images/segment-vastgoed.jpg" alt="Vastgoed & Makelaars" loading="lazy">
+            <div class="seg-card-body">
+              <h3>Vastgoed & Makelaars</h3>
+              <p>Labels en WWS-optimalisatie voor vastgoedprofessionals.</p>
+              <span class="seg-arrow">Meer info →</span>
+            </div>
+          </a>
+          <a href="/gemeenten-woningstichtingen/" class="seg-card">
+            <img src="images/segment-gemeenten.jpg" alt="Gemeenten & Woningstichtingen" loading="lazy">
+            <div class="seg-card-body">
+              <h3>Gemeenten & Woningstichtingen</h3>
+              <p>Verduurzaming op schaal voor corporaties en gemeenten.</p>
+              <span class="seg-arrow">Meer info →</span>
+            </div>
+          </a>
         </div>
-      </a>
-      <a href="/particulieren/" class="seg-card">
-        <img src="images/segment-particulieren.jpg" alt="Particulieren" loading="lazy">
-        <div class="seg-card-body">
-          <h3>Particulieren</h3>
-          <p>Energielabel en verduurzamingsadvies voor woningeigenaren.</p>
-          <span class="seg-arrow">Meer info →</span>
-        </div>
-      </a>
-      <a href="/vastgoed-makelaars/" class="seg-card">
-        <img src="images/segment-vastgoed.jpg" alt="Vastgoed & Makelaars" loading="lazy">
-        <div class="seg-card-body">
-          <h3>Vastgoed & Makelaars</h3>
-          <p>Labels en WWS-optimalisatie voor vastgoedprofessionals.</p>
-          <span class="seg-arrow">Meer info →</span>
-        </div>
-      </a>
-      <a href="/gemeenten-woningstichtingen/" class="seg-card">
-        <img src="images/segment-gemeenten.jpg" alt="Gemeenten & Woningstichtingen" loading="lazy">
-        <div class="seg-card-body">
-          <h3>Gemeenten & Woningstichtingen</h3>
-          <p>Verduurzaming op schaal voor corporaties en gemeenten.</p>
-          <span class="seg-arrow">Meer info →</span>
-        </div>
-      </a>
+      </div>
+      <button id="seg-next-btn" class="seg-btn" aria-label="Volgende">&#8250;</button>
     </div>
+    <div class="seg-dots" id="seg-dots"></div>
   </div>
 </section>
 
@@ -614,6 +621,106 @@ a    { text-decoration: none; }
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 
+
+// ── SEGMENT CAROUSEL ──
+(function() {
+  function initCarousel() {
+    var shell    = document.querySelector('.seg-shell');
+    var carousel = document.querySelector('.seg-carousel');
+    var track    = document.getElementById('seg-track');
+    var cards    = document.querySelectorAll('.seg-card');
+    var dotsWrap = document.getElementById('seg-dots');
+    var prev     = document.getElementById('seg-prev-btn');
+    var next     = document.getElementById('seg-next-btn');
+
+    if (!shell || !carousel || !track || !dotsWrap || !prev || !next || !cards.length) return;
+
+    var tot         = cards.length;
+    var cur         = 0;
+    var timer       = null;
+    var tx          = 0;
+    var resizeTimer = null;
+    var visible, maxIdx, gap;
+
+    function getVisible() {
+      var ww = window.innerWidth;
+      if (ww <= 768) return 1;
+      if (ww <= 900) return 2;
+      return 3;
+    }
+
+    function stopTimer() { if (timer) { clearInterval(timer); timer = null; } }
+    function startTimer() {
+      stopTimer();
+      if (window.innerWidth > 768) return;
+      timer = setInterval(function() { go(cur >= maxIdx ? 0 : cur + 1); }, 4000);
+    }
+
+    function setup() {
+      visible = getVisible();
+      maxIdx  = Math.max(0, tot - visible);
+      gap     = parseFloat(getComputedStyle(track).gap) || 0;
+      var w   = (carousel.offsetWidth - (gap * (visible - 1))) / visible;
+
+      Array.prototype.forEach.call(cards, function(c) {
+        c.style.minWidth = w + 'px';
+        c.style.maxWidth = w + 'px';
+      });
+
+      dotsWrap.innerHTML = '';
+      for (var i = 0; i <= maxIdx; i++) {
+        var d = document.createElement('button');
+        d.className = 'seg-dot' + (i === cur ? ' active' : '');
+        d.dataset.idx = i;
+        d.addEventListener('click', (function(idx) {
+          return function() { go(idx); stopTimer(); startTimer(); };
+        })(i));
+        dotsWrap.appendChild(d);
+      }
+      dotsWrap.style.display = maxIdx === 0 ? 'none' : 'flex';
+      go(Math.min(cur, maxIdx));
+    }
+
+    function go(idx) {
+      if (!cards[0] || !cards[0].offsetWidth) return;
+      cur = Math.max(0, Math.min(idx, maxIdx));
+      var cw = cards[0].offsetWidth + gap;
+      track.style.transform = 'translateX(-' + (cur * cw) + 'px)';
+      prev.disabled = (cur === 0);
+      next.disabled = (cur === maxIdx);
+      Array.prototype.forEach.call(
+        dotsWrap.querySelectorAll('.seg-dot'),
+        function(d, i) { d.classList.toggle('active', i === cur); }
+      );
+    }
+
+    prev.addEventListener('click', function() { go(cur - 1); stopTimer(); startTimer(); });
+    next.addEventListener('click', function() { go(cur + 1); stopTimer(); startTimer(); });
+
+    carousel.addEventListener('touchstart', function(e) {
+      tx = e.touches[0].clientX; stopTimer();
+    }, { passive: true });
+    carousel.addEventListener('touchend', function(e) {
+      var diff = tx - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) go(cur + (diff > 0 ? 1 : -1));
+      startTimer();
+    }, { passive: true });
+
+    window.addEventListener('resize', function() {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function() { setup(); startTimer(); }, 120);
+    });
+
+    setup();
+    startTimer();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCarousel);
+  } else {
+    initCarousel();
+  }
+})();
 
 // ── HAMBURGER ──
 var toggle   = document.getElementById('nav-toggle');
