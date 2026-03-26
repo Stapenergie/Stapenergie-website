@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Energielabel aanvragen — Woning & Bedrijfspand | STAP Energie</title>
+<meta name="description" content="Officieel energielabel aanvragen voor uw woning of bedrijfspand in Leusden, Amersfoort, Woudenberg, Achterveld en omgeving. Snel, erkend en persoonlijk. 10 jaar geldig. STAP Energie regelt het.">
+<link rel="canonical" href="https://stapenergie.nl/energielabels/">
+
+<!-- Structured data: Service + LocalBusiness -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Energielabel aanvragen",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "STAP Energie",
+    "url": "https://stapenergie.nl",
+    "telephone": "06-XX XX XX XX",
+    "email": "info@stapenergie.nl",
+    "areaServed": [
+      {"@type": "City", "name": "Leusden"},
+      {"@type": "City", "name": "Amersfoort"},
+      {"@type": "City", "name": "Woudenberg"},
+      {"@type": "City", "name": "Achterveld"},
+      {"@type": "City", "name": "Utrecht"},
+      {"@type": "City", "name": "Soest"},
+      {"@type": "City", "name": "Baarn"},
+      {"@type": "City", "name": "Nijkerk"}
+    ]
+  },
+  "serviceType": ["Energielabel woning", "Energielabel utiliteit", "Energielabel bedrijfspand"],
+  "description": "Officieel energielabel voor woningen en bedrijfspanden op basis van de basismethodiek. Erkend en geregistreerd in EP-online. Geldig voor 10 jaar.",
+  "areaServed": [
+    {"@type": "City", "name": "Leusden"},
+    {"@type": "City", "name": "Amersfoort"},
+    {"@type": "City", "name": "Woudenberg"},
+    {"@type": "City", "name": "Achterveld"}
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+<style>
+/* ══════════════════════════════════
+   RESET & TOKENS
+══════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body { font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.6; color: #1a1a1a; background: #fff; overflow-x: hidden; }
+img  { max-width: 100%; height: auto; display: block; }
+a    { text-decoration: none; }
+
+:root {
+  --groen:       #1a5c32;
+  --groen-mid:   #237a43;
+  --groen-licht: #f0f7f2;
+  --groen-card:  #e8f5ed;
+  --groen-acc:   #2ea855;
+  --tekst:       #1a1a1a;
+  --subtekst:    #4a5568;
+  --rand:        #e2e8e0;
+  --lichtgrijs:  #f7f8f5;
+  --wit:         #ffffff;
+  --serif:       'DM Serif Display', serif;
+  --r:           8px;
+  --rl:          14px;
+  --shadow:      0 2px 12px rgba(0,0,0,.08);
+  --shadow-lg:   0 8px 32px rgba(0,0,0,.12);
+}
+
+/* ══════════════════════════════════
+   UTILITY
+══════════════════════════════════ */
+.container  { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
+.section    { padding: 80px 0; scroll-margin-top: 80px; }
+.sec-grijs  { background: var(--lichtgrijs); }
+.sec-groen  { background: var(--groen-card); }
+.sec-label  { display: block; font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--groen); margin-bottom: .7rem; }
+.sec-label::before { content: '— '; }
+.sec-title  { font-family: var(--serif); font-size: clamp(1.8rem, 3.5vw, 2.6rem); line-height: 1.15; letter-spacing: -.02em; }
+.sec-sub    { font-size: 1rem; color: var(--subtekst); margin-top: .7rem; max-width: 560px; line-height: 1.7; }
+.btn-groen  { display: inline-flex; align-items: center; gap: 8px; background: var(--groen); color: #fff; padding: .85rem 2rem; border-radius: 100px; font-size: .92rem; font-weight: 700; transition: background .2s, transform .15s; }
+.btn-groen:hover { background: var(--groen-mid); transform: translateY(-2px); }
+.btn-out    { display: inline-flex; align-items: center; gap: 8px; border: 1.5px solid var(--groen); color: var(--groen); padding: .8rem 1.8rem; border-radius: 100px; font-size: .92rem; font-weight: 600; transition: background .2s, color .2s; }
+.btn-out:hover { background: var(--groen); color: #fff; }
+.sr-only    { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+/* ══════════════════════════════════
+   SEGMENT BAR
+══════════════════════════════════ */
+.seg-bar { background: var(--lichtgrijs); border-bottom: 1px solid var(--rand); display: flex; align-items: center; height: 40px; overflow-x: auto; overflow-y: hidden; white-space: nowrap; scrollbar-width: none; -webkit-overflow-scrolling: touch; padding: 0 5%; }
+.seg-bar::-webkit-scrollbar { display: none; }
+.seg-bar a { display: inline-flex; align-items: center; height: 100%; padding: 0 1rem; font-size: .82rem; font-weight: 500; color: var(--subtekst); border-bottom: 2px solid transparent; transition: color .2s, border-color .2s; white-space: nowrap; flex-shrink: 0; }
+.seg-bar a:hover, .seg-bar a.active { color: var(--groen); border-bottom-color: var(--groen); }
+
+/* ══════════════════════════════════
+   NAV
+══════════════════════════════════ */
+.nav { position: sticky; top: 0; z-index: 200; background: #fff; border-bottom: 1px solid var(--rand); height: 68px; display: flex; align-items: center; justify-content: space-between; padding: 0 5%; }
+.nav-logo { display: flex; align-items: center; gap: 10px; color: var(--tekst); }
+.nav-logo-mark { width: 36px; height: 36px; background: var(--groen); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.1rem; font-weight: 700; flex-shrink: 0; }
+.nav-logo-text { font-size: 1.2rem; font-weight: 700; letter-spacing: -.01em; }
+.nav-logo-text span { color: var(--groen); }
+.nav-links { display: flex; align-items: center; gap: 1.8rem; list-style: none; }
+.nav-links a { font-size: .9rem; font-weight: 500; color: var(--subtekst); transition: color .2s; }
+.nav-links a:hover, .nav-links a.actief { color: var(--groen); }
+.nav-cta { background: var(--groen) !important; color: #fff !important; padding: .55rem 1.4rem; border-radius: 100px; font-size: .88rem !important; font-weight: 700 !important; }
+.nav-cta:hover { background: var(--groen-mid) !important; }
+.nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+.nav-toggle span { display: block; width: 24px; height: 2px; background: var(--tekst); border-radius: 2px; transition: transform .3s, opacity .3s; }
+.nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Dropdown */
+.has-dd { position: relative; }
+.has-dd > a { display: flex; align-items: center; gap: 4px; }
+.dropdown { display: none; position: absolute; top: calc(100% + 12px); left: 50%; transform: translateX(-50%); background: #fff; border: 1px solid var(--rand); border-radius: var(--rl); box-shadow: var(--shadow-lg); min-width: 260px; padding: .5rem; z-index: 300; }
+.dropdown::before { content: ''; position: absolute; top: -6px; left: 50%; transform: translateX(-50%) rotate(45deg); width: 12px; height: 12px; background: #fff; border-left: 1px solid var(--rand); border-top: 1px solid var(--rand); }
+.has-dd:hover .dropdown { display: block; }
+.dd-item { display: flex; align-items: center; padding: .65rem 1rem; border-radius: var(--r); font-size: .88rem; font-weight: 500; color: var(--subtekst); transition: color .15s, background .15s; min-height: 44px; }
+.dd-item:hover { color: var(--groen); background: var(--groen-licht); }
+.dd-item-dim { opacity: .6; }
+.dd-binnenkort { font-size: .75rem; color: var(--subtekst); }
+
+/* ══════════════════════════════════
+   BREADCRUMB
+══════════════════════════════════ */
+.breadcrumb { background: var(--lichtgrijs); border-bottom: 1px solid var(--rand); padding: .6rem 0; }
+.breadcrumb-inner { display: flex; align-items: center; gap: .5rem; font-size: .8rem; color: var(--subtekst); }
+.breadcrumb-inner a { color: var(--subtekst); transition: color .2s; }
+.breadcrumb-inner a:hover { color: var(--groen); }
+.breadcrumb-inner .sep { color: var(--rand); }
+.breadcrumb-inner .current { color: var(--groen); font-weight: 500; }
+
+/* ══════════════════════════════════
+   PAGE HERO
+══════════════════════════════════ */
+.page-hero { background: var(--groen); padding: 72px 0 80px; position: relative; overflow: hidden; }
+.page-hero::before { content: ''; position: absolute; top: -60px; right: -60px; width: 360px; height: 360px; border-radius: 50%; background: rgba(255,255,255,.04); pointer-events: none; }
+.page-hero::after  { content: ''; position: absolute; bottom: -80px; left: 10%; width: 240px; height: 240px; border-radius: 50%; background: rgba(255,255,255,.03); pointer-events: none; }
+.page-hero-inner { display: grid; grid-template-columns: 1fr 420px; gap: 3rem; align-items: start; position: relative; z-index: 1; }
+.page-hero-label { display: inline-flex; align-items: center; background: rgba(255,255,255,.12); color: rgba(255,255,255,.9); font-size: .75rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 4px 14px; border-radius: 100px; margin-bottom: 1.2rem; }
+.page-hero-title { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.1; color: #fff; letter-spacing: -.02em; margin-bottom: 1rem; }
+.page-hero-title em { font-style: normal; color: #4dc882; }
+.page-hero-desc { font-size: 1rem; color: rgba(255,255,255,.8); line-height: 1.75; margin-bottom: 1.5rem; max-width: 480px; }
+.page-hero-checks { list-style: none; margin-bottom: 1.8rem; display: flex; flex-direction: column; gap: .5rem; }
+.page-hero-checks li { display: flex; align-items: center; gap: 10px; font-size: .9rem; color: rgba(255,255,255,.85); }
+.page-hero-checks li::before { content: ''; width: 20px; height: 20px; border-radius: 50%; background: rgba(77,200,130,.25); flex-shrink: 0; background-image: url("data:image/svg+xml,%3Csvg width='11' height='11' viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 5.5l2.5 2.5 4.5-4.5' stroke='%234dc882' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: center; }
+
+/* Segment-keuze tabs in hero */
+.hero-tabs { display: flex; gap: .5rem; margin-bottom: 1.5rem; }
+.hero-tab { padding: .55rem 1.4rem; border-radius: 100px; font-size: .88rem; font-weight: 600; cursor: pointer; border: 2px solid rgba(255,255,255,.5); color: #fff; background: rgba(0,0,0,.25); transition: all .2s; font-family: inherit; }
+.hero-tab.active { background: #fff; color: var(--groen); border-color: #fff; }
+.hero-tab:hover:not(.active) { border-color: #fff; background: rgba(0,0,0,.35); color: #fff; }
+
+/* Hero form card */
+.hero-form-card { background: #fff; border-radius: var(--rl); padding: 2rem; box-shadow: 0 16px 60px rgba(0,0,0,.25); }
+.hero-form-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: .2rem; }
+.hero-form-card p  { font-size: .83rem; color: var(--subtekst); margin-bottom: 1.2rem; }
+.form-stack  { display: flex; flex-direction: column; gap: .7rem; }
+.form-row    { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; }
+.form-input  { width: 100%; padding: .72rem .9rem; border: 1.5px solid var(--rand); border-radius: var(--r); font-size: .88rem; font-family: inherit; outline: none; transition: border-color .15s; background: #fff; color: var(--tekst); }
+.form-input:focus  { border-color: var(--groen); }
+.form-select { width: 100%; padding: .72rem .9rem; border: 1.5px solid var(--rand); border-radius: var(--r); font-size: .88rem; font-family: inherit; outline: none; background: #fff; color: var(--subtekst); }
+.form-select:focus { border-color: var(--groen); }
+.form-check  { display: flex; align-items: flex-start; gap: 8px; font-size: .75rem; color: var(--subtekst); line-height: 1.4; }
+.form-check input { margin-top: 2px; flex-shrink: 0; accent-color: var(--groen); }
+.form-check a { color: var(--groen); font-weight: 600; }
+.form-submit { width: 100%; padding: .9rem; background: var(--groen); color: #fff; border: none; border-radius: 100px; font-size: .92rem; font-weight: 700; cursor: pointer; font-family: inherit; transition: background .2s; }
+.form-submit:hover { background: var(--groen-mid); }
+.form-note   { text-align: center; font-size: .72rem; color: #9aa5b4; margin-top: .3rem; }
+.form-hidden { display: none; }
+.form-success { text-align: center; padding: 2rem 0; }
+.form-success-title { font-weight: 700; font-size: 1rem; margin-bottom: .3rem; }
+.form-success-sub   { color: var(--subtekst); font-size: .85rem; }
+
+/* Spoed */
+.spoed-row { background: #fff8ee; border: 1.5px solid #f0a500; border-radius: var(--r); padding: .7rem .9rem; display: flex; align-items: flex-start; gap: 8px; font-size: .82rem; color: var(--tekst); }
+.spoed-row input { accent-color: #f0a500; margin-top: 2px; flex-shrink: 0; }
+.spoed-note { font-size: .72rem; color: #a06000; margin-top: 2px; display: block; }
+
+/* Prijs indicator */
+.prijs-indicator { background: var(--groen-card); border-radius: var(--r); padding: .6rem .9rem; font-size: .82rem; color: var(--groen); font-weight: 600; display: none; }
+.prijs-indicator.zichtbaar { display: block; }
+
+/* ══════════════════════════════════
+   URGENTIE BALK
+══════════════════════════════════ */
+.urgentie-balk { background: #0f2d1a; border-bottom: 3px solid #f0a500; padding: 1rem 0; }
+.urgentie-inner { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.urgentie-badge { background: #f0a500; color: #fff; font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; white-space: nowrap; flex-shrink: 0; }
+.urgentie-tekst { font-size: .88rem; color: rgba(255,255,255,.85); line-height: 1.5; flex: 1; }
+.urgentie-tekst strong { color: #fff; }
+.urgentie-link { font-size: .82rem; color: #4dc882; font-weight: 600; white-space: nowrap; }
+.urgentie-link:hover { text-decoration: underline; }
+
+/* ══════════════════════════════════
+   LABELCHECK
+══════════════════════════════════ */
+.labelcheck-sectie { background: var(--groen-card); padding: 56px 0; }
+.labelcheck-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+.labelcheck-tekst h2 { font-family: var(--serif); font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.15; letter-spacing: -.02em; margin-bottom: .7rem; }
+.labelcheck-tekst p { font-size: .95rem; color: var(--subtekst); line-height: 1.7; }
+.labelcheck-form { background: #fff; border-radius: var(--rl); padding: 2rem; box-shadow: var(--shadow); }
+.labelcheck-form h4 { font-size: .95rem; font-weight: 700; margin-bottom: .4rem; }
+.labelcheck-form p { font-size: .82rem; color: var(--subtekst); margin-bottom: 1.1rem; }
+.labelcheck-velden { display: grid; grid-template-columns: 2fr 1fr auto; gap: .5rem; align-items: end; }
+.labelcheck-velden label { font-size: .78rem; font-weight: 600; color: var(--subtekst); display: block; margin-bottom: .3rem; }
+.labelcheck-btn { padding: .72rem 1.2rem; background: var(--groen); color: #fff; border: none; border-radius: var(--r); font-size: .88rem; font-weight: 700; cursor: pointer; font-family: inherit; transition: background .2s; white-space: nowrap; height: 42px; }
+.labelcheck-btn:hover { background: var(--groen-mid); }
+.labelcheck-resultaat { margin-top: 1rem; border-radius: var(--r); padding: 1rem 1.1rem; display: none; }
+.labelcheck-resultaat.zichtbaar { display: block; }
+.resultaat-heeft { background: var(--groen-card); border: 1.5px solid var(--groen); }
+.resultaat-geen  { background: #fff8ee; border: 1.5px solid #f0a500; }
+.resultaat-heeft h5 { color: var(--groen); font-size: .9rem; font-weight: 700; margin-bottom: .3rem; }
+.resultaat-geen  h5 { color: #a06000; font-size: .9rem; font-weight: 700; margin-bottom: .3rem; }
+.resultaat-heeft p,
+.resultaat-geen  p  { font-size: .82rem; color: var(--subtekst); line-height: 1.5; margin-bottom: .7rem; }
+.resultaat-heeft a,
+.resultaat-geen  a  { font-size: .83rem; font-weight: 600; color: var(--groen); display: inline-flex; align-items: center; gap: 4px; }
+.labelcheck-loading { font-size: .83rem; color: var(--subtekst); margin-top: .8rem; display: none; }
+.labelcheck-loading.zichtbaar { display: block; }
+
+/* ══════════════════════════════════
+   WAT IS EEN ENERGIELABEL
+══════════════════════════════════ */
+.uitleg-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.uitleg-label-bar { display: flex; flex-direction: column; gap: .4rem; margin-top: 1.5rem; }
+.label-rij { display: flex; align-items: center; gap: .8rem; }
+.label-letter { width: 36px; height: 36px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: .95rem; color: #fff; flex-shrink: 0; }
+.label-aplus4 { background: #004d30; width: 62px; font-size: .72rem; }
+.label-aplus3 { background: #006638; width: 56px; font-size: .75rem; }
+.label-aplus2 { background: #008040; width: 52px; font-size: .78rem; }
+.label-aplus1 { background: #009948; width: 48px; font-size: .82rem; }
+.label-a  { background: #00a651; width: 44px; }
+.label-b  { background: #50b848; width: 40px; }
+.label-c  { background: #bed630; color: #333; width: 36px; }
+.label-d  { background: #fff101; color: #333; width: 32px; }
+.label-e  { background: #fcb814; width: 28px; }
+.label-f  { background: #f26522; width: 24px; }
+.label-g  { background: #ed1c24; width: 20px; }
+.label-desc { font-size: .82rem; color: var(--subtekst); }
+.uitleg-punten { display: flex; flex-direction: column; gap: 1.2rem; margin-top: 1.5rem; }
+.uitleg-punt { display: flex; gap: 1rem; }
+.uitleg-punt-icon { width: 44px; height: 44px; background: var(--groen-card); border-radius: var(--r); display: flex; align-items: center; justify-content: center; color: var(--groen); flex-shrink: 0; }
+.uitleg-punt h4 { font-size: .92rem; font-weight: 700; margin-bottom: .2rem; }
+.uitleg-punt p  { font-size: .85rem; color: var(--subtekst); line-height: 1.6; }
+
+/* ══════════════════════════════════
+   WETGEVING TABS
+══════════════════════════════════ */
+.wetgeving-tabs { display: flex; gap: .5rem; margin-bottom: 2rem; }
+.wetgeving-tab { padding: .6rem 1.4rem; border-radius: 100px; font-size: .88rem; font-weight: 600; cursor: pointer; border: 2px solid var(--rand); color: var(--subtekst); background: #fff; transition: all .2s; font-family: inherit; }
+.wetgeving-tab.active { background: var(--groen); color: #fff; border-color: var(--groen); }
+.wetgeving-tab:hover:not(.active) { border-color: var(--groen); color: var(--groen); }
+.wetgeving-tabs-mt { margin-top: 2rem; }
+.wetgeving-panel { display: none; }
+.wetgeving-panel.active { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.wet-card { background: #fff; border: 1.5px solid var(--rand); border-radius: var(--rl); padding: 1.6rem; }
+.wet-card-icon { width: 48px; height: 48px; background: var(--groen-card); border-radius: var(--r); display: flex; align-items: center; justify-content: center; color: var(--groen); margin-bottom: 1rem; }
+.wet-card h4 { font-size: .95rem; font-weight: 700; margin-bottom: .5rem; }
+.wet-card ul { list-style: none; display: flex; flex-direction: column; gap: .45rem; }
+.wet-card ul li { font-size: .85rem; color: var(--subtekst); display: flex; align-items: flex-start; gap: 8px; line-height: 1.5; }
+.wet-card ul li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--groen); flex-shrink: 0; margin-top: 7px; }
+.wet-card-highlight { border-color: var(--groen); background: var(--groen-card); }
+.wet-card-highlight h4 { color: var(--groen); }
+.boete-badge { display: inline-flex; background: #fef3cd; border: 1px solid #f0a500; color: #a06000; font-size: .75rem; font-weight: 700; padding: 3px 10px; border-radius: 100px; margin-top: .8rem; }
+.muur-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--groen); color: #fff; font-size: .78rem; font-weight: 700; padding: 5px 12px; border-radius: 100px; margin-top: .8rem; }
+
+/* ══════════════════════════════════
+   VOORDELEN
+══════════════════════════════════ */
+.voordelen-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2.5rem; }
+.voordeel-card { background: #fff; border: 1.5px solid var(--rand); border-radius: var(--rl); padding: 1.8rem; transition: border-color .2s, box-shadow .2s, transform .2s; }
+.voordeel-card:hover { border-color: var(--groen); box-shadow: var(--shadow); transform: translateY(-3px); }
+.voordeel-icon { width: 52px; height: 52px; background: var(--groen-card); border-radius: var(--r); display: flex; align-items: center; justify-content: center; color: var(--groen); margin-bottom: 1rem; }
+.voordeel-getal { font-family: var(--serif); font-size: 2rem; color: var(--groen); line-height: 1; margin-bottom: .3rem; }
+.voordeel-card h4 { font-size: .95rem; font-weight: 700; margin-bottom: .4rem; }
+.voordeel-card p  { font-size: .85rem; color: var(--subtekst); line-height: 1.6; }
+
+/* ══════════════════════════════════
+   SEGMENTKAARTEN (woning / utiliteit)
+══════════════════════════════════ */
+.segment-kaarten { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem; }
+.segment-kaart { border-radius: var(--rl); overflow: hidden; display: block; transition: transform .2s, box-shadow .2s; border: 1.5px solid var(--rand); }
+.segment-kaart:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--groen); }
+.segment-kaart-img { width: 100%; height: 200px; object-fit: cover; }
+.segment-kaart-body { padding: 1.6rem; background: var(--groen-card); }
+.segment-kaart-body h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: .4rem; }
+.segment-kaart-body p  { font-size: .88rem; color: var(--subtekst); line-height: 1.6; margin-bottom: 1rem; }
+.segment-kaart-prijzen { background: #fff; border-radius: var(--r); padding: .8rem 1rem; margin-bottom: 1rem; }
+.segment-prijs-rij { display: flex; justify-content: space-between; align-items: center; font-size: .82rem; padding: .25rem 0; border-bottom: 1px solid var(--rand); }
+.segment-prijs-rij:last-child { border-bottom: none; }
+.segment-prijs-rij .prijs-label { color: var(--subtekst); }
+.segment-prijs-rij .prijs-val { font-weight: 700; color: var(--groen); }
+.segment-kaart-link { display: inline-flex; align-items: center; gap: 6px; color: var(--groen); font-size: .88rem; font-weight: 700; }
+
+/* ══════════════════════════════════
+   AANVRAAGPROCES
+══════════════════════════════════ */
+.proces-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 2.5rem; position: relative; }
+.proces-grid::before { content: ''; position: absolute; top: 28px; left: calc(12.5% + 28px); right: calc(12.5% + 28px); height: 2px; background: var(--rand); z-index: 0; }
+.proces-stap { display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; z-index: 1; }
+.proces-num { width: 56px; height: 56px; border-radius: 50%; background: var(--groen); color: #fff; font-size: 1.1rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; flex-shrink: 0; }
+.proces-stap h4 { font-size: .92rem; font-weight: 700; margin-bottom: .3rem; }
+.proces-stap p  { font-size: .82rem; color: var(--subtekst); line-height: 1.5; }
+
+/* ══════════════════════════════════
+   SUBSIDIE SECTIE
+══════════════════════════════════ */
+.subsidie-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+.subsidie-kaarten { display: flex; flex-direction: column; gap: .8rem; margin-top: 1.2rem; }
+.subsidie-kaart { background: #fff; border: 1.5px solid var(--rand); border-radius: var(--r); padding: .9rem 1.1rem; display: flex; align-items: center; gap: .8rem; transition: border-color .2s; }
+.subsidie-kaart:hover { border-color: var(--groen); }
+.subsidie-dot { width: 10px; height: 10px; background: var(--groen); border-radius: 50%; flex-shrink: 0; }
+.subsidie-kaart span { font-size: .88rem; font-weight: 600; color: var(--tekst); }
+.subsidie-kaart small { font-size: .78rem; color: var(--subtekst); margin-left: auto; }
+.subsidie-cta-blok { background: var(--groen-card); border-radius: var(--rl); padding: 2rem; }
+.subsidie-cta-blok h4 { font-size: 1rem; font-weight: 700; margin-bottom: .5rem; }
+.subsidie-cta-blok p  { font-size: .88rem; color: var(--subtekst); line-height: 1.7; margin-bottom: 1.2rem; }
+
+/* ══════════════════════════════════
+   REGIO SECTIE
+══════════════════════════════════ */
+.regio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+.regio-tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.2rem; }
+.regio-tag  { background: #fff; border: 1.5px solid var(--rand); color: var(--subtekst); font-size: .82rem; font-weight: 500; padding: 5px 14px; border-radius: 100px; transition: border-color .2s, color .2s; }
+.regio-tag:hover { border-color: var(--groen); color: var(--groen); }
+.regio-tag.hoofd { background: var(--groen-card); border-color: var(--groen); color: var(--groen); font-weight: 700; }
+.regio-info { background: var(--groen-card); border-radius: var(--rl); padding: 2rem; }
+.regio-info h4 { font-size: 1rem; font-weight: 700; margin-bottom: .5rem; }
+.regio-info p  { font-size: .88rem; color: var(--subtekst); line-height: 1.7; margin-bottom: 1rem; }
+
+/* ══════════════════════════════════
+   USP BALK
+══════════════════════════════════ */
+.usp-balk { background: var(--groen-card); padding: 1.8rem 0; }
+.usp-grid  { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+.usp-item  { display: flex; align-items: flex-start; gap: 12px; }
+.usp-icon  { width: 36px; height: 36px; background: #fff; border-radius: var(--r); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--groen); }
+.usp-item strong { display: block; font-size: .88rem; font-weight: 700; }
+.usp-item span   { font-size: .78rem; color: var(--subtekst); }
+
+/* ══════════════════════════════════
+   CTA SECTIE
+══════════════════════════════════ */
+.cta-sec { background: var(--groen); padding: 80px 0; text-align: center; }
+.cta-sec h2 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3rem); color: #fff; margin-bottom: .8rem; letter-spacing: -.02em; }
+.cta-sec p  { color: rgba(255,255,255,.75); font-size: 1rem; margin-bottom: 2rem; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+.cta-btns  { display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+.cta-meta  { margin-top: 1.5rem; font-size: .78rem; color: rgba(255,255,255,.5); }
+.btn-wit { background: #fff; color: var(--groen); padding: .85rem 2rem; border-radius: 100px; font-size: .92rem; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; transition: transform .15s, box-shadow .15s; }
+.btn-wit:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
+.btn-wit-out { border: 2px solid rgba(255,255,255,.5); color: #fff; padding: .8rem 1.8rem; border-radius: 100px; font-size: .9rem; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; transition: border-color .2s, background .2s; }
+.btn-wit-out:hover { border-color: #fff; background: rgba(255,255,255,.1); }
+
+/* ══════════════════════════════════
+   FOOTER
+══════════════════════════════════ */
+.footer { background: #0a1a0f; color: rgba(255,255,255,.65); padding: 64px 0 0; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2.5rem; padding-bottom: 48px; }
+.footer-brand { font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 1rem; }
+.footer-desc  { font-size: .88rem; color: rgba(255,255,255,.55); line-height: 1.7; max-width: 280px; margin-bottom: 1.5rem; }
+.footer-social { display: flex; gap: .8rem; }
+.footer-social a { width: 36px; height: 36px; border-radius: var(--r); background: rgba(255,255,255,.08); display: flex; align-items: center; justify-content: center; transition: background .2s; color: rgba(255,255,255,.7); }
+.footer-social a:hover { background: rgba(255,255,255,.16); }
+.footer-col h4 { font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.4); margin-bottom: 1.2rem; }
+.footer-col a  { display: block; color: rgba(255,255,255,.65); font-size: .88rem; margin-bottom: .65rem; transition: color .2s; }
+.footer-col a:hover { color: #fff; }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,.08); padding: 1.2rem 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .5rem; }
+.footer-copy { font-size: .78rem; color: rgba(255,255,255,.4); }
+
+/* ══════════════════════════════════
+   RESPONSIVE — TABLET 900px
+══════════════════════════════════ */
+@media (max-width: 900px) {
+  .page-hero-inner    { grid-template-columns: 1fr; }
+  .uitleg-grid        { grid-template-columns: 1fr; }
+  .wetgeving-panel.active { grid-template-columns: 1fr; }
+  .voordelen-grid     { grid-template-columns: 1fr 1fr; }
+  .segment-kaarten    { grid-template-columns: 1fr 1fr; }
+  .proces-grid        { grid-template-columns: 1fr 1fr; }
+  .proces-grid::before { display: none; }
+  .subsidie-grid      { grid-template-columns: 1fr; }
+  .regio-grid         { grid-template-columns: 1fr; gap: 2rem; }
+  .labelcheck-inner   { grid-template-columns: 1fr; }
+  .usp-grid           { grid-template-columns: 1fr 1fr; }
+  .footer-grid        { grid-template-columns: 1fr 1fr; gap: 2rem; }
+}
+
+/* ══════════════════════════════════
+   RESPONSIVE — MOBIEL 768px
+══════════════════════════════════ */
+@media (max-width: 768px) {
+  .nav-toggle { display: flex; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 68px; left: 0; right: 0;
+    background: #fff;
+    border-bottom: 1px solid var(--rand);
+    flex-direction: column;
+    padding: .5rem 5%;
+    gap: 0;
+    box-shadow: 0 8px 24px rgba(0,0,0,.08);
+    z-index: 199;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links li { border-bottom: 1px solid var(--rand); }
+  .nav-links li:last-child { border-bottom: none; }
+  .nav-links a { padding: .85rem 0; font-size: .95rem; display: flex; align-items: center; min-height: 44px; }
+  .nav-cta { background: none !important; color: var(--groen) !important; border-radius: 0 !important; }
+  .dropdown { position: static; transform: none; box-shadow: none; border: none; border-radius: 0; padding: 0 0 .5rem 1rem; display: none; }
+  .dropdown::before { display: none; }
+  .has-dd:hover .dropdown { display: none; }
+  .has-dd.open .dropdown { display: block; }
+  .section { padding: 56px 0; }
+  .page-hero { padding: 48px 0 56px; }
+  .segment-kaarten    { grid-template-columns: 1fr; }
+  .voordelen-grid     { grid-template-columns: 1fr; }
+  .proces-grid        { grid-template-columns: 1fr; }
+  .labelcheck-velden  { grid-template-columns: 1fr; }
+  .labelcheck-btn     { width: 100%; }
+  .wetgeving-tabs     { flex-wrap: wrap; }
+  .cta-btns { flex-direction: column; align-items: center; }
+  .btn-wit, .btn-wit-out { width: 100%; max-width: 300px; text-align: center; justify-content: center; }
+}
+
+@media (max-width: 480px) {
+  .usp-grid    { grid-template-columns: 1fr 1fr; }
+  .form-row    { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .hero-tabs   { flex-wrap: wrap; }
+}
+</style>
+</head>
+<body>
+
+<!-- Segment bar -->
+<div class="seg-bar">
+  <a href="/zakelijk/">Zakelijk</a>
+  <a href="/particulieren/">Particulieren</a>
+</div>
+
+<!-- Nav -->
+<nav class="nav">
+  <a href="/" class="nav-logo">
+    <div class="nav-logo-mark">S</div>
+    <span class="nav-logo-text">STAP <span>Energie</span></span>
+  </a>
+  <ul class="nav-links" id="nav-links">
+    <li class="has-dd">
+      <a href="#diensten">Diensten
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="flex-shrink:0"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <div class="dropdown">
+        <a href="/energielabels/" class="dd-item actief">Energielabels</a>
+        <a href="/verduurzaming-subsidie/" class="dd-item">Verduurzaming &amp; Subsidie</a>
+        <a href="/energie-inkoop-advies/" class="dd-item">Energie inkoop advies</a>
+      </div>
+    </li>
+    <li class="has-dd">
+      <a href="#voor-wie">Voor wie
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="flex-shrink:0"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <div class="dropdown">
+        <a href="/zakelijk/" class="dd-item">Zakelijk</a>
+        <a href="/particulieren/" class="dd-item">Particulieren</a>
+        <a href="/mkb/" class="dd-item">MKB &amp; Bedrijven</a>
+        <a href="/vastgoed/" class="dd-item">Vastgoed</a>
+        <a href="/makelaars/" class="dd-item">Makelaars</a>
+        <a href="/kantoren/" class="dd-item">Kantoren</a>
+        <a href="/gemeenten-woningstichtingen/" class="dd-item">Gemeenten &amp; Woningstichtingen</a>
+        <a href="/industrie/" class="dd-item">Industrie</a>
+      </div>
+    </li>
+    <li><a href="/over-erik/">Over Erik</a></li>
+    <li><a href="/kennisbank/">Kennisbank</a></li>
+    <li><a href="#aanvraag" class="nav-cta">Aanvragen →</a></li>
+  </ul>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Menu openen">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+  <div class="container">
+    <div class="breadcrumb-inner">
+      <a href="/">Home</a>
+      <span class="sep">›</span>
+      <span class="current">Energielabels</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══ URGENTIE BALK ══ -->
+<div class="urgentie-balk">
+  <div class="container">
+    <div class="urgentie-inner">
+      <span class="urgentie-badge">Nieuw per 29 mei 2026</span>
+      <span class="urgentie-tekst"><strong>Nieuw labelontwerp (EPBD IV) &amp; uitgebreide labelplicht:</strong> monumenten niet langer uitgezonderd — alle publiek toegankelijke bedrijfspanden &gt;250m² moeten het label zichtbaar ophangen.</span>
+      <a href="#wetgeving" class="urgentie-link">Meer over de regelgeving →</a>
+    </div>
+  </div>
+</div>
+
+<!-- ══ PAGE HERO ══ -->
+<section class="page-hero" id="aanvraag">
+  <div class="container">
+    <div class="page-hero-inner">
+      <!-- Links: tekst -->
+      <div>
+        <span class="page-hero-label">Officieel &amp; erkend energielabel</span>
+        <h1 class="page-hero-title">Energielabel voor<br>uw <em>woning</em> of<br><em>bedrijfspand</em></h1>
+        <p class="page-hero-desc">Verplicht bij verkoop, verhuur en oplevering. STAP Energie verzorgt officiële energielabels op basis van de basismethodiek — snel, persoonlijk en geregistreerd in EP-online.</p>
+        <ul class="page-hero-checks">
+          <li>Officieel erkend &amp; geregistreerd in EP-online</li>
+          <li>Basismethodiek — bestaande bouw (woningen én utiliteit)</li>
+          <li>Label 10 jaar geldig na afgifte</li>
+          <li>Reactie binnen 24 uur — heel Nederland</li>
+        </ul>
+      </div>
+
+      <!-- Rechts: aanvraagformulier met tabs -->
+      <div class="hero-form-card">
+        <!-- Tabs: Particulier / Zakelijk -->
+        <div class="hero-tabs" role="tablist">
+          <button class="hero-tab active" role="tab" aria-selected="true" data-form="particulier" onclick="wisselFormulier('particulier')">🏠 Woning</button>
+          <button class="hero-tab" role="tab" aria-selected="false" data-form="zakelijk" onclick="wisselFormulier('zakelijk')">🏢 Bedrijfspand</button>
+        </div>
+
+        <!-- FORMULIER: PARTICULIER -->
+        <div id="form-particulier">
+          <h3>Aanvraag energielabel woning</h3>
+          <p>Vrijblijvend. Reactie binnen 24 uur.</p>
+          <form class="form-stack" id="form-p" onsubmit="submitFormulier(event,'form-p')">
+            <input type="hidden" name="source" id="source-p">
+            <div class="form-row">
+              <div>
+                <label for="p-voornaam" class="sr-only">Voornaam</label>
+                <input class="form-input" type="text" id="p-voornaam" name="voornaam" placeholder="Voornaam" required>
+              </div>
+              <div>
+                <label for="p-achternaam" class="sr-only">Achternaam</label>
+                <input class="form-input" type="text" id="p-achternaam" name="achternaam" placeholder="Achternaam">
+              </div>
+            </div>
+            <label for="p-email" class="sr-only">E-mailadres</label>
+            <input class="form-input" type="email" id="p-email" name="email" placeholder="E-mailadres" required>
+            <label for="p-telefoon" class="sr-only">Telefoonnummer</label>
+            <input class="form-input" type="tel" id="p-telefoon" name="telefoon" placeholder="Telefoonnummer">
+            <div class="form-row">
+              <div>
+                <label for="p-postcode" class="sr-only">Postcode</label>
+                <input class="form-input" type="text" id="p-postcode" name="postcode" placeholder="Postcode" required>
+              </div>
+              <div>
+                <label for="p-huisnummer" class="sr-only">Huisnummer</label>
+                <input class="form-input" type="text" id="p-huisnummer" name="huisnummer" placeholder="Huisnummer" required>
+              </div>
+            </div>
+            <label for="p-woningtype" class="sr-only">Type woning</label>
+            <select class="form-select" id="p-woningtype" name="woningtype" required onchange="updatePrijs()">
+              <option value="" disabled selected>Type woning</option>
+              <option value="appartement-klein">Appartement tot 40 m²</option>
+              <option value="appartement-groot">Appartement 40–100 m²</option>
+              <option value="eengezins-tussen">Eengezinswoning (tussen woningen)</option>
+              <option value="eengezins-hoek">Hoekwoning / 2-onder-1-kap</option>
+              <option value="vrijstaand-klein">Vrijstaande woning tot 150 m²</option>
+              <option value="vrijstaand-groot">Vrijstaande woning groter dan 150 m²</option>
+            </select>
+            <div class="prijs-indicator" id="prijs-indicator"></div>
+            <label for="p-datum" class="sr-only">Gewenste periode</label>
+            <input class="form-input" type="text" id="p-datum" name="datum" placeholder="Gewenste periode (bijv. 'week 16' of 'zo snel mogelijk')">
+            <div class="spoed-row">
+              <input type="checkbox" id="p-spoed" name="spoed" onchange="toggleSpoed('p')">
+              <div>
+                <label for="p-spoed" style="font-weight:600;font-size:.85rem;cursor:pointer;">Spoedaanvraag</label>
+                <span class="spoed-note">Heeft u haast? Spoedafhandeling is mogelijk tegen een spoedtarief. We nemen hierover contact met u op.</span>
+              </div>
+            </div>
+            <label for="p-bericht" class="sr-only">Opmerking (optioneel)</label>
+            <textarea class="form-input" id="p-bericht" name="bericht" placeholder="Opmerking (optioneel)" rows="2" style="resize:vertical"></textarea>
+            <label class="form-check">
+              <input type="checkbox" required>
+              Ik ga akkoord met de <a href="/privacyverklaring/">privacyverklaring</a>.
+            </label>
+            <button type="submit" class="form-submit">Aanvraag versturen →</button>
+            <p class="form-note">Vrijblijvend · Geen verplichtingen · Binnen 24 uur reactie</p>
+          </form>
+        </div>
+
+        <!-- FORMULIER: ZAKELIJK -->
+        <div id="form-zakelijk" class="form-hidden">
+          <h3>Aanvraag energielabel bedrijfspand</h3>
+          <p>Vrijblijvend. Reactie binnen 24 uur.</p>
+          <form class="form-stack" id="form-z" onsubmit="submitFormulier(event,'form-z')">
+            <input type="hidden" name="source" id="source-z">
+            <div class="form-row">
+              <div>
+                <label for="z-naam" class="sr-only">Contactpersoon</label>
+                <input class="form-input" type="text" id="z-naam" name="naam" placeholder="Naam contactpersoon" required>
+              </div>
+              <div>
+                <label for="z-bedrijf" class="sr-only">Bedrijfsnaam</label>
+                <input class="form-input" type="text" id="z-bedrijf" name="bedrijf" placeholder="Bedrijfsnaam" required>
+              </div>
+            </div>
+            <label for="z-email" class="sr-only">E-mailadres</label>
+            <input class="form-input" type="email" id="z-email" name="email" placeholder="E-mailadres" required>
+            <label for="z-telefoon" class="sr-only">Telefoonnummer</label>
+            <input class="form-input" type="tel" id="z-telefoon" name="telefoon" placeholder="Telefoonnummer">
+            <div class="form-row">
+              <div>
+                <label for="z-postcode" class="sr-only">Postcode pand</label>
+                <input class="form-input" type="text" id="z-postcode" name="postcode" placeholder="Postcode pand" required>
+              </div>
+              <div>
+                <label for="z-huisnummer" class="sr-only">Huisnummer</label>
+                <input class="form-input" type="text" id="z-huisnummer" name="huisnummer" placeholder="Huisnummer" required>
+              </div>
+            </div>
+            <label for="z-pandtype" class="sr-only">Type pand</label>
+            <select class="form-select" id="z-pandtype" name="pandtype" required>
+              <option value="" disabled selected>Type pand (verplicht)</option>
+              <option>Kantoor</option>
+              <option>Winkel / Retail</option>
+              <option>Horeca</option>
+              <option>Bedrijfshal / Loods</option>
+              <option>Zorginstelling</option>
+              <option>Onderwijs</option>
+              <option>Sport / Recreatie</option>
+              <option>Anders</option>
+            </select>
+            <label for="z-oppervlakte" class="sr-only">Oppervlakte in m²</label>
+            <input class="form-input" type="number" id="z-oppervlakte" name="oppervlakte" placeholder="Oppervlakte in m² (verplicht)" required min="1">
+            <label for="z-datum" class="sr-only">Gewenste periode</label>
+            <input class="form-input" type="text" id="z-datum" name="datum" placeholder="Gewenste periode (bijv. 'week 16' of 'zo snel mogelijk')">
+            <div class="spoed-row">
+              <input type="checkbox" id="z-spoed" name="spoed" onchange="toggleSpoed('z')">
+              <div>
+                <label for="z-spoed" style="font-weight:600;font-size:.85rem;cursor:pointer;">Spoedaanvraag</label>
+                <span class="spoed-note">Heeft u haast? Spoedafhandeling is mogelijk tegen een spoedtarief. We nemen hierover contact met u op.</span>
+              </div>
+            </div>
+            <label for="z-bericht" class="sr-only">Opmerking (optioneel)</label>
+            <textarea class="form-input" id="z-bericht" name="bericht" placeholder="Opmerking (optioneel)" rows="2" style="resize:vertical"></textarea>
+            <label class="form-check">
+              <input type="checkbox" required>
+              Ik ga akkoord met de <a href="/privacyverklaring/">privacyverklaring</a>.
+            </label>
+            <button type="submit" class="form-submit">Aanvraag versturen →</button>
+            <p class="form-note">Vrijblijvend · Geen verplichtingen · Binnen 24 uur reactie</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- USP balk -->
+<div class="usp-balk">
+  <div class="container">
+    <div class="usp-grid">
+      <div class="usp-item">
+        <div class="usp-icon">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 1l2 4h4l-3 3 1 4-4-2-4 2 1-4-3-3h4z" fill="currentColor"/></svg>
+        </div>
+        <div><strong>Officieel erkend</strong><span>Geregistreerd in EP-online</span></div>
+      </div>
+      <div class="usp-item">
+        <div class="usp-icon">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M9 5v4l3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <div><strong>10 jaar geldig</strong><span>Na afgifte direct bruikbaar</span></div>
+      </div>
+      <div class="usp-item">
+        <div class="usp-icon">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M6 9l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div><strong>Basismethodiek</strong><span>Bestaande bouw — woning &amp; utiliteit</span></div>
+      </div>
+      <div class="usp-item">
+        <div class="usp-icon">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2L2 7v9h5v-5h4v5h5V7L9 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </div>
+        <div><strong>Aan huis &amp; op locatie</strong><span>Leusden, Amersfoort &amp; omgeving</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ LABELCHECK ══ -->
+<section class="labelcheck-sectie" id="labelcheck">
+  <div class="container">
+    <div class="labelcheck-inner">
+      <div class="labelcheck-tekst">
+        <span class="sec-label">Snelle check</span>
+        <h2>Heeft uw pand al een energielabel?</h2>
+        <p>Voer uw postcode en huisnummer in. We zoeken direct op in het nationale EP-online register of er al een geldig energielabel geregistreerd staat — en wat dat betekent voor uw situatie.</p>
+      </div>
+      <div class="labelcheck-form">
+        <h4>Directe labelcheck</h4>
+        <p>Gratis opzoeken in EP-online — geen account nodig.</p>
+        <div class="labelcheck-velden">
+          <div>
+            <label for="check-postcode">Postcode</label>
+            <input class="form-input" type="text" id="check-postcode" placeholder="1234 AB" maxlength="7">
+          </div>
+          <div>
+            <label for="check-huisnummer">Huisnummer</label>
+            <input class="form-input" type="text" id="check-huisnummer" placeholder="12">
+          </div>
+          <button class="labelcheck-btn" onclick="voerLabelcheckUit()">Zoek op →</button>
+        </div>
+        <div class="labelcheck-loading" id="check-loading">Opzoeken in EP-online…</div>
+        <div class="labelcheck-resultaat" id="check-resultaat"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SEGMENTKAARTEN: Woning / Utiliteit ══ -->
+<section class="section" id="keuze">
+  <div class="container">
+    <span class="sec-label">Kies uw situatie</span>
+    <h2 class="sec-title">Energielabel voor woningen of bedrijfspanden</h2>
+    <p class="sec-sub">We verzorgen energielabels voor zowel particulieren als zakelijke opdrachtgevers. Kies uw situatie voor specifieke informatie en prijzen.</p>
+    <div class="segment-kaarten">
+      <!-- Woning -->
+      <a href="/energielabels/woningen/" class="segment-kaart">
+        <img src="/images/woning-eengezins.jpg" alt="Energielabel woning" class="segment-kaart-img" loading="lazy">
+        <div class="segment-kaart-body">
+          <h3>🏠 Energielabel woning</h3>
+          <p>Voor appartementen, eengezinswoningen en vrijstaande woningen. Vaste prijzen per woningtype en oppervlakte.</p>
+          <div class="segment-kaart-prijzen">
+            <div class="segment-prijs-rij"><span class="prijs-label">Appartement tot 40m²</span><span class="prijs-val">€ 195</span></div>
+            <div class="segment-prijs-rij"><span class="prijs-label">Appartement 40–100m²</span><span class="prijs-val">€ 249</span></div>
+            <div class="segment-prijs-rij"><span class="prijs-label">Eengezinswoning</span><span class="prijs-val">v.a. € 295</span></div>
+            <div class="segment-prijs-rij"><span class="prijs-label">Vrijstaand tot 150m²</span><span class="prijs-val">€ 345</span></div>
+          </div>
+          <span class="segment-kaart-link">Bekijk alle woningprijzen →</span>
+        </div>
+      </a>
+      <!-- Utiliteit -->
+      <a href="/energielabels/utiliteit/" class="segment-kaart">
+        <img src="/images/hero.jpg" alt="Energielabel bedrijfspand" class="segment-kaart-img" loading="lazy">
+        <div class="segment-kaart-body">
+          <h3>🏢 Energielabel bedrijfspand</h3>
+          <p>Voor kantoren, winkels, zorginstellingen en andere utiliteitsbouw. Prijzen op maat — neem contact op voor een offerte.</p>
+          <div class="segment-kaart-prijzen">
+            <div class="segment-prijs-rij"><span class="prijs-label">Klein bedrijfspand</span><span class="prijs-val">Offerte op maat</span></div>
+            <div class="segment-prijs-rij"><span class="prijs-label">Middel (100–250m²)</span><span class="prijs-val">Offerte op maat</span></div>
+            <div class="segment-prijs-rij"><span class="prijs-label">Groot (&gt;250m²)</span><span class="prijs-val">Offerte op maat</span></div>
+            <div class="segment-prijs-rij"><span class="prijs-label">Ingelijst certificaat</span><span class="prijs-val">€ 25</span></div>
+          </div>
+          <span class="segment-kaart-link">Meer over utiliteit &amp; aanvragen →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ AANVRAAGPROCES ══ -->
+<section class="section sec-grijs" id="werkwijze">
+  <div class="container">
+    <span class="sec-label">Werkwijze</span>
+    <h2 class="sec-title">Zo werkt het aanvragen</h2>
+    <p class="sec-sub">In vier stappen van aanvraag naar officieel energielabel — transparant, snel en zonder gedoe.</p>
+    <div class="proces-grid">
+      <div class="proces-stap">
+        <div class="proces-num">1</div>
+        <h4>Gegevens achterlaten</h4>
+        <p>Vul het aanvraagformulier in of bel direct. Binnen 24 uur nemen we contact met u op voor een afspraak.</p>
+      </div>
+      <div class="proces-stap">
+        <div class="proces-num">2</div>
+        <h4>Documenten opsturen</h4>
+        <p>Na uw aanvraag ontvangt u een overzicht van benodigde documenten. Die stuurt u eenvoudig digitaal toe.</p>
+      </div>
+      <div class="proces-stap">
+        <div class="proces-num">3</div>
+        <h4>Inspectie op locatie</h4>
+        <p>STAP Energie komt langs voor een grondige inspectie van uw woning of bedrijfspand. Persoonlijk en professioneel.</p>
+      </div>
+      <div class="proces-stap">
+        <div class="proces-num">4</div>
+        <h4>Label binnen één week</h4>
+        <p>Na de inspectie ontvangt u het officiële energielabel digitaal — geregistreerd in EP-online en direct bruikbaar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WAT IS EEN ENERGIELABEL ══ -->
+<section class="section" id="wat-is-een-energielabel">
+  <div class="container">
+    <div class="uitleg-grid">
+      <div>
+        <span class="sec-label">Uitleg</span>
+        <h2 class="sec-title">Wat is een energielabel?</h2>
+        <p class="sec-sub">Een energielabel toont hoe energiezuinig een gebouw is, op een schaal van A (zeer zuinig) tot G (energieslurper). Het label maakt woningen en gebouwen vergelijkbaar.</p>
+        <div class="uitleg-punten">
+          <div class="uitleg-punt">
+            <div class="uitleg-punt-icon">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="3" y="3" width="16" height="16" rx="3" stroke="currentColor" stroke-width="1.5"/><path d="M7 11h8M7 7h5M7 15h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <h4>Basismethodiek — bestaande bouw</h4>
+              <p>STAP Energie werkt uitsluitend met de basismethodiek voor bestaande woningen en utiliteitsgebouwen. Geen nieuwbouwmethoden — gericht op de bestaande gebouwenvoorraad.</p>
+            </div>
+          </div>
+          <div class="uitleg-punt">
+            <div class="uitleg-punt-icon">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M11 7v4l3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <h4>10 jaar geldig</h4>
+              <p>Na afgifte is het energielabel tien jaar geldig. Registratie vindt officieel plaats in het landelijke EP-online register.</p>
+            </div>
+          </div>
+          <div class="uitleg-punt">
+            <div class="uitleg-punt-icon">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 3L3 8v11h6v-5h4v5h6V8L11 3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <h4>Objectieve vergelijking</h4>
+              <p>Het label vergelijkt de energieprestatie van uw woning of bedrijfspand met andere gebouwen. Een eerlijk en erkend meetinstrument.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p style="font-size:.85rem;color:var(--subtekst);margin-bottom:.8rem;font-weight:600;">Label — van zuinig naar energieslurper</p>
+        <div class="uitleg-label-bar">
+          <div class="label-rij"><div class="label-letter label-aplus4">A++++</div><span class="label-desc">Nul-op-de-meter woning — levert meer energie op dan verbruikt</span></div>
+          <div class="label-rij"><div class="label-letter label-aplus3">A+++</div><span class="label-desc">Zeer energiezuinig — bijna energieneutraal</span></div>
+          <div class="label-rij"><div class="label-letter label-aplus2">A++</div><span class="label-desc">Zeer energiezuinig — uitstekende isolatie en installaties</span></div>
+          <div class="label-rij"><div class="label-letter label-aplus1">A+</div><span class="label-desc">Zeer energiezuinig — ruim boven huidige nieuwbouweis</span></div>
+          <div class="label-rij"><div class="label-letter label-a">A</div><span class="label-desc">Energiezuinig — goede prestatie, hogere woningwaarde</span></div>
+          <div class="label-rij"><div class="label-letter label-b">B</div><span class="label-desc">Goed — moderne isolatiestandaard</span></div>
+          <div class="label-rij"><div class="label-letter label-c">C</div><span class="label-desc">Redelijk — minimumeis kantoren &gt;100m²</span></div>
+          <div class="label-rij"><div class="label-letter label-d">D</div><span class="label-desc">Matig — minimum huurwoningen vóór 2029</span></div>
+          <div class="label-rij"><div class="label-letter label-e">E</div><span class="label-desc">Onvoldoende — verduurzaming aanbevolen</span></div>
+          <div class="label-rij"><div class="label-letter label-f">F</div><span class="label-desc">Slecht — huurwoningen moeten verbeteren vóór 2029</span></div>
+          <div class="label-rij"><div class="label-letter label-g">G</div><span class="label-desc">Zeer slecht — hoogste energiekosten</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WETGEVING ══ -->
+<section class="section sec-grijs" id="wetgeving">
+  <div class="container">
+    <span class="sec-label">Regelgeving</span>
+    <h2 class="sec-title">Wanneer bent u verplicht?</h2>
+    <p class="sec-sub">Het energielabel is wettelijk verplicht in diverse situaties. De regels gelden voor zowel woningeigenaren als zakelijke gebouweigenaren.</p>
+
+    <div class="wetgeving-tabs wetgeving-tabs-mt" role="tablist">
+      <button class="wetgeving-tab active" onclick="wisselWetgeving('particulier')" role="tab">🏠 Particulier / Woningen</button>
+      <button class="wetgeving-tab" onclick="wisselWetgeving('zakelijk')" role="tab">🏢 Zakelijk / Utiliteit</button>
+    </div>
+
+    <!-- Particulier panel -->
+    <div class="wetgeving-panel active" id="wet-particulier">
+      <div class="wet-card">
+        <div class="wet-card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h4>Verplicht bij</h4>
+        <ul>
+          <li>Verkoop van de woning</li>
+          <li>Verhuur van de woning</li>
+          <li>Oplevering van een nieuw gebouw</li>
+          <li>Overdracht aan nieuwe eigenaar</li>
+        </ul>
+        <span class="boete-badge">⚠️ Boete bij ontbreken: tot € 435</span>
+      </div>
+      <div class="wet-card">
+        <div class="wet-card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 22V12h6v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h4>WWS-koppeling huurprijs</h4>
+        <ul>
+          <li>Het energielabel telt mee in het woningwaarderingstelsel (WWS)</li>
+          <li>Een beter label = hogere maximale huurprijs</li>
+          <li>Verhuurders met label E, F of G mogen vóór 2029 maximaal label D verhuren</li>
+          <li>Relevant voor alle verhuurders van huurwoningen</li>
+        </ul>
+      </div>
+      <div class="wet-card wet-card-highlight">
+        <div class="wet-card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </div>
+        <h4>Nieuw per 29 mei 2026 (EPBD IV)</h4>
+        <ul>
+          <li>Nieuw labelontwerp — labels afgegeven vóór die datum blijven gewoon geldig</li>
+          <li>Monumenten zijn niet langer uitgezonderd van de labelplicht</li>
+          <li>Meer gebouwtypes krijgen een labelplicht</li>
+        </ul>
+      </div>
+      <div class="wet-card">
+        <div class="wet-card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M12 8v4l3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h4>Hypotheekvoordeel bij beter label</h4>
+        <ul>
+          <li>Grootbanken geven hypotheekkorting bij label A of B</li>
+          <li>Groene hypotheek kan tot 0,3% rentevoordeel opleveren</li>
+          <li>Gunstigere leencapaciteit bij energiezuinige woning</li>
+          <li>Vraag uw hypotheekadviseur naar de actuele mogelijkheden</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Zakelijk panel -->
+    <div class="wetgeving-panel" id="wet-zakelijk">
+      <div class="wet-card">
+        <div class="wet-card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="2" y="7" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h4>Kantoren &gt;100m² — label C verplicht</h4>
+        <ul>
+          <li>Verplicht minimaal label C sinds 1 januari 2023</li>
+          <li>Geldt voor alle kantoorgebouwen groter dan 100m²</li>
+          <li>Bij ontbreken risico op sluiting door gemeente</li>
+          <li>Labelplicht geldt ook voor gehuurde kantoorruimte</li>
+        </ul>
+        <span class="boete-badge">⚠️ Boete kan oplopen tot duizenden euro's</span>
+      </div>
+      <div class="wet-card">
+        <div class="wet-card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </div>
+        <h4>Verplicht bij verkoop, verhuur &amp; oplevering</h4>
+        <ul>
+          <li>Elk bedrijfspand dat wordt verkocht of verhuurd</li>
+          <li>Bij oplevering van nieuw of gerenoveerd pand</li>
+          <li>Geldt voor alle soorten utiliteitsbouw</li>
+          <li>Makelaar of notaris controleert aanwezigheid</li>
+        </ul>
+      </div>
+      <div class="wet-card wet-card-highlight">
+        <div class="wet-card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 22v-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h4>Label aan de muur — per 29 mei 2026</h4>
+        <ul>
+          <li>Alle publiek toegankelijke bedrijfspanden &gt;250m² met een geldig label moeten dit zichtbaar ophangen</li>
+          <li>Verplicht bij ingang of receptie</li>
+          <li>STAP Energie levert een ingelijst certificaat voor € 25</li>
+          <li>Handig als u al een label heeft — direct compliant</li>
+        </ul>
+        <span class="muur-badge">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Ingelijst certificaat — € 25
+        </span>
+      </div>
+      <div class="wet-card">
+        <div class="wet-card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </div>
+        <h4>Nieuw per 29 mei 2026 (EPBD IV)</h4>
+        <ul>
+          <li>Nieuw labelontwerp — bestaande labels blijven geldig</li>
+          <li>Monumenten niet langer uitgezonderd van labelplicht</li>
+          <li>Zichtbaar ophangen verplicht voor alle utiliteitsbouw met geldig label</li>
+          <li>Tijdig aanvragen voorkomt verplichte situaties</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ VOORDELEN ══ -->
+<section class="section" id="voordelen">
+  <div class="container">
+    <span class="sec-label">Waarom een energielabel?</span>
+    <h2 class="sec-title">De voordelen van een goed label</h2>
+    <p class="sec-sub">Een energielabel is meer dan een verplichting — het is een instrument dat direct invloed heeft op waarde, kosten en kansen.</p>
+    <div class="voordelen-grid">
+      <div class="voordeel-card">
+        <div class="voordeel-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="voordeel-getal">2–5%</div>
+        <h4>Hogere woningwaarde</h4>
+        <p>Woningen met een goed energielabel zijn gemiddeld 2 tot 5% meer waard dan vergelijkbare woningen met een slechter label. En ze worden sneller verkocht.</p>
+      </div>
+      <div class="voordeel-card">
+        <div class="voordeel-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2z" stroke="currentColor" stroke-width="1.5"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <div class="voordeel-getal">€ 1.500</div>
+        <h4>Lagere energiekosten per jaar</h4>
+        <p>Een beter energielabel betekent een betere energieprestatie. Dat vertaalt zich direct in lagere stookkosten — tot wel € 1.500 per jaar minder.</p>
+      </div>
+      <div class="voordeel-card">
+        <div class="voordeel-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4m5 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="voordeel-getal">✓</div>
+        <h4>Sneller verkocht</h4>
+        <p>Woningen met een zichtbaar goed energielabel worden aantoonbaar sneller verkocht. Kopers en huurders letten steeds vaker op energieprestatie.</p>
+      </div>
+      <div class="voordeel-card">
+        <div class="voordeel-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" stroke="currentColor" stroke-width="1.5"/><path d="M9 22V12h6v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <div class="voordeel-getal">0,3%</div>
+        <h4>Hypotheekkorting</h4>
+        <p>Veel grootbanken bieden rentekortingen aan bij een groen energielabel (A of B). Dit kan oplopen tot 0,3% rentekorting op uw hypotheek.</p>
+      </div>
+      <div class="voordeel-card">
+        <div class="voordeel-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="2" y="7" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+        <div class="voordeel-getal">WWS</div>
+        <h4>Hogere maximale huurprijs</h4>
+        <p>Verhuurders profiteren direct: een beter energielabel verhoogt het puntentotaal in het woningwaarderingstelsel, wat een hogere maximale huurprijs mogelijk maakt.</p>
+      </div>
+      <div class="voordeel-card">
+        <div class="voordeel-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="voordeel-getal">+</div>
+        <h4>Persoonlijk verduurzamingsadvies</h4>
+        <p>STAP Energie adviseert u — naast het label — ook over gerichte verduurzamingsmaatregelen. Zo weet u direct welke stappen het meeste opleveren voor uw situatie.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SUBSIDIE & VERDUURZAMING ══ -->
+<section class="section sec-grijs" id="subsidies">
+  <div class="container">
+    <div class="subsidie-grid">
+      <div>
+        <span class="sec-label">Verduurzaming &amp; subsidie</span>
+        <h2 class="sec-title">Wilt u ook een beter label?</h2>
+        <p class="sec-sub">Een energielabel geeft inzicht — maar de echte winst zit in de vervolgstap. STAP Energie adviseert u ook over gerichte verduurzamingsmaatregelen én beschikbare subsidies.</p>
+        <div class="subsidie-kaarten">
+          <div class="subsidie-kaart">
+            <div class="subsidie-dot"></div>
+            <span>ISDE-subsidie — isolatie, warmtepomp, zonneboiler</span>
+            <small>Particulier</small>
+          </div>
+          <div class="subsidie-kaart">
+            <div class="subsidie-dot"></div>
+            <span>SEEH — spouwmuur-, vloer- en dakisolatie</span>
+            <small>Particulier</small>
+          </div>
+          <div class="subsidie-kaart">
+            <div class="subsidie-dot"></div>
+            <span>Gemeentelijke verduurzamingsregelingen</span>
+            <small>Particulier &amp; Zakelijk</small>
+          </div>
+          <div class="subsidie-kaart">
+            <div class="subsidie-dot"></div>
+            <span>EIA — Energie Investeringsaftrek</span>
+            <small>Zakelijk</small>
+          </div>
+          <div class="subsidie-kaart">
+            <div class="subsidie-dot"></div>
+            <span>SDE++ — stimulering duurzame energie</span>
+            <small>Zakelijk</small>
+          </div>
+        </div>
+        <p style="font-size:.83rem;color:var(--subtekst);margin-top:1rem;">Meer informatie over subsidies volgt binnenkort in onze kennisbank. <a href="/verduurzaming-subsidie/" style="color:var(--groen);font-weight:600;">Bekijk alvast onze verduurzamingspagina →</a></p>
+      </div>
+      <div class="subsidie-cta-blok">
+        <h4>Persoonlijk verduurzamingsadvies</h4>
+        <p>Na de labelinspectie adviseert STAP Energie u over welke maatregelen het meeste opleveren voor uw specifieke situatie. Of u nu wilt besparen, comfortabeler wilt wonen of uw label wilt verbeteren — we denken graag mee.</p>
+        <p style="font-size:.85rem;color:var(--subtekst);margin-top:.8rem;margin-bottom:1.2rem;">Goed om te weten: bij een beter energielabel geven grootbanken vaak ook hypotheekkorting. Vraag uw adviseur naar de actuele groene hypotheekmogelijkheden.</p>
+        <a href="#aanvraag" class="btn-groen">Aanvraag indienen →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ REGIO — alleen B2C ══ -->
+<section class="section" id="werkgebied">
+  <div class="container">
+    <div class="regio-grid">
+      <div>
+        <span class="sec-label">Werkgebied</span>
+        <h2 class="sec-title">Actief in uw regio</h2>
+        <p class="sec-sub">STAP Energie is actief door heel Nederland, maar heeft een focus op de regio rondom Leusden. Snel ter plaatse en vertrouwd met de lokale woningmarkt.</p>
+        <div class="regio-tags">
+          <span class="regio-tag hoofd">Leusden</span>
+          <span class="regio-tag hoofd">Amersfoort</span>
+          <span class="regio-tag hoofd">Woudenberg</span>
+          <span class="regio-tag hoofd">Achterveld</span>
+          <span class="regio-tag">Utrecht</span>
+          <span class="regio-tag">Soest</span>
+          <span class="regio-tag">Baarn</span>
+          <span class="regio-tag">Nijkerk</span>
+          <span class="regio-tag">Zeist</span>
+          <span class="regio-tag">Bunschoten</span>
+          <span class="regio-tag">De Bilt</span>
+          <span class="regio-tag">Heel Nederland</span>
+        </div>
+      </div>
+      <div class="regio-info">
+        <h4>Buiten de regio?</h4>
+        <p>STAP Energie werkt door heel Nederland. Buiten de directe regio kan een kleine reisvergoeding van toepassing zijn. Vraag gerust naar de mogelijkheden — we denken graag met u mee.</p>
+        <a href="#aanvraag" class="btn-groen">Aanvragen →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA ══ -->
+<section class="cta-sec">
+  <div class="container">
+    <h2>Klaar voor uw energielabel?</h2>
+    <p>Vrijblijvende aanvraag — geen verplichtingen, wel direct duidelijkheid. Reactie binnen 24 uur.</p>
+    <div class="cta-btns">
+      <a href="#aanvraag" class="btn-wit">Aanvraag indienen →</a>
+      <a href="tel:0600000000" class="btn-wit-out">Direct bellen</a>
+    </div>
+    <p class="cta-meta">info@stapenergie.nl &nbsp;·&nbsp; Leusden &amp; heel Nederland &nbsp;·&nbsp; KvK: in aanvraag</p>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">STAP Energie</div>
+        <p class="footer-desc">Het leuk maken om duurzame impact te maken. Voor woningeigenaren en ondernemers die willen omschakelen naar een duurzaam en eerlijker systeem.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/edolman/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Diensten</h4>
+        <a href="/energielabels/">Energielabels</a>
+        <a href="/energielabels/woningen/">Energielabel woning</a>
+        <a href="/energielabels/utiliteit/">Energielabel utiliteit</a>
+        <a href="/verduurzaming-subsidie/">Verduurzaming &amp; Subsidie</a>
+        <a href="/energie-inkoop-advies/">Energie inkoop advies</a>
+      </div>
+      <div class="footer-col">
+        <h4>Voor wie</h4>
+        <a href="/zakelijk/">Zakelijk</a>
+        <a href="/particulieren/">Particulieren</a>
+        <a href="/mkb/">MKB &amp; Bedrijven</a>
+        <a href="/vastgoed/">Vastgoed</a>
+        <a href="/makelaars/">Makelaars</a>
+        <a href="/kantoren/">Kantoren</a>
+        <a href="/gemeenten-woningstichtingen/">Gemeenten &amp; Woningstichtingen</a>
+        <a href="/industrie/">Industrie</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:0600000000">06 – XX XX XX XX</a>
+        <a href="mailto:info@stapenergie.nl">info@stapenergie.nl</a>
+        <a href="/over-erik/">Over Erik</a>
+        <a href="/privacyverklaring/">Privacy &amp; AVG</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 STAP Energie — KvK: in aanvraag</span>
+      <span class="footer-copy">Leusden · Amersfoort · Heel Nederland</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── HAMBURGER ──
+var toggle   = document.getElementById('nav-toggle');
+var navLinks = document.getElementById('nav-links');
+
+if (toggle && navLinks) {
+  toggle.addEventListener('click', function() {
+    var isOpen = navLinks.classList.contains('open');
+    toggle.classList.toggle('open');
+    navLinks.classList.toggle('open');
+    toggle.setAttribute('aria-label', isOpen ? 'Menu openen' : 'Menu sluiten');
+  });
+}
+
+document.addEventListener('click', function(e) {
+  if (navLinks && toggle && !navLinks.contains(e.target) && !toggle.contains(e.target)) {
+    navLinks.classList.remove('open');
+    toggle.classList.remove('open');
+    toggle.setAttribute('aria-label', 'Menu openen');
+  }
+});
+
+// ── DROPDOWN MOBIEL ──
+document.querySelectorAll('.has-dd > a').forEach(function(link) {
+  link.addEventListener('click', function(e) {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      var parent = link.parentElement;
+      document.querySelectorAll('.has-dd.open').forEach(function(el) {
+        if (el !== parent) el.classList.remove('open');
+      });
+      parent.classList.toggle('open');
+    }
+  });
+});
+
+// ── FORMULIER TABS (Woning / Bedrijfspand) ──
+function wisselFormulier(type) {
+  var pForm = document.getElementById('form-particulier');
+  var zForm = document.getElementById('form-zakelijk');
+  var tabs  = document.querySelectorAll('.hero-tab');
+
+  if (type === 'particulier') {
+    pForm.classList.remove('form-hidden');
+    zForm.classList.add('form-hidden');
+  } else {
+    zForm.classList.remove('form-hidden');
+    pForm.classList.add('form-hidden');
+  }
+
+  tabs.forEach(function(t) {
+    t.classList.toggle('active', t.dataset.form === type);
+    t.setAttribute('aria-selected', t.dataset.form === type ? 'true' : 'false');
+  });
+}
+
+// ── WETGEVING TABS ──
+function wisselWetgeving(type) {
+  var panelP = document.getElementById('wet-particulier');
+  var panelZ = document.getElementById('wet-zakelijk');
+  var tabs   = document.querySelectorAll('.wetgeving-tab');
+
+  panelP.classList.toggle('active', type === 'particulier');
+  panelZ.classList.toggle('active', type === 'zakelijk');
+
+  tabs.forEach(function(t, i) {
+    t.classList.toggle('active', (i === 0 && type === 'particulier') || (i === 1 && type === 'zakelijk'));
+  });
+}
+
+// ── PRIJS INDICATOR ──
+var prijzen = {
+  'appartement-klein':  '€ 195',
+  'appartement-groot':  '€ 249',
+  'eengezins-tussen':   '€ 295',
+  'eengezins-hoek':     '€ 325',
+  'vrijstaand-klein':   '€ 345',
+  'vrijstaand-groot':   'Offerte op maat'
+};
+
+function updatePrijs() {
+  var select = document.getElementById('p-woningtype');
+  var indicator = document.getElementById('prijs-indicator');
+  var val = select ? select.value : '';
+  if (val && prijzen[val]) {
+    indicator.textContent = '✓ Prijs voor dit woningtype: ' + prijzen[val];
+    indicator.classList.add('zichtbaar');
+  } else {
+    indicator.classList.remove('zichtbaar');
+  }
+}
+
+// ── SPOED TOGGLE ──
+function toggleSpoed(prefix) {
+  var checkbox = document.getElementById(prefix + '-spoed');
+  // Spoed-note is al zichtbaar via CSS — checkbox hoeft alleen waarde te communiceren
+}
+
+// ── MARKETING SOURCE ──
+(function() {
+  function getParam(name) {
+    var url = new URLSearchParams(window.location.search);
+    return url.get(name) || '';
+  }
+  var utm = [
+    getParam('utm_source'),
+    getParam('utm_medium'),
+    getParam('utm_campaign')
+  ].filter(Boolean).join(' / ') || document.referrer || 'direct';
+
+  var sp = document.getElementById('source-p');
+  var sz = document.getElementById('source-z');
+  if (sp) sp.value = utm;
+  if (sz) sz.value = utm;
+})();
+
+// ── FORMULIER SUBMIT ──
+function submitFormulier(e, formId) {
+  e.preventDefault();
+  var form = document.getElementById(formId);
+  var postcode = '';
+  var huisnummer = '';
+
+  // Haal postcode + huisnummer op voor cookie
+  if (formId === 'form-p') {
+    postcode    = document.getElementById('p-postcode') ? document.getElementById('p-postcode').value : '';
+    huisnummer  = document.getElementById('p-huisnummer') ? document.getElementById('p-huisnummer').value : '';
+  } else {
+    postcode    = document.getElementById('z-postcode') ? document.getElementById('z-postcode').value : '';
+    huisnummer  = document.getElementById('z-huisnummer') ? document.getElementById('z-huisnummer').value : '';
+  }
+
+  // Sla op in first-party cookie (30 dagen)
+  if (postcode) {
+    var exp = new Date();
+    exp.setDate(exp.getDate() + 30);
+    document.cookie = 'stap_lead_postcode=' + encodeURIComponent(postcode.trim()) + '; expires=' + exp.toUTCString() + '; path=/; SameSite=Lax';
+    document.cookie = 'stap_lead_hnr='     + encodeURIComponent(huisnummer.trim()) + '; expires=' + exp.toUTCString() + '; path=/; SameSite=Lax';
+  }
+
+  // Succes feedback — vervang het juiste formulier-wrapper
+  var wrapper = formId === 'form-p' ? document.getElementById('form-particulier') : document.getElementById('form-zakelijk');
+  wrapper.innerHTML =
+    '<div class="form-success">' +
+    '<svg width="52" height="52" viewBox="0 0 52 52" fill="none" style="margin:0 auto 1rem">' +
+    '<circle cx="26" cy="26" r="25" stroke="#1a5c32" stroke-width="2"/>' +
+    '<path d="M15 26l8 8 14-14" stroke="#1a5c32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>' +
+    '</svg>' +
+    '<div class="form-success-title">Aanvraag ontvangen!</div>' +
+    '<div class="form-success-sub">We reageren binnen 24 uur. Tot snel!</div>' +
+    '</div>';
+}
+
+// ── LABELCHECK ──
+function voerLabelcheckUit() {
+  var postcode    = document.getElementById('check-postcode').value.trim().replace(/\s/g,'');
+  var huisnummer  = document.getElementById('check-huisnummer').value.trim();
+  var resultaat   = document.getElementById('check-resultaat');
+  var loading     = document.getElementById('check-loading');
+
+  if (!postcode || !huisnummer) {
+    resultaat.className = 'labelcheck-resultaat resultaat-geen zichtbaar';
+    resultaat.innerHTML = '<h5>Vul postcode en huisnummer in</h5><p>Beide velden zijn verplicht voor de check.</p>';
+    return;
+  }
+
+  // Sla postcode op in cookie (leaddata)
+  var exp = new Date();
+  exp.setDate(exp.getDate() + 30);
+  document.cookie = 'stap_check_postcode=' + encodeURIComponent(postcode) + '; expires=' + exp.toUTCString() + '; path=/; SameSite=Lax';
+  document.cookie = 'stap_check_hnr='      + encodeURIComponent(huisnummer) + '; expires=' + exp.toUTCString() + '; path=/; SameSite=Lax';
+
+  resultaat.className = 'labelcheck-resultaat';
+  loading.classList.add('zichtbaar');
+
+  // API-aanroep naar PHP-proxy (EP Online)
+  fetch('/api/labelcheck.php?postcode=' + encodeURIComponent(postcode) + '&huisnummer=' + encodeURIComponent(huisnummer))
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      loading.classList.remove('zichtbaar');
+      if (data.heeft_label) {
+        resultaat.className = 'labelcheck-resultaat resultaat-heeft zichtbaar';
+        resultaat.innerHTML =
+          '<h5>✓ Er is een geldig energielabel gevonden</h5>' +
+          '<p>Label: <strong>' + (data.label || 'onbekend') + '</strong> — geldig tot ' + (data.geldig_tot || 'onbekend') + '. ' +
+          'Wilt u weten hoe u dit label kunt verbeteren of meer besparen?</p>' +
+          '<a href="/verduurzaming-subsidie/">Bekijk verduurzamingsmogelijkheden →</a>';
+      } else {
+        resultaat.className = 'labelcheck-resultaat resultaat-geen zichtbaar';
+        resultaat.innerHTML =
+          '<h5>⚠ Geen geldig definitief label gevonden</h5>' +
+          '<p>Voor dit adres staat nog geen definitief energielabel geregistreerd in EP-online. Bij verkoop, verhuur of oplevering is dit verplicht.</p>' +
+          '<a href="#aanvraag">Energielabel aanvragen →</a>';
+      }
+    })
+    .catch(function() {
+      loading.classList.remove('zichtbaar');
+      resultaat.className = 'labelcheck-resultaat resultaat-geen zichtbaar';
+      resultaat.innerHTML =
+        '<h5>Check tijdelijk niet beschikbaar</h5>' +
+        '<p>De directe check is momenteel niet bereikbaar. U kunt ook zelf zoeken via <a href="https://www.ep-online.nl" target="_blank" rel="noopener">ep-online.nl</a> of direct een aanvraag indienen.</p>' +
+        '<a href="#aanvraag">Aanvraag indienen →</a>';
+    });
+}
+
+// Enter-toets in labelcheck velden
+document.getElementById('check-postcode').addEventListener('keydown', function(e) { if (e.key === 'Enter') voerLabelcheckUit(); });
+document.getElementById('check-huisnummer').addEventListener('keydown', function(e) { if (e.key === 'Enter') voerLabelcheckUit(); });
+</script>
+</body>
+</html>
