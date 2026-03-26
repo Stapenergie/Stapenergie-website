@@ -37,7 +37,7 @@
 
 <style>
 /* ══════════════════════════════════
-   RESET & TOKENS — identiek aan homepage
+   RESET & TOKENS
 ══════════════════════════════════ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; overflow-x: hidden; }
@@ -107,12 +107,13 @@ a    { text-decoration: none; }
 .nav-toggle.open span:nth-child(2) { opacity: 0; }
 .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* Dropdown */
+/* Dropdown — FIX: hover vervangen door JS open class + bridge */
 .has-dd { position: relative; }
 .has-dd > a { display: flex; align-items: center; gap: 4px; }
 .dropdown { display: none; position: absolute; top: calc(100% + 12px); left: 50%; transform: translateX(-50%); background: #fff; border: 1px solid var(--rand); border-radius: var(--rl); box-shadow: var(--shadow-lg); min-width: 260px; padding: .5rem; z-index: 300; }
 .dropdown::before { content: ''; position: absolute; top: -6px; left: 50%; transform: translateX(-50%) rotate(45deg); width: 12px; height: 12px; background: #fff; border-left: 1px solid var(--rand); border-top: 1px solid var(--rand); }
-.has-dd:hover .dropdown { display: block; }
+.dropdown::after { content: ''; position: absolute; top: -16px; left: 0; right: 0; height: 16px; }
+.has-dd.open .dropdown { display: block; }
 .dd-item { display: flex; align-items: center; padding: .65rem 1rem; border-radius: var(--r); font-size: .88rem; font-weight: 500; color: var(--subtekst); transition: color .15s, background .15s; min-height: 44px; }
 .dd-item:hover { color: var(--groen); background: var(--groen-licht); }
 .dd-item-dim { opacity: .6; }
@@ -315,7 +316,7 @@ a    { text-decoration: none; }
   .nav-cta { background: none !important; color: var(--groen) !important; border-radius: 0 !important; }
   .dropdown { position: static; transform: none; box-shadow: none; border: none; border-radius: 0; padding: 0 0 .5rem 1rem; display: none; }
   .dropdown::before { display: none; }
-  .has-dd:hover .dropdown { display: none; }
+  .dropdown::after { display: none; }
   .has-dd.open .dropdown { display: block; }
   .section { padding: 56px 0; }
   .page-hero { padding: 48px 0 56px; }
@@ -505,8 +506,6 @@ a    { text-decoration: none; }
     <h2 class="sec-title">Energielabel voor elke woning</h2>
     <p class="sec-sub">De opnametijd en prijs hangen af van het type en de oppervlakte van uw woning. Kies uw situatie en vraag direct aan.</p>
     <div class="woning-grid">
-
-      <!-- Appartement -->
       <div class="woning-card">
         <div class="woning-card-img-wrap">
           <img src="/images/woning-appartement.jpg" alt="Bewoners bij appartement" class="woning-card-img" loading="lazy">
@@ -515,20 +514,12 @@ a    { text-decoration: none; }
           <h3>Appartement</h3>
           <p class="woning-sub">Snel en officieel geregistreerd. Vaste prijs, geen verrassingen.</p>
           <div class="woning-prijzen">
-            <div class="prijs-rij">
-              <span class="prijs-label">Tot 40 m²</span>
-              <span class="prijs-val">€ 195</span>
-            </div>
-            <div class="prijs-rij">
-              <span class="prijs-label">40 – 100 m²</span>
-              <span class="prijs-val">€ 249</span>
-            </div>
+            <div class="prijs-rij"><span class="prijs-label">Tot 40 m²</span><span class="prijs-val">€ 195</span></div>
+            <div class="prijs-rij"><span class="prijs-label">40 – 100 m²</span><span class="prijs-val">€ 249</span></div>
           </div>
           <a href="#aanvraag" class="woning-cta">Aanvragen →</a>
         </div>
       </div>
-
-      <!-- Eengezinswoning -->
       <div class="woning-card">
         <div class="woning-card-img-wrap">
           <img src="/images/woning-eengezins.jpg" alt="Gezin bij rijtjeswoning" class="woning-card-img" loading="lazy">
@@ -538,20 +529,12 @@ a    { text-decoration: none; }
           <h3>Eengezinswoning</h3>
           <p class="woning-sub">Rijtjeswoning of twee-onder-een-kap. Vaste prijs op woningtype.</p>
           <div class="woning-prijzen">
-            <div class="prijs-rij">
-              <span class="prijs-label">Tussen woningen</span>
-              <span class="prijs-val">€ 295</span>
-            </div>
-            <div class="prijs-rij">
-              <span class="prijs-label">Hoekwoning / 2-onder-1-kap</span>
-              <span class="prijs-val">€ 325</span>
-            </div>
+            <div class="prijs-rij"><span class="prijs-label">Tussen woningen</span><span class="prijs-val">€ 295</span></div>
+            <div class="prijs-rij"><span class="prijs-label">Hoekwoning / 2-onder-1-kap</span><span class="prijs-val">€ 325</span></div>
           </div>
           <a href="#aanvraag" class="woning-cta">Aanvragen →</a>
         </div>
       </div>
-
-      <!-- Vrijstaande woning -->
       <div class="woning-card">
         <div class="woning-card-img-wrap">
           <img src="/images/woning-vrijstaand.jpg" alt="Familie bij vrijstaande woning" class="woning-card-img" loading="lazy">
@@ -560,20 +543,13 @@ a    { text-decoration: none; }
           <h3>Vrijstaande woning</h3>
           <p class="woning-sub">Ruime woning of villa. Tot 150 m² vaste prijs, daarboven offerte op maat.</p>
           <div class="woning-prijzen">
-            <div class="prijs-rij">
-              <span class="prijs-label">Tot 150 m²</span>
-              <span class="prijs-val">€ 345</span>
-            </div>
-            <div class="prijs-rij">
-              <span class="prijs-label">Groter dan 150 m²</span>
-              <span class="prijs-val">Offerte op maat</span>
-            </div>
+            <div class="prijs-rij"><span class="prijs-label">Tot 150 m²</span><span class="prijs-val">€ 345</span></div>
+            <div class="prijs-rij"><span class="prijs-label">Groter dan 150 m²</span><span class="prijs-val">Offerte op maat</span></div>
           </div>
           <a href="#aanvraag" class="woning-cta">Offerte aanvragen →</a>
         </div>
       </div>
-
-        </div>
+    </div>
   </div>
 </section>
 
@@ -584,7 +560,6 @@ a    { text-decoration: none; }
     <h2 class="sec-title">Alle diensten voor woningeigenaren</h2>
     <p class="sec-sub">Van verplicht energielabel tot een volledig verduurzamingsplan — en binnenkort ook een handige energievergelijker.</p>
     <div class="diensten-grid">
-
       <a href="/energielabels/woningen/" class="dienst-card">
         <div class="dienst-card-body">
           <div class="dienst-card-icon">
@@ -595,7 +570,6 @@ a    { text-decoration: none; }
           <span class="dienst-link">Meer info en aanvragen →</span>
         </div>
       </a>
-
       <a href="/verduurzaming-subsidie/particulieren/" class="dienst-card">
         <div class="dienst-card-body">
           <div class="dienst-card-icon">
@@ -606,7 +580,6 @@ a    { text-decoration: none; }
           <span class="dienst-link">Meer info →</span>
         </div>
       </a>
-
       <div class="dienst-card binnenkort">
         <div class="dienst-card-body">
           <div class="dienst-card-icon">
@@ -617,7 +590,6 @@ a    { text-decoration: none; }
           <span class="binnenkort-badge">Binnenkort beschikbaar</span>
         </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -637,7 +609,7 @@ a    { text-decoration: none; }
       <div class="proces-stap">
         <div class="proces-num">2</div>
         <h4>Opname aan huis</h4>
-        <p>Erik komt op afspraak langs voor een grondige woningopname. Gemiddeld 45–90 minuten.</p>
+        <p>STAP Energie komt op afspraak langs voor een grondige woningopname. Gemiddeld 45–90 minuten.</p>
       </div>
       <div class="proces-stap">
         <div class="proces-num">3</div>
@@ -691,17 +663,11 @@ a    { text-decoration: none; }
     <span class="sec-label">Verder verduurzamen</span>
     <h2 class="sec-title">Wat komt er na uw energielabel?</h2>
     <p class="sec-sub">Een energielabel geeft inzicht — maar de echte winst zit in de vervolgstap. STAP Energie helpt u begrijpen welke maatregelen het meeste opleveren voor uw situatie.</p>
-
     <div class="kennis-grid" style="margin-top:2.5rem">
-
-      <!-- Populaire vervolgstappen -->
       <p class="kennis-groep-label">Populaire vervolgstappen na een energielabel</p>
       <div class="kennis-cards">
-
         <div class="kennis-card">
-          <div class="kennis-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg>
-          </div>
+          <div class="kennis-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg></div>
           <div class="kennis-body">
             <span class="kennis-tag">Verwarming</span>
             <h4>Warmtepomp</h4>
@@ -709,11 +675,8 @@ a    { text-decoration: none; }
             <a href="/kennisbank/warmtepomp/" class="kennis-link">Meer lezen →</a>
           </div>
         </div>
-
         <div class="kennis-card">
-          <div class="kennis-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M3 9h18M9 21V9" stroke="currentColor" stroke-width="1.5"/></svg>
-          </div>
+          <div class="kennis-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M3 9h18M9 21V9" stroke="currentColor" stroke-width="1.5"/></svg></div>
           <div class="kennis-body">
             <span class="kennis-tag">Isolatie</span>
             <h4>Isolatie</h4>
@@ -721,11 +684,8 @@ a    { text-decoration: none; }
             <a href="/kennisbank/isolatie/" class="kennis-link">Meer lezen →</a>
           </div>
         </div>
-
         <div class="kennis-card">
-          <div class="kennis-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3v1M18.4 5.6l-.7.7M21 12h-1M18.4 18.4l-.7-.7M12 21v-1M5.6 18.4l.7-.7M3 12h1M5.6 5.6l.7.7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/></svg>
-          </div>
+          <div class="kennis-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3v1M18.4 5.6l-.7.7M21 12h-1M18.4 18.4l-.7-.7M12 21v-1M5.6 18.4l.7-.7M3 12h1M5.6 5.6l.7.7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/></svg></div>
           <div class="kennis-body">
             <span class="kennis-tag">Opwekking</span>
             <h4>Zonnepanelen</h4>
@@ -733,11 +693,8 @@ a    { text-decoration: none; }
             <a href="/kennisbank/zonnepanelen/" class="kennis-link">Meer lezen →</a>
           </div>
         </div>
-
         <div class="kennis-card">
-          <div class="kennis-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10z" stroke="currentColor" stroke-width="1.5"/><path d="M12 8v4l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </div>
+          <div class="kennis-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10z" stroke="currentColor" stroke-width="1.5"/><path d="M12 8v4l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
           <div class="kennis-body">
             <span class="kennis-tag">Verwarming</span>
             <h4>HR-ketel vervangen</h4>
@@ -745,17 +702,11 @@ a    { text-decoration: none; }
             <a href="/kennisbank/cv-ketel/" class="kennis-link">Meer lezen →</a>
           </div>
         </div>
-
       </div>
-
-      <!-- Slimmer wonen -->
       <p class="kennis-groep-label kennis-groep-label-mt">Slimmer wonen — de volgende stap</p>
       <div class="kennis-cards">
-
         <div class="kennis-card">
-          <div class="kennis-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="2" y="7" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2M12 12v3M10 14h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </div>
+          <div class="kennis-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="2" y="7" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2M12 12v3M10 14h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
           <div class="kennis-body">
             <span class="kennis-tag">Opslag</span>
             <h4>Thuisbatterij</h4>
@@ -763,11 +714,8 @@ a    { text-decoration: none; }
             <a href="/kennisbank/thuisbatterij/" class="kennis-link">Meer lezen →</a>
           </div>
         </div>
-
         <div class="kennis-card">
-          <div class="kennis-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h11a2 2 0 012 2v3" stroke="currentColor" stroke-width="1.5"/><rect x="9" y="11" width="14" height="10" rx="1" stroke="currentColor" stroke-width="1.5"/><path d="M13 16h2M16 13v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </div>
+          <div class="kennis-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h11a2 2 0 012 2v3" stroke="currentColor" stroke-width="1.5"/><rect x="9" y="11" width="14" height="10" rx="1" stroke="currentColor" stroke-width="1.5"/><path d="M13 16h2M16 13v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
           <div class="kennis-body">
             <span class="kennis-tag">Mobiliteit</span>
             <h4>Laadpaal thuis</h4>
@@ -775,11 +723,8 @@ a    { text-decoration: none; }
             <a href="/kennisbank/laadpaal/" class="kennis-link">Meer lezen →</a>
           </div>
         </div>
-
         <div class="kennis-card">
-          <div class="kennis-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" stroke="currentColor" stroke-width="1.5"/></svg>
-          </div>
+          <div class="kennis-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" stroke="currentColor" stroke-width="1.5"/></svg></div>
           <div class="kennis-body">
             <span class="kennis-tag">Klimaat</span>
             <h4>Airco / warmte-koud</h4>
@@ -787,11 +732,8 @@ a    { text-decoration: none; }
             <a href="/kennisbank/airco/" class="kennis-link">Meer lezen →</a>
           </div>
         </div>
-
         <div class="kennis-card">
-          <div class="kennis-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </div>
+          <div class="kennis-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
           <div class="kennis-body">
             <span class="kennis-tag">Slim beheer</span>
             <h4>Energiemanagementsysteem</h4>
@@ -799,7 +741,6 @@ a    { text-decoration: none; }
             <a href="/kennisbank/ems/" class="kennis-link">Meer lezen →</a>
           </div>
         </div>
-
       </div>
     </div>
   </div>
@@ -877,26 +818,50 @@ if (toggle && navLinks) {
   });
 }
 
+// Sluit menu en dropdowns bij klik buiten nav
 document.addEventListener('click', function(e) {
   if (navLinks && toggle && !navLinks.contains(e.target) && !toggle.contains(e.target)) {
     navLinks.classList.remove('open');
     toggle.classList.remove('open');
     toggle.setAttribute('aria-label', 'Menu openen');
+    document.querySelectorAll('.has-dd.open').forEach(function(el) { el.classList.remove('open'); });
   }
 });
 
-// ── DROPDOWN MOBIEL ──
-document.querySelectorAll('.has-dd > a').forEach(function(link) {
-  link.addEventListener('click', function(e) {
-    if (window.innerWidth <= 768) {
-      e.preventDefault();
-      var parent = link.parentElement;
-      document.querySelectorAll('.has-dd.open').forEach(function(el) {
-        if (el !== parent) el.classList.remove('open');
-      });
-      parent.classList.toggle('open');
-    }
+// ── DROPDOWN — desktop hover met delay, mobiel via klik ──
+var dropdownTimers = {};
+
+document.querySelectorAll('.has-dd').forEach(function(item, idx) {
+  var link     = item.querySelector(':scope > a');
+  var dropdown = item.querySelector('.dropdown');
+  if (!dropdown) return;
+
+  item.addEventListener('mouseenter', function() {
+    if (window.innerWidth <= 768) return;
+    clearTimeout(dropdownTimers[idx]);
+    document.querySelectorAll('.has-dd.open').forEach(function(el) {
+      if (el !== item) el.classList.remove('open');
+    });
+    item.classList.add('open');
   });
+
+  item.addEventListener('mouseleave', function() {
+    if (window.innerWidth <= 768) return;
+    dropdownTimers[idx] = setTimeout(function() {
+      item.classList.remove('open');
+    }, 120);
+  });
+
+  if (link) {
+    link.addEventListener('click', function(e) {
+      if (window.innerWidth > 768) return;
+      e.preventDefault();
+      document.querySelectorAll('.has-dd.open').forEach(function(el) {
+        if (el !== item) el.classList.remove('open');
+      });
+      item.classList.toggle('open');
+    });
+  }
 });
 
 // ── FORMULIER ──
