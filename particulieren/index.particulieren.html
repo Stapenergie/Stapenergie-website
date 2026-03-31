@@ -1,362 +1,281 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Energielabel & Verduurzaming voor Particulieren | STAP Energie</title>
-<meta name="description" content="Energielabel voor uw woning aanvragen in Leusden, Amersfoort, Woudenberg, Achterveld en omgeving. Snel, officieel en persoonlijk. Appartement, eengezinswoning of vrijstaande woning — STAP Energie regelt het.">
-<link rel="canonical" href="https://stapenergie.nl/particulieren/">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Energielabel & Verduurzaming voor Particulieren | STAP Energie</title>
+  <meta name="description" content="Energielabel voor uw woning aanvragen in Leusden, Amersfoort, Woudenberg, Achterveld en omgeving. Snel, officieel en persoonlijk. Appartement, eengezinswoning of vrijstaande woning — STAP Energie regelt het.">
+  <link rel="canonical" href="https://stapenergie.nl/particulieren/">
+  <meta property="og:title" content="Energielabel & Verduurzaming voor Particulieren | STAP Energie">
+  <meta property="og:description" content="Officieel energielabel voor uw woning. Persoonlijk advies, snel geregeld, heel Nederland.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://stapenergie.nl/particulieren/">
 
-<!-- Structured data: LocalBusiness + Service -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Energielabel particulieren",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "STAP Energie",
-    "url": "https://stapenergie.nl",
-    "telephone": "06-XX XX XX XX",
-    "email": "info@stapenergie.nl",
-    "areaServed": [
-      {"@type": "City", "name": "Leusden"},
-      {"@type": "City", "name": "Amersfoort"},
-      {"@type": "City", "name": "Woudenberg"},
-      {"@type": "City", "name": "Achterveld"},
-      {"@type": "City", "name": "Utrecht"}
-    ]
-  },
-  "serviceType": "Energielabel woning",
-  "description": "Officieel energielabel voor woningen, erkend en geregistreerd in EP-online."
-}
-</script>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%231a5c32'/><text x='16' y='23' font-family='Arial Black,sans-serif' font-size='20' font-weight='900' text-anchor='middle' fill='white'>S</text></svg>">
 
-<style>
-/* ══════════════════════════════════
-   RESET & TOKENS
-══════════════════════════════════ */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; overflow-x: hidden; }
-body { font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.6; color: #1a1a1a; background: #fff; overflow-x: hidden; }
-img  { max-width: 100%; height: auto; display: block; }
-a    { text-decoration: none; }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
 
-:root {
-  --groen:       #1a5c32;
-  --groen-mid:   #237a43;
-  --groen-licht: #f0f7f2;
-  --groen-card:  #e8f5ed;
-  --groen-acc:   #2ea855;
-  --tekst:       #1a1a1a;
-  --subtekst:    #4a5568;
-  --rand:        #e2e8e0;
-  --lichtgrijs:  #f7f8f5;
-  --wit:         #ffffff;
-  --serif:       'DM Serif Display', serif;
-  --r:           8px;
-  --rl:          14px;
-  --shadow:      0 2px 12px rgba(0,0,0,.08);
-  --shadow-lg:   0 8px 32px rgba(0,0,0,.12);
-}
+  <style>
+    /* ── RESET & TOKENS ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body { font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.6; color: #1a1a1a; background: #fff; overflow-x: hidden; }
+    img  { max-width: 100%; height: auto; display: block; }
+    a    { text-decoration: none; }
 
-/* ══════════════════════════════════
-   UTILITY
-══════════════════════════════════ */
-.container  { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
-.section    { padding: 80px 0; scroll-margin-top: 80px; }
-.sec-grijs  { background: var(--lichtgrijs); }
-.sec-groen  { background: var(--groen-card); }
-.sec-label  { display: block; font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--groen); margin-bottom: .7rem; }
-.sec-label::before { content: '— '; }
-.sec-title  { font-family: var(--serif); font-size: clamp(1.8rem, 3.5vw, 2.6rem); line-height: 1.15; letter-spacing: -.02em; }
-.sec-sub    { font-size: 1rem; color: var(--subtekst); margin-top: .7rem; max-width: 560px; line-height: 1.7; }
-.btn-groen  { display: inline-flex; align-items: center; gap: 8px; background: var(--groen); color: #fff; padding: .85rem 2rem; border-radius: 100px; font-size: .92rem; font-weight: 700; transition: background .2s, transform .15s; }
-.btn-groen:hover { background: var(--groen-mid); transform: translateY(-2px); }
-.btn-out    { display: inline-flex; align-items: center; gap: 8px; border: 1.5px solid var(--groen); color: var(--groen); padding: .8rem 1.8rem; border-radius: 100px; font-size: .92rem; font-weight: 600; transition: background .2s, color .2s; }
-.btn-out:hover { background: var(--groen); color: #fff; }
-.sr-only    { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    :root {
+      --groen:       #1a5c32;
+      --groen-mid:   #237a43;
+      --groen-licht: #f0f7f2;
+      --groen-card:  #e8f5ed;
+      --groen-acc:   #2ea855;
+      --tekst:       #1a1a1a;
+      --subtekst:    #4a5568;
+      --rand:        #e2e8e0;
+      --lichtgrijs:  #f7f8f5;
+      --wit:         #ffffff;
+      --serif:       'DM Serif Display', serif;
+      --r:           8px;
+      --rl:          14px;
+      --shadow:      0 2px 12px rgba(0,0,0,.08);
+      --shadow-lg:   0 8px 32px rgba(0,0,0,.12);
+    }
 
-/* ══════════════════════════════════
-   SEGMENT BAR
-══════════════════════════════════ */
-.seg-bar { background: var(--lichtgrijs); border-bottom: 1px solid var(--rand); display: flex; align-items: center; height: 40px; overflow-x: auto; overflow-y: hidden; white-space: nowrap; scrollbar-width: none; -webkit-overflow-scrolling: touch; padding: 0 5%; }
-.seg-bar::-webkit-scrollbar { display: none; }
-.seg-bar a { display: inline-flex; align-items: center; height: 100%; padding: 0 1rem; font-size: .82rem; font-weight: 500; color: var(--subtekst); border-bottom: 2px solid transparent; transition: color .2s, border-color .2s; white-space: nowrap; flex-shrink: 0; }
-.seg-bar a:hover, .seg-bar a.active { color: var(--groen); border-bottom-color: var(--groen); }
+    /* ── UTILITY ── */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
+    .section    { padding: 80px 0; scroll-margin-top: 80px; }
+    .sec-grijs  { background: var(--lichtgrijs); }
+    .sec-groen  { background: var(--groen-card); }
+    .sec-label  { display: block; font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--groen); margin-bottom: .7rem; }
+    .sec-label::before { content: '— '; }
+    .sec-title  { font-family: var(--serif); font-size: clamp(1.8rem, 3.5vw, 2.6rem); line-height: 1.15; letter-spacing: -.02em; margin-bottom: 1rem; }
+    .sec-sub    { font-size: .95rem; color: var(--subtekst); max-width: 560px; line-height: 1.7; }
+    .sr-only    { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
-/* ══════════════════════════════════
-   NAV
-══════════════════════════════════ */
-.nav { position: sticky; top: 0; z-index: 200; background: #fff; border-bottom: 1px solid var(--rand); height: 68px; display: flex; align-items: center; justify-content: space-between; padding: 0 5%; }
-.nav-logo { display: flex; align-items: center; gap: 10px; color: var(--tekst); }
-.nav-logo-mark { width: 36px; height: 36px; background: var(--groen); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.1rem; font-weight: 700; flex-shrink: 0; }
-.nav-logo-text { font-size: 1.2rem; font-weight: 700; letter-spacing: -.01em; }
-.nav-logo-text span { color: var(--groen); }
-.nav-links { display: flex; align-items: center; gap: 1.8rem; list-style: none; }
-.nav-links a { font-size: .9rem; font-weight: 500; color: var(--subtekst); transition: color .2s; }
-.nav-links a:hover, .nav-links a.actief { color: var(--groen); }
-.nav-cta { background: var(--groen) !important; color: #fff !important; padding: .55rem 1.4rem; border-radius: 100px; font-size: .88rem !important; font-weight: 700 !important; }
-.nav-cta:hover { background: var(--groen-mid) !important; }
-.nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
-.nav-toggle span { display: block; width: 24px; height: 2px; background: var(--tekst); border-radius: 2px; transition: transform .3s, opacity .3s; }
-.nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.nav-toggle.open span:nth-child(2) { opacity: 0; }
-.nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    /* ── KNOPPEN ── */
+    .btn-groen { display: inline-flex; align-items: center; gap: 8px; background: var(--groen); color: #fff; padding: .85rem 2rem; border-radius: 100px; font-size: .92rem; font-weight: 700; transition: background .2s, transform .15s; }
+    .btn-groen:hover { background: var(--groen-mid); transform: translateY(-2px); }
+    .btn-outline { display: inline-flex; align-items: center; gap: 8px; border: 2px solid rgba(255,255,255,.4); color: #fff; padding: .8rem 1.8rem; border-radius: 100px; font-size: .92rem; font-weight: 600; transition: border-color .2s, background .2s; }
+    .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,.08); }
 
-/* Dropdown — FIX: hover vervangen door JS open class + bridge */
-.has-dd { position: relative; }
-.has-dd > a { display: flex; align-items: center; gap: 4px; }
-.dropdown { display: none; position: absolute; top: calc(100% + 12px); left: 50%; transform: translateX(-50%); background: #fff; border: 1px solid var(--rand); border-radius: var(--rl); box-shadow: var(--shadow-lg); min-width: 260px; padding: .5rem; z-index: 300; }
-.dropdown::before { content: ''; position: absolute; top: -6px; left: 50%; transform: translateX(-50%) rotate(45deg); width: 12px; height: 12px; background: #fff; border-left: 1px solid var(--rand); border-top: 1px solid var(--rand); }
-.dropdown::after { content: ''; position: absolute; top: -16px; left: 0; right: 0; height: 16px; }
-.has-dd.open .dropdown { display: block; }
-.dd-item { display: flex; align-items: center; padding: .65rem 1rem; border-radius: var(--r); font-size: .88rem; font-weight: 500; color: var(--subtekst); transition: color .15s, background .15s; min-height: 44px; }
-.dd-item:hover { color: var(--groen); background: var(--groen-licht); }
-.dd-item-dim { opacity: .6; }
-.dd-binnenkort { font-size: .75rem; color: var(--subtekst); }
+    /* ── SEGMENT-BALK ── */
+    .seg-bar { background: var(--lichtgrijs); border-bottom: 1px solid var(--rand); display: flex; align-items: center; height: 40px; overflow-x: auto; overflow-y: hidden; white-space: nowrap; scrollbar-width: none; padding: 0 5%; }
+    .seg-bar::-webkit-scrollbar { display: none; }
+    .seg-bar a { display: inline-flex; align-items: center; height: 100%; padding: 0 1rem; font-size: .82rem; font-weight: 500; color: var(--subtekst); border-bottom: 2px solid transparent; transition: color .2s, border-color .2s; white-space: nowrap; flex-shrink: 0; }
+    .seg-bar a:hover, .seg-bar a.active { color: var(--groen); border-bottom-color: var(--groen); }
 
-/* ══════════════════════════════════
-   BREADCRUMB
-══════════════════════════════════ */
-.breadcrumb { background: var(--lichtgrijs); border-bottom: 1px solid var(--rand); padding: .6rem 0; }
-.breadcrumb-inner { display: flex; align-items: center; gap: .5rem; font-size: .8rem; color: var(--subtekst); }
-.breadcrumb-inner a { color: var(--subtekst); transition: color .2s; }
-.breadcrumb-inner a:hover { color: var(--groen); }
-.breadcrumb-inner .sep { color: var(--rand); }
-.breadcrumb-inner .current { color: var(--groen); font-weight: 500; }
+    /* ── NAV ── */
+    .nav { position: sticky; top: 0; z-index: 200; background: #fff; border-bottom: 1px solid var(--rand); height: 68px; display: flex; align-items: center; justify-content: space-between; padding: 0 5%; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; color: var(--tekst); }
+    .nav-logo-mark { width: 36px; height: 36px; background: var(--groen); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.1rem; font-weight: 700; flex-shrink: 0; }
+    .nav-logo-text { font-size: 1.2rem; font-weight: 700; letter-spacing: -.01em; }
+    .nav-logo-text span { color: var(--groen); }
+    .nav-links { display: flex; align-items: center; gap: 1.8rem; list-style: none; }
+    .nav-links a { font-size: .9rem; font-weight: 500; color: var(--subtekst); transition: color .2s; }
+    .nav-links a:hover, .nav-links a.actief { color: var(--groen); }
+    .nav-cta { padding: .55rem 1.4rem; border-radius: 100px; background: var(--groen) !important; color: #fff !important; font-size: .88rem !important; font-weight: 700 !important; }
+    .nav-cta:hover { background: var(--groen-mid) !important; }
+    .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--tekst); border-radius: 2px; transition: transform .3s, opacity .3s; }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* ══════════════════════════════════
-   PAGE HERO
-══════════════════════════════════ */
-.page-hero { background: var(--groen); padding: 72px 0 80px; position: relative; overflow: hidden; }
-.page-hero::before { content: ''; position: absolute; top: -60px; right: -60px; width: 360px; height: 360px; border-radius: 50%; background: rgba(255,255,255,.04); pointer-events: none; }
-.page-hero::after  { content: ''; position: absolute; bottom: -80px; left: 10%; width: 240px; height: 240px; border-radius: 50%; background: rgba(255,255,255,.03); pointer-events: none; }
-.page-hero-inner { display: grid; grid-template-columns: 1fr 420px; gap: 3rem; align-items: center; position: relative; z-index: 1; }
-.page-hero-label { display: inline-flex; align-items: center; background: rgba(255,255,255,.12); color: rgba(255,255,255,.9); font-size: .75rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 4px 14px; border-radius: 100px; margin-bottom: 1.2rem; }
-.page-hero-title { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.1; color: #fff; letter-spacing: -.02em; margin-bottom: 1rem; }
-.page-hero-title em { font-style: normal; color: #4dc882; }
-.page-hero-desc { font-size: 1rem; color: rgba(255,255,255,.8); line-height: 1.75; margin-bottom: 1.5rem; max-width: 480px; }
-.page-hero-checks { list-style: none; margin-bottom: 1.8rem; display: flex; flex-direction: column; gap: .5rem; }
-.page-hero-checks li { display: flex; align-items: center; gap: 10px; font-size: .9rem; color: rgba(255,255,255,.85); }
-.page-hero-checks li::before { content: ''; width: 20px; height: 20px; border-radius: 50%; background: rgba(77,200,130,.25); flex-shrink: 0; background-image: url("data:image/svg+xml,%3Csvg width='11' height='11' viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 5.5l2.5 2.5 4.5-4.5' stroke='%234dc882' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: center; }
-.page-hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
-.btn-wit { background: #fff; color: var(--groen); padding: .85rem 2rem; border-radius: 100px; font-size: .92rem; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; transition: transform .15s, box-shadow .15s; }
-.btn-wit:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
-.btn-wit-out { border: 2px solid rgba(255,255,255,.5); color: #fff; padding: .8rem 1.8rem; border-radius: 100px; font-size: .9rem; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; transition: border-color .2s, background .2s; }
-.btn-wit-out:hover { border-color: #fff; background: rgba(255,255,255,.1); }
+    /* ── DROPDOWN — FIX: left:0 + .open class + JS mouseenter/mouseleave ── */
+    .has-dd { position: relative; }
+    .has-dd > a { display: flex; align-items: center; gap: 4px; }
+    .dropdown { display: none; position: absolute; top: calc(100% + 12px); left: 0; background: #fff; border: 1px solid var(--rand); border-radius: var(--rl); box-shadow: var(--shadow-lg); min-width: 260px; padding: .5rem; z-index: 300; }
+    .dropdown::after { content: ''; position: absolute; top: -16px; left: 0; right: 0; height: 16px; }
+    .has-dd.open .dropdown { display: block; }
+    .dd-item { display: flex; align-items: center; padding: .65rem 1rem; border-radius: var(--r); font-size: .88rem; font-weight: 500; color: var(--subtekst); transition: color .15s, background .15s; min-height: 44px; }
+    .dd-item:hover { color: var(--groen); background: var(--groen-licht); }
+    .dd-item-dim { opacity: .6; }
+    .dd-binnenkort { font-size: .75rem; color: var(--subtekst); }
 
-/* Hero form card */
-.hero-form-card { background: #fff; border-radius: var(--rl); padding: 2rem; box-shadow: 0 16px 60px rgba(0,0,0,.25); }
-.hero-form-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: .2rem; }
-.hero-form-card p  { font-size: .83rem; color: var(--subtekst); margin-bottom: 1.2rem; }
-.form-stack  { display: flex; flex-direction: column; gap: .7rem; }
-.form-row    { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; }
-.form-input  { width: 100%; padding: .72rem .9rem; border: 1.5px solid var(--rand); border-radius: var(--r); font-size: .88rem; font-family: inherit; outline: none; transition: border-color .15s; background: #fff; color: var(--tekst); }
-.form-input:focus  { border-color: var(--groen); }
-.form-select { width: 100%; padding: .72rem .9rem; border: 1.5px solid var(--rand); border-radius: var(--r); font-size: .88rem; font-family: inherit; outline: none; background: #fff; color: var(--subtekst); }
-.form-select:focus { border-color: var(--groen); }
-.form-check  { display: flex; align-items: flex-start; gap: 8px; font-size: .75rem; color: var(--subtekst); line-height: 1.4; }
-.form-check input { margin-top: 2px; flex-shrink: 0; accent-color: var(--groen); }
-.form-check a { color: var(--groen); font-weight: 600; }
-.form-submit { width: 100%; padding: .9rem; background: var(--groen); color: #fff; border: none; border-radius: 100px; font-size: .92rem; font-weight: 700; cursor: pointer; font-family: inherit; transition: background .2s; }
-.form-submit:hover { background: var(--groen-mid); }
-.form-note   { text-align: center; font-size: .72rem; color: #9aa5b4; margin-top: .3rem; }
-.form-success { text-align: center; padding: 2rem 0; }
-.form-success-title { font-weight: 700; font-size: 1rem; margin-bottom: .3rem; }
-.form-success-sub   { color: var(--subtekst); font-size: .85rem; }
+    /* ── BREADCRUMB ── */
+    .breadcrumb { background: var(--lichtgrijs); border-bottom: 1px solid var(--rand); padding: .6rem 0; }
+    .breadcrumb-inner { display: flex; align-items: center; gap: .5rem; font-size: .8rem; color: var(--subtekst); }
+    .breadcrumb-inner a { color: var(--subtekst); transition: color .2s; }
+    .breadcrumb-inner a:hover { color: var(--groen); }
+    .breadcrumb-inner .sep { color: var(--rand); }
 
-/* ══════════════════════════════════
-   USP BALK
-══════════════════════════════════ */
-.usp-balk { background: var(--groen-card); padding: 1.8rem 0; }
-.usp-grid  { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
-.usp-item  { display: flex; align-items: flex-start; gap: 12px; }
-.usp-icon  { width: 36px; height: 36px; background: #fff; border-radius: var(--r); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--groen); }
-.usp-item strong { display: block; font-size: .88rem; font-weight: 700; }
-.usp-item span   { font-size: .78rem; color: var(--subtekst); }
+    /* ── PAGE HERO ── */
+    .page-hero { background: var(--groen); padding: 72px 0 80px; position: relative; overflow: hidden; }
+    .page-hero::before { content: ''; position: absolute; top: -60px; right: -60px; width: 360px; height: 360px; border-radius: 50%; background: rgba(255,255,255,.04); pointer-events: none; }
+    .page-hero::after  { content: ''; position: absolute; bottom: -80px; left: 10%; width: 240px; height: 240px; border-radius: 50%; background: rgba(255,255,255,.03); pointer-events: none; }
+    .page-hero-inner { display: grid; grid-template-columns: 1fr 420px; gap: 3rem; align-items: center; position: relative; z-index: 1; }
+    .page-hero-label { display: inline-flex; align-items: center; background: rgba(255,255,255,.12); color: rgba(255,255,255,.9); font-size: .75rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 4px 14px; border-radius: 100px; margin-bottom: 1.2rem; }
+    .page-hero-title { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.12; letter-spacing: -.02em; color: #fff; margin-bottom: 1rem; }
+    .page-hero-title em { font-style: normal; color: rgba(255,255,255,.65); }
+    .page-hero-sub { font-size: 1rem; color: rgba(255,255,255,.8); line-height: 1.7; margin-bottom: 1.8rem; max-width: 520px; }
+    .page-hero-checks { list-style: none; display: flex; flex-direction: column; gap: .55rem; margin-bottom: 2rem; }
+    .page-hero-checks li { display: flex; align-items: center; gap: 10px; font-size: .9rem; color: rgba(255,255,255,.85); }
+    .page-hero-checks li::before { content: '✓'; width: 20px; height: 20px; background: rgba(255,255,255,.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: .7rem; font-weight: 700; flex-shrink: 0; }
+    .page-hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
 
-/* ══════════════════════════════════
-   WONINGTYPE CARDS
-══════════════════════════════════ */
-.woning-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2.5rem; }
-.woning-card { background: var(--groen-card); border-radius: var(--rl); overflow: hidden; transition: transform .2s, box-shadow .2s; display: flex; flex-direction: column; }
-.woning-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
-.woning-card-img-wrap { position: relative; }
-.woning-card-img { width: 100%; height: 200px; object-fit: cover; display: block; }
-.featured-badge { position: absolute; top: 1rem; left: 1rem; background: var(--groen); color: #fff; font-size: .7rem; font-weight: 700; padding: 3px 10px; border-radius: 100px; }
-.woning-card-body { padding: 1.4rem; display: flex; flex-direction: column; flex: 1; }
-.woning-card-body h3 { font-size: 1rem; font-weight: 700; margin-bottom: .3rem; color: var(--tekst); }
-.woning-card-body .woning-sub { font-size: .85rem; color: var(--subtekst); margin-bottom: 1rem; line-height: 1.5; }
-.woning-prijzen { background: #fff; border-radius: var(--r); padding: .9rem 1rem; margin-bottom: 1.1rem; }
-.prijs-rij { display: flex; justify-content: space-between; align-items: center; font-size: .82rem; padding: .28rem 0; border-bottom: 1px solid var(--rand); }
-.prijs-rij:last-child { border-bottom: none; }
-.prijs-rij .prijs-label { color: var(--subtekst); }
-.prijs-rij .prijs-val { font-weight: 700; color: var(--groen); }
-.woning-cta { display: flex; align-items: center; justify-content: center; gap: 6px; background: var(--groen); color: #fff; padding: .75rem; border-radius: 100px; font-size: .88rem; font-weight: 700; width: 100%; transition: background .2s; margin-top: auto; }
-.woning-cta:hover { background: var(--groen-mid); }
+    /* ── HERO FORM CARD ── */
+    .hero-form-card { background: #fff; border-radius: var(--rl); padding: 2rem; box-shadow: 0 16px 60px rgba(0,0,0,.25); }
+    .hero-form-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: .2rem; }
+    .hero-form-card p { font-size: .83rem; color: var(--subtekst); margin-bottom: 1.2rem; }
+    .form-stack { display: flex; flex-direction: column; gap: .7rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; }
+    .form-input { width: 100%; padding: .72rem .9rem; border: 1.5px solid var(--rand); border-radius: var(--r); font-size: .88rem; font-family: inherit; outline: none; transition: border-color .15s; background: #fff; color: var(--tekst); }
+    .form-input:focus { border-color: var(--groen); }
+    .form-select { width: 100%; padding: .72rem .9rem; border: 1.5px solid var(--rand); border-radius: var(--r); font-size: .88rem; font-family: inherit; outline: none; background: #fff; color: var(--subtekst); }
+    .form-select:focus { border-color: var(--groen); }
+    .form-check { display: flex; align-items: flex-start; gap: .5rem; font-size: .78rem; color: var(--subtekst); }
+    .form-check input { margin-top: 2px; accent-color: var(--groen); }
+    .form-check a { color: var(--groen); text-decoration: underline; }
+    .form-submit { width: 100%; padding: .85rem; background: var(--groen); color: #fff; border: none; border-radius: var(--r); font-size: .92rem; font-weight: 700; cursor: pointer; transition: background .2s; font-family: inherit; }
+    .form-submit:hover { background: var(--groen-mid); }
+    .form-submit:disabled { opacity: .6; cursor: not-allowed; }
+    .form-note { text-align: center; font-size: .75rem; color: var(--subtekst); margin-top: .4rem; }
+    .form-success { text-align: center; padding: 2rem 0; }
+    .form-success-title { font-weight: 700; font-size: 1rem; margin-bottom: .3rem; }
+    .form-success-sub { color: var(--subtekst); font-size: .88rem; }
 
-/* ══════════════════════════════════
-   DIENSTEN BLOKKEN
-══════════════════════════════════ */
-.diensten-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2.5rem; }
-.dienst-card { background: #fff; border-radius: var(--rl); overflow: hidden; transition: transform .2s, box-shadow .2s; display: block; border: 1.5px solid var(--rand); }
-.dienst-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--groen); }
-.dienst-card-icon { width: 52px; height: 52px; background: var(--groen-card); border-radius: var(--r); display: flex; align-items: center; justify-content: center; color: var(--groen); margin-bottom: 1rem; }
-.dienst-card-body { padding: 1.8rem; }
-.dienst-card-body h3 { font-size: 1rem; font-weight: 700; margin-bottom: .4rem; }
-.dienst-card-body p  { font-size: .88rem; color: var(--subtekst); margin-bottom: 1rem; line-height: 1.6; }
-.dienst-card.binnenkort { opacity: .7; cursor: default; }
-.dienst-card.binnenkort:hover { transform: none; box-shadow: none; border-color: var(--rand); }
-.binnenkort-badge { display: inline-flex; font-size: .72rem; font-weight: 700; background: var(--lichtgrijs); color: var(--subtekst); padding: 2px 10px; border-radius: 100px; border: 1px solid var(--rand); }
-.dienst-link { display: inline-flex; align-items: center; gap: 6px; color: var(--groen); font-size: .88rem; font-weight: 600; }
+    /* ── USP BALK ── */
+    .usp-container { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+    .usp-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+    .usp-item { display: flex; align-items: flex-start; gap: 12px; }
+    .usp-item strong { display: block; font-size: .88rem; font-weight: 700; }
+    .usp-item span { font-size: .78rem; color: var(--subtekst); }
 
-/* ══════════════════════════════════
-   PROCES STAPPEN
-══════════════════════════════════ */
-.proces-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 2.5rem; position: relative; }
-.proces-grid::before { content: ''; position: absolute; top: 28px; left: calc(12.5% + 28px); right: calc(12.5% + 28px); height: 2px; background: var(--rand); z-index: 0; }
-.proces-stap { display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; z-index: 1; }
-.proces-num { width: 56px; height: 56px; border-radius: 50%; background: var(--groen); color: #fff; font-size: 1.1rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; flex-shrink: 0; }
-.proces-stap h4 { font-size: .92rem; font-weight: 700; margin-bottom: .3rem; }
-.proces-stap p  { font-size: .82rem; color: var(--subtekst); line-height: 1.5; }
+    /* ── WONINGTYPE CARDS ── */
+    .woning-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2.5rem; }
+    .woning-card { background: var(--groen-card); border-radius: var(--rl); overflow: hidden; transition: transform .2s, box-shadow .2s; display: flex; flex-direction: column; }
+    .woning-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .woning-card-img-wrap { position: relative; }
+    .woning-card-img { width: 100%; height: 200px; object-fit: cover; display: block; }
+    .woning-card-body { padding: 1.4rem; display: flex; flex-direction: column; flex: 1; }
+    .woning-card-body h3 { font-size: 1rem; font-weight: 700; margin-bottom: .3rem; color: var(--tekst); }
+    .woning-card-body .woning-sub { font-size: .85rem; color: var(--subtekst); margin-bottom: 1rem; line-height: 1.5; }
+    .prijs-rij { display: flex; justify-content: space-between; align-items: center; font-size: .82rem; padding: .28rem 0; border-bottom: 1px solid var(--rand); }
+    .prijs-rij:last-child { border-bottom: none; }
+    .prijs-rij .prijs-label { color: var(--subtekst); }
+    .prijs-rij .prijs-val { font-weight: 700; color: var(--groen); }
+    .woning-card-prijzen { margin-bottom: 1.2rem; }
+    .woning-card-cta { margin-top: auto; display: inline-flex; align-items: center; gap: 6px; background: var(--groen); color: #fff; padding: .65rem 1.2rem; border-radius: 100px; font-size: .85rem; font-weight: 700; transition: background .2s; align-self: flex-start; }
+    .woning-card-cta:hover { background: var(--groen-mid); }
+    .featured-badge { position: absolute; top: 1rem; left: 1rem; background: var(--groen); color: #fff; font-size: .7rem; font-weight: 700; padding: 3px 10px; border-radius: 100px; }
 
-/* ══════════════════════════════════
-   REGIO SECTIE
-══════════════════════════════════ */
-.regio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
-.regio-tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.2rem; }
-.regio-tag  { background: #fff; border: 1.5px solid var(--rand); color: var(--subtekst); font-size: .82rem; font-weight: 500; padding: 5px 14px; border-radius: 100px; transition: border-color .2s, color .2s; }
-.regio-tag:hover { border-color: var(--groen); color: var(--groen); }
-.regio-tag.hoofd { background: var(--groen-card); border-color: var(--groen); color: var(--groen); font-weight: 700; }
-.regio-info { background: var(--groen-card); border-radius: var(--rl); padding: 2rem; }
-.regio-info h4 { font-size: 1rem; font-weight: 700; margin-bottom: .5rem; }
-.regio-info p  { font-size: .88rem; color: var(--subtekst); line-height: 1.7; margin-bottom: 1rem; }
+    /* ── DIENSTEN ── */
+    .diensten-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2.5rem; }
+    .dienst-card { background: #fff; border-radius: var(--rl); overflow: hidden; transition: transform .2s, box-shadow .2s; display: block; border: 1.5px solid var(--rand); }
+    .dienst-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--groen); }
+    .dienst-card-icon { width: 52px; height: 52px; background: var(--groen-card); border-radius: var(--r); display: flex; align-items: center; justify-content: center; color: var(--groen); margin-bottom: 1rem; }
+    .dienst-card-body { padding: 1.8rem; }
+    .dienst-card-body h3 { font-size: 1rem; font-weight: 700; margin-bottom: .4rem; }
+    .dienst-card-body p { font-size: .85rem; color: var(--subtekst); line-height: 1.6; margin-bottom: 1rem; }
+    .dienst-link { font-size: .85rem; font-weight: 600; color: var(--groen); display: inline-flex; align-items: center; gap: 4px; }
+    .badge-soon { display: inline-block; background: var(--lichtgrijs); color: var(--subtekst); font-size: .72rem; font-weight: 600; padding: 2px 8px; border-radius: 100px; margin-left: .5rem; }
 
-/* ══════════════════════════════════
-   CTA SECTIE
-══════════════════════════════════ */
-.cta-sec { background: var(--groen); padding: 80px 0; text-align: center; }
-.cta-sec h2 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3rem); color: #fff; margin-bottom: .8rem; letter-spacing: -.02em; }
-.cta-sec p  { color: rgba(255,255,255,.75); font-size: 1rem; margin-bottom: 2rem; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.7; }
-.cta-btns  { display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap; }
-.cta-meta  { margin-top: 1.5rem; font-size: .78rem; color: rgba(255,255,255,.5); }
+    /* ── WERKWIJZE ── */
+    .proces-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 2.5rem; position: relative; }
+    .proces-grid::before { content: ''; position: absolute; top: 28px; left: calc(12.5% + 28px); right: calc(12.5% + 28px); height: 2px; background: var(--rand); z-index: 0; }
+    .proces-stap { display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; z-index: 1; }
+    .proces-num { width: 56px; height: 56px; border-radius: 50%; background: var(--groen); color: #fff; font-size: 1.1rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; flex-shrink: 0; }
+    .proces-stap h4 { font-size: .92rem; font-weight: 700; margin-bottom: .3rem; }
+    .proces-stap p { font-size: .82rem; color: var(--subtekst); line-height: 1.5; }
 
-/* ══════════════════════════════════
-   FOOTER
-══════════════════════════════════ */
-.footer { background: #0a1a0f; color: rgba(255,255,255,.65); padding: 64px 0 0; }
-.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2.5rem; padding-bottom: 48px; }
-.footer-brand { font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 1rem; }
-.footer-desc  { font-size: .88rem; color: rgba(255,255,255,.55); line-height: 1.7; max-width: 280px; margin-bottom: 1.5rem; }
-.footer-social { display: flex; gap: .8rem; }
-.footer-social a { width: 36px; height: 36px; border-radius: var(--r); background: rgba(255,255,255,.08); display: flex; align-items: center; justify-content: center; transition: background .2s; color: rgba(255,255,255,.7); }
-.footer-social a:hover { background: rgba(255,255,255,.16); }
-.footer-col h4 { font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.4); margin-bottom: 1.2rem; }
-.footer-col a  { display: block; color: rgba(255,255,255,.65); font-size: .88rem; margin-bottom: .65rem; transition: color .2s; }
-.footer-col a:hover { color: #fff; }
-.footer-bottom { border-top: 1px solid rgba(255,255,255,.08); padding: 1.2rem 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .5rem; }
-.footer-copy { font-size: .78rem; color: rgba(255,255,255,.4); }
+    /* ── WERKGEBIED ── */
+    .regio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+    .regio-tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1rem; }
+    .regio-tag { background: #fff; border: 1.5px solid var(--rand); border-radius: 100px; padding: .35rem .9rem; font-size: .82rem; font-weight: 500; color: var(--subtekst); }
+    .regio-tag.highlight { border-color: var(--groen); color: var(--groen); font-weight: 700; }
+    .regio-kaart { background: var(--groen-card); border-radius: var(--rl); padding: 2rem; }
+    .regio-kaart h3 { font-size: 1rem; font-weight: 700; margin-bottom: .5rem; }
+    .regio-kaart p { font-size: .88rem; color: var(--subtekst); line-height: 1.6; margin-bottom: 1.2rem; }
 
-/* ══════════════════════════════════
-   KENNISFLOW
-══════════════════════════════════ */
-.kennis-groep-label { font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--groen); margin-bottom: 1rem; display: block; }
-.kennis-groep-label::before { content: '— '; }
-.kennis-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
-.kennis-card  { background: #fff; border: 1.5px solid var(--rand); border-radius: var(--rl); padding: 1.4rem; display: flex; flex-direction: column; gap: .8rem; transition: border-color .2s, box-shadow .2s, transform .2s; }
-.kennis-card:hover { border-color: var(--groen); box-shadow: var(--shadow); transform: translateY(-3px); }
-.kennis-icon  { width: 44px; height: 44px; background: var(--groen-card); border-radius: var(--r); display: flex; align-items: center; justify-content: center; color: var(--groen); flex-shrink: 0; }
-.kennis-body  { display: flex; flex-direction: column; gap: .35rem; flex: 1; }
-.kennis-tag   { display: inline-flex; font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--groen); background: var(--groen-card); padding: 2px 8px; border-radius: 100px; width: fit-content; }
-.kennis-card h4 { font-size: .95rem; font-weight: 700; color: var(--tekst); }
-.kennis-card p  { font-size: .83rem; color: var(--subtekst); line-height: 1.6; flex: 1; }
-.kennis-link    { font-size: .83rem; font-weight: 600; color: var(--groen); margin-top: auto; display: inline-flex; align-items: center; gap: 4px; }
-.kennis-groep-label-mt { margin-top: 2.5rem; }
+    /* ── KENNISFLOW ── */
+    .kennis-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+    .kennis-card { background: #fff; border-radius: var(--rl); padding: 1.4rem; border: 1.5px solid var(--rand); display: flex; gap: 1rem; transition: border-color .2s, box-shadow .2s; }
+    .kennis-card:hover { border-color: var(--groen); box-shadow: var(--shadow); }
+    .kennis-icon { width: 44px; height: 44px; background: var(--groen-card); border-radius: var(--r); display: flex; align-items: center; justify-content: center; color: var(--groen); flex-shrink: 0; }
+    .kennis-body { display: flex; flex-direction: column; gap: .35rem; flex: 1; }
+    .kennis-card h4 { font-size: .95rem; font-weight: 700; color: var(--tekst); }
+    .kennis-card p { font-size: .83rem; color: var(--subtekst); line-height: 1.6; flex: 1; }
+    .kennis-link { font-size: .83rem; font-weight: 600; color: var(--groen); margin-top: auto; display: inline-flex; align-items: center; gap: 4px; }
+    .kennis-groep-label-mt { margin-top: 2.5rem; }
 
-/* ══════════════════════════════════
-   RESPONSIVE — TABLET 900px
-══════════════════════════════════ */
-@media (max-width: 900px) {
-  .page-hero-inner  { grid-template-columns: 1fr; }
-  .usp-grid         { grid-template-columns: 1fr 1fr; }
-  .woning-grid      { grid-template-columns: 1fr 1fr; }
-  .diensten-grid    { grid-template-columns: 1fr 1fr; }
-  .proces-grid      { grid-template-columns: 1fr 1fr; }
-  .proces-grid::before { display: none; }
-  .regio-grid       { grid-template-columns: 1fr; gap: 2rem; }
-  .kennis-cards     { grid-template-columns: 1fr 1fr; }
-  .footer-grid      { grid-template-columns: 1fr 1fr; gap: 2rem; }
-}
+    /* ── CTA SECTIE ── */
+    .cta-sec { background: var(--groen); padding: 80px 0; text-align: center; }
+    .cta-sec h2 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3rem); color: #fff; margin-bottom: .8rem; letter-spacing: -.02em; }
+    .cta-sec p { color: rgba(255,255,255,.75); font-size: 1rem; margin-bottom: 2rem; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.7; }
 
-/* ══════════════════════════════════
-   RESPONSIVE — MOBIEL 768px
-══════════════════════════════════ */
-@media (max-width: 768px) {
-  .nav-toggle { display: flex; }
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 68px; left: 0; right: 0;
-    background: #fff;
-    border-bottom: 1px solid var(--rand);
-    flex-direction: column;
-    padding: .5rem 5%;
-    gap: 0;
-    box-shadow: 0 8px 24px rgba(0,0,0,.08);
-    z-index: 199;
-  }
-  .nav-links.open { display: flex; }
-  .nav-links li { border-bottom: 1px solid var(--rand); }
-  .nav-links li:last-child { border-bottom: none; }
-  .nav-links a { padding: .85rem 0; font-size: .95rem; display: flex; align-items: center; min-height: 44px; }
-  .nav-cta { background: none !important; color: var(--groen) !important; border-radius: 0 !important; }
-  .dropdown { position: static; transform: none; box-shadow: none; border: none; border-radius: 0; padding: 0 0 .5rem 1rem; display: none; }
-  .dropdown::before { display: none; }
-  .dropdown::after { display: none; }
-  .has-dd.open .dropdown { display: block; }
-  .section { padding: 56px 0; }
-  .page-hero { padding: 48px 0 56px; }
-  .page-hero-inner { gap: 2rem; }
-  .page-hero-btns { flex-direction: column; }
-  .btn-wit, .btn-wit-out { justify-content: center; }
-  .woning-grid   { grid-template-columns: 1fr; }
-  .diensten-grid { grid-template-columns: 1fr; }
-  .kennis-cards   { grid-template-columns: 1fr; }
-  .proces-grid   { grid-template-columns: 1fr; }
-  .cta-btns { flex-direction: column; align-items: center; }
-  .btn-wit, .btn-wit-out { width: 100%; max-width: 300px; text-align: center; }
-}
+    /* ── FOOTER ── */
+    .footer { background: #0a1a0f; color: rgba(255,255,255,.65); padding: 64px 0 0; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2.5rem; padding-bottom: 48px; }
+    .footer-brand { font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 1rem; }
+    .footer-desc { font-size: .88rem; color: rgba(255,255,255,.55); line-height: 1.7; max-width: 280px; margin-bottom: 1.5rem; }
+    .footer-social { display: flex; gap: .8rem; }
+    .footer-social a { width: 36px; height: 36px; border-radius: var(--r); background: rgba(255,255,255,.08); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,.6); transition: background .2s, color .2s; }
+    .footer-social a:hover { background: var(--groen); color: #fff; }
+    .footer-col h4 { font-size: .82rem; font-weight: 700; color: rgba(255,255,255,.4); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 1rem; }
+    .footer-col a { display: block; color: rgba(255,255,255,.65); font-size: .88rem; margin-bottom: .6rem; transition: color .2s; }
+    .footer-col a:hover { color: #fff; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,.08); padding: 1.2rem 0; display: flex; justify-content: space-between; align-items: center; font-size: .8rem; color: rgba(255,255,255,.3); flex-wrap: wrap; gap: .5rem; }
+    .footer-bottom a { color: rgba(255,255,255,.3); transition: color .2s; }
+    .footer-bottom a:hover { color: rgba(255,255,255,.7); }
 
-@media (max-width: 480px) {
-  .usp-grid    { grid-template-columns: 1fr 1fr; }
-  .form-row    { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr; }
-  .woning-grid { grid-template-columns: 1fr; }
-}
-</style>
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .page-hero-inner { grid-template-columns: 1fr; }
+      .usp-grid { grid-template-columns: 1fr 1fr; }
+      .woning-grid { grid-template-columns: 1fr 1fr; }
+      .diensten-grid { grid-template-columns: 1fr 1fr; }
+      .proces-grid { grid-template-columns: 1fr 1fr; }
+      .proces-grid::before { display: none; }
+      .regio-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .kennis-cards { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    }
+    @media (max-width: 768px) {
+      .nav-toggle { display: flex; }
+      .nav-links { display: none; position: absolute; top: 68px; left: 0; right: 0; background: #fff; border-bottom: 1px solid var(--rand); flex-direction: column; padding: .5rem 5%; gap: 0; box-shadow: 0 8px 24px rgba(0,0,0,.08); z-index: 199; }
+      .nav-links.open { display: flex; }
+      .nav-links li { border-bottom: 1px solid var(--rand); }
+      .nav-links li:last-child { border-bottom: none; }
+      .nav-links a { padding: .85rem 0; font-size: .95rem; display: flex; align-items: center; min-height: 44px; }
+      .nav-cta { background: none !important; color: var(--groen) !important; border-radius: 0 !important; }
+      .dropdown { position: static; transform: none; box-shadow: none; border: none; border-radius: 0; padding: 0 0 .5rem 1rem; display: none; }
+      .dropdown::after { display: none; }
+      .has-dd.open .dropdown { display: block; }
+      .section { padding: 56px 0; }
+      .page-hero { padding: 48px 0 56px; }
+      .page-hero-inner { gap: 2rem; }
+      .page-hero-btns { flex-direction: column; }
+      .form-row { grid-template-columns: 1fr; }
+      .kennis-cards { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .usp-grid { grid-template-columns: 1fr 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .woning-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
 
-<!-- Segment bar -->
+<!-- SEGMENT-BALK -->
 <div class="seg-bar">
-  <a href="/">Zakelijk</a>
+  <a href="/zakelijk/">Zakelijk</a>
   <a href="/particulieren/" class="active">Particulieren</a>
 </div>
 
-<!-- Nav -->
-<nav class="nav">
+<!-- NAV -->
+<nav class="nav" id="nav">
   <a href="/" class="nav-logo">
     <div class="nav-logo-mark">S</div>
-    <span class="nav-logo-text">STAP <span>Energie</span></span>
+    <div class="nav-logo-text"><span>STAP</span> Energie</div>
   </a>
   <ul class="nav-links" id="nav-links">
     <li class="has-dd">
       <a href="/particulieren/#diensten">Diensten
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="flex-shrink:0"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       </a>
       <div class="dropdown">
         <a href="/energielabels/woningen/" class="dd-item">Energielabel woning</a>
@@ -366,7 +285,7 @@ a    { text-decoration: none; }
     </li>
     <li class="has-dd">
       <a href="#voor-wie">Voor wie
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="flex-shrink:0"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       </a>
       <div class="dropdown">
         <a href="/zakelijk/" class="dd-item">Zakelijk</a>
@@ -388,25 +307,25 @@ a    { text-decoration: none; }
   </button>
 </nav>
 
-<!-- Breadcrumb -->
+<!-- BREADCRUMB -->
 <div class="breadcrumb">
   <div class="container">
     <div class="breadcrumb-inner">
       <a href="/">Home</a>
       <span class="sep">›</span>
-      <span class="current">Particulieren</span>
+      <span>Particulieren</span>
     </div>
   </div>
 </div>
 
-<!-- Page Hero -->
-<section class="page-hero">
+<!-- HERO -->
+<section class="page-hero" id="aanvraag">
   <div class="container">
     <div class="page-hero-inner">
       <div>
-        <span class="page-hero-label">Voor woningeigenaren</span>
-        <h1 class="page-hero-title">Energielabel &amp; verduurzaming<br>voor <em>uw woning</em></h1>
-        <p class="page-hero-desc">Of u nu uw woning wilt verkopen, verhuren of gewoon comfortabeler wilt wonen — STAP Energie helpt u stap voor stap. Persoonlijk advies, snel geregeld, heel Nederland.</p>
+        <div class="page-hero-label">Voor woningeigenaren</div>
+        <h1 class="page-hero-title">Energielabel &amp; verduurzaming<br><em>voor uw woning</em></h1>
+        <p class="page-hero-sub">Of u nu uw woning wilt verkopen, verhuren of gewoon comfortabeler wilt wonen — STAP Energie helpt u stap voor stap. Persoonlijk advies, snel geregeld, heel Nederland.</p>
         <ul class="page-hero-checks">
           <li>Officieel energielabel, geregistreerd in EP-online</li>
           <li>Persoonlijk verduurzamingsadvies op maat</li>
@@ -414,46 +333,44 @@ a    { text-decoration: none; }
           <li>Actief in Leusden, Amersfoort, Woudenberg, Achterveld &amp; omgeving</li>
         </ul>
         <div class="page-hero-btns">
-          <a href="#aanvraag" class="btn-wit">Gratis kennismaking →</a>
-          <a href="tel:0600000000" class="btn-wit-out">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 10.5c-.8-.8-1.8-1.2-2.8-1.2-.5 0-1 .1-1.5.4L7.8 8.3C8.4 7.4 8.7 6.3 8.7 5.2c0-1-.4-2-1.2-2.8L6.3 1.2C5.5.4 4.5 0 3.5 0S1.5.4.7 1.2L.3 1.6C-.1 2-.1 2.6.1 3c.7 1.5 1.8 2.8 3.1 3.9L5 8.7c.4.4 1 .6 1.6.6.3 0 .5 0 .8-.1l1.8 1.8c-.2.5-.3 1-.3 1.5 0 1 .4 2 1.2 2.8l1.2 1.2c.8.8 1.8 1.2 2.8 1.2s2-.4 2.8-1.2l.4-.4c.8-.8.8-2 0-2.8l-1.3-1.3z" fill="currentColor"/></svg>
-            Direct bellen
-          </a>
+          <a href="#aanvraag" class="btn-groen">Gratis kennismaking →</a>
+          <a href="tel:0600000000" class="btn-outline">Direct bellen</a>
         </div>
       </div>
-      <!-- Aanvraagformulier -->
-      <div class="hero-form-card" id="aanvraag">
+
+      <!-- FORMULIER -->
+      <div class="hero-form-card">
         <h3>Aanvraag voor uw woning</h3>
         <p>Gratis en vrijblijvend. Reactie binnen 24 uur.</p>
         <form class="form-stack" id="hero-form" onsubmit="submitForm(event)">
           <div class="form-row">
             <div>
               <label for="voornaam" class="sr-only">Voornaam</label>
-              <input class="form-input" type="text" id="voornaam" placeholder="Voornaam" required>
+              <input class="form-input" type="text" id="voornaam" name="voornaam" placeholder="Voornaam" required>
             </div>
             <div>
               <label for="achternaam" class="sr-only">Achternaam</label>
-              <input class="form-input" type="text" id="achternaam" placeholder="Achternaam">
+              <input class="form-input" type="text" id="achternaam" name="achternaam" placeholder="Achternaam">
             </div>
           </div>
           <label for="email" class="sr-only">E-mailadres</label>
-          <input class="form-input" type="email" id="email" placeholder="E-mailadres" required>
+          <input class="form-input" type="email" id="email" name="email" placeholder="E-mailadres" required>
           <label for="telefoon" class="sr-only">Telefoonnummer</label>
-          <input class="form-input" type="tel" id="telefoon" placeholder="Telefoonnummer">
+          <input class="form-input" type="tel" id="telefoon" name="telefoon" placeholder="Telefoonnummer">
           <label for="woningtype" class="sr-only">Type woning</label>
-          <select class="form-select" id="woningtype" required>
-            <option value="" disabled selected>Type woning</option>
-            <option>Appartement</option>
-            <option>Eengezinswoning</option>
-            <option>Vrijstaande woning</option>
+          <select class="form-select" id="woningtype" name="woningtype" required>
+            <option value="">Type woning</option>
+            <option value="Appartement">Appartement</option>
+            <option value="Eengezinswoning">Eengezinswoning</option>
+            <option value="Vrijstaande woning">Vrijstaande woning</option>
           </select>
           <label for="dienst" class="sr-only">Waarmee kan ik u helpen?</label>
-          <select class="form-select" id="dienst" required>
-            <option value="" disabled selected>Waarmee kan ik u helpen?</option>
-            <option>Energielabel aanvragen</option>
-            <option>Verduurzamingsadvies</option>
-            <option>Subsidie in kaart brengen</option>
-            <option>Weet ik nog niet</option>
+          <select class="form-select" id="dienst" name="dienst">
+            <option value="">Waarmee kan ik u helpen?</option>
+            <option value="Energielabel aanvragen">Energielabel aanvragen</option>
+            <option value="Verduurzamingsadvies">Verduurzamingsadvies</option>
+            <option value="Subsidie in kaart brengen">Subsidie in kaart brengen</option>
+            <option value="Weet ik nog niet">Weet ik nog niet</option>
           </select>
           <label class="form-check">
             <input type="checkbox" required>
@@ -467,135 +384,143 @@ a    { text-decoration: none; }
   </div>
 </section>
 
-<!-- USP balk -->
-<div class="usp-balk">
-  <div class="container">
+<!-- USP BALK -->
+<div class="sec-grijs">
+  <div class="container usp-container">
     <div class="usp-grid">
       <div class="usp-item">
-        <div class="usp-icon">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 1l2 4h4l-3 3 1 4-4-2-4 2 1-4-3-3h4z" fill="currentColor"/></svg>
+        <div>
+          <strong>Officieel erkend</strong>
+          <span>Geregistreerd in EP-online</span>
         </div>
-        <div><strong>Officieel erkend</strong><span>Geregistreerd in EP-online</span></div>
       </div>
       <div class="usp-item">
-        <div class="usp-icon">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M9 5v4l3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <div>
+          <strong>Reactie binnen 24 uur</strong>
+          <span>Snel en persoonlijk</span>
         </div>
-        <div><strong>Reactie binnen 24 uur</strong><span>Snel en persoonlijk</span></div>
       </div>
       <div class="usp-item">
-        <div class="usp-icon">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M6 9l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div>
+          <strong>Vrijblijvend advies</strong>
+          <span>Geen verplichtingen</span>
         </div>
-        <div><strong>Vrijblijvend advies</strong><span>Geen verplichtingen</span></div>
       </div>
       <div class="usp-item">
-        <div class="usp-icon">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2L2 7v9h5v-5h4v5h5V7L9 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        <div>
+          <strong>Aan huis</strong>
+          <span>Leusden, Amersfoort &amp; omgeving</span>
         </div>
-        <div><strong>Aan huis</strong><span>Leusden, Amersfoort &amp; omgeving</span></div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Woningtype + prijzen -->
-<section class="section sec-grijs" id="woningtypen">
+<!-- WONINGTYPE CARDS -->
+<section class="section" id="woningtype">
   <div class="container">
     <span class="sec-label">Kies uw woningtype</span>
     <h2 class="sec-title">Energielabel voor elke woning</h2>
     <p class="sec-sub">De opnametijd en prijs hangen af van het type en de oppervlakte van uw woning. Kies uw situatie en vraag direct aan.</p>
     <div class="woning-grid">
+
       <div class="woning-card">
         <div class="woning-card-img-wrap">
-          <img src="/images/woning-appartement.jpg" alt="Bewoners bij appartement" class="woning-card-img" loading="lazy">
+          <img class="woning-card-img" src="/images/woning-appartement.jpg" alt="Bewoners bij appartement" width="600" height="400" loading="lazy">
         </div>
         <div class="woning-card-body">
           <h3>Appartement</h3>
           <p class="woning-sub">Snel en officieel geregistreerd. Vaste prijs, geen verrassingen.</p>
-          <div class="woning-prijzen">
+          <div class="woning-card-prijzen">
             <div class="prijs-rij"><span class="prijs-label">Tot 40 m²</span><span class="prijs-val">€ 195</span></div>
             <div class="prijs-rij"><span class="prijs-label">40 – 100 m²</span><span class="prijs-val">€ 249</span></div>
           </div>
-          <a href="#aanvraag" class="woning-cta">Aanvragen →</a>
+          <a href="#aanvraag" class="woning-card-cta">Aanvragen →</a>
         </div>
       </div>
+
       <div class="woning-card">
         <div class="woning-card-img-wrap">
-          <img src="/images/woning-eengezins.jpg" alt="Gezin bij rijtjeswoning" class="woning-card-img" loading="lazy">
-          <span class="featured-badge">Meest aangevraagd</span>
+          <img class="woning-card-img" src="/images/woning-eengezins.jpg" alt="Gezin bij rijtjeswoning" width="600" height="400" loading="lazy">
+          <div class="featured-badge">Meest aangevraagd</div>
         </div>
         <div class="woning-card-body">
           <h3>Eengezinswoning</h3>
           <p class="woning-sub">Rijtjeswoning of twee-onder-een-kap. Vaste prijs op woningtype.</p>
-          <div class="woning-prijzen">
+          <div class="woning-card-prijzen">
             <div class="prijs-rij"><span class="prijs-label">Tussen woningen</span><span class="prijs-val">€ 295</span></div>
             <div class="prijs-rij"><span class="prijs-label">Hoekwoning / 2-onder-1-kap</span><span class="prijs-val">€ 325</span></div>
           </div>
-          <a href="#aanvraag" class="woning-cta">Aanvragen →</a>
+          <a href="#aanvraag" class="woning-card-cta">Aanvragen →</a>
         </div>
       </div>
+
       <div class="woning-card">
         <div class="woning-card-img-wrap">
-          <img src="/images/woning-vrijstaand.jpg" alt="Familie bij vrijstaande woning" class="woning-card-img" loading="lazy">
+          <img class="woning-card-img" src="/images/woning-vrijstaand.jpg" alt="Familie bij vrijstaande woning" width="600" height="400" loading="lazy">
         </div>
         <div class="woning-card-body">
           <h3>Vrijstaande woning</h3>
           <p class="woning-sub">Ruime woning of villa. Tot 150 m² vaste prijs, daarboven offerte op maat.</p>
-          <div class="woning-prijzen">
+          <div class="woning-card-prijzen">
             <div class="prijs-rij"><span class="prijs-label">Tot 150 m²</span><span class="prijs-val">€ 345</span></div>
             <div class="prijs-rij"><span class="prijs-label">Groter dan 150 m²</span><span class="prijs-val">Offerte op maat</span></div>
           </div>
-          <a href="#aanvraag" class="woning-cta">Offerte aanvragen →</a>
+          <a href="#aanvraag" class="woning-card-cta">Offerte aanvragen →</a>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- Diensten particulieren -->
-<section class="section" id="diensten">
+<!-- DIENSTEN -->
+<section class="section sec-grijs" id="diensten">
   <div class="container">
     <span class="sec-label">Wat we voor u doen</span>
     <h2 class="sec-title">Alle diensten voor woningeigenaren</h2>
     <p class="sec-sub">Van verplicht energielabel tot een volledig verduurzamingsplan — en binnenkort ook een handige energievergelijker.</p>
     <div class="diensten-grid">
+
       <a href="/energielabels/woningen/" class="dienst-card">
         <div class="dienst-card-body">
           <div class="dienst-card-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.5"/><path d="M7 12h4M7 16h8M7 8h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
           </div>
           <h3>Energielabel woning</h3>
           <p>Verplicht bij verkoop en verhuur. Officieel geregistreerd in EP-online. Snel op afspraak bij u thuis.</p>
           <span class="dienst-link">Meer info en aanvragen →</span>
         </div>
       </a>
+
       <a href="/verduurzaming-subsidie/particulieren/" class="dienst-card">
         <div class="dienst-card-body">
           <div class="dienst-card-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L4 6v6c0 5 3.5 9.7 8 11 4.5-1.3 8-6 8-11V6L12 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
           </div>
           <h3>Verduurzaming &amp; Subsidie</h3>
           <p>Persoonlijk stappenplan voor uw woning. Alle beschikbare subsidies in kaart — ISDE, SEEH, gemeentelijke regelingen.</p>
           <span class="dienst-link">Meer info →</span>
         </div>
       </a>
-      <div class="dienst-card binnenkort">
+
+      <div class="dienst-card">
         <div class="dienst-card-body">
           <div class="dienst-card-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9l-7-7z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M13 2v7h7M9 13h6M9 17h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
           </div>
-          <h3>Energie vergelijker</h3>
+          <h3>Energie vergelijker <span class="badge-soon">Binnenkort</span></h3>
           <p>Vergelijk energiecontracten en vind het beste aanbod voor uw situatie. Onafhankelijk en overzichtelijk.</p>
-          <span class="binnenkort-badge">Binnenkort beschikbaar</span>
+          <span class="dienst-link" style="opacity:.5;">Binnenkort beschikbaar</span>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- Hoe werkt het -->
-<section class="section sec-grijs">
+<!-- WERKWIJZE -->
+<section class="section">
   <div class="container">
     <span class="sec-label">Werkwijze</span>
     <h2 class="sec-title">Zo werkt het</h2>
@@ -609,7 +534,7 @@ a    { text-decoration: none; }
       <div class="proces-stap">
         <div class="proces-num">2</div>
         <h4>Opname aan huis</h4>
-        <p>STAP Energie komt op afspraak langs voor een grondige woningopname. Gemiddeld 45–90 minuten.</p>
+        <p>STAP Energie komt op afspraak langs voor een grondige woningopname. Gemiddeld 1 à 2 uur.</p>
       </div>
       <div class="proces-stap">
         <div class="proces-num">3</div>
@@ -625,19 +550,19 @@ a    { text-decoration: none; }
   </div>
 </section>
 
-<!-- Werkgebied -->
-<section class="section" id="werkgebied">
+<!-- WERKGEBIED -->
+<section class="section sec-grijs">
   <div class="container">
+    <span class="sec-label">Werkgebied</span>
+    <h2 class="sec-title">Actief in uw regio</h2>
     <div class="regio-grid">
       <div>
-        <span class="sec-label">Werkgebied</span>
-        <h2 class="sec-title">Actief in uw regio</h2>
         <p class="sec-sub">STAP Energie is heel Nederland actief, maar heeft een focus op de regio rondom Leusden. Snel ter plaatse, vertrouwd met de lokale woningmarkt.</p>
         <div class="regio-tags">
-          <span class="regio-tag hoofd">Leusden</span>
-          <span class="regio-tag hoofd">Amersfoort</span>
-          <span class="regio-tag hoofd">Woudenberg</span>
-          <span class="regio-tag hoofd">Achterveld</span>
+          <span class="regio-tag highlight">Leusden</span>
+          <span class="regio-tag highlight">Amersfoort</span>
+          <span class="regio-tag highlight">Woudenberg</span>
+          <span class="regio-tag highlight">Achterveld</span>
           <span class="regio-tag">Utrecht</span>
           <span class="regio-tag">Soest</span>
           <span class="regio-tag">Baarn</span>
@@ -648,100 +573,100 @@ a    { text-decoration: none; }
           <span class="regio-tag">Heel Nederland</span>
         </div>
       </div>
-      <div class="regio-info">
-        <h4>Buiten de regio?</h4>
+      <div class="regio-kaart">
+        <h3>Buiten de regio?</h3>
         <p>STAP Energie werkt door heel Nederland. Buiten de directe regio kan een kleine reisvergoeding van toepassing zijn. Vraag gerust naar de mogelijkheden — we denken graag met u mee.</p>
-        <a href="#aanvraag" class="btn-groen">Aanvragen →</a>
+        <a href="#aanvraag" class="woning-card-cta">Aanvragen →</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Kennisflow -->
-<section class="section sec-grijs" id="kennisbank">
+<!-- KENNISFLOW -->
+<section class="section">
   <div class="container">
     <span class="sec-label">Verder verduurzamen</span>
     <h2 class="sec-title">Wat komt er na uw energielabel?</h2>
     <p class="sec-sub">Een energielabel geeft inzicht — maar de echte winst zit in de vervolgstap. STAP Energie helpt u begrijpen welke maatregelen het meeste opleveren voor uw situatie.</p>
-    <div class="kennis-grid" style="margin-top:2.5rem">
-      <p class="kennis-groep-label">Populaire vervolgstappen na een energielabel</p>
-      <div class="kennis-cards">
-        <div class="kennis-card">
-          <div class="kennis-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg></div>
-          <div class="kennis-body">
-            <span class="kennis-tag">Verwarming</span>
-            <h4>Warmtepomp</h4>
-            <p>Een warmtepomp vervangt uw cv-ketel en verlaagt uw gasverbruik tot wel 70%. Geschikt voor goed geïsoleerde woningen.</p>
-            <a href="/kennisbank/warmtepomp/" class="kennis-link">Meer lezen →</a>
-          </div>
+
+    <span class="sec-label kennis-groep-label-mt">Populaire vervolgstappen na een energielabel</span>
+    <div class="kennis-cards">
+      <a href="/kennisbank/warmtepomp/" class="kennis-card">
+        <div class="kennis-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div>
+        <div class="kennis-body">
+          <div style="font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--subtekst);">Verwarming</div>
+          <h4>Warmtepomp</h4>
+          <p>Een warmtepomp vervangt uw cv-ketel en verlaagt uw gasverbruik tot wel 70%. Geschikt voor goed geïsoleerde woningen.</p>
+          <span class="kennis-link">Meer lezen →</span>
         </div>
-        <div class="kennis-card">
-          <div class="kennis-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M3 9h18M9 21V9" stroke="currentColor" stroke-width="1.5"/></svg></div>
-          <div class="kennis-body">
-            <span class="kennis-tag">Isolatie</span>
-            <h4>Isolatie</h4>
-            <p>Spouwmuur-, vloer- en dakisolatie zijn vaak de meest kosteneffectieve maatregelen. Direct merkbaar in comfort én stookkosten.</p>
-            <a href="/kennisbank/isolatie/" class="kennis-link">Meer lezen →</a>
-          </div>
+      </a>
+      <a href="/kennisbank/isolatie/" class="kennis-card">
+        <div class="kennis-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg></div>
+        <div class="kennis-body">
+          <div style="font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--subtekst);">Isolatie</div>
+          <h4>Isolatie</h4>
+          <p>Spouwmuur-, vloer- en dakisolatie zijn vaak de meest kosteneffectieve maatregelen. Direct merkbaar in comfort én stookkosten.</p>
+          <span class="kennis-link">Meer lezen →</span>
         </div>
-        <div class="kennis-card">
-          <div class="kennis-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3v1M18.4 5.6l-.7.7M21 12h-1M18.4 18.4l-.7-.7M12 21v-1M5.6 18.4l.7-.7M3 12h1M5.6 5.6l.7.7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/></svg></div>
-          <div class="kennis-body">
-            <span class="kennis-tag">Opwekking</span>
-            <h4>Zonnepanelen</h4>
-            <p>Zonnepanelen zijn in de meeste gevallen binnen 7 jaar terugverdiend. Combineer met een thuisbatterij voor maximaal rendement.</p>
-            <a href="/kennisbank/zonnepanelen/" class="kennis-link">Meer lezen →</a>
-          </div>
+      </a>
+      <a href="/kennisbank/zonnepanelen/" class="kennis-card">
+        <div class="kennis-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></div>
+        <div class="kennis-body">
+          <div style="font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--subtekst);">Opwekking</div>
+          <h4>Zonnepanelen</h4>
+          <p>Zonnepanelen zijn in de meeste gevallen binnen 7 jaar terugverdiend. Combineer met een thuisbatterij voor maximaal rendement.</p>
+          <span class="kennis-link">Meer lezen →</span>
         </div>
-        <div class="kennis-card">
-          <div class="kennis-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10z" stroke="currentColor" stroke-width="1.5"/><path d="M12 8v4l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-          <div class="kennis-body">
-            <span class="kennis-tag">Verwarming</span>
-            <h4>HR-ketel vervangen</h4>
-            <p>Een verouderde cv-ketel vervangen door een moderne HR-ketel of hybride warmtepomp is vaak een slimme tussenstap.</p>
-            <a href="/kennisbank/cv-ketel/" class="kennis-link">Meer lezen →</a>
-          </div>
+      </a>
+      <a href="/kennisbank/cv-ketel/" class="kennis-card">
+        <div class="kennis-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 22c-4.97 0-9-1.79-9-4V6c0-2.21 4.03-4 9-4s9 1.79 9 4v12c0 2.21-4.03 4-9 4z"/><path d="M3 6c0 2.21 4.03 4 9 4s9-1.79 9-4M3 12c0 2.21 4.03 4 9 4s9-1.79 9-4"/></svg></div>
+        <div class="kennis-body">
+          <div style="font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--subtekst);">Verwarming</div>
+          <h4>HR-ketel vervangen</h4>
+          <p>Een verouderde cv-ketel vervangen door een moderne HR-ketel of hybride warmtepomp is vaak een slimme tussenstap.</p>
+          <span class="kennis-link">Meer lezen →</span>
         </div>
-      </div>
-      <p class="kennis-groep-label kennis-groep-label-mt">Slimmer wonen — de volgende stap</p>
-      <div class="kennis-cards">
-        <div class="kennis-card">
-          <div class="kennis-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="2" y="7" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2M12 12v3M10 14h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-          <div class="kennis-body">
-            <span class="kennis-tag">Opslag</span>
-            <h4>Thuisbatterij</h4>
-            <p>Sla zelf opgewekte zonne-energie op voor gebruik 's avonds of bij piekprijzen. Interessant bij dynamisch energiecontract.</p>
-            <a href="/kennisbank/thuisbatterij/" class="kennis-link">Meer lezen →</a>
-          </div>
+      </a>
+    </div>
+
+    <span class="sec-label kennis-groep-label-mt">Slimmer wonen — de volgende stap</span>
+    <div class="kennis-cards">
+      <a href="/kennisbank/thuisbatterij/" class="kennis-card">
+        <div class="kennis-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="2" y="7" width="18" height="11" rx="2"/><path d="M22 11v3M5 11v3M9 11v3M13 11v3"/></svg></div>
+        <div class="kennis-body">
+          <div style="font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--subtekst);">Opslag</div>
+          <h4>Thuisbatterij</h4>
+          <p>Sla zelf opgewekte zonne-energie op voor gebruik 's avonds of bij piekprijzen. Interessant bij dynamisch energiecontract.</p>
+          <span class="kennis-link">Meer lezen →</span>
         </div>
-        <div class="kennis-card">
-          <div class="kennis-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h11a2 2 0 012 2v3" stroke="currentColor" stroke-width="1.5"/><rect x="9" y="11" width="14" height="10" rx="1" stroke="currentColor" stroke-width="1.5"/><path d="M13 16h2M16 13v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-          <div class="kennis-body">
-            <span class="kennis-tag">Mobiliteit</span>
-            <h4>Laadpaal thuis</h4>
-            <p>Laad uw elektrische auto slim thuis op — bij voorkeur op uw eigen zonne-energie. Subsidie beschikbaar via SEEH-regeling.</p>
-            <a href="/kennisbank/laadpaal/" class="kennis-link">Meer lezen →</a>
-          </div>
+      </a>
+      <a href="/kennisbank/laadpaal/" class="kennis-card">
+        <div class="kennis-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+        <div class="kennis-body">
+          <div style="font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--subtekst);">Mobiliteit</div>
+          <h4>Laadpaal thuis</h4>
+          <p>Laad uw elektrische auto slim thuis op — bij voorkeur op uw eigen zonne-energie. Subsidie beschikbaar via SEEH-regeling.</p>
+          <span class="kennis-link">Meer lezen →</span>
         </div>
-        <div class="kennis-card">
-          <div class="kennis-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" stroke="currentColor" stroke-width="1.5"/></svg></div>
-          <div class="kennis-body">
-            <span class="kennis-tag">Klimaat</span>
-            <h4>Airco / warmte-koud</h4>
-            <p>Een moderne airco koelt in de zomer én verwarmt efficiënt in de winter. Werkt als aanvulling op een warmtepomp of als alternatief.</p>
-            <a href="/kennisbank/airco/" class="kennis-link">Meer lezen →</a>
-          </div>
+      </a>
+      <a href="/kennisbank/airco/" class="kennis-card">
+        <div class="kennis-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></div>
+        <div class="kennis-body">
+          <div style="font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--subtekst);">Klimaat</div>
+          <h4>Airco / warmte-koud</h4>
+          <p>Een moderne airco koelt in de zomer én verwarmt efficiënt in de winter. Werkt als aanvulling op een warmtepomp of als alternatief.</p>
+          <span class="kennis-link">Meer lezen →</span>
         </div>
-        <div class="kennis-card">
-          <div class="kennis-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-          <div class="kennis-body">
-            <span class="kennis-tag">Slim beheer</span>
-            <h4>Energiemanagementsysteem</h4>
-            <p>Een EMS koppelt uw zonnepanelen, batterij, laadpaal en warmtepomp slim aan elkaar. Zo gebruikt u altijd de goedkoopste energie.</p>
-            <a href="/kennisbank/ems/" class="kennis-link">Meer lezen →</a>
-          </div>
+      </a>
+      <a href="/kennisbank/ems/" class="kennis-card">
+        <div class="kennis-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg></div>
+        <div class="kennis-body">
+          <div style="font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--subtekst);">Slim beheer</div>
+          <h4>Energiemanagementsysteem</h4>
+          <p>Een EMS koppelt uw zonnepanelen, batterij, laadpaal en warmtepomp slim aan elkaar. Zo gebruikt u altijd de goedkoopste energie.</p>
+          <span class="kennis-link">Meer lezen →</span>
         </div>
-      </div>
+      </a>
     </div>
   </div>
 </section>
@@ -751,15 +676,15 @@ a    { text-decoration: none; }
   <div class="container">
     <h2>Klaar voor uw eerste STAP?</h2>
     <p>Gratis kennismakingsgesprek — geen verplichtingen, wel direct duidelijkheid. We reageren binnen 24 uur.</p>
-    <div class="cta-btns">
-      <a href="#aanvraag" class="btn-wit">Aanvraag indienen</a>
-      <a href="tel:0600000000" class="btn-wit-out">Direct bellen</a>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href="#aanvraag" class="btn-groen">Aanvraag indienen</a>
+      <a href="tel:0600000000" class="btn-outline">Direct bellen</a>
     </div>
-    <p class="cta-meta">info@stapenergie.nl &nbsp;·&nbsp; Leusden &amp; heel Nederland &nbsp;·&nbsp; KvK: in aanvraag</p>
+    <p style="margin-top:1.2rem;font-size:.82rem;color:rgba(255,255,255,.5);">info@stapenergie.nl &middot; Leusden &amp; heel Nederland &middot; KvK: in aanvraag</p>
   </div>
 </section>
 
-<!-- Footer -->
+<!-- FOOTER -->
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
@@ -798,86 +723,120 @@ a    { text-decoration: none; }
       </div>
     </div>
     <div class="footer-bottom">
-      <span class="footer-copy">© 2026 STAP Energie — KvK: in aanvraag</span>
-      <span class="footer-copy">Leusden · Amersfoort · Heel Nederland</span>
+      <span>© 2026 STAP Energie — KvK: in aanvraag</span>
+      <span>Leusden &middot; Amersfoort &middot; Heel Nederland</span>
     </div>
   </div>
 </footer>
 
 <script>
-// ── HAMBURGER ──
-var toggle   = document.getElementById('nav-toggle');
-var navLinks = document.getElementById('nav-links');
-
-if (toggle && navLinks) {
-  toggle.addEventListener('click', function() {
-    var isOpen = navLinks.classList.contains('open');
-    toggle.classList.toggle('open');
-    navLinks.classList.toggle('open');
-    toggle.setAttribute('aria-label', isOpen ? 'Menu openen' : 'Menu sluiten');
-  });
-}
-
-// Sluit menu en dropdowns bij klik buiten nav
-document.addEventListener('click', function(e) {
-  if (navLinks && toggle && !navLinks.contains(e.target) && !toggle.contains(e.target)) {
-    navLinks.classList.remove('open');
-    toggle.classList.remove('open');
-    toggle.setAttribute('aria-label', 'Menu openen');
-    document.querySelectorAll('.has-dd.open').forEach(function(el) { el.classList.remove('open'); });
-  }
-});
-
-// ── DROPDOWN — desktop hover met delay, mobiel via klik ──
-var dropdownTimers = {};
-
-document.querySelectorAll('.has-dd').forEach(function(item, idx) {
-  var link     = item.querySelector(':scope > a');
-  var dropdown = item.querySelector('.dropdown');
-  if (!dropdown) return;
-
-  item.addEventListener('mouseenter', function() {
-    if (window.innerWidth <= 768) return;
-    clearTimeout(dropdownTimers[idx]);
-    document.querySelectorAll('.has-dd.open').forEach(function(el) {
-      if (el !== item) el.classList.remove('open');
+  // ── HAMBURGER ──
+  var toggle = document.getElementById('nav-toggle');
+  var navLinks = document.getElementById('nav-links');
+  if (toggle && navLinks) {
+    toggle.addEventListener('click', function() {
+      var isOpen = navLinks.classList.contains('open');
+      toggle.classList.toggle('open');
+      navLinks.classList.toggle('open');
+      toggle.setAttribute('aria-label', isOpen ? 'Menu openen' : 'Menu sluiten');
     });
-    item.classList.add('open');
+  }
+  document.addEventListener('click', function(e) {
+    if (navLinks && toggle && !navLinks.contains(e.target) && !toggle.contains(e.target)) {
+      navLinks.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-label', 'Menu openen');
+    }
   });
 
-  item.addEventListener('mouseleave', function() {
-    if (window.innerWidth <= 768) return;
-    dropdownTimers[idx] = setTimeout(function() {
-      item.classList.remove('open');
-    }, 120);
-  });
-
-  if (link) {
-    link.addEventListener('click', function(e) {
-      if (window.innerWidth > 768) return;
-      e.preventDefault();
+  // ── DROPDOWN — desktop hover met 120ms delay, mobiel via klik ──
+  var ddTimers = {};
+  document.querySelectorAll('.has-dd').forEach(function(item, idx) {
+    var link = item.querySelector(':scope > a');
+    var dropdown = item.querySelector('.dropdown');
+    if (!dropdown) return;
+    item.addEventListener('mouseenter', function() {
+      if (window.innerWidth <= 768) return;
+      clearTimeout(ddTimers[idx]);
       document.querySelectorAll('.has-dd.open').forEach(function(el) {
         if (el !== item) el.classList.remove('open');
       });
-      item.classList.toggle('open');
+      item.classList.add('open');
     });
-  }
-});
+    item.addEventListener('mouseleave', function() {
+      if (window.innerWidth <= 768) return;
+      ddTimers[idx] = setTimeout(function() {
+        item.classList.remove('open');
+      }, 120);
+    });
+    dropdown.addEventListener('mouseenter', function() {
+      if (window.innerWidth <= 768) return;
+      clearTimeout(ddTimers[idx]);
+    });
+    dropdown.addEventListener('mouseleave', function() {
+      if (window.innerWidth <= 768) return;
+      ddTimers[idx] = setTimeout(function() {
+        item.classList.remove('open');
+      }, 120);
+    });
+    if (link) {
+      link.addEventListener('click', function(e) {
+        if (window.innerWidth > 768) return;
+        e.preventDefault();
+        document.querySelectorAll('.has-dd.open').forEach(function(el) {
+          if (el !== item) el.classList.remove('open');
+        });
+        item.classList.toggle('open');
+      });
+    }
+  });
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.has-dd')) {
+      document.querySelectorAll('.has-dd.open').forEach(function(el) {
+        el.classList.remove('open');
+      });
+    }
+  });
 
-// ── FORMULIER ──
-function submitForm(e) {
-  e.preventDefault();
-  var form = document.getElementById('hero-form');
-  form.innerHTML =
-    '<div class="form-success">' +
-    '<svg width="52" height="52" viewBox="0 0 52 52" fill="none" style="margin:0 auto 1rem">' +
-    '<circle cx="26" cy="26" r="25" stroke="#1a5c32" stroke-width="2"/>' +
-    '<path d="M15 26l8 8 14-14" stroke="#1a5c32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>' +
-    '</svg>' +
-    '<div class="form-success-title">Aanvraag ontvangen!</div>' +
-    '<div class="form-success-sub">We reageren binnen 24 uur. Tot snel!</div>' +
-    '</div>';
-}
+  // ── FORMULIER — fetch naar /api/contact.php ──
+  function submitForm(e) {
+    e.preventDefault();
+    var btn = document.querySelector('#hero-form .form-submit');
+    if (btn) { btn.disabled = true; btn.textContent = 'Versturen…'; }
+
+    var data = new FormData();
+    data.append('voornaam',   document.getElementById('voornaam')?.value   || '');
+    data.append('achternaam', document.getElementById('achternaam')?.value || '');
+    data.append('email',      document.getElementById('email')?.value      || '');
+    data.append('telefoon',   document.getElementById('telefoon')?.value   || '');
+    data.append('woningtype', document.getElementById('woningtype')?.value || '');
+    data.append('dienst',     document.getElementById('dienst')?.value     || '');
+
+    fetch('/api/contact.php', { method: 'POST', body: data })
+      .then(function(r) { return r.json(); })
+      .then(function(json) {
+        if (json.ok) {
+          var card = document.querySelector('.hero-form-card');
+          card.innerHTML =
+            '<div class="form-success">' +
+            '<svg width="52" height="52" viewBox="0 0 52 52" fill="none" style="margin:0 auto 1rem">' +
+            '<circle cx="26" cy="26" r="25" stroke="#1a5c32" stroke-width="2"/>' +
+            '<path d="M15 26l8 8 14-14" stroke="#1a5c32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>' +
+            '</svg>' +
+            '<div class="form-success-title">Aanvraag ontvangen!</div>' +
+            '<div class="form-success-sub">We nemen binnen 24 uur contact met u op. Tot snel!</div>' +
+            '</div>';
+        } else {
+          if (btn) { btn.disabled = false; btn.textContent = 'Aanvraag versturen →'; }
+          alert('Er ging iets mis. Probeer het opnieuw of mail naar info@stapenergie.nl');
+        }
+      })
+      .catch(function() {
+        if (btn) { btn.disabled = false; btn.textContent = 'Aanvraag versturen →'; }
+        alert('Er ging iets mis. Probeer het opnieuw of mail naar info@stapenergie.nl');
+      });
+  }
 </script>
+
 </body>
 </html>
