@@ -46,9 +46,10 @@
     /* ── SEGMENT-BALK ── */
 
     /* ── SEGMENT-BALK ── */
-    .segment-balk { background: var(--groen); display: flex; justify-content: flex-end; padding: 0 40px; }
-    .segment-balk a { color: rgba(255,255,255,.7); font-size: .75rem; font-weight: 500; padding: 6px 14px; letter-spacing: .04em; text-transform: uppercase; transition: color .2s; border-bottom: 2px solid transparent; display: inline-block; }
-    .segment-balk a:hover { color: #fff; border-bottom-color: var(--accent); }
+    .seg-bar { background: var(--lichtgrijs); border-bottom: 1px solid var(--rand); display: flex; align-items: center; height: 40px; overflow-x: auto; overflow-y: hidden; white-space: nowrap; scrollbar-width: none; padding: 0 5%; }
+    .seg-bar::-webkit-scrollbar { display: none; }
+    .seg-bar a { display: inline-flex; align-items: center; height: 100%; padding: 0 1rem; font-size: .82rem; font-weight: 500; color: var(--subtekst); border-bottom: 2px solid transparent; transition: color .2s, border-color .2s; white-space: nowrap; flex-shrink: 0; }
+    .seg-bar a:hover, .seg-bar a.active { color: var(--groen); border-bottom-color: var(--groen); }
 
     /* ── NAV ── */
     nav { position: sticky; top: 0; z-index: 100; background: #fff; border-bottom: 1px solid var(--rand); box-shadow: var(--shadow); }
@@ -314,7 +315,7 @@
       .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
       .sectie { padding: 56px 24px; }
       .breadcrumb-inner { padding: 10px 24px; }
-      .segment-balk { padding: 0 20px; }
+      .seg-bar { padding: 0 20px; }
     }
     @media (max-width: 480px) {
       .situaties-grid, .woning-grid, .stappen-grid, .footer-grid { grid-template-columns: 1fr; }
@@ -338,7 +339,7 @@
 <body>
 
 <!-- SEGMENT-BALK — neutraal -->
-<div class="segment-balk">
+<div class="seg-bar">
   <a href="/zakelijk/">Zakelijk</a>
   <a href="/particulieren/">Particulieren</a>
 </div>
