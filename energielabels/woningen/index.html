@@ -262,6 +262,37 @@
     .footer-bodem a { color: rgba(255,255,255,.35); }
     .footer-bodem a:hover { color: rgba(255,255,255,.65); }
 
+    /* ── AANVRAAGFORMULIER ── */
+    .formulier-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .formulier-card { background: #fff; border: 1px solid var(--rand); border-radius: var(--rl); padding: 36px; box-shadow: var(--shadow); }
+    .form-stack { display: flex; flex-direction: column; gap: .7rem; }
+    .form-rij { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; }
+    .form-veld { width: 100%; padding: .72rem .9rem; border: 1.5px solid var(--rand); border-radius: var(--r); font-size: .88rem; font-family: inherit; outline: none; transition: border-color .15s; background: #fff; color: var(--tekst); }
+    .form-veld:focus { border-color: var(--groen); }
+    .form-select { width: 100%; padding: .72rem .9rem; border: 1.5px solid var(--rand); border-radius: var(--r); font-size: .88rem; font-family: inherit; outline: none; background: #fff; color: var(--tekst); transition: border-color .15s; }
+    .form-select:focus { border-color: var(--groen); }
+    .form-check { display: flex; align-items: flex-start; gap: .5rem; font-size: .78rem; color: var(--subtekst); }
+    .form-check input { margin-top: 2px; accent-color: var(--groen); }
+    .form-check a { color: var(--groen); text-decoration: underline; }
+    .form-knop { width: 100%; padding: .85rem; background: var(--groen); color: #fff; border: none; border-radius: var(--r); font-size: .92rem; font-weight: 700; cursor: pointer; transition: background .2s; font-family: inherit; }
+    .form-knop:hover { background: var(--groen-mid); }
+    .form-knop:disabled { opacity: .6; cursor: not-allowed; }
+    .form-noot { text-align: center; font-size: .75rem; color: var(--subtekst); }
+    .form-succes { text-align: center; padding: 2.5rem 1rem; }
+    .form-succes-titel { font-weight: 700; font-size: 1.05rem; margin: 1rem 0 .3rem; }
+    .form-succes-sub { color: var(--subtekst); font-size: .88rem; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    .formulier-info { padding-top: 8px; }
+    .formulier-info h3 { font-family: 'DM Serif Display', serif; font-size: 1.2rem; margin-bottom: 24px; }
+    .formulier-stap { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 20px; }
+    .formulier-stap-nr { width: 32px; height: 32px; background: var(--groen); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: .85rem; flex-shrink: 0; }
+    .formulier-stap strong { display: block; font-size: .9rem; font-weight: 700; margin-bottom: 3px; }
+    .formulier-stap p { font-size: .83rem; color: var(--subtekst); line-height: 1.55; }
+    .formulier-contact { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--rand); }
+    .formulier-contact p { font-size: .83rem; color: var(--subtekst); margin-bottom: 8px; }
+    .formulier-tel { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; color: var(--groen); font-size: .95rem; }
+    .formulier-tel:hover { text-decoration: underline; }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
       .nav-links { display: none; }
@@ -272,7 +303,8 @@
       .hero { padding: 48px 24px 56px; }
       .trust-inner { padding: 12px 24px; }
       .trust-item { min-width: 140px; padding: 6px 10px; }
-      .situaties-grid { grid-template-columns: 1fr 1fr; }
+      .formulier-wrap { grid-template-columns: 1fr; gap: 32px; }
+      .form-rij { grid-template-columns: 1fr 1fr; }
       .woning-grid { grid-template-columns: 1fr 1fr; }
       .stappen-grid { grid-template-columns: 1fr 1fr; }
       .stappen-grid::before { display: none; }
@@ -286,6 +318,7 @@
     }
     @media (max-width: 480px) {
       .situaties-grid, .woning-grid, .stappen-grid, .footer-grid { grid-template-columns: 1fr; }
+      .form-rij { grid-template-columns: 1fr; }
       .hero-ctas, .cta-knoppen { flex-direction: column; align-items: flex-start; }
       .cta-knoppen { align-items: center; }
       .trust-inner { flex-direction: column; }
@@ -372,7 +405,7 @@
       <div class="hero-usp"><div class="hero-usp-vink">✓</div> Persoonlijk advies zonder extra kosten</div>
     </div>
     <div class="hero-ctas">
-      <a href="#prijzen" class="btn-primair">Label aanvragen <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="#aanvraag" class="btn-primair">Label aanvragen <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       <a href="tel:06XXXXXXXX" class="btn-sec"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1.5 2.5a1 1 0 011-1h2l.75 3.5-1.25.625a8 8 0 004.375 4.375L9.5 8.75l3.5.75v2A1 1 0 0112 12.5C5.648 12.5 1.5 8.352 1.5 2.5z" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg> Bel direct</a>
     </div>
   </div>
@@ -419,7 +452,7 @@
             <div class="woning-prijs-rij"><span class="woning-prijs-rij-label">40 – 100 m²</span><span class="woning-prijs-rij-bedrag">€ 249</span></div>
           </div>
           <p class="woning-incl">Inclusief btw · EP-online registratie · adviesrapport</p>
-          <a href="#prijzen" class="btn-groen-outline woning-cta">Aanvragen →</a>
+          <a href="#aanvraag" class="btn-groen-outline woning-cta">Aanvragen →</a>
         </div>
       </div>
 
@@ -435,7 +468,7 @@
             <div class="woning-prijs-rij"><span class="woning-prijs-rij-label">Hoekwoning / 2-onder-1-kap</span><span class="woning-prijs-rij-bedrag">€ 325</span></div>
           </div>
           <p class="woning-incl">Inclusief btw · EP-online registratie · adviesrapport</p>
-          <a href="#prijzen" class="btn-groen woning-cta">Aanvragen →</a>
+          <a href="#aanvraag" class="btn-groen woning-cta">Aanvragen →</a>
         </div>
       </div>
 
@@ -450,12 +483,97 @@
             <div class="woning-prijs-rij"><span class="woning-prijs-rij-label">Groter dan 150 m²</span><span class="woning-prijs-rij-bedrag">Offerte op maat</span></div>
           </div>
           <p class="woning-incl">Inclusief btw · EP-online registratie · adviesrapport</p>
-          <a href="#prijzen" class="btn-groen-outline woning-cta">Offerte aanvragen →</a>
+          <a href="#aanvraag" class="btn-groen-outline woning-cta">Offerte aanvragen →</a>
         </div>
       </div>
 
     </div>
-    <p class="prijzen-noot"><strong>Meerdere woningen?</strong> Bij 3 of meer woningen biedt STAP Energie een aantrekkelijk volumetarief. <a href="/energielabels/#aanvraag">Vraag naar de mogelijkheden →</a></p>
+    <p class="prijzen-noot"><strong>Meerdere woningen?</strong> Bij 3 of meer woningen biedt STAP Energie een aantrekkelijk volumetarief. <a href="#aanvraag">Vraag naar de mogelijkheden →</a></p>
+  </div>
+</section>
+
+<!-- AANVRAAGFORMULIER -->
+<section class="sectie sectie-grijs" id="aanvraag">
+  <div class="sectie-inner">
+    <span class="sectie-label">Aanvragen</span>
+    <h2 class="sectie-titel">Vraag direct uw energielabel aan</h2>
+    <p class="sectie-intro">Vul het formulier in en STAP Energie neemt binnen 24 uur contact met u op voor het inplannen van de opname.</p>
+    <div class="formulier-wrap">
+      <div class="formulier-card">
+        <form class="form-stack" id="aanvraag-form" onsubmit="submitAanvraag(event)">
+          <div class="form-rij">
+            <div>
+              <label for="voornaam" class="sr-only">Voornaam</label>
+              <input class="form-veld" type="text" id="voornaam" name="voornaam" placeholder="Voornaam" required>
+            </div>
+            <div>
+              <label for="achternaam" class="sr-only">Achternaam</label>
+              <input class="form-veld" type="text" id="achternaam" name="achternaam" placeholder="Achternaam">
+            </div>
+          </div>
+          <label for="email" class="sr-only">E-mailadres</label>
+          <input class="form-veld" type="email" id="email" name="email" placeholder="E-mailadres" required>
+          <label for="telefoon" class="sr-only">Telefoonnummer</label>
+          <input class="form-veld" type="tel" id="telefoon" name="telefoon" placeholder="Telefoonnummer">
+          <label for="woningtype" class="sr-only">Type woning</label>
+          <select class="form-select" id="woningtype" name="woningtype" required>
+            <option value="">Type woning</option>
+            <option value="Appartement tot 40m²">Appartement tot 40 m²</option>
+            <option value="Appartement 40-100m²">Appartement 40–100 m²</option>
+            <option value="Tussenwoning">Tussenwoning</option>
+            <option value="Hoekwoning / 2-onder-1-kap">Hoekwoning / 2-onder-1-kap</option>
+            <option value="Vrijstaande woning tot 150m²">Vrijstaande woning tot 150 m²</option>
+            <option value="Vrijstaande woning groter dan 150m²">Vrijstaande woning groter dan 150 m²</option>
+          </select>
+          <label for="gewenste-periode" class="sr-only">Gewenste periode</label>
+          <input class="form-veld" type="text" id="gewenste-periode" name="gewenste_periode" placeholder="Gewenste periode (bijv. volgende week)">
+          <label class="form-check">
+            <input type="checkbox" required>
+            Ik ga akkoord met de <a href="/privacyverklaring/">privacyverklaring</a>.
+          </label>
+          <button type="submit" class="form-knop">Aanvraag versturen →</button>
+          <p class="form-noot">Vrijblijvend · Geen verplichtingen · Binnen 24 uur reactie</p>
+        </form>
+      </div>
+      <div class="formulier-info">
+        <h3>Wat gebeurt er na uw aanvraag?</h3>
+        <div class="formulier-stap">
+          <div class="formulier-stap-nr">1</div>
+          <div>
+            <strong>Binnen 24 uur contact</strong>
+            <p>STAP Energie neemt contact op om de afspraak in te plannen op een moment dat u uitkomt.</p>
+          </div>
+        </div>
+        <div class="formulier-stap">
+          <div class="formulier-stap-nr">2</div>
+          <div>
+            <strong>Voorbereiding</strong>
+            <p>U ontvangt een overzicht van wat u kunt klaarzetten voor een soepele opname.</p>
+          </div>
+        </div>
+        <div class="formulier-stap">
+          <div class="formulier-stap-nr">3</div>
+          <div>
+            <strong>Opname aan huis</strong>
+            <p>Een gecertificeerd EPA-adviseur komt langs. Gemiddeld 1 à 2 uur.</p>
+          </div>
+        </div>
+        <div class="formulier-stap">
+          <div class="formulier-stap-nr">4</div>
+          <div>
+            <strong>Label binnen één week</strong>
+            <p>U ontvangt het officieel geregistreerde label + een persoonlijk adviesrapport.</p>
+          </div>
+        </div>
+        <div class="formulier-contact">
+          <p>Liever bellen?</p>
+          <a href="tel:06XXXXXXXX" class="formulier-tel">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1.5 2.5a1 1 0 011-1h2l.75 3.5-1.25.625a8 8 0 004.375 4.375L9.5 8.75l3.5.75v2A1 1 0 0112 12.5C5.648 12.5 1.5 8.352 1.5 2.5z" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>
+            06 – XX XX XX XX
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -666,7 +784,7 @@
     <h2>Klaar om uw woninglabel aan te vragen?</h2>
     <p>Vul het aanvraagformulier in en STAP Energie neemt binnen één werkdag contact met u op. Vaste prijs, gecertificeerd adviseur, geen gedoe.</p>
     <div class="cta-knoppen">
-      <a href="#prijzen" class="btn-primair">Label aanvragen <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="#aanvraag" class="btn-primair">Label aanvragen <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       <a href="tel:06XXXXXXXX" class="btn-sec"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1.5 2.5a1 1 0 011-1h2l.75 3.5-1.25.625a8 8 0 004.375 4.375L9.5 8.75l3.5.75v2A1 1 0 0112 12.5C5.648 12.5 1.5 8.352 1.5 2.5z" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg> Bel ons direct</a>
     </div>
     <div class="cta-garanties">
@@ -769,6 +887,46 @@
       });
     }
   });
+
+  // ── AANVRAAGFORMULIER ──
+  function submitAanvraag(e) {
+    e.preventDefault();
+    var btn = document.querySelector('#aanvraag-form .form-knop');
+    if (btn) { btn.disabled = true; btn.textContent = 'Versturen…'; }
+
+    var data = new FormData();
+    data.append('voornaam',        document.getElementById('voornaam')?.value        || '');
+    data.append('achternaam',      document.getElementById('achternaam')?.value      || '');
+    data.append('email',           document.getElementById('email')?.value           || '');
+    data.append('telefoon',        document.getElementById('telefoon')?.value        || '');
+    data.append('woningtype',      document.getElementById('woningtype')?.value      || '');
+    data.append('gewenste_periode',document.getElementById('gewenste-periode')?.value|| '');
+    data.append('pagina',          'energielabels/woningen');
+
+    fetch('/api/contact.php', { method: 'POST', body: data })
+      .then(function(r) { return r.json(); })
+      .then(function(json) {
+        if (json.ok) {
+          var card = document.querySelector('.formulier-card');
+          card.innerHTML =
+            '<div class="form-succes">' +
+            '<svg width="56" height="56" viewBox="0 0 56 56" fill="none" style="margin:0 auto">' +
+            '<circle cx="28" cy="28" r="27" stroke="#1a5c32" stroke-width="2"/>' +
+            '<path d="M17 28l8 8 14-14" stroke="#1a5c32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>' +
+            '</svg>' +
+            '<div class="form-succes-titel">Aanvraag ontvangen!</div>' +
+            '<div class="form-succes-sub">We nemen binnen 24 uur contact met u op. Tot snel!</div>' +
+            '</div>';
+        } else {
+          if (btn) { btn.disabled = false; btn.textContent = 'Aanvraag versturen →'; }
+          alert('Er ging iets mis. Probeer het opnieuw of mail naar info@stapenergie.nl');
+        }
+      })
+      .catch(function() {
+        if (btn) { btn.disabled = false; btn.textContent = 'Aanvraag versturen →'; }
+        alert('Er ging iets mis. Probeer het opnieuw of mail naar info@stapenergie.nl');
+      });
+  }
 
   // ── FAQ ACCORDION ──
   document.querySelectorAll('.faq-vraag').forEach(function(vraag) {
