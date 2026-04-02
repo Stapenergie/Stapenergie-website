@@ -3,12 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Energielabel & Verduurzaming voor Particulieren | STAP Energie</title>
+<title>Energielabel &amp; Verduurzaming voor Particulieren | STAP Energie</title>
 <meta name="description" content="Energielabel voor uw woning aanvragen in Leusden, Amersfoort, Woudenberg, Achterveld en omgeving. Snel, officieel en persoonlijk. Appartement, eengezinswoning of vrijstaande woning — STAP Energie regelt het.">
 <link rel="canonical" href="https://stapenergie.nl/particulieren/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a5c32'/%3E%3Ctext x='16' y='23' font-family='sans-serif' font-size='20' font-weight='700' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
 
 <!-- Structured data: LocalBusiness + Service -->
 <script type="application/ld+json">
@@ -37,7 +38,7 @@
 
 <style>
 /* ══════════════════════════════════
-   RESET & TOKENS — identiek aan homepage
+   RESET & TOKENS
 ══════════════════════════════════ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; overflow-x: hidden; }
@@ -71,7 +72,7 @@ a    { text-decoration: none; }
 .sec-grijs  { background: var(--lichtgrijs); }
 .sec-groen  { background: var(--groen-card); }
 .sec-label  { display: block; font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--groen); margin-bottom: .7rem; }
-.sec-label::before { content: '— '; }
+.sec-label::before { content: '-- '; }
 .sec-title  { font-family: var(--serif); font-size: clamp(1.8rem, 3.5vw, 2.6rem); line-height: 1.15; letter-spacing: -.02em; }
 .sec-sub    { font-size: 1rem; color: var(--subtekst); margin-top: .7rem; max-width: 560px; line-height: 1.7; }
 .btn-groen  { display: inline-flex; align-items: center; gap: 8px; background: var(--groen); color: #fff; padding: .85rem 2rem; border-radius: 100px; font-size: .92rem; font-weight: 700; transition: background .2s, transform .15s; }
@@ -108,7 +109,6 @@ a    { text-decoration: none; }
 .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* Dropdown */
-/* Dropdown — FIX: JS open class + ::after bridge */
 .has-dd { position: relative; }
 .has-dd > a { display: flex; align-items: center; gap: 4px; }
 .dropdown { display: none; position: absolute; top: calc(100% + 12px); left: 50%; transform: translateX(-50%); background: #fff; border: 1px solid var(--rand); border-radius: var(--rl); box-shadow: var(--shadow-lg); min-width: 260px; padding: .5rem; z-index: 300; }
@@ -165,10 +165,12 @@ a    { text-decoration: none; }
 .form-check a { color: var(--groen); font-weight: 600; }
 .form-submit { width: 100%; padding: .9rem; background: var(--groen); color: #fff; border: none; border-radius: 100px; font-size: .92rem; font-weight: 700; cursor: pointer; font-family: inherit; transition: background .2s; }
 .form-submit:hover { background: var(--groen-mid); }
+.form-submit:disabled { opacity: .6; cursor: not-allowed; }
 .form-note   { text-align: center; font-size: .72rem; color: #9aa5b4; margin-top: .3rem; }
-.form-success { text-align: center; padding: 2rem 0; }
-.form-success-title { font-weight: 700; font-size: 1rem; margin-bottom: .3rem; }
-.form-success-sub   { color: var(--subtekst); font-size: .85rem; }
+.form-succes { text-align: center; padding: 2rem 0; }
+.form-succes h3 { font-weight: 700; font-size: 1rem; margin: .75rem 0 .3rem; }
+.form-succes p  { color: var(--subtekst); font-size: .85rem; line-height: 1.6; }
+.form-error  { color: #c0392b; font-size: .82rem; margin-top: 4px; }
 
 /* ══════════════════════════════════
    USP BALK
@@ -267,7 +269,7 @@ a    { text-decoration: none; }
 ══════════════════════════════════ */
 .kennis-grid { margin-top: 2.5rem; }
 .kennis-groep-label { font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--groen); margin-bottom: 1rem; display: block; }
-.kennis-groep-label::before { content: '— '; }
+.kennis-groep-label::before { content: '-- '; }
 .kennis-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
 .kennis-card  { background: #fff; border: 1.5px solid var(--rand); border-radius: var(--rl); padding: 1.4rem; display: flex; flex-direction: column; gap: .8rem; transition: border-color .2s, box-shadow .2s, transform .2s; }
 .kennis-card:hover { border-color: var(--groen); box-shadow: var(--shadow); transform: translateY(-3px); }
@@ -345,7 +347,7 @@ a    { text-decoration: none; }
 
 <!-- Segment bar -->
 <div class="seg-bar">
-  <a href="/">Zakelijk</a>
+  <a href="/zakelijk/">Zakelijk</a>
   <a href="/particulieren/" class="active">Particulieren</a>
 </div>
 
@@ -383,7 +385,7 @@ a    { text-decoration: none; }
     </li>
     <li><a href="/over-erik/">Over Erik</a></li>
     <li><a href="/kennisbank/">Kennisbank</a></li>
-    <li><a href="#aanvraag" class="nav-cta">Gratis gesprek →</a></li>
+    <li><a href="#aanvraag" class="nav-cta">Gratis gesprek &rarr;</a></li>
   </ul>
   <button class="nav-toggle" id="nav-toggle" aria-label="Menu openen">
     <span></span><span></span><span></span>
@@ -395,7 +397,7 @@ a    { text-decoration: none; }
   <div class="container">
     <div class="breadcrumb-inner">
       <a href="/">Home</a>
-      <span class="sep">›</span>
+      <span class="sep">&rsaquo;</span>
       <span class="current">Particulieren</span>
     </div>
   </div>
@@ -416,7 +418,7 @@ a    { text-decoration: none; }
           <li>Actief in Leusden, Amersfoort, Woudenberg, Achterveld &amp; omgeving</li>
         </ul>
         <div class="page-hero-btns">
-          <a href="#aanvraag" class="btn-wit">Gratis kennismaking →</a>
+          <a href="#aanvraag" class="btn-wit">Gratis kennismaking &rarr;</a>
           <a href="tel:0600000000" class="btn-wit-out">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 10.5c-.8-.8-1.8-1.2-2.8-1.2-.5 0-1 .1-1.5.4L7.8 8.3C8.4 7.4 8.7 6.3 8.7 5.2c0-1-.4-2-1.2-2.8L6.3 1.2C5.5.4 4.5 0 3.5 0S1.5.4.7 1.2L.3 1.6C-.1 2-.1 2.6.1 3c.7 1.5 1.8 2.8 3.1 3.9L5 8.7c.4.4 1 .6 1.6.6.3 0 .5 0 .8-.1l1.8 1.8c-.2.5-.3 1-.3 1.5 0 1 .4 2 1.2 2.8l1.2 1.2c.8.8 1.8 1.2 2.8 1.2s2-.4 2.8-1.2l.4-.4c.8-.8.8-2 0-2.8l-1.3-1.3z" fill="currentColor"/></svg>
             Direct bellen
@@ -426,43 +428,44 @@ a    { text-decoration: none; }
       <!-- Aanvraagformulier -->
       <div class="hero-form-card" id="aanvraag">
         <h3>Aanvraag voor uw woning</h3>
-        <p>Gratis en vrijblijvend. Reactie binnen 24 uur.</p>
+        <p>Gratis en vrijblijvend. Reactie binnen twee werkdagen.</p>
         <form class="form-stack" id="hero-form" onsubmit="submitForm(event)">
+          <input type="hidden" name="pagina" value="particulieren">
           <div class="form-row">
             <div>
               <label for="voornaam" class="sr-only">Voornaam</label>
-              <input class="form-input" type="text" id="voornaam" placeholder="Voornaam" required>
+              <input class="form-input" type="text" id="voornaam" name="voornaam" placeholder="Voornaam" required>
             </div>
             <div>
               <label for="achternaam" class="sr-only">Achternaam</label>
-              <input class="form-input" type="text" id="achternaam" placeholder="Achternaam">
+              <input class="form-input" type="text" id="achternaam" name="achternaam" placeholder="Achternaam">
             </div>
           </div>
           <label for="email" class="sr-only">E-mailadres</label>
-          <input class="form-input" type="email" id="email" placeholder="E-mailadres" required>
+          <input class="form-input" type="email" id="email" name="email" placeholder="E-mailadres" required>
           <label for="telefoon" class="sr-only">Telefoonnummer</label>
-          <input class="form-input" type="tel" id="telefoon" placeholder="Telefoonnummer">
+          <input class="form-input" type="tel" id="telefoon" name="telefoon" placeholder="Telefoonnummer">
           <label for="woningtype" class="sr-only">Type woning</label>
-          <select class="form-select" id="woningtype" required>
+          <select class="form-select" id="woningtype" name="woningtype" required>
             <option value="" disabled selected>Type woning</option>
-            <option>Appartement</option>
-            <option>Eengezinswoning</option>
-            <option>Vrijstaande woning</option>
+            <option value="Appartement">Appartement</option>
+            <option value="Eengezinswoning">Eengezinswoning</option>
+            <option value="Vrijstaande woning">Vrijstaande woning</option>
           </select>
           <label for="dienst" class="sr-only">Waarmee kan ik u helpen?</label>
-          <select class="form-select" id="dienst" required>
+          <select class="form-select" id="dienst" name="dienst" required>
             <option value="" disabled selected>Waarmee kan ik u helpen?</option>
-            <option>Energielabel aanvragen</option>
-            <option>Verduurzamingsadvies</option>
-            <option>Subsidie in kaart brengen</option>
-            <option>Weet ik nog niet</option>
+            <option value="Energielabel aanvragen">Energielabel aanvragen</option>
+            <option value="Verduurzamingsadvies">Verduurzamingsadvies</option>
+            <option value="Subsidie in kaart brengen">Subsidie in kaart brengen</option>
+            <option value="Weet ik nog niet">Weet ik nog niet</option>
           </select>
           <label class="form-check">
             <input type="checkbox" required>
             Ik ga akkoord met de <a href="/privacyverklaring/">privacyverklaring</a>.
           </label>
-          <button type="submit" class="form-submit">Aanvraag versturen →</button>
-          <p class="form-note">Vrijblijvend · Geen verplichtingen · Binnen 24 uur reactie</p>
+          <button type="submit" class="form-submit">Aanvraag versturen &rarr;</button>
+          <p class="form-note">Vrijblijvend &middot; Geen verplichtingen &middot; Binnen twee werkdagen reactie</p>
         </form>
       </div>
     </div>
@@ -483,7 +486,7 @@ a    { text-decoration: none; }
         <div class="usp-icon">
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M9 5v4l3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
         </div>
-        <div><strong>Reactie binnen 24 uur</strong><span>Snel en persoonlijk</span></div>
+        <div><strong>Reactie binnen twee werkdagen</strong><span>Snel en persoonlijk</span></div>
       </div>
       <div class="usp-item">
         <div class="usp-icon">
@@ -519,15 +522,15 @@ a    { text-decoration: none; }
           <p class="woning-sub">Snel en officieel geregistreerd. Vaste prijs, geen verrassingen.</p>
           <div class="woning-prijzen">
             <div class="prijs-rij">
-              <span class="prijs-label">Tot 40 m²</span>
-              <span class="prijs-val">€ 195</span>
+              <span class="prijs-label">Tot 40 m&sup2;</span>
+              <span class="prijs-val">&euro; 195</span>
             </div>
             <div class="prijs-rij">
-              <span class="prijs-label">40 – 100 m²</span>
-              <span class="prijs-val">€ 249</span>
+              <span class="prijs-label">40 &ndash; 100 m&sup2;</span>
+              <span class="prijs-val">&euro; 249</span>
             </div>
           </div>
-          <a href="#aanvraag" class="woning-cta">Aanvragen →</a>
+          <a href="#aanvraag" class="woning-cta">Aanvragen &rarr;</a>
         </div>
       </div>
 
@@ -543,14 +546,14 @@ a    { text-decoration: none; }
           <div class="woning-prijzen">
             <div class="prijs-rij">
               <span class="prijs-label">Tussen woningen</span>
-              <span class="prijs-val">€ 295</span>
+              <span class="prijs-val">&euro; 295</span>
             </div>
             <div class="prijs-rij">
               <span class="prijs-label">Hoekwoning / 2-onder-1-kap</span>
-              <span class="prijs-val">€ 325</span>
+              <span class="prijs-val">&euro; 325</span>
             </div>
           </div>
-          <a href="#aanvraag" class="woning-cta">Aanvragen →</a>
+          <a href="#aanvraag" class="woning-cta">Aanvragen &rarr;</a>
         </div>
       </div>
 
@@ -561,22 +564,22 @@ a    { text-decoration: none; }
         </div>
         <div class="woning-card-body">
           <h3>Vrijstaande woning</h3>
-          <p class="woning-sub">Ruime woning of villa. Tot 150 m² vaste prijs, daarboven offerte op maat.</p>
+          <p class="woning-sub">Ruime woning of villa. Tot 150 m&sup2; vaste prijs, daarboven offerte op maat.</p>
           <div class="woning-prijzen">
             <div class="prijs-rij">
-              <span class="prijs-label">Tot 150 m²</span>
-              <span class="prijs-val">€ 345</span>
+              <span class="prijs-label">Tot 150 m&sup2;</span>
+              <span class="prijs-val">&euro; 345</span>
             </div>
             <div class="prijs-rij">
-              <span class="prijs-label">Groter dan 150 m²</span>
+              <span class="prijs-label">Groter dan 150 m&sup2;</span>
               <span class="prijs-val">Offerte op maat</span>
             </div>
           </div>
-          <a href="#aanvraag" class="woning-cta">Offerte aanvragen →</a>
+          <a href="#aanvraag" class="woning-cta">Offerte aanvragen &rarr;</a>
         </div>
       </div>
 
-        </div>
+    </div>
   </div>
 </section>
 
@@ -595,7 +598,7 @@ a    { text-decoration: none; }
           </div>
           <h3>Energielabel woning</h3>
           <p>Verplicht bij verkoop en verhuur. Officieel geregistreerd in EP-online. Snel op afspraak bij u thuis.</p>
-          <span class="dienst-link">Meer info en aanvragen →</span>
+          <span class="dienst-link">Meer info en aanvragen &rarr;</span>
         </div>
       </a>
 
@@ -606,7 +609,7 @@ a    { text-decoration: none; }
           </div>
           <h3>Verduurzaming &amp; Subsidie</h3>
           <p>Persoonlijk stappenplan voor uw woning. Alle beschikbare subsidies in kaart — ISDE, SEEH, gemeentelijke regelingen.</p>
-          <span class="dienst-link">Meer info →</span>
+          <span class="dienst-link">Meer info &rarr;</span>
         </div>
       </a>
 
@@ -635,12 +638,12 @@ a    { text-decoration: none; }
       <div class="proces-stap">
         <div class="proces-num">1</div>
         <h4>Aanvraag indienen</h4>
-        <p>Vul het formulier in of bel direct. Binnen 24 uur nemen we contact op voor een afspraak.</p>
+        <p>Vul het formulier in of bel direct. Binnen twee werkdagen nemen we contact op voor een afspraak.</p>
       </div>
       <div class="proces-stap">
         <div class="proces-num">2</div>
         <h4>Opname aan huis</h4>
-        <p>Erik komt op afspraak langs voor een grondige woningopname. Gemiddeld 45–90 minuten.</p>
+        <p>Erik komt op afspraak langs voor een grondige woningopname. Gemiddeld 45&ndash;90 minuten.</p>
       </div>
       <div class="proces-stap">
         <div class="proces-num">3</div>
@@ -682,7 +685,7 @@ a    { text-decoration: none; }
       <div class="regio-info">
         <h4>Buiten de regio?</h4>
         <p>STAP Energie werkt door heel Nederland. Buiten de directe regio kan een kleine reisvergoeding van toepassing zijn. Vraag gerust naar de mogelijkheden — we denken graag met u mee.</p>
-        <a href="#aanvraag" class="btn-groen">Aanvragen →</a>
+        <a href="#aanvraag" class="btn-groen">Aanvragen &rarr;</a>
       </div>
     </div>
   </div>
@@ -696,8 +699,6 @@ a    { text-decoration: none; }
     <p class="sec-sub">Een energielabel geeft inzicht — maar de echte winst zit in de vervolgstap. STAP Energie helpt u begrijpen welke maatregelen het meeste opleveren voor uw situatie.</p>
 
     <div class="kennis-grid">
-
-      <!-- Populaire vervolgstappen -->
       <p class="kennis-groep-label">Populaire vervolgstappen na een energielabel</p>
       <div class="kennis-cards">
 
@@ -708,8 +709,8 @@ a    { text-decoration: none; }
           <div class="kennis-body">
             <span class="kennis-tag">Verwarming</span>
             <h4>Warmtepomp</h4>
-            <p>Een warmtepomp vervangt uw cv-ketel en verlaagt uw gasverbruik tot wel 70%. Geschikt voor goed geïsoleerde woningen.</p>
-            <a href="/kennisbank/warmtepomp/" class="kennis-link">Meer lezen →</a>
+            <p>Een warmtepomp vervangt uw cv-ketel en verlaagt uw gasverbruik tot wel 70%. Geschikt voor goed ge&iuml;soleerde woningen.</p>
+            <a href="/kennisbank/warmtepomp/" class="kennis-link">Meer lezen &rarr;</a>
           </div>
         </div>
 
@@ -720,8 +721,8 @@ a    { text-decoration: none; }
           <div class="kennis-body">
             <span class="kennis-tag">Isolatie</span>
             <h4>Isolatie</h4>
-            <p>Spouwmuur-, vloer- en dakisolatie zijn vaak de meest kosteneffectieve maatregelen. Direct merkbaar in comfort én stookkosten.</p>
-            <a href="/kennisbank/isolatie/" class="kennis-link">Meer lezen →</a>
+            <p>Spouwmuur-, vloer- en dakisolatie zijn vaak de meest kosteneffectieve maatregelen. Direct merkbaar in comfort &eacute;n stookkosten.</p>
+            <a href="/kennisbank/isolatie/" class="kennis-link">Meer lezen &rarr;</a>
           </div>
         </div>
 
@@ -733,7 +734,7 @@ a    { text-decoration: none; }
             <span class="kennis-tag">Opwekking</span>
             <h4>Zonnepanelen</h4>
             <p>Zonnepanelen zijn in de meeste gevallen binnen 7 jaar terugverdiend. Combineer met een thuisbatterij voor maximaal rendement.</p>
-            <a href="/kennisbank/zonnepanelen/" class="kennis-link">Meer lezen →</a>
+            <a href="/kennisbank/zonnepanelen/" class="kennis-link">Meer lezen &rarr;</a>
           </div>
         </div>
 
@@ -745,13 +746,12 @@ a    { text-decoration: none; }
             <span class="kennis-tag">Verwarming</span>
             <h4>HR-ketel vervangen</h4>
             <p>Een verouderde cv-ketel vervangen door een moderne HR-ketel of hybride warmtepomp is vaak een slimme tussenstap.</p>
-            <a href="/kennisbank/cv-ketel/" class="kennis-link">Meer lezen →</a>
+            <a href="/kennisbank/cv-ketel/" class="kennis-link">Meer lezen &rarr;</a>
           </div>
         </div>
 
       </div>
 
-      <!-- Slimmer wonen -->
       <p class="kennis-groep-label kennis-groep-label-mt">Slimmer wonen — de volgende stap</p>
       <div class="kennis-cards">
 
@@ -762,8 +762,8 @@ a    { text-decoration: none; }
           <div class="kennis-body">
             <span class="kennis-tag">Opslag</span>
             <h4>Thuisbatterij</h4>
-            <p>Sla zelf opgewekte zonne-energie op voor gebruik 's avonds of bij piekprijzen. Interessant bij dynamisch energiecontract.</p>
-            <a href="/kennisbank/thuisbatterij/" class="kennis-link">Meer lezen →</a>
+            <p>Sla zelf opgewekte zonne-energie op voor gebruik &apos;s avonds of bij piekprijzen. Interessant bij dynamisch energiecontract.</p>
+            <a href="/kennisbank/thuisbatterij/" class="kennis-link">Meer lezen &rarr;</a>
           </div>
         </div>
 
@@ -775,7 +775,7 @@ a    { text-decoration: none; }
             <span class="kennis-tag">Mobiliteit</span>
             <h4>Laadpaal thuis</h4>
             <p>Laad uw elektrische auto slim thuis op — bij voorkeur op uw eigen zonne-energie. Subsidie beschikbaar via SEEH-regeling.</p>
-            <a href="/kennisbank/laadpaal/" class="kennis-link">Meer lezen →</a>
+            <a href="/kennisbank/laadpaal/" class="kennis-link">Meer lezen &rarr;</a>
           </div>
         </div>
 
@@ -786,8 +786,8 @@ a    { text-decoration: none; }
           <div class="kennis-body">
             <span class="kennis-tag">Klimaat</span>
             <h4>Airco / warmte-koud</h4>
-            <p>Een moderne airco koelt in de zomer én verwarmt efficiënt in de winter. Werkt als aanvulling op een warmtepomp of als alternatief.</p>
-            <a href="/kennisbank/airco/" class="kennis-link">Meer lezen →</a>
+            <p>Een moderne airco koelt in de zomer &eacute;n verwarmt effici&euml;nt in de winter. Werkt als aanvulling op een warmtepomp of als alternatief.</p>
+            <a href="/kennisbank/airco/" class="kennis-link">Meer lezen &rarr;</a>
           </div>
         </div>
 
@@ -799,7 +799,7 @@ a    { text-decoration: none; }
             <span class="kennis-tag">Slim beheer</span>
             <h4>Energiemanagementsysteem</h4>
             <p>Een EMS koppelt uw zonnepanelen, batterij, laadpaal en warmtepomp slim aan elkaar. Zo gebruikt u altijd de goedkoopste energie.</p>
-            <a href="/kennisbank/ems/" class="kennis-link">Meer lezen →</a>
+            <a href="/kennisbank/ems/" class="kennis-link">Meer lezen &rarr;</a>
           </div>
         </div>
 
@@ -812,12 +812,12 @@ a    { text-decoration: none; }
 <section class="cta-sec">
   <div class="container">
     <h2>Klaar voor uw eerste STAP?</h2>
-    <p>Gratis kennismakingsgesprek — geen verplichtingen, wel direct duidelijkheid. We reageren binnen 24 uur.</p>
+    <p>Gratis kennismakingsgesprek — geen verplichtingen, wel direct duidelijkheid. We reageren binnen twee werkdagen.</p>
     <div class="cta-btns">
       <a href="#aanvraag" class="btn-wit">Aanvraag indienen</a>
       <a href="tel:0600000000" class="btn-wit-out">Direct bellen</a>
     </div>
-    <p class="cta-meta">info@stapenergie.nl &nbsp;·&nbsp; Leusden &amp; heel Nederland &nbsp;·&nbsp; KvK: in aanvraag</p>
+    <p class="cta-meta">info@stapenergie.nl &nbsp;&middot;&nbsp; Leusden &amp; heel Nederland &nbsp;&middot;&nbsp; KvK: in aanvraag</p>
   </div>
 </section>
 
@@ -853,15 +853,15 @@ a    { text-decoration: none; }
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
-        <a href="tel:0600000000">06 – XX XX XX XX</a>
+        <a href="tel:0600000000">06 &ndash; XX XX XX XX</a>
         <a href="mailto:info@stapenergie.nl">info@stapenergie.nl</a>
         <a href="/over-erik/">Over Erik</a>
         <a href="/privacyverklaring/">Privacy &amp; AVG</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span class="footer-copy">© 2026 STAP Energie — KvK: in aanvraag</span>
-      <span class="footer-copy">Leusden · Amersfoort · Heel Nederland</span>
+      <span class="footer-copy">&copy; 2026 STAP Energie &mdash; KvK: in aanvraag</span>
+      <span class="footer-copy">Leusden &middot; Amersfoort &middot; Heel Nederland</span>
     </div>
   </div>
 </footer>
@@ -880,7 +880,6 @@ if (toggle && navLinks) {
   });
 }
 
-// Sluit menu en dropdowns bij klik buiten nav
 document.addEventListener('click', function(e) {
   if (navLinks && toggle && !navLinks.contains(e.target) && !toggle.contains(e.target)) {
     navLinks.classList.remove('open');
@@ -890,7 +889,7 @@ document.addEventListener('click', function(e) {
   }
 });
 
-// ── DROPDOWN — desktop hover met delay, mobiel via klik ──
+// ── DROPDOWN ──
 var dropdownTimers = {};
 
 document.querySelectorAll('.has-dd').forEach(function(item, idx) {
@@ -926,19 +925,56 @@ document.querySelectorAll('.has-dd').forEach(function(item, idx) {
   }
 });
 
-// ── FORMULIER ──
-function submitForm(e) {
-  e.preventDefault();
-  var form = document.getElementById('hero-form');
-  form.innerHTML =
-    '<div class="form-success">' +
-    '<svg width="52" height="52" viewBox="0 0 52 52" fill="none" style="margin:0 auto 1rem">' +
-    '<circle cx="26" cy="26" r="25" stroke="#1a5c32" stroke-width="2"/>' +
-    '<path d="M15 26l8 8 14-14" stroke="#1a5c32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>' +
-    '</svg>' +
-    '<div class="form-success-title">Aanvraag ontvangen!</div>' +
-    '<div class="form-success-sub">We reageren binnen 24 uur. Tot snel!</div>' +
-    '</div>';
+// ── FORMULIER: verstuurt naar /api/contact.php ──
+async function submitForm(event) {
+  event.preventDefault();
+
+  var form = event.target;
+  var btn  = form.querySelector('[type="submit"]');
+  if (btn.disabled) return;
+
+  btn.disabled  = true;
+  var origTekst = btn.textContent;
+  btn.textContent = 'Bezig met versturen\u2026';
+
+  var bestaandeFout = form.querySelector('.form-error');
+  if (bestaandeFout) bestaandeFout.remove();
+
+  var data = new FormData(form);
+
+  try {
+    var response = await fetch('/api/contact.php', {
+      method: 'POST',
+      body: data
+    });
+    var json = await response.json();
+
+    if (json.succes) {
+      form.innerHTML =
+        '<div class="form-succes">' +
+        '<svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">' +
+        '<circle cx="24" cy="24" r="24" fill="#e8f5ed"/>' +
+        '<path d="M14 24.5l7 7 13-14" stroke="#1a5c32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>' +
+        '</svg>' +
+        '<h3>Aanvraag ontvangen!</h3>' +
+        '<p>We nemen <strong>binnen twee werkdagen</strong> contact met u op.<br>U ontvangt ook een bevestiging per e-mail.</p>' +
+        '</div>';
+    } else {
+      btn.disabled    = false;
+      btn.textContent = origTekst;
+      var fout = document.createElement('p');
+      fout.className   = 'form-error';
+      fout.textContent = (json.fouten && json.fouten[0]) || 'Er ging iets mis. Probeer het opnieuw.';
+      btn.insertAdjacentElement('afterend', fout);
+    }
+  } catch (err) {
+    btn.disabled    = false;
+    btn.textContent = origTekst;
+    var fout = document.createElement('p');
+    fout.className   = 'form-error';
+    fout.textContent = 'Verbinding mislukt. Controleer uw internetverbinding en probeer het opnieuw.';
+    btn.insertAdjacentElement('afterend', fout);
+  }
 }
 </script>
 </body>
