@@ -238,6 +238,17 @@
 
 
 
+
+    /* ── INGELIJST CERTIFICAAT ────────────────────────────── */
+    #aanvraag-certificaat { scroll-margin-top: 80px; }
+    .cert-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; }
+    .cert-voordelen { background: #fff; border: 1.5px solid var(--rand); border-radius: var(--rl); padding: 1.5rem; list-style: none; }
+    .cert-voordelen li { font-size: .87rem; color: var(--subtekst); padding: .25rem 0; display: flex; gap: .5rem; align-items: flex-start; border-bottom: 1px solid var(--rand); }
+    .cert-voordelen li:last-child { border-bottom: none; }
+    .cert-voordelen li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+    .cert-prijs { font-size: .9rem; color: var(--subtekst); margin-top: 1rem; }
+    @media (max-width: 768px) { .cert-layout { grid-template-columns: 1fr; } }
+
     /* ── SCROLL OFFSET (sticky nav compensatie) ─────────── */
     #prijzen, #aanvraag { scroll-margin-top: 80px; }
 
@@ -363,7 +374,7 @@
       </div>
       <div class="hero-badge">
         <svg viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="#fff" stroke-width="1.3"/><path d="M4.5 7l2 2 3-3" stroke="#fff" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Reactie binnen 24 uur
+        Reactie binnen twee werkdagen
       </div>
       <div class="hero-badge">
         <svg viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="#fff" stroke-width="1.3"/><path d="M4.5 7l2 2 3-3" stroke="#fff" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -380,7 +391,7 @@
 <!-- ── URGENTIE KANTOREN ──────────────────────────────────── -->
 <div class="urgentie">
   <div class="urgentie-inner">
-    <div class="urgentie-icon">⚠️</div>
+    <div class="urgentie-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#e6a817" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
     <div class="urgentie-content">
       <h3>Kantoren groter dan 100 m² zijn verplicht minimaal energielabel C te hebben</h3>
       <p>Sinds 1 januari 2023 geldt voor alle kantoorgebouwen met een gebruiksoppervlakte van <strong>100 m² of meer</strong> de verplichting om minimaal energielabel C te bezitten. Zonder geldig label C of beter riskeert u een boete én een gebruiksverbod door de gemeente. Deze verplichting geldt ook als u het pand huurt — zowel huurder als eigenaar zijn verantwoordelijk. <strong>Heeft u nog geen energielabel of heeft uw kantoor label D of lager?</strong> Dan is actie vereist.</p>
@@ -398,7 +409,7 @@
     <div class="functies-grid">
 
       <div class="functie-card">
-        <div class="functie-icon">🏢</div>
+        <div class="functie-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--groen)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg></div>
         <div class="functie-card-content">
           <h4>Kantoor</h4>
           <p>Alle kantoorgebouwen met een gebruiksoppervlakte van 100 m² of meer zijn verplicht minimaal label C te hebben. Dit geldt ook voor gehuurde kantoorruimte.</p>
@@ -407,7 +418,7 @@
       </div>
 
       <div class="functie-card">
-        <div class="functie-icon">🛍️</div>
+        <div class="functie-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--groen)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div>
         <div class="functie-card-content">
           <h4>Winkel</h4>
           <p>Winkelpanden zijn labelplichtig bij verkoop, verhuur en oplevering. Het energielabel moet worden overhandigd aan de nieuwe gebruiker.</p>
@@ -416,7 +427,7 @@
       </div>
 
       <div class="functie-card">
-        <div class="functie-icon">🏫</div>
+        <div class="functie-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--groen)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M3 21h18M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="9" width="4" height="4"/></svg></div>
         <div class="functie-card-content">
           <h4>Onderwijs</h4>
           <p>Onderwijsgebouwen vallen onder de energieprestatieplicht. Van basisschool tot hogeschool — een energielabel is verplicht.</p>
@@ -425,7 +436,7 @@
       </div>
 
       <div class="functie-card">
-        <div class="functie-icon">🏥</div>
+        <div class="functie-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--groen)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 8v8M8 12h8"/></svg></div>
         <div class="functie-card-content">
           <h4>Gezondheidszorg</h4>
           <p>Zorginstellingen en gezondheidsgebouwen zijn labelplichtig. Denk aan klinieken, behandelcentra en verpleeghuizen.</p>
@@ -434,7 +445,7 @@
       </div>
 
       <div class="functie-card">
-        <div class="functie-icon">🧒</div>
+        <div class="functie-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--groen)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/><path d="M8 5.5C8 4 10 3 12 3s4 1 4 2.5"/></svg></div>
         <div class="functie-card-content">
           <h4>Kinderopvang</h4>
           <p>Gebouwen met een kinderopvangfunctie — waaronder kinderdagverblijven en crèches — vallen onder de energieprestatieplicht.</p>
@@ -443,7 +454,7 @@
       </div>
 
       <div class="functie-card">
-        <div class="functie-icon">🏊</div>
+        <div class="functie-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--groen)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M2 12h20M2 17c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><circle cx="16" cy="6" r="2"/><path d="M14 8l-2 4h4"/></svg></div>
         <div class="functie-card-content">
           <h4>Sport</h4>
           <p>Sportgebouwen zijn labelplichtig. Let op: bij gebouwen met een sportfunctie van 1.000 m² of meer gelden aanvullende opnamevereisten.</p>
@@ -452,7 +463,7 @@
       </div>
 
       <div class="functie-card">
-        <div class="functie-icon">🏨</div>
+        <div class="functie-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--groen)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M3 21h18M3 7h18M3 7V3h18v4M9 21v-6h6v6"/><rect x="7" y="10" width="3" height="3"/><rect x="14" y="10" width="3" height="3"/></svg></div>
         <div class="functie-card-content">
           <h4>Logies (logiesgebouw)</h4>
           <p>Hotels en logiesgebouwen — gebouwen met meerdere logiesverblijven op een gemeenschappelijke verkeersroute — vallen onder de utiliteitsplicht.</p>
@@ -516,7 +527,7 @@
       </div>
 
     </div>
-    <p class="prijs-note">Meerdere panden? Bekijk onze <a href="/vastgoed/" class="link-groen">vastgoedpagina</a> voor bulktarieven en planningsafspraken.</p>
+    <p class="prijs-note">Meerdere panden? Bekijk onze <a href="/vastgoed/" class="link-groen">vastgoedpagina</a>.</p>
   </div>
 </section>
 
@@ -527,12 +538,12 @@
       <div>
         <div class="section-tag">Aanvragen</div>
         <h2 class="section-title">Energielabel aanvragen voor uw bedrijfspand</h2>
-        <p class="section-sub">Vrijblijvend en zonder verplichtingen. We reageren binnen 24 uur met een offerte op maat.</p>
+        <p class="section-sub">Vrijblijvend en zonder verplichtingen. We reageren binnen twee werkdagen met een offerte op maat.</p>
         <div class="stappen-grid stappen-grid-2col">
           <div class="stap">
             <div class="stap-nr">1</div>
             <h4>Aanvraag indienen</h4>
-            <p>Vul het formulier in. Binnen 24 uur nemen wij contact op.</p>
+            <p>Vul het formulier in. Binnen twee werkdagen nemen wij contact op.</p>
           </div>
           <div class="stap">
             <div class="stap-nr">2</div>
@@ -554,7 +565,7 @@
       <div id="formulier-zakelijk-wrap">
         <div class="formulier-wrap">
           <div class="formulier-title">Aanvraag bedrijfspand</div>
-          <div class="formulier-sub">Vrijblijvend · Reactie binnen 24 uur</div>
+          <div class="formulier-sub">Vrijblijvend · Reactie binnen twee werkdagen</div>
           <form id="form-bedrijf" onsubmit="submitBedrijfForm(event)">
             <input type="hidden" name="pagina" value="energielabels/utiliteit">
             <input type="hidden" name="source" id="source-bedrijf" value="direct">
@@ -638,7 +649,7 @@
               </label>
             </div>
             <button type="submit" class="btn-submit">Aanvraag versturen →</button>
-            <p class="form-disclaimer">Vrijblijvend · Geen verplichtingen · Binnen 24 uur reactie</p>
+            <p class="form-disclaimer">Vrijblijvend · Geen verplichtingen · Binnen twee werkdagen reactie</p>
           </form>
         </div>
       </div>
@@ -654,7 +665,7 @@
     <p class="section-sub">Hoe meer documentatie u aanlevert, hoe nauwkeuriger de opname en hoe gunstiger het label dat aantoonbaar haalbaar is. Zonder documentatie rekenen wij met conservatieve aannames — dat werkt in uw nadeel.</p>
 
     <div class="doc-intro">
-      <p><strong>Detailopname vs. basisopname:</strong> Als u gedetailleerde documentatie beschikbaar heeft, kunnen wij een detailopname uitvoeren. Die levert doorgaans een gunstiger label op dan de basisopname waarbij wij terugvallen op standaardwaarden. Aanleveren wat u heeft, loont altijd.</p>
+      <p><strong>Hoe meer documentatie, hoe nauwkeuriger het label.</strong> Wij werken met de basisopname — de erkende methode voor bestaande bedrijfspanden. Aanleveren wat u heeft, loont altijd: ontbrekende gegevens vervangen wij door standaardwaarden, en die werken doorgaans in uw nadeel.</p>
     </div>
 
     <div class="doc-list">
@@ -671,7 +682,6 @@
         <div class="doc-item-content">
           <h4>Installatieschema's en technische documentatie</h4>
           <p>Systeemschema's, inregelrapporten en inspectierapporten van de verwarmings-, koel- en ventilatiesystemen. Het fabricagejaar van installaties is hierbij belangrijk — dit bepaalt mede het berekende rendement in het energieprestatierapport.</p>
-          <span class="doc-tip">Staat het fabricagejaar niet op het schema? Controleer dan het typeplaatje op de installatie zelf of raadpleeg de factuur van plaatsing.</span>
         </div>
       </div>
       <div class="doc-item">
@@ -685,7 +695,8 @@
         <div class="doc-nr">4</div>
         <div class="doc-item-content">
           <h4>Keurings- en kwaliteitsverklaringen van installaties</h4>
-          <p>Certificaten, productbladen of fabrikantspecificaties van ketels, warmtepompen, ventilatiesystemen of zonnepanelen. Deze kwaliteitsverklaringen maken een detailopname mogelijk en leveren daarmee een nauwkeuriger label op.</p>
+          <p>Certificaten, productbladen of fabrikantspecificaties van ketels, warmtepompen, ventilatiesystemen of zonnepanelen.</p>
+          <span class="doc-tip">Heeft u deze documenten niet bij de hand? Wij doen ons best om de benodigde gegevens tijdens de opname ter plekke op te zoeken.</span>
         </div>
       </div>
       <div class="doc-item">
@@ -699,7 +710,7 @@
       <div class="doc-item">
         <div class="doc-nr">6</div>
         <div class="doc-item-content">
-          <h4>Recente energieverbruiksgegevens (optioneel)</h4>
+          <h4>Recente energieverbruiksgegevens</h4>
           <p>Energienota's of verbruiksdata van de afgelopen jaren. Niet verplicht voor het label, maar nuttig om de berekende energieprestatie te toetsen aan het werkelijke verbruik en om verduurzamingsadvies te onderbouwen.</p>
         </div>
       </div>
@@ -717,7 +728,7 @@
       <div class="stap">
         <div class="stap-nr">1</div>
         <h4>Aanvraag indienen</h4>
-        <p>Vul het formulier in of bel direct. Binnen 24 uur nemen wij contact op voor een offerte en afspraakplanning.</p>
+        <p>Vul het formulier in of bel direct. Binnen twee werkdagen nemen wij contact op voor een offerte en afspraakplanning.</p>
       </div>
       <div class="stap">
         <div class="stap-nr">2</div>
@@ -746,17 +757,17 @@
     <p class="section-sub">Een energielabel voor een bedrijfspand is 10 jaar geldig na afgifte. In een aantal situaties vervalt het label eerder.</p>
     <div class="geldigheid-grid">
       <div class="geldigheid-card">
-        <div class="geldigheid-card-icon">📅</div>
+        <div class="geldigheid-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--groen)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg></div>
         <h4>10 jaar geldig</h4>
         <p>Na afgifte is het energielabel tien jaar geldig. Het label wordt officieel geregistreerd in EP-online en is direct bruikbaar bij verkoop, verhuur of oplevering.</p>
       </div>
       <div class="geldigheid-card">
-        <div class="geldigheid-card-icon">🔨</div>
+        <div class="geldigheid-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--groen)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
         <h4>Vervalt na verbouwing</h4>
         <p>Heeft u uw pand gerenoveerd of verbouwd? Dan vervalt het bestaande energielabel. Een nieuwe opname is dan nodig — en levert doorgaans een beter label op.</p>
       </div>
       <div class="geldigheid-card">
-        <div class="geldigheid-card-icon">🔄</div>
+        <div class="geldigheid-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--groen)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><path d="M21 2v6h-6M3 12a9 9 0 0115-6.7L21 8M3 22v-6h6M21 12a9 9 0 01-15 6.7L3 16"/></svg></div>
         <h4>Herlabelen na verbetering</h4>
         <p>Heeft u energiebesparende maatregelen genomen? Binnen 24 maanden na de oorspronkelijke opname kunt u het pand opnieuw laten labelen. Zo wordt de verbetering direct zichtbaar in het label.</p>
       </div>
@@ -806,7 +817,7 @@
 
       <div class="faq-item">
         <button class="faq-vraag">Geldt de label-C-plicht ook als ik mijn kantoor huur?</button>
-        <div class="faq-antwoord">Ja. De label-C-verplichting voor kantoren groter dan 100 m² geldt voor het pand zelf — ongeacht of u eigenaar of huurder bent. Zowel eigenaar als huurder zijn verantwoordelijk. In de praktijk is het doorgaans de eigenaar die het label aanvraagt, maar als huurder loopt u ook risico als het pand niet aan de eis voldoet.</div>
+        <div class="faq-antwoord">Ja. De label-C-verplichting geldt voor het pand — ongeacht of u eigenaar of huurder bent. Het is echter de <strong>eigenaar van het pand</strong> die verantwoordelijk is voor het aanvragen van het energielabel, niet de huurder. Als huurder kunt u uw verhuurder hierop aanspreken als het pand niet aan de eis voldoet.</div>
       </div>
 
       <div class="faq-item">
@@ -816,7 +827,7 @@
 
       <div class="faq-item">
         <button class="faq-vraag">Hoe lang duurt de opname bij een bedrijfspand?</button>
-        <div class="faq-antwoord">De duur van de opname hangt af van de omvang en complexiteit van het pand. Voor een klein kantoor of winkel (tot 100 m²) rekent u op circa 1 tot 2 uur. Bij grotere of complexere panden — met meerdere zones, installaties of bouwlagen — kan de opname een halve dag of meer in beslag nemen. Wij stemmen dit vooraf met u af.</div>
+        <div class="faq-antwoord">De duur van de opname hangt af van de omvang en complexiteit van het pand. Voor een klein kantoor of winkel (tot 100 m²) rekent u op circa 3 uur. Bij grotere of complexere panden kan de opname een halve dag of meer in beslag nemen. Wij stemmen dit vooraf met u af.</div>
       </div>
 
       <div class="faq-item">
@@ -836,7 +847,7 @@
 
       <div class="faq-item">
         <button class="faq-vraag">Moet ik het energielabel zichtbaar ophangen in mijn pand?</button>
-        <div class="faq-antwoord">Ja, per 29 mei 2026 geldt voor alle publiek toegankelijke bedrijfspanden groter dan 250 m² met een geldig energielabel de verplichting om dit label zichtbaar op te hangen — bij de ingang of receptie. STAP Energie levert een ingelijst certificaat voor € 25, zodat u direct compliant bent.</div>
+        <div class="faq-antwoord">Ja, per 29 mei 2026 geldt voor alle publiek toegankelijke bedrijfspanden groter dan 250 m² met een geldig energielabel de verplichting om dit label zichtbaar op te hangen — bij de ingang of receptie. STAP Energie levert een ingelijst certificaat voor € 25. <a href="#aanvraag-certificaat" class="link-groen">Vraag hier uw ingelijst certificaat aan →</a></div>
       </div>
 
     </div>
@@ -867,11 +878,78 @@
   </div>
 </section>
 
+
+<!-- ── INGELIJST CERTIFICAAT ──────────────────────────────── -->
+<section class="section section-groen" id="aanvraag-certificaat">
+  <div class="container">
+    <div class="section-tag">Label ophangen</div>
+    <h2 class="section-title">Ingelijst energielabel voor uw pand</h2>
+    <p class="section-sub">Per 29 mei 2026 zijn alle publiek toegankelijke bedrijfspanden groter dan 250 m² verplicht hun energielabel zichtbaar op te hangen. STAP Energie levert een professioneel ingelijst certificaat — geschikt voor bij de ingang of receptie.</p>
+    <div class="cert-layout">
+      <div>
+        <ul class="cert-voordelen">
+          <li>Professioneel ingelijst A4-certificaat</li>
+          <li>Geschikt voor ophangen bij ingang of receptie</li>
+          <li>Direct compliant met EPBD IV (per 29 mei 2026)</li>
+          <li>Geleverd na afgifte van uw energielabel</li>
+        </ul>
+        <p class="cert-prijs">Prijs: <strong>€ 25</strong> — te bestellen bij aanvraag energielabel of apart.</p>
+      </div>
+      <div id="certificaat-wrap">
+        <div class="formulier-wrap">
+          <div class="formulier-title">Ingelijst certificaat aanvragen</div>
+          <div class="formulier-sub">Heeft u al een geldig energielabel? Dan leveren wij direct.</div>
+          <form id="form-certificaat" onsubmit="submitCertificaatForm(event)">
+            <input type="hidden" name="pagina" value="energielabels/utiliteit/certificaat">
+            <input type="hidden" name="source" id="source-cert" value="direct">
+            <div class="form-row">
+              <div>
+                <label class="form-label" for="c-naam">Naam contactpersoon</label>
+                <input class="form-input" type="text" id="c-naam" name="naam" placeholder="Uw naam" required>
+              </div>
+              <div>
+                <label class="form-label" for="c-bedrijf">Bedrijfsnaam</label>
+                <input class="form-input" type="text" id="c-bedrijf" name="bedrijf" placeholder="Bedrijfsnaam" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div>
+                <label class="form-label" for="c-email">E-mailadres</label>
+                <input class="form-input" type="email" id="c-email" name="email" placeholder="E-mailadres" required>
+              </div>
+              <div>
+                <label class="form-label" for="c-tel">Telefoonnummer</label>
+                <input class="form-input" type="tel" id="c-tel" name="telefoon" placeholder="Telefoonnummer">
+              </div>
+            </div>
+            <div class="form-row-full">
+              <label class="form-label" for="c-adres">Adres bedrijfspand</label>
+              <input class="form-input" type="text" id="c-adres" name="adres" placeholder="Postcode + huisnummer" required>
+            </div>
+            <div class="form-row-full">
+              <label class="form-label" for="c-opmerking">Opmerking (optioneel)</label>
+              <textarea class="form-input" id="c-opmerking" name="opmerking" placeholder="Bijv: huidig energielabel of overige informatie" rows="2" style="resize:vertical;"></textarea>
+            </div>
+            <div class="form-row-full">
+              <label class="form-checkbox-label">
+                <input type="checkbox" required>
+                Ik ga akkoord met de <a href="/privacy/">privacyverklaring</a>.
+              </label>
+            </div>
+            <button type="submit" class="btn-submit">Aanvraag versturen →</button>
+            <p class="form-disclaimer">€ 25 — wij nemen contact op voor betaling en levering</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ── CTA BOTTOM ─────────────────────────────────────────── -->
 <section class="cta-bottom">
   <div class="container">
     <h2>Klaar voor uw energielabel?</h2>
-    <p>Vrijblijvende aanvraag — geen verplichtingen, wel direct duidelijkheid. Reactie binnen 24 uur.</p>
+    <p>Vrijblijvende aanvraag — geen verplichtingen, wel direct duidelijkheid. Reactie binnen twee werkdagen.</p>
     <div class="cta-bottom-btns">
       <a href="#aanvraag" class="btn-primary">Aanvraag indienen →</a>
       <a href="mailto:info@stapenergie.nl" class="btn-outline-wit">Direct mailen</a>
@@ -1021,9 +1099,34 @@ function submitBedrijfForm(e) {
           '<path d="M15 26l8 8 14-14" stroke="#1a5c32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>' +
           '</svg>' +
           '<div class="form-success-title">Aanvraag ontvangen!</div>' +
-          '<div class="form-success-sub">We reageren binnen 24 uur. Tot snel!</div>' +
+          '<div class="form-success-sub">We reageren binnen twee werkdagen. Tot snel!</div>' +
           '</div>';
       }
+    })
+    .catch(function() {
+      alert('Er is iets misgegaan. Probeer het opnieuw of mail naar info@stapenergie.nl');
+    });
+}
+
+
+// ── CERTIFICAAT FORMULIER SUBMIT ──
+function submitCertificaatForm(e) {
+  e.preventDefault();
+  var form = document.getElementById('form-certificaat');
+  var data = new FormData(form);
+  fetch('/api/contact.php', { method: 'POST', body: data })
+    .then(function(r) { return r.json(); })
+    .then(function(res) {
+      var wrap = document.getElementById('certificaat-wrap');
+      wrap.querySelector('.formulier-wrap').innerHTML =
+        '<div class="form-success">' +
+        '<svg width="52" height="52" viewBox="0 0 52 52" fill="none" style="margin:0 auto 1rem">' +
+        '<circle cx="26" cy="26" r="25" stroke="#1a5c32" stroke-width="2"/>' +
+        '<path d="M15 26l8 8 14-14" stroke="#1a5c32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>' +
+        '</svg>' +
+        '<div class="form-success-title">Aanvraag ontvangen!</div>' +
+        '<div class="form-success-sub">We nemen binnen twee werkdagen contact op.</div>' +
+        '</div>';
     })
     .catch(function() {
       alert('Er is iets misgegaan. Probeer het opnieuw of mail naar info@stapenergie.nl');
