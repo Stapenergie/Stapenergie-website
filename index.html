@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a5c32'/%3E%3Ctext x='16' y='23' font-family='sans-serif' font-size='20' font-weight='700' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
 <style>
 
 /* ══════════════════════════════════
@@ -43,7 +44,7 @@ a    { text-decoration: none; }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
 .section    { padding: 80px 0; scroll-margin-top: 80px; }
 .sec-label  { display: block; font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--groen); margin-bottom: .7rem; }
-.sec-label::before { content: '— '; }
+.sec-label::before { content: '-- '; }
 .sec-title  { font-family: var(--serif); font-size: clamp(1.8rem, 3.5vw, 2.6rem); line-height: 1.15; letter-spacing: -.02em; }
 .sec-sub    { font-size: 1rem; color: var(--subtekst); margin-top: .7rem; max-width: 540px; line-height: 1.7; }
 .btn-out    { display: inline-flex; align-items: center; gap: 8px; border: 1.5px solid var(--groen); color: var(--groen); padding: .8rem 1.8rem; border-radius: 100px; font-size: .92rem; font-weight: 600; transition: background .2s, color .2s; }
@@ -77,7 +78,7 @@ a    { text-decoration: none; }
 .nav-toggle.open span:nth-child(2) { opacity: 0; }
 .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* Dropdown — FIX: hover vervangen door JS open class + bridge */
+/* Dropdown */
 .has-dd { position: relative; }
 .has-dd > a { display: flex; align-items: center; gap: 4px; }
 .dropdown { display: none; position: absolute; top: calc(100% + 12px); left: 50%; transform: translateX(-50%); background: #fff; border: 1px solid var(--rand); border-radius: var(--rl); box-shadow: var(--shadow-lg); min-width: 260px; padding: .5rem; z-index: 300; }
@@ -118,10 +119,12 @@ a    { text-decoration: none; }
 .form-check a { color: var(--groen); font-weight: 600; }
 .form-submit { width: 100%; padding: .9rem; background: var(--groen); color: #fff; border: none; border-radius: 100px; font-size: .92rem; font-weight: 700; cursor: pointer; font-family: inherit; transition: background .2s; }
 .form-submit:hover { background: var(--groen-mid); }
+.form-submit:disabled { opacity: .6; cursor: not-allowed; }
 .form-note { text-align: center; font-size: .72rem; color: #9aa5b4; margin-top: .3rem; }
-.form-success { text-align: center; padding: 2rem 0; }
-.form-success-title { font-weight: 700; font-size: 1rem; margin-bottom: .3rem; }
-.form-success-sub { color: var(--subtekst); font-size: .85rem; }
+.form-succes { text-align: center; padding: 2rem 0; }
+.form-succes h3 { font-weight: 700; font-size: 1rem; margin: .75rem 0 .3rem; }
+.form-succes p { color: var(--subtekst); font-size: .85rem; line-height: 1.6; }
+.form-error { color: #c0392b; font-size: .82rem; margin-top: 4px; }
 
 /* ══════════════════════════════════
    USP BALK
@@ -152,7 +155,7 @@ a    { text-decoration: none; }
 .dienst-card-dark .dienst-link { color: #4dc882; }
 
 /* ══════════════════════════════════
-   VOOR WIE — SEGMENT GRID
+   VOOR WIE
 ══════════════════════════════════ */
 .seg-section { background: #fff; }
 .seg-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
@@ -303,7 +306,7 @@ a    { text-decoration: none; }
     </li>
     <li><a href="#over-erik">Over Erik</a></li>
     <li><a href="#kennisbank">Kennisbank</a></li>
-    <li><a href="#contact" class="nav-cta">Gratis gesprek →</a></li>
+    <li><a href="#contact" class="nav-cta">Gratis gesprek &rarr;</a></li>
   </ul>
   <button class="nav-toggle" id="nav-toggle" aria-label="Menu openen">
     <span></span><span></span><span></span>
@@ -312,7 +315,7 @@ a    { text-decoration: none; }
 
 <!-- Hero -->
 <section class="hero" id="hero">
-  <img src="images/hero.jpg" alt="Zakelijk pand met zonnepanelen" class="hero-bg" fetchpriority="high">
+  <img src="/images/hero.jpg" alt="Zakelijk pand met zonnepanelen" class="hero-bg" fetchpriority="high">
   <div class="hero-overlay"></div>
   <div class="hero-inner">
     <div class="hero-content">
@@ -322,44 +325,45 @@ a    { text-decoration: none; }
       <ul class="hero-checks">
         <li>Officieel erkend energielabel — geregistreerd in EP-online</li>
         <li>16+ jaar ervaring in de energiemarkt</li>
-        <li>Reactie binnen 24 uur — heel Nederland</li>
+        <li>Reactie binnen twee werkdagen — heel Nederland</li>
       </ul>
-      <a href="#diensten" class="hero-link">Bekijk alle diensten →</a>
+      <a href="#diensten" class="hero-link">Bekijk alle diensten &rarr;</a>
     </div>
     <div class="hero-form-card" id="contact">
       <h3>Plan een gratis kennismaking</h3>
-      <p>Binnen 24 uur reageren wij op je aanvraag.</p>
+      <p>Binnen twee werkdagen reageren wij op uw aanvraag.</p>
       <form class="form-stack" id="hero-form" onsubmit="submitForm(event)">
+        <input type="hidden" name="pagina" value="homepage">
         <div class="form-row">
           <div>
             <label for="voornaam" class="sr-only">Voornaam</label>
-            <input class="form-input" type="text" id="voornaam" placeholder="Voornaam" required>
+            <input class="form-input" type="text" id="voornaam" name="voornaam" placeholder="Voornaam" required>
           </div>
           <div>
             <label for="achternaam" class="sr-only">Achternaam</label>
-            <input class="form-input" type="text" id="achternaam" placeholder="Achternaam">
+            <input class="form-input" type="text" id="achternaam" name="achternaam" placeholder="Achternaam">
           </div>
         </div>
         <label for="email" class="sr-only">E-mailadres</label>
-        <input class="form-input" type="email" id="email" placeholder="E-mailadres" required>
+        <input class="form-input" type="email" id="email" name="email" placeholder="E-mailadres" required>
         <label for="telefoon" class="sr-only">Telefoonnummer</label>
-        <input class="form-input" type="tel" id="telefoon" placeholder="Telefoonnummer">
-        <label for="dienst" class="sr-only">Waar kan ik je mee helpen?</label>
-        <select class="form-select" id="dienst" required>
-          <option value="" disabled selected>Waar kan ik je mee helpen?</option>
-          <option>Energielabel woning</option>
-          <option>Energielabel utiliteit</option>
-          <option>Verduurzaming advies</option>
-          <option>Subsidie advies</option>
-          <option>Energie inkoop advies</option>
-          <option>Anders / weet ik nog niet</option>
+        <input class="form-input" type="tel" id="telefoon" name="telefoon" placeholder="Telefoonnummer">
+        <label for="dienst" class="sr-only">Waar kan ik u mee helpen?</label>
+        <select class="form-select" id="dienst" name="dienst" required>
+          <option value="" disabled selected>Waar kan ik u mee helpen?</option>
+          <option value="Energielabel woning">Energielabel woning</option>
+          <option value="Energielabel utiliteit">Energielabel utiliteit</option>
+          <option value="Verduurzamingsadvies">Verduurzamingsadvies</option>
+          <option value="Subsidie advies">Subsidie advies</option>
+          <option value="Energie inkoop advies">Energie inkoop advies</option>
+          <option value="Anders / weet ik nog niet">Anders / weet ik nog niet</option>
         </select>
         <label class="form-check">
           <input type="checkbox" required>
           Ik ga akkoord met de <a href="/privacyverklaring/">privacyverklaring</a> en geef toestemming om commercieel benaderd te worden.
         </label>
-        <button type="submit" class="form-submit">Aanvraag versturen →</button>
-        <p class="form-note">Vrijblijvend · Geen verplichtingen · Binnen 24 uur reactie</p>
+        <button type="submit" class="form-submit">Aanvraag versturen &rarr;</button>
+        <p class="form-note">Vrijblijvend &middot; Geen verplichtingen &middot; Binnen twee werkdagen reactie</p>
       </form>
     </div>
   </div>
@@ -379,7 +383,7 @@ a    { text-decoration: none; }
         <div class="usp-icon">
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M9 5v4l3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
         </div>
-        <div><strong>Reactie binnen 24 uur</strong><span>Snel en persoonlijk</span></div>
+        <div><strong>Reactie binnen twee werkdagen</strong><span>Snel en persoonlijk</span></div>
       </div>
       <div class="usp-item">
         <div class="usp-icon">
@@ -405,35 +409,35 @@ a    { text-decoration: none; }
     <p class="sec-sub">Van verplicht energielabel tot een volledig verduurzamingsplan — STAP Energie regelt het.</p>
     <div class="diensten-grid">
       <a href="/energielabels/" class="dienst-card">
-        <img src="images/hero.jpg" alt="Energielabels" class="dienst-card-img" loading="lazy">
+        <img src="/images/hero.jpg" alt="Energielabels" class="dienst-card-img" loading="lazy">
         <div class="dienst-card-body">
           <h3>Energielabels</h3>
           <p>Verplicht bij verkoop, verhuur en voor bedrijfspanden. Snel en officieel geregistreerd in EP-online.</p>
-          <span class="dienst-link">Meer info →</span>
+          <span class="dienst-link">Meer info &rarr;</span>
         </div>
       </a>
       <a href="/verduurzaming-subsidie/" class="dienst-card">
-        <img src="images/dienst-verduurzaming.jpg" alt="Verduurzaming en Subsidie" class="dienst-card-img" loading="lazy">
+        <img src="/images/dienst-verduurzaming.jpg" alt="Verduurzaming en Subsidie" class="dienst-card-img" loading="lazy">
         <div class="dienst-card-body">
           <h3>Verduurzaming &amp; Subsidie</h3>
-          <p>Persoonlijk stappenplan op maat én alle subsidies in kaart. Verduurzamen wordt een stuk aantrekkelijker.</p>
-          <span class="dienst-link">Meer info →</span>
+          <p>Persoonlijk stappenplan op maat &eacute;n alle subsidies in kaart. Verduurzamen wordt een stuk aantrekkelijker.</p>
+          <span class="dienst-link">Meer info &rarr;</span>
         </div>
       </a>
       <a href="/energie-inkoop-advies/" class="dienst-card">
-        <img src="images/dienst-inkoop.jpg" alt="Energie inkoop advies" class="dienst-card-img" loading="lazy">
+        <img src="/images/dienst-inkoop.jpg" alt="Energie inkoop advies" class="dienst-card-img" loading="lazy">
         <div class="dienst-card-body">
           <h3>Energie inkoop advies</h3>
           <p>Op het juiste moment inkopen. Slim contracteren en structureel besparen op energiekosten.</p>
-          <span class="dienst-link">Meer info →</span>
+          <span class="dienst-link">Meer info &rarr;</span>
         </div>
       </a>
       <a href="#contact" class="dienst-card dienst-card-dark">
-        <img src="images/erik-zakelijk.jpg" alt="Erik Dolman" class="dienst-card-img dienst-card-img-erik" loading="lazy">
+        <img src="/images/erik-zakelijk.jpg" alt="Erik Dolman" class="dienst-card-img dienst-card-img-erik" loading="lazy">
         <div class="dienst-card-body">
           <h3>Weet je het niet zeker?</h3>
           <p>Plan een gratis kennismakingsgesprek zonder verplichtingen. Ik denk graag met je mee.</p>
-          <span class="dienst-link">Gratis gesprek plannen →</span>
+          <span class="dienst-link">Gratis gesprek plannen &rarr;</span>
         </div>
       </a>
     </div>
@@ -454,7 +458,7 @@ a    { text-decoration: none; }
         <div>
           <h3>Zakelijk</h3>
           <p>Voor MKB, vastgoed, makelaars, kantoren, gemeenten, woningstichtingen en industrie. Energielabels, verduurzaming en inkoop op maat.</p>
-          <span class="seg-arrow">Meer info →</span>
+          <span class="seg-arrow">Meer info &rarr;</span>
         </div>
       </a>
       <a href="/particulieren/" class="seg-duo-card">
@@ -464,7 +468,7 @@ a    { text-decoration: none; }
         <div>
           <h3>Particulieren</h3>
           <p>Voor woningeigenaren die een energielabel nodig hebben of hun woning willen verduurzamen. Persoonlijk en zonder gedoe.</p>
-          <span class="seg-arrow">Meer info →</span>
+          <span class="seg-arrow">Meer info &rarr;</span>
         </div>
       </a>
     </div>
@@ -476,25 +480,25 @@ a    { text-decoration: none; }
   <div class="container">
     <div class="over-grid">
       <div class="over-img-wrap">
-        <img src="images/erik-portret.jpg" alt="Erik Dolman" loading="lazy">
+        <img src="/images/erik-portret.jpg" alt="Erik Dolman" loading="lazy">
         <div class="over-badge">
           <div class="num">16+</div>
-          <div class="lbl">jaar energie­ervaring</div>
+          <div class="lbl">jaar energie&shy;ervaring</div>
         </div>
       </div>
       <div>
         <span class="sec-label">Wie is STAP Energie?</span>
         <h2 class="sec-title">Erik Dolman,<br>Energiespecialist</h2>
-        <blockquote class="over-quote">"De natuur is ons grootste kapitaal. Verduurzamen is een verstandige keuze voor het milieu, comfort én je portemonnee."</blockquote>
+        <blockquote class="over-quote">"De natuur is ons grootste kapitaal. Verduurzamen is een verstandige keuze voor het milieu, comfort &eacute;n je portemonnee."</blockquote>
         <p class="over-text">Als oprichter van STAP Energie breng ik meer dan 16 jaar ervaring in de energiemarkt mee. Van Sales Manager bij SEFE Energy tot NieuweStroom — die kennis zet ik nu in voor jou.</p>
-        <p class="over-text">Niet met een standaard verhaal, maar met eerlijk en persoonlijk advies dat écht past bij jouw situatie.</p>
+        <p class="over-text">Niet met een standaard verhaal, maar met eerlijk en persoonlijk advies dat &eacute;cht past bij jouw situatie.</p>
         <div class="over-tags">
           <span class="over-tag">16+ jaar energiesector</span>
           <span class="over-tag">SEFE Energy</span>
           <span class="over-tag">NieuweStroom</span>
           <span class="over-tag">EPA-adviseur in opleiding</span>
         </div>
-        <a href="/over-erik/" class="btn-out">Meer over Erik →</a>
+        <a href="/over-erik/" class="btn-out">Meer over Erik &rarr;</a>
       </div>
     </div>
   </div>
@@ -504,12 +508,12 @@ a    { text-decoration: none; }
 <section class="cta-sec">
   <div class="container">
     <h2>Klaar voor jouw eerste STAP?</h2>
-    <p>Gratis kennismakingsgesprek — geen verplichtingen, wel direct waarde. We reageren binnen 24 uur.</p>
+    <p>Gratis kennismakingsgesprek — geen verplichtingen, wel direct waarde. We reageren binnen twee werkdagen.</p>
     <div class="cta-btns">
       <a href="#contact" class="btn-wit">Gratis gesprek inplannen</a>
       <a href="tel:0600000000" class="btn-wit-out">Direct bellen</a>
     </div>
-    <p class="cta-meta">info@stapenergie.nl &nbsp;·&nbsp; Heel Nederland &nbsp;·&nbsp; KvK: in aanvraag</p>
+    <p class="cta-meta">info@stapenergie.nl &nbsp;&middot;&nbsp; Heel Nederland &nbsp;&middot;&nbsp; KvK: in aanvraag</p>
   </div>
 </section>
 
@@ -521,7 +525,7 @@ a    { text-decoration: none; }
         <div class="footer-brand">STAP Energie</div>
         <p class="footer-desc">Het leuk maken om duurzame impact te maken. Voor ondernemers en particulieren die willen omschakelen naar een duurzaam en eerlijker systeem.</p>
         <div class="footer-social">
-          <a href="https://www.linkedin.com/in/edolman/" target="_blank" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/edolman/" target="_blank" rel="noopener" aria-label="LinkedIn">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
           </a>
         </div>
@@ -545,7 +549,7 @@ a    { text-decoration: none; }
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
-        <a href="tel:0600000000">06 – XX XX XX XX</a>
+        <a href="tel:0600000000">06 &ndash; XX XX XX XX</a>
         <a href="mailto:info@stapenergie.nl">info@stapenergie.nl</a>
         <a href="/">stapenergie.nl</a>
         <a href="/over-erik/">Over ons</a>
@@ -553,8 +557,8 @@ a    { text-decoration: none; }
       </div>
     </div>
     <div class="footer-bottom">
-      <span class="footer-copy">© 2026 STAP Energie — KvK: in aanvraag</span>
-      <span class="footer-copy">Heel Nederland · Snel · Persoonlijk</span>
+      <span class="footer-copy">&copy; 2026 STAP Energie &mdash; KvK: in aanvraag</span>
+      <span class="footer-copy">Heel Nederland &middot; Snel &middot; Persoonlijk</span>
     </div>
   </div>
 </footer>
@@ -573,7 +577,6 @@ if (toggle && navLinks) {
   });
 }
 
-// Sluit menu en dropdowns bij klik buiten nav
 document.addEventListener('click', function(e) {
   if (navLinks && toggle && !navLinks.contains(e.target) && !toggle.contains(e.target)) {
     navLinks.classList.remove('open');
@@ -583,7 +586,7 @@ document.addEventListener('click', function(e) {
   }
 });
 
-// ── DROPDOWN — desktop hover met delay, mobiel via klik ──
+// ── DROPDOWN ──
 var dropdownTimers = {};
 
 document.querySelectorAll('.has-dd').forEach(function(item, idx) {
@@ -627,19 +630,56 @@ document.querySelectorAll('.seg-bar a').forEach(function(a) {
   });
 });
 
-// ── FORMULIER ──
-function submitForm(e) {
-  e.preventDefault();
-  var form = document.getElementById('hero-form');
-  form.innerHTML =
-    '<div class="form-success">' +
-    '<svg width="52" height="52" viewBox="0 0 52 52" fill="none" style="margin:0 auto 1rem">' +
-    '<circle cx="26" cy="26" r="25" stroke="#1a5c32" stroke-width="2"/>' +
-    '<path d="M15 26l8 8 14-14" stroke="#1a5c32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>' +
-    '</svg>' +
-    '<div class="form-success-title">Aanvraag ontvangen!</div>' +
-    '<div class="form-success-sub">We reageren binnen 24 uur. Tot snel!</div>' +
-    '</div>';
+// ── FORMULIER: verstuurt naar /api/contact.php ──
+async function submitForm(event) {
+  event.preventDefault();
+
+  var form = event.target;
+  var btn  = form.querySelector('[type="submit"]');
+  if (btn.disabled) return;
+
+  btn.disabled  = true;
+  var origTekst = btn.textContent;
+  btn.textContent = 'Bezig met versturen\u2026';
+
+  var bestaandeFout = form.querySelector('.form-error');
+  if (bestaandeFout) bestaandeFout.remove();
+
+  var data = new FormData(form);
+
+  try {
+    var response = await fetch('/api/contact.php', {
+      method: 'POST',
+      body: data
+    });
+    var json = await response.json();
+
+    if (json.succes) {
+      form.innerHTML =
+        '<div class="form-succes">' +
+        '<svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">' +
+        '<circle cx="24" cy="24" r="24" fill="#e8f5ed"/>' +
+        '<path d="M14 24.5l7 7 13-14" stroke="#1a5c32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>' +
+        '</svg>' +
+        '<h3>Aanvraag ontvangen!</h3>' +
+        '<p>We nemen <strong>binnen twee werkdagen</strong> contact met u op.<br>U ontvangt ook een bevestiging per e-mail.</p>' +
+        '</div>';
+    } else {
+      btn.disabled    = false;
+      btn.textContent = origTekst;
+      var fout = document.createElement('p');
+      fout.className   = 'form-error';
+      fout.textContent = (json.fouten && json.fouten[0]) || 'Er ging iets mis. Probeer het opnieuw.';
+      btn.insertAdjacentElement('afterend', fout);
+    }
+  } catch (err) {
+    btn.disabled    = false;
+    btn.textContent = origTekst;
+    var fout = document.createElement('p');
+    fout.className   = 'form-error';
+    fout.textContent = 'Verbinding mislukt. Controleer uw internetverbinding en probeer het opnieuw.';
+    btn.insertAdjacentElement('afterend', fout);
+  }
 }
 </script>
 </body>
