@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zakelijk energieadvies | STAP Energie</title>
+<meta name="description" content="Onafhankelijk energieadvies voor bedrijven. Energie-inkoopadvies, energielabels en verduurzaming voor MKB, kantoren, vastgoed en industrie.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%231a5c32'/><text x='16' y='23' text-anchor='middle' font-family='Georgia,serif' font-weight='700' font-size='20' fill='white'>S</text></svg>">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --groen:#1a5c32;--groen-mid:#237a43;--groen-licht:#f0f7f2;--groen-card:#e8f5ed;--accent:#2ea855;
+  --tekst:#1a1a1a;--subtekst:#4a5568;--rand:#e2e8e0;--lichtgrijs:#f7f8f5;
+  --r:8px;--rl:14px;
+  --shadow:0 2px 12px rgba(0,0,0,.08);--shadow-lg:0 8px 32px rgba(0,0,0,.12);
+}
+body{font-family:'DM Sans',sans-serif;color:var(--tekst);line-height:1.6;background:#fff}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.nav{background:#fff;border-bottom:1px solid var(--rand);position:sticky;top:0;z-index:100}
+.nav-inner{max-width:1140px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.1rem;color:var(--groen)}
+.nav-logo-mark{width:32px;height:32px;background:var(--groen);border-radius:7px;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Georgia',serif;font-size:1.1rem;font-weight:700;flex-shrink:0}
+.nav-links{display:flex;align-items:center;gap:8px;list-style:none}
+.nav-links a{padding:6px 14px;border-radius:var(--r);font-size:.95rem;font-weight:500;color:var(--tekst);transition:background .15s}
+.nav-links a:hover{background:var(--groen-licht)}
+.nav-links a.active{color:var(--groen);background:var(--groen-licht)}
+.has-dd{position:relative}
+.has-dd>a::after{content:'\25BE';margin-left:4px;font-size:.75rem}
+.dropdown{display:none;position:absolute;top:calc(100% + 16px);left:0;background:#fff;border:1px solid var(--rand);border-radius:var(--rl);box-shadow:var(--shadow-lg);min-width:220px;padding:8px 0;z-index:200}
+.dropdown::after{content:'';position:absolute;top:-16px;left:0;right:0;height:16px}
+.has-dd.open .dropdown{display:block}
+.dropdown a{display:block;padding:10px 18px;font-size:.9rem;color:var(--tekst);transition:background .15s}
+.dropdown a:hover{background:var(--groen-licht);color:var(--groen)}
+.nav-cta{background:var(--groen);color:#fff;padding:8px 20px;border-radius:var(--r);font-weight:500;font-size:.95rem;transition:background .15s;white-space:nowrap}
+.nav-cta:hover{background:var(--groen-mid)}
+.nav-mobile-toggle{display:none;background:none;border:none;cursor:pointer;padding:4px}
+.nav-mobile-toggle span{display:block;width:24px;height:2px;background:var(--tekst);margin:5px 0;border-radius:2px}
+.nav-mobile{display:none;background:#fff;border-top:1px solid var(--rand);padding:16px 24px}
+.nav-mobile a{display:block;padding:10px 0;font-size:1rem;border-bottom:1px solid var(--rand);color:var(--tekst)}
+.nav-mobile a:last-child{border-bottom:none}
+.segment-bar{background:var(--groen-licht);border-bottom:1px solid var(--rand)}
+.segment-bar-inner{max-width:1140px;margin:0 auto;padding:0 24px;display:flex;gap:4px;height:44px;align-items:center}
+.seg-btn{padding:6px 18px;border-radius:20px;font-size:.88rem;font-weight:500;color:var(--subtekst);border:1px solid transparent;cursor:pointer;transition:all .15s;text-decoration:none;background:none}
+.seg-btn:hover{background:#fff;border-color:var(--rand)}
+.seg-btn.active{background:var(--groen);color:#fff;border-color:var(--groen)}
+.hero{background:linear-gradient(135deg,rgba(26,92,50,.92) 0%,rgba(35,122,67,.88) 100%),url('/images/hero-zakelijk.jpg') center/cover no-repeat;color:#fff;padding:80px 24px 72px}
+.hero-inner{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:1fr 420px;gap:64px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);border-radius:20px;padding:5px 14px;font-size:.82rem;font-weight:500;margin-bottom:20px}
+.hero-badge-dot{width:7px;height:7px;background:#4ade80;border-radius:50%}
+.hero h1{font-family:'DM Serif Display',serif;font-size:2.6rem;line-height:1.2;margin-bottom:16px;font-weight:400}
+.hero h1 span{color:#a7f3c0}
+.hero-sub{font-size:1.1rem;opacity:.9;line-height:1.65;margin-bottom:32px;max-width:520px}
+.hero-usps{display:flex;flex-direction:column;gap:10px;margin-bottom:36px}
+.hero-usp{display:flex;align-items:center;gap:10px;font-size:.95rem;opacity:.9}
+.hero-usp-icon{width:20px;height:20px;flex-shrink:0}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.btn-primary{background:#fff;color:var(--groen);padding:13px 28px;border-radius:var(--r);font-weight:700;font-size:1rem;transition:all .15s;display:inline-block}
+.btn-primary:hover{background:#f0f7f2;transform:translateY(-1px)}
+.btn-outline{border:2px solid rgba(255,255,255,.6);color:#fff;padding:11px 24px;border-radius:var(--r);font-weight:500;font-size:1rem;transition:all .15s;display:inline-block}
+.btn-outline:hover{background:rgba(255,255,255,.1);border-color:#fff}
+.hero-card{background:#fff;border-radius:var(--rl);padding:32px;box-shadow:var(--shadow-lg);color:var(--tekst)}
+.hero-card h3{font-size:1.15rem;font-weight:700;margin-bottom:6px;color:var(--groen)}
+.hero-card-sub{font-size:.88rem;color:var(--subtekst);margin-bottom:20px}
+.form-group{margin-bottom:14px}
+.form-group label{display:block;font-size:.85rem;font-weight:500;color:var(--tekst);margin-bottom:5px}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:10px 12px;border:1px solid var(--rand);border-radius:var(--r);font-family:'DM Sans',sans-serif;font-size:.95rem;color:var(--tekst);background:#fff;transition:border .15s}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--groen)}
+.form-group textarea{resize:vertical;min-height:72px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form-submit{width:100%;background:var(--groen);color:#fff;border:none;padding:13px;border-radius:var(--r);font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s;margin-top:4px}
+.form-submit:hover{background:var(--groen-mid)}
+.form-note{font-size:.78rem;color:var(--subtekst);text-align:center;margin-top:10px}
+.form-success{display:none;background:var(--groen-licht);border:1px solid var(--accent);border-radius:var(--r);padding:16px;text-align:center;font-size:.95rem;color:var(--groen)}
+.section{padding:72px 24px}
+.section-alt{background:var(--lichtgrijs)}
+.section-inner{max-width:1140px;margin:0 auto}
+.section-label{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:10px}
+.section-title{font-family:'DM Serif Display',serif;font-size:2rem;font-weight:400;line-height:1.25;margin-bottom:16px}
+.section-sub{font-size:1.05rem;color:var(--subtekst);max-width:600px;line-height:1.65;margin-bottom:48px}
+.diensten-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.dienst-card{background:#fff;border:1px solid var(--rand);border-radius:var(--rl);padding:32px;transition:all .2s;display:flex;flex-direction:column}
+.dienst-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px);border-color:var(--accent)}
+.dienst-icon{width:48px;height:48px;margin-bottom:20px}
+.dienst-card h3{font-size:1.15rem;font-weight:700;margin-bottom:10px}
+.dienst-card p{font-size:.93rem;color:var(--subtekst);line-height:1.6;flex:1}
+.dienst-link{display:inline-flex;align-items:center;gap:6px;margin-top:20px;font-size:.9rem;font-weight:600;color:var(--groen)}
+.dienst-link svg{transition:transform .15s}
+.dienst-card:hover .dienst-link svg{transform:translateX(3px)}
+.dienst-card.featured{border-color:var(--groen);background:var(--groen-licht)}
+.dienst-badge{display:inline-block;background:var(--groen);color:#fff;font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:10px;margin-bottom:14px}
+.segmenten-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.segment-card{background:#fff;border:1px solid var(--rand);border-radius:var(--rl);padding:24px;transition:all .2s;display:flex;flex-direction:column;gap:10px}
+.segment-card:hover{box-shadow:var(--shadow);border-color:var(--accent);transform:translateY(-2px)}
+.segment-card-icon{width:40px;height:40px}
+.segment-card h3{font-size:1rem;font-weight:700}
+.segment-card p{font-size:.88rem;color:var(--subtekst);line-height:1.55;flex:1}
+.segment-card-link{font-size:.85rem;font-weight:600;color:var(--groen);display:inline-flex;align-items:center;gap:4px;margin-top:4px}
+.waarom-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.waarom-item{display:flex;flex-direction:column;gap:12px}
+.waarom-nr{font-family:'DM Serif Display',serif;font-size:2.4rem;color:var(--accent);line-height:1}
+.waarom-item h3{font-size:1rem;font-weight:700}
+.waarom-item p{font-size:.92rem;color:var(--subtekst);line-height:1.6}
+.markt-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.markt-tekst h2{font-family:'DM Serif Display',serif;font-size:1.9rem;font-weight:400;line-height:1.25;margin-bottom:20px}
+.markt-tekst p{font-size:.97rem;color:var(--subtekst);line-height:1.7;margin-bottom:16px}
+.markt-punten{display:flex;flex-direction:column;gap:14px;margin-top:24px}
+.markt-punt{display:flex;gap:14px;align-items:flex-start}
+.markt-punt-icon{width:36px;height:36px;background:var(--groen-card);border-radius:var(--r);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.markt-punt-tekst h4{font-size:.95rem;font-weight:700;margin-bottom:3px}
+.markt-punt-tekst p{font-size:.88rem;color:var(--subtekst);line-height:1.55;margin:0}
+.label-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.label-visual{background:var(--groen-licht);border-radius:var(--rl);padding:32px;border:1px solid var(--rand)}
+.label-schaal{display:flex;flex-direction:column;gap:6px}
+.label-balk{display:flex;align-items:center;gap:12px}
+.label-letter{width:36px;height:36px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1rem;color:#fff;flex-shrink:0}
+.label-bar{height:10px;border-radius:3px}
+.label-omschrijving{font-size:.82rem;color:var(--subtekst)}
+.stappen-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.stap{display:flex;flex-direction:column;gap:12px}
+.stap-nr{width:44px;height:44px;background:var(--groen);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.1rem}
+.stap h3{font-size:.98rem;font-weight:700}
+.stap p{font-size:.88rem;color:var(--subtekst);line-height:1.55}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
+.faq-item{border:1px solid var(--rand);border-radius:var(--r);overflow:hidden}
+.faq-vraag{width:100%;background:#fff;border:none;padding:18px 20px;text-align:left;font-family:'DM Sans',sans-serif;font-size:.97rem;font-weight:600;color:var(--tekst);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq-vraag:hover{background:var(--groen-licht)}
+.faq-chevron{flex-shrink:0;transition:transform .2s;color:var(--groen)}
+.faq-item.open .faq-chevron{transform:rotate(180deg)}
+.faq-antwoord{display:none;padding:0 20px 18px;font-size:.92rem;color:var(--subtekst);line-height:1.7}
+.faq-item.open .faq-antwoord{display:block}
+.faq-tag{display:inline-block;background:var(--groen-card);color:var(--groen);font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:8px;margin-bottom:12px}
+.cta-sectie{background:var(--groen);color:#fff;padding:72px 24px}
+.cta-inner{max-width:1000px;margin:0 auto}
+.cta-grid{display:grid;grid-template-columns:1fr 420px;gap:64px;align-items:start}
+.cta-tekst h2{font-family:'DM Serif Display',serif;font-size:2rem;font-weight:400;margin-bottom:16px}
+.cta-tekst p{font-size:1.05rem;opacity:.9;line-height:1.65;margin-bottom:24px}
+.cta-kenmerken{display:flex;flex-direction:column;gap:10px}
+.cta-kenmerk{display:flex;align-items:center;gap:10px;font-size:.95rem;opacity:.9}
+.cta-card{background:#fff;border-radius:var(--rl);padding:32px;color:var(--tekst)}
+.cta-card h3{font-size:1.1rem;font-weight:700;color:var(--groen);margin-bottom:6px}
+.cta-card-sub{font-size:.85rem;color:var(--subtekst);margin-bottom:20px}
+.footer{background:var(--tekst);color:rgba(255,255,255,.75);padding:48px 24px 32px}
+.footer-inner{max-width:1140px;margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.footer-brand p{font-size:.88rem;line-height:1.6;margin-top:12px;color:rgba(255,255,255,.55)}
+.footer-col h4{font-size:.85rem;font-weight:700;color:#fff;margin-bottom:14px}
+.footer-col a{display:block;font-size:.85rem;margin-bottom:8px;color:rgba(255,255,255,.65);transition:color .15s}
+.footer-col a:hover{color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;font-size:.82rem;display:flex;justify-content:space-between;align-items:center}
+.footer-logo{display:flex;align-items:center;gap:10px;font-weight:700;color:#fff;font-size:1.05rem}
+.label-extra-velden{display:none;background:var(--groen-licht);border-radius:var(--r);padding:16px;margin-bottom:4px;border:1px solid var(--rand)}
+.label-extra-velden.zichtbaar{display:block}
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;gap:40px}
+  .diensten-grid{grid-template-columns:1fr}
+  .segmenten-grid{grid-template-columns:repeat(2,1fr)}
+  .waarom-grid{grid-template-columns:1fr 1fr}
+  .markt-grid{grid-template-columns:1fr}
+  .label-grid{grid-template-columns:1fr}
+  .stappen-grid{grid-template-columns:repeat(2,1fr)}
+  .faq-grid{grid-template-columns:1fr}
+  .cta-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .nav-links,.nav-cta{display:none}
+  .nav-mobile-toggle{display:block}
+  .nav-mobile.open{display:block}
+  .hero h1{font-size:2rem}
+  .segmenten-grid{grid-template-columns:1fr}
+  .waarom-grid{grid-template-columns:1fr}
+  .stappen-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .segment-bar-inner{gap:6px;flex-wrap:wrap;height:auto;padding:8px 24px}
+}
+@media(max-width:480px){
+  .hero{padding:48px 20px}
+  .section{padding:48px 20px}
+  .form-row{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <div class="nav-logo-mark">S</div>
+      STAP Energie
+    </a>
+    <ul class="nav-links">
+      <li class="has-dd" id="dd-zakelijk">
+        <a href="/zakelijk/" class="active">Zakelijk</a>
+        <div class="dropdown">
+          <a href="/kantoren/">Kantoren</a>
+          <a href="/zakelijk/">MKB</a>
+          <a href="/vastgoed/">Vastgoed &amp; makelaars</a>
+          <a href="/gemeenten-woningstichtingen/">Gemeenten &amp; woningstichtingen</a>
+          <a href="/industrie/">Industrie</a>
+        </div>
+      </li>
+      <li class="has-dd" id="dd-particulieren">
+        <a href="/particulieren/">Particulieren</a>
+        <div class="dropdown">
+          <a href="/particulieren/">Energielabel woning</a>
+          <a href="/verduurzaming/particulieren/">Verduurzaming &amp; subsidies</a>
+        </div>
+      </li>
+      <li class="has-dd" id="dd-diensten">
+        <a href="#">Diensten</a>
+        <div class="dropdown">
+          <a href="/energielabels/">Energielabels</a>
+          <a href="/energielabels/woningen/">Energielabel woningen</a>
+          <a href="/energielabels/utiliteit/">Energielabel bedrijfspand</a>
+          <a href="/energie-inkoop-advies/">Energie-inkoopadvies</a>
+          <a href="/verduurzaming/zakelijk/">Verduurzaming zakelijk</a>
+        </div>
+      </li>
+      <li><a href="/kennisbank/">Kennisbank</a></li>
+      <li><a href="/over-ons/">Over ons</a></li>
+    </ul>
+    <a href="#aanvraag" class="nav-cta">Advies aanvragen</a>
+    <button class="nav-mobile-toggle" id="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="/zakelijk/">Zakelijk</a>
+    <a href="/particulieren/">Particulieren</a>
+    <a href="/energielabels/">Energielabels</a>
+    <a href="/energie-inkoop-advies/">Energie-inkoopadvies</a>
+    <a href="/verduurzaming/zakelijk/">Verduurzaming zakelijk</a>
+    <a href="/kennisbank/">Kennisbank</a>
+    <a href="#aanvraag" style="color:var(--groen);font-weight:700">Advies aanvragen</a>
+  </div>
+</nav>
+
+<div class="segment-bar">
+  <div class="segment-bar-inner">
+    <a href="/zakelijk/" class="seg-btn active">Zakelijk</a>
+    <a href="/particulieren/" class="seg-btn">Particulieren</a>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Onafhankelijk energieadvies voor bedrijven
+      </div>
+      <h1>Energie: uw grootste variabele kostenpost &mdash; <span>en uw grootste kans</span></h1>
+      <p class="hero-sub">STAP Energie helpt bedrijven omschakelen naar een duurzamer, economischer en comfortabeler energiesysteem. Niet als ver toekomstperspectief, maar als verstandige keuze voor nu.</p>
+      <div class="hero-usps">
+        <div class="hero-usp">
+          <svg class="hero-usp-icon" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/><path d="M6 10l3 3 5-5" stroke="#4ade80" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Onafhankelijk &mdash; ons advies is altijd in uw belang, zonder merkvoorkeur
+        </div>
+        <div class="hero-usp">
+          <svg class="hero-usp-icon" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/><path d="M6 10l3 3 5-5" stroke="#4ade80" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Reactie binnen twee werkdagen
+        </div>
+        <div class="hero-usp">
+          <svg class="hero-usp-icon" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/><path d="M6 10l3 3 5-5" stroke="#4ade80" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Van nulmeting tot strategie &mdash; wij begeleiden het hele traject
+        </div>
+      </div>
+      <div class="hero-ctas">
+        <a href="#aanvraag" class="btn-primary">Advies aanvragen</a>
+        <a href="#diensten" class="btn-outline">Bekijk onze diensten</a>
+      </div>
+    </div>
+    <div class="hero-card" id="aanvraag">
+      <h3>Gratis kennismakingsgesprek</h3>
+      <p class="hero-card-sub">Vertel ons kort over uw situatie. Wij nemen contact op binnen twee werkdagen.</p>
+      <form id="hero-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="hf-naam">Naam</label>
+            <input type="text" id="hf-naam" name="naam" placeholder="Uw naam" required>
+          </div>
+          <div class="form-group">
+            <label for="hf-bedrijf">Bedrijfsnaam</label>
+            <input type="text" id="hf-bedrijf" name="bedrijf" placeholder="Bedrijfsnaam">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="hf-email">E-mailadres</label>
+          <input type="email" id="hf-email" name="email" placeholder="E-mailadres" required>
+        </div>
+        <div class="form-group">
+          <label for="hf-telefoon">Telefoonnummer</label>
+          <input type="tel" id="hf-telefoon" name="telefoon" placeholder="Telefoonnummer">
+        </div>
+        <div class="form-group">
+          <label for="hf-vraag">Waar kan STAP u mee helpen?</label>
+          <select id="hf-vraag" name="dienst" onchange="toggleLabelVelden(this.value,'hf')">
+            <option value="">Selecteer een dienst</option>
+            <option value="inkoop">Energie-inkoopadvies</option>
+            <option value="label">Energielabel bedrijfspand</option>
+            <option value="verduurzaming">Verduurzaming &amp; subsidies</option>
+            <option value="anders">Anders / weet ik nog niet</option>
+          </select>
+        </div>
+        <div id="hf-label-velden" class="label-extra-velden">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="hf-oppervlakte">Gebruiksoppervlakte (m&#178;)</label>
+              <input type="number" id="hf-oppervlakte" name="oppervlakte" placeholder="bijv. 250" min="1">
+            </div>
+            <div class="form-group">
+              <label for="hf-bouwjaar">Bouwjaar</label>
+              <input type="number" id="hf-bouwjaar" name="bouwjaar" placeholder="bijv. 1995" min="1800" max="2025">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="hf-pandtype">Type pand</label>
+            <select id="hf-pandtype" name="pandtype">
+              <option value="">Selecteer type pand</option>
+              <option value="kantoor">Kantoor</option>
+              <option value="winkel">Winkel / retail</option>
+              <option value="zorg">Zorginstelling</option>
+              <option value="onderwijs">Onderwijs</option>
+              <option value="sport">Sport</option>
+              <option value="hotel">Hotel / logies</option>
+              <option value="anders">Anders</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="hf-labelstatus">Heeft u al een energielabel?</label>
+            <select id="hf-labelstatus" name="labelstatus">
+              <option value="">Selecteer</option>
+              <option value="geen">Nee, nog geen label</option>
+              <option value="verlopen">Ja, maar verlopen</option>
+              <option value="actueel">Ja, actueel label aanwezig</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="hf-toelichting">Toelichting (optioneel)</label>
+          <textarea id="hf-toelichting" name="toelichting" placeholder="Beschrijf kort uw situatie of vraag"></textarea>
+        </div>
+        <input type="hidden" name="pagina" value="zakelijk">
+        <button type="submit" class="form-submit">Aanvraag versturen</button>
+        <p class="form-note">Geen spam. Uw gegevens worden uitsluitend gebruikt voor deze aanvraag.</p>
+      </form>
+      <div class="form-success" id="hero-success">
+        Bedankt voor uw aanvraag. Wij nemen binnen twee werkdagen contact met u op.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="diensten">
+  <div class="section-inner">
+    <p class="section-label">Onze diensten</p>
+    <h2 class="section-title">Drie diensten, één aanspreekpunt</h2>
+    <p class="section-sub">Of het nu gaat om slimmer inkopen, verplichte certificering of structurele verduurzaming &mdash; STAP Energie begeleidt uw bedrijf door het hele energievraagstuk.</p>
+    <div class="diensten-grid">
+      <div class="dienst-card featured">
+        <span class="dienst-badge">Meest gevraagd</span>
+        <svg class="dienst-icon" viewBox="0 0 48 48" fill="none">
+          <rect width="48" height="48" rx="10" fill="#e8f5ed"/>
+          <path d="M14 34V22M20 34V18M26 34V26M32 34V14" stroke="#1a5c32" stroke-width="2" stroke-linecap="round"/>
+          <path d="M12 14l8 6 6-4 8-6" stroke="#2ea855" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="36" cy="12" r="3" fill="#2ea855"/>
+        </svg>
+        <h3>Energie-inkoopadvies</h3>
+        <p>De energiemarkt beweegt voortdurend onder invloed van geopolitiek, seizoenspatronen en opslagcapaciteit. STAP Energie vertaalt die marktdynamiek naar concreet advies: welk contracttype past bij uw verbruiksprofiel, en wanneer is het verstandig te kiezen voor vaste of dynamische tarieven? Gas en elektriciteit vragen bovendien vaak een verschillende strategie.</p>
+        <a href="/energie-inkoop-advies/" class="dienst-link">
+          Meer over energie-inkoopadvies
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="dienst-card">
+        <svg class="dienst-icon" viewBox="0 0 48 48" fill="none">
+          <rect width="48" height="48" rx="10" fill="#e8f5ed"/>
+          <rect x="12" y="12" width="24" height="30" rx="3" stroke="#1a5c32" stroke-width="1.8"/>
+          <path d="M17 20h14M17 25h10M17 30h8" stroke="#1a5c32" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M24 36l3-3-3-3" stroke="#2ea855" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3>Energielabels</h3>
+        <p>Een energielabel is voor veel bedrijfspanden een wettelijke verplichting &mdash; maar het is ook een krachtige nulmeting. Het laat zien hoe uw gebouw presteert ten opzichte van vergelijkbare panden en biedt een concreet vertrekpunt voor verbetering. STAP Energie verzorgt energielabels voor woningen én utiliteitsgebouwen.</p>
+        <a href="/energielabels/" class="dienst-link">
+          Meer over energielabels
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="dienst-card">
+        <svg class="dienst-icon" viewBox="0 0 48 48" fill="none">
+          <rect width="48" height="48" rx="10" fill="#e8f5ed"/>
+          <path d="M24 36V20" stroke="#1a5c32" stroke-width="2" stroke-linecap="round"/>
+          <path d="M16 28c0-6 4-12 8-16 4 4 8 10 8 16a8 8 0 01-16 0z" stroke="#1a5c32" stroke-width="1.8" stroke-linejoin="round"/>
+          <path d="M20 32c1-2 2.5-4 4-5" stroke="#2ea855" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <h3>Verduurzaming &amp; subsidies</h3>
+        <p>Duurzame energie is allang niet meer alleen een morele keuze &mdash; het is een financieel verstandige strategie. Zelf energie opwekken, betere isolatie en slimmere installaties verlagen uw energiekosten structureel. STAP Energie brengt de mogelijkheden in kaart én helpt u gebruik te maken van beschikbare subsidies.</p>
+        <a href="/verduurzaming/zakelijk/" class="dienst-link">
+          Meer over verduurzaming
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="voor-wie">
+  <div class="section-inner">
+    <p class="section-label">Voor wie</p>
+    <h2 class="section-title">Wij werken voor de gehele zakelijke markt</h2>
+    <p class="section-sub">Van ondernemer tot gemeente &mdash; elk type organisatie profiteert van onafhankelijk energieadvies. Hieronder een aantal voorbeelden van organisaties waarvoor wij actief zijn.</p>
+    <div class="segmenten-grid">
+      <a href="/kantoren/" class="segment-card">
+        <svg class="segment-card-icon" viewBox="0 0 40 40" fill="none">
+          <rect width="40" height="40" rx="8" fill="#e8f5ed"/>
+          <rect x="10" y="10" width="20" height="24" rx="2" stroke="#1a5c32" stroke-width="1.5"/>
+          <rect x="14" y="16" width="4" height="4" rx="1" fill="#2ea855" opacity=".7"/>
+          <rect x="22" y="16" width="4" height="4" rx="1" fill="#2ea855" opacity=".7"/>
+          <rect x="14" y="23" width="4" height="4" rx="1" fill="#2ea855" opacity=".4"/>
+          <rect x="22" y="23" width="4" height="4" rx="1" fill="#2ea855" opacity=".4"/>
+          <rect x="17" y="28" width="6" height="6" rx="1" fill="#1a5c32" opacity=".5"/>
+        </svg>
+        <h3>Kantoren</h3>
+        <p>Kantoren van 100 m&#178; of groter moeten verplicht minimaal label C hebben. STAP Energie begeleidt u van opname tot certificaat en adviseert over het verbetertraject.</p>
+        <span class="segment-card-link">Meer over kantoren <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+      <a href="/zakelijk/" class="segment-card">
+        <svg class="segment-card-icon" viewBox="0 0 40 40" fill="none">
+          <rect width="40" height="40" rx="8" fill="#e8f5ed"/>
+          <path d="M10 28V18l10-8 10 8v10" stroke="#1a5c32" stroke-width="1.5" stroke-linejoin="round"/>
+          <rect x="15" y="20" width="10" height="8" rx="1" stroke="#1a5c32" stroke-width="1.3"/>
+          <path d="M20 20v8" stroke="#2ea855" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+        <h3>MKB</h3>
+        <p>Voor middelgrote bedrijven is energie vaak de grootste variabele kostenpost. Met het juiste inkoopcontract en gerichte maatregelen is direct besparing mogelijk.</p>
+        <span class="segment-card-link">Meer over MKB <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+      <a href="/vastgoed/" class="segment-card">
+        <svg class="segment-card-icon" viewBox="0 0 40 40" fill="none">
+          <rect width="40" height="40" rx="8" fill="#e8f5ed"/>
+          <rect x="8" y="18" width="10" height="14" rx="1.5" stroke="#1a5c32" stroke-width="1.4"/>
+          <rect x="22" y="14" width="10" height="18" rx="1.5" stroke="#1a5c32" stroke-width="1.4"/>
+          <path d="M8 18l5-6 5 6M22 14l5-6 5 6" stroke="#1a5c32" stroke-width="1.3" stroke-linejoin="round"/>
+          <path d="M12 32v-5M26 32v-7" stroke="#2ea855" stroke-width="1.3" stroke-linecap="round"/>
+        </svg>
+        <h3>Vastgoed &amp; makelaars</h3>
+        <p>Een actueel energielabel is bij verkoop en verhuur verplicht. STAP Energie levert betrouwbare labels met een snelle doorlooptijd, zodat transacties geen vertraging oplopen.</p>
+        <span class="segment-card-link">Meer over vastgoed <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+      <a href="/gemeenten-woningstichtingen/" class="segment-card">
+        <svg class="segment-card-icon" viewBox="0 0 40 40" fill="none">
+          <rect width="40" height="40" rx="8" fill="#e8f5ed"/>
+          <rect x="12" y="14" width="16" height="18" rx="2" stroke="#1a5c32" stroke-width="1.5"/>
+          <path d="M12 14l8-6 8 6" stroke="#1a5c32" stroke-width="1.3" stroke-linejoin="round"/>
+          <rect x="16" y="22" width="4" height="5" rx="1" fill="#2ea855" opacity=".6"/>
+          <rect x="22" y="22" width="4" height="5" rx="1" fill="#2ea855" opacity=".4"/>
+          <rect x="16" y="16" width="8" height="4" rx="1" stroke="#1a5c32" stroke-width="1"/>
+        </svg>
+        <h3>Gemeenten &amp; woningstichtingen</h3>
+        <p>Portfoliobeheer van energielabels voor grote vastgoedportefeuilles, gecombineerd met advies over energieneutraal bouwen en renoveren in lijn met wet- en regelgeving.</p>
+        <span class="segment-card-link">Meer informatie <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+      <a href="/industrie/" class="segment-card">
+        <svg class="segment-card-icon" viewBox="0 0 40 40" fill="none">
+          <rect width="40" height="40" rx="8" fill="#e8f5ed"/>
+          <rect x="8" y="22" width="24" height="12" rx="2" stroke="#1a5c32" stroke-width="1.4"/>
+          <path d="M8 22l6-8h12l6 8" stroke="#1a5c32" stroke-width="1.3" stroke-linejoin="round"/>
+          <circle cx="14" cy="28" r="2" stroke="#2ea855" stroke-width="1.3"/>
+          <circle cx="26" cy="28" r="2" stroke="#2ea855" stroke-width="1.3"/>
+          <path d="M20 14v8" stroke="#1a5c32" stroke-width="1.3" stroke-linecap="round" stroke-dasharray="2 2"/>
+        </svg>
+        <h3>Industrie</h3>
+        <p>Grote verbruikers profiteren het meest van strategisch inkoopadvies. STAP Energie analyseert uw verbruiksprofiel en adviseert over de optimale contractvorm, inclusief mogelijkheden voor flexibel stroomgebruik.</p>
+        <span class="segment-card-link">Meer over industrie <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+      <a href="#aanvraag" class="segment-card" style="border-style:dashed;background:var(--groen-licht)">
+        <svg class="segment-card-icon" viewBox="0 0 40 40" fill="none">
+          <rect width="40" height="40" rx="8" fill="#fff"/>
+          <circle cx="20" cy="20" r="10" stroke="#1a5c32" stroke-width="1.4"/>
+          <path d="M20 15v10M15 20h10" stroke="#2ea855" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+        <h3>Andere organisatie?</h3>
+        <p>Heeft uw organisatie een energievraagstuk dat hier niet bij staat? Neem contact op &mdash; STAP Energie denkt graag mee over uw specifieke situatie.</p>
+        <span class="segment-card-link" style="color:var(--groen)">Contact opnemen <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-inner">
+    <p class="section-label">Waarom STAP Energie</p>
+    <h2 class="section-title">Eerlijk advies, altijd in uw belang</h2>
+    <p class="section-sub">STAP Energie werkt samen met zorgvuldig geselecteerde leveranciers en installatiepartners &mdash; maar ons advies is altijd onpartijdig. Wij kiezen wat het beste bij u past, niet wat ons het meeste oplevert.</p>
+    <div class="waarom-grid">
+      <div class="waarom-item">
+        <div class="waarom-nr">01</div>
+        <h3>Onpartijdig advies</h3>
+        <p>STAP Energie werkt samen met leveranciers en partners, maar heeft geen merkvoorkeur. Wij selecteren op kwaliteit en selecteren de partij die het beste bij uw situatie past &mdash; niet de partij die ons het meeste oplevert.</p>
+      </div>
+      <div class="waarom-item">
+        <div class="waarom-nr">02</div>
+        <h3>Gedegen marktkennis</h3>
+        <p>Met jarenlange ervaring in energie-inkooptrajecten voor MKB en industrie kent STAP Energie de markt van binnenuit. Wij begrijpen waarom prijzen bewegen en vertalen dat naar concrete adviezen voor uw situatie.</p>
+      </div>
+      <div class="waarom-item">
+        <div class="waarom-nr">03</div>
+        <h3>Rust én financieel voordeel</h3>
+        <p>Slim en strategisch inkopen levert twee dingen op: rust in uw organisatie doordat energie gewoon geregeld is, én een structureel financieel voordeel. U hoeft de markt niet zelf te volgen &mdash; dat doen wij voor u.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="section-inner">
+    <div class="markt-grid">
+      <div class="markt-tekst">
+        <p class="section-label">Energie-inkoopadvies</p>
+        <h2>De energiemarkt beweegt &mdash; weet u waarom?</h2>
+        <p>Energieprijzen zijn geen vast gegeven. Ze worden bepaald door een samenspel van factoren: de vulgraad van gasopslagen in Europa, geopolitieke spanningen, seizoenspatronen en de groeiende rol van duurzame opwek. Wie begrijpt hoe die factoren samenhangen, kan beter inschatten wanneer het verstandig is om een contract af te sluiten &mdash; en voor hoe lang.</p>
+        <p>Daarbij geldt: wat voor gas geldt, geldt niet automatisch voor elektriciteit. De optimale contractvorm verschilt per type energie én per verbruiksprofiel. Hoe meer u uw verbruik kunt sturen en spreiden, hoe meer contractvrijheid u zich kunt permitteren.</p>
+        <p>Duurzame opwek &mdash; zoals zonne-energie &mdash; speelt daarin een steeds grotere rol. Zelf energie opwekken verlaagt uw afhankelijkheid van de markt, versterkt uw energiepositie op de lange termijn én is financieel gewoon aantrekkelijk. Niet omdat het moet van de overheid, maar omdat het verstandig is.</p>
+      </div>
+      <div>
+        <div class="markt-punten">
+          <div class="markt-punt">
+            <div class="markt-punt-icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 3v14M5 8l5-5 5 5" stroke="#1a5c32" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="markt-punt-tekst">
+              <h4>Marktdynamiek begrijpen</h4>
+              <p>Gasopslagstanden, geopolitieke ontwikkelingen en seizoenen bepalen mede uw energieprijs. Wie dit begrijpt, kan beter timen.</p>
+            </div>
+          </div>
+          <div class="markt-punt">
+            <div class="markt-punt-icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="3" width="6" height="6" rx="1.5" stroke="#1a5c32" stroke-width="1.5"/><rect x="11" y="3" width="6" height="6" rx="1.5" stroke="#1a5c32" stroke-width="1.5"/><rect x="3" y="11" width="6" height="6" rx="1.5" stroke="#1a5c32" stroke-width="1.5"/><rect x="11" y="11" width="6" height="6" rx="1.5" stroke="#1a5c32" stroke-width="1.5"/></svg>
+            </div>
+            <div class="markt-punt-tekst">
+              <h4>Gas en stroom apart beoordelen</h4>
+              <p>Gas en stroom bewegen op verschillende markten. Het is zelden optimaal om voor beide hetzelfde contracttype te kiezen.</p>
+            </div>
+          </div>
+          <div class="markt-punt">
+            <div class="markt-punt-icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="8" r="5" stroke="#1a5c32" stroke-width="1.5"/><path d="M10 13v4M7 17h6" stroke="#1a5c32" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div class="markt-punt-tekst">
+              <h4>Verbruik sturen = meer vrijheid</h4>
+              <p>Hoe flexibeler uw verbruik, hoe beter u kunt profiteren van dynamische contractvormen en lagere piekprijzen.</p>
+            </div>
+          </div>
+          <div class="markt-punt">
+            <div class="markt-punt-icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 17V7" stroke="#1a5c32" stroke-width="1.5" stroke-linecap="round"/><path d="M6 11c0-4 2-7 4-9 2 2 4 5 4 9a4 4 0 01-8 0z" stroke="#1a5c32" stroke-width="1.4" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="markt-punt-tekst">
+              <h4>Zelf energie opwekken als strategie</h4>
+              <p>Eigen opwekking geeft u prijszekerheid, minder marktafhankelijkheid en lagere kosten. Een zakelijk verstandige keuze &mdash; niet alleen een groene.</p>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:24px">
+          <a href="/energie-inkoop-advies/" class="dienst-link" style="font-size:.95rem">
+            Meer over energie-inkoopadvies
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-inner">
+    <div class="label-grid">
+      <div>
+        <p class="section-label">Energielabels zakelijk</p>
+        <h2 class="section-title">Een label is meer dan een verplichting</h2>
+        <p style="color:var(--subtekst);line-height:1.7;margin-bottom:16px">Een energielabel laat zien hoe uw gebouw presteert in vergelijking met andere, vergelijkbare panden. Dat maakt het een krachtige nulmeting: het geeft u een objectieve uitgangswaarde voor een verbetertraject.</p>
+        <p style="color:var(--subtekst);line-height:1.7;margin-bottom:16px">Vanaf die nulmeting kunt u gefaseerd verbeteren &mdash; denk aan betere isolatie, efficiëntere installaties of de overstap naar hernieuwbare opwekking. Elk verbeterproject verlaagt uw energiekosten én verbetert uw label.</p>
+        <p style="color:var(--subtekst);line-height:1.7;margin-bottom:24px">Wilt u nóg meer inzicht? Dan kunt u het energielabel koppelen aan aanvullende indicatoren die iets zeggen over zowel de gebouwprestatie als het werkelijke gebruik, zoals de <a href="https://www.weii.nl/" target="_blank" rel="noopener noreferrer" style="color:var(--groen);font-weight:500">WEII-indicator</a>. Die combinatie geeft u een volledig beeld: hoe presteert het gebouw, én hoe efficiënt wordt het gebruikt?</p>
+        <div class="hero-ctas">
+          <a href="/energielabels/utiliteit/" style="background:var(--groen);color:#fff;padding:11px 22px;border-radius:var(--r);font-weight:600;font-size:.93rem;display:inline-block">Energielabel bedrijfspand</a>
+          <a href="/energielabels/woningen/" style="background:var(--groen-licht);color:var(--groen);padding:11px 22px;border-radius:var(--r);font-weight:600;font-size:.93rem;border:1px solid var(--rand);display:inline-block">Energielabel woning</a>
+        </div>
+      </div>
+      <div class="label-visual">
+        <p style="font-size:.82rem;font-weight:700;color:var(--subtekst);text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px">Energielabelschaal</p>
+        <div class="label-schaal">
+          <div class="label-balk"><div class="label-letter" style="background:#006b29;font-size:.72rem">A++++</div><div class="label-bar" style="width:98%;background:#006b29;opacity:.9"></div><span class="label-omschrijving">Uiterst energiezuinig</span></div>
+          <div class="label-balk"><div class="label-letter" style="background:#007f30;font-size:.78rem">A+++</div><div class="label-bar" style="width:95%;background:#007f30;opacity:.88"></div><span class="label-omschrijving">Uitstekend energiezuinig</span></div>
+          <div class="label-balk"><div class="label-letter" style="background:#009436;font-size:.82rem">A++</div><div class="label-bar" style="width:92%;background:#009436;opacity:.87"></div><span class="label-omschrijving">Zeer goed energiezuinig</span></div>
+          <div class="label-balk"><div class="label-letter" style="background:#1a9e2e;font-size:.88rem">A+</div><div class="label-bar" style="width:90%;background:#1a9e2e;opacity:.86"></div><span class="label-omschrijving">Goed energiezuinig</span></div>
+          <div class="label-balk"><div class="label-letter" style="background:#1a9e2e">A</div><div class="label-bar" style="width:86%;background:#1a9e2e;opacity:.85"></div><span class="label-omschrijving">Energiezuinig</span></div>
+          <div class="label-balk"><div class="label-letter" style="background:#4db848">B</div><div class="label-bar" style="width:76%;background:#4db848;opacity:.85"></div><span class="label-omschrijving">Energiezuinig</span></div>
+          <div class="label-balk"><div class="label-letter" style="background:#a8cc3a">C</div><div class="label-bar" style="width:62%;background:#a8cc3a;opacity:.85"></div><span class="label-omschrijving">Redelijk zuinig</span></div>
+          <div class="label-balk"><div class="label-letter" style="background:#f4e22b">D</div><div class="label-bar" style="width:50%;background:#f4e22b;opacity:.85"></div><span class="label-omschrijving" style="color:var(--tekst)">Gemiddeld</span></div>
+          <div class="label-balk"><div class="label-letter" style="background:#f7a628">E</div><div class="label-bar" style="width:38%;background:#f7a628;opacity:.85"></div><span class="label-omschrijving">Matig</span></div>
+          <div class="label-balk"><div class="label-letter" style="background:#ed6b25">F</div><div class="label-bar" style="width:26%;background:#ed6b25;opacity:.85"></div><span class="label-omschrijving">Weinig zuinig</span></div>
+          <div class="label-balk"><div class="label-letter" style="background:#e0211d">G</div><div class="label-bar" style="width:14%;background:#e0211d;opacity:.85"></div><span class="label-omschrijving">Zeer onzuinig</span></div>
+        </div>
+        <p style="font-size:.8rem;color:var(--subtekst);margin-top:20px;line-height:1.55">Kantoren van 100 m&#178; of groter zijn wettelijk verplicht minimaal label C te hebben.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="section-inner">
+    <p class="section-label">Onze werkwijze</p>
+    <h2 class="section-title">Zo werkt STAP Energie</h2>
+    <p class="section-sub">Helder proces, geen verrassingen. Van eerste contact tot advies op maat.</p>
+    <div class="stappen-grid">
+      <div class="stap">
+        <div class="stap-nr">1</div>
+        <h3>Kennismakingsgesprek</h3>
+        <p>We beginnen altijd met een kort gesprek om uw situatie te begrijpen. Wat is uw verbruiksprofiel, wat zijn uw doelstellingen en wat zijn de meest urgente vraagstukken?</p>
+      </div>
+      <div class="stap">
+        <div class="stap-nr">2</div>
+        <h3>Offerte &amp; opdracht</h3>
+        <p>U ontvangt een heldere offerte op basis van het kennismakingsgesprek. Na akkoord gaan wij officieel voor u aan de slag &mdash; geen verrassingen achteraf.</p>
+      </div>
+      <div class="stap">
+        <div class="stap-nr">3</div>
+        <h3>Analyse &amp; nulmeting</h3>
+        <p>Op basis van uw verbruiksdata, contracten en gebouwinformatie stellen wij een helder beeld op van uw huidige situatie. Dat is de basis voor elk goed advies.</p>
+      </div>
+      <div class="stap">
+        <div class="stap-nr">4</div>
+        <h3>Advies &amp; begeleiding</h3>
+        <p>U ontvangt een concreet, onderbouwd advies en wij begeleiden de uitvoering. Energiemarkten veranderen &mdash; wij zorgen dat uw strategie actueel blijft.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-inner">
+    <p class="section-label">Veelgestelde vragen</p>
+    <h2 class="section-title">Antwoorden op uw vragen</h2>
+    <p class="section-sub">De meest gestelde vragen over energie-inkoopadvies, energielabels en verduurzaming voor zakelijke klanten.</p>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <button class="faq-vraag"><span>Waarom bewegen energieprijzen zo sterk?</span><svg class="faq-chevron" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="faq-antwoord"><span class="faq-tag">Energie-inkoop</span>Energieprijzen worden bepaald door een combinatie van factoren: de vulgraad van gasopslagen in Europa, weersomstandigheden, de beschikbaarheid van hernieuwbare energie en geopolitieke ontwikkelingen. Die factoren zijn voortdurend in beweging, waardoor prijzen soms fors schommelen &mdash; zelfs binnen één seizoen. Wie die dynamiek begrijpt, kan beter inschatten wanneer het verstandig is om een contract vast te leggen en voor welke looptijd. <a href="/energie-inkoop-advies/" style="color:var(--groen);font-weight:500">Meer over energie-inkoopadvies &rarr;</a></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-vraag"><span>Moet ik voor gas en elektriciteit hetzelfde contract kiezen?</span><svg class="faq-chevron" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="faq-antwoord"><span class="faq-tag">Energie-inkoop</span>Nee &mdash; en dat is een veelgemaakte fout. Gas en stroom bewegen op verschillende markten en hebben elk hun eigen seizoenspatroon en risicoprofiel. Bovendien verschilt uw verbruiksprofiel per type energie. Het is dan ook zelden optimaal om voor beide hetzelfde contracttype te kiezen. STAP Energie beoordeelt gas en stroom altijd afzonderlijk, en adviseert per situatie de meest passende contractvorm.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-vraag"><span>Wat is het verschil tussen een vast, variabel en dynamisch energiecontract?</span><svg class="faq-chevron" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="faq-antwoord"><span class="faq-tag">Energie-inkoop</span>Er zijn drie gangbare contractvormen voor zakelijke energie. Bij een <strong>vast contract</strong> legt u de prijs voor een bepaalde looptijd vast &mdash; maximale zekerheid, maar u profiteert niet van prijsdalingen. Bij een <strong>variabel contract</strong> wordt de prijs periodiek (bijvoorbeeld per kwartaal) herzien op basis van de markt &mdash; meer flexibiliteit, maar ook meer onzekerheid. Bij een <strong>dynamisch contract</strong> betaalt u de actuele marktprijs per uur &mdash; aantrekkelijk als u uw verbruik kunt sturen naar goedkopere momenten, maar vraagt meer aandacht. Welke vorm het beste past, hangt af van uw verbruiksprofiel, risicobereidheid en de actuele marktsituatie. <a href="/energie-inkoop-advies/" style="color:var(--groen);font-weight:500">Lees meer over energie-inkoopadvies &rarr;</a></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-vraag"><span>Is mijn bedrijfspand verplicht van een energielabel voorzien?</span><svg class="faq-chevron" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="faq-antwoord"><span class="faq-tag">Energielabel</span>Ja, voor de meeste zakelijke gebouwen geldt een labelplicht bij verkoop, verhuur of oplevering. Voor kantoren geldt daarnaast een aanvullende verplichting: kantoorgebouwen van 100 m&#178; of groter moeten minimaal energielabel C hebben. Andere gebouwtypen &mdash; zoals winkels, zorginstellingen en onderwijspanden &mdash; hebben een labelplicht bij transacties, maar geen minimumeis aan het label zelf. <a href="/energielabels/utiliteit/" style="color:var(--groen);font-weight:500">Meer over energielabels voor bedrijfspanden &rarr;</a></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-vraag"><span>Wat kan ik met een energielabel als het eenmaal is afgegeven?</span><svg class="faq-chevron" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="faq-antwoord"><span class="faq-tag">Energielabel</span>Een energielabel is meer dan een sticker op uw gebouw. Het is een objectieve nulmeting die laat zien hoe uw pand presteert ten opzichte van vergelijkbare gebouwen. Vanaf die nulmeting kunt u gericht verbeteren &mdash; isolatie, installaties, opwekking. Elk verbeterproject verhoogt uw label én verlaagt uw energiekosten. U kunt het label ook koppelen aan aanvullende indicatoren om ook het gebruik van het gebouw in kaart te brengen.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-vraag"><span>Hoe lang is een zakelijk energielabel geldig?</span><svg class="faq-chevron" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="faq-antwoord"><span class="faq-tag">Energielabel</span>Een energielabel voor een utiliteitsgebouw is tien jaar geldig. Heeft u in die periode relevante energiebesparende maatregelen genomen &mdash; zoals nieuwe isolatie of een efficiëntere installatie &mdash; dan kunt u het label tussentijds laten actualiseren. Een beter label verhoogt de waarde van uw pand en versterkt uw positie bij verhuur of verkoop.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-vraag"><span>Wat levert verduurzaming mijn bedrijf financieel op?</span><svg class="faq-chevron" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="faq-antwoord"><span class="faq-tag">Verduurzaming</span>Verduurzaming verlaagt uw energiekosten structureel. Betere isolatie vermindert uw warmtevraag, efficiëntere installaties verbruiken minder energie en zelf energie opwekken via zonnepanelen reduceert uw inkoop van de markt. Bovendien zijn er voor veel maatregelen subsidies beschikbaar die de terugverdientijd verkorten. Verduurzaming is daarmee geen kostenpost, maar een investering met een meetbaar rendement. <a href="/verduurzaming/zakelijk/" style="color:var(--groen);font-weight:500">Meer over verduurzaming voor bedrijven &rarr;</a></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-vraag"><span>Werkt STAP Energie samen met energieleveranciers?</span><svg class="faq-chevron" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="faq-antwoord"><span class="faq-tag">Onafhankelijk</span>Ja &mdash; maar op onze voorwaarden. STAP Energie werkt samen met zorgvuldig geselecteerde energieleveranciers en installatiepartners die wij beoordelen op kwaliteit: duidelijke facturatie, goede nazorg en een scherp aanbod. Wij hebben geen vaste voorkeur voor een bepaalde partij en laten ons advies niet beïnvloeden door commerciële belangen. Via een volmacht kunnen wij namens u het contact met uw leverancier onderhouden, contracten afsluiten en alle energiegerelateerde vragen afhandelen. Zo bent u volledig ontzorgd en hoeft u zelf geen tijd te steken in leverancierscontact. <a href="/energie-inkoop-advies/" style="color:var(--groen);font-weight:500">Meer over onze werkwijze bij energie-inkoop &rarr;</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-sectie" id="contact">
+  <div class="cta-inner">
+    <div class="cta-grid">
+      <div class="cta-tekst">
+        <h2>Klaar om uw energiestrategie aan te pakken?</h2>
+        <p>Neem contact op voor een vrijblijvend kennismakingsgesprek. STAP Energie kijkt samen met u naar de mogelijkheden &mdash; zonder verplichtingen, zonder verborgen agenda.</p>
+        <div class="cta-kenmerken">
+          <div class="cta-kenmerk"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="rgba(255,255,255,0.5)" stroke-width="1.4"/><path d="M6 10l3 3 5-5" stroke="#4ade80" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Reactie binnen twee werkdagen</div>
+          <div class="cta-kenmerk"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="rgba(255,255,255,0.5)" stroke-width="1.4"/><path d="M6 10l3 3 5-5" stroke="#4ade80" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Vrijblijvend eerste gesprek</div>
+          <div class="cta-kenmerk"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="rgba(255,255,255,0.5)" stroke-width="1.4"/><path d="M6 10l3 3 5-5" stroke="#4ade80" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Volledig onafhankelijk advies</div>
+        </div>
+      </div>
+      <div class="cta-card">
+        <h3>Aanvraag indienen</h3>
+        <p class="cta-card-sub">Vul het formulier in en wij nemen binnen twee werkdagen contact met u op.</p>
+        <form id="cta-form">
+          <div class="form-group"><label for="cf-naam">Naam</label><input type="text" id="cf-naam" name="naam" placeholder="Uw naam" required></div>
+          <div class="form-group"><label for="cf-bedrijf">Bedrijfsnaam</label><input type="text" id="cf-bedrijf" name="bedrijf" placeholder="Bedrijfsnaam"></div>
+          <div class="form-group"><label for="cf-email">E-mailadres</label><input type="email" id="cf-email" name="email" placeholder="E-mailadres" required></div>
+          <div class="form-group">
+            <label for="cf-dienst">Waar kan STAP u mee helpen?</label>
+            <select id="cf-dienst" name="dienst">
+              <option value="">Selecteer een dienst</option>
+              <option value="inkoop">Energie-inkoopadvies</option>
+              <option value="label">Energielabel bedrijfspand</option>
+              <option value="verduurzaming">Verduurzaming &amp; subsidies</option>
+              <option value="anders">Anders / weet ik nog niet</option>
+            </select>
+          </div>
+          <div class="form-group"><label for="cf-bericht">Uw vraag of situatie</label><textarea id="cf-bericht" name="bericht" placeholder="Beschrijf kort uw vraag of situatie"></textarea></div>
+          <input type="hidden" name="pagina" value="zakelijk-cta">
+          <button type="submit" class="form-submit">Aanvraag versturen</button>
+          <p class="form-note">Geen spam. Uw gegevens worden uitsluitend gebruikt voor deze aanvraag.</p>
+        </form>
+        <div class="form-success" id="cta-success">Bedankt voor uw aanvraag. Wij nemen binnen twee werkdagen contact met u op.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><div class="nav-logo-mark">S</div>STAP Energie</div>
+        <p>Onpartijdig energieadvies voor bedrijven en particulieren &mdash; van energielabel tot inkoopstrategie. Heel Nederland, snel en persoonlijk.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Zakelijk</h4>
+        <a href="/energie-inkoop-advies/">Energie-inkoopadvies</a>
+        <a href="/energielabels/utiliteit/">Energielabel bedrijfspand</a>
+        <a href="/verduurzaming/zakelijk/">Verduurzaming zakelijk</a>
+        <a href="/kantoren/">Kantoren</a>
+        <a href="/vastgoed/">Vastgoed &amp; makelaars</a>
+      </div>
+      <div class="footer-col">
+        <h4>Particulieren</h4>
+        <a href="/particulieren/">Energielabel woning</a>
+        <a href="/verduurzaming/particulieren/">Verduurzaming</a>
+        <a href="/kennisbank/">Kennisbank</a>
+      </div>
+      <div class="footer-col">
+        <h4>STAP Energie</h4>
+        <a href="/over-ons/">Over ons</a>
+        <a href="#contact">Contact</a>
+        <a href="/privacy/">Privacybeleid</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 STAP Energie &mdash; Alle rechten voorbehouden</span>
+      <span>KvK: [nummer volgt]</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.has-dd').forEach(function(item){
+  var timer;
+  item.addEventListener('mouseenter',function(){clearTimeout(timer);timer=setTimeout(function(){item.classList.add('open');},120);});
+  item.addEventListener('mouseleave',function(){clearTimeout(timer);timer=setTimeout(function(){item.classList.remove('open');},120);});
+  var dd=item.querySelector('.dropdown');
+  if(dd){
+    dd.addEventListener('mouseenter',function(){clearTimeout(timer);});
+    dd.addEventListener('mouseleave',function(){clearTimeout(timer);timer=setTimeout(function(){item.classList.remove('open');},120);});
+  }
+});
+document.getElementById('nav-toggle').addEventListener('click',function(){document.getElementById('nav-mobile').classList.toggle('open');});
+document.addEventListener('click',function(e){
+  if(!e.target.closest('.has-dd'))document.querySelectorAll('.has-dd').forEach(function(i){i.classList.remove('open');});
+  if(!e.target.closest('.nav')&&!e.target.closest('#nav-toggle'))document.getElementById('nav-mobile').classList.remove('open');
+});
+document.querySelectorAll('.faq-vraag').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var item=btn.closest('.faq-item');
+    var isOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open');});
+    if(!isOpen)item.classList.add('open');
+  });
+});
+function submitForm(formId,successId){
+  document.getElementById(formId).addEventListener('submit',function(e){
+    e.preventDefault();
+    var data=new FormData(this);
+    fetch('/api/contact.php',{method:'POST',body:data})
+      .then(function(r){return r.json();})
+      .then(function(json){
+        if(json.ok){document.getElementById(formId).style.display='none';document.getElementById(successId).style.display='block';}
+      })
+      .catch(function(){document.getElementById(formId).style.display='none';document.getElementById(successId).style.display='block';});
+  });
+}
+submitForm('hero-form','hero-success');
+submitForm('cta-form','cta-success');
+function toggleLabelVelden(waarde,prefix){
+  var velden=document.getElementById(prefix+'-label-velden');
+  if(velden){velden.classList.toggle('zichtbaar', waarde==='label');}
+}
+</script>
+</body>
+</html>
