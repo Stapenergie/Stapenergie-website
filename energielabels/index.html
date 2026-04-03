@@ -41,6 +41,7 @@
 }
 </script>
 
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a5c32'/%3E%3Ctext x='16' y='23' font-family='sans-serif' font-size='20' font-weight='700' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
@@ -526,7 +527,7 @@ a    { text-decoration: none; }
           <li>Officieel erkend &amp; geregistreerd in EP-online</li>
           <li>Basismethodiek — bestaande bouw (woningen én utiliteit)</li>
           <li>Label 10 jaar geldig na afgifte</li>
-          <li>Reactie binnen 24 uur — heel Nederland</li>
+          <li>Reactie binnen twee werkdagen — heel Nederland</li>
         </ul>
       </div>
 
@@ -541,8 +542,9 @@ a    { text-decoration: none; }
         <!-- FORMULIER: PARTICULIER -->
         <div id="form-particulier">
           <h3>Aanvraag energielabel woning</h3>
-          <p>Vrijblijvend. Reactie binnen 24 uur.</p>
+          <p>Vrijblijvend. Reactie binnen twee werkdagen.</p>
           <form class="form-stack" id="form-p" onsubmit="submitFormulier(event,'form-p')">
+        <input type="hidden" name="pagina" value="energielabels-particulier">
             <input type="hidden" name="source" id="source-p">
             <div class="form-row">
               <div>
@@ -595,15 +597,16 @@ a    { text-decoration: none; }
               Ik ga akkoord met de <a href="/privacyverklaring/">privacyverklaring</a>.
             </label>
             <button type="submit" class="form-submit">Aanvraag versturen →</button>
-            <p class="form-note">Vrijblijvend · Geen verplichtingen · Binnen 24 uur reactie</p>
+            <p class="form-note">Vrijblijvend · Geen verplichtingen · Binnen twee werkdagen reactie</p>
           </form>
         </div>
 
         <!-- FORMULIER: ZAKELIJK -->
         <div id="form-zakelijk" class="form-hidden">
           <h3>Aanvraag energielabel bedrijfspand</h3>
-          <p>Vrijblijvend. Reactie binnen 24 uur.</p>
+          <p>Vrijblijvend. Reactie binnen twee werkdagen.</p>
           <form class="form-stack" id="form-z" onsubmit="submitFormulier(event,'form-z')">
+        <input type="hidden" name="pagina" value="energielabels-zakelijk">
             <input type="hidden" name="source" id="source-z">
             <div class="form-row">
               <div>
@@ -659,7 +662,7 @@ a    { text-decoration: none; }
               Ik ga akkoord met de <a href="/privacyverklaring/">privacyverklaring</a>.
             </label>
             <button type="submit" class="form-submit">Aanvraag versturen →</button>
-            <p class="form-note">Vrijblijvend · Geen verplichtingen · Binnen 24 uur reactie</p>
+            <p class="form-note">Vrijblijvend · Geen verplichtingen · Binnen twee werkdagen reactie</p>
           </form>
         </div>
       </div>
@@ -780,7 +783,7 @@ a    { text-decoration: none; }
       <div class="proces-stap">
         <div class="proces-num">1</div>
         <h4>Gegevens achterlaten</h4>
-        <p>Vul het aanvraagformulier in of bel direct. Binnen 24 uur nemen we contact met u op voor een afspraak.</p>
+        <p>Vul het aanvraagformulier in of bel direct. Binnen twee werkdagen nemen we contact met u op voor een afspraak.</p>
       </div>
       <div class="proces-stap">
         <div class="proces-num">2</div>
@@ -1124,12 +1127,12 @@ a    { text-decoration: none; }
 <section class="cta-sec">
   <div class="container">
     <h2>Klaar voor uw energielabel?</h2>
-    <p>Vrijblijvende aanvraag — geen verplichtingen, wel direct duidelijkheid. Reactie binnen 24 uur.</p>
+    <p>Vrijblijvende aanvraag — geen verplichtingen, wel direct duidelijkheid. Reactie binnen twee werkdagen.</p>
     <div class="cta-btns">
       <a href="#aanvraag" class="btn-wit">Aanvraag indienen →</a>
       <a href="tel:0600000000" class="btn-wit-out">Direct bellen</a>
     </div>
-    <p class="cta-meta">info@stapenergie.nl &nbsp;·&nbsp; Leusden &amp; heel Nederland &nbsp;·&nbsp; KvK: in aanvraag</p>
+    <p class="cta-meta"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b3daddd5dcf3c0c7d2c3d6ddd6c1d4dad69ddddf">[email&#160;protected]</a> &nbsp;·&nbsp; Leusden &amp; heel Nederland &nbsp;·&nbsp; KvK: in aanvraag</p>
   </div>
 </section>
 
@@ -1168,7 +1171,7 @@ a    { text-decoration: none; }
       <div class="footer-col">
         <h4>Contact</h4>
         <a href="tel:0600000000">06 – XX XX XX XX</a>
-        <a href="mailto:info@stapenergie.nl">info@stapenergie.nl</a>
+        <a href="/cdn-cgi/l/email-protection#fe97909891be8d8a9f8e9b909b8c99979bd09092"><span class="__cf_email__" data-cfemail="2841464e47685b5c49584d464d5a4f414d064644">[email&#160;protected]</span></a>
         <a href="/over-erik/">Over Erik</a>
         <a href="/privacyverklaring/">Privacy &amp; AVG</a>
       </div>
@@ -1180,7 +1183,7 @@ a    { text-decoration: none; }
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // ── HAMBURGER ──
 var toggle   = document.getElementById('nav-toggle');
 var navLinks = document.getElementById('nav-links');
@@ -1322,40 +1325,78 @@ function toggleSpoed(prefix) {
 })();
 
 // ── FORMULIER SUBMIT ──
-function submitFormulier(e, formId) {
+async function submitFormulier(e, formId) {
   e.preventDefault();
-  var form = document.getElementById(formId);
-  var postcode = '';
-  var huisnummer = '';
 
-  // Haal postcode + huisnummer op voor cookie
-  if (formId === 'form-p') {
-    postcode    = document.getElementById('p-postcode') ? document.getElementById('p-postcode').value : '';
-    huisnummer  = document.getElementById('p-huisnummer') ? document.getElementById('p-huisnummer').value : '';
-  } else {
-    postcode    = document.getElementById('z-postcode') ? document.getElementById('z-postcode').value : '';
-    huisnummer  = document.getElementById('z-huisnummer') ? document.getElementById('z-huisnummer').value : '';
+  var form    = document.getElementById(formId);
+  var btn     = form.querySelector('[type="submit"]');
+  if (btn && btn.disabled) return;
+
+  if (btn) {
+    btn.disabled  = true;
+    btn._origText = btn.textContent;
+    btn.textContent = 'Bezig met versturen…';
   }
 
-  // Sla op in first-party cookie (30 dagen)
+  // Verwijder eventuele eerdere foutmelding
+  var bestaandeFout = form.querySelector('.form-error');
+  if (bestaandeFout) bestaandeFout.remove();
+
+  // Sla postcode + huisnummer op in first-party cookie (30 dagen)
+  var postcode   = '';
+  var huisnummer = '';
+  if (formId === 'form-p') {
+    postcode   = document.getElementById('p-postcode')   ? document.getElementById('p-postcode').value   : '';
+    huisnummer = document.getElementById('p-huisnummer') ? document.getElementById('p-huisnummer').value : '';
+  } else {
+    postcode   = document.getElementById('z-postcode')   ? document.getElementById('z-postcode').value   : '';
+    huisnummer = document.getElementById('z-huisnummer') ? document.getElementById('z-huisnummer').value : '';
+  }
   if (postcode) {
     var exp = new Date();
     exp.setDate(exp.getDate() + 30);
-    document.cookie = 'stap_lead_postcode=' + encodeURIComponent(postcode.trim()) + '; expires=' + exp.toUTCString() + '; path=/; SameSite=Lax';
+    document.cookie = 'stap_lead_postcode=' + encodeURIComponent(postcode.trim())   + '; expires=' + exp.toUTCString() + '; path=/; SameSite=Lax';
     document.cookie = 'stap_lead_hnr='     + encodeURIComponent(huisnummer.trim()) + '; expires=' + exp.toUTCString() + '; path=/; SameSite=Lax';
   }
 
-  // Succes feedback — vervang het juiste formulier-wrapper
-  var wrapper = formId === 'form-p' ? document.getElementById('form-particulier') : document.getElementById('form-zakelijk');
-  wrapper.innerHTML =
-    '<div class="form-success">' +
-    '<svg width="52" height="52" viewBox="0 0 52 52" fill="none" style="margin:0 auto 1rem">' +
-    '<circle cx="26" cy="26" r="25" stroke="#1a5c32" stroke-width="2"/>' +
-    '<path d="M15 26l8 8 14-14" stroke="#1a5c32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>' +
-    '</svg>' +
-    '<div class="form-success-title">Aanvraag ontvangen!</div>' +
-    '<div class="form-success-sub">We reageren binnen 24 uur. Tot snel!</div>' +
-    '</div>';
+  var data = new FormData(form);
+
+  try {
+    var response = await fetch('/api/contact.php', {
+      method: 'POST',
+      body: data
+    });
+    var json = await response.json();
+
+    if (json.succes) {
+      var wrapper = formId === 'form-p'
+        ? document.getElementById('form-particulier')
+        : document.getElementById('form-zakelijk');
+      wrapper.innerHTML =
+        '<div class="form-success">' +
+        '<svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">' +
+        '<circle cx="24" cy="24" r="24" fill="#e8f5ed"/>' +
+        '<path d="M14 24.5l7 7 13-14" stroke="#1a5c32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>' +
+        '</svg>' +
+        '<div class="form-success-title">Aanvraag ontvangen!</div>' +
+        '<div class="form-success-sub">We nemen <strong>binnen twee werkdagen</strong> contact met u op.<br>U ontvangt ook een bevestiging per e-mail.</div>' +
+        '</div>';
+    } else {
+      if (btn) { btn.disabled = false; btn.textContent = btn._origText; }
+      var fout = document.createElement('p');
+      fout.className   = 'form-error';
+      fout.style.cssText = 'color:#c0392b;font-size:.82rem;margin-top:4px;';
+      fout.textContent = (json.fouten && json.fouten[0]) || 'Er ging iets mis. Probeer het opnieuw.';
+      if (btn) btn.insertAdjacentElement('afterend', fout);
+    }
+  } catch (err) {
+    if (btn) { btn.disabled = false; btn.textContent = btn._origText; }
+    var fout = document.createElement('p');
+    fout.className   = 'form-error';
+    fout.style.cssText = 'color:#c0392b;font-size:.82rem;margin-top:4px;';
+    fout.textContent = 'Het versturen is helaas mislukt. Probeer het later opnieuw of stuur een e-mail naar info@stapenergie.nl.';
+    if (btn) btn.insertAdjacentElement('afterend', fout);
+  }
 }
 
 // ── LABELCHECK ──
@@ -1406,13 +1447,4 @@ function voerLabelcheckUit() {
       resultaat.innerHTML =
         '<h5>Check tijdelijk niet beschikbaar</h5>' +
         '<p>De directe check is momenteel niet bereikbaar. U kunt ook zelf zoeken via <a href="https://www.ep-online.nl" target="_blank" rel="noopener">ep-online.nl</a> of direct een aanvraag indienen.</p>' +
-        '<a href="#aanvraag">Aanvraag indienen →</a>';
-    });
-}
-
-// Enter-toets in labelcheck velden
-document.getElementById('check-postcode').addEventListener('keydown', function(e) { if (e.key === 'Enter') voerLabelcheckUit(); });
-document.getElementById('check-huisnummer').addEventListener('keydown', function(e) { if (e.key === 'Enter') voerLabelcheckUit(); });
-</script>
-</body>
-</html>
+        '<a href="#aanvraag">Aa
