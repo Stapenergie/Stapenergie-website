@@ -632,10 +632,10 @@ a    { text-decoration: none; }
     var privacy  = document.getElementById('sf-privacy').checked;
     var dienst   = document.getElementById('sf-dienst-select').value;
 
-    if (!voornaam) { sfFout(btn, 'Vul uw voornaam in.'); return; }
-    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { sfFout(btn, 'Vul een geldig e-mailadres in.'); return; }
-    if (!privacy) { sfFout(btn, 'Ga akkoord met de privacyverklaring om door te gaan.'); return; }
-    if (!dienst) { sfFout(btn, 'Geef aan waarvoor u contact wilt.'); return; }
+    if (!voornaam) { sfFout(btn, 'Vul uw voornaam in.', document.getElementById('sf-voornaam')); return; }
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { sfFout(btn, 'Vul een geldig e-mailadres in.', document.getElementById('sf-email')); return; }
+    if (!privacy) { sfFout(btn, 'Ga akkoord met de privacyverklaring om door te gaan.', document.getElementById('sf-privacy')); return; }
+    if (!dienst) { sfFout(btn, 'Geef aan waarvoor u contact wilt.', document.getElementById('sf-dienst-select')); return; }
 
     if (btn.disabled) return;
     btn.disabled = true;
@@ -671,11 +671,23 @@ a    { text-decoration: none; }
     }
   };
 
-  function sfFout(btn, bericht) {
+  function sfFout(btn, bericht, veld) {
     var p = document.createElement('p');
     p.className   = 'sf-error';
     p.textContent = bericht;
     btn.insertAdjacentElement('afterend', p);
+
+    // Scroll naar het problematische veld en geef het focus + rode rand
+    if (veld) {
+      veld.style.borderColor = '#c0392b';
+      veld.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      veld.focus();
+      // Herstel de rand zodra de gebruiker iets typt
+      veld.addEventListener('input', function herstel() {
+        veld.style.borderColor = '';
+        veld.removeEventListener('input', herstel);
+      }, { once: true });
+    }
   }
 
 })();
