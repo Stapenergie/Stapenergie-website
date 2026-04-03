@@ -941,7 +941,7 @@
     <p>Vrijblijvende aanvraag — geen verplichtingen, wel direct duidelijkheid. Reactie binnen twee werkdagen.</p>
     <div class="cta-bottom-btns">
       <a href="#aanvraag" class="btn-primary">Aanvraag indienen →</a>
-      <a href="mailto:info@stapenergie.nl" class="btn-outline-wit">Direct mailen</a>
+      <a href="/cdn-cgi/l/email-protection#234a4d454c6350574253464d4651444a460d4d4f" class="btn-outline-wit">Direct mailen</a>
     </div>
   </div>
 </section>
@@ -990,7 +990,7 @@
         <h4>Contact</h4>
         <ul>
           <li><a href="tel:06XXXXXXXX">06 – XX XX XX XX</a></li>
-          <li><a href="mailto:info@stapenergie.nl">info@stapenergie.nl</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#9df4f3fbf2ddeee9fcedf8f3f8effaf4f8b3f3f1"><span class="__cf_email__" data-cfemail="f1989f979eb182859081949f9483969894df9f9d">[email&#160;protected]</span></a></li>
           <li><a href="/over-erik/">Over Erik</a></li>
           <li><a href="/privacy/">Privacy &amp; AVG</a></li>
         </ul>
@@ -1000,7 +1000,7 @@
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // ── HAMBURGER ──
 var toggle = document.getElementById('nav-toggle');
 var navLinks = document.getElementById('nav-links');
@@ -1072,67 +1072,92 @@ function toggleSpoedBedrijf() {
 })();
 
 // ── FORMULIER SUBMIT ──
-function submitBedrijfForm(e) {
+async function submitBedrijfForm(e) {
   e.preventDefault();
   var form = document.getElementById('form-bedrijf');
+  var btn  = form.querySelector('[type="submit"]');
+  if (btn && btn.disabled) return;
+  if (btn) { btn.disabled = true; btn._orig = btn.textContent; btn.textContent = 'Bezig met versturen…'; }
+
+  form.querySelector('.form-error') && form.querySelector('.form-error').remove();
+
   var data = new FormData(form);
-  fetch('/api/contact.php', { method: 'POST', body: data })
-    .then(function(r) { return r.json(); })
-    .then(function(res) {
+  try {
+    var response = await fetch('/api/contact.php', { method: 'POST', body: data });
+    var res = await response.json();
+    if (res.succes) {
       var wrap = document.getElementById('formulier-zakelijk-wrap');
-      if (res.ok) {
-        wrap.querySelector('.formulier-wrap').innerHTML =
-          '<div class="form-success">' +
-          '<svg width="52" height="52" viewBox="0 0 52 52" fill="none" style="margin:0 auto 1rem">' +
-          '<circle cx="26" cy="26" r="25" stroke="#1a5c32" stroke-width="2"/>' +
-          '<path d="M15 26l8 8 14-14" stroke="#1a5c32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>' +
-          '</svg>' +
-          '<div class="form-success-title">Aanvraag ontvangen!</div>' +
-          '<div class="form-success-sub">We reageren binnen twee werkdagen. Tot snel!</div>' +
-          '</div>';
-      }
-    })
-    .catch(function() {
-      alert('Er is iets misgegaan. Probeer het opnieuw of mail naar info@stapenergie.nl');
-    });
+      wrap.querySelector('.formulier-wrap').innerHTML =
+        '<div class="form-success">' +
+        '<svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">' +
+        '<circle cx="24" cy="24" r="24" fill="#e8f5ed"/>' +
+        '<path d="M14 24.5l7 7 13-14" stroke="#1a5c32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>' +
+        '</svg>' +
+        '<div class="form-success-title">Aanvraag ontvangen!</div>' +
+        '<div class="form-success-sub">We nemen <strong>binnen twee werkdagen</strong> contact met u op.<br>U ontvangt ook een bevestiging per e-mail.</div>' +
+        '</div>';
+    } else {
+      if (btn) { btn.disabled = false; btn.textContent = btn._orig; }
+      var fout = document.createElement('p');
+      fout.className = 'form-error';
+      fout.style.cssText = 'color:#c0392b;font-size:.82rem;margin-top:4px;';
+      fout.textContent = (res.fouten && res.fouten[0]) || 'Er ging iets mis. Probeer het opnieuw.';
+      if (btn) btn.insertAdjacentElement('afterend', fout);
+    }
+  } catch(err) {
+    if (btn) { btn.disabled = false; btn.textContent = btn._orig; }
+    var fout = document.createElement('p');
+    fout.className = 'form-error';
+    fout.style.cssText = 'color:#c0392b;font-size:.82rem;margin-top:4px;';
+    fout.textContent = 'Het versturen is helaas mislukt. Probeer het later opnieuw of stuur een e-mail naar info@stapenergie.nl.';
+    if (btn) btn.insertAdjacentElement('afterend', fout);
+  }
 }
 
 
 // ── CERTIFICAAT FORMULIER SUBMIT ──
-function submitCertificaatForm(e) {
+async function submitCertificaatForm(e) {
   e.preventDefault();
   var form = document.getElementById('form-certificaat');
+  var btn  = form.querySelector('[type="submit"]');
+  if (btn && btn.disabled) return;
+  if (btn) { btn.disabled = true; btn._orig = btn.textContent; btn.textContent = 'Bezig met versturen…'; }
+
+  form.querySelector('.form-error') && form.querySelector('.form-error').remove();
+
   var data = new FormData(form);
-  fetch('/api/contact.php', { method: 'POST', body: data })
-    .then(function(r) { return r.json(); })
-    .then(function(res) {
+  try {
+    var response = await fetch('/api/contact.php', { method: 'POST', body: data });
+    var res = await response.json();
+    if (res.succes) {
       var wrap = document.getElementById('certificaat-wrap');
       wrap.querySelector('.formulier-wrap').innerHTML =
         '<div class="form-success">' +
-        '<svg width="52" height="52" viewBox="0 0 52 52" fill="none" style="margin:0 auto 1rem">' +
-        '<circle cx="26" cy="26" r="25" stroke="#1a5c32" stroke-width="2"/>' +
-        '<path d="M15 26l8 8 14-14" stroke="#1a5c32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>' +
+        '<svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">' +
+        '<circle cx="24" cy="24" r="24" fill="#e8f5ed"/>' +
+        '<path d="M14 24.5l7 7 13-14" stroke="#1a5c32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>' +
         '</svg>' +
         '<div class="form-success-title">Aanvraag ontvangen!</div>' +
-        '<div class="form-success-sub">We nemen binnen twee werkdagen contact op.</div>' +
+        '<div class="form-success-sub">We nemen <strong>binnen twee werkdagen</strong> contact met u op.<br>U ontvangt ook een bevestiging per e-mail.</div>' +
         '</div>';
-    })
-    .catch(function() {
-      alert('Er is iets misgegaan. Probeer het opnieuw of mail naar info@stapenergie.nl');
-    });
+    } else {
+      if (btn) { btn.disabled = false; btn.textContent = btn._orig; }
+      var fout = document.createElement('p');
+      fout.className = 'form-error';
+      fout.style.cssText = 'color:#c0392b;font-size:.82rem;margin-top:4px;';
+      fout.textContent = (res.fouten && res.fouten[0]) || 'Er ging iets mis. Probeer het opnieuw.';
+      if (btn) btn.insertAdjacentElement('afterend', fout);
+    }
+  } catch(err) {
+    if (btn) { btn.disabled = false; btn.textContent = btn._orig; }
+    var fout = document.createElement('p');
+    fout.className = 'form-error';
+    fout.style.cssText = 'color:#c0392b;font-size:.82rem;margin-top:4px;';
+    fout.textContent = 'Het versturen is helaas mislukt. Probeer het later opnieuw of stuur een e-mail naar info@stapenergie.nl.';
+    if (btn) btn.insertAdjacentElement('afterend', fout);
+  }
 }
 
 // ── FAQ ──
 document.querySelectorAll('.faq-vraag').forEach(function(btn) {
   btn.addEventListener('click', function() {
-    var item = btn.closest('.faq-item');
-    var isOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item.open').forEach(function(el) {
-      el.classList.remove('open');
-    });
-    if (!isOpen) item.classList.add('open');
-  });
-});
-</script>
-</body>
-</html>
