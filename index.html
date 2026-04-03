@@ -675,9 +675,9 @@ async function submitForm(event) {
   } catch (err) {
     btn.disabled    = false;
     btn.textContent = origTekst;
-    var fout = document.createElement('p');
+    fout = document.createElement('p');
     fout.className   = 'form-error';
-    fout.textContent = 'Verbinding mislukt. Controleer uw internetverbinding en probeer het opnieuw.';
+    fout.textContent = 'Het versturen is helaas mislukt. Probeer het later opnieuw of stuur een e-mail naar info@stapenergie.nl.';
     btn.insertAdjacentElement('afterend', fout);
   }
 }
