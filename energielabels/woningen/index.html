@@ -429,7 +429,7 @@
     </div>
     <div class="trust-item">
       <div class="trust-icon"><svg viewBox="0 0 16 16" fill="none" stroke="#1a5c32" stroke-width="1.4" stroke-linecap="round"><path d="M2 8c0-3.3 2.7-6 6-6s6 2.7 6 6-2.7 6-6 6-6-2.7-6-6z"/><path d="M5.5 8l1.5 1.5 3.5-3.5"/></svg></div>
-      <div><div class="trust-label">Reactie binnen 24 uur</div><div class="trust-sub">Heel Nederland</div></div>
+      <div><div class="trust-label">Reactie binnen twee werkdagen</div><div class="trust-sub">Heel Nederland</div></div>
     </div>
   </div>
 </div>
@@ -498,7 +498,7 @@
   <div class="sectie-inner">
     <span class="sectie-label">Aanvragen</span>
     <h2 class="sectie-titel">Vraag direct uw energielabel aan</h2>
-    <p class="sectie-intro">Vul het formulier in en STAP Energie neemt binnen 24 uur contact met u op voor het inplannen van de opname.</p>
+    <p class="sectie-intro">Vul het formulier in en STAP Energie neemt binnen twee werkdagen contact met u op voor het inplannen van de opname.</p>
     <div class="formulier-wrap">
       <div class="formulier-card">
         <form class="form-stack" id="aanvraag-form" onsubmit="submitAanvraag(event)">
@@ -533,7 +533,7 @@
             Ik ga akkoord met de <a href="/privacyverklaring/">privacyverklaring</a>.
           </label>
           <button type="submit" class="form-knop">Aanvraag versturen →</button>
-          <p class="form-noot">Vrijblijvend · Geen verplichtingen · Binnen 24 uur reactie</p>
+          <p class="form-noot">Vrijblijvend · Geen verplichtingen · Binnen twee werkdagen reactie</p>
         </form>
       </div>
       <div class="formulier-info">
@@ -541,7 +541,7 @@
         <div class="formulier-stap">
           <div class="formulier-stap-nr">1</div>
           <div>
-            <strong>Binnen 24 uur contact</strong>
+            <strong>Binnen twee werkdagen contact</strong>
             <p>STAP Energie neemt contact op om de afspraak in te plannen op een moment dat u uitkomt.</p>
           </div>
         </div>
@@ -585,7 +585,7 @@
     <h2 class="sectie-titel">Van aanvraag tot officieel label in 4 stappen</h2>
     <p class="sectie-intro">Transparant, snel en zonder gedoe — STAP Energie regelt het van begin tot eind.</p>
     <div class="stappen-grid">
-      <div class="stap"><div class="stap-nr">1</div><h3>Aanvraag indienen</h3><p>Vul het formulier in of bel direct. Binnen 24 uur nemen we contact op voor een afspraak.</p></div>
+      <div class="stap"><div class="stap-nr">1</div><h3>Aanvraag indienen</h3><p>Vul het formulier in of bel direct. Binnen twee werkdagen nemen we contact op voor een afspraak.</p></div>
       <div class="stap"><div class="stap-nr">2</div><h3>Voorbereiding</h3><p>STAP Energie bevestigt de afspraak en laat weten wat u kunt klaarzetten voor een soepele opname.</p></div>
       <div class="stap"><div class="stap-nr">3</div><h3>Opname aan huis</h3><p>Een gecertificeerd EPA-adviseur komt langs voor een grondige woningopname. Gemiddeld 1 à 2 uur.</p></div>
       <div class="stap"><div class="stap-nr">4</div><h3>Label &amp; adviesrapport</h3><p>Binnen één week ontvangt u het officieel geregistreerde label én een persoonlijk verduurzamingsadvies.</p></div>
@@ -805,7 +805,7 @@
         <p class="footer-beschr">Gecertificeerde energielabels, verduurzamingsadvies en energie-inkoopadvies voor particulieren en bedrijven in de regio Utrecht en omstreken.</p>
         <div class="footer-contact">
           <a href="tel:06XXXXXXXX">06 – XX XX XX XX</a>
-          <a href="mailto:info@stapenergie.nl">info@stapenergie.nl</a>
+          <a href="/cdn-cgi/l/email-protection#4f262129200f3c3b2e3f2a212a3d28262a612123"><span class="__cf_email__" data-cfemail="7811161e17380b0c19081d161d0a1f111d561614">[email&#160;protected]</span></a>
         </div>
       </div>
       <div class="footer-col">
@@ -843,7 +843,7 @@
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // ── HAMBURGER ──
   var toggle = document.getElementById('nav-toggle');
   var navLinks = document.getElementById('nav-links');
@@ -890,43 +890,56 @@
   });
 
   // ── AANVRAAGFORMULIER ──
-  function submitAanvraag(e) {
+  async function submitAanvraag(e) {
     e.preventDefault();
     var btn = document.querySelector('#aanvraag-form .form-knop');
-    if (btn) { btn.disabled = true; btn.textContent = 'Versturen…'; }
+    if (btn && btn.disabled) return;
+    if (btn) { btn.disabled = true; btn._orig = btn.textContent; btn.textContent = 'Bezig met versturen…'; }
+
+    var form = document.getElementById('aanvraag-form');
+    var bestaandeFout = form.querySelector('.form-error');
+    if (bestaandeFout) bestaandeFout.remove();
 
     var data = new FormData();
-    data.append('voornaam',        document.getElementById('voornaam')?.value        || '');
-    data.append('achternaam',      document.getElementById('achternaam')?.value      || '');
-    data.append('email',           document.getElementById('email')?.value           || '');
-    data.append('telefoon',        document.getElementById('telefoon')?.value        || '');
-    data.append('woningtype',      document.getElementById('woningtype')?.value      || '');
-    data.append('gewenste_periode',document.getElementById('gewenste-periode')?.value|| '');
-    data.append('pagina',          'energielabels/woningen');
+    data.append('voornaam',         document.getElementById('voornaam')?.value         || '');
+    data.append('achternaam',       document.getElementById('achternaam')?.value       || '');
+    data.append('email',            document.getElementById('email')?.value            || '');
+    data.append('telefoon',         document.getElementById('telefoon')?.value         || '');
+    data.append('woningtype',       document.getElementById('woningtype')?.value       || '');
+    data.append('gewenste_periode', document.getElementById('gewenste-periode')?.value || '');
+    data.append('pagina',           'woningen');
 
-    fetch('/api/contact.php', { method: 'POST', body: data })
-      .then(function(r) { return r.json(); })
-      .then(function(json) {
-        if (json.ok) {
-          var card = document.querySelector('.formulier-card');
-          card.innerHTML =
-            '<div class="form-succes">' +
-            '<svg width="56" height="56" viewBox="0 0 56 56" fill="none" style="margin:0 auto">' +
-            '<circle cx="28" cy="28" r="27" stroke="#1a5c32" stroke-width="2"/>' +
-            '<path d="M17 28l8 8 14-14" stroke="#1a5c32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>' +
-            '</svg>' +
-            '<div class="form-succes-titel">Aanvraag ontvangen!</div>' +
-            '<div class="form-succes-sub">We nemen binnen 24 uur contact met u op. Tot snel!</div>' +
-            '</div>';
-        } else {
-          if (btn) { btn.disabled = false; btn.textContent = 'Aanvraag versturen →'; }
-          alert('Er ging iets mis. Probeer het opnieuw of mail naar info@stapenergie.nl');
-        }
-      })
-      .catch(function() {
-        if (btn) { btn.disabled = false; btn.textContent = 'Aanvraag versturen →'; }
-        alert('Er ging iets mis. Probeer het opnieuw of mail naar info@stapenergie.nl');
-      });
+    try {
+      var response = await fetch('/api/contact.php', { method: 'POST', body: data });
+      var json = await response.json();
+
+      if (json.succes) {
+        var card = document.querySelector('.formulier-card');
+        card.innerHTML =
+          '<div class="form-succes">' +
+          '<svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">' +
+          '<circle cx="24" cy="24" r="24" fill="#e8f5ed"/>' +
+          '<path d="M14 24.5l7 7 13-14" stroke="#1a5c32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>' +
+          '</svg>' +
+          '<div class="form-succes-titel">Aanvraag ontvangen!</div>' +
+          '<div class="form-succes-sub">We nemen <strong>binnen twee werkdagen</strong> contact met u op.<br>U ontvangt ook een bevestiging per e-mail.</div>' +
+          '</div>';
+      } else {
+        if (btn) { btn.disabled = false; btn.textContent = btn._orig; }
+        var fout = document.createElement('p');
+        fout.className = 'form-error';
+        fout.style.cssText = 'color:#c0392b;font-size:.82rem;margin-top:4px;';
+        fout.textContent = (json.fouten && json.fouten[0]) || 'Er ging iets mis. Probeer het opnieuw.';
+        if (btn) btn.insertAdjacentElement('afterend', fout);
+      }
+    } catch(err) {
+      if (btn) { btn.disabled = false; btn.textContent = btn._orig; }
+      var fout = document.createElement('p');
+      fout.className = 'form-error';
+      fout.style.cssText = 'color:#c0392b;font-size:.82rem;margin-top:4px;';
+      fout.textContent = 'Het versturen is helaas mislukt. Probeer het later opnieuw of stuur een e-mail naar info@stapenergie.nl.';
+      if (btn) btn.insertAdjacentElement('afterend', fout);
+    }
   }
 
   // ── FAQ ACCORDION ──
@@ -935,15 +948,3 @@
       var antwoord = vraag.nextElementSibling;
       var isOpen = vraag.classList.contains('open');
       document.querySelectorAll('.faq-vraag').forEach(function(v) {
-        v.classList.remove('open');
-        v.nextElementSibling.classList.remove('open');
-      });
-      if (!isOpen) {
-        vraag.classList.add('open');
-        antwoord.classList.add('open');
-      }
-    });
-  });
-</script>
-</body>
-</html>
