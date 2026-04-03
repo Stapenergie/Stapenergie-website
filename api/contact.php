@@ -91,7 +91,7 @@ function mailTemplate(string $inhoud, bool $isBevestiging = false): string {
           <tr>
             <td style="background:#f0f7f2;padding:20px 32px;border-top:1px solid #e2e8e0;">
               <p style="margin:0;font-size:12px;color:#4a5568;line-height:1.6;">
-                STAP Energie &nbsp;·&nbsp; <a href="https://stapenergie.nl" style="color:{$kleur};text-decoration:none;">stapenergie.nl</a>
+                STAP Energie &nbsp;·&nbsp; Energielabels, inkoop &amp; verduurzaming &nbsp;·&nbsp; <a href="https://stapenergie.nl" style="color:{$kleur};text-decoration:none;">stapenergie.nl</a>
               </p>
             </td>
           </tr>
