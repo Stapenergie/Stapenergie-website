@@ -11,57 +11,66 @@
 
 $prijzen = [
 
-    // ── Particulier: woningen ──────────────────────────────────────────────
+    // ── Particulier: woningen (prijzen incl. btw) ────────────────────────
     'particulier' => [
         'appartement_klein' => [
             'label'  => 'Appartement tot 40\u00a0m\u00b2',
             'prijs'  => 195,
             'type'   => 'vast',
+            'btw'    => 'incl.',
         ],
         'appartement_groot' => [
             'label'  => 'Appartement 40\u2013100\u00a0m\u00b2',
             'prijs'  => 249,
             'type'   => 'vast',
+            'btw'    => 'incl.',
         ],
         'eengezins_tussen' => [
             'label'  => 'Eengezinswoning (tussenwoning)',
             'prijs'  => 295,
             'type'   => 'vast',
+            'btw'    => 'incl.',
         ],
         'eengezins_hoek' => [
             'label'  => 'Hoekwoning / 2-onder-1-kap',
             'prijs'  => 325,
             'type'   => 'vast',
+            'btw'    => 'incl.',
         ],
         'vrijstaand_klein' => [
             'label'  => 'Vrijstaande woning tot 150\u00a0m\u00b2',
             'prijs'  => 345,
             'type'   => 'vast',
+            'btw'    => 'incl.',
         ],
         'vrijstaand_groot' => [
             'label'  => 'Vrijstaande woning groter dan 150\u00a0m\u00b2',
             'prijs'  => null,
             'type'   => 'offerte',
+            'btw'    => 'incl.',
             'tekst'  => 'Offerte op maat',
         ],
     ],
 
-    // ── Zakelijk: bedrijfspanden ───────────────────────────────────────────
+    // ── Zakelijk: bedrijfspanden (prijzen excl. btw) ─────────────────────
     'zakelijk' => [
         'klein' => [
             'label'  => 'Tot 100\u00a0m\u00b2',
             'prijs'  => 495,
             'type'   => 'vast',
+            'btw'    => 'excl.',
         ],
         'middel' => [
             'label'  => '100\u2013500\u00a0m\u00b2',
             'prijs'  => 675,
             'type'   => 'vast',
+            'btw'    => 'excl.',
         ],
         'groot' => [
             'label'  => 'Groter dan 500\u00a0m\u00b2',
             'prijs'  => null,
             'type'   => 'offerte',
+            'btw'    => 'excl.',
             'tekst'  => 'Offerte op maat',
         ],
     ],
