@@ -603,10 +603,12 @@ a    { text-decoration: none; }
   function sfToonPrijsBox(box, prijs) {
     if (!box || !prijs) return;
 
+    var btwLabel = prijs.btw === 'excl.' ? ' excl. btw' : ' incl. btw';
+
     if (prijs.type === 'vast' && prijs.prijs) {
-      box.textContent = '\u2714 Indicatieprijs: \u20ac\u00a0' + prijs.prijs;
+      box.textContent = '\u2714 Indicatieprijs: \u20ac\u00a0' + prijs.prijs + btwLabel;
       box.classList.add('zichtbaar');
-      document.getElementById('sf-prijs-hidden').value = '\u20ac ' + prijs.prijs;
+      document.getElementById('sf-prijs-hidden').value = '\u20ac ' + prijs.prijs + btwLabel;
     } else if (prijs.type === 'offerte') {
       box.textContent = '\u2714 ' + (prijs.tekst || 'Offerte op maat \u2014 we nemen contact op.');
       box.classList.add('zichtbaar');
@@ -659,6 +661,8 @@ a    { text-decoration: none; }
           '<h3>Aanvraag ontvangen!</h3>' +
           '<p>We nemen <strong>binnen twee werkdagen</strong> contact met u op.<br>U ontvangt ook een bevestiging per e-mail.</p>' +
           '</div>';
+        // Scroll terug naar het formulier zodat de succesmelding zichtbaar is
+        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
       } else {
         btn.disabled    = false;
         btn.textContent = origTekst;
@@ -682,10 +686,14 @@ a    { text-decoration: none; }
       veld.style.borderColor = '#c0392b';
       veld.scrollIntoView({ behavior: 'smooth', block: 'center' });
       veld.focus();
-      // Herstel de rand zodra de gebruiker iets typt
+      // Herstel de rand zodra de gebruiker iets typt of aanpast
       veld.addEventListener('input', function herstel() {
         veld.style.borderColor = '';
         veld.removeEventListener('input', herstel);
+      }, { once: true });
+      veld.addEventListener('change', function herstel() {
+        veld.style.borderColor = '';
+        veld.removeEventListener('change', herstel);
       }, { once: true });
     }
   }
