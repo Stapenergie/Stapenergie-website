@@ -1486,24 +1486,7 @@ document.querySelectorAll('.has-dd').forEach(function(item, idx) {
 });
 
 // ── FORMULIER TABS (Woning / Bedrijfspand) ──
-function wisselFormulier(type) {
-  var pForm = document.getElementById('form-particulier');
-  var zForm = document.getElementById('form-zakelijk');
-  var tabs  = document.querySelectorAll('.hero-tab');
 
-  if (type === 'particulier') {
-    pForm.classList.remove('form-hidden');
-    zForm.classList.add('form-hidden');
-  } else {
-    zForm.classList.remove('form-hidden');
-    pForm.classList.add('form-hidden');
-  }
-
-  tabs.forEach(function(t) {
-    t.classList.toggle('active', t.dataset.form === type);
-    t.setAttribute('aria-selected', t.dataset.form === type ? 'true' : 'false');
-  });
-}
 
 // ── WETGEVING TABS ──
 function wisselWetgeving(type) {
@@ -1529,17 +1512,7 @@ var prijzen = {
   'vrijstaand-groot':   'Offerte op maat'
 };
 
-function updatePrijs() {
-  var select = document.getElementById('p-woningtype');
-  var indicator = document.getElementById('prijs-indicator');
-  var val = select ? select.value : '';
-  if (val && prijzen[val]) {
-    indicator.textContent = '✓ Prijs voor dit woningtype: ' + prijzen[val];
-    indicator.classList.add('zichtbaar');
-  } else {
-    indicator.classList.remove('zichtbaar');
-  }
-}
+
 
 // ── SPOED TOGGLE ──
 function toggleSpoed(prefix) {
@@ -1566,41 +1539,7 @@ function toggleSpoed(prefix) {
 })();
 
 // ── FORMULIER SUBMIT ──
-function submitFormulier(e, formId) {
-  e.preventDefault();
-  var form = document.getElementById(formId);
-  var postcode = '';
-  var huisnummer = '';
 
-  // Haal postcode + huisnummer op voor cookie
-  if (formId === 'form-p') {
-    postcode    = document.getElementById('p-postcode') ? document.getElementById('p-postcode').value : '';
-    huisnummer  = document.getElementById('p-huisnummer') ? document.getElementById('p-huisnummer').value : '';
-  } else {
-    postcode    = document.getElementById('z-postcode') ? document.getElementById('z-postcode').value : '';
-    huisnummer  = document.getElementById('z-huisnummer') ? document.getElementById('z-huisnummer').value : '';
-  }
-
-  // Sla op in first-party cookie (30 dagen)
-  if (postcode) {
-    var exp = new Date();
-    exp.setDate(exp.getDate() + 30);
-    document.cookie = 'stap_lead_postcode=' + encodeURIComponent(postcode.trim()) + '; expires=' + exp.toUTCString() + '; path=/; SameSite=Lax';
-    document.cookie = 'stap_lead_hnr='     + encodeURIComponent(huisnummer.trim()) + '; expires=' + exp.toUTCString() + '; path=/; SameSite=Lax';
-  }
-
-  // Succes feedback — vervang het juiste formulier-wrapper
-  var wrapper = formId === 'form-p' ? document.getElementById('form-particulier') : document.getElementById('form-zakelijk');
-  wrapper.innerHTML =
-    '<div class="form-success">' +
-    '<svg width="52" height="52" viewBox="0 0 52 52" fill="none" style="margin:0 auto 1rem">' +
-    '<circle cx="26" cy="26" r="25" stroke="#1a5c32" stroke-width="2"/>' +
-    '<path d="M15 26l8 8 14-14" stroke="#1a5c32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>' +
-    '</svg>' +
-    '<div class="form-success-title">Aanvraag ontvangen!</div>' +
-    '<div class="form-success-sub">We reageren binnen 24 uur. Tot snel!</div>' +
-    '</div>';
-}
 
 // ── LABELCHECK ──
 function voerLabelcheckUit() {
@@ -1626,7 +1565,10 @@ function voerLabelcheckUit() {
 
   // API-aanroep naar PHP-proxy (EP Online)
   fetch('/api/labelcheck.php?postcode=' + encodeURIComponent(postcode) + '&huisnummer=' + encodeURIComponent(huisnummer))
-    .then(function(r) { return r.json(); })
+    .then(function(r) {
+      if (!r.ok) { throw new Error('API niet bereikbaar'); }
+      return r.json();
+    })
     .then(function(data) {
       loading.classList.remove('zichtbaar');
       if (data.heeft_label) {
