@@ -527,145 +527,386 @@ a    { text-decoration: none; }
           <li>Officieel erkend &amp; geregistreerd in EP-online</li>
           <li>Basismethodiek — bestaande bouw (woningen én utiliteit)</li>
           <li>Label 10 jaar geldig na afgifte</li>
-          <li>Reactie binnen twee werkdagen — heel Nederland</li>
+          <li>Reactie binnen 24 uur — heel Nederland</li>
         </ul>
       </div>
 
       <!-- Rechts: aanvraagformulier met tabs -->
       <div class="hero-form-card">
         <!-- Tabs: Particulier / Zakelijk -->
-        <div class="hero-tabs" role="tablist">
-          <button class="hero-tab active" role="tab" aria-selected="true" data-form="particulier" onclick="wisselFormulier('particulier')">🏠 Woning</button>
-          <button class="hero-tab" role="tab" aria-selected="false" data-form="zakelijk" onclick="wisselFormulier('zakelijk')">🏢 Bedrijfspand</button>
-        </div>
+        <div id="aanvraag" style="scroll-margin-top:80px;">
+        <div id="stap-formulier" data-dienst="label" data-type="" data-pagina="energielabels">
+<style>
+.sf-card { background: #fff; border-radius: 14px; padding: 2rem; box-shadow: 0 16px 60px rgba(0,0,0,.2); font-family: 'DM Sans', sans-serif; }
+.sf-card h3 { font-size: 1.05rem; font-weight: 700; margin: 0 0 .2rem; color: #1a1a1a; }
+.sf-card .sf-sub { font-size: .83rem; color: #4a5568; margin: 0 0 1.2rem; }
+.sf-stack { display: flex; flex-direction: column; gap: .7rem; }
+.sf-row { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; }
+.sf-input { width: 100%; padding: .72rem .9rem; border: 1.5px solid #e2e8e0; border-radius: 8px; font-size: .88rem; font-family: inherit; outline: none; transition: border-color .15s; background: #fff; color: #1a1a1a; }
+.sf-input:focus { border-color: #1a5c32; }
+.sf-select { width: 100%; padding: .72rem .9rem; border: 1.5px solid #e2e8e0; border-radius: 8px; font-size: .88rem; font-family: inherit; outline: none; background: #fff; color: #4a5568; transition: border-color .15s; }
+.sf-select:focus { border-color: #1a5c32; }
+.sf-type-btns { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; }
+.sf-type-btn { padding: .65rem; border: 1.5px solid #e2e8e0; border-radius: 8px; font-size: .88rem; font-weight: 500; font-family: inherit; background: #fff; color: #4a5568; cursor: pointer; transition: all .15s; text-align: center; }
+.sf-type-btn:hover { border-color: #1a5c32; color: #1a5c32; }
+.sf-type-btn.actief { background: #1a5c32; color: #fff; border-color: #1a5c32; }
+.sf-prijs-box { background: #e8f5ed; border-radius: 8px; padding: .75rem 1rem; font-size: .88rem; color: #1a5c32; font-weight: 600; display: none; }
+.sf-prijs-box.zichtbaar { display: block; }
+.sf-blok { display: none; }
+.sf-blok.zichtbaar { display: contents; }
+.sf-check { display: flex; align-items: flex-start; gap: 8px; font-size: .75rem; color: #4a5568; line-height: 1.5; }
+.sf-check input { margin-top: 2px; flex-shrink: 0; accent-color: #1a5c32; width: 14px; height: 14px; }
+.sf-check a { color: #1a5c32; font-weight: 600; }
+.sf-check.commercieel { color: #4a5568; }
+.sf-submit { width: 100%; padding: .9rem; background: #1a5c32; color: #fff; border: none; border-radius: 100px; font-size: .92rem; font-weight: 700; cursor: pointer; font-family: inherit; transition: background .2s; }
+.sf-submit:hover { background: #237a43; }
+.sf-submit:disabled { opacity: .6; cursor: not-allowed; }
+.sf-note { text-align: center; font-size: .72rem; color: #9aa5b4; margin: 0; }
+.sf-error { color: #c0392b; font-size: .82rem; margin: 4px 0 0; }
+.sf-succes { text-align: center; padding: 1.5rem 0; }
+.sf-succes h3 { font-size: 1rem; font-weight: 700; margin: .75rem 0 .3rem; color: #1a1a1a; }
+.sf-succes p { color: #4a5568; font-size: .85rem; line-height: 1.6; margin: 0; }
+@media (max-width: 480px) { .sf-row { grid-template-columns: 1fr; } }
+</style>
 
-        <!-- FORMULIER: PARTICULIER -->
-        <div id="form-particulier">
-          <h3>Aanvraag energielabel woning</h3>
-          <p>Vrijblijvend. Reactie binnen twee werkdagen.</p>
-          <form class="form-stack" id="form-p" onsubmit="submitFormulier(event,'form-p')">
-        <input type="hidden" name="pagina" value="energielabels-particulier">
-            <input type="hidden" name="source" id="source-p">
-            <div class="form-row">
-              <div>
-                <label for="p-voornaam" class="sr-only">Voornaam</label>
-                <input class="form-input" type="text" id="p-voornaam" name="voornaam" placeholder="Voornaam" required>
-              </div>
-              <div>
-                <label for="p-achternaam" class="sr-only">Achternaam</label>
-                <input class="form-input" type="text" id="p-achternaam" name="achternaam" placeholder="Achternaam">
-              </div>
-            </div>
-            <label for="p-email" class="sr-only">E-mailadres</label>
-            <input class="form-input" type="email" id="p-email" name="email" placeholder="E-mailadres" required>
-            <label for="p-telefoon" class="sr-only">Telefoonnummer</label>
-            <input class="form-input" type="tel" id="p-telefoon" name="telefoon" placeholder="Telefoonnummer">
-            <div class="form-row">
-              <div>
-                <label for="p-postcode" class="sr-only">Postcode</label>
-                <input class="form-input" type="text" id="p-postcode" name="postcode" placeholder="Postcode" required>
-              </div>
-              <div>
-                <label for="p-huisnummer" class="sr-only">Huisnummer</label>
-                <input class="form-input" type="text" id="p-huisnummer" name="huisnummer" placeholder="Huisnummer" required>
-              </div>
-            </div>
-            <label for="p-woningtype" class="sr-only">Type woning</label>
-            <select class="form-select" id="p-woningtype" name="woningtype" required onchange="updatePrijs()">
-              <option value="" disabled selected>Type woning</option>
-              <option value="appartement-klein">Appartement tot 40 m²</option>
-              <option value="appartement-groot">Appartement 40–100 m²</option>
-              <option value="eengezins-tussen">Eengezinswoning (tussen woningen)</option>
-              <option value="eengezins-hoek">Hoekwoning / 2-onder-1-kap</option>
-              <option value="vrijstaand-klein">Vrijstaande woning tot 150 m²</option>
-              <option value="vrijstaand-groot">Vrijstaande woning groter dan 150 m²</option>
-            </select>
-            <div class="prijs-indicator" id="prijs-indicator"></div>
-            <label for="p-datum" class="sr-only">Gewenste periode</label>
-            <input class="form-input" type="text" id="p-datum" name="datum" placeholder="Gewenste periode (bijv. 'week 16' of 'zo snel mogelijk')">
-            <div class="spoed-row">
-              <input type="checkbox" id="p-spoed" name="spoed" onchange="toggleSpoed('p')">
-              <div>
-                <label for="p-spoed" style="font-weight:600;font-size:.85rem;cursor:pointer;">Spoedaanvraag</label>
-                <span class="spoed-note">Heeft u haast? Spoedafhandeling is mogelijk tegen een spoedtarief. We nemen hierover contact met u op.</span>
-              </div>
-            </div>
-            <label for="p-bericht" class="sr-only">Opmerking (optioneel)</label>
-            <textarea class="form-input" id="p-bericht" name="bericht" placeholder="Opmerking (optioneel)" rows="2" style="resize:vertical"></textarea>
-            <label class="form-check">
-              <input type="checkbox" required>
-              Ik ga akkoord met de <a href="/privacyverklaring/">privacyverklaring</a>.
-            </label>
-            <button type="submit" class="form-submit">Aanvraag versturen →</button>
-            <p class="form-note">Vrijblijvend · Geen verplichtingen · Binnen twee werkdagen reactie</p>
-          </form>
-        </div>
+<div class="sf-card">
+  <h3>Vraag vrijblijvend aan</h3>
+  <p class="sf-sub">Reactie binnen twee werkdagen.</p>
 
-        <!-- FORMULIER: ZAKELIJK -->
-        <div id="form-zakelijk" class="form-hidden">
-          <h3>Aanvraag energielabel bedrijfspand</h3>
-          <p>Vrijblijvend. Reactie binnen twee werkdagen.</p>
-          <form class="form-stack" id="form-z" onsubmit="submitFormulier(event,'form-z')">
-        <input type="hidden" name="pagina" value="energielabels-zakelijk">
-            <input type="hidden" name="source" id="source-z">
-            <div class="form-row">
-              <div>
-                <label for="z-naam" class="sr-only">Contactpersoon</label>
-                <input class="form-input" type="text" id="z-naam" name="naam" placeholder="Naam contactpersoon" required>
-              </div>
-              <div>
-                <label for="z-bedrijf" class="sr-only">Bedrijfsnaam</label>
-                <input class="form-input" type="text" id="z-bedrijf" name="bedrijf" placeholder="Bedrijfsnaam" required>
-              </div>
-            </div>
-            <label for="z-email" class="sr-only">E-mailadres</label>
-            <input class="form-input" type="email" id="z-email" name="email" placeholder="E-mailadres" required>
-            <label for="z-telefoon" class="sr-only">Telefoonnummer</label>
-            <input class="form-input" type="tel" id="z-telefoon" name="telefoon" placeholder="Telefoonnummer">
-            <div class="form-row">
-              <div>
-                <label for="z-postcode" class="sr-only">Postcode pand</label>
-                <input class="form-input" type="text" id="z-postcode" name="postcode" placeholder="Postcode pand" required>
-              </div>
-              <div>
-                <label for="z-huisnummer" class="sr-only">Huisnummer</label>
-                <input class="form-input" type="text" id="z-huisnummer" name="huisnummer" placeholder="Huisnummer" required>
-              </div>
-            </div>
-            <label for="z-pandtype" class="sr-only">Type pand</label>
-            <select class="form-select" id="z-pandtype" name="pandtype" required>
-              <option value="" disabled selected>Type pand (verplicht)</option>
-              <option>Kantoor</option>
-              <option>Winkel / Retail</option>
-              <option>Horeca</option>
-              <option>Bedrijfshal / Loods</option>
-              <option>Zorginstelling</option>
-              <option>Onderwijs</option>
-              <option>Sport / Recreatie</option>
-              <option>Anders</option>
-            </select>
-            <label for="z-oppervlakte" class="sr-only">Oppervlakte in m²</label>
-            <input class="form-input" type="number" id="z-oppervlakte" name="oppervlakte" placeholder="Oppervlakte in m² (verplicht)" required min="1">
-            <label for="z-datum" class="sr-only">Gewenste periode</label>
-            <input class="form-input" type="text" id="z-datum" name="datum" placeholder="Gewenste periode (bijv. 'week 16' of 'zo snel mogelijk')">
-            <div class="spoed-row">
-              <input type="checkbox" id="z-spoed" name="spoed" onchange="toggleSpoed('z')">
-              <div>
-                <label for="z-spoed" style="font-weight:600;font-size:.85rem;cursor:pointer;">Spoedaanvraag</label>
-                <span class="spoed-note">Heeft u haast? Spoedafhandeling is mogelijk tegen een spoedtarief. We nemen hierover contact met u op.</span>
-              </div>
-            </div>
-            <label for="z-bericht" class="sr-only">Opmerking (optioneel)</label>
-            <textarea class="form-input" id="z-bericht" name="bericht" placeholder="Opmerking (optioneel)" rows="2" style="resize:vertical"></textarea>
-            <label class="form-check">
-              <input type="checkbox" required>
-              Ik ga akkoord met de <a href="/privacyverklaring/">privacyverklaring</a>.
-            </label>
-            <button type="submit" class="form-submit">Aanvraag versturen →</button>
-            <p class="form-note">Vrijblijvend · Geen verplichtingen · Binnen twee werkdagen reactie</p>
-          </form>
-        </div>
+  <form class="sf-stack" id="sf-form" novalidate>
+    <input type="hidden" name="pagina" id="sf-pagina" value="">
+    <input type="hidden" name="type"   id="sf-type-hidden" value="">
+    <input type="hidden" name="dienst" id="sf-dienst-hidden" value="">
+    <input type="hidden" name="berekende_prijs" id="sf-prijs-hidden" value="">
+
+    <!-- Type: Particulier / Zakelijk -->
+    <div class="sf-type-btns">
+      <button type="button" class="sf-type-btn" id="sf-btn-particulier" onclick="sfSetType('particulier')">Particulier</button>
+      <button type="button" class="sf-type-btn" id="sf-btn-zakelijk"    onclick="sfSetType('zakelijk')">Zakelijk</button>
+    </div>
+
+    <!-- Naam -->
+    <div class="sf-row">
+      <div>
+        <label for="sf-voornaam" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Voornaam</label>
+        <input class="sf-input" type="text" id="sf-voornaam" name="voornaam" placeholder="Voornaam" required>
       </div>
+      <div>
+        <label for="sf-achternaam" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Achternaam</label>
+        <input class="sf-input" type="text" id="sf-achternaam" name="achternaam" placeholder="Achternaam">
+      </div>
+    </div>
+
+    <!-- Bedrijfsnaam: alleen zichtbaar bij zakelijk -->
+    <div id="sf-bedrijf-wrap" style="display:none;">
+      <label for="sf-bedrijf" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Bedrijfsnaam</label>
+      <input class="sf-input" type="text" id="sf-bedrijf" name="bedrijf" placeholder="Bedrijfsnaam">
+    </div>
+
+    <!-- Contact -->
+    <div>
+      <label for="sf-email" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">E-mailadres</label>
+      <input class="sf-input" type="email" id="sf-email" name="email" placeholder="E-mailadres" required>
+    </div>
+    <div>
+      <label for="sf-telefoon" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Telefoonnummer</label>
+      <input class="sf-input" type="tel" id="sf-telefoon" name="telefoon" placeholder="Telefoonnummer">
+    </div>
+
+    <!-- Waarvoor -->
+    <div>
+      <label for="sf-dienst-select" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Waarvoor wilt u contact?</label>
+      <select class="sf-select" id="sf-dienst-select" onchange="sfDienstGewijzigd()" required>
+        <option value="" disabled selected>Waarvoor wilt u contact?</option>
+        <option value="label">Energielabel aanvragen</option>
+        <option value="verduurzaming">Verduurzamingsadvies</option>
+        <option value="inkoop">Energie inkoop advies</option>
+        <option value="subsidie">Subsidie advies</option>
+        <option value="anders">Weet ik nog niet</option>
+      </select>
+    </div>
+
+    <!-- Conditioneel blok: Energielabel particulier -->
+    <div class="sf-blok" id="sf-blok-label-particulier">
+      <label for="sf-woningtype" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Type woning</label>
+      <select class="sf-select" id="sf-woningtype" name="woningtype" onchange="sfBerekenPrijs()">
+        <option value="" disabled selected>Type woning</option>
+        <option value="appartement_klein">Appartement tot 40&#x202F;m&#xB2;</option>
+        <option value="appartement_groot">Appartement 40&#x2013;100&#x202F;m&#xB2;</option>
+        <option value="eengezins_tussen">Eengezinswoning (tussenwoning)</option>
+        <option value="eengezins_hoek">Hoekwoning / 2-onder-1-kap</option>
+        <option value="vrijstaand_klein">Vrijstaande woning tot 150&#x202F;m&#xB2;</option>
+        <option value="vrijstaand_groot">Vrijstaande woning groter dan 150&#x202F;m&#xB2;</option>
+      </select>
+      <div class="sf-prijs-box" id="sf-prijs-particulier"></div>
+      <div class="sf-row" style="margin-top:.1rem;">
+        <input class="sf-input" type="text" name="postcode"    placeholder="Postcode">
+        <input class="sf-input" type="text" name="huisnummer"  placeholder="Huisnummer">
+      </div>
+      <select class="sf-select" id="sf-periode-particulier" name="gewenste_periode" style="margin-top:.1rem;">
+        <option value="" selected>Gewenste periode (optioneel)</option>
+        <option value="Spoedaanvraag (binnen 1 week)">Spoedaanvraag &mdash; binnen 1 week</option>
+        <option value="Binnen 1 maand">Binnen 1 maand</option>
+        <option value="Geen voorkeur">Geen voorkeur</option>
+      </select>
+    </div>
+
+    <!-- Conditioneel blok: Energielabel zakelijk -->
+    <div class="sf-blok" id="sf-blok-label-zakelijk">
+      <label for="sf-pandtype" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Type pand</label>
+      <select class="sf-select" id="sf-pandtype" name="pandtype">
+        <option value="" disabled selected>Type pand</option>
+        <option value="Kantoor">Kantoor</option>
+        <option value="Winkel / retail">Winkel / retail</option>
+        <option value="Zorg / onderwijs">Zorg / onderwijs</option>
+        <option value="Logistiek / industrie">Logistiek / industrie</option>
+        <option value="Anders">Anders</option>
+      </select>
+      <label for="sf-oppervlakte" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Oppervlakte</label>
+      <select class="sf-select" id="sf-oppervlakte" name="oppervlakte" onchange="sfBerekenPrijs()" style="margin-top:.1rem;">
+        <option value="" disabled selected>Oppervlakte pand</option>
+        <option value="klein">Tot 100&#x202F;m&#xB2;</option>
+        <option value="middel">100&#x2013;500&#x202F;m&#xB2;</option>
+        <option value="groot">Groter dan 500&#x202F;m&#xB2;</option>
+      </select>
+      <div class="sf-prijs-box" id="sf-prijs-zakelijk"></div>
+      <div class="sf-row" style="margin-top:.1rem;">
+        <input class="sf-input" type="text" name="postcode"   placeholder="Postcode">
+        <input class="sf-input" type="text" name="huisnummer" placeholder="Huisnummer">
+      </div>
+      <select class="sf-select" id="sf-periode-zakelijk" name="gewenste_periode" style="margin-top:.1rem;">
+        <option value="" selected>Gewenste periode (optioneel)</option>
+        <option value="Spoedaanvraag (binnen 1 week)">Spoedaanvraag &mdash; binnen 1 week</option>
+        <option value="Binnen 1 maand">Binnen 1 maand</option>
+        <option value="Geen voorkeur">Geen voorkeur</option>
+      </select>
+    </div>
+
+    <!-- Opmerking: altijd -->
+    <textarea class="sf-input" name="bericht" rows="3" placeholder="Opmerking of toelichting (optioneel)" style="resize:vertical;"></textarea>
+
+    <!-- Checkboxes -->
+    <label class="sf-check">
+      <input type="checkbox" id="sf-privacy" required>
+      Ik geef toestemming voor het verwerken van mijn gegevens om contact met mij op te nemen. Ik heb de <a href="/privacyverklaring/">privacyverklaring</a> gelezen.
+    </label>
+    <label class="sf-check commercieel">
+      <input type="checkbox" id="sf-commercieel" name="commercieel_optin" value="1">
+      Ik geef ook toestemming om commercieel benaderd te worden door STAP Energie over relevante diensten via e-mail of telefoon.
+    </label>
+
+    <button type="button" class="sf-submit" onclick="sfVerstuur()">Aanvraag versturen &#x2192;</button>
+    <p class="sf-note">Vrijblijvend &middot; Geen verplichtingen &middot; Binnen twee werkdagen reactie</p>
+  </form>
+</div>
+
+<script>
+(function() {
+
+  var _prijzen = null;
+  var _init    = false;
+
+  // ── Prijzen ophalen bij laden ──────────────────────────────────────────────
+  fetch('/api/prijzen.php')
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      _prijzen = data;
+      if (!_init) sfInit();
+    })
+    .catch(function() {
+      // Prijzen ophalen mislukt — formulier werkt nog steeds, prijs-box blijft verborgen
+      if (!_init) sfInit();
+    });
+
+  // ── Initialiseer op basis van data-attributen ─────────────────────────────
+  function sfInit() {
+    _init = true;
+    var wrap   = document.getElementById('stap-formulier');
+    var dienst = wrap.dataset.dienst || '';
+    var type   = wrap.dataset.type   || '';
+    var pagina = wrap.dataset.pagina || 'homepage';
+
+    document.getElementById('sf-pagina').value = pagina;
+
+    if (dienst) {
+      var sel = document.getElementById('sf-dienst-select');
+      sel.value = dienst;
+      sfDienstGewijzigd();
+    }
+    if (type) {
+      sfSetType(type);
+    }
+  }
+
+  // ── Type: Particulier / Zakelijk ──────────────────────────────────────────
+  window.sfSetType = function(type) {
+    document.getElementById('sf-type-hidden').value = type;
+
+    var btnP = document.getElementById('sf-btn-particulier');
+    var btnZ = document.getElementById('sf-btn-zakelijk');
+    var bedrijfWrap = document.getElementById('sf-bedrijf-wrap');
+
+    if (type === 'particulier') {
+      btnP.classList.add('actief');
+      btnZ.classList.remove('actief');
+      bedrijfWrap.style.display = 'none';
+    } else {
+      btnZ.classList.add('actief');
+      btnP.classList.remove('actief');
+      bedrijfWrap.style.display = 'block';
+    }
+    sfToonConditieBlok();
+  };
+
+  // ── Dienst gewijzigd ──────────────────────────────────────────────────────
+  window.sfDienstGewijzigd = function() {
+    var val = document.getElementById('sf-dienst-select').value;
+    document.getElementById('sf-dienst-hidden').value = val;
+    sfToonConditieBlok();
+  };
+
+  // ── Toon het juiste conditionele blok ─────────────────────────────────────
+  function sfToonConditieBlok() {
+    var dienst = document.getElementById('sf-dienst-select').value;
+    var type   = document.getElementById('sf-type-hidden').value;
+
+    var blokLP = document.getElementById('sf-blok-label-particulier');
+    var blokLZ = document.getElementById('sf-blok-label-zakelijk');
+
+    blokLP.classList.remove('zichtbaar');
+    blokLZ.classList.remove('zichtbaar');
+
+    if (dienst === 'label') {
+      if (type === 'particulier') {
+        blokLP.classList.add('zichtbaar');
+      } else if (type === 'zakelijk') {
+        blokLZ.classList.add('zichtbaar');
+      }
+    }
+  }
+
+  // ── Live prijsberekening ──────────────────────────────────────────────────
+  window.sfBerekenPrijs = function() {
+    if (!_prijzen) return;
+
+    var type = document.getElementById('sf-type-hidden').value;
+
+    if (type === 'particulier') {
+      var woningtype = document.getElementById('sf-woningtype').value;
+      var prijs      = _prijzen.particulier && _prijzen.particulier[woningtype];
+      var box        = document.getElementById('sf-prijs-particulier');
+      sfToonPrijsBox(box, prijs);
+
+    } else if (type === 'zakelijk') {
+      var opp   = document.getElementById('sf-oppervlakte').value;
+      var prijs = _prijzen.zakelijk && _prijzen.zakelijk[opp];
+      var box   = document.getElementById('sf-prijs-zakelijk');
+      sfToonPrijsBox(box, prijs);
+    }
+  };
+
+  function sfToonPrijsBox(box, prijs) {
+    if (!box || !prijs) return;
+
+    var btwLabel = prijs.btw === 'excl.' ? ' excl. btw' : ' incl. btw';
+
+    if (prijs.type === 'vast' && prijs.prijs) {
+      box.textContent = '\u2714 Indicatieprijs: \u20ac\u00a0' + prijs.prijs + btwLabel;
+      box.classList.add('zichtbaar');
+      document.getElementById('sf-prijs-hidden').value = '\u20ac ' + prijs.prijs + btwLabel;
+    } else if (prijs.type === 'offerte') {
+      box.textContent = '\u2714 ' + (prijs.tekst || 'Offerte op maat \u2014 we nemen contact op.');
+      box.classList.add('zichtbaar');
+      document.getElementById('sf-prijs-hidden').value = prijs.tekst || 'Offerte op maat';
+    } else {
+      box.classList.remove('zichtbaar');
+      document.getElementById('sf-prijs-hidden').value = '';
+    }
+  }
+
+  // ── Formulier versturen ───────────────────────────────────────────────────
+  window.sfVerstuur = async function() {
+    var form   = document.getElementById('sf-form');
+    var btn    = form.querySelector('.sf-submit');
+
+    // Verwijder eerdere foutmelding
+    var oudeFout = form.querySelector('.sf-error');
+    if (oudeFout) oudeFout.remove();
+
+    // Valideer verplichte velden
+    var voornaam = document.getElementById('sf-voornaam').value.trim();
+    var email    = document.getElementById('sf-email').value.trim();
+    var privacy  = document.getElementById('sf-privacy').checked;
+    var dienst   = document.getElementById('sf-dienst-select').value;
+
+    if (!voornaam) { sfFout(btn, 'Vul uw voornaam in.', document.getElementById('sf-voornaam')); return; }
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { sfFout(btn, 'Vul een geldig e-mailadres in.', document.getElementById('sf-email')); return; }
+    if (!privacy) { sfFout(btn, 'Ga akkoord met de privacyverklaring om door te gaan.', document.getElementById('sf-privacy')); return; }
+    if (!dienst) { sfFout(btn, 'Geef aan waarvoor u contact wilt.', document.getElementById('sf-dienst-select')); return; }
+
+    if (btn.disabled) return;
+    btn.disabled = true;
+    var origTekst = btn.textContent;
+    btn.textContent = 'Bezig met versturen\u2026';
+
+    var data = new FormData(form);
+
+    try {
+      var response = await fetch('/api/contact.php', { method: 'POST', body: data });
+      var json     = await response.json();
+
+      if (json.succes) {
+        var card = form.closest('.sf-card');
+        card.innerHTML =
+          '<div class="sf-succes">' +
+          '<svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">' +
+          '<circle cx="24" cy="24" r="24" fill="#e8f5ed"/>' +
+          '<path d="M14 24.5l7 7 13-14" stroke="#1a5c32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>' +
+          '</svg>' +
+          '<h3>Aanvraag ontvangen!</h3>' +
+          '<p>We nemen <strong>binnen twee werkdagen</strong> contact met u op.<br>U ontvangt ook een bevestiging per e-mail.</p>' +
+          '</div>';
+        // Scroll terug naar het formulier zodat de succesmelding zichtbaar is
+        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        btn.disabled    = false;
+        btn.textContent = origTekst;
+        sfFout(btn, (json.fouten && json.fouten[0]) || 'Er ging iets mis. Probeer het opnieuw.');
+      }
+    } catch(err) {
+      btn.disabled    = false;
+      btn.textContent = origTekst;
+      sfFout(btn, 'Het versturen is helaas mislukt. Probeer het later opnieuw of stuur een e-mail naar info@stapenergie.nl.');
+    }
+  };
+
+  function sfFout(btn, bericht, veld) {
+    var p = document.createElement('p');
+    p.className   = 'sf-error';
+    p.textContent = bericht;
+    btn.insertAdjacentElement('afterend', p);
+
+    // Scroll naar het problematische veld en geef het focus + rode rand
+    if (veld) {
+      veld.style.borderColor = '#c0392b';
+      veld.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      veld.focus();
+      // Herstel de rand zodra de gebruiker iets typt of aanpast
+      veld.addEventListener('input', function herstel() {
+        veld.style.borderColor = '';
+        veld.removeEventListener('input', herstel);
+      }, { once: true });
+      veld.addEventListener('change', function herstel() {
+        veld.style.borderColor = '';
+        veld.removeEventListener('change', herstel);
+      }, { once: true });
+    }
+  }
+
+})();
+</script>
+</div>
+        </div>
     </div>
   </div>
 </section>
@@ -783,7 +1024,7 @@ a    { text-decoration: none; }
       <div class="proces-stap">
         <div class="proces-num">1</div>
         <h4>Gegevens achterlaten</h4>
-        <p>Vul het aanvraagformulier in of bel direct. Binnen twee werkdagen nemen we contact met u op voor een afspraak.</p>
+        <p>Vul het aanvraagformulier in of bel direct. Binnen 24 uur nemen we contact met u op voor een afspraak.</p>
       </div>
       <div class="proces-stap">
         <div class="proces-num">2</div>
@@ -1127,12 +1368,12 @@ a    { text-decoration: none; }
 <section class="cta-sec">
   <div class="container">
     <h2>Klaar voor uw energielabel?</h2>
-    <p>Vrijblijvende aanvraag — geen verplichtingen, wel direct duidelijkheid. Reactie binnen twee werkdagen.</p>
+    <p>Vrijblijvende aanvraag — geen verplichtingen, wel direct duidelijkheid. Reactie binnen 24 uur.</p>
     <div class="cta-btns">
       <a href="#aanvraag" class="btn-wit">Aanvraag indienen →</a>
       <a href="tel:0600000000" class="btn-wit-out">Direct bellen</a>
     </div>
-    <p class="cta-meta"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b3daddd5dcf3c0c7d2c3d6ddd6c1d4dad69ddddf">[email&#160;protected]</a> &nbsp;·&nbsp; Leusden &amp; heel Nederland &nbsp;·&nbsp; KvK: in aanvraag</p>
+    <p class="cta-meta"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e38a8d858ca390978293868d8691848a86cd8d8f">[email&#160;protected]</a> &nbsp;·&nbsp; Leusden &amp; heel Nederland &nbsp;·&nbsp; KvK: in aanvraag</p>
   </div>
 </section>
 
@@ -1171,7 +1412,7 @@ a    { text-decoration: none; }
       <div class="footer-col">
         <h4>Contact</h4>
         <a href="tel:0600000000">06 – XX XX XX XX</a>
-        <a href="/cdn-cgi/l/email-protection#fe97909891be8d8a9f8e9b909b8c99979bd09092"><span class="__cf_email__" data-cfemail="2841464e47685b5c49584d464d5a4f414d064644">[email&#160;protected]</span></a>
+        <a href="/cdn-cgi/l/email-protection#2d44434b426d5e594c5d4843485f4a4448034341"><span class="__cf_email__" data-cfemail="7a13141c153a090e1b0a1f141f081d131f541416">[email&#160;protected]</span></a>
         <a href="/over-erik/">Over Erik</a>
         <a href="/privacyverklaring/">Privacy &amp; AVG</a>
       </div>
@@ -1325,78 +1566,40 @@ function toggleSpoed(prefix) {
 })();
 
 // ── FORMULIER SUBMIT ──
-async function submitFormulier(e, formId) {
+function submitFormulier(e, formId) {
   e.preventDefault();
-
-  var form    = document.getElementById(formId);
-  var btn     = form.querySelector('[type="submit"]');
-  if (btn && btn.disabled) return;
-
-  if (btn) {
-    btn.disabled  = true;
-    btn._origText = btn.textContent;
-    btn.textContent = 'Bezig met versturen…';
-  }
-
-  // Verwijder eventuele eerdere foutmelding
-  var bestaandeFout = form.querySelector('.form-error');
-  if (bestaandeFout) bestaandeFout.remove();
-
-  // Sla postcode + huisnummer op in first-party cookie (30 dagen)
-  var postcode   = '';
+  var form = document.getElementById(formId);
+  var postcode = '';
   var huisnummer = '';
+
+  // Haal postcode + huisnummer op voor cookie
   if (formId === 'form-p') {
-    postcode   = document.getElementById('p-postcode')   ? document.getElementById('p-postcode').value   : '';
-    huisnummer = document.getElementById('p-huisnummer') ? document.getElementById('p-huisnummer').value : '';
+    postcode    = document.getElementById('p-postcode') ? document.getElementById('p-postcode').value : '';
+    huisnummer  = document.getElementById('p-huisnummer') ? document.getElementById('p-huisnummer').value : '';
   } else {
-    postcode   = document.getElementById('z-postcode')   ? document.getElementById('z-postcode').value   : '';
-    huisnummer = document.getElementById('z-huisnummer') ? document.getElementById('z-huisnummer').value : '';
+    postcode    = document.getElementById('z-postcode') ? document.getElementById('z-postcode').value : '';
+    huisnummer  = document.getElementById('z-huisnummer') ? document.getElementById('z-huisnummer').value : '';
   }
+
+  // Sla op in first-party cookie (30 dagen)
   if (postcode) {
     var exp = new Date();
     exp.setDate(exp.getDate() + 30);
-    document.cookie = 'stap_lead_postcode=' + encodeURIComponent(postcode.trim())   + '; expires=' + exp.toUTCString() + '; path=/; SameSite=Lax';
+    document.cookie = 'stap_lead_postcode=' + encodeURIComponent(postcode.trim()) + '; expires=' + exp.toUTCString() + '; path=/; SameSite=Lax';
     document.cookie = 'stap_lead_hnr='     + encodeURIComponent(huisnummer.trim()) + '; expires=' + exp.toUTCString() + '; path=/; SameSite=Lax';
   }
 
-  var data = new FormData(form);
-
-  try {
-    var response = await fetch('/api/contact.php', {
-      method: 'POST',
-      body: data
-    });
-    var json = await response.json();
-
-    if (json.succes) {
-      var wrapper = formId === 'form-p'
-        ? document.getElementById('form-particulier')
-        : document.getElementById('form-zakelijk');
-      wrapper.innerHTML =
-        '<div class="form-success">' +
-        '<svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">' +
-        '<circle cx="24" cy="24" r="24" fill="#e8f5ed"/>' +
-        '<path d="M14 24.5l7 7 13-14" stroke="#1a5c32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>' +
-        '</svg>' +
-        '<div class="form-success-title">Aanvraag ontvangen!</div>' +
-        '<div class="form-success-sub">We nemen <strong>binnen twee werkdagen</strong> contact met u op.<br>U ontvangt ook een bevestiging per e-mail.</div>' +
-        '</div>';
-    } else {
-      if (btn) { btn.disabled = false; btn.textContent = btn._origText; }
-      var fout = document.createElement('p');
-      fout.className   = 'form-error';
-      fout.style.cssText = 'color:#c0392b;font-size:.82rem;margin-top:4px;';
-      fout.textContent = (json.fouten && json.fouten[0]) || 'Er ging iets mis. Probeer het opnieuw.';
-      if (btn) btn.insertAdjacentElement('afterend', fout);
-    }
-  } catch (err) {
-    if (btn) { btn.disabled = false; btn.textContent = btn._origText; }
-    var fout = document.createElement('p');
-    fout.className   = 'form-error';
-    fout.style.cssText = 'color:#c0392b;font-size:.82rem;margin-top:4px;';
-    fout.textContent = 'Het versturen is helaas mislukt. Probeer het later opnieuw of stuur een e-mail naar info@stapenergie.nl.';
-    if (btn) btn.insertAdjacentElement('afterend', fout);
-  }
+  // Succes feedback — vervang het juiste formulier-wrapper
+  var wrapper = formId === 'form-p' ? document.getElementById('form-particulier') : document.getElementById('form-zakelijk');
+  wrapper.innerHTML =
+    '<div class="form-success">' +
+    '<svg width="52" height="52" viewBox="0 0 52 52" fill="none" style="margin:0 auto 1rem">' +
+    '<circle cx="26" cy="26" r="25" stroke="#1a5c32" stroke-width="2"/>' +
+    '<path d="M15 26l8 8 14-14" stroke="#1a5c32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>' +
+    '</svg>' +
+    '<div class="form-success-title">Aanvraag ontvangen!</div>' +
+    '<div class="form-success-sub">We reageren binnen 24 uur. Tot snel!</div>' +
+    '</div>';
 }
 
 // ── LABELCHECK ──
