@@ -9,6 +9,8 @@ on:
       - main
     paths:
       - '**.html'
+      - '**.php'
+      - '**.css'
       - 'images/**'
       - 'content/**.json'
       - '.github/workflows/deploy.yml'
@@ -16,8 +18,8 @@ on:
 jobs:
 
   # ══════════════════════════════════════════════
-  #  AGENT 1: SECURITY
-  #  Scant code op hardcoded gevoelige gegevens
+  # AGENT 1: SECURITY
+  # Scant code op hardcoded gevoelige gegevens
   # ══════════════════════════════════════════════
   security-check:
     name: Security Agent
@@ -35,54 +37,54 @@ jobs:
           issues = []
           scanned = 0
           all_files = (
-              glob.glob('**/*.html', recursive=True) +
-              glob.glob('**/*.json', recursive=True) +
-              glob.glob('**/*.js', recursive=True) +
-              glob.glob('**/*.php', recursive=True)
+            glob.glob('**/*.html', recursive=True) +
+            glob.glob('**/*.json', recursive=True) +
+            glob.glob('**/*.js', recursive=True) +
+            glob.glob('**/*.php', recursive=True)
           )
           skip = ['.git', 'node_modules', 'vendor', '.github']
           for filepath in all_files:
-              if any(s in filepath for s in skip):
-                  continue
-              try:
-                  with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
-                      content = f.read()
-              except:
-                  continue
-              scanned += 1
-              for p in [r'password\s*[=:]\s*["\'][^"\']{4,}["\']',
-                        r'wachtwoord\s*[=:]\s*["\'][^"\']{4,}["\']',
-                        r'passwd\s*[=:]\s*["\'][^"\']{4,}["\']']:
-                  if re.search(p, content, re.IGNORECASE):
-                      issues.append(f"[WACHTWOORD] Mogelijk hardcoded wachtwoord in: {filepath}")
-              content_check = re.sub(r'data:[^;]+;base64,[A-Za-z0-9+/=\s]{20,}', 'DATA_B64', content)
-              content_check = re.sub(r'[A-Za-z0-9+/]{100,}={0,2}', 'LONG_B64', content_check)
-              for p in [r'api[_-]?key\s*[=:]\s*["\'][A-Za-z0-9\-_]{16,}["\']',
-                        r'Bearer\s+[A-Za-z0-9\-_\.]{20,}',
-                        r'sk-[A-Za-z0-9]{32,}',
-                        r'AIza[A-Za-z0-9\-_]{35}']:
-                  if re.search(p, content_check, re.IGNORECASE):
-                      issues.append(f"[API KEY] Mogelijk hardcoded API key in: {filepath}")
-              emails = re.findall(r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b', content)
-              allowed = ['stapenergie.nl', 'example.com']
-              for email in emails:
-                  if email.split('@')[1] not in allowed:
-                      issues.append(f"[EMAIL] Extern e-mailadres ({email}) in: {filepath}")
-              if re.search(r'\b\d{9}\b', content) and \
-                 any(t in content.lower() for t in ['bsn', 'sofinummer']):
-                  issues.append(f"[BSN] Mogelijk BSN-nummer in: {filepath}")
-              if re.search(r'\bNL\d{2}[A-Z]{4}\d{10}\b', content):
-                  issues.append(f"[IBAN] Mogelijk IBAN-nummer in: {filepath}")
-          print(f"  {scanned} bestanden gescand")
+            if any(s in filepath for s in skip):
+              continue
+            try:
+              with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
+                content = f.read()
+            except:
+              continue
+            scanned += 1
+            for p in [r'password\s*[=:]\s*["\'][^"\']{4,}["\']',
+                      r'wachtwoord\s*[=:]\s*["\'][^"\']{4,}["\']',
+                      r'passwd\s*[=:]\s*["\'][^"\']{4,}["\']']:
+              if re.search(p, content, re.IGNORECASE):
+                issues.append(f"[WACHTWOORD] Mogelijk hardcoded wachtwoord in: {filepath}")
+            content_check = re.sub(r'data:[^;]+;base64,[A-Za-z0-9+/=\s]{20,}', 'DATA_B64', content)
+            content_check = re.sub(r'[A-Za-z0-9+/]{100,}={0,2}', 'LONG_B64', content_check)
+            for p in [r'api[_-]?key\s*[=:]\s*["\'][A-Za-z0-9\-_]{16,}["\']',
+                      r'Bearer\s+[A-Za-z0-9\-_\.]{20,}',
+                      r'sk-[A-Za-z0-9]{32,}',
+                      r'AIza[A-Za-z0-9\-_]{35}']:
+              if re.search(p, content_check, re.IGNORECASE):
+                issues.append(f"[API KEY] Mogelijk hardcoded API key in: {filepath}")
+            emails = re.findall(r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b', content)
+            allowed = ['stapenergie.nl', 'example.com']
+            for email in emails:
+              if email.split('@')[1] not in allowed:
+                issues.append(f"[EMAIL] Extern e-mailadres ({email}) in: {filepath}")
+            if re.search(r'\b\d{9}\b', content) and \
+               any(t in content.lower() for t in ['bsn', 'sofinummer']):
+              issues.append(f"[BSN] Mogelijk BSN-nummer in: {filepath}")
+            if re.search(r'\bNL\d{2}[A-Z]{4}\d{10}\b', content):
+              issues.append(f"[IBAN] Mogelijk IBAN-nummer in: {filepath}")
+          print(f" {scanned} bestanden gescand")
           if issues:
-              print("\n❌ Security Agent GEBLOKKEERD:")
-              for i in issues: print(f"  → {i}")
-              sys.exit(1)
+            print("\n❌ Security Agent GEBLOKKEERD:")
+            for i in issues: print(f" → {i}")
+            sys.exit(1)
           print("✅ Security Agent: Alle checks geslaagd")
           EOF
   # ══════════════════════════════════════════════
-  #  AGENT 2: COMPLIANCE OFFICER
-  #  Checkt AVG-conformiteit voor deploy
+  # AGENT 2: COMPLIANCE OFFICER
+  # Checkt AVG-conformiteit voor deploy
   # ══════════════════════════════════════════════
   compliance-check:
     name: Compliance Officer Agent
@@ -97,69 +99,69 @@ jobs:
         run: |
           python3 << 'EOF'
           import os, sys, re, glob
-          print("⚖️  Compliance Officer Agent gestart...")
+          print("⚖️ Compliance Officer Agent gestart...")
           issues = []
           warnings = []
           html_files = glob.glob('**/*.html', recursive=True)
           if not html_files:
-              print("  Geen HTML bestanden — skip")
-              sys.exit(0)
+            print(" Geen HTML bestanden — skip")
+            sys.exit(0)
           all_html = ""
           for f in html_files:
-              try:
-                  with open(f, 'r', encoding='utf-8', errors='ignore') as fh:
-                      all_html += fh.read().lower()
-              except:
-                  pass
+            try:
+              with open(f, 'r', encoding='utf-8', errors='ignore') as fh:
+                all_html += fh.read().lower()
+            except:
+              pass
           has_form = 'form' in all_html and ('input' in all_html or 'textarea' in all_html)
           if has_form:
-              has_optin = any(t in all_html for t in [
-                  'opt-in','optin','commerci','nieuwsbrief',
-                  'toestemming','akkoord','marketing','benaderen','mailing'])
-              if not has_optin:
-                  warnings.append("[AVG] Contactformulier mist opt-in — toevoegen in fase 3")
-              else:
-                  print("  ✅ Opt-in gevonden in formulier")
+            has_optin = any(t in all_html for t in [
+              'opt-in','optin','commerci','nieuwsbrief',
+              'toestemming','akkoord','marketing','benaderen','mailing'])
+            if not has_optin:
+              warnings.append("[AVG] Contactformulier mist opt-in — toevoegen in fase 3")
+            else:
+              print(" ✅ Opt-in gevonden in formulier")
           if not any(t in all_html for t in [
-              'privacyverklaring','privacy policy','privacybeleid',
-              'privacy-policy','privacystatement']):
-              warnings.append("[AVG] Geen privacyverklaring — toevoegen in fase 3")
+            'privacyverklaring','privacy policy','privacybeleid',
+            'privacy-policy','privacystatement']):
+            warnings.append("[AVG] Geen privacyverklaring — toevoegen in fase 3")
           else:
-              print("  ✅ Privacyverklaring gevonden")
+            print(" ✅ Privacyverklaring gevonden")
           has_analytics = any(t in all_html for t in [
-              'google-analytics','gtag','ua-','g-','googletagmanager','_ga'])
+            'google-analytics','gtag','ua-','g-','googletagmanager','_ga'])
           has_cookie = any(t in all_html for t in [
-              'cookie','cookiemelding','cookiebanner'])
+            'cookie','cookiemelding','cookiebanner'])
           if has_analytics and not has_cookie:
-              warnings.append("[AVG] Google Analytics aanwezig maar geen cookiemelding — toevoegen in fase 3")
+            warnings.append("[AVG] Google Analytics aanwezig maar geen cookiemelding — toevoegen in fase 3")
           elif has_analytics:
-              print("  ✅ Cookiemelding gevonden")
+            print(" ✅ Cookiemelding gevonden")
           else:
-              print("  ℹ️  Geen analytics — cookiemelding niet vereist")
+            print(" ℹ️ Geen analytics — cookiemelding niet vereist")
           if not any(t in all_html for t in [
-              'kvk','kamer van koophandel','in aanvraag','kvk-nummer']):
-              warnings.append("[AVG] KvK-nummer niet gevonden — acceptabel als 'in aanvraag'")
+            'kvk','kamer van koophandel','in aanvraag','kvk-nummer']):
+            warnings.append("[AVG] KvK-nummer niet gevonden — acceptabel als 'in aanvraag'")
           else:
-              print("  ✅ KvK-vermelding gevonden")
+            print(" ✅ KvK-vermelding gevonden")
           if not any(t in all_html for t in ['stapenergie.nl','contact']):
-              issues.append("[AVG] Geen contactgegevens gevonden")
+            issues.append("[AVG] Geen contactgegevens gevonden")
           else:
-              print("  ✅ Contactgegevens gevonden")
+            print(" ✅ Contactgegevens gevonden")
           if warnings:
-              print("\n⚠️  Waarschuwingen (deploy gaat door):")
-              for w in warnings: print(f"  → {w}")
+            print("\n⚠️ Waarschuwingen (deploy gaat door):")
+            for w in warnings: print(f" → {w}")
           if issues:
-              print("\n❌ Compliance Officer GEBLOKKEERD:")
-              for i in issues: print(f"  → {i}")
-              sys.exit(1)
+            print("\n❌ Compliance Officer GEBLOKKEERD:")
+            for i in issues: print(f" → {i}")
+            sys.exit(1)
           print("\n✅ Compliance Officer: Alle AVG-checks geslaagd")
           EOF
   # ══════════════════════════════════════════════
-  #  AGENT 3: DEPLOY
-  #  Pusht ALLE bestanden recursief via SFTP
-  #  Werkt automatisch voor nieuwe submappen
-  #  en nieuwe afbeeldingen — geen handmatige
-  #  aanpassing van dit bestand nodig.
+  # AGENT 3: DEPLOY
+  # Pusht ALLE bestanden recursief via SFTP
+  # Werkt automatisch voor nieuwe submappen
+  # en nieuwe afbeeldingen — geen handmatige
+  # aanpassing van dit bestand nodig.
   # ══════════════════════════════════════════════
   deploy-to-hosting:
     name: Deploy Agent
@@ -183,13 +185,13 @@ jobs:
             set sftp:auto-confirm yes;
             open sftp://$SFTP_USER:$SFTP_PASS@$SFTP_HOST;
             mirror --reverse \
-                   --verbose \
-                   --exclude-glob .git/ \
-                   --exclude-glob .github/ \
-                   --exclude-glob '*.md' \
-                   --exclude-glob '*.yml' \
-                   --exclude-glob '*.json' \
-                   . .;
+              --verbose \
+              --exclude-glob .git/ \
+              --exclude-glob .github/ \
+              --exclude-glob '*.md' \
+              --exclude-glob '*.yml' \
+              --exclude-glob '*.json' \
+              . .;
             bye;
           "
           echo "✅ Deploy Agent: Alle bestanden geupload"
