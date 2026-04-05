@@ -1,0 +1,8 @@
+/* ══════════════════════════════════
+   STAP Energie — breadcrumb.css
+══════════════════════════════════ */
+.breadcrumb { background: var(--lichtgrijs); border-bottom: 1px solid var(--rand); }
+.breadcrumb-inner { max-width: 1200px; margin: 0 auto; padding: 10px 40px; display: flex; align-items: center; gap: 7px; font-size: .8rem; color: var(--subtekst); }
+.breadcrumb-inner a { color: var(--groen); }
+.breadcrumb-inner a:hover { text-decoration: underline; }
+@media (max-width: 900px) { .breadcrumb-inner { padding: 10px 24px; } }
