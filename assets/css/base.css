@@ -1,0 +1,212 @@
+/* ══════════════════════════════════
+   STAP Energie — base.css
+   Reset, tokens, utility classes
+══════════════════════════════════ */
+
+/* ══════════════════════════════════
+   RESET & TOKENS
+══════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body { font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.6; color: #1a1a1a; background: #fff; overflow-x: hidden; }
+img  { max-width: 100%; height: auto; display: block; }
+a    { text-decoration: none; }
+
+:root {
+  --groen:       #1a5c32;
+  --groen-mid:   #237a43;
+  --groen-licht: #f0f7f2;
+  --groen-card:  #e8f5ed;
+  --groen-acc:   #2ea855;
+  --tekst:       #1a1a1a;
+  --subtekst:    #4a5568;
+  --rand:        #e2e8e0;
+  --lichtgrijs:  #f7f8f5;
+  --wit:         #ffffff;
+  --serif:       'DM Serif Display', serif;
+  --r:           8px;
+  --rl:          14px;
+  --shadow:      0 2px 12px rgba(0,0,0,.08);
+  --shadow-lg:   0 8px 32px rgba(0,0,0,.12);
+}
+
+/* ══════════════════════════════════
+   UTILITY
+══════════════════════════════════ */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
+.section    { padding: 80px 0; scroll-margin-top: 80px; }
+.sec-label  { display: block; font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--groen); margin-bottom: .7rem; }
+.sec-label::before { content: '-- '; }
+.sec-title  { font-family: var(--serif); font-size: clamp(1.8rem, 3.5vw, 2.6rem); line-height: 1.15; letter-spacing: -.02em; }
+.sec-sub    { font-size: 1rem; color: var(--subtekst); margin-top: .7rem; max-width: 540px; line-height: 1.7; }
+.btn-out    { display: inline-flex; align-items: center; gap: 8px; border: 1.5px solid var(--groen); color: var(--groen); padding: .8rem 1.8rem; border-radius: 100px; font-size: .92rem; font-weight: 600; transition: background .2s, color .2s; }
+.btn-out:hover { background: var(--groen); color: #fff; }
+.sr-only    { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+/* ══════════════════════════════════
+   SEGMENT BAR
+══════════════════════════════════ */
+.seg-bar { background: var(--lichtgrijs); border-bottom: 1px solid var(--rand); display: flex; align-items: center; height: 40px; overflow-x: auto; overflow-y: hidden; white-space: nowrap; scrollbar-width: none; -webkit-overflow-scrolling: touch; padding: 0 5%; }
+.seg-bar::-webkit-scrollbar { display: none; }
+.seg-bar a { display: inline-flex; align-items: center; height: 100%; padding: 0 1rem; font-size: .82rem; font-weight: 500; color: var(--subtekst); border-bottom: 2px solid transparent; transition: color .2s, border-color .2s; white-space: nowrap; flex-shrink: 0; }
+.seg-bar a:hover, .seg-bar a.active { color: var(--groen); border-bottom-color: var(--groen); }
+
+/* ══════════════════════════════════
+   USP BALK
+══════════════════════════════════ */
+/* ══════════════════════════════════
+   USP BALK
+══════════════════════════════════ */
+.usp-balk { background: var(--groen-card); padding: 2rem 0; }
+.usp-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+.usp-item { display: flex; align-items: flex-start; gap: 12px; }
+.usp-icon { width: 36px; height: 36px; background: #fff; border-radius: var(--r); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--groen); }
+.usp-item strong { display: block; font-size: .88rem; font-weight: 700; }
+.usp-item span { font-size: .78rem; color: var(--subtekst); }
+
+/* ══════════════════════════════════
+   DIENSTEN CARDS
+══════════════════════════════════ */
+/* ══════════════════════════════════
+   DIENSTEN
+══════════════════════════════════ */
+.sec-grijs { background: var(--lichtgrijs); }
+.diensten-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 2.5rem; }
+.dienst-card { background: var(--groen-card); border-radius: var(--rl); overflow: hidden; transition: transform .2s, box-shadow .2s; display: block; }
+.dienst-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.dienst-card-img { width: 100%; height: 180px; object-fit: cover; }
+.dienst-card-img-erik { object-position: center 10%; }
+.dienst-card-dark { background: #0f1f15; }
+.dienst-card-body { padding: 1.4rem; }
+.dienst-card-body h3 { font-size: 1rem; font-weight: 700; margin-bottom: .4rem; color: var(--tekst); }
+.dienst-card-body p { font-size: .88rem; color: var(--subtekst); margin-bottom: 1rem; line-height: 1.5; }
+.dienst-card-dark .dienst-card-body h3 { color: #fff; }
+.dienst-card-dark .dienst-card-body p { color: rgba(255,255,255,.65); }
+.dienst-link { display: inline-flex; align-items: center; gap: 6px; color: var(--groen); font-size: .88rem; font-weight: 600; }
+.dienst-card-dark .dienst-link { color: #4dc882; }
+
+/* ══════════════════════════════════
+   VOOR WIE / SEGMENTEN
+══════════════════════════════════ */
+/* ══════════════════════════════════
+   VOOR WIE
+══════════════════════════════════ */
+.seg-section { background: #fff; }
+.seg-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
+.seg-duo-card { display: flex; align-items: flex-start; gap: 1.2rem; border: 1.5px solid var(--rand); border-radius: var(--rl); padding: 1.8rem; transition: border-color .2s, box-shadow .2s, transform .2s; }
+.seg-duo-card:hover { border-color: var(--groen); box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+.seg-duo-icon { width: 52px; height: 52px; background: var(--groen-card); border-radius: var(--r); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--groen); }
+.seg-duo-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: .4rem; color: var(--tekst); }
+.seg-duo-card p { font-size: .88rem; color: var(--subtekst); margin-bottom: .8rem; line-height: 1.6; }
+.seg-arrow { display: flex; align-items: center; gap: 4px; color: var(--groen); font-size: .88rem; font-weight: 600; }
+
+/* ══════════════════════════════════
+   OVER ERIK
+══════════════════════════════════ */
+/* ══════════════════════════════════
+   OVER ERIK
+══════════════════════════════════ */
+.over-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+.over-img-wrap { position: relative; }
+.over-img-wrap img { width: 100%; border-radius: var(--rl); object-fit: cover; max-height: 520px; object-position: center top; }
+.over-badge { position: absolute; bottom: -1.5rem; right: -1.5rem; background: var(--groen); color: #fff; border-radius: var(--rl); padding: 1.2rem 1.5rem; box-shadow: var(--shadow-lg); }
+.over-badge .num { font-family: var(--serif); font-size: 2.2rem; line-height: 1; }
+.over-badge .lbl { font-size: .78rem; opacity: .85; margin-top: 2px; }
+.over-quote { border-left: 3px solid #4dc882; padding-left: 1.2rem; font-style: italic; font-size: 1rem; color: var(--subtekst); line-height: 1.6; margin: 1.5rem 0; }
+.over-text { font-size: .95rem; color: var(--subtekst); line-height: 1.75; margin-bottom: 1rem; }
+.over-tags { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.2rem 0 1.8rem; }
+.over-tag { background: var(--groen-card); color: var(--groen); font-size: .75rem; font-weight: 600; padding: 4px 12px; border-radius: 100px; }
+
+/* ══════════════════════════════════
+   CTA SECTIE
+══════════════════════════════════ */
+/* ══════════════════════════════════
+   CTA SECTIE
+══════════════════════════════════ */
+.cta-sec { background: var(--groen); padding: 80px 0; text-align: center; }
+.cta-sec h2 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3rem); color: #fff; margin-bottom: .8rem; letter-spacing: -.02em; }
+.cta-sec p { color: rgba(255,255,255,.75); font-size: 1rem; margin-bottom: 2rem; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+.cta-btns { display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+.btn-wit { background: #fff; color: var(--groen); padding: .9rem 2.2rem; border-radius: 100px; font-size: .95rem; font-weight: 700; display: inline-flex; align-items: center; transition: transform .15s, box-shadow .15s; }
+.btn-wit:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
+.btn-wit-out { border: 2px solid rgba(255,255,255,.5); color: #fff; padding: .85rem 2rem; border-radius: 100px; font-size: .92rem; font-weight: 600; display: inline-flex; align-items: center; transition: border-color .2s, background .2s; }
+.btn-wit-out:hover { border-color: #fff; background: rgba(255,255,255,.1); }
+.cta-meta { margin-top: 1.5rem; font-size: .78rem; color: rgba(255,255,255,.5); }
+
+/* ══════════════════════════════════
+   RESPONSIVE TABLET 900px
+══════════════════════════════════ */
+@media (max-width: 900px) {
+  .usp-grid      { grid-template-columns: 1fr 1fr; }
+  .diensten-grid { grid-template-columns: 1fr 1fr; }
+  .seg-duo       { grid-template-columns: 1fr 1fr; }
+  .over-grid     { grid-template-columns: 1fr; gap: 3rem; }
+  .over-badge    { right: 1rem; bottom: 1rem; }
+  .footer-grid   { grid-template-columns: 1fr 1fr; gap: 2rem; }
+}
+
+/* ══════════════════════════════════
+   RESPONSIVE MOBIEL 768px
+══════════════════════════════════ */
+@media (max-width: 768px) {
+  .nav-toggle { display: flex; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 68px; left: 0; right: 0;
+    background: #fff;
+    border-bottom: 1px solid var(--rand);
+    flex-direction: column;
+    padding: .5rem 5%;
+    gap: 0;
+    box-shadow: 0 8px 24px rgba(0,0,0,.08);
+    z-index: 199;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links li { border-bottom: 1px solid var(--rand); }
+  .nav-links li:last-child { border-bottom: none; }
+  .nav-links a { padding: .85rem 0; font-size: .95rem; display: flex; align-items: center; min-height: 44px; }
+  .nav-cta { background: none !important; color: var(--groen) !important; border-radius: 0 !important; }
+  .dropdown { position: static; transform: none; box-shadow: none; border: none; border-radius: 0; padding: 0 0 .5rem 1rem; display: none; }
+  .dropdown::before { display: none; }
+  .dropdown::after { display: none; }
+  .has-dd.open .dropdown { display: block; }
+  .hero { min-height: auto; }
+  .hero-inner { grid-template-columns: 1fr; padding: 100px 5% 3rem; gap: 2rem; }
+  .hero-overlay { background: linear-gradient(180deg, rgba(10,25,16,.8) 0%, rgba(10,25,16,.7) 100%); }
+  .diensten-grid { grid-template-columns: 1fr; }
+  .cta-btns { flex-direction: column; align-items: center; }
+  .btn-wit, .btn-wit-out { width: 100%; max-width: 300px; text-align: center; justify-content: center; }
+}
+
+@media (max-width: 480px) {
+  .usp-grid    { grid-template-columns: 1fr 1fr; }
+  .seg-duo     { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .form-row    { grid-template-columns: 1fr; }
+}
+
+/* ══════════════════════════════════
+   EXTRA UTILITY CLASSES
+   (container varianten, check-lijst,
+    stappen, noot, sec-grijs)
+══════════════════════════════════ */
+
+.container--smal { max-width: 720px; }
+.sec-grijs       { background: var(--lichtgrijs); }
+
+.check-lijst { list-style: none; margin-top: 1.5rem; display: flex; flex-direction: column; gap: .75rem; max-width: 640px; }
+.check-lijst li { display: flex; gap: 12px; align-items: flex-start; font-size: .95rem; color: var(--subtekst); }
+.check-lijst li::before { content: '✓'; color: var(--groen); font-weight: 700; flex-shrink: 0; }
+
+.stappen-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 2.5rem; }
+.stap-card { background: #fff; border-radius: var(--rl); padding: 1.8rem; border: 1.5px solid var(--rand); }
+.stap-num { font-family: var(--serif); font-size: 2rem; color: var(--groen); margin-bottom: .75rem; line-height: 1; }
+.stap-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: .5rem; }
+.stap-card p { font-size: .88rem; color: var(--subtekst); line-height: 1.6; }
+
+.noot { margin-top: 1.5rem; font-size: .82rem; color: var(--subtekst); }
+
+@media (max-width: 768px) {
+  .stappen-grid { grid-template-columns: 1fr; }
+}
