@@ -38,24 +38,24 @@ include $root . 'includes/nav.php';
 include $root . 'includes/breadcrumb.php';
 ?>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-inner">
-    <div class="hero-eyebrow"><div class="hero-eyebrow-dot"></div> Gecertificeerd EPA-adviseur</div>
-    <h1>Energielabel voor uw woning —<br><em>officieel, snel en persoonlijk</em></h1>
-    <p class="hero-lead">Of u nu verkoopt, verhuurt of wilt weten hoe energiezuinig uw woning is — STAP Energie verzorgt het officiële energielabel. Vaste prijs, geen verrassingen.</p>
-    <div class="hero-usps">
-      <div class="hero-usp"><div class="hero-usp-vink">✓</div> Officieel geregistreerd in EP-online</div>
-      <div class="hero-usp"><div class="hero-usp-vink">✓</div> Vaste prijzen — geen verborgen kosten</div>
-      <div class="hero-usp"><div class="hero-usp-vink">✓</div> Binnen één week uw label op zak</div>
-      <div class="hero-usp"><div class="hero-usp-vink">✓</div> Persoonlijk advies zonder extra kosten</div>
-    </div>
-    <div class="hero-ctas">
-      <a href="#aanvraag" class="btn-primair">Label aanvragen →</a>
-      <a href="tel:06XXXXXXXX" class="btn-sec">Bel direct</a>
-    </div>
-  </div>
-</section>
+<?php
+// Hero variabelen
+$hero_variant  = 'sub';
+$hero_eyebrow  = 'Gecertificeerd EPA-adviseur';
+$hero_titel    = 'Energielabel voor uw woning &mdash;<br><em>officieel, snel en persoonlijk</em>';
+$hero_lead     = 'Of u nu verkoopt, verhuurt of wilt weten hoe energiezuinig uw woning is — STAP Energie verzorgt het officiële energielabel. Vaste prijs, geen verrassingen.';
+$hero_usps     = [
+  'Officieel geregistreerd in EP-online',
+  'Vaste prijzen — geen verborgen kosten',
+  'Binnen één week uw label op zak',
+  'Persoonlijk advies zonder extra kosten',
+];
+$hero_cta      = 'Label aanvragen →';
+$hero_cta_url  = '#aanvraag';
+$hero_cta2     = 'Bel direct';
+$hero_cta2_url = 'tel:06XXXXXXXX';
+include $root . 'includes/hero.php';
+?>
 
 <?php include $root . 'includes/trust.php'; ?>
 
