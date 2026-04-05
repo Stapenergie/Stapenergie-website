@@ -3,7 +3,7 @@
  * energielabels/woningen/index.php
  * Energielabel aanvragen voor woningen
  */
-$root        = $_SERVER['DOCUMENT_ROOT'] . '/';
+$root        = dirname(__DIR__, 2) . '/';
 $title       = 'Energielabel Woning Aanvragen | STAP Energie';
 $description = 'Officieel energielabel voor uw woning. Gecertificeerd EPA-adviseur, vaste prijzen, reactie binnen twee werkdagen. Heel Nederland.';
 $canonical   = 'https://stapenergie.nl/energielabels/woningen/';
