@@ -1,9 +1,10 @@
 <?php
 /**
  * energielabels/woningen/index.php
- * Energielabel aanvragen voor woningen
  */
-$root        = dirname(__DIR__, 2) . '/';
+
+$root = dirname(dirname(dirname(__FILE__))) . '/';
+
 $title       = 'Energielabel Woning Aanvragen | STAP Energie';
 $description = 'Officieel energielabel voor uw woning. Gecertificeerd EPA-adviseur, vaste prijzen, reactie binnen twee werkdagen. Heel Nederland.';
 $canonical   = 'https://stapenergie.nl/energielabels/woningen/';
@@ -78,15 +79,14 @@ include $root . 'includes/hero.php';
 </section>
 
 <?php
-// ── FAQ
 $faq_label = 'Veelgestelde vragen';
 $faq_titel = 'FAQ energielabel woning';
 $faq_items = [
-  ['vraag' => 'Wat kost een energielabel voor mijn woning?',     'antwoord' => 'De prijs hangt af van het type woning. Een appartement start vanaf &euro;&nbsp;195 incl. btw, een eengezinswoning vanaf &euro;&nbsp;295 incl. btw. U ziet de exacte prijs direct in het aanvraagformulier zodra u uw woningtype selecteert.'],
+  ['vraag' => 'Wat kost een energielabel voor mijn woning?',        'antwoord' => 'De prijs hangt af van het type woning. Een appartement start vanaf &euro;&nbsp;195 incl. btw, een eengezinswoning vanaf &euro;&nbsp;295 incl. btw. U ziet de exacte prijs direct in het aanvraagformulier zodra u uw woningtype selecteert.'],
   ['vraag' => 'Hoe lang duurt het om een energielabel te krijgen?', 'antwoord' => 'Na uw aanvraag neemt STAP Energie binnen twee werkdagen contact op om de opname in te plannen. Na de opname ontvangt u het label doorgaans binnen enkele werkdagen.'],
-  ['vraag' => 'Hoe lang is een energielabel geldig?',              'antwoord' => 'Een energielabel is maximaal 10 jaar geldig. Na die tijd heeft u een nieuw label nodig bij verkoop of verhuur.'],
-  ['vraag' => 'Moet ik thuis zijn tijdens de opname?',             'antwoord' => 'Ja, de EPA-adviseur heeft toegang nodig tot de woning voor de meting. U spreekt samen een moment af dat u schikt.'],
-  ['vraag' => 'Wat als ik een monument heb?',                      'antwoord' => 'Voor monumenten gelden bijzondere regels rondom de labelplicht. Neem contact op via het formulier &mdash; dan kijken we samen naar uw specifieke situatie.'],
+  ['vraag' => 'Hoe lang is een energielabel geldig?',               'antwoord' => 'Een energielabel is maximaal 10 jaar geldig. Na die tijd heeft u een nieuw label nodig bij verkoop of verhuur.'],
+  ['vraag' => 'Moet ik thuis zijn tijdens de opname?',              'antwoord' => 'Ja, de EPA-adviseur heeft toegang nodig tot de woning voor de meting. U spreekt samen een moment af dat u schikt.'],
+  ['vraag' => 'Wat als ik een monument heb?',                       'antwoord' => 'Voor monumenten gelden bijzondere regels rondom de labelplicht. Neem contact op via het formulier &mdash; dan kijken we samen naar uw specifieke situatie.'],
 ];
 include $root . 'includes/faq.php';
 include $root . 'includes/footer.php';
