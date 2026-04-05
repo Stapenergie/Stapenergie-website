@@ -1,0 +1,32 @@
+/* ══════════════════════════════════
+   STAP Energie — labelcheck.css
+   EP Online labelcheck widget
+══════════════════════════════════ */
+
+.labelcheck { background: var(--groen-card); padding: 56px 0; }
+.labelcheck__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+.labelcheck__tekst h2 { font-family: var(--serif); font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.2; letter-spacing: -.02em; margin-bottom: .75rem; }
+.labelcheck__tekst p  { font-size: .95rem; color: var(--subtekst); line-height: 1.7; }
+
+.labelcheck__widget { background: #fff; border-radius: var(--rl); padding: 1.8rem; box-shadow: var(--shadow); }
+.labelcheck__velden { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; margin-bottom: .75rem; }
+.labelcheck__btn { width: 100%; padding: .85rem; background: var(--groen); color: #fff; border: none; border-radius: 100px; font-size: .92rem; font-weight: 700; cursor: pointer; font-family: inherit; transition: background .2s; }
+.labelcheck__btn:hover    { background: var(--groen-mid); }
+.labelcheck__btn:disabled { opacity: .6; cursor: not-allowed; }
+
+.labelcheck__loading { display: none; font-size: .88rem; color: var(--subtekst); text-align: center; padding: .75rem 0; }
+.labelcheck__loading.zichtbaar { display: block; }
+
+.labelcheck__resultaat { display: none; border-radius: var(--r); padding: 1rem 1.2rem; margin-top: .75rem; font-size: .88rem; line-height: 1.6; }
+.labelcheck__resultaat.zichtbaar { display: block; }
+.labelcheck__resultaat h5 { font-size: .92rem; font-weight: 700; margin-bottom: .35rem; }
+.labelcheck__resultaat a  { color: var(--groen); font-weight: 600; text-decoration: underline; }
+
+.labelcheck__resultaat--heeft { background: #e8f5ed; border: 1.5px solid #a8d5b5; color: #1a5c32; }
+.labelcheck__resultaat--geen  { background: #fff8e1; border: 1.5px solid #ffe082; color: #7a5c00; }
+.labelcheck__resultaat--fout  { background: var(--lichtgrijs); border: 1.5px solid var(--rand); color: var(--subtekst); }
+
+@media (max-width: 768px) {
+  .labelcheck__inner  { grid-template-columns: 1fr; gap: 1.5rem; }
+  .labelcheck__velden { grid-template-columns: 1fr; }
+}

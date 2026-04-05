@@ -1,0 +1,20 @@
+/* ══════════════════════════════════
+   STAP Energie — footer.css
+   Footer
+══════════════════════════════════ */
+
+/* ══════════════════════════════════
+   FOOTER
+══════════════════════════════════ */
+.footer { background: #0a1a0f; color: rgba(255,255,255,.65); padding: 64px 0 0; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2.5rem; padding-bottom: 48px; }
+.footer-brand { font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 1rem; }
+.footer-desc { font-size: .88rem; color: rgba(255,255,255,.55); line-height: 1.7; max-width: 280px; margin-bottom: 1.5rem; }
+.footer-social { display: flex; gap: .8rem; }
+.footer-social a { width: 36px; height: 36px; border-radius: var(--r); background: rgba(255,255,255,.08); display: flex; align-items: center; justify-content: center; transition: background .2s; color: rgba(255,255,255,.7); }
+.footer-social a:hover { background: rgba(255,255,255,.16); }
+.footer-col h4 { font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.4); margin-bottom: 1.2rem; }
+.footer-col a { display: block; color: rgba(255,255,255,.65); font-size: .88rem; margin-bottom: .65rem; transition: color .2s; }
+.footer-col a:hover { color: #fff; }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,.08); padding: 1.2rem 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .5rem; }
+.footer-copy { font-size: .78rem; color: rgba(255,255,255,.4); }

@@ -1,0 +1,13 @@
+/* ══════════════════════════════════
+   STAP Energie — faq.css
+   FAQ accordion component
+══════════════════════════════════ */
+
+.faq__lijst { display: flex; flex-direction: column; gap: .5rem; margin-top: 2rem; }
+.faq__item { border: 1.5px solid var(--rand); border-radius: var(--r); background: #fff; overflow: hidden; }
+.faq__vraag { width: 100%; text-align: left; padding: 1.1rem 1.2rem; font-size: .95rem; font-weight: 600; font-family: inherit; background: none; border: none; cursor: pointer; color: var(--tekst); display: flex; justify-content: space-between; align-items: center; gap: 1rem; min-height: 56px; }
+.faq__vraag::after { content: '+'; font-size: 1.2rem; font-weight: 400; color: var(--groen); flex-shrink: 0; transition: transform .2s; }
+.faq__vraag.open::after { transform: rotate(45deg); }
+.faq__vraag[aria-expanded="true"]::after { transform: rotate(45deg); }
+.faq__antwoord { max-height: 0; overflow: hidden; transition: max-height .3s ease; }
+.faq__antwoord p { padding: 0 1.2rem 1.1rem; font-size: .9rem; color: var(--subtekst); line-height: 1.7; }

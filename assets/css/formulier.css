@@ -1,0 +1,35 @@
+/* ══════════════════════════════════
+   STAP Energie — formulier.css
+   Universeel contactformulier
+══════════════════════════════════ */
+
+.sf-card { background: #fff; border-radius: 14px; padding: 2rem; box-shadow: 0 16px 60px rgba(0,0,0,.2); font-family: 'DM Sans', sans-serif; }
+.sf-card h3 { font-size: 1.05rem; font-weight: 700; margin: 0 0 .2rem; color: #1a1a1a; }
+.sf-card .sf-sub { font-size: .83rem; color: #4a5568; margin: 0 0 1.2rem; }
+.sf-stack { display: flex; flex-direction: column; gap: .7rem; }
+.sf-row { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; }
+.sf-input { width: 100%; padding: .72rem .9rem; border: 1.5px solid #e2e8e0; border-radius: 8px; font-size: .88rem; font-family: inherit; outline: none; transition: border-color .15s; background: #fff; color: #1a1a1a; }
+.sf-input:focus { border-color: #1a5c32; }
+.sf-select { width: 100%; padding: .72rem .9rem; border: 1.5px solid #e2e8e0; border-radius: 8px; font-size: .88rem; font-family: inherit; outline: none; background: #fff; color: #4a5568; transition: border-color .15s; }
+.sf-select:focus { border-color: #1a5c32; }
+.sf-type-btns { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; }
+.sf-type-btn { padding: .65rem; border: 1.5px solid #e2e8e0; border-radius: 8px; font-size: .88rem; font-weight: 500; font-family: inherit; background: #fff; color: #4a5568; cursor: pointer; transition: all .15s; text-align: center; }
+.sf-type-btn:hover { border-color: #1a5c32; color: #1a5c32; }
+.sf-type-btn.actief { background: #1a5c32; color: #fff; border-color: #1a5c32; }
+.sf-prijs-box { background: #e8f5ed; border-radius: 8px; padding: .75rem 1rem; font-size: .88rem; color: #1a5c32; font-weight: 600; display: none; }
+.sf-prijs-box.zichtbaar { display: block; }
+.sf-blok { display: none; }
+.sf-blok.zichtbaar { display: contents; }
+.sf-check { display: flex; align-items: flex-start; gap: 8px; font-size: .75rem; color: #4a5568; line-height: 1.5; }
+.sf-check input { margin-top: 2px; flex-shrink: 0; accent-color: #1a5c32; width: 14px; height: 14px; }
+.sf-check a { color: #1a5c32; font-weight: 600; }
+.sf-check.commercieel { color: #4a5568; }
+.sf-submit { width: 100%; padding: .9rem; background: #1a5c32; color: #fff; border: none; border-radius: 100px; font-size: .92rem; font-weight: 700; cursor: pointer; font-family: inherit; transition: background .2s; }
+.sf-submit:hover { background: #237a43; }
+.sf-submit:disabled { opacity: .6; cursor: not-allowed; }
+.sf-note { text-align: center; font-size: .72rem; color: #9aa5b4; margin: 0; }
+.sf-error { color: #c0392b; font-size: .82rem; margin: 4px 0 0; }
+.sf-succes { text-align: center; padding: 1.5rem 0; }
+.sf-succes h3 { font-size: 1rem; font-weight: 700; margin: .75rem 0 .3rem; color: #1a1a1a; }
+.sf-succes p { color: #4a5568; font-size: .85rem; line-height: 1.6; margin: 0; }
+@media (max-width: 480px) { .sf-row { grid-template-columns: 1fr; } }
