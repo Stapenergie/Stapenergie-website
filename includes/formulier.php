@@ -20,9 +20,6 @@ $f_pagina = $f_pagina ?? 'onbekend';
   <h3>Vraag vrijblijvend aan</h3>
   <p class="sf-sub">Energielabel, inkoop &amp; verduurzamingsadvies &mdash; reactie binnen twee werkdagen.</p>
 
-  <h3>Vraag vrijblijvend aan</h3>
-  <p class="sf-sub">Energielabel, inkoop &amp; verduurzamingsadvies &mdash; reactie binnen twee werkdagen.</p>
-
   <form class="sf-stack" id="sf-form" novalidate>
     <input type="hidden" name="pagina" id="sf-pagina" value="">
     <input type="hidden" name="type"   id="sf-type-hidden" value="">
