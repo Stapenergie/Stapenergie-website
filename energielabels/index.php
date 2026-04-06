@@ -45,6 +45,7 @@ include $root . 'includes/components/section-highlight.php';
 
 // ── Hero
 $hero_variant  = 'sub';
+$hero_bg       = '/images/hero-bedrijfspand.jpg';
 $hero_eyebrow  = 'Officieel & erkend energielabel';
 $hero_titel    = 'Energielabel voor uw woning of <em>bedrijfspand</em>';
 $hero_lead     = 'Verplicht bij verkoop, verhuur en oplevering. STAP Energie verzorgt officiële energielabels voor woningen én utiliteit — gecertificeerd, snel en voor een vaste prijs.';
