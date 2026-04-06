@@ -26,11 +26,11 @@ $faq_items = [
   ['vraag' => 'Is een energielabel verplicht bij verkoop van mijn woning?',
    'antwoord' => 'Ja. Bij de overdracht bent u wettelijk verplicht een geldig energielabel aan de koper te overhandigen. Zonder label riskeert u een boete van de ILT.'],
   ['vraag' => 'Wat heb ik nodig voor de opname?',
-   'antwoord' => 'Toegang tot alle ruimtes is vereist. Wenselijk zijn ook bouwtekeningen, installatieverantwoording en facturen van isolatiemaatregelen.'],
+   'antwoord' => 'Toegang tot alle ruimtes — inclusief zolder, kelder en kruipruimte — is vereist. Daarnaast is het wenselijk om de volgende documenten bij de hand te hebben: bouwtekeningen of plattegronden van de woning, installatiedocumentatie (cv-ketel, warmtepomp, ventilatie), facturen van verbouwingen of renovaties, facturen van isolatiemaatregelen (spouwmuur, vloer, dak, ramen) en overige bewijsstukken van energiebesparende maatregelen. Hoe meer documentatie beschikbaar is, hoe nauwkeuriger de opname en hoe beter het uiteindelijke label. STAP Energie informeert u na de aanvraag precies wat u kunt klaarzetten.'],
   ['vraag' => 'Kan ik mijn energielabel verbeteren na verduurzaming?',
    'antwoord' => 'Ja. Na isolatie, HR++-glas of een warmtepomp kunt u uw label laten aanpassen via herlabelen — mogelijk binnen 24 maanden na de oorspronkelijke opnamedatum.'],
   ['vraag' => 'Hoe snel kan ik een afspraak inplannen?',
-   'antwoord' => 'In de meeste gevallen kunt u binnen één week terecht. Heeft u haast — geef dit dan aan in uw aanvraag.'],
+   'antwoord' => 'In de meeste gevallen kunt u binnen één week terecht. Heeft u haast — bijvoorbeeld vanwege een nakende verkooptransactie — geef dit dan aan in uw aanvraag. STAP Energie kijkt wat qua planning mogelijk is.'],
 ];
 
 include $root . 'includes/head.php';
@@ -41,6 +41,7 @@ include $root . 'includes/breadcrumb.php';
 <?php
 // Hero variabelen
 $hero_variant  = 'sub';
+$hero_bg       = '/images/hero-woningen.jpg';
 $hero_eyebrow  = 'Gecertificeerd EPA-adviseur';
 $hero_titel    = 'Energielabel voor uw woning &mdash;<br><em>officieel, snel en persoonlijk</em>';
 $hero_lead     = 'Of u nu verkoopt, verhuurt of wilt weten hoe energiezuinig uw woning is — STAP Energie verzorgt het officiële energielabel. Vaste prijs, geen verrassingen.';
