@@ -1,0 +1,141 @@
+/* ══════════════════════════════════════════════════════════
+   STAP Energie — components.css
+   Losse herbruikbare bouwstenen: card, prijs-rij, badge,
+   icon-tekst, checklist, infobox
+   Geen sectie-layout hier — zie sections.css
+══════════════════════════════════════════════════════════ */
+
+/* ── Card ── */
+.card {
+  background: #fff;
+  border: 1px solid var(--rand);
+  border-radius: var(--rl);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow .2s, transform .2s;
+}
+.card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+.card--uitgelicht { border: 2px solid var(--groen); }
+.card--klikbaar { cursor: pointer; }
+
+.card__foto { width: 100%; height: 200px; object-fit: cover; display: block; }
+
+.card__body { padding: 24px; display: flex; flex-direction: column; flex: 1; }
+.card__type { font-size: .7rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--subtekst); margin-bottom: 4px; }
+.card__titel { font-size: 1.05rem; font-weight: 700; color: var(--tekst); margin-bottom: 8px; }
+.card__tekst { font-size: .88rem; color: var(--subtekst); line-height: 1.6; margin-bottom: 16px; flex: 1; }
+.card__incl { font-size: .72rem; color: var(--subtekst); margin-bottom: 16px; }
+.card__cta { margin-top: auto; }
+
+.card__badge {
+  display: inline-block;
+  background: var(--groen);
+  color: #fff;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  align-self: flex-start;
+}
+
+/* ── Prijs-rij ── */
+.prijs-rij {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 10px;
+  background: var(--lichtgrijs);
+  border-radius: var(--r);
+  font-size: .84rem;
+}
+.prijs-rij__label { color: var(--subtekst); }
+.prijs-rij__bedrag { font-weight: 700; color: var(--groen); }
+.prijs-rijen { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+
+/* ── Badge ── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: .67rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 20px;
+}
+.badge--groen { background: var(--groen-card); color: var(--groen); }
+.badge--blauw { background: #e8f0ff; color: #1e3a8a; }
+.badge--oranje { background: #fff3e0; color: #e65100; }
+.badge--rood { background: #fee2e2; color: #991b1b; }
+
+/* ── Icon-tekst ── */
+.icon-tekst {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+.icon-tekst__icoon {
+  width: 40px;
+  height: 40px;
+  background: var(--groen-card);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.icon-tekst__icoon svg { width: 20px; height: 20px; }
+.icon-tekst__titel { font-size: .9rem; font-weight: 700; color: var(--tekst); margin-bottom: 3px; }
+.icon-tekst__tekst { font-size: .84rem; color: var(--subtekst); line-height: 1.55; }
+
+/* ── Checklist ── */
+.checklist { display: flex; flex-direction: column; gap: 7px; }
+.checklist__item { display: flex; align-items: flex-start; gap: 8px; font-size: .88rem; color: var(--subtekst); }
+.checklist__vink { color: var(--groen-acc); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+
+/* ── Infobox ── */
+.infobox {
+  border-radius: var(--r);
+  padding: 16px 18px;
+  font-size: .88rem;
+  line-height: 1.6;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.infobox--info { background: #e8f0ff; color: #1e3a8a; border-left: 3px solid #3b82f6; }
+.infobox--waarschuwing { background: #fff3e0; color: #92400e; border-left: 3px solid #f59e0b; }
+.infobox--succes { background: var(--groen-card); color: var(--groen); border-left: 3px solid var(--groen); }
+.infobox--fout { background: #fee2e2; color: #991b1b; border-left: 3px solid #ef4444; }
+.infobox__icoon { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+.infobox__tekst strong { display: block; margin-bottom: 2px; }
+
+/* ── Knoppen (generiek) ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: .9rem;
+  padding: 10px 22px;
+  border-radius: var(--r);
+  transition: background .2s, transform .2s, border-color .2s;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  text-decoration: none;
+}
+.btn--primair { background: var(--groen); color: #fff; }
+.btn--primair:hover { background: var(--groen-mid); transform: translateY(-1px); }
+.btn--outline { background: transparent; border: 2px solid var(--groen); color: var(--groen); }
+.btn--outline:hover { background: var(--groen-licht); }
+.btn--wit { background: #fff; color: var(--groen); box-shadow: 0 4px 16px rgba(0,0,0,.15); }
+.btn--wit:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
+.btn--ghost { border: 1.5px solid rgba(255,255,255,.38); color: #fff; background: transparent; }
+.btn--ghost:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+.btn--vol { width: 100%; }
