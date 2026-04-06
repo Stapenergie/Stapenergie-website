@@ -62,17 +62,6 @@ include $root . 'includes/hero.php';
 
 // ── Trust balk
 include $root . 'includes/trust.php';
-?>
-
-<!-- USP BALK -->
-<div class="usp-balk">
-  <div class="usp-inner">
-    <div class="usp-item"><strong>Officieel erkend</strong><span>Geregistreerd in EP-online</span></div>
-    <div class="usp-item"><strong>10 jaar geldig</strong><span>Geldig na registratie</span></div>
-    <div class="usp-item"><strong>Basisopname</strong><span>Woningen én utiliteit</span></div>
-    <div class="usp-item"><strong>Aan huis &amp; op locatie</strong><span>Heel Nederland</span></div>
-  </div>
-</div>
 
 <?php
 // ── Labelcheck
