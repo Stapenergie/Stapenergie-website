@@ -64,7 +64,6 @@ include $root . 'includes/hero.php';
 // ── Trust balk
 include $root . 'includes/trust.php';
 
-<?php
 // ── Labelcheck
 include $root . 'includes/labelcheck.php';
 
