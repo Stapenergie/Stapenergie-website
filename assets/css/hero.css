@@ -106,10 +106,11 @@
 
 /* ── Sub hero (subpagina's) ── */
 .hero--sub {
-  background:
-    linear-gradient(rgba(10,25,16,.72), rgba(10,25,16,.72)),
-    var(--hero-bg, none) center/cover no-repeat,
-    var(--groen);
+  background-color: var(--groen);
+  background-image: linear-gradient(rgba(10,25,16,.72), rgba(10,25,16,.72)), var(--hero-bg, none);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 72px 40px 80px;
   position: relative;
   overflow: hidden;
