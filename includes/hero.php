@@ -88,7 +88,7 @@ $hero_formulier  = $hero_formulier  ?? false;
 
 <?php else: ?>
 <!-- HERO SUB (subpagina's) -->
-<section class="hero hero--sub">
+<section class="hero hero--sub"<?php if ($hero_bg): ?> style="--hero-bg: url('<?= htmlspecialchars($hero_bg) ?>')"<?php endif; ?>>
   <div class="hero-inner">
     <?php if ($hero_eyebrow): ?>
       <div class="hero-eyebrow">
