@@ -7,6 +7,7 @@
  *   $card['titel']      string   verplicht
  *   $card['tekst']      string   optioneel — omschrijving
  *   $card['type']       string   optioneel — bovenste label (bv. "Woningtype")
+ *   $card['icoon']      string   optioneel — rauwe SVG HTML, toont boven titel
  *   $card['foto']       string   optioneel — pad naar afbeelding
  *   $card['foto_alt']   string   optioneel — alt-tekst foto
  *   $card['badge']      string   optioneel — badge tekst bovenop foto
@@ -36,6 +37,9 @@ $klassen   = 'card' . (!empty($c['uitgelicht']) ? ' card--uitgelicht' : '');
   <?php endif; ?>
 
   <div class="card__body">
+    <?php if (!empty($c['icoon'])): ?>
+      <div class="card__icoon"><?= $c['icoon'] ?></div>
+    <?php endif; ?>
     <?php if (!empty($c['badge'])): ?>
       <span class="card__badge"><?= htmlspecialchars($c['badge']) ?></span>
     <?php endif; ?>
