@@ -153,7 +153,7 @@ $kaarten_items   = [
     'titel'      => 'Middelgroot bedrijfspand',
     'type'       => '100 – 500 m²',
     'foto'       => '/images/bedrijfspand-middel.jpg',
-    'foto_alt'   => 'Collega's voor middelgroot bedrijfspand',
+    'foto_alt'   => 'Collega\'s voor middelgroot bedrijfspand',
     'tekst'      => 'Opname op locatie door EPA-adviseur. Officieel rapport geregistreerd in EP-online. Label 10 jaar geldig na afgifte. Persoonlijk advies bij de opname.',
     'prijsrijen' => [
       ['label' => 'Indicatief tarief', 'bedrag' => '€ 675'],
