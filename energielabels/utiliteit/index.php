@@ -238,31 +238,7 @@ $kaarten_items   = [
 ];
 include $root . 'includes/components/section-kaarten.php';
 
-// ── Cross-sell
-$kaarten_variant = 'wit';
-$kaarten_label   = 'Ook interessant';
-$kaarten_titel   = 'Meer dan alleen een label';
-$kaarten_intro   = 'Een energielabel is een startpunt. STAP Energie helpt u ook verder met energie-inkoop en verduurzaming.';
-$kaarten_cols    = 2;
-$kaarten_items   = [
-  [
-    'titel'     => 'Bespaar structureel op uw energiekosten',
-    'type'      => 'Energie-inkoop',
-    'tekst'     => 'Met een gunstig energiecontract op maat bespaart u als zakelijke gebruiker aanzienlijk op uw energierekening. STAP Energie vergelijkt en onderhandelt voor u — zonder extra kosten.',
-    'cta_tekst' => 'Meer over energie-inkoop →',
-    'cta_url'   => '/energie-inkoop-advies/',
-    'cta_stijl' => 'outline',
-  ],
-  [
-    'titel'     => 'Verduurzaam uw pand, profiteer van subsidies',
-    'type'      => 'Verduurzaming',
-    'tekst'     => 'Na uw energielabel weet u precies waar de verbeterpotentie zit. STAP Energie adviseert over isolatie, installaties en beschikbare subsidies voor zakelijke eigenaren.',
-    'cta_tekst' => 'Bekijk verduurzamingsopties →',
-    'cta_url'   => '/verduurzaming-subsidie/',
-    'cta_stijl' => 'outline',
-  ],
-];
-include $root . 'includes/components/section-kaarten.php';
+
 
 // ── Ingelijst certificaat — section-highlight
 $highlight_variant = 'groen';
@@ -326,6 +302,40 @@ $two_col_rechts  = '
     <li class="checklist__item"><span class="checklist__vink">✓</span><span>Persoonlijk contact — geen callcenter</span></li>
   </ul>';
 include $root . 'includes/components/section-two-col.php';
+
+// ── Ook interessant — boven FAQ
+$kaarten_variant = 'grijs';
+$kaarten_label   = 'Ook interessant';
+$kaarten_titel   = 'Meer dan alleen een label';
+$kaarten_intro   = 'Een energielabel is een startpunt. STAP Energie helpt u ook verder met energie-inkoop en verduurzaming.';
+$kaarten_cols    = 3;
+$kaarten_items   = [
+  [
+    'type'      => 'Energie-inkoop',
+    'titel'     => 'Bespaar structureel op uw energiekosten',
+    'tekst'     => 'Met een gunstig energiecontract op maat bespaart u als zakelijke gebruiker aanzienlijk op uw energierekening. STAP Energie vergelijkt en onderhandelt voor u — zonder extra kosten.',
+    'cta_tekst' => 'Meer over energie-inkoop →',
+    'cta_url'   => '/energie-inkoop-advies/',
+    'cta_stijl' => 'outline',
+  ],
+  [
+    'type'      => 'Verduurzaming',
+    'titel'     => 'Van label naar daadwerkelijke besparing',
+    'tekst'     => 'Weten welke maatregelen het meeste opleveren voor uw specifieke pand? STAP Energie adviseert u over isolatie, warmtepompen, zonnepanelen en beschikbare subsidies.',
+    'cta_tekst' => 'Bekijk verduurzamingsopties →',
+    'cta_url'   => '/verduurzaming-subsidie/',
+    'cta_stijl' => 'outline',
+  ],
+  [
+    'type'      => 'Vastgoed',
+    'titel'     => 'Meerdere panden tegelijk',
+    'tekst'     => 'Beheerder of eigenaar van meerdere bedrijfspanden? STAP Energie werkt ook voor vastgoedbeheerders en -fondsen met vaste tariefafspraken en efficiënte planningscoördinatie.',
+    'cta_tekst' => 'Bekijk vastgoedpagina →',
+    'cta_url'   => '/vastgoed/',
+    'cta_stijl' => 'outline',
+  ],
+];
+include $root . 'includes/components/section-kaarten.php';
 
 include $root . 'includes/faq.php';
 include $root . 'includes/cta.php';
