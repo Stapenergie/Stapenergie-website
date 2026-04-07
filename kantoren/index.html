@@ -1,1994 +1,224 @@
-<!DOCTYPE html>
-<html lang="nl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Energielabel kantoor aanvragen | Label C-plicht & kosten | STAP Energie</title>
-  <meta name="description" content="Uw kantoor heeft minimaal energielabel C nodig. STAP Energie regelt het label snel, transparant geprijsd en persoonlijk — ook als uw pand nog niet voldoet.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://stapenergie.nl/kantoren/">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Energielabel kantoor aanvragen | STAP Energie">
-  <meta property="og:description" content="Uw kantoor heeft minimaal energielabel C nodig. STAP Energie regelt het label snel en transparant geprijsd.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://stapenergie.nl/kantoren/">
-
-  <!-- Favicon inline SVG -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231a5c32'/><text x='16' y='23' font-family='Georgia,serif' font-size='20' font-weight='bold' text-anchor='middle' fill='white'>S</text></svg>">
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
-
-  <style>
-    /* === RESET + TOKENS === */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --groen:       #1a5c32;
-      --groen-mid:   #237a43;
-      --groen-licht: #f0f7f2;
-      --groen-card:  #e8f5ed;
-      --accent:      #2ea855;
-      --tekst:       #1a1a1a;
-      --subtekst:    #4a5568;
-      --rand:        #e2e8e0;
-      --lichtgrijs:  #f7f8f5;
-      --wit:         #ffffff;
-      --r:           8px;
-      --rl:          14px;
-      --shadow:      0 2px 12px rgba(0,0,0,.08);
-      --shadow-lg:   0 8px 32px rgba(0,0,0,.12);
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 16px;
-      line-height: 1.6;
-      color: var(--tekst);
-      background: var(--wit);
-    }
-
-    h1, h2, h3 { font-family: 'DM Serif Display', serif; line-height: 1.2; }
-    h1 { font-size: clamp(2rem, 4vw, 2.8rem); }
-    h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); }
-    h3 { font-size: 1.2rem; font-family: 'DM Sans', sans-serif; font-weight: 700; }
-
-    a { color: var(--groen); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    img { max-width: 100%; display: block; }
-
-    /* === LAYOUT === */
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-    .section { padding: 72px 0; }
-    .section-alt { background: var(--lichtgrijs); }
-    .section-groen { background: var(--groen-licht); }
-
-    /* === NAV === */
-    .nav {
-      background: var(--wit);
-      border-bottom: 1px solid var(--rand);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: var(--shadow);
-    }
-
-    .nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 68px;
-      gap: 24px;
-    }
-
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 700;
-      font-size: 1.15rem;
-      color: var(--tekst);
-      text-decoration: none;
-      flex-shrink: 0;
-    }
-
-    .nav-logo-mark {
-      width: 36px;
-      height: 36px;
-      background: var(--groen);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--wit);
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.3rem;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      list-style: none;
-      flex: 1;
-    }
-
-    .nav-links > li { position: relative; }
-
-    .nav-links > li > a {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      padding: 8px 14px;
-      border-radius: var(--r);
-      font-size: 0.92rem;
-      font-weight: 500;
-      color: var(--tekst);
-      white-space: nowrap;
-      transition: background .15s, color .15s;
-    }
-
-    .nav-links > li > a:hover,
-    .nav-links > li.open > a { background: var(--groen-licht); color: var(--groen); text-decoration: none; }
-
-    .nav-links > li > a.active { color: var(--groen); font-weight: 700; }
-
-    .nav-links .chevron {
-      width: 14px; height: 14px;
-      transition: transform .2s;
-      flex-shrink: 0;
-    }
-
-    .nav-links li.open .chevron { transform: rotate(180deg); }
-
-    /* Dropdown */
-    .has-dd { position: relative; }
-
-    .has-dd::after {
-      content: '';
-      position: absolute;
-      bottom: -16px;
-      left: 0;
-      right: 0;
-      height: 16px;
-    }
-
-    .dropdown {
-      display: none;
-      position: absolute;
-      top: calc(100% + 16px);
-      left: 0;
-      background: var(--wit);
-      border: 1px solid var(--rand);
-      border-radius: var(--rl);
-      box-shadow: var(--shadow-lg);
-      min-width: 220px;
-      padding: 8px;
-      z-index: 200;
-    }
-
-    .has-dd.open .dropdown { display: block; }
-
-    .dropdown a {
-      display: block;
-      padding: 9px 14px;
-      border-radius: var(--r);
-      font-size: 0.9rem;
-      color: var(--tekst);
-      transition: background .12s;
-    }
-
-    .dropdown a:hover { background: var(--groen-licht); color: var(--groen); text-decoration: none; }
-    .dropdown a.active { color: var(--groen); font-weight: 600; }
-
-    .nav-cta {
-      background: var(--groen);
-      color: var(--wit);
-      padding: 10px 20px;
-      border-radius: var(--r);
-      font-size: 0.9rem;
-      font-weight: 700;
-      white-space: nowrap;
-      transition: background .15s;
-      text-decoration: none;
-    }
-
-    .nav-cta:hover { background: var(--groen-mid); text-decoration: none; color: var(--wit); }
-
-    /* === HERO === */
-    .hero {
-      background:
-        linear-gradient(135deg, rgba(26,92,50,.82) 0%, rgba(35,122,67,.75) 60%, rgba(46,168,85,.70) 100%),
-        url('/images/hero-kantoren.jpg') center center / cover no-repeat;
-      color: var(--wit);
-      padding: 80px 0 72px;
-      position: relative;
-      overflow: hidden;
-    }
-
-
-    .hero-inner { position: relative; z-index: 1; }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(255,255,255,.15);
-      border: 1px solid rgba(255,255,255,.25);
-      border-radius: 999px;
-      padding: 6px 14px;
-      font-size: 0.82rem;
-      font-weight: 600;
-      letter-spacing: .03em;
-      margin-bottom: 20px;
-      text-transform: uppercase;
-    }
-
-    .hero-badge-dot {
-      width: 8px; height: 8px;
-      background: #ffdd57;
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-
-    .hero h1 { color: var(--wit); margin-bottom: 20px; max-width: 700px; }
-
-    .hero-lead {
-      font-size: 1.15rem;
-      opacity: .92;
-      max-width: 580px;
-      margin-bottom: 36px;
-      line-height: 1.65;
-    }
-
-    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
-
-    .btn-primary {
-      background: var(--wit);
-      color: var(--groen);
-      padding: 14px 28px;
-      border-radius: var(--r);
-      font-weight: 700;
-      font-size: 1rem;
-      transition: transform .15s, box-shadow .15s;
-      display: inline-block;
-      text-decoration: none;
-    }
-
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,.2); text-decoration: none; color: var(--groen); }
-
-    .btn-secondary {
-      color: var(--wit);
-      border: 2px solid rgba(255,255,255,.6);
-      padding: 12px 24px;
-      border-radius: var(--r);
-      font-weight: 600;
-      font-size: 0.95rem;
-      transition: border-color .15s, background .15s;
-      display: inline-block;
-      text-decoration: none;
-    }
-
-    .btn-secondary:hover { border-color: var(--wit); background: rgba(255,255,255,.1); text-decoration: none; color: var(--wit); }
-
-    .hero-stats {
-      display: flex;
-      gap: 32px;
-      margin-top: 48px;
-      flex-wrap: wrap;
-    }
-
-    .hero-stat { opacity: .85; }
-    .hero-stat-num { font-size: 1.5rem; font-weight: 700; font-family: 'DM Sans', sans-serif; }
-    .hero-stat-num-serif { font-family: 'DM Serif Display', serif; }
-    .hero-stat-label { font-size: 0.82rem; opacity: .85; margin-top: 2px; }
-
-    /* === CHECKLIST SECTIE === */
-    .checklist-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 32px;
-      align-items: start;
-    }
-
-    .checklist-intro h2 { margin-bottom: 16px; }
-    .checklist-intro p { color: var(--subtekst); margin-bottom: 24px; line-height: 1.7; }
-
-    .check-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
-
-    .check-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      font-size: 0.97rem;
-    }
-
-    .check-icon {
-      width: 22px; height: 22px;
-      background: var(--accent);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-
-    .check-icon svg { width: 12px; height: 12px; stroke: white; fill: none; stroke-width: 2.5; }
-
-    .alert-box {
-      background: var(--groen-card);
-      border: 1px solid var(--accent);
-      border-left: 4px solid var(--groen);
-      border-radius: var(--rl);
-      padding: 20px 24px;
-    }
-
-    .alert-box strong { color: var(--groen); display: block; margin-bottom: 6px; font-size: 0.95rem; }
-    .alert-box p { color: var(--subtekst); font-size: 0.92rem; line-height: 1.6; }
-
-    /* === GEVOLGEN === */
-    .gevolgen-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-top: 40px;
-    }
-
-    .gevolg-card {
-      background: var(--wit);
-      border: 1px solid var(--rand);
-      border-radius: var(--rl);
-      padding: 28px 24px;
-      box-shadow: var(--shadow);
-    }
-
-    .gevolg-icon {
-      width: 48px; height: 48px;
-      border-radius: var(--r);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 16px;
-    }
-
-    .gevolg-icon svg { width: 24px; height: 24px; }
-
-    .gevolg-icon { background: var(--groen-licht); }
-    .gevolg-icon svg { stroke: var(--groen); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-
-    .gevolg-card h3 { margin-bottom: 8px; font-size: 1rem; }
-    .gevolg-card p { font-size: 0.9rem; color: var(--subtekst); line-height: 1.6; }
-
-    .section-intro {
-      max-width: 640px;
-      margin-bottom: 0;
-    }
-
-    .section-intro p { color: var(--subtekst); margin-top: 12px; line-height: 1.7; }
-
-    /* === PRIJZEN === */
-    .prijzen-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-top: 40px;
-    }
-
-    .prijs-card {
-      background: var(--wit);
-      border: 2px solid var(--rand);
-      border-radius: var(--rl);
-      padding: 32px 28px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      transition: box-shadow .2s, border-color .2s;
-    }
-
-    .prijs-card:hover { box-shadow: var(--shadow-lg); border-color: var(--accent); }
-
-    .prijs-card.featured {
-      border-color: var(--groen);
-      box-shadow: var(--shadow-lg);
-      position: relative;
-    }
-
-    .featured-badge {
-      position: absolute;
-      top: -12px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--groen);
-      color: var(--wit);
-      font-size: 0.75rem;
-      font-weight: 700;
-      padding: 4px 14px;
-      border-radius: 999px;
-      white-space: nowrap;
-      letter-spacing: .04em;
-      text-transform: uppercase;
-    }
-
-    .prijs-card-label {
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: var(--subtekst);
-      text-transform: uppercase;
-      letter-spacing: .06em;
-    }
-
-    .prijs-card h3 { font-size: 1rem; font-family: 'DM Sans', sans-serif; font-weight: 700; }
-
-    .prijs-bedrag {
-      display: flex;
-      align-items: baseline;
-      gap: 4px;
-    }
-
-    .prijs-bedrag-num {
-      font-size: 2.4rem;
-      font-family: 'DM Serif Display', serif;
-      color: var(--groen);
-      line-height: 1;
-    }
-
-    .prijs-bedrag-suffix { font-size: 0.88rem; color: var(--subtekst); }
-
-    .prijs-inclusief {
-      font-size: 0.82rem;
-      color: var(--subtekst);
-      margin-top: -12px;
-    }
-
-    .prijs-features { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-
-    .prijs-features li {
-      display: flex;
-      gap: 10px;
-      font-size: 0.88rem;
-      color: var(--subtekst);
-      align-items: flex-start;
-    }
-
-    .prijs-features li::before {
-      content: '';
-      width: 16px; height: 16px;
-      background: var(--groen-card);
-      border-radius: 50%;
-      flex-shrink: 0;
-      margin-top: 2px;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpolyline points='3,8 6,11 13,5' stroke='%231a5c32' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-    }
-
-    .prijs-cta {
-      display: block;
-      text-align: center;
-      padding: 12px;
-      border-radius: var(--r);
-      font-weight: 700;
-      font-size: 0.92rem;
-      transition: background .15s, color .15s;
-      text-decoration: none;
-    }
-
-    .prijs-cta-outline {
-      border: 2px solid var(--groen);
-      color: var(--groen);
-    }
-
-    .prijs-cta-outline:hover { background: var(--groen); color: var(--wit); text-decoration: none; }
-
-    .prijs-cta-solid {
-      background: var(--groen);
-      color: var(--wit);
-    }
-
-    .prijs-cta-solid:hover { background: var(--groen-mid); text-decoration: none; color: var(--wit); }
-
-    .prijs-note {
-      margin-top: 16px;
-      font-size: 0.82rem;
-      color: var(--subtekst);
-      text-align: center;
-    }
-
-    /* === STAPPEN === */
-    .stappen-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      margin-top: 40px;
-    }
-
-    .stap-card {
-      background: var(--wit);
-      border: 1px solid var(--rand);
-      border-radius: var(--rl);
-      padding: 28px 22px;
-      position: relative;
-    }
-
-    .stap-num {
-      width: 40px; height: 40px;
-      background: var(--groen);
-      color: var(--wit);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 1rem;
-      font-family: 'DM Serif Display', serif;
-      margin-bottom: 16px;
-    }
-
-    .stap-card h3 { margin-bottom: 8px; font-size: 0.97rem; }
-    .stap-card p { font-size: 0.88rem; color: var(--subtekst); line-height: 1.6; }
-
-    /* === CROSS-SELL === */
-    .crosssell-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      margin-top: 40px;
-    }
-
-    .crosssell-card {
-      background: var(--wit);
-      border: 1px solid var(--rand);
-      border-radius: var(--rl);
-      padding: 32px 28px;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      box-shadow: var(--shadow);
-    }
-
-    .crosssell-icon {
-      width: 52px; height: 52px;
-      background: var(--groen-licht);
-      border-radius: var(--r);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .crosssell-icon svg { width: 26px; height: 26px; stroke: var(--groen); fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
-
-    .crosssell-card h3 { font-size: 1.05rem; }
-    .crosssell-card p { font-size: 0.9rem; color: var(--subtekst); line-height: 1.65; }
-
-    .crosssell-link {
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: var(--groen);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .crosssell-link svg { width: 16px; height: 16px; stroke: var(--groen); fill: none; stroke-width: 2.5; }
-
-    .crosssell-icon-euro { background: var(--groen-licht); }
-    .euro-sign {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.6rem;
-      color: var(--groen);
-      line-height: 1;
-    }
-
-    .crosssell-card-featured {
-      border-color: var(--groen);
-      background: var(--groen-licht);
-    }
-
-    .crosssell-cta-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: var(--groen);
-      color: var(--wit);
-      padding: 12px 20px;
-      border-radius: var(--r);
-      font-size: 0.92rem;
-      font-weight: 700;
-      text-decoration: none;
-      transition: background .15s;
-      align-self: flex-start;
-    }
-
-    .crosssell-cta-btn:hover { background: var(--groen-mid); text-decoration: none; color: var(--wit); }
-    .crosssell-cta-btn svg { stroke: var(--wit); fill: none; stroke-width: 2.5; flex-shrink: 0; }
-
-    /* === FAQ === */
-    .faq-list { margin-top: 40px; display: flex; flex-direction: column; gap: 12px; }
-
-    .faq-item {
-      background: var(--wit);
-      border: 1px solid var(--rand);
-      border-radius: var(--rl);
-      overflow: hidden;
-    }
-
-    .faq-question {
-      width: 100%;
-      background: none;
-      border: none;
-      padding: 20px 24px;
-      text-align: left;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.97rem;
-      font-weight: 600;
-      color: var(--tekst);
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .faq-question:hover { color: var(--groen); }
-
-    .faq-chevron {
-      width: 20px; height: 20px;
-      flex-shrink: 0;
-      transition: transform .25s;
-      stroke: var(--subtekst);
-      fill: none;
-      stroke-width: 2;
-    }
-
-    .faq-item.open .faq-chevron { transform: rotate(180deg); stroke: var(--groen); }
-    .faq-item.open .faq-question { color: var(--groen); }
-
-    .faq-answer {
-      display: none;
-      padding: 0 24px 20px;
-      font-size: 0.92rem;
-      color: var(--subtekst);
-      line-height: 1.7;
-    }
-
-    .faq-item.open .faq-answer { display: block; }
-
-    /* === FORMULIER === */
-    .formulier-wrap {
-      max-width: 720px;
-      margin: 0 auto;
-    }
-
-    .formulier {
-      background: var(--wit);
-      border: 1px solid var(--rand);
-      border-radius: var(--rl);
-      padding: 40px 40px;
-      box-shadow: var(--shadow-lg);
-    }
-
-    .formulier h2 { margin-bottom: 8px; }
-    .formulier-lead { color: var(--subtekst); font-size: 0.95rem; margin-bottom: 28px; }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-
-    .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
-    .form-group.full { grid-column: 1 / -1; }
-
-    .form-group label { font-size: 0.88rem; font-weight: 600; color: var(--tekst); }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      padding: 11px 14px;
-      border: 1.5px solid var(--rand);
-      border-radius: var(--r);
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.95rem;
-      color: var(--tekst);
-      background: var(--wit);
-      transition: border-color .15s;
-      width: 100%;
-    }
-
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      outline: none;
-      border-color: var(--groen);
-    }
-
-    .form-group textarea { resize: vertical; min-height: 80px; }
-
-    .form-submit {
-      width: 100%;
-      background: var(--groen);
-      color: var(--wit);
-      border: none;
-      padding: 15px;
-      border-radius: var(--r);
-      font-family: 'DM Sans', sans-serif;
-      font-size: 1rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: background .15s, transform .15s;
-      margin-top: 8px;
-    }
-
-    .form-submit:hover { background: var(--groen-mid); transform: translateY(-1px); }
-
-    .form-privacy {
-      font-size: 0.8rem;
-      color: var(--subtekst);
-      text-align: center;
-      margin-top: 12px;
-    }
-
-    .form-success {
-      display: none;
-      text-align: center;
-      padding: 32px;
-    }
-
-    .form-success h3 { color: var(--groen); margin-bottom: 8px; }
-    .form-success p { color: var(--subtekst); font-size: 0.95rem; }
-
-    /* === BREADCRUMB === */
-    .breadcrumb {
-      padding: 14px 0;
-      border-bottom: 1px solid var(--rand);
-      background: var(--lichtgrijs);
-    }
-
-    .breadcrumb-inner {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.82rem;
-      color: var(--subtekst);
-    }
-
-    .breadcrumb-inner a { color: var(--subtekst); }
-    .breadcrumb-inner a:hover { color: var(--groen); text-decoration: none; }
-    .breadcrumb-inner span { color: var(--tekst); font-weight: 500; }
-
-    .breadcrumb-sep { opacity: .4; }
-
-    /* === FOOTER === */
-    .footer {
-      background: var(--groen);
-      color: rgba(255,255,255,.85);
-      padding: 48px 0 32px;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr;
-      gap: 40px;
-      margin-bottom: 40px;
-    }
-
-    .footer-brand-name {
-      font-weight: 700;
-      font-size: 1.1rem;
-      color: var(--wit);
-      margin-bottom: 8px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .footer-logo-mark {
-      width: 32px; height: 32px;
-      background: rgba(255,255,255,.15);
-      border-radius: 7px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.1rem;
-      color: var(--wit);
-    }
-
-    .footer-tagline {
-      font-size: 0.88rem;
-      opacity: .75;
-      line-height: 1.6;
-      max-width: 260px;
-    }
-
-    .footer-col h4 {
-      color: var(--wit);
-      font-size: 0.88rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: .06em;
-      margin-bottom: 14px;
-    }
-
-    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-
-    .footer-col ul li a {
-      color: rgba(255,255,255,.75);
-      font-size: 0.88rem;
-      transition: color .15s;
-    }
-
-    .footer-col ul li a:hover { color: var(--wit); text-decoration: none; }
-
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,.15);
-      padding-top: 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.82rem;
-      opacity: .65;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    /* === SEGMENT BAR === */
-    .segment-bar {
-      background: var(--groen-licht);
-      border-bottom: 1px solid var(--rand);
-      padding: 10px 0;
-    }
-
-    .segment-bar-inner {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .segment-bar span {
-      font-size: 0.82rem;
-      color: var(--subtekst);
-      margin-right: 4px;
-    }
-
-    .segment-pill {
-      padding: 5px 14px;
-      border-radius: 999px;
-      font-size: 0.82rem;
-      font-weight: 600;
-      border: 1.5px solid transparent;
-      transition: background .15s, border-color .15s;
-      text-decoration: none;
-    }
-
-    .segment-pill-active {
-      background: var(--groen);
-      color: var(--wit);
-      border-color: var(--groen);
-    }
-
-    .segment-pill-inactive {
-      background: transparent;
-      color: var(--subtekst);
-      border-color: var(--rand);
-    }
-
-    .segment-pill-inactive:hover { border-color: var(--groen); color: var(--groen); text-decoration: none; }
-
-    /* === LABELCHECK WIDGET === */
-    .labelcheck-widget {
-      background: var(--wit);
-      border: 1.5px solid var(--groen);
-      border-radius: var(--rl);
-      padding: 24px;
-      margin: 16px 0;
-    }
-
-    .labelcheck-title {
-      display: block;
-      font-size: 0.97rem;
-      font-weight: 700;
-      color: var(--groen);
-      margin-bottom: 6px;
-    }
-
-    .labelcheck-lead {
-      font-size: 0.88rem;
-      color: var(--subtekst);
-      margin-bottom: 16px;
-    }
-
-    .labelcheck-inputs {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .labelcheck-inputs input {
-      flex: 1;
-      min-width: 120px;
-      padding: 10px 13px;
-      border: 1.5px solid var(--rand);
-      border-radius: var(--r);
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.92rem;
-      color: var(--tekst);
-      background: var(--wit);
-      transition: border-color .15s;
-    }
-
-    .labelcheck-inputs input:focus {
-      outline: none;
-      border-color: var(--groen);
-    }
-
-    .labelcheck-btn {
-      background: var(--groen);
-      color: var(--wit);
-      border: none;
-      padding: 10px 20px;
-      border-radius: var(--r);
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.92rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: background .15s;
-      white-space: nowrap;
-    }
-
-    .labelcheck-btn:hover { background: var(--groen-mid); }
-
-    .labelcheck-result {
-      margin-top: 14px;
-      font-size: 0.9rem;
-    }
-
-    .lc-loading { color: var(--subtekst); }
-
-    .lc-found {
-      background: var(--groen-card);
-      border: 1px solid var(--accent);
-      border-radius: var(--r);
-      padding: 14px 16px;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    .lc-label-badge {
-      font-size: 1.4rem;
-      font-family: 'DM Serif Display', serif;
-      font-weight: 700;
-      width: 44px;
-      height: 44px;
-      border-radius: var(--r);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      color: var(--wit);
-    }
-
-    .lc-label-ap    { background: #1a5c32; }
-    .lc-label-a     { background: #237a43; }
-    .lc-label-b     { background: #4caf50; }
-    .lc-label-c     { background: #8bc34a; }
-    .lc-label-d     { background: #ffc107; color: #333; }
-    .lc-label-e     { background: #ff9800; }
-    .lc-label-f     { background: #f44336; }
-    .lc-label-g     { background: #b71c1c; }
-
-    .lc-info { flex: 1; }
-    .lc-info strong { display: block; color: var(--tekst); margin-bottom: 2px; }
-    .lc-info span   { font-size: 0.83rem; color: var(--subtekst); }
-
-    .lc-warning {
-      background: #fff7ed;
-      border: 1px solid #f59e0b;
-      border-radius: var(--r);
-      padding: 12px 16px;
-      color: #92400e;
-    }
-
-    .lc-error {
-      color: var(--subtekst);
-      font-size: 0.88rem;
-      padding: 8px 0;
-    }
-
-    /* === LABELCHECK RESPONSIVE === */
-    @media (max-width: 480px) {
-      .labelcheck-inputs { flex-direction: column; }
-      .labelcheck-btn { width: 100%; }
-    }
-
-    .alert-box-mt { margin-top: 16px; }
-    .success-icon { display: block; margin: 0 auto 16px; }
-
-    /* scroll-margin voor ankers */
-    #aanvragen { scroll-margin-top: 80px; }
-    #prijzen   { scroll-margin-top: 80px; }
-
-    /* === RESPONSIVE === */
-    @media (max-width: 900px) {
-      .checklist-grid { grid-template-columns: 1fr; }
-      .gevolgen-grid { grid-template-columns: 1fr 1fr; }
-      .prijzen-grid { grid-template-columns: 1fr; max-width: 480px; }
-      .stappen-grid { grid-template-columns: 1fr 1fr; }
-      .crosssell-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-    }
-
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .section { padding: 52px 0; }
-      .hero { padding: 56px 0 52px; }
-      .hero-stats { gap: 20px; }
-      .gevolgen-grid { grid-template-columns: 1fr; }
-      .stappen-grid { grid-template-columns: 1fr 1fr; }
-      .form-row { grid-template-columns: 1fr; }
-      .formulier { padding: 28px 20px; }
-    }
-
-    @media (max-width: 480px) {
-      .stappen-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr; }
-      .hero-actions { flex-direction: column; align-items: flex-start; }
-    }
-  </style>
-</head>
-<body>
-
-<!-- NAV -->
-<nav class="nav">
-  <div class="container">
-    <div class="nav-inner">
-      <a href="/" class="nav-logo">
-        <div class="nav-logo-mark">S</div>
-        STAP Energie
-      </a>
-
-      <ul class="nav-links">
-
-        <li class="has-dd" id="dd-zakelijk">
-          <a href="/zakelijk/">
-            Zakelijk
-            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-          </a>
-          <div class="dropdown">
-            <a href="/kantoren/" class="active">Kantoren</a>
-            <a href="/zakelijk/">MKB</a>
-            <a href="/zakelijk/">Vastgoed &amp; makelaars</a>
-            <a href="/zakelijk/">Gemeenten &amp; woningstichtingen</a>
-            <a href="/zakelijk/">Industrie</a>
-          </div>
-        </li>
-
-        <li class="has-dd" id="dd-particulieren">
-          <a href="/particulieren/">
-            Particulieren
-            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-          </a>
-          <div class="dropdown">
-            <a href="/energielabels/woningen/">Energielabel woning</a>
-            <a href="/particulieren/">Verduurzaming &amp; subsidies</a>
-          </div>
-        </li>
-
-        <li class="has-dd" id="dd-diensten">
-          <a href="/energielabels/">
-            Diensten
-            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-          </a>
-          <div class="dropdown">
-            <a href="/energielabels/">Energielabels</a>
-            <a href="/energielabels/woningen/">Energielabel woningen</a>
-            <a href="/energielabels/utiliteit/">Energielabel bedrijfspand</a>
-            <a href="/zakelijk/">Energie-inkoopadvies</a>
-            <a href="/zakelijk/">Verduurzaming zakelijk</a>
-          </div>
-        </li>
-
-        <li><a href="/zakelijk/">Kennisbank</a></li>
-        <li><a href="/zakelijk/">Over ons</a></li>
-      </ul>
-
-      <a href="#aanvragen" class="nav-cta">Label aanvragen</a>
-    </div>
-  </div>
-</nav>
-
-<!-- SEGMENT BAR -->
-<div class="segment-bar">
-  <div class="container">
-    <div class="segment-bar-inner">
-      <span>U bekijkt:</span>
-      <a href="/zakelijk/" class="segment-pill segment-pill-active">Zakelijk</a>
-      <a href="/particulieren/" class="segment-pill segment-pill-inactive">Particulieren</a>
-    </div>
-  </div>
-</div>
-
-<!-- BREADCRUMB -->
-<div class="breadcrumb">
-  <div class="container">
-    <div class="breadcrumb-inner">
-      <a href="/">Home</a>
-      <span class="breadcrumb-sep">›</span>
-      <a href="/zakelijk/">Zakelijk</a>
-      <span class="breadcrumb-sep">›</span>
-      <span>Kantoren</span>
-    </div>
-  </div>
-</div>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="container">
-    <div class="hero-inner">
-      <div class="hero-badge">
-        <div class="hero-badge-dot"></div>
-        Label C-plicht van kracht sinds 1 januari 2023
-      </div>
-      <h1>Energielabel kantoor aanvragen</h1>
-      <p class="hero-lead">Elk kantoor groter dan 100 m² moet minimaal energielabel C hebben. Voldoet uw pand niet? Dan mag u het niet meer als kantoor gebruiken. STAP Energie regelt het label snel, transparant geprijsd en persoonlijk.</p>
-      <div class="hero-actions">
-        <a href="#aanvragen" class="btn-primary">Direct aanvragen</a>
-        <a href="#prijzen" class="btn-secondary">Bekijk tarieven</a>
-      </div>
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <div class="hero-stat-num hero-stat-num-serif">10 jaar</div>
-          <div class="hero-stat-label">geldigheid energielabel</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-num">Actieve handhaving</div>
-          <div class="hero-stat-label">gemeenten controleren sinds 2023</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-num hero-stat-num-serif">2 werkdagen</div>
-          <div class="hero-stat-label">reactietijd na uw aanvraag</div>
-        </div>
-      </div>
-    </div>
+<?php
+/**
+ * kantoren/index.php
+ * Energielabel kantoor — label C-plicht SEO-magneet
+ */
+$root        = dirname(dirname(__FILE__)) . '/';
+$title       = 'Energielabel Kantoor Aanvragen | Label C-plicht & Kosten | STAP Energie';
+$description = 'Elk kantoor groter dan 100 m² moet minimaal label C hebben. Voldoet uw pand niet? Dan mag u het niet meer als kantoor gebruiken. STAP Energie regelt het snel.';
+$canonical   = 'https://stapenergie.nl/kantoren/';
+
+$breadcrumbs = [
+  ['label' => 'Home',    'url' => '/'],
+  ['label' => 'Zakelijk','url' => '/zakelijk/'],
+  ['label' => 'Kantoren'],
+];
+
+$cta_titel     = 'Regel uw kantoorlabel vandaag nog';
+$cta_subtitel  = 'Vul het aanvraagformulier in en STAP Energie neemt binnen twee werkdagen contact op met een offerte op maat.';
+$cta_knop      = 'Direct aanvragen →';
+$cta_knop_url  = '#aanvragen';
+$cta_garanties = ['Gecertificeerd EPA-adviseur', 'Vaste transparante tarieven', 'Reactie binnen twee werkdagen'];
+
+$faq_label = 'Veelgestelde vragen';
+$faq_titel = 'Alles over de label C-plicht voor kantoren';
+$faq_items = [
+  ['vraag' => 'Mijn kantoor heeft al een energielabel — ben ik klaar?',
+   'antwoord' => 'Niet automatisch. Controleer twee dingen: (1) is het label nog geldig? Een energielabel is maximaal 10 jaar geldig. (2) is de labelklasse C of beter? Een geldig label D, E, F of G voldoet niet aan de C-plicht.'],
+  ['vraag' => 'Vanaf welke grootte geldt de verplichting?',
+   'antwoord' => 'De label C-plicht geldt voor kantoorpanden groter dan 100 m² waarbij de kantoorfunctie meer dan 50% van het totale gebruiksoppervlak beslaat. Een kleine kantoorruimte boven een winkel valt er doorgaans niet onder.'],
+  ['vraag' => 'Hoe wordt gehandhaafd, en wat zijn de risico\'s?',
+   'antwoord' => 'Gemeenten en omgevingsdiensten voeren gerichte controles uit. Bij constatering volgt een schriftelijke aanschrijving met hersteltermijn. Daarna kan een last onder dwangsom worden opgelegd.'],
+  ['vraag' => 'Mijn kantoor heeft nu label D — wat moet ik doen?',
+   'antwoord' => 'Veel kantoren met label D halen label C met beperkte maatregelen — zoals LED-verlichting, betere isolatie van het dak of glas, of aanpassing van de ventilatie. STAP Energie brengt de meest kostenefficiënte route in kaart.'],
+  ['vraag' => 'Hoe lang duurt het proces van aanvraag tot geldig label?',
+   'antwoord' => 'Na uw aanvraag nemen wij binnen twee werkdagen contact op voor het inplannen van de opname. Na de opname ontvangt u het label doorgaans binnen één week.'],
+  ['vraag' => 'Wij huren ons kantoor — wat kunnen wij doen?',
+   'antwoord' => 'De verplichting ligt volledig bij de pandeigenaar — die is wettelijk verantwoordelijk voor het aanvragen en bijhouden van het energielabel. Als huurder kunt u uw verhuurder aanspreken op deze verplichting.'],
+];
+
+include $root . 'includes/head.php';
+include $root . 'includes/nav.php';
+include $root . 'includes/breadcrumb.php';
+
+// ── Highlight: label C-plicht urgentie
+$highlight_variant = 'oranje';
+$highlight_badge   = 'Van kracht sinds 1 januari 2023';
+$highlight_tekst   = '<strong>Label C-plicht kantoren:</strong> elk kantoor groter dan 100 m² moet minimaal energielabel C hebben. Voldoet uw pand niet? Dan mag u het niet meer als kantoor gebruiken. <a href="#aanvragen">Regel het nu →</a>';
+include $root . 'includes/components/section-highlight.php';
+
+// ── Hero
+$hero_variant  = 'sub';
+$hero_bg       = '/images/hero-kantoren.jpg';
+$hero_eyebrow  = 'Label C-plicht kantoren';
+$hero_titel    = 'Energielabel kantoor aanvragen — <em>snel en transparant geprijsd</em>';
+$hero_lead     = 'Elk kantoor groter dan 100 m² moet minimaal energielabel C hebben. Voldoet uw pand niet? Dan mag u het niet meer als kantoor gebruiken. STAP Energie regelt het label snel, transparant geprijsd en persoonlijk.';
+$hero_usps     = [
+  'Gecertificeerd EPA-adviseur',
+  'Vaste transparante tarieven',
+  'Reactie binnen twee werkdagen',
+  'Officieel geregistreerd in EP-online',
+];
+$hero_cta      = 'Direct aanvragen →';
+$hero_cta_url  = '#aanvragen';
+$hero_cta2     = 'Bekijk tarieven';
+$hero_cta2_url = '#prijzen';
+include $root . 'includes/hero.php';
+include $root . 'includes/trust.php';
+
+// ── Geldt dit voor mij — two-col met checklist
+$two_col_variant = 'wit';
+$two_col_label   = 'Geldt dit voor mij?';
+$two_col_titel   = 'Geldt de label C-plicht voor uw kantoor?';
+$two_col_tekst   = 'De verplichting geldt niet voor elk kantoor. Hieronder ziet u snel of uw situatie onder de regelgeving valt. Voldoet u aan alle punten hieronder? Dan is een geldig energielabel C — of beter — verplicht.';
+$two_col_rechts  = '
+  <ul class="checklist">
+    <li class="checklist__item"><span class="checklist__vink">✓</span><span>U bent <strong>eigenaar</strong> van het kantoorpand (niet huurder)</span></li>
+    <li class="checklist__item"><span class="checklist__vink">✓</span><span>De gebruiksoppervlakte is <strong>groter dan 100 m²</strong></span></li>
+    <li class="checklist__item"><span class="checklist__vink">✓</span><span>De kantoorfunctie beslaat <strong>meer dan 50%</strong> van het totale vloeroppervlak</span></li>
+    <li class="checklist__item"><span class="checklist__vink">✓</span><span>Het pand is <strong>geen beschermd monument</strong> en wordt niet binnen twee jaar gesloopt</span></li>
+  </ul>
+  <div style="margin-top:20px;">
+    <a href="#aanvragen" class="btn btn--primair">Aanvraag indienen →</a>
+  </div>';
+include $root . 'includes/components/section-two-col.php';
+
+// ── Gevolgen
+$kaarten_variant = 'grijs';
+$kaarten_label   = 'Wat zijn de gevolgen?';
+$kaarten_titel   = 'Wat zijn de gevolgen als u geen label C heeft?';
+$kaarten_intro   = 'Gemeenten en omgevingsdiensten handhaven actief op de label C-plicht. De consequenties zijn ingrijpend — voor eigenaren én huurders.';
+$kaarten_cols    = 3;
+$kaarten_items   = [
+  [
+    'titel' => 'Boetes en dwangsommen',
+    'tekst' => 'Bij constatering volgt eerst een waarschuwing met hersteltermijn. Daarna kan de gemeente een last onder dwangsom opleggen. Bij herhaald niet-voldoen riskeert u aanzienlijke boetes.',
+    'icoon' => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>',
+  ],
+  [
+    'titel' => 'Gebruiksverbod kantoor',
+    'tekst' => 'Kantoren die niet voldoen aan de label C-plicht mogen in principe niet meer als kantoor worden gebruikt. Gemeenten kunnen gebruik verbieden totdat het label op orde is.',
+    'icoon' => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>',
+  ],
+  [
+    'titel' => 'Problemen bij herfinanciering',
+    'tekst' => 'Bij het oversluiten of verlengen van een zakelijke hypotheek kijken financiers steeds vaker naar het energielabel. Een ontbrekend of slecht label kan financiering bemoeilijken.',
+    'icoon' => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="1"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>',
+  ],
+];
+include $root . 'includes/components/section-kaarten.php';
+
+// ── Prijskaarten
+$kaarten_variant = 'wit';
+$kaarten_label   = 'Tarieven';
+$kaarten_titel   = 'Transparante vaste tarieven';
+$kaarten_intro   = 'Geen verborgen kosten. De prijs is inclusief opname ter plaatse, energieprestatieberekening en officiële registratie in EP-Online. Geldig voor heel Nederland.';
+$kaarten_cols    = 3;
+$kaarten_id      = 'prijzen';
+$kaarten_items   = [
+  [
+    'titel'      => 'Klein kantoor',
+    'type'       => 'Tot 100 m²',
+    'foto'       => '/images/bedrijfspand-klein.jpg',
+    'foto_alt'   => 'Ondernemer voor klein kantoorpand',
+    'prijsrijen' => [
+      ['label' => 'Indicatief tarief', 'bedrag' => '€ 495'],
+    ],
+    'incl'       => 'Excl. btw · opname · berekening · EP-Online registratie',
+    'cta_tekst'  => 'Aanvragen →',
+    'cta_url'    => '#aanvragen',
+    'cta_stijl'  => 'outline',
+  ],
+  [
+    'titel'      => 'Middelgroot kantoor',
+    'type'       => '100 – 500 m²',
+    'foto'       => '/images/bedrijfspand-middel.jpg',
+    'foto_alt'   => 'Collega\'s voor middelgroot kantoor',
+    'badge'      => 'Meest gekozen',
+    'prijsrijen' => [
+      ['label' => 'Indicatief tarief', 'bedrag' => '€ 675'],
+    ],
+    'incl'       => 'Excl. btw · opname · berekening · EP-Online registratie · verbeteradvies op aanvraag',
+    'cta_tekst'  => 'Aanvragen →',
+    'cta_url'    => '#aanvragen',
+    'cta_stijl'  => 'solid',
+    'uitgelicht' => true,
+  ],
+  [
+    'titel'      => 'Groot kantoor',
+    'type'       => 'Meer dan 500 m²',
+    'foto'       => '/images/bedrijfspand-groot.jpg',
+    'foto_alt'   => 'Vastgoedbeheerder voor groot kantoor',
+    'prijsrijen' => [
+      ['label' => 'Tarief', 'bedrag' => 'Op aanvraag'],
+    ],
+    'incl'       => 'Excl. btw · maatwerktarief op omvang en complexiteit · verbeteradvies inbegrepen',
+    'cta_tekst'  => 'Offerte aanvragen →',
+    'cta_url'    => '#aanvragen',
+    'cta_stijl'  => 'outline',
+  ],
+];
+$kaarten_noot = '<strong>Meerdere kantoorpanden?</strong> Vraag naar ons portfoliotarief. <a href="#aanvragen">Neem contact op →</a>';
+include $root . 'includes/components/section-kaarten.php';
+
+// ── Zo werkt het
+$stappen_variant = 'grijs';
+$stappen_label   = 'Zo werkt het';
+$stappen_titel   = 'Van aanvraag tot geldig energielabel';
+$stappen_intro   = 'Helder en zonder gedoe — STAP Energie regelt het van begin tot eind.';
+$stappen_cols    = 4;
+$stappen_items   = [
+  ['nummer' => 1, 'titel' => 'Aanvraag & offerte',      'tekst' => 'U vult het formulier in. Binnen twee werkdagen neemt STAP Energie contact op voor een bevestiging en afspraakplanning.'],
+  ['nummer' => 2, 'titel' => 'Documenten aanleveren',   'tekst' => 'U ontvangt een overzicht van benodigde documenten. Hoe meer u aanlevert, hoe nauwkeuriger de opname.'],
+  ['nummer' => 3, 'titel' => 'Inspectie op locatie',    'tekst' => 'Een gecertificeerd EPA-adviseur bezoekt uw kantoor. De opname duurt afhankelijk van de omvang enkele uren.'],
+  ['nummer' => 4, 'titel' => 'Label ontvangen',         'tekst' => 'U ontvangt het officieel geregistreerde energielabel. Geldig voor 10 jaar na afgifte.'],
+];
+include $root . 'includes/components/section-stappen.php';
+
+// ── Aanvraagformulier
+?>
+<section class="sectie sectie--wit" id="aanvragen">
+  <div class="sectie__inner">
+    <span class="sectie__label">Aanvragen</span>
+    <h2 class="sectie__titel">Vraag direct uw kantoorlabel aan</h2>
+    <p class="sectie__intro">Vul het formulier in — wij nemen binnen twee werkdagen contact op met een offerte op maat.</p>
+    <?php
+    $f_dienst = 'label';
+    $f_type   = 'zakelijk';
+    $f_pagina = 'kantoren';
+    include $root . 'includes/formulier.php';
+    ?>
   </div>
 </section>
 
-<!-- GELDT DIT VOOR MIJ? -->
-<section class="section">
-  <div class="container">
-    <div class="checklist-grid">
-      <div class="checklist-intro">
-        <h2>Geldt de label C-plicht voor uw kantoor?</h2>
-        <p>De verplichting geldt niet voor elk kantoor. Hieronder ziet u snel of uw situatie onder de regelgeving valt. Voldoet u aan alle punten hieronder? Dan is een geldig energielabel C — of beter — verplicht.</p>
-        <ul class="check-list">
-          <li>
-            <div class="check-icon">
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <span>U bent <strong>eigenaar</strong> van het kantoorpand (niet huurder)</span>
-          </li>
-          <li>
-            <div class="check-icon">
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <span>De gebruiksoppervlakte is <strong>groter dan 100 m²</strong></span>
-          </li>
-          <li>
-            <div class="check-icon">
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <span>De kantoorfunctie beslaat <strong>meer dan 50%</strong> van het totale vloeroppervlak</span>
-          </li>
-          <li>
-            <div class="check-icon">
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <span>Het pand is <strong>geen beschermd monument</strong> en wordt niet binnen twee jaar gesloopt</span>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <div class="alert-box">
-          <strong>Huurder? De verplichting ligt bij uw verhuurder.</strong>
-          <p>De pandeigenaar is wettelijk verantwoordelijk voor het aanvragen en bijhouden van het energielabel. Als huurder kunt u daar niet omheen — maar u heeft er wél belang bij: heeft uw verhuurder geen geldig label C, dan mag het pand na handhaving niet meer als kantoor worden gebruikt en bent u gedwongen te vertrekken. Controleer snel het huidige label van uw pand via onze <a href="/energielabels/#labelcheck">labelchecker</a>. Spreek uw verhuurder hierop aan, of neem contact met ons op — wij kunnen ook rechtstreeks met verhuurders schakelen.</p>
-        </div>
-        <div class="labelcheck-widget">
-          <strong class="labelcheck-title">Controleer nu het energielabel van uw pand</strong>
-          <p class="labelcheck-lead">Vul postcode en huisnummer in — u ziet direct welk label geregistreerd staat.</p>
-          <form class="labelcheck-form" id="kantoor-labelcheck">
-            <div class="labelcheck-inputs">
-              <input type="text" id="lc-postcode" placeholder="Postcode (1234 AB)" maxlength="7" autocomplete="off">
-              <input type="text" id="lc-huisnummer" placeholder="Huisnummer" maxlength="10" autocomplete="off">
-              <button type="submit" class="labelcheck-btn">Controleer</button>
-            </div>
-            <div class="labelcheck-result" id="lc-result"></div>
-          </form>
-        </div>
-
-        <div class="alert-box alert-box-mt">
-          <strong>Label verlopen of label D–G?</strong>
-          <p>Een energielabel is maximaal 10 jaar geldig. Is uw huidige label verlopen, of heeft u label D, E, F of G? Dan moet u actie ondernemen. Vaak zijn met beperkte maatregelen al label C of beter haalbaar — wij brengen dit kosteloos in beeld tijdens de aanvraag.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- GEVOLGEN -->
-<section class="section section-alt">
-  <div class="container">
-    <div class="section-intro">
-      <h2>Wat zijn de gevolgen als u geen label C heeft?</h2>
-      <p>Gemeenten en omgevingsdiensten handhaven actief op de label C-plicht. De consequenties zijn ingrijpend — voor eigenaren én huurders.</p>
-    </div>
-    <div class="gevolgen-grid">
-      <div class="gevolg-card">
-        <div class="gevolg-icon">
-          <svg viewBox="0 0 24 24" width="24" height="24">
-            <circle cx="12" cy="12" r="10"/>
-            <line x1="12" y1="8" x2="12" y2="12"/>
-            <line x1="12" y1="16" x2="12.01" y2="16"/>
-          </svg>
-        </div>
-        <h3>Boetes en dwangsommen</h3>
-        <p>Bij constatering volgt eerst een waarschuwing met hersteltermijn. Daarna kan de gemeente een last onder dwangsom opleggen. Bij herhaald niet-voldoen riskeert u aanzienlijke boetes en dwangsommen. Raadpleeg de RVO of uw gemeente voor de actuele bedragen in uw situatie.</p>
-      </div>
-      <div class="gevolg-card">
-        <div class="gevolg-icon">
-          <svg viewBox="0 0 24 24" width="24" height="24">
-            <rect x="3" y="11" width="18" height="11" rx="2"/>
-            <path d="M7 11V7a5 5 0 0110 0v4"/>
-          </svg>
-        </div>
-        <h3>Gebruiksverbod kantoor</h3>
-        <p>Heeft uw kantoor geen geldig label C of beter, dan mag het pand in het uiterste geval worden gesloten. Gebruik als kantoor is dan wettelijk verboden.</p>
-      </div>
-      <div class="gevolg-card">
-        <div class="gevolg-icon">
-          <svg viewBox="0 0 24 24" width="24" height="24">
-            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
-            <polyline points="9 22 9 12 15 12 15 22"/>
-          </svg>
-        </div>
-        <h3>Problemen bij herfinanciering</h3>
-        <p>Banken stellen als voorwaarde voor (her)financiering van kantoren dat het pand minimaal label C heeft. Zonder geldig label kan herfinanciering worden bemoeilijkt of geweigerd.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PRIJZEN -->
-<section class="section" id="prijzen">
-  <div class="container">
-    <div class="section-intro">
-      <h2>Transparante vaste tarieven</h2>
-      <p>Geen verborgen kosten. De prijs is inclusief opname ter plaatse, energieprestatieberekening en officiële registratie in EP-Online. Geldig voor heel Nederland.</p>
-    </div>
-    <div class="prijzen-grid">
-      <div class="prijs-card">
-        <div class="prijs-card-label">Klein kantoor</div>
-        <h3>Tot 100 m²</h3>
-        <div class="prijs-bedrag">
-          <span class="prijs-bedrag-num">€ 495</span>
-          <span class="prijs-bedrag-suffix">excl. btw</span>
-        </div>
-        <p class="prijs-inclusief">Inclusief opname, berekening &amp; registratie EP-Online</p>
-        <ul class="prijs-features">
-          <li>Gebouwopname ter plaatse</li>
-          <li>NTA 8800 berekening</li>
-          <li>Registratie EP-Online</li>
-          <li>Energielabel-certificaat (10 jaar geldig)</li>
-        </ul>
-        <a href="#aanvragen" class="prijs-cta prijs-cta-outline">Aanvragen</a>
-      </div>
-
-      <div class="prijs-card featured">
-        <div class="featured-badge">Meest gekozen</div>
-        <div class="prijs-card-label">Middelgroot kantoor</div>
-        <h3>100 – 500 m²</h3>
-        <div class="prijs-bedrag">
-          <span class="prijs-bedrag-num">€ 675</span>
-          <span class="prijs-bedrag-suffix">excl. btw</span>
-        </div>
-        <p class="prijs-inclusief">Inclusief opname, berekening &amp; registratie EP-Online</p>
-        <ul class="prijs-features">
-          <li>Gebouwopname ter plaatse</li>
-          <li>NTA 8800 berekening</li>
-          <li>Registratie EP-Online</li>
-          <li>Energielabel-certificaat (10 jaar geldig)</li>
-          <li>Verbeteradvies op aanvraag</li>
-        </ul>
-        <a href="#aanvragen" class="prijs-cta prijs-cta-solid">Aanvragen</a>
-      </div>
-
-      <div class="prijs-card">
-        <div class="prijs-card-label">Groot kantoor</div>
-        <h3>Meer dan 500 m²</h3>
-        <div class="prijs-bedrag">
-          <span class="prijs-bedrag-num">Op aanvraag</span>
-        </div>
-        <p class="prijs-inclusief">Maatwerktarief — afhankelijk van omvang en complexiteit</p>
-        <ul class="prijs-features">
-          <li>Detailopname ter plaatse</li>
-          <li>NTA 8800 berekening</li>
-          <li>Registratie EP-Online</li>
-          <li>Energielabel-certificaat (10 jaar geldig)</li>
-          <li>Verbeteradvies inbegrepen</li>
-        </ul>
-        <a href="#aanvragen" class="prijs-cta prijs-cta-outline">Offerte aanvragen</a>
-      </div>
-    </div>
-    <p class="prijs-note">Heeft u meerdere kantoorpanden? Vraag naar ons portfoliotarief.</p>
-  </div>
-</section>
-
-<!-- ZO WERKT HET -->
-<section class="section section-groen">
-  <div class="container">
-    <div class="section-intro">
-      <h2>Zo werkt het</h2>
-      <p>Van aanvraag tot geldig energielabel — helder en zonder gedoe.</p>
-    </div>
-    <div class="stappen-grid">
-      <div class="stap-card">
-        <div class="stap-num">1</div>
-        <h3>Aanvraag &amp; offerte</h3>
-        <p>U vult het formulier in. Binnen twee werkdagen neemt STAP Energie contact op voor een bevestiging en afspraakplanning.</p>
-      </div>
-      <div class="stap-card">
-        <div class="stap-num">2</div>
-        <h3>Gebouwopname</h3>
-        <p>Een gecertificeerde EPA-U adviseur neemt het kantoor ter plaatse op. U hoeft zelf weinig voor te bereiden — we begeleiden u door het proces.</p>
-      </div>
-      <div class="stap-card">
-        <div class="stap-num">3</div>
-        <h3>Energieprestatieberekening</h3>
-        <p>Op basis van de opname stellen we de NTA 8800-berekening op. Dit bepaalt de definitieve labelklasse van uw pand.</p>
-      </div>
-      <div class="stap-card">
-        <div class="stap-num">4</div>
-        <h3>Registratie &amp; label</h3>
-        <p>Het energielabel wordt geregistreerd in EP-Online. U ontvangt het officiële certificaat — geldig voor 10 jaar.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CROSS-SELL -->
-<section class="section">
-  <div class="container">
-    <div class="section-intro">
-      <h2>Meer dan alleen een energielabel</h2>
-      <p>Het energielabel is een nulmeting — het startpunt voor slimmere energiebeslissingen. STAP Energie helpt u verder.</p>
-    </div>
-    <div class="crosssell-grid">
-      <div class="crosssell-card">
-        <div class="crosssell-icon">
-          <svg viewBox="0 0 24 24">
-            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-          </svg>
-        </div>
-        <h3>Voldoet u nog niet aan label C?</h3>
-        <p>Heeft uw kantoor label D, E, F of G? Dan moeten er energiebesparende maatregelen worden genomen. STAP Energie brengt de meest kostenefficiënte route in kaart — zodat u snel, zonder onnodige investeringen, aan de norm voldoet. Verduurzaming is ook financieel aantrekkelijk: lagere energiekosten en een hogere vastgoedwaarde.</p>
-        <a href="/zakelijk/" class="crosssell-link">
-          Meer over verduurzaming zakelijk
-          <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
-        </a>
-      </div>
-      <div class="crosssell-card crosssell-card-featured">
-        <div class="crosssell-icon crosssell-icon-euro">
-          <span class="euro-sign">€</span>
-        </div>
-        <h3>Bespaar op uw energiecontract</h3>
-        <p>Veel kantoren betalen onnodig veel voor gas en stroom — door een ongunstig contract, verkeerde contractvorm of gebrek aan marktkennis. STAP Energie vergelijkt de markt onafhankelijk en adviseert u over vast, variabel of dynamisch inkopen. Zonder merkvoorkeur, altijd in uw belang. Gas en stroom worden afzonderlijk beoordeeld — want het zijn verschillende markten met verschillende strategieën.</p>
-        <a href="/zakelijk/" class="crosssell-cta-btn">
-          Ontvang onafhankelijk inkoopadvies
-          <svg viewBox="0 0 24 24" width="16" height="16"><polyline points="9 18 15 12 9 6"/></svg>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FORMULIER -->
-<section class="section" id="aanvragen">
-  <div class="container">
-    <div id="stap-formulier" data-dienst="label" data-type="zakelijk" data-pagina="kantoren">
-<style>
-.sf-card { background: #fff; border-radius: 14px; padding: 2rem; box-shadow: 0 16px 60px rgba(0,0,0,.2); font-family: 'DM Sans', sans-serif; }
-.sf-card h3 { font-size: 1.05rem; font-weight: 700; margin: 0 0 .2rem; color: #1a1a1a; }
-.sf-card .sf-sub { font-size: .83rem; color: #4a5568; margin: 0 0 1.2rem; }
-.sf-stack { display: flex; flex-direction: column; gap: .7rem; }
-.sf-row { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; }
-.sf-input { width: 100%; padding: .72rem .9rem; border: 1.5px solid #e2e8e0; border-radius: 8px; font-size: .88rem; font-family: inherit; outline: none; transition: border-color .15s; background: #fff; color: #1a1a1a; }
-.sf-input:focus { border-color: #1a5c32; }
-.sf-select { width: 100%; padding: .72rem .9rem; border: 1.5px solid #e2e8e0; border-radius: 8px; font-size: .88rem; font-family: inherit; outline: none; background: #fff; color: #4a5568; transition: border-color .15s; }
-.sf-select:focus { border-color: #1a5c32; }
-.sf-type-btns { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; }
-.sf-type-btn { padding: .65rem; border: 1.5px solid #e2e8e0; border-radius: 8px; font-size: .88rem; font-weight: 500; font-family: inherit; background: #fff; color: #4a5568; cursor: pointer; transition: all .15s; text-align: center; }
-.sf-type-btn:hover { border-color: #1a5c32; color: #1a5c32; }
-.sf-type-btn.actief { background: #1a5c32; color: #fff; border-color: #1a5c32; }
-.sf-prijs-box { background: #e8f5ed; border-radius: 8px; padding: .75rem 1rem; font-size: .88rem; color: #1a5c32; font-weight: 600; display: none; }
-.sf-prijs-box.zichtbaar { display: block; }
-.sf-blok { display: none; }
-.sf-blok.zichtbaar { display: contents; }
-.sf-check { display: flex; align-items: flex-start; gap: 8px; font-size: .75rem; color: #4a5568; line-height: 1.5; }
-.sf-check input { margin-top: 2px; flex-shrink: 0; accent-color: #1a5c32; width: 14px; height: 14px; }
-.sf-check a { color: #1a5c32; font-weight: 600; }
-.sf-check.commercieel { color: #4a5568; }
-.sf-submit { width: 100%; padding: .9rem; background: #1a5c32; color: #fff; border: none; border-radius: 100px; font-size: .92rem; font-weight: 700; cursor: pointer; font-family: inherit; transition: background .2s; }
-.sf-submit:hover { background: #237a43; }
-.sf-submit:disabled { opacity: .6; cursor: not-allowed; }
-.sf-note { text-align: center; font-size: .72rem; color: #9aa5b4; margin: 0; }
-.sf-error { color: #c0392b; font-size: .82rem; margin: 4px 0 0; }
-.sf-succes { text-align: center; padding: 1.5rem 0; }
-.sf-succes h3 { font-size: 1rem; font-weight: 700; margin: .75rem 0 .3rem; color: #1a1a1a; }
-.sf-succes p { color: #4a5568; font-size: .85rem; line-height: 1.6; margin: 0; }
-@media (max-width: 480px) { .sf-row { grid-template-columns: 1fr; } }
-</style>
-
-<div class="sf-card">
-  <h3>Vraag vrijblijvend aan</h3>
-  <p class="sf-sub">Reactie binnen twee werkdagen.</p>
-
-  <form class="sf-stack" id="sf-form" novalidate>
-    <input type="hidden" name="pagina" id="sf-pagina" value="">
-    <input type="hidden" name="type"   id="sf-type-hidden" value="">
-    <input type="hidden" name="dienst" id="sf-dienst-hidden" value="">
-    <input type="hidden" name="berekende_prijs" id="sf-prijs-hidden" value="">
-
-    <!-- Type: Particulier / Zakelijk -->
-    <div class="sf-type-btns">
-      <button type="button" class="sf-type-btn" id="sf-btn-particulier" onclick="sfSetType('particulier')">Particulier</button>
-      <button type="button" class="sf-type-btn" id="sf-btn-zakelijk"    onclick="sfSetType('zakelijk')">Zakelijk</button>
-    </div>
-
-    <!-- Naam -->
-    <div class="sf-row">
-      <div>
-        <label for="sf-voornaam" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Voornaam</label>
-        <input class="sf-input" type="text" id="sf-voornaam" name="voornaam" placeholder="Voornaam" required>
-      </div>
-      <div>
-        <label for="sf-achternaam" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Achternaam</label>
-        <input class="sf-input" type="text" id="sf-achternaam" name="achternaam" placeholder="Achternaam">
-      </div>
-    </div>
-
-    <!-- Bedrijfsnaam: alleen zichtbaar bij zakelijk -->
-    <div id="sf-bedrijf-wrap" style="display:none;">
-      <label for="sf-bedrijf" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Bedrijfsnaam</label>
-      <input class="sf-input" type="text" id="sf-bedrijf" name="bedrijf" placeholder="Bedrijfsnaam">
-    </div>
-
-    <!-- Contact -->
-    <div>
-      <label for="sf-email" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">E-mailadres</label>
-      <input class="sf-input" type="email" id="sf-email" name="email" placeholder="E-mailadres" required>
-    </div>
-    <div>
-      <label for="sf-telefoon" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Telefoonnummer</label>
-      <input class="sf-input" type="tel" id="sf-telefoon" name="telefoon" placeholder="Telefoonnummer">
-    </div>
-
-    <!-- Waarvoor -->
-    <div>
-      <label for="sf-dienst-select" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Waarvoor wilt u contact?</label>
-      <select class="sf-select" id="sf-dienst-select" onchange="sfDienstGewijzigd()" required>
-        <option value="" disabled selected>Waarvoor wilt u contact?</option>
-        <option value="label">Energielabel aanvragen</option>
-        <option value="verduurzaming">Verduurzamingsadvies</option>
-        <option value="inkoop">Energie inkoop advies</option>
-        <option value="subsidie">Subsidie advies</option>
-        <option value="anders">Weet ik nog niet</option>
-      </select>
-    </div>
-
-    <!-- Conditioneel blok: Energielabel particulier -->
-    <div class="sf-blok" id="sf-blok-label-particulier">
-      <label for="sf-woningtype" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Type woning</label>
-      <select class="sf-select" id="sf-woningtype" name="woningtype" onchange="sfBerekenPrijs()">
-        <option value="" disabled selected>Type woning</option>
-        <option value="appartement_klein">Appartement tot 40&#x202F;m&#xB2;</option>
-        <option value="appartement_groot">Appartement 40&#x2013;100&#x202F;m&#xB2;</option>
-        <option value="eengezins_tussen">Eengezinswoning (tussenwoning)</option>
-        <option value="eengezins_hoek">Hoekwoning / 2-onder-1-kap</option>
-        <option value="vrijstaand_klein">Vrijstaande woning tot 150&#x202F;m&#xB2;</option>
-        <option value="vrijstaand_groot">Vrijstaande woning groter dan 150&#x202F;m&#xB2;</option>
-      </select>
-      <div class="sf-prijs-box" id="sf-prijs-particulier"></div>
-      <div class="sf-row" style="margin-top:.1rem;">
-        <input class="sf-input" type="text" name="postcode"    placeholder="Postcode">
-        <input class="sf-input" type="text" name="huisnummer"  placeholder="Huisnummer">
-      </div>
-      <select class="sf-select" id="sf-periode-particulier" name="gewenste_periode" style="margin-top:.1rem;">
-        <option value="" selected>Gewenste periode (optioneel)</option>
-        <option value="Spoedaanvraag (binnen 1 week)">Spoedaanvraag &mdash; binnen 1 week</option>
-        <option value="Binnen 1 maand">Binnen 1 maand</option>
-        <option value="Geen voorkeur">Geen voorkeur</option>
-      </select>
-    </div>
-
-    <!-- Conditioneel blok: Energielabel zakelijk -->
-    <div class="sf-blok" id="sf-blok-label-zakelijk">
-      <label for="sf-pandtype" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Type pand</label>
-      <select class="sf-select" id="sf-pandtype" name="pandtype">
-        <option value="" disabled selected>Type pand</option>
-        <option value="Kantoor">Kantoor</option>
-        <option value="Winkel / retail">Winkel / retail</option>
-        <option value="Zorg / onderwijs">Zorg / onderwijs</option>
-        <option value="Logistiek / industrie">Logistiek / industrie</option>
-        <option value="Anders">Anders</option>
-      </select>
-      <label for="sf-oppervlakte" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Oppervlakte</label>
-      <select class="sf-select" id="sf-oppervlakte" name="oppervlakte" onchange="sfBerekenPrijs()" style="margin-top:.1rem;">
-        <option value="" disabled selected>Oppervlakte pand</option>
-        <option value="klein">Tot 100&#x202F;m&#xB2;</option>
-        <option value="middel">100&#x2013;500&#x202F;m&#xB2;</option>
-        <option value="groot">Groter dan 500&#x202F;m&#xB2;</option>
-      </select>
-      <div class="sf-prijs-box" id="sf-prijs-zakelijk"></div>
-      <div class="sf-row" style="margin-top:.1rem;">
-        <input class="sf-input" type="text" name="postcode"   placeholder="Postcode">
-        <input class="sf-input" type="text" name="huisnummer" placeholder="Huisnummer">
-      </div>
-      <select class="sf-select" id="sf-periode-zakelijk" name="gewenste_periode" style="margin-top:.1rem;">
-        <option value="" selected>Gewenste periode (optioneel)</option>
-        <option value="Spoedaanvraag (binnen 1 week)">Spoedaanvraag &mdash; binnen 1 week</option>
-        <option value="Binnen 1 maand">Binnen 1 maand</option>
-        <option value="Geen voorkeur">Geen voorkeur</option>
-      </select>
-    </div>
-
-    <!-- Opmerking: altijd -->
-    <textarea class="sf-input" name="bericht" rows="3" placeholder="Opmerking of toelichting (optioneel)" style="resize:vertical;"></textarea>
-
-    <!-- Checkboxes -->
-    <label class="sf-check">
-      <input type="checkbox" id="sf-privacy" required>
-      Ik geef toestemming voor het verwerken van mijn gegevens om contact met mij op te nemen. Ik heb de <a href="/privacyverklaring/">privacyverklaring</a> gelezen.
-    </label>
-    <label class="sf-check commercieel">
-      <input type="checkbox" id="sf-commercieel" name="commercieel_optin" value="1">
-      Ik geef ook toestemming om commercieel benaderd te worden door STAP Energie over relevante diensten via e-mail of telefoon.
-    </label>
-
-    <button type="button" class="sf-submit" onclick="sfVerstuur()">Aanvraag versturen &#x2192;</button>
-    <p class="sf-note">Vrijblijvend &middot; Geen verplichtingen &middot; Binnen twee werkdagen reactie</p>
-  </form>
-</div>
-
-<script>
-(function() {
-
-  var _prijzen = null;
-  var _init    = false;
-
-  // ── Prijzen ophalen bij laden ──────────────────────────────────────────────
-  fetch('/api/prijzen.php')
-    .then(function(r) { return r.json(); })
-    .then(function(data) {
-      _prijzen = data;
-      if (!_init) sfInit();
-    })
-    .catch(function() {
-      // Prijzen ophalen mislukt — formulier werkt nog steeds, prijs-box blijft verborgen
-      if (!_init) sfInit();
-    });
-
-  // ── Initialiseer op basis van data-attributen ─────────────────────────────
-  function sfInit() {
-    _init = true;
-    var wrap   = document.getElementById('stap-formulier');
-    var dienst = wrap.dataset.dienst || '';
-    var type   = wrap.dataset.type   || '';
-    var pagina = wrap.dataset.pagina || 'homepage';
-
-    document.getElementById('sf-pagina').value = pagina;
-
-    if (dienst) {
-      var sel = document.getElementById('sf-dienst-select');
-      sel.value = dienst;
-      sfDienstGewijzigd();
-    }
-    if (type) {
-      sfSetType(type);
-    }
-  }
-
-  // ── Type: Particulier / Zakelijk ──────────────────────────────────────────
-  window.sfSetType = function(type) {
-    document.getElementById('sf-type-hidden').value = type;
-
-    var btnP = document.getElementById('sf-btn-particulier');
-    var btnZ = document.getElementById('sf-btn-zakelijk');
-    var bedrijfWrap = document.getElementById('sf-bedrijf-wrap');
-
-    if (type === 'particulier') {
-      btnP.classList.add('actief');
-      btnZ.classList.remove('actief');
-      bedrijfWrap.style.display = 'none';
-    } else {
-      btnZ.classList.add('actief');
-      btnP.classList.remove('actief');
-      bedrijfWrap.style.display = 'block';
-    }
-    sfToonConditieBlok();
-  };
-
-  // ── Dienst gewijzigd ──────────────────────────────────────────────────────
-  window.sfDienstGewijzigd = function() {
-    var val = document.getElementById('sf-dienst-select').value;
-    document.getElementById('sf-dienst-hidden').value = val;
-    sfToonConditieBlok();
-  };
-
-  // ── Toon het juiste conditionele blok ─────────────────────────────────────
-  function sfToonConditieBlok() {
-    var dienst = document.getElementById('sf-dienst-select').value;
-    var type   = document.getElementById('sf-type-hidden').value;
-
-    var blokLP = document.getElementById('sf-blok-label-particulier');
-    var blokLZ = document.getElementById('sf-blok-label-zakelijk');
-
-    blokLP.classList.remove('zichtbaar');
-    blokLZ.classList.remove('zichtbaar');
-
-    if (dienst === 'label') {
-      if (type === 'particulier') {
-        blokLP.classList.add('zichtbaar');
-      } else if (type === 'zakelijk') {
-        blokLZ.classList.add('zichtbaar');
-      }
-    }
-  }
-
-  // ── Live prijsberekening ──────────────────────────────────────────────────
-  window.sfBerekenPrijs = function() {
-    if (!_prijzen) return;
-
-    var type = document.getElementById('sf-type-hidden').value;
-
-    if (type === 'particulier') {
-      var woningtype = document.getElementById('sf-woningtype').value;
-      var prijs      = _prijzen.particulier && _prijzen.particulier[woningtype];
-      var box        = document.getElementById('sf-prijs-particulier');
-      sfToonPrijsBox(box, prijs);
-
-    } else if (type === 'zakelijk') {
-      var opp   = document.getElementById('sf-oppervlakte').value;
-      var prijs = _prijzen.zakelijk && _prijzen.zakelijk[opp];
-      var box   = document.getElementById('sf-prijs-zakelijk');
-      sfToonPrijsBox(box, prijs);
-    }
-  };
-
-  function sfToonPrijsBox(box, prijs) {
-    if (!box || !prijs) return;
-
-    var btwLabel = prijs.btw === 'excl.' ? ' excl. btw' : ' incl. btw';
-
-    if (prijs.type === 'vast' && prijs.prijs) {
-      box.textContent = '\u2714 Indicatieprijs: \u20ac\u00a0' + prijs.prijs + btwLabel;
-      box.classList.add('zichtbaar');
-      document.getElementById('sf-prijs-hidden').value = '\u20ac ' + prijs.prijs + btwLabel;
-    } else if (prijs.type === 'offerte') {
-      box.textContent = '\u2714 ' + (prijs.tekst || 'Offerte op maat \u2014 we nemen contact op.');
-      box.classList.add('zichtbaar');
-      document.getElementById('sf-prijs-hidden').value = prijs.tekst || 'Offerte op maat';
-    } else {
-      box.classList.remove('zichtbaar');
-      document.getElementById('sf-prijs-hidden').value = '';
-    }
-  }
-
-  // ── Formulier versturen ───────────────────────────────────────────────────
-  window.sfVerstuur = async function() {
-    var form   = document.getElementById('sf-form');
-    var btn    = form.querySelector('.sf-submit');
-
-    // Verwijder eerdere foutmelding
-    var oudeFout = form.querySelector('.sf-error');
-    if (oudeFout) oudeFout.remove();
-
-    // Valideer verplichte velden
-    var voornaam = document.getElementById('sf-voornaam').value.trim();
-    var email    = document.getElementById('sf-email').value.trim();
-    var privacy  = document.getElementById('sf-privacy').checked;
-    var dienst   = document.getElementById('sf-dienst-select').value;
-
-    if (!voornaam) { sfFout(btn, 'Vul uw voornaam in.', document.getElementById('sf-voornaam')); return; }
-    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { sfFout(btn, 'Vul een geldig e-mailadres in.', document.getElementById('sf-email')); return; }
-    if (!privacy) { sfFout(btn, 'Ga akkoord met de privacyverklaring om door te gaan.', document.getElementById('sf-privacy')); return; }
-    if (!dienst) { sfFout(btn, 'Geef aan waarvoor u contact wilt.', document.getElementById('sf-dienst-select')); return; }
-
-    if (btn.disabled) return;
-    btn.disabled = true;
-    var origTekst = btn.textContent;
-    btn.textContent = 'Bezig met versturen\u2026';
-
-    var data = new FormData(form);
-
-    try {
-      var response = await fetch('/api/contact.php', { method: 'POST', body: data });
-      var json     = await response.json();
-
-      if (json.succes) {
-        var card = form.closest('.sf-card');
-        card.innerHTML =
-          '<div class="sf-succes">' +
-          '<svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">' +
-          '<circle cx="24" cy="24" r="24" fill="#e8f5ed"/>' +
-          '<path d="M14 24.5l7 7 13-14" stroke="#1a5c32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>' +
-          '</svg>' +
-          '<h3>Aanvraag ontvangen!</h3>' +
-          '<p>We nemen <strong>binnen twee werkdagen</strong> contact met u op.<br>U ontvangt ook een bevestiging per e-mail.</p>' +
-          '</div>';
-        // Scroll terug naar het formulier zodat de succesmelding zichtbaar is
-        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      } else {
-        btn.disabled    = false;
-        btn.textContent = origTekst;
-        sfFout(btn, (json.fouten && json.fouten[0]) || 'Er ging iets mis. Probeer het opnieuw.');
-      }
-    } catch(err) {
-      btn.disabled    = false;
-      btn.textContent = origTekst;
-      sfFout(btn, 'Het versturen is helaas mislukt. Probeer het later opnieuw of stuur een e-mail naar info@stapenergie.nl.');
-    }
-  };
-
-  function sfFout(btn, bericht, veld) {
-    var p = document.createElement('p');
-    p.className   = 'sf-error';
-    p.textContent = bericht;
-    btn.insertAdjacentElement('afterend', p);
-
-    // Scroll naar het problematische veld en geef het focus + rode rand
-    if (veld) {
-      veld.style.borderColor = '#c0392b';
-      veld.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      veld.focus();
-      // Herstel de rand zodra de gebruiker iets typt of aanpast
-      veld.addEventListener('input', function herstel() {
-        veld.style.borderColor = '';
-        veld.removeEventListener('input', herstel);
-      }, { once: true });
-      veld.addEventListener('change', function herstel() {
-        veld.style.borderColor = '';
-        veld.removeEventListener('change', herstel);
-      }, { once: true });
-    }
-  }
-
-})();
-</script>
-</div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="section section-alt">
-  <div class="container">
-    <div class="section-intro">
-      <h2>Veelgestelde vragen</h2>
-    </div>
-    <div class="faq-list">
-
-      <div class="faq-item">
-        <button class="faq-question">
-          Mijn kantoor heeft al een energielabel — ben ik klaar?
-          <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-answer">
-          Niet automatisch. Controleer twee dingen: (1) is het label nog geldig? Een energielabel is maximaal 10 jaar geldig. (2) is de labelklasse C of beter? Een geldig label D, E, F of G voldoet niet aan de C-plicht. Controleer het huidige label van uw pand snel via onze <a href="/energielabels/#labelcheck">labelchecker op energielabels pagina</a>.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          Vanaf welke grootte geldt de verplichting?
-          <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-answer">
-          De label C-plicht geldt voor kantoorpanden groter dan 100 m² waarbij de kantoorfunctie meer dan 50% van het totale gebruiksoppervlak beslaat. Een kleine kantoorruimte boven een winkel valt er doorgaans niet onder — dat beoordelen we graag voor u als u twijfelt.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          Hoe wordt gehandhaafd, en wat zijn de risico's?
-          <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-answer">
-          Gemeenten en omgevingsdiensten voeren gerichte controles uit. Bij constatering volgt een schriftelijke aanschrijving met een hersteltermijn. Wordt daaraan niet voldaan, dan volgt een last onder dwangsom — en in ernstige gevallen een gebruiksverbod. De exacte hoogte van boetes en dwangsommen verschilt per situatie en gemeente. Kijk voor actuele informatie op <a href="https://www.rvo.nl/onderwerpen/wetten-en-regels-gebouwen/energielabel-c-kantoren" target="_blank" rel="noopener">rvo.nl</a>.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          Mijn kantoor heeft nu label D — wat moet ik doen?
-          <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-answer">
-          Veel kantoren met label D halen label C met beperkte maatregelen — zoals LED-verlichting, betere isolatie van het dak of een efficiëntere verwarmingsinstallatie. Wij brengen de meest kostenefficiënte route in kaart. Eerst stellen we de huidige situatie vast (nulmeting), daarna adviseren we welke maatregelen het meeste effect hebben voor de laagste investering.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          Hoe lang duurt het proces van aanvraag tot geldig label?
-          <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-answer">
-          Na uw aanvraag nemen wij binnen twee werkdagen contact op voor het inplannen van de opname. De opname zelf duurt afhankelijk van de pandomvang één tot enkele uren. Na de opname wordt de berekening gemaakt en het label geregistreerd. De gemiddelde doorlooptijd is één tot twee weken na de opname.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          Wij huren ons kantoor — wat kunnen wij doen?
-          <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-answer">
-          De verplichting ligt volledig bij de pandeigenaar — die is wettelijk verantwoordelijk voor het aanvragen en bijhouden van het energielabel. Als huurder kunt u uw verhuurder hierop aanspreken. Heeft het pand geen geldig label C, dan riskeert u na handhaving dat u gedwongen wordt te vertrekken. Wij kunnen u adviseren hoe u dit gesprek voert, en schakelen zo nodig rechtstreeks met verhuurders.
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-brand-name">
-          <div class="footer-logo-mark">S</div>
-          STAP Energie
-        </div>
-        <p class="footer-tagline">Alle energiezaken onder één dak. Energielabels, energie-inkoopadvies en verduurzaming — onafhankelijk en persoonlijk.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Zakelijk</h4>
-        <ul>
-          <li><a href="/kantoren/">Kantoren</a></li>
-          <li><a href="/zakelijk/">MKB</a></li>
-          <li><a href="/zakelijk/">Vastgoed &amp; makelaars</a></li>
-          <li><a href="/zakelijk/">Industrie</a></li>
-          <li><a href="/zakelijk/">Gemeenten &amp; woningstichtingen</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Diensten</h4>
-        <ul>
-          <li><a href="/energielabels/utiliteit/">Energielabel bedrijfspand</a></li>
-          <li><a href="/energielabels/woningen/">Energielabel woning</a></li>
-          <li><a href="/zakelijk/">Energie-inkoopadvies</a></li>
-          <li><a href="/zakelijk/">Verduurzaming zakelijk</a></li>
-          <li><a href="/particulieren/">Verduurzaming particulieren</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 STAP Energie — Alle rechten voorbehouden</span>
-      <span>KvK: — | <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8be2e5ede4cbf8ffeafbeee5eef9ece2eea5e5e7">[email&#160;protected]</a></span>
-    </div>
-  </div>
-</footer>
-
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  // === DROPDOWN NAV ===
-  (function () {
-    var items = document.querySelectorAll('.has-dd');
-    var timers = {};
-
-    items.forEach(function (item) {
-      var id = item.id;
-      var dd = item.querySelector('.dropdown');
-      if (!dd) return;
-
-      function openDD() {
-        clearTimeout(timers[id]);
-        items.forEach(function (other) {
-          if (other !== item) other.classList.remove('open');
-        });
-        item.classList.add('open');
-      }
-
-      function closeDD() {
-        timers[id] = setTimeout(function () {
-          item.classList.remove('open');
-        }, 120);
-      }
-
-      item.addEventListener('mouseenter', openDD);
-      item.addEventListener('mouseleave', closeDD);
-      dd.addEventListener('mouseenter', function () { clearTimeout(timers[id]); });
-      dd.addEventListener('mouseleave', closeDD);
-
-      // Mobile: toggle op klik
-      item.querySelector('a').addEventListener('click', function (e) {
-        if (window.innerWidth <= 768) {
-          e.preventDefault();
-          var isOpen = item.classList.contains('open');
-          items.forEach(function (other) { other.classList.remove('open'); });
-          if (!isOpen) item.classList.add('open');
-        }
-      });
-    });
-
-    // Klik buiten sluit dropdown
-    document.addEventListener('click', function (e) {
-      if (!e.target.closest('.has-dd')) {
-        items.forEach(function (item) { item.classList.remove('open'); });
-      }
-    });
-  })();
-
-  // === FAQ ACCORDION ===
-  document.querySelectorAll('.faq-question').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var item = btn.closest('.faq-item');
-      var isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item').forEach(function (i) { i.classList.remove('open'); });
-      if (!isOpen) item.classList.add('open');
-    });
-  });
-
-  // === FORMULIER ===
-  
-  // === LABELCHECK WIDGET ===
-  var lcForm = document.getElementById('kantoor-labelcheck');
-  if (lcForm) {
-    lcForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var pc  = document.getElementById('lc-postcode').value.trim().replace(/\s/g, '').toUpperCase();
-      var hnr = document.getElementById('lc-huisnummer').value.trim();
-      var result = document.getElementById('lc-result');
-
-      if (!pc || !hnr) {
-        result.innerHTML = '<p class="lc-error">Vul postcode en huisnummer in.</p>';
-        return;
-      }
-
-      result.innerHTML = '<p class="lc-loading">Bezig met ophalen…</p>';
-
-      fetch('/api/labelcheck.php?postcode=' + encodeURIComponent(pc) + '&huisnummer=' + encodeURIComponent(hnr))
-        .then(function (r) { return r.json(); })
-        .then(function (data) {
-          if (data.error || !data.label) {
-            result.innerHTML = '<p class="lc-error">Geen geregistreerd label gevonden voor dit adres. Neem contact op voor een vrijblijvende check.</p>';
-            return;
-          }
-          var label    = data.label || '?';
-          var geldig   = data.geldig_tot ? 'Geldig tot ' + data.geldig_tot : '';
-          var adres    = data.adres || (pc + ' ' + hnr);
-          var labelKey = label.replace(/\+/g, 'p').replace(/\*/g, '').toLowerCase();
-          if (labelKey.startsWith('a')) labelKey = labelKey.length > 1 ? 'ap' : 'a';
-
-          var waarschuwing = '';
-          var slechteLabels = ['d','e','f','g'];
-          if (slechteLabels.includes(labelKey)) {
-            waarschuwing = '<div class="lc-warning">⚠️ Label ' + label + ' voldoet niet aan de label C-plicht. Uw verhuurder moet actie ondernemen.</div>';
-          }
-
-          result.innerHTML =
-            '<div class="lc-found">' +
-              '<div class="lc-label-badge lc-label-' + labelKey + '">' + label + '</div>' +
-              '<div class="lc-info">' +
-                '<strong>' + adres + '</strong>' +
-                '<span>' + geldig + '</span>' +
-              '</div>' +
-            '</div>' +
-            waarschuwing;
-        })
+<?php
+// ── Ook interessant
+$kaarten_variant = 'grijs';
+$kaarten_label   = 'Ook interessant';
+$kaarten_titel   = 'Meer dan alleen een energielabel';
+$kaarten_intro   = 'Het energielabel is een nulmeting — het startpunt voor slimmere energiebeslissingen. STAP Energie helpt u verder.';
+$kaarten_cols    = 2;
+$kaarten_items   = [
+  [
+    'type'      => 'Verduurzaming',
+    'titel'     => 'Voldoet u nog niet aan label C?',
+    'tekst'     => 'Heeft uw kantoor label D, E, F of G? Dan moeten er energiebesparende maatregelen worden genomen. STAP Energie brengt de meest kostenefficiënte route in kaart — zodat u snel, zonder onnodige investeringen, aan de norm voldoet.',
+    'cta_tekst' => 'Meer over verduurzaming zakelijk →',
+    'cta_url'   => '/zakelijk/',
+    'cta_stijl' => 'outline',
+  ],
+  [
+    'type'      => 'Energie-inkoop',
+    'titel'     => 'Bespaar op uw energiecontract',
+    'tekst'     => 'Naast een beter label kunt u ook direct besparen op uw energiekosten. STAP Energie vergelijkt energiecontracten voor zakelijke gebruikers en onderhandelt voor u — zonder extra kosten.',
+    'cta_tekst' => 'Meer over energie-inkoop →',
+    'cta_url'   => '/energie-inkoop-advies/',
+    'cta_stijl' => 'outline',
+  ],
+];
+include $root . 'includes/components/section-kaarten.php';
+
+include $root . 'includes/faq.php';
+include $root . 'includes/cta.php';
+include $root . 'includes/footer.php';
+?>
