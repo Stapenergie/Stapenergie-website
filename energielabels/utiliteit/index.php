@@ -138,6 +138,8 @@ $kaarten_items   = [
   [
     'titel'      => 'Klein bedrijfspand',
     'type'       => 'Tot 100 m²',
+    'foto'       => '/images/bedrijfspand-klein.jpg',
+    'foto_alt'   => 'Ondernemer voor klein bedrijfspand',
     'tekst'      => 'Opname op locatie door EPA-adviseur. Officieel rapport geregistreerd in EP-online. Label 10 jaar geldig na afgifte. Persoonlijk advies bij de opname.',
     'prijsrijen' => [
       ['label' => 'Indicatief tarief', 'bedrag' => '€ 495'],
@@ -150,6 +152,8 @@ $kaarten_items   = [
   [
     'titel'      => 'Middelgroot bedrijfspand',
     'type'       => '100 – 500 m²',
+    'foto'       => '/images/bedrijfspand-middel.jpg',
+    'foto_alt'   => 'Collega's voor middelgroot bedrijfspand',
     'tekst'      => 'Opname op locatie door EPA-adviseur. Officieel rapport geregistreerd in EP-online. Label 10 jaar geldig na afgifte. Persoonlijk advies bij de opname.',
     'prijsrijen' => [
       ['label' => 'Indicatief tarief', 'bedrag' => '€ 675'],
@@ -164,6 +168,8 @@ $kaarten_items   = [
   [
     'titel'      => 'Groot bedrijfspand',
     'type'       => '500 m² of meer',
+    'foto'       => '/images/bedrijfspand-groot.jpg',
+    'foto_alt'   => 'Vastgoedbeheerder voor groot bedrijfspand',
     'tekst'      => 'Opname op locatie door EPA-adviseur. Officieel rapport geregistreerd in EP-online. Prijs op basis van omvang en complexiteit.',
     'prijsrijen' => [
       ['label' => 'Tarief', 'bedrag' => 'Op aanvraag'],
