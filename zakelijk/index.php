@@ -23,19 +23,21 @@ $faq_label = 'Veelgestelde vragen';
 $faq_titel = 'Vragen over energie-inkoopadvies, labels en verduurzaming';
 $faq_items = [
   ['vraag' => 'Waarom bewegen energieprijzen zo sterk?',
-   'antwoord' => 'Energieprijzen worden bepaald door een combinatie van factoren: de vulgraad van gasopslagen in Europa, weersomstandigheden, de beschikbaarheid van hernieuwbare energie en geopolitieke ontwikkelingen. Die factoren zijn voortdurend in beweging, waardoor prijzen soms fors schommelen — zelfs binnen één seizoen.'],
+   'antwoord' => 'Energieprijzen worden bepaald door een combinatie van factoren: de vulgraad van gasopslagen in Europa, weersomstandigheden, de beschikbaarheid van hernieuwbare energie en geopolitieke ontwikkelingen. Die factoren zijn voortdurend in beweging, waardoor prijzen soms fors schommelen — zelfs binnen één seizoen. Wie die dynamiek begrijpt, kan beter inschatten wanneer het verstandig is om een contract vast te leggen en voor welke looptijd. <a href="/energie-inkoop-advies/" style="color:var(--groen);font-weight:500">Meer over energie-inkoopadvies &rarr;</a>'],
   ['vraag' => 'Moet ik voor gas en elektriciteit hetzelfde contract kiezen?',
-   'antwoord' => 'Nee — en dat is een veelgemaakte fout. Gas en stroom bewegen op verschillende markten en hebben elk hun eigen seizoenspatroon en risicoprofiel. Het is dan ook zelden optimaal om voor beide hetzelfde contracttype te kiezen.'],
+   'antwoord' => 'Nee — en dat is een veelgemaakte fout. Gas en stroom bewegen op verschillende markten en hebben elk hun eigen seizoenspatroon en risicoprofiel. Bovendien verschilt uw verbruiksprofiel per type energie. Het is dan ook zelden optimaal om voor beide hetzelfde contracttype te kiezen. STAP Energie beoordeelt gas en stroom altijd afzonderlijk, en adviseert per situatie de meest passende contractvorm.'],
   ['vraag' => 'Wat is het verschil tussen een vast, variabel en dynamisch energiecontract?',
-   'antwoord' => 'Bij een vast contract legt u de prijs vast voor de looptijd — zekerheid, maar u profiteert niet van dalingen. Bij een variabel contract beweegt de prijs mee met de markt. Bij een dynamisch contract schommelt de prijs per uur. Welk type het beste past hangt af van uw verbruiksprofiel en risicobereidheid.'],
+   'antwoord' => 'Er zijn drie gangbare contractvormen voor zakelijke energie. Bij een vast contract legt u de prijs voor een bepaalde looptijd vast — maximale zekerheid, maar u profiteert niet van prijsdalingen. Bij een variabel contract beweegt uw prijs mee met de markt, met meer potentieel voordeel maar ook meer risico. Bij een dynamisch contract schommelt de prijs per uur op basis van beursprijzen — aantrekkelijk als u verbruik kunt sturen. Welk type past, hangt af van uw profiel en risicobereidheid. <a href="/energie-inkoop-advies/" style="color:var(--groen);font-weight:500">Meer over energie-inkoopadvies &rarr;</a>'],
   ['vraag' => 'Is mijn bedrijfspand verplicht van een energielabel voorzien?',
-   'antwoord' => 'Ja, voor de meeste zakelijke gebouwen geldt een labelplicht bij verkoop, verhuur of oplevering. Voor kantoren groter dan 100 m² geldt bovendien de label C-plicht van kracht sinds 2023.'],
+   'antwoord' => 'Ja, voor de meeste zakelijke gebouwen geldt een labelplicht bij verkoop, verhuur of oplevering. Voor kantoren geldt daarnaast een aanvullende verplichting: kantoren van 100 m² of groter moeten minimaal energielabel C hebben. Zonder geldig label riskeert u handhaving door de gemeente. <a href="/energielabels/utiliteit/" style="color:var(--groen);font-weight:500">Meer over energielabels utiliteit &rarr;</a>'],
+  ['vraag' => 'Wat kan ik met een energielabel als het eenmaal is afgegeven?',
+   'antwoord' => 'Een energielabel is meer dan een sticker op uw gebouw. Het is een objectieve nulmeting die laat zien hoe uw pand presteert ten opzichte van vergelijkbare gebouwen. Dat maakt het een uitstekend startpunt voor een verbetertraject: u weet precies welke maatregelen het meeste effect hebben en welke subsidies beschikbaar zijn.'],
   ['vraag' => 'Hoe lang is een zakelijk energielabel geldig?',
-   'antwoord' => 'Een energielabel voor een utiliteitsgebouw is tien jaar geldig. Heeft u in die periode relevante energetische verbeteringen aangebracht, dan kunt u het label laten aanpassen via herlabelen.'],
+   'antwoord' => 'Een energielabel voor een utiliteitsgebouw is tien jaar geldig. Heeft u in die periode relevante energiebesparende maatregelen genomen — zoals nieuwe installaties, betere isolatie of zonnepanelen — dan kunt u het label laten aanpassen via herlabelen. Dat is voordeliger dan een volledig nieuwe opname.'],
   ['vraag' => 'Wat levert verduurzaming mijn bedrijf financieel op?',
-   'antwoord' => 'Verduurzaming verlaagt uw energiekosten structureel. Betere isolatie vermindert uw warmtevraag, efficiëntere installaties verlagen uw verbruik en zonnepanelen verlagen uw inkoopbehoefte. Bovendien zijn er diverse subsidies beschikbaar die de investering terugdringen.'],
+   'antwoord' => 'Verduurzaming verlaagt uw energiekosten structureel. Betere isolatie vermindert uw warmtevraag, efficiëntere installaties verbruiken minder energie en eigen opwekking via zonnepanelen verlaagt uw inkoopbehoefte. Bovendien zijn er diverse subsidies beschikbaar — zoals de SDE++ en de EIA — die de terugverdientijd aanzienlijk verkorten. <a href="/verduurzaming-subsidie/" style="color:var(--groen);font-weight:500">Meer over verduurzaming &rarr;</a>'],
   ['vraag' => 'Werkt STAP Energie samen met energieleveranciers?',
-   'antwoord' => 'Ja — maar op onze voorwaarden. STAP Energie werkt samen met zorgvuldig geselecteerde energieleveranciers en installatiepartners, maar heeft geen merkvoorkeur. Wij selecteren op kwaliteit en kiezen de partij die het beste bij uw situatie past.'],
+   'antwoord' => 'Ja — maar op onze voorwaarden. STAP Energie werkt samen met zorgvuldig geselecteerde energieleveranciers en installatiepartners die wij beoordelen op kwaliteit, betrouwbaarheid en prijs-kwaliteitsverhouding. Wij hebben geen exclusieve samenwerkingen of financiële prikkels om bepaalde partijen te bevoordelen. Ons advies is en blijft onafhankelijk. <a href="/energie-inkoop-advies/" style="color:var(--groen);font-weight:500">Meer over onze aanpak &rarr;</a>'],
 ];
 
 include $root . 'includes/head.php';
@@ -178,10 +180,77 @@ $kaarten_items   = [
   [
     'titel' => 'Één aanspreekpunt',
     'icoon' => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>',
-    'tekst' => 'Energie-inkoop, energielabels en verduurzaming — STAP Energie overziet het complete energievraagstuk. U heeft altijd één vast aanspreekpunt dat uw situatie kent.',
+    'tekst' => 'Energie-inkoop, energielabels en verduurzaming — STAP Energie overziet het complete energievraagstuk. U heeft altijd één vast aanspreekpunt die uw situatie kent.',
   ],
 ];
 include $root . 'includes/components/section-kaarten.php';
+
+// ── Energiemarkt two-col
+$two_col_variant   = 'grijs';
+$two_col_label     = 'Energie-inkoopadvies';
+$two_col_titel     = 'De energiemarkt beweegt — weet u waarom?';
+$two_col_tekst     = '';
+$two_col_omgekeerd = false;
+$two_col_links     = '
+  <p style="color:var(--subtekst);line-height:1.7;margin-bottom:14px;">Energieprijzen zijn geen vast gegeven. Ze worden bepaald door een samenspel van factoren: de vulgraad van gasopslagen in Europa, geopolitieke spanningen, seizoenspatronen en de groeiende rol van duurzame opwek. Wie begrijpt hoe die factoren samenhangen, kan beter inschatten wanneer het verstandig is om een contract af te sluiten — en voor hoe lang.</p>
+  <p style="color:var(--subtekst);line-height:1.7;margin-bottom:14px;">Daarbij geldt: wat voor gas geldt, geldt niet automatisch voor elektriciteit. De optimale contractvorm verschilt per type energie én per verbruiksprofiel. Hoe meer u uw verbruik kunt sturen en spreiden, hoe meer contractvrijheid u zich kunt permitteren.</p>
+  <p style="color:var(--subtekst);line-height:1.7;margin-bottom:20px;">Duurzame opwek — zoals zonne-energie — speelt daarin een steeds grotere rol. Zelf energie opwekken verlaagt uw afhankelijkheid van de markt, versterkt uw energiepositie op de lange termijn én is financieel gewoon aantrekkelijk. Niet omdat het moet van de overheid, maar omdat het verstandig is.</p>';
+$two_col_cta       = ['tekst' => 'Meer over energie-inkoopadvies →', 'url' => '/energie-inkoop-advies/', 'stijl' => 'outline'];
+$two_col_rechts    = '
+  <div style="display:flex;flex-direction:column;gap:20px;">
+    <div class="icon-tekst">
+      <div class="icon-tekst__icoon"><svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+      <div class="icon-tekst__content"><div class="icon-tekst__titel">Marktdynamiek begrijpen</div><div class="icon-tekst__tekst">Gasopslagstanden, geopolitieke ontwikkelingen en seizoenen bepalen mede uw energieprijs. Wie dit begrijpt, kan beter timen.</div></div>
+    </div>
+    <div class="icon-tekst">
+      <div class="icon-tekst__icoon"><svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg></div>
+      <div class="icon-tekst__content"><div class="icon-tekst__titel">Gas en stroom apart beoordelen</div><div class="icon-tekst__tekst">Gas en stroom bewegen op verschillende markten. Het is zelden optimaal om voor beide hetzelfde contracttype te kiezen.</div></div>
+    </div>
+    <div class="icon-tekst">
+      <div class="icon-tekst__icoon"><svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg></div>
+      <div class="icon-tekst__content"><div class="icon-tekst__titel">Verbruik sturen = meer vrijheid</div><div class="icon-tekst__tekst">Hoe flexibeler uw verbruik, hoe beter u kunt profiteren van dynamische contractvormen en lagere piekprijzen.</div></div>
+    </div>
+    <div class="icon-tekst">
+      <div class="icon-tekst__icoon"><svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div>
+      <div class="icon-tekst__content"><div class="icon-tekst__titel">Zelf energie opwekken als strategie</div><div class="icon-tekst__tekst">Eigen opwekking geeft u prijszekerheid, minder marktafhankelijkheid en lagere kosten. Een zakelijk verstandige keuze — niet alleen een groene.</div></div>
+    </div>
+  </div>';
+include $root . 'includes/components/section-two-col.php';
+
+// ── Energielabels zakelijk two-col
+$two_col_variant   = 'wit';
+$two_col_label     = 'Energielabels zakelijk';
+$two_col_titel     = 'Een label is meer dan een verplichting';
+$two_col_tekst     = '';
+$two_col_omgekeerd = true;
+$two_col_cta       = [];
+$two_col_links     = '
+  <p style="color:var(--subtekst);line-height:1.7;margin-bottom:14px;">Een energielabel laat zien hoe uw gebouw presteert in vergelijking met andere, vergelijkbare panden. Dat maakt het een krachtige nulmeting: het geeft u een objectieve uitgangswaarde voor een verbetertraject.</p>
+  <p style="color:var(--subtekst);line-height:1.7;margin-bottom:14px;">Vanaf die nulmeting kunt u gefaseerd verbeteren — denk aan betere isolatie, efficiëntere installaties of de overstap naar hernieuwbare opwekking. Elk verbeterproject verlaagt uw energiekosten én verbetert uw label.</p>
+  <p style="color:var(--subtekst);line-height:1.7;margin-bottom:20px;">Wilt u nóg meer inzicht? Dan kunt u het energielabel koppelen aan aanvullende indicatoren die iets zeggen over zowel de gebouwprestatie als het werkelijke gebruik, zoals de <strong>WEII-indicator</strong>. Die combinatie geeft u een volledig beeld: hoe presteert het gebouw, én hoe efficiënt wordt het gebruikt?</p>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;">
+    <a href="/energielabels/utiliteit/" class="btn btn--primair">Energielabel bedrijfspand</a>
+    <a href="/energielabels/woningen/" class="btn btn--outline">Energielabel woning</a>
+  </div>';
+$two_col_rechts    = '
+  <div style="background:var(--groen-licht);border-radius:var(--rl);padding:28px;border:1px solid var(--rand);">
+    <div style="font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--groen);margin-bottom:16px;">Energielabelschaal</div>
+    <div style="display:flex;flex-direction:column;gap:6px;">
+      <div style="display:flex;align-items:center;gap:10px;font-size:.82rem;"><span style="background:#009036;color:#fff;font-weight:700;padding:3px 8px;border-radius:4px;min-width:44px;text-align:center;">A++++</span><span style="color:var(--subtekst);">Uiterst energiezuinig</span></div>
+      <div style="display:flex;align-items:center;gap:10px;font-size:.82rem;"><span style="background:#18993e;color:#fff;font-weight:700;padding:3px 8px;border-radius:4px;min-width:44px;text-align:center;">A+++</span><span style="color:var(--subtekst);">Uitstekend energiezuinig</span></div>
+      <div style="display:flex;align-items:center;gap:10px;font-size:.82rem;"><span style="background:#52ae32;color:#fff;font-weight:700;padding:3px 8px;border-radius:4px;min-width:44px;text-align:center;">A++</span><span style="color:var(--subtekst);">Zeer goed energiezuinig</span></div>
+      <div style="display:flex;align-items:center;gap:10px;font-size:.82rem;"><span style="background:#6aba42;color:#fff;font-weight:700;padding:3px 8px;border-radius:4px;min-width:44px;text-align:center;">A+</span><span style="color:var(--subtekst);">Goed energiezuinig</span></div>
+      <div style="display:flex;align-items:center;gap:10px;font-size:.82rem;"><span style="background:#c3d500;color:#333;font-weight:700;padding:3px 8px;border-radius:4px;min-width:44px;text-align:center;">A</span><span style="color:var(--subtekst);">Energiezuinig</span></div>
+      <div style="display:flex;align-items:center;gap:10px;font-size:.82rem;"><span style="background:#f7e500;color:#333;font-weight:700;padding:3px 8px;border-radius:4px;min-width:44px;text-align:center;">B</span><span style="color:var(--subtekst);">Energiezuinig</span></div>
+      <div style="display:flex;align-items:center;gap:10px;font-size:.82rem;"><span style="background:#f7a600;color:#333;font-weight:700;padding:3px 8px;border-radius:4px;min-width:44px;text-align:center;">C</span><span style="color:var(--subtekst);">Redelijk zuinig</span></div>
+      <div style="display:flex;align-items:center;gap:10px;font-size:.82rem;"><span style="background:#e06400;color:#fff;font-weight:700;padding:3px 8px;border-radius:4px;min-width:44px;text-align:center;">D</span><span style="color:var(--subtekst);">Gemiddeld</span></div>
+      <div style="display:flex;align-items:center;gap:10px;font-size:.82rem;"><span style="background:#cc1e1e;color:#fff;font-weight:700;padding:3px 8px;border-radius:4px;min-width:44px;text-align:center;">E</span><span style="color:var(--subtekst);">Matig</span></div>
+      <div style="display:flex;align-items:center;gap:10px;font-size:.82rem;"><span style="background:#aa0000;color:#fff;font-weight:700;padding:3px 8px;border-radius:4px;min-width:44px;text-align:center;">F</span><span style="color:var(--subtekst);">Weinig zuinig</span></div>
+      <div style="display:flex;align-items:center;gap:10px;font-size:.82rem;"><span style="background:#7a0000;color:#fff;font-weight:700;padding:3px 8px;border-radius:4px;min-width:44px;text-align:center;">G</span><span style="color:var(--subtekst);">Zeer onzuinig</span></div>
+    </div>
+    <p style="font-size:.75rem;color:var(--subtekst);margin-top:14px;border-top:1px solid var(--rand);padding-top:12px;">Kantoren van 100 m² of groter zijn wettelijk verplicht minimaal label C te hebben.</p>
+  </div>';
+include $root . 'includes/components/section-two-col.php';
 
 // ── Zo werkt het
 $stappen_variant = 'grijs';
