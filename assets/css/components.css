@@ -141,3 +141,15 @@
 .btn--ghost { border: 1.5px solid rgba(255,255,255,.38); color: #fff; background: transparent; }
 .btn--ghost:hover { border-color: #fff; background: rgba(255,255,255,.08); }
 .btn--vol { width: 100%; }
+
+/* ── Card dark variant ── */
+.card--dark { background: #0f1f15; border-color: #0f1f15; color: #fff; }
+.card--dark:hover { box-shadow: 0 8px 32px rgba(0,0,0,.4); }
+.card--dark .card__type { color: rgba(255,255,255,.6); }
+.card--dark .card__titel { color: #fff; }
+.card--dark .card__tekst { color: rgba(255,255,255,.8); }
+.card--dark .card__incl { color: rgba(255,255,255,.5); }
+.card--dark .btn--outline { border-color: rgba(255,255,255,.4); color: #fff; }
+.card--dark .btn--outline:hover { background: rgba(255,255,255,.1); border-color: #fff; }
+.card--dark .btn--primair { background: #fff; color: #0f1f15; }
+.card--dark .btn--primair:hover { background: rgba(255,255,255,.9); }
