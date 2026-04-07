@@ -16,6 +16,7 @@
  *   $card['cta_tekst']  string   optioneel — knoptekst
  *   $card['cta_url']    string   optioneel — knop url
  *   $card['cta_stijl']  string   optioneel — 'solid' (standaard) | 'outline'
+ *   $card['variant']    string   optioneel — '' (standaard) | 'dark' (donkere CTA card)
  *   $card['uitgelicht'] bool     optioneel — groene rand
  *   $card['extra']      string   optioneel — vrije HTML, alleen voor uitzonderingen
  *
@@ -26,7 +27,8 @@
 
 $c = $card ?? [];
 $cta_stijl = ($c['cta_stijl'] ?? 'solid') === 'outline' ? 'btn--outline' : 'btn--primair';
-$klassen   = 'card' . (!empty($c['uitgelicht']) ? ' card--uitgelicht' : '');
+$variant   = $c['variant'] ?? '';
+$klassen   = 'card' . (!empty($c['uitgelicht']) ? ' card--uitgelicht' : '') . ($variant === 'dark' ? ' card--dark' : '');
 ?>
 <div class="<?= $klassen ?>">
   <?php if (!empty($c['foto'])): ?>
