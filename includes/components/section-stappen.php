@@ -39,6 +39,7 @@ $stappen_items   = $stappen_items   ?? [];
           <div class="stap__nummer"><?= (int)($stap['nummer'] ?? 0) ?></div>
           <h3 class="stap__titel"><?= htmlspecialchars($stap['titel'] ?? '') ?></h3>
           <p class="stap__tekst"><?= htmlspecialchars($stap['tekst'] ?? '') ?></p>
+          <?php if (!empty($stap['extra'])): ?><?= $stap['extra'] ?><?php endif; ?>
         </div>
       <?php endforeach; ?>
     </div>
