@@ -120,6 +120,38 @@ $kaarten_items   = [
 $kaarten_noot = '<strong>Meerdere woningen?</strong> Bij 3 of meer woningen biedt STAP Energie een volumetarief. <a href="#aanvraag">Vraag naar de mogelijkheden →</a>';
 include $root . 'includes/components/section-kaarten.php';
 
+// ── Diensten voor woningeigenaren
+$kaarten_variant = 'grijs';
+$kaarten_label   = '-- Wat we voor u doen';
+$kaarten_titel   = 'Alle diensten voor woningeigenaren';
+$kaarten_intro   = 'Van verplicht energielabel tot een volledig verduurzamingsplan — en binnenkort ook een handige energievergelijker.';
+$kaarten_cols    = 3;
+$kaarten_items   = [
+  [
+    'titel'     => 'Energielabel woning',
+    'icoon'     => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 7h8M8 12h5M8 17h3"/></svg>',
+    'tekst'     => 'Verplicht bij verkoop en verhuur. Officieel geregistreerd in EP-online. Snel op afspraak bij u thuis.',
+    'cta_tekst' => 'Meer info en aanvragen →',
+    'cta_url'   => '/energielabels/woningen/',
+    'cta_stijl' => 'outline',
+  ],
+  [
+    'titel'     => 'Verduurzaming & Subsidie',
+    'icoon'     => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
+    'tekst'     => 'Persoonlijk stappenplan voor uw woning. Alle beschikbare subsidies in kaart — ISDE, SEEH, gemeentelijke regelingen.',
+    'cta_tekst' => 'Meer info →',
+    'cta_url'   => '/verduurzaming-subsidie/',
+    'cta_stijl' => 'outline',
+  ],
+  [
+    'titel'     => 'Energie vergelijker',
+    'icoon'     => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>',
+    'tekst'     => 'Vergelijk energiecontracten en vind het beste aanbod voor uw situatie. Onafhankelijk en overzichtelijk.',
+    'extra'     => '<div style="margin-top:12px;"><span class="badge badge--groen">Binnenkort beschikbaar</span></div>',
+  ],
+];
+include $root . 'includes/components/section-kaarten.php';
+
 // ── Aanvraagformulier
 ?>
 <section class="sectie sectie--grijs" id="aanvraag">
@@ -251,31 +283,40 @@ $tabs_items   = [
 ];
 include $root . 'includes/components/section-tabs.php';
 
-// ── Ook interessant
+// ── Vervolgstappen: populaire maatregelen
 $kaarten_variant = 'wit';
-$kaarten_label   = 'Ook interessant';
-$kaarten_titel   = 'Meer dan alleen een label';
-$kaarten_intro   = 'Een energielabel is een startpunt. STAP Energie helpt u ook verder.';
-$kaarten_cols    = 2;
-$kaarten_items   = [
-  [
-    'type'      => 'Verduurzaming',
-    'titel'     => 'Verbeter uw label na verduurzaming',
-    'tekst'     => 'Na isolatie, HR++-glas of een warmtepomp kunt u uw label laten verbeteren via herlabelen. STAP Energie adviseert u ook over beschikbare subsidies zoals ISDE en het Warmtefonds.',
-    'cta_tekst' => 'Bekijk verduurzaming & subsidies →',
-    'cta_url'   => '/verduurzaming-subsidie/',
-    'cta_stijl' => 'outline',
-  ],
-  [
-    'type'      => 'Energielabel woning',
-    'titel'     => 'Direct naar de woningen pagina',
-    'tekst'     => 'Bekijk alle woningtypen met bijbehorende prijzen, werkwijze en veelgestelde vragen over het energielabel voor uw specifieke woning.',
-    'cta_tekst' => 'Naar energielabel woningen →',
-    'cta_url'   => '/energielabels/woningen/',
-    'cta_stijl' => 'outline',
-  ],
-];
-include $root . 'includes/components/section-kaarten.php';
+$kaarten_label   = '-- Verder verduurzamen';
+$kaarten_titel   = 'Wat komt er na uw energielabel?';
+$kaarten_intro   = 'Een energielabel geeft inzicht — maar de echte winst zit in de vervolgstap. STAP Energie helpt u begrijpen welke maatregelen het meeste opleveren voor uw situatie.';
+$kaarten_cols    = 4;
+$kaarten_noot    = '';
+
+// Sub-label boven grid
+?>
+<section class="sectie sectie--wit">
+  <div class="sectie__inner">
+    <span class="sectie__label">-- Verder verduurzamen</span>
+    <h2 class="sectie__titel">Wat komt er na uw energielabel?</h2>
+    <p class="sectie__intro">Een energielabel geeft inzicht — maar de echte winst zit in de vervolgstap. STAP Energie helpt u begrijpen welke maatregelen het meeste opleveren voor uw situatie.</p>
+
+    <p class="sectie__label" style="margin-bottom:16px;">-- Populaire vervolgstappen na een energielabel</p>
+    <div class="sectie-kaarten__grid sectie-kaarten__grid--4" style="margin-bottom:40px;">
+      <?php $card = ['titel'=>'Warmtepomp','type'=>'Verwarming','icoon'=>'<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>','tekst'=>'Een warmtepomp vervangt uw cv-ketel en verlaagt uw gasverbruik tot wel 70%. Geschikt voor goed geïsoleerde woningen.','cta_tekst'=>'Meer lezen →','cta_url'=>'/kennisbank/warmtepomp/','cta_stijl'=>'outline']; include $root . 'includes/components/card.php'; ?>
+      <?php $card = ['titel'=>'Isolatie','type'=>'Isolatie','icoon'=>'<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg>','tekst'=>'Spouwmuur-, vloer- en dakisolatie zijn vaak de meest kosteneffectieve maatregelen. Direct merkbaar in comfort én stookkosten.','cta_tekst'=>'Meer lezen →','cta_url'=>'/kennisbank/isolatie/','cta_stijl'=>'outline']; include $root . 'includes/components/card.php'; ?>
+      <?php $card = ['titel'=>'Zonnepanelen','type'=>'Opwekking','icoon'=>'<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>','tekst'=>'Zonnepanelen zijn in de meeste gevallen binnen 7 jaar terugverdiend. Combineer met een thuisbatterij voor maximaal rendement.','cta_tekst'=>'Meer lezen →','cta_url'=>'/kennisbank/zonnepanelen/','cta_stijl'=>'outline']; include $root . 'includes/components/card.php'; ?>
+      <?php $card = ['titel'=>'HR-ketel vervangen','type'=>'Verwarming','icoon'=>'<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>','tekst'=>'Een verouderde cv-ketel vervangen door een moderne HR-ketel of hybride warmtepomp is vaak een slimme tussenstap.','cta_tekst'=>'Meer lezen →','cta_url'=>'/kennisbank/cv-ketel/','cta_stijl'=>'outline']; include $root . 'includes/components/card.php'; ?>
+    </div>
+
+    <p class="sectie__label" style="margin-bottom:16px;">-- Slimmer wonen — de volgende stap</p>
+    <div class="sectie-kaarten__grid sectie-kaarten__grid--4">
+      <?php $card = ['titel'=>'Thuisbatterij','type'=>'Opslag','icoon'=>'<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="14" rx="2"/><path d="M10 7V5a2 2 0 014 0v2"/><line x1="10" y1="11" x2="14" y2="11"/><line x1="12" y1="9" x2="12" y2="13"/></svg>','tekst'=>"Sla zelf opgewekte zonne-energie op voor gebruik 's avonds of bij piekprijzen. Interessant bij dynamisch energiecontract.",'cta_tekst'=>'Meer lezen →','cta_url'=>'/kennisbank/thuisbatterij/','cta_stijl'=>'outline']; include $root . 'includes/components/card.php'; ?>
+      <?php $card = ['titel'=>'Laadpaal thuis','type'=>'Mobiliteit','icoon'=>'<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18.01"/><path d="M9 7h6M9 11h4"/></svg>','tekst'=>'Laad uw elektrische auto slim thuis op — bij voorkeur op uw eigen zonne-energie. Subsidie beschikbaar via SEEH-regeling.','cta_tekst'=>'Meer lezen →','cta_url'=>'/kennisbank/laadpaal/','cta_stijl'=>'outline']; include $root . 'includes/components/card.php'; ?>
+      <?php $card = ['titel'=>'Airco / warmte-koud','type'=>'Klimaat','icoon'=>'<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg>','tekst'=>'Een moderne airco koelt in de zomer én verwarmt efficiënt in de winter. Werkt als aanvulling op een warmtepomp of als alternatief.','cta_tekst'=>'Meer lezen →','cta_url'=>'/kennisbank/airco/','cta_stijl'=>'outline']; include $root . 'includes/components/card.php'; ?>
+      <?php $card = ['titel'=>'Energiemanagementsysteem','type'=>'Slim beheer','icoon'=>'<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>','tekst'=>'Een EMS koppelt uw zonnepanelen, batterij, laadpaal en warmtepomp slim aan elkaar. Zo gebruikt u altijd de goedkoopste energie.','cta_tekst'=>'Meer lezen →','cta_url'=>'/kennisbank/ems/','cta_stijl'=>'outline']; include $root . 'includes/components/card.php'; ?>
+    </div>
+  </div>
+</section>
+<?php
 
 include $root . 'includes/faq.php';
 include $root . 'includes/cta.php';
