@@ -279,8 +279,8 @@ $stappen_items   = [
   ],
   [
     'nummer' => 2,
-    'titel'  => 'Installatieschema's en technische documentatie',
-    'tekst'  => 'Systeemschema's, inregelrapporten en inspectierapporten van de verwarmings-, koel- en ventilatiesystemen. Het fabricagejaar van installaties is hierbij belangrijk — dit bepaalt mede het berekende rendement.',
+    'titel'  => 'Installatieschema\'s en technische documentatie',
+    'tekst'  => 'Systeemschema\'s, inregelrapporten en inspectierapporten van de verwarmings-, koel- en ventilatiesystemen. Het fabricagejaar van installaties is hierbij belangrijk — dit bepaalt mede het berekende rendement.',
   ],
   [
     'nummer' => 3,
@@ -302,7 +302,7 @@ $stappen_items   = [
   [
     'nummer' => 6,
     'titel'  => 'Recente energieverbruiksgegevens',
-    'tekst'  => 'Energienota's of verbruiksdata van de afgelopen jaren. Niet verplicht voor het label, maar nuttig om de berekende energieprestatie te toetsen aan het werkelijke verbruik.',
+    'tekst'  => 'Energienota\'s of verbruiksdata van de afgelopen jaren. Niet verplicht voor het label, maar nuttig om de berekende energieprestatie te toetsen aan het werkelijke verbruik.',
   ],
 ];
 include $root . 'includes/components/section-stappen.php';
