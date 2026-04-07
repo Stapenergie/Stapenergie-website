@@ -76,44 +76,50 @@ $kaarten_intro   = 'De wet stelt een energieprestatieplicht aan een aantal speci
 $kaarten_cols    = 3;
 $kaarten_items   = [
   [
-    'titel' => 'Kantoor',
-    'tekst' => 'Alle kantoorgebouwen met een gebruiksoppervlakte van 100 m² of meer zijn verplicht minimaal label C te hebben. Nieuw per 1 januari 2023.',
-    'badge' => 'Label C verplicht',
+    'titel'    => 'Kantoor',
+    'tekst'    => 'Alle kantoorgebouwen met een gebruiksoppervlakte van 100 m² of meer zijn verplicht minimaal label C te hebben. Nieuw per 1 januari 2023.',
+    'badge'    => 'Label C verplicht',
+    'icoon'    => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg>',
     'cta_tekst' => 'Meer over kantoorlabels →',
     'cta_url'   => '/kantoren/',
     'cta_stijl' => 'outline',
   ],
   [
-    'titel' => 'Winkel',
-    'tekst' => 'Winkelpanden zijn labelplichtig bij verkoop, verhuur en oplevering. Het energielabel beïnvloedt ook de huurwaarde.',
+    'titel'    => 'Winkel',
+    'tekst'    => 'Winkelpanden zijn labelplichtig bij verkoop, verhuur en oplevering. Het energielabel beïnvloedt ook de huurwaarde.',
+    'icoon'    => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1-6h16l1 6"/><path d="M3 9a3 3 0 006 0 3 3 0 006 0 3 3 0 006 0"/><path d="M5 21V9M19 21V9"/><rect x="8" y="14" width="8" height="7"/></svg>',
+    'cta_tekst' => 'Meer over MKB →',
+    'cta_url'   => '/mkb/',
+    'cta_stijl' => 'outline',
+  ],
+  [
+    'titel'    => 'Onderwijs & Sport',
+    'tekst'    => 'Schoolgebouwen en sportaccommodaties vallen onder de energieprestatieplicht. Een geldig label is verplicht bij transacties.',
+    'icoon'    => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20M4 20V8l8-5 8 5v12"/><path d="M9 20v-5h6v5"/><path d="M12 3v4"/></svg>',
     'cta_tekst' => 'Aanvraag indienen →',
     'cta_url'   => '#aanvraag',
     'cta_stijl' => 'outline',
   ],
   [
-    'titel' => 'Onderwijs & Sport',
-    'tekst' => 'Schoolgebouwen en sportaccommodaties vallen onder de energieprestatieplicht. Een geldig label is verplicht bij transacties.',
+    'titel'    => 'Gezondheidszorg & Kinderopvang',
+    'tekst'    => 'Zorginstellingen, behandelcentra en kinderopvanggebouwen zijn labelplichtig bij verkoop, verhuur en oplevering.',
+    'icoon'    => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>',
     'cta_tekst' => 'Aanvraag indienen →',
     'cta_url'   => '#aanvraag',
     'cta_stijl' => 'outline',
   ],
   [
-    'titel' => 'Gezondheidszorg & Kinderopvang',
-    'tekst' => 'Zorginstellingen, behandelcentra en kinderopvanggebouwen zijn labelplichtig bij verkoop, verhuur en oplevering.',
+    'titel'    => 'Hotel & Logies',
+    'tekst'    => 'Hotels en andere logiesgebouwen met meerdere verblijven vallen onder de energieprestatieplicht.',
+    'icoon'    => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V5a2 2 0 012-2h14a2 2 0 012 2v16"/><path d="M3 21h18"/><path d="M9 21v-5a2 2 0 012-2h2a2 2 0 012 2v5"/><path d="M9 7h1M14 7h1M9 12h1M14 12h1"/></svg>',
     'cta_tekst' => 'Aanvraag indienen →',
     'cta_url'   => '#aanvraag',
     'cta_stijl' => 'outline',
   ],
   [
-    'titel' => 'Hotel & Logies',
-    'tekst' => 'Hotels en andere logiesgebouwen met meerdere verblijven vallen onder de energieprestatieplicht.',
-    'cta_tekst' => 'Aanvraag indienen →',
-    'cta_url'   => '#aanvraag',
-    'cta_stijl' => 'outline',
-  ],
-  [
-    'titel' => 'Ander pand?',
-    'tekst' => 'Twijfelt u of uw pand labelplichtig is? STAP Energie helpt u uitzoeken welke verplichtingen voor u gelden.',
+    'titel'    => 'Ander pand?',
+    'tekst'    => 'Twijfelt u of uw pand labelplichtig is? STAP Energie helpt u uitzoeken welke verplichtingen voor u gelden.',
+    'icoon'    => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>',
     'cta_tekst' => 'Vraag het ons →',
     'cta_url'   => '#aanvraag',
     'cta_stijl' => 'outline',
@@ -132,7 +138,7 @@ $kaarten_items   = [
   [
     'titel'      => 'Klein bedrijfspand',
     'type'       => 'Tot 100 m²',
-    'tekst'      => 'Opname op locatie door EPA-adviseur. Officieel rapport geregistreerd in EP-online. Label 10 jaar geldig na afgifte.',
+    'tekst'      => 'Opname op locatie door EPA-adviseur. Officieel rapport geregistreerd in EP-online. Label 10 jaar geldig na afgifte. Persoonlijk advies bij de opname.',
     'prijsrijen' => [
       ['label' => 'Indicatief tarief', 'bedrag' => '€ 495'],
     ],
@@ -144,7 +150,7 @@ $kaarten_items   = [
   [
     'titel'      => 'Middelgroot bedrijfspand',
     'type'       => '100 – 500 m²',
-    'tekst'      => 'Opname op locatie door EPA-adviseur. Officieel rapport geregistreerd in EP-online. Label 10 jaar geldig na afgifte.',
+    'tekst'      => 'Opname op locatie door EPA-adviseur. Officieel rapport geregistreerd in EP-online. Label 10 jaar geldig na afgifte. Persoonlijk advies bij de opname.',
     'prijsrijen' => [
       ['label' => 'Indicatief tarief', 'bedrag' => '€ 675'],
     ],
@@ -211,14 +217,17 @@ $kaarten_items   = [
   [
     'titel' => '10 jaar geldig',
     'tekst' => 'Een energielabel is standaard 10 jaar geldig na registratie in EP-online. De einddatum staat vermeld op het label zelf.',
+    'icoon' => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>',
   ],
   [
     'titel' => 'Vervalt na verbouwing',
     'tekst' => 'Na een ingrijpende renovatie of verbouwing vervalt het bestaande label. Een nieuwe opname is dan vereist.',
+    'icoon' => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20M4 20V8l8-5 8 5v12"/><path d="M15 20v-8H9v8"/><path d="M12 2l3 3-3 3"/></svg>',
   ],
   [
     'titel' => 'Herlabelen na verbetering',
     'tekst' => 'Heeft u verduurzamingsmaatregelen getroffen? Dan kunt u uw label laten verbeteren via herlabelen — voordeliger dan een volledig nieuwe opname.',
+    'icoon' => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4v5h5"/><path d="M20 20v-5h-5"/><path d="M4 9a9 9 0 0115 0"/><path d="M20 15a9 9 0 01-15 0"/></svg>',
   ],
 ];
 include $root . 'includes/components/section-kaarten.php';
@@ -254,6 +263,49 @@ $highlight_variant = 'groen';
 $highlight_badge   = 'Nieuw per 29 mei 2026';
 $highlight_tekst   = '<strong>Ophangplicht energielabel bedrijfspand:</strong> alle publiek toegankelijke bedrijfspanden groter dan 250 m² zijn verplicht hun energielabel zichtbaar op te hangen. STAP Energie levert een professioneel ingelijst certificaat. <a href="#aanvraag">Vraag het aan →</a>';
 include $root . 'includes/components/section-highlight.php';
+
+// ── Documentatie: wat kunt u alvast voorbereiden
+$stappen_variant = 'grijs';
+$stappen_label   = 'Voorbereiding';
+$stappen_titel   = 'Wat kunt u alvast voorbereiden?';
+$stappen_intro   = 'Hoe meer documentatie u aanlevert, hoe nauwkeuriger de opname en hoe gunstiger het label dat aantoonbaar haalbaar is. Zonder documentatie rekenen wij met conservatieve aannames — dat werkt in uw nadeel.';
+$stappen_cols    = 3;
+$stappen_items   = [
+  [
+    'nummer' => 1,
+    'titel'  => 'Bouwtekeningen en plattegronden',
+    'tekst'  => 'Gevels, doorsneden, verdiepingsplattegronden en eventuele renovatietekeningen. Hoe recenter en gedetailleerder, hoe beter. Dit vormt de basis voor een nauwkeurige opname van de thermische schil en het gebouwoppervlak.',
+    'extra'  => '<span class="doc-tip">Heeft u ook het bouwjaar of renovatiejaar paraat? Neem dit mee — inclusief bewijs zoals een omgevingsvergunning of koopakte.</span>',
+  ],
+  [
+    'nummer' => 2,
+    'titel'  => 'Installatieschema's en technische documentatie',
+    'tekst'  => 'Systeemschema's, inregelrapporten en inspectierapporten van de verwarmings-, koel- en ventilatiesystemen. Het fabricagejaar van installaties is hierbij belangrijk — dit bepaalt mede het berekende rendement.',
+  ],
+  [
+    'nummer' => 3,
+    'titel'  => 'Facturen en leverbonnen van isolatiematerialen',
+    'tekst'  => 'Facturen of leverbonnen van isolatiewerkzaamheden — met vermelding van merk, type en hoeveelheden. De factuur moet controleerbaar gekoppeld zijn aan het adres of de bouwlocatie.',
+  ],
+  [
+    'nummer' => 4,
+    'titel'  => 'Keurings- en kwaliteitsverklaringen van installaties',
+    'tekst'  => 'Certificaten, productbladen of fabrikantspecificaties van ketels, warmtepompen, ventilatiesystemen of zonnepanelen.',
+    'extra'  => '<span class="doc-tip">Heeft u deze documenten niet bij de hand? Wij doen ons best om de benodigde gegevens tijdens de opname ter plekke op te zoeken.</span>',
+  ],
+  [
+    'nummer' => 5,
+    'titel'  => 'Bouwjaar en renovatiejaar (met bewijs)',
+    'tekst'  => 'Het bouwjaar is bepalend voor standaardwaarden als er geen gedetailleerde informatie beschikbaar is. Als uw pand gerenoveerd is, is het renovatiejaar minstens zo relevant — dit kan het label aanzienlijk verbeteren.',
+    'extra'  => '<span class="doc-tip">Bewijs: omgevingsvergunning, bouwvergunning, koopakte of taxatierapport.</span>',
+  ],
+  [
+    'nummer' => 6,
+    'titel'  => 'Recente energieverbruiksgegevens',
+    'tekst'  => 'Energienota's of verbruiksdata van de afgelopen jaren. Niet verplicht voor het label, maar nuttig om de berekende energieprestatie te toetsen aan het werkelijke verbruik.',
+  ],
+];
+include $root . 'includes/components/section-stappen.php';
 
 // ── Regio
 $two_col_variant = 'wit';
