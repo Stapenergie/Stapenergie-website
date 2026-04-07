@@ -63,7 +63,7 @@ $kaarten_variant = 'grijs';
 $kaarten_label   = 'Wat we doen';
 $kaarten_titel   = 'Onze diensten';
 $kaarten_intro   = 'Van verplicht energielabel tot een volledig verduurzamingsplan — STAP Energie regelt het.';
-$kaarten_cols    = 4;
+$kaarten_cols    = 2;
 $kaarten_id      = 'diensten';
 $kaarten_items   = [
   [
@@ -161,23 +161,6 @@ include $root . 'includes/components/section-kaarten.php';
         <a href="/over-ons/" class="btn btn--outline" style="margin-top:20px;display:inline-flex;">Meer over Erik →</a>
       </div>
     </div>
-  </div>
-</section>
-
-<?php
-// ── Aanvraagformulier (contact sectie)
-?>
-<section class="sectie sectie--wit" id="contact">
-  <div class="sectie__inner">
-    <span class="sectie__label">Contact</span>
-    <h2 class="sectie__titel">Gratis kennismakingsgesprek</h2>
-    <p class="sectie__intro">Geen verplichtingen, wel direct waarde. We reageren binnen twee werkdagen.</p>
-    <?php
-    $f_dienst = '';
-    $f_type   = '';
-    $f_pagina = 'homepage';
-    include $root . 'includes/formulier.php';
-    ?>
   </div>
 </section>
 
