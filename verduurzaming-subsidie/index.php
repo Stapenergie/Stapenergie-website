@@ -88,39 +88,33 @@ include $root . 'includes/components/section-kaarten.php';
 ?>
 
 <?php
-/* ── SECTIE 2: De valkuil — two-col contrast ── */
+/* ── SECTIE 2: De valkuil — section-contrast ── */
+$contrast_variant = 'grijs';
+$contrast_label   = 'De gebruikelijke aanpak';
+$contrast_titel   = 'Zo werkt de markt — en waarom dat raar is';
+$contrast_intro   = 'De meeste verduurzamingstrajecten beginnen bij een leverancier die al weet wat hij verkoopt. Het antwoord staat vast; alleen de vraag moet nog worden geformuleerd.';
+$contrast_links = [
+    'tag'   => 'Gebruikelijke route',
+    'items' => [
+        'Leverancier stelt warmtepomp of zonnepanelen voor',
+        'Offerte volgt vóór er iemand naar het verbruik heeft gekeken',
+        'Investering wordt gedaan in opwek, terwijl het pand nog lekt',
+        'Vijf jaar later blijkt de volgorde niet te kloppen',
+    ],
+    'noot'  => 'Het probleem is niet de maatregel — het is het moment.',
+];
+$contrast_rechts = [
+    'tag'   => 'De STAP-aanpak',
+    'items' => [
+        'Eerst inzicht: waar zit het verbruik, wat kost het echt?',
+        'Vervolgens de goede volgorde bepalen',
+        'Kleine maatregelen die direct renderen',
+        'Grote investeringen op het juiste moment — niet te vroeg',
+    ],
+    'noot'  => 'Wie de volgorde goed heeft, heeft nooit spijt van een eerder genomen stap.',
+];
+include $root . 'includes/components/section-contrast.php';
 ?>
-<section class="sectie sectie--grijs">
-    <div class="sectie__inner">
-        <div class="sectie__header">
-            <span class="sectie__label">De gebruikelijke aanpak</span>
-            <h2 class="sectie__titel">Zo werkt de markt — en waarom dat raar is</h2>
-            <p class="sectie__intro">De meeste verduurzamingstrajecten beginnen bij een leverancier die al weet wat hij verkoopt. Het antwoord staat vast; alleen de vraag moet nog worden geformuleerd.</p>
-        </div>
-        <div class="two-col two-col--contrast">
-            <div class="two-col__blok two-col__blok--links">
-                <p class="two-col__tag two-col__tag--neutraal">Gebruikelijke route</p>
-                <ul class="two-col__lijst two-col__lijst--neutraal">
-                    <li>Leverancier stelt warmtepomp of zonnepanelen voor</li>
-                    <li>Offerte volgt vóór er iemand naar het verbruik heeft gekeken</li>
-                    <li>Investering wordt gedaan in opwek, terwijl het pand nog lekt</li>
-                    <li>Vijf jaar later blijkt de volgorde niet klopte</li>
-                </ul>
-                <p class="two-col__noot">Het probleem is niet de maatregel — het is het moment.</p>
-            </div>
-            <div class="two-col__blok two-col__blok--rechts">
-                <p class="two-col__tag two-col__tag--positief">De STAP-aanpak</p>
-                <ul class="two-col__lijst two-col__lijst--positief">
-                    <li>Eerst inzicht: waar zit het verbruik, wat kost het echt?</li>
-                    <li>Vervolgens de goede volgorde bepalen</li>
-                    <li>Kleine maatregelen die direct renderen</li>
-                    <li>Grote investeringen op het juiste moment — niet te vroeg</li>
-                </ul>
-                <p class="two-col__noot two-col__noot--groen">Wie de volgorde goed heeft, heeft nooit spijt van een eerder genomen stap.</p>
-            </div>
-        </div>
-    </div>
-</section>
 
 <?php
 /* ── SECTIE 3: Het stappenplan ── */
