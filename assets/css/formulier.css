@@ -8,9 +8,9 @@
 .sf-card .sf-sub { font-size: .83rem; color: #4a5568; margin: 0 0 1.2rem; }
 .sf-stack { display: flex; flex-direction: column; gap: .7rem; }
 .sf-row { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; }
-.sf-input { width: 100%; padding: .72rem .9rem; border: 1.5px solid #e2e8e0; border-radius: 8px; font-size: .88rem; font-family: inherit; outline: none; transition: border-color .15s; background: #fff; color: #1a1a1a; }
+.sf-input { width: 100%; padding: .72rem .9rem; border: 1.5px solid #e2e8e0; border-radius: 8px; font-size: .95rem; font-family: inherit; outline: none; transition: border-color .15s; background: #fff; color: #1a1a1a; }
 .sf-input:focus { border-color: #1a5c32; }
-.sf-select { width: 100%; padding: .72rem .9rem; border: 1.5px solid #e2e8e0; border-radius: 8px; font-size: .88rem; font-family: inherit; outline: none; background: #fff; color: #4a5568; transition: border-color .15s; }
+.sf-select { width: 100%; padding: .72rem .9rem; border: 1.5px solid #e2e8e0; border-radius: 8px; font-size: .95rem; font-family: inherit; outline: none; background: #fff; color: #4a5568; transition: border-color .15s; }
 .sf-select:focus { border-color: #1a5c32; }
 .sf-type-btns { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; }
 .sf-type-btn { padding: .65rem; border: 1.5px solid #e2e8e0; border-radius: 8px; font-size: .88rem; font-weight: 500; font-family: inherit; background: #fff; color: #4a5568; cursor: pointer; transition: all .15s; text-align: center; }
