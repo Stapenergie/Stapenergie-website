@@ -1,48 +1,43 @@
 <?php
-/**
- * sections/section-stappen.php
- * Genummerde stappen met verbindingslijn
- *
- * Variabelen:
- *   $stappen_variant  string  optioneel — wit | grijs (standaard)
- *   $stappen_label    string  optioneel
- *   $stappen_titel    string  verplicht
- *   $stappen_intro    string  optioneel
- *   $stappen_cols     int     optioneel — 2 | 3 | 4 (standaard)
- *   $stappen_items    array   verplicht — [['nummer'=>1,'titel'=>'...','tekst'=>'...']]
- *
- * Item velden:
- *   nummer  int     verplicht
- *   titel   string  verplicht
- *   tekst   string  verplicht
+/*
+ * section-stappen.php — Genummerde stappen grid
+ * Velden:  $stappen_label, $stappen_titel, $stappen_intro
+ *          $stappen_cols (optioneel, default 4)
+ *          $stappen_variant (optioneel: 'grijs' | 'wit', default 'wit')
+ *          $stappen[] — array van stappen met:
+ *            nummer*, titel*, tekst*, extra (optioneel — vrije HTML onder tekst)
  */
-$stappen_variant = $stappen_variant ?? 'grijs';
-$stappen_cols    = $stappen_cols    ?? 4;
-$stappen_label   = $stappen_label   ?? '';
-$stappen_titel   = $stappen_titel   ?? '';
-$stappen_intro   = $stappen_intro   ?? '';
-$stappen_items   = $stappen_items   ?? [];
+$cols    = $stappen_cols    ?? 4;
+$variant = $stappen_variant ?? 'wit';
+$bg      = $variant === 'grijs' ? 'sectie--grijs' : 'sectie--wit';
 ?>
-<section class="sectie sectie--<?= $stappen_variant ?>">
-  <div class="sectie__inner">
-    <?php if ($stappen_label): ?>
-      <span class="sectie__label"><?= htmlspecialchars($stappen_label) ?></span>
-    <?php endif; ?>
-    <h2 class="sectie__titel"><?= htmlspecialchars($stappen_titel) ?></h2>
-    <?php if ($stappen_intro): ?>
-      <p class="sectie__intro"><?= htmlspecialchars($stappen_intro) ?></p>
-    <?php endif; ?>
-
-    <div class="sectie-stappen__grid sectie-stappen__grid--<?= $stappen_cols ?>">
-      <?php foreach ($stappen_items as $stap): ?>
-        <div class="stap">
-          <div class="stap__nummer"><?= (int)($stap['nummer'] ?? 0) ?></div>
-          <h3 class="stap__titel"><?= htmlspecialchars($stap['titel'] ?? '') ?></h3>
-          <p class="stap__tekst"><?= htmlspecialchars($stap['tekst'] ?? '') ?></p>
-          <?php if (!empty($stap['extra'])): ?><?= $stap['extra'] ?><?php endif; ?>
+<section class="sectie <?php echo $bg; ?>">
+    <div class="sectie__inner">
+        <?php if (!empty($stappen_label) || !empty($stappen_titel)): ?>
+        <div class="sectie__header">
+            <?php if (!empty($stappen_label)): ?>
+            <span class="sectie__label"><?php echo htmlspecialchars($stappen_label); ?></span>
+            <?php endif; ?>
+            <?php if (!empty($stappen_titel)): ?>
+            <h2 class="sectie__titel"><?php echo htmlspecialchars($stappen_titel); ?></h2>
+            <?php endif; ?>
+            <?php if (!empty($stappen_intro)): ?>
+            <p class="sectie__intro"><?php echo htmlspecialchars($stappen_intro); ?></p>
+            <?php endif; ?>
         </div>
-      <?php endforeach; ?>
+        <?php endif; ?>
+
+        <div class="sectie-stappen__grid sectie-stappen__grid--<?php echo (int)$cols; ?>">
+            <?php foreach ($stappen as $stap): ?>
+            <div class="stap">
+                <div class="stap__nummer"><?php echo htmlspecialchars($stap['nummer']); ?></div>
+                <h3 class="stap__titel"><?php echo htmlspecialchars($stap['titel']); ?></h3>
+                <p class="stap__tekst"><?php echo htmlspecialchars($stap['tekst']); ?></p>
+                <?php if (!empty($stap['extra'])): ?>
+                <div class="stap__extra"><?php echo $stap['extra']; ?></div>
+                <?php endif; ?>
+            </div>
+            <?php endforeach; ?>
+        </div>
     </div>
-  </div>
 </section>
-<?php unset($stappen_variant,$stappen_cols,$stappen_label,$stappen_titel,$stappen_intro,$stappen_items,$stap); ?>
