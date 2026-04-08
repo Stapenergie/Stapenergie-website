@@ -5,13 +5,13 @@
 .cta-sectie::before { content: ''; position: absolute; top: -80px; right: -80px; width: 360px; height: 360px; background: radial-gradient(circle, rgba(255,255,255,.05) 0%, transparent 70%); pointer-events: none; }
 .cta-inner { max-width: 640px; margin: 0 auto; position: relative; z-index: 1; }
 .cta-inner h2 { font-family: var(--serif); font-size: clamp(1.7rem, 3vw, 2.3rem); color: #fff; margin-bottom: 12px; }
-.cta-inner p { color: rgba(255,255,255,.8); font-size: .95rem; margin-bottom: 28px; line-height: 1.65; }
+.cta-inner p { color: rgba(255,255,255,.8); font-size: var(--tekst-ui); margin-bottom: 28px; line-height: 1.65; }
 .cta-knoppen { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 .cta-garanties { margin-top: 24px; display: flex; justify-content: center; gap: 22px; flex-wrap: wrap; }
 .cta-garantie { display: flex; align-items: center; gap: 5px; color: rgba(255,255,255,.65); font-size: .78rem; }
 .cta-vink { color: var(--groen-acc); }
-.btn-primair { display: inline-flex; align-items: center; gap: 8px; background: #fff; color: var(--groen); font-weight: 700; font-size: .95rem; padding: 13px 26px; border-radius: var(--r); box-shadow: 0 4px 16px rgba(0,0,0,.15); transition: transform .2s, box-shadow .2s; }
+.btn-primair { display: inline-flex; align-items: center; gap: 8px; background: #fff; color: var(--groen); font-weight: 700; font-size: var(--tekst-ui); padding: 13px 26px; border-radius: var(--r); box-shadow: 0 4px 16px rgba(0,0,0,.15); transition: transform .2s, box-shadow .2s; }
 .btn-primair:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
-.btn-sec { display: inline-flex; align-items: center; gap: 8px; border: 1.5px solid rgba(255,255,255,.38); color: #fff; font-weight: 600; font-size: .9rem; padding: 12px 22px; border-radius: var(--r); transition: border-color .2s, background .2s; }
+.btn-sec { display: inline-flex; align-items: center; gap: 8px; border: 1.5px solid rgba(255,255,255,.38); color: #fff; font-weight: 600; font-size: var(--tekst-ui); padding: 12px 22px; border-radius: var(--r); transition: border-color .2s, background .2s; }
 .btn-sec:hover { border-color: #fff; background: rgba(255,255,255,.08); }
 @media (max-width: 480px) { .cta-knoppen { flex-direction: column; align-items: center; } }

@@ -12,7 +12,7 @@
 .nav-logo-text { font-size: 1.2rem; font-weight: 700; letter-spacing: -.01em; }
 .nav-logo-text span { color: var(--groen); }
 .nav-links { display: flex; align-items: center; gap: 1.8rem; list-style: none; }
-.nav-links a { font-size: .95rem; font-weight: 500; color: var(--subtekst); transition: color .2s; }
+.nav-links a { font-size: var(--tekst-ui); font-weight: 500; color: var(--subtekst); transition: color .2s; }
 .nav-links a:hover { color: var(--groen); }
 .nav-cta { background: var(--groen) !important; color: #fff !important; padding: .55rem 1.4rem; border-radius: 100px; font-size: .88rem !important; font-weight: 700 !important; }
 .nav-cta:hover { background: var(--groen-mid) !important; }
@@ -29,5 +29,5 @@
 .dropdown::before { content: ''; position: absolute; top: -6px; left: 50%; transform: translateX(-50%) rotate(45deg); width: 12px; height: 12px; background: #fff; border-left: 1px solid var(--rand); border-top: 1px solid var(--rand); }
 .dropdown::after { content: ''; position: absolute; top: -16px; left: 0; right: 0; height: 16px; }
 .has-dd.open .dropdown { display: block; }
-.dd-item { display: flex; align-items: center; padding: .65rem 1rem; border-radius: var(--r); font-size: .88rem; font-weight: 500; color: var(--subtekst); transition: color .15s, background .15s; min-height: 44px; }
+.dd-item { display: flex; align-items: center; padding: .65rem 1rem; border-radius: var(--r); font-size: var(--tekst-sub); font-weight: 500; color: var(--subtekst); transition: color .15s, background .15s; min-height: 44px; }
 .dd-item:hover { color: var(--groen); background: var(--groen-licht); }

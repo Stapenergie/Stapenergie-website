@@ -6,9 +6,17 @@
 /* ══════════════════════════════════
    RESET & TOKENS
 ══════════════════════════════════ */
+:root {
+  --tekst-body:  1rem;     /* 17px — standaard bodytekst */
+  --tekst-kop:   1.1rem;   /* 18.7px — componenttitels */
+  --tekst-ui:    .95rem;   /* 16.2px — knoppen, inputs, nav */
+  --tekst-sub:   .88rem;   /* 15px — subtekst, descriptions */
+  --tekst-klein: .78rem;   /* 13.3px — labels, fine print */
+  --tekst-micro: .7rem;    /* 11.9px — badges, tags */
+}
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; overflow-x: hidden; font-size: 16px; }
-body { font-family: var(--font-sans); font-size: 1rem; line-height: 1.7; color: #1a1a1a; background: #fff; overflow-x: hidden; }
+html { scroll-behavior: smooth; overflow-x: hidden; font-size: 17px; }
+body { font-family: var(--font-sans); font-size: var(--tekst-body); line-height: 1.7; color: #1a1a1a; background: #fff; overflow-x: hidden; }
 img  { max-width: 100%; height: auto; display: block; }
 a    { text-decoration: none; }
 
@@ -104,8 +112,8 @@ em     { font-style: italic; }
 .usp-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
 .usp-item { display: flex; align-items: flex-start; gap: 12px; }
 .usp-icon { width: 36px; height: 36px; background: #fff; border-radius: var(--r); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--groen); }
-.usp-item strong { display: block; font-weight: 700; }
-.usp-item span { color: var(--subtekst); }
+.usp-item strong { display: block; font-size: .88rem; font-weight: 700; }
+.usp-item span { font-size: .78rem; color: var(--subtekst); }
 
 /* ══════════════════════════════════
    DIENSTEN CARDS
