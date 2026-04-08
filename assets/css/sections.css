@@ -342,10 +342,3 @@
         grid-template-columns: 1fr;
     }
 }
-
-/* ── Scroll anchor (onzichtbaar anker voor #id links) ── */
-.scroll-anchor {
-    display: block;
-    height: 0;
-    scroll-margin-top: 80px;
-}
