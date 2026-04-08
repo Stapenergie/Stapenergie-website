@@ -49,7 +49,7 @@ $tabs_items   = $tabs_items   ?? [];
       <?php foreach ($tabs_items as $i => $tab): ?>
         <div class="sectie-tabs__panel <?= $i === 0 ? 'sectie-tabs__panel--actief' : '' ?>">
           <?php if (!empty($tab['titel'])): ?>
-            <h3 style="font-size:.95rem;font-weight:700;margin-bottom:16px;">
+            <h3 class="sectie-tabs__tab-titel">
               <?= htmlspecialchars($tab['titel']) ?>
             </h3>
           <?php endif; ?>
