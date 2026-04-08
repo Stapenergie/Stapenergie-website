@@ -104,8 +104,8 @@ em     { font-style: italic; }
 .usp-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
 .usp-item { display: flex; align-items: flex-start; gap: 12px; }
 .usp-icon { width: 36px; height: 36px; background: #fff; border-radius: var(--r); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--groen); }
-.usp-item strong { display: block; font-size: .88rem; font-weight: 700; }
-.usp-item span { font-size: .78rem; color: var(--subtekst); }
+.usp-item strong { display: block; font-weight: 700; }
+.usp-item span { color: var(--subtekst); }
 
 /* ══════════════════════════════════
    DIENSTEN CARDS
