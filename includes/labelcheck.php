@@ -17,20 +17,20 @@ $lc_id       = $lc_id       ?? 'lc';
     <div class="labelcheck__inner">
 
       <div class="labelcheck__tekst">
-        <span class="sec-label">Directe check</span>
+        <span class="sectie__label">Directe check</span>
         <h2><?= htmlspecialchars($lc_titel) ?></h2>
         <p><?= htmlspecialchars($lc_subtitel) ?></p>
       </div>
 
       <div class="labelcheck__widget">
         <div class="labelcheck__velden">
-          <input class="form-input"
+          <input class="sf-input"
                  type="text"
                  id="<?= $lc_id ?>-postcode"
                  placeholder="Postcode (bijv. 3833 AB)"
                  maxlength="7"
                  autocomplete="postal-code">
-          <input class="form-input"
+          <input class="sf-input"
                  type="text"
                  id="<?= $lc_id ?>-huisnummer"
                  placeholder="Huisnummer"
