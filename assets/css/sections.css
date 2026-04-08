@@ -34,7 +34,7 @@
 .sectie--groen .sectie__titel { color: #fff; }
 
 .sectie__intro {
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   color: var(--subtekst);
   max-width: 560px;
   line-height: 1.75;
@@ -95,8 +95,8 @@
   margin: 0 auto 14px;
   box-shadow: 0 0 0 4px #fff, 0 0 0 5px var(--groen-acc);
 }
-.stap__titel { font-size: 1rem; font-weight: 700; color: var(--tekst); margin-bottom: 6px; }
-.stap__tekst { font-size: .93rem; color: var(--subtekst); line-height: 1.65; }
+.stap__titel { font-size: 1.1rem; font-weight: 700; color: var(--tekst); margin-bottom: 6px; }
+.stap__tekst { font-size: 1.05rem; color: var(--subtekst); line-height: 1.65; }
 
 /* ── Sectie two-col ── */
 .sectie-two-col__grid {
