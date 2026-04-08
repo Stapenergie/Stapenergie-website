@@ -7,8 +7,8 @@
 .trust-item:last-child { border-right: none; }
 .trust-icon { width: 34px; height: 34px; background: var(--groen-card); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 .trust-icon svg { width: 16px; height: 16px; }
-.trust-label { font-size: .8rem; font-weight: 700; color: var(--tekst); line-height: 1.2; }
-.trust-sub { font-size: .72rem; color: var(--subtekst); }
+.trust-label { font-size: .95rem; font-weight: 700; color: var(--tekst); line-height: 1.2; }
+.trust-sub { font-size: .85rem; color: var(--subtekst); }
 @media (max-width: 900px) { .trust-inner { padding: 12px 24px; } .trust-item { min-width: 140px; padding: 6px 10px; } }
 @media (max-width: 480px) { .trust-inner { flex-direction: column; } .trust-item { border-right: none; border-bottom: 1px solid var(--rand); min-width: unset; width: 100%; } .trust-item:last-child { border-bottom: none; } }
 
