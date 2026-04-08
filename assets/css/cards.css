@@ -8,9 +8,6 @@
 .sectie-wit { background: #fff; }
 .sectie-grijs { background: var(--lichtgrijs); }
 .sectie-inner { max-width: 1200px; margin: 0 auto; }
-.sectie-label { display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--groen); margin-bottom: 8px; }
-.sectie-titel { font-family: var(--serif); font-size: clamp(1.5rem, 3vw, 2.1rem); color: var(--tekst); line-height: 1.2; margin-bottom: 12px; }
-.sectie-intro { color: var(--subtekst); font-size: .95rem; max-width: 540px; line-height: 1.7; margin-bottom: 48px; }
 
 /* ── Card grid ── */
 .card-grid { display: grid; gap: 24px; }
