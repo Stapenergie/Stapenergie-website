@@ -231,3 +231,114 @@
   border-radius: var(--r);
   line-height: 1.4;
 }
+
+/* ── Sectie contrast (section-contrast.php) ──────────────────────────────── */
+.contrast__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    align-items: start;
+}
+
+.contrast__blok {
+    padding: 28px 28px 24px;
+    border-radius: var(--rl);
+}
+
+.contrast__blok--neutraal {
+    background: #fff;
+    border: 1px solid var(--rand);
+}
+
+.contrast__blok--positief {
+    background: var(--groen-card);
+    border: 1px solid var(--groen-acc);
+}
+
+.contrast__tag {
+    font-size: var(--tekst-klein);
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: 0 0 14px;
+}
+
+.contrast__tag--neutraal { color: var(--subtekst); }
+.contrast__tag--positief { color: var(--groen); }
+
+.contrast__lijst {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contrast__lijst li {
+    font-size: var(--tekst-sub);
+    color: var(--tekst);
+    line-height: 1.6;
+    padding-left: 22px;
+    position: relative;
+}
+
+.contrast__lijst--neutraal li::before {
+    content: '\2192';
+    position: absolute;
+    left: 0;
+    color: var(--subtekst);
+}
+
+.contrast__lijst--positief li::before {
+    content: '\2713';
+    position: absolute;
+    left: 0;
+    color: var(--groen);
+    font-weight: 700;
+}
+
+.contrast__noot {
+    font-size: var(--tekst-klein);
+    color: var(--subtekst);
+    font-style: italic;
+    margin: 0;
+    line-height: 1.55;
+}
+
+.contrast__noot--groen {
+    color: var(--groen);
+    font-style: normal;
+    font-weight: 600;
+}
+
+.contrast__extra {
+    margin-top: 18px;
+}
+
+/* ── Stap extra-veld (section-stappen.php) ───────────────────────────────── */
+.stap__extra {
+    margin-top: 10px;
+}
+
+.stap__link {
+    display: inline-block;
+    font-size: var(--tekst-klein);
+    font-weight: 600;
+    color: var(--groen);
+    text-decoration: none;
+    border-bottom: 1px solid var(--groen-acc);
+    transition: color .15s, border-color .15s;
+}
+
+.stap__link:hover {
+    color: var(--donkergroen, #1a5c32);
+    border-color: var(--groen);
+}
+
+/* ── Responsive contrast ─────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .contrast__grid {
+        grid-template-columns: 1fr;
+    }
+}
