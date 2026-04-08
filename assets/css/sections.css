@@ -96,7 +96,7 @@
   box-shadow: 0 0 0 4px #fff, 0 0 0 5px var(--groen-acc);
 }
 .stap__titel { font-size: var(--tekst-kop); font-weight: 700; color: var(--tekst); margin-bottom: 6px; }
-.stap__tekst { font-size: var(--tekst-sub); color: var(--subtekst); line-height: 1.65; }
+.stap__tekst { font-size: var(--tekst-body); color: var(--subtekst); line-height: 1.65; }
 
 /* ── Sectie two-col ── */
 .sectie-two-col__grid {
@@ -341,4 +341,11 @@
     .contrast__grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* ── Scroll anchor (onzichtbaar anker voor #id links) ── */
+.scroll-anchor {
+    display: block;
+    height: 0;
+    scroll-margin-top: 80px;
 }
