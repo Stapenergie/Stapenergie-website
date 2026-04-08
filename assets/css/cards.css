@@ -42,8 +42,8 @@
 .stap { background: #fff; border: 1px solid var(--rand); border-radius: var(--rl); padding: 26px 20px; text-align: center; position: relative; z-index: 1; transition: box-shadow .2s; }
 .stap:hover { box-shadow: var(--shadow-lg); }
 .stap-nr { width: 40px; height: 40px; background: var(--groen); color: #fff; font-weight: 800; font-size: 1rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; box-shadow: 0 0 0 4px #fff, 0 0 0 5px var(--groen-acc); }
-.stap h3 { font-size: .9rem; font-weight: 700; margin-bottom: 6px; }
-.stap p { font-size: .8rem; color: var(--subtekst); line-height: 1.6; }
+.stap h3 { font-weight: 700; margin-bottom: 6px; }
+.stap p { color: var(--subtekst); line-height: 1.6; }
 .stappen-grid { position: relative; }
 .stappen-grid::before { content: ''; position: absolute; top: 28px; left: calc(12.5% + 14px); right: calc(12.5% + 14px); height: 2px; background: linear-gradient(90deg, var(--groen-acc), var(--groen-mid)); }
 
