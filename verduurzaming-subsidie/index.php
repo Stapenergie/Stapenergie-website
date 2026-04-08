@@ -68,7 +68,7 @@ $kaarten_titel   = 'Al lang geen idealistische keuze meer';
 $kaarten_intro   = 'Wie verduurzaamt omwille van de planeet heeft een nobel motief. Maar de zakelijke argumenten zijn inmiddels sterk genoeg om er gewoon op bedrijfseconomische gronden voor te kiezen.';
 $kaarten_variant = 'grijs';
 $kaarten_cols    = 3;
-$kaarten = [
+$kaarten_items = [
     [
         'foto'     => '/images/dienst-inkoop.jpg',
         'foto_alt' => 'Lagere energiekosten voor uw bedrijf',
@@ -89,7 +89,7 @@ $kaarten = [
     ],
 ];
 include $root . 'includes/components/section-kaarten.php';
-unset($kaarten_label, $kaarten_titel, $kaarten_intro, $kaarten_variant, $kaarten_cols, $kaarten);
+unset($kaarten_label, $kaarten_titel, $kaarten_intro, $kaarten_variant, $kaarten_cols, $kaarten_items);
 ?>
 
 <?php
@@ -178,7 +178,7 @@ $kaarten_titel   = 'Wat er nu beschikbaar is';
 $kaarten_intro   = 'Subsidies verlagen de terugverdientijd van maatregelen aanzienlijk — maar welke regeling het meest oplevert, hangt af van uw situatie. De belangrijkste regelingen op een rij.';
 $kaarten_variant = 'wit';
 $kaarten_cols    = 2;
-$kaarten = [
+$kaarten_items = [
     [
         'titel'     => 'Voor particulieren',
         'badge'     => 'Particulier',
@@ -198,7 +198,7 @@ $kaarten = [
     ],
 ];
 include $root . 'includes/components/section-kaarten.php';
-unset($kaarten_label, $kaarten_titel, $kaarten_intro, $kaarten_variant, $kaarten_cols, $kaarten);
+unset($kaarten_label, $kaarten_titel, $kaarten_intro, $kaarten_variant, $kaarten_cols, $kaarten_items);
 ?>
 
 <?php
@@ -208,7 +208,7 @@ $kaarten_titel   = 'Particulier of zakelijk?';
 $kaarten_intro   = 'De aanpak, subsidiemogelijkheden en volgorde verschillen per situatie. Kies uw situatie voor gerichte informatie.';
 $kaarten_variant = 'grijs';
 $kaarten_cols    = 2;
-$kaarten = [
+$kaarten_items = [
     [
         'foto'      => '/images/hero-woningen.jpg',
         'foto_alt'  => 'Verduurzaming voor woningeigenaren',
@@ -230,7 +230,7 @@ $kaarten = [
     ],
 ];
 include $root . 'includes/components/section-kaarten.php';
-unset($kaarten_label, $kaarten_titel, $kaarten_intro, $kaarten_variant, $kaarten_cols, $kaarten);
+unset($kaarten_label, $kaarten_titel, $kaarten_intro, $kaarten_variant, $kaarten_cols, $kaarten_items);
 ?>
 
 <?php
