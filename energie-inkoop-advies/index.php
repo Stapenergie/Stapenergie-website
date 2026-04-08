@@ -19,9 +19,9 @@ include $root . 'includes/breadcrumb.php';
 
 <?php
 $hero_variant  = 'split';
-$hero_bg       = $root . 'images/hero-energie-inkoop.jpg';
+$hero_bg       = '/images/hero-energie-inkoop.jpg';
 $hero_eyebrow  = 'Energie-inkoop advies';
-$hero_titel    = 'Uw factuur vertelt u wat u betaalt. Wij weten of uw contract ook klopt.';
+$hero_titel    = 'Uw factuur vertelt wat u betaalt. Wij weten of uw contract ook klopt.';
 $hero_lead     = 'Wij nemen uw energie-inkoop over. Met kennis van de markt, zonder verborgen agenda, en met ruimte om echt te begrijpen hoe uw bedrijf werkt.';
 $hero_usps     = [
     'Gratis contractanalyse als startpunt',
@@ -68,19 +68,19 @@ $kaarten_variant = 'wit';
 $kaarten_cols    = 3;
 $kaarten_items   = [
     [
-        'foto'     => $root . 'images/inkoop-contractanalyse.jpg',
+        'foto'     => '/images/inkoop-contractanalyse.jpg',
         'foto_alt' => 'Contractanalyse energie',
         'titel'    => 'Uw huidige contract doorgelicht',
         'tekst'    => 'Wij analyseren uw bestaande overeenkomst op prijs, voorwaarden, volumeafspraken en risico\'s. U krijgt een helder beeld van wat klopt, wat niet, en wat beter kan.',
     ],
     [
-        'foto'     => $root . 'images/inkoop-contractbeheer.jpg',
+        'foto'     => '/images/inkoop-contractbeheer.jpg',
         'foto_alt' => 'Volledig contractbeheer energie',
         'titel'    => 'Energie-inkoop van uw bordje',
         'tekst'    => 'Met een volmacht handelen wij namens u: offertes opvragen, contracten beoordelen, onderhandelen met leveranciers. U blijft altijd op de hoogte.',
     ],
     [
-        'foto'     => $root . 'images/inkoop-collectief.jpg',
+        'foto'     => '/images/inkoop-collectief.jpg',
         'foto_alt' => 'Collectief en tender energie',
         'titel'    => 'Schaalvoordeel voor meerdere locaties',
         'tekst'    => 'Voor bedrijven met meerdere aansluitingen, franchisegevers en vastgoedeigenaren bundelen wij contracten in een mantelovereenkomst. Huurders en franchisenemers liften mee op uw schaalgrootte, zonder zelf contractpartij te zijn. Voor organisaties die een inkooptraject willen structureren, begeleiden wij ook tenders.',
