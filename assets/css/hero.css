@@ -80,7 +80,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: .9rem;
+  font-size: 1rem;
   color: rgba(255,255,255,.85);
 }
 .hero-checks li::before {
@@ -99,7 +99,7 @@
   align-items: center;
   gap: 6px;
   color: rgba(255,255,255,.65);
-  font-size: .88rem;
+  font-size: var(--tekst-sub);
   border-bottom: 1px solid rgba(255,255,255,.3);
   padding-bottom: 2px;
 }
@@ -179,7 +179,7 @@
   align-items: center;
   gap: 9px;
   color: rgba(255,255,255,.88);
-  font-size: .9rem;
+  font-size: 1rem;
 }
 .hero-usp-vink {
   width: 18px;
