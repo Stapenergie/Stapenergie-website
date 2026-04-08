@@ -10,4 +10,4 @@
 .faq__vraag.open::after { transform: rotate(45deg); }
 .faq__vraag[aria-expanded="true"]::after { transform: rotate(45deg); }
 .faq__antwoord { max-height: 0; overflow: hidden; transition: max-height .3s ease; }
-.faq__antwoord p { padding: 0 1.2rem 1.1rem; font-size: .9rem; color: var(--subtekst); line-height: 1.7; }
+.faq__antwoord p { padding: 0 1.2rem 1.1rem; font-size: 1rem; color: var(--subtekst); line-height: 1.7; }
