@@ -25,8 +25,8 @@
 .card__icoon { width: 44px; height: 44px; min-width: 44px; max-width: 44px; background: var(--groen-card); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; overflow: hidden; flex-shrink: 0; }
 .card__icoon svg { width: 22px; height: 22px; min-width: 22px; max-width: 22px; min-height: 22px; max-height: 22px; flex-shrink: 0; display: block; }
 .card__type { font-size: .7rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--subtekst); margin-bottom: 4px; }
-.card__titel { font-size: 1.1rem; font-weight: 700; color: var(--tekst); margin-bottom: 8px; }
-.card__tekst { font-size: .95rem; color: var(--subtekst); line-height: 1.65; margin-bottom: 16px; flex: 1; }
+.card__titel { font-size: 1.2rem; font-weight: 700; color: var(--tekst); margin-bottom: 8px; }
+.card__tekst { font-size: 1.1rem; color: var(--subtekst); line-height: 1.65; margin-bottom: 16px; flex: 1; }
 .card__incl { font-size: .72rem; color: var(--subtekst); margin-bottom: 16px; }
 .card__cta { margin-top: auto; }
 
