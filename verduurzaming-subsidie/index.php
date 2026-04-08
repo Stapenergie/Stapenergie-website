@@ -235,13 +235,18 @@ unset($kaarten_label, $kaarten_titel, $kaarten_intro, $kaarten_variant, $kaarten
 
 <?php
 /* ── SECTIE 6: Formulier ── */
-$sectie_label   = 'Contact';
-$sectie_titel   = 'Waar begint u?';
-$sectie_intro   = 'Een eerste gesprek is vrijblijvend. We brengen uw situatie in kaart en kijken samen welke stap het meest logisch is — zonder verkoopbelang.';
-$formulier_type = 'zakelijk';
-include $root . 'includes/components/section-form.php';
-unset($sectie_label, $sectie_titel, $sectie_intro, $formulier_type);
+$f_type   = 'zakelijk';
+$f_pagina = 'verduurzaming-subsidie';
 ?>
+<section id="contact" class="sectie sectie--wit">
+    <div class="sectie__inner">
+        <span class="sectie__label">Contact</span>
+        <h2 class="sectie__titel">Waar begint u?</h2>
+        <p class="sectie__intro">Een eerste gesprek is vrijblijvend. We brengen uw situatie in kaart en kijken samen welke stap het meest logisch is — zonder verkoopbelang.</p>
+    </div>
+    <?php include $root . 'includes/formulier.php'; ?>
+</section>
+<?php unset($f_type, $f_pagina); ?>
 
 <?php include $root . 'includes/faq.php'; ?>
 
