@@ -183,6 +183,7 @@ jobs:
           lftp -c "
             set ftp:ssl-allow no;
             set sftp:auto-confirm yes;
+            set mirror:set-permissions off;
             open sftp://$SFTP_USER:$SFTP_PASS@$SFTP_HOST;
             mirror --reverse \
               --verbose \
