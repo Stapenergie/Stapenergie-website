@@ -23,12 +23,12 @@
 <link rel="stylesheet" href="/assets/css/nav.css">
 <link rel="stylesheet" href="/assets/css/hero.css?v=3">
 <link rel="stylesheet" href="/assets/css/breadcrumb.css">
-<link rel="stylesheet" href="/assets/css/trust.css?v=2">
+<link rel="stylesheet" href="/assets/css/trust.css?v=3">
 <link rel="stylesheet" href="/assets/css/cards.css?v=2">
-<link rel="stylesheet" href="/assets/css/sections.css?v=4">
-<link rel="stylesheet" href="/assets/css/components.css?v=5">
-<link rel="stylesheet" href="/assets/css/faq.css">
-<link rel="stylesheet" href="/assets/css/formulier.css">
+<link rel="stylesheet" href="/assets/css/sections.css?v=5">
+<link rel="stylesheet" href="/assets/css/components.css?v=6">
+<link rel="stylesheet" href="/assets/css/faq.css?v=2">
+<link rel="stylesheet" href="/assets/css/formulier.css?v=2">
 <link rel="stylesheet" href="/assets/css/cta.css">
 <link rel="stylesheet" href="/assets/css/footer.css">
 <link rel="stylesheet" href="/assets/css/labelcheck.css">
