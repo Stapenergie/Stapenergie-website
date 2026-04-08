@@ -232,7 +232,7 @@ include $root . 'includes/faq.php';
 
 <?php
 $cta_titel  = 'Niet alles hoeft in één keer.';
-$cta_tekst  = 'Maar beginnen met de goede vraag scheelt u soms tienduizenden euro\'s. Neem contact op voor een vrijblijvend adviesgesprek.';
+$cta_tekst  = "Maar beginnen met de goede vraag scheelt u soms tienduizenden euro's. Neem contact op voor een vrijblijvend adviesgesprek.";
 $cta_url    = '#contact';
 $cta_knop   = 'Gratis adviesgesprek aanvragen';
 include $root . 'includes/cta.php';
