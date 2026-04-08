@@ -18,7 +18,7 @@
 .usp-item { display: flex; align-items: center; gap: 10px; flex: 1; min-width: 180px; padding: 8px 20px; border-right: 1px solid var(--rand); }
 .usp-item:last-child { border-right: none; }
 .usp-icon { width: 34px; height: 34px; background: var(--groen-card); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--groen); }
-.usp-item strong { font-size: .8rem; font-weight: 700; color: var(--tekst); display: block; line-height: 1.2; }
-.usp-item span { font-size: .72rem; color: var(--subtekst); }
+.usp-item strong { font-size: .95rem; font-weight: 700; color: var(--tekst); display: block; line-height: 1.2; }
+.usp-item span { font-size: .85rem; color: var(--subtekst); }
 @media (max-width: 900px) { .usp-inner { padding: 12px 24px; } .usp-item { min-width: 140px; padding: 6px 10px; } }
 @media (max-width: 480px) { .usp-inner { flex-direction: column; } .usp-item { border-right: none; border-bottom: 1px solid var(--rand); min-width: unset; width: 100%; } .usp-item:last-child { border-bottom: none; } }
