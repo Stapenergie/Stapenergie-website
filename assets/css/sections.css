@@ -15,7 +15,7 @@
 
 .sectie__label {
   display: inline-block;
-  font-size: .72rem;
+  font-size: .78rem;
   font-weight: 700;
   letter-spacing: .1em;
   text-transform: uppercase;
@@ -26,7 +26,7 @@
 
 .sectie__titel {
   font-family: var(--serif);
-  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  font-size: clamp(1.65rem, 3vw, 2.3rem);
   color: var(--tekst);
   line-height: 1.2;
   margin-bottom: 12px;
@@ -34,10 +34,10 @@
 .sectie--groen .sectie__titel { color: #fff; }
 
 .sectie__intro {
-  font-size: .95rem;
+  font-size: 1.05rem;
   color: var(--subtekst);
   max-width: 560px;
-  line-height: 1.7;
+  line-height: 1.75;
   margin-bottom: 40px;
 }
 .sectie--groen .sectie__intro { color: rgba(255,255,255,.8); }
@@ -95,8 +95,8 @@
   margin: 0 auto 14px;
   box-shadow: 0 0 0 4px #fff, 0 0 0 5px var(--groen-acc);
 }
-.stap__titel { font-size: .9rem; font-weight: 700; color: var(--tekst); margin-bottom: 6px; }
-.stap__tekst { font-size: .82rem; color: var(--subtekst); line-height: 1.6; }
+.stap__titel { font-size: 1rem; font-weight: 700; color: var(--tekst); margin-bottom: 6px; }
+.stap__tekst { font-size: .93rem; color: var(--subtekst); line-height: 1.65; }
 
 /* ── Sectie two-col ── */
 .sectie-two-col__grid {
