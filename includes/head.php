@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="/assets/css/breadcrumb.css?v=2">
 <link rel="stylesheet" href="/assets/css/trust.css?v=6">
 <link rel="stylesheet" href="/assets/css/cards.css?v=2">
-<link rel="stylesheet" href="/assets/css/sections.css?v=9">
+<link rel="stylesheet" href="/assets/css/sections.css?v=10">
 <link rel="stylesheet" href="/assets/css/components.css?v=9">
 <link rel="stylesheet" href="/assets/css/faq.css?v=4">
 <link rel="stylesheet" href="/assets/css/formulier.css?v=5">
