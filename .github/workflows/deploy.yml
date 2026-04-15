@@ -184,9 +184,12 @@ jobs:
             set ftp:ssl-allow no;
             set sftp:auto-confirm yes;
             set mirror:set-permissions off;
+            set net:timeout 30;
+            set net:max-retries 2;
+            set net:reconnect-interval-base 5;
+            set sftp:connect-program 'ssh -a -x -o ConnectTimeout=15 -o ServerAliveInterval=10 -o ServerAliveCountMax=3';
             open sftp://$SFTP_USER:$SFTP_PASS@$SFTP_HOST;
             mirror --reverse \
-              --verbose \
               --exclude-glob .git/ \
               --exclude-glob .github/ \
               --exclude-glob '*.md' \
