@@ -13,7 +13,7 @@ $breadcrumbs = [
   ['label' => 'Zakelijk'],
 ];
 
-$cta_titel     = 'Klaar om uw energiestrategie aan te pakken?';
+$cta_titel     = 'Klaar om jouw energiestrategie aan te pakken?';
 $cta_subtitel  = 'Neem contact op voor een vrijblijvend kennismakingsgesprek. STAP Energie neemt binnen twee werkdagen contact op.';
 $cta_knop      = 'Neem contact op →';
 $cta_knop_url  = '#aanvraag';
@@ -25,17 +25,17 @@ $faq_items = [
   ['vraag' => 'Waarom bewegen energieprijzen zo sterk?',
    'antwoord' => 'Energieprijzen worden bepaald door een combinatie van factoren: de vulgraad van gasopslagen in Europa, weersomstandigheden, de beschikbaarheid van hernieuwbare energie en geopolitieke ontwikkelingen. Die factoren zijn voortdurend in beweging, waardoor prijzen soms fors schommelen — zelfs binnen één seizoen. Wie die dynamiek begrijpt, kan beter inschatten wanneer het verstandig is om een contract vast te leggen en voor welke looptijd. <a href="/energie-inkoop-advies/" style="color:var(--groen);font-weight:500">Meer over energie-inkoopadvies &rarr;</a>'],
   ['vraag' => 'Moet ik voor gas en elektriciteit hetzelfde contract kiezen?',
-   'antwoord' => 'Nee — en dat is een veelgemaakte fout. Gas en stroom bewegen op verschillende markten en hebben elk hun eigen seizoenspatroon en risicoprofiel. Bovendien verschilt uw verbruiksprofiel per type energie. Het is dan ook zelden optimaal om voor beide hetzelfde contracttype te kiezen. STAP Energie beoordeelt gas en stroom altijd afzonderlijk, en adviseert per situatie de meest passende contractvorm.'],
+   'antwoord' => 'Nee — en dat is een veelgemaakte fout. Gas en stroom bewegen op verschillende markten en hebben elk hun eigen seizoenspatroon en risicoprofiel. Bovendien verschilt jouw verbruiksprofiel per type energie. Het is dan ook zelden optimaal om voor beide hetzelfde contracttype te kiezen. STAP Energie beoordeelt gas en stroom altijd afzonderlijk, en adviseert per situatie de meest passende contractvorm.'],
   ['vraag' => 'Wat is het verschil tussen een vast, variabel en dynamisch energiecontract?',
-   'antwoord' => 'Er zijn drie gangbare contractvormen voor zakelijke energie. Bij een vast contract legt u de prijs voor een bepaalde looptijd vast — maximale zekerheid, maar u profiteert niet van prijsdalingen. Bij een variabel contract beweegt uw prijs mee met de markt, met meer potentieel voordeel maar ook meer risico. Bij een dynamisch contract schommelt de prijs per uur op basis van beursprijzen — aantrekkelijk als u verbruik kunt sturen. Welk type past, hangt af van uw profiel en risicobereidheid. <a href="/energie-inkoop-advies/" style="color:var(--groen);font-weight:500">Meer over energie-inkoopadvies &rarr;</a>'],
+   'antwoord' => 'Er zijn drie gangbare contractvormen voor zakelijke energie. Bij een vast contract leg je de prijs voor een bepaalde looptijd vast — maximale zekerheid, maar je profiteert niet van prijsdalingen. Bij een variabel contract beweegt je prijs mee met de markt, met meer potentieel voordeel maar ook meer risico. Bij een dynamisch contract schommelt de prijs per uur op basis van beursprijzen — aantrekkelijk als je verbruik kunt sturen. Welk type past, hangt af van jouw profiel en risicobereidheid. <a href="/energie-inkoop-advies/" style="color:var(--groen);font-weight:500">Meer over energie-inkoopadvies &rarr;</a>'],
   ['vraag' => 'Is mijn bedrijfspand verplicht van een energielabel voorzien?',
-   'antwoord' => 'Ja, voor de meeste zakelijke gebouwen geldt een labelplicht bij verkoop, verhuur of oplevering. Voor kantoren geldt daarnaast een aanvullende verplichting: kantoren van 100 m² of groter moeten minimaal energielabel C hebben. Zonder geldig label riskeert u handhaving door de gemeente. <a href="/energielabels/utiliteit/" style="color:var(--groen);font-weight:500">Meer over energielabels utiliteit &rarr;</a>'],
+   'antwoord' => 'Ja, voor de meeste zakelijke gebouwen geldt een labelplicht bij verkoop, verhuur of oplevering. Voor kantoren geldt daarnaast een aanvullende verplichting: kantoren van 100 m² of groter moeten minimaal energielabel C hebben. Zonder geldig label riskeer je handhaving door de gemeente. <a href="/energielabels/utiliteit/" style="color:var(--groen);font-weight:500">Meer over energielabels utiliteit &rarr;</a>'],
   ['vraag' => 'Wat kan ik met een energielabel als het eenmaal is afgegeven?',
-   'antwoord' => 'Een energielabel is meer dan een sticker op uw gebouw. Het is een objectieve nulmeting die laat zien hoe uw pand presteert ten opzichte van vergelijkbare gebouwen. Dat maakt het een uitstekend startpunt voor een verbetertraject: u weet precies welke maatregelen het meeste effect hebben en welke subsidies beschikbaar zijn.'],
+   'antwoord' => 'Een energielabel is meer dan een sticker op jouw gebouw. Het is een objectieve nulmeting die laat zien hoe jouw pand presteert ten opzichte van vergelijkbare gebouwen. Dat maakt het een uitstekend startpunt voor een verbetertraject: je weet precies welke maatregelen het meeste effect hebben en welke subsidies beschikbaar zijn.'],
   ['vraag' => 'Hoe lang is een zakelijk energielabel geldig?',
-   'antwoord' => 'Een energielabel voor een utiliteitsgebouw is tien jaar geldig. Heeft u in die periode relevante energiebesparende maatregelen genomen — zoals nieuwe installaties, betere isolatie of zonnepanelen — dan kunt u het label laten aanpassen via herlabelen. Dat is voordeliger dan een volledig nieuwe opname.'],
+   'antwoord' => 'Een energielabel voor een utiliteitsgebouw is tien jaar geldig. Heb je in die periode relevante energiebesparende maatregelen genomen — zoals nieuwe installaties, betere isolatie of zonnepanelen — dan kun je het label laten aanpassen via herlabelen. Dat is voordeliger dan een volledig nieuwe opname.'],
   ['vraag' => 'Wat levert verduurzaming mijn bedrijf financieel op?',
-   'antwoord' => 'Verduurzaming verlaagt uw energiekosten structureel. Betere isolatie vermindert uw warmtevraag, efficiëntere installaties verbruiken minder energie en eigen opwekking via zonnepanelen verlaagt uw inkoopbehoefte. Bovendien zijn er diverse subsidies beschikbaar — zoals de SDE++ en de EIA — die de terugverdientijd aanzienlijk verkorten. <a href="/verduurzaming-subsidie/" style="color:var(--groen);font-weight:500">Meer over verduurzaming &rarr;</a>'],
+   'antwoord' => 'Verduurzaming verlaagt je energiekosten structureel. Betere isolatie vermindert je warmtevraag, efficiëntere installaties verbruiken minder energie en eigen opwekking via zonnepanelen verlaagt je inkoopbehoefte. Bovendien zijn er diverse subsidies beschikbaar — zoals de SDE++ en de EIA — die de terugverdientijd aanzienlijk verkorten. <a href="/verduurzaming-subsidie/" style="color:var(--groen);font-weight:500">Meer over verduurzaming &rarr;</a>'],
   ['vraag' => 'Werkt STAP Energie samen met energieleveranciers?',
    'antwoord' => 'Ja — maar op onze voorwaarden. STAP Energie werkt samen met zorgvuldig geselecteerde energieleveranciers en installatiepartners die wij beoordelen op kwaliteit, betrouwbaarheid en prijs-kwaliteitsverhouding. Wij hebben geen exclusieve samenwerkingen of financiële prikkels om bepaalde partijen te bevoordelen. Ons advies is en blijft onafhankelijk. <a href="/energie-inkoop-advies/" style="color:var(--groen);font-weight:500">Meer over onze aanpak &rarr;</a>'],
 ];
@@ -48,10 +48,10 @@ include $root . 'includes/breadcrumb.php';
 $hero_variant  = 'sub';
 $hero_bg       = '/images/hero-bedrijfspand.jpg';
 $hero_eyebrow  = 'Onafhankelijk energieadvies voor bedrijven';
-$hero_titel    = 'Energie: uw grootste variabele kostenpost — <em>en uw grootste kans</em>';
+$hero_titel    = 'Energie: jouw grootste variabele kostenpost. <em>En jouw grootste kans.</em>';
 $hero_lead     = 'STAP Energie helpt bedrijven omschakelen naar een duurzamer, economischer en comfortabeler energiesysteem. Niet als ver toekomstperspectief, maar als verstandige keuze voor nu.';
 $hero_usps     = [
-  'Onafhankelijk — ons advies is altijd in uw belang, zonder merkvoorkeur',
+  'Onafhankelijk: ons advies is altijd in je belang, zonder merkvoorkeur',
   'Gecertificeerd EPA-adviseur voor energielabels',
   'Reactie binnen twee werkdagen',
   'MKB, kantoren, vastgoed en industrie',
@@ -65,9 +65,9 @@ include $root . 'includes/trust.php';
 
 // ── Alle diensten
 $kaarten_variant = 'wit';
-$kaarten_label   = 'Wat we voor u doen';
+$kaarten_label   = 'Wat we voor je doen';
 $kaarten_titel   = 'Alle energiezaken onder één dak';
-$kaarten_intro   = 'STAP Energie is uw vaste aanspreekpunt voor alles wat met energie te maken heeft. Van inkoopstrategie tot energielabel en verduurzaming — één partij die het complete energievraagstuk voor u overziet.';
+$kaarten_intro   = 'STAP Energie is je vaste aanspreekpunt voor alles wat met energie te maken heeft. Van inkoopstrategie tot energielabel en verduurzaming — één partij die het complete energievraagstuk voor je overziet.';
 $kaarten_cols    = 3;
 $kaarten_id      = 'diensten';
 $kaarten_items   = [
@@ -75,7 +75,7 @@ $kaarten_items   = [
     'titel'     => 'Energie-inkoopadvies',
     'type'      => 'Meest gevraagd',
     'icoon'     => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>',
-    'tekst'     => 'De energiemarkt beweegt voortdurend onder invloed van geopolitiek, seizoenspatronen en opslagcapaciteit. STAP Energie vertaalt die marktdynamiek naar concreet advies: welk contracttype past bij uw verbruiksprofiel?',
+    'tekst'     => 'De energiemarkt beweegt voortdurend onder invloed van geopolitiek, seizoenspatronen en opslagcapaciteit. STAP Energie vertaalt die marktdynamiek naar concreet advies: welk contracttype past bij jouw verbruiksprofiel?',
     'uitgelicht' => true,
     'cta_tekst' => 'Meer over energie-inkoopadvies →',
     'cta_url'   => '/energie-inkoop-advies/',
@@ -112,7 +112,7 @@ $kaarten_items   = [
   [
     'titel'     => 'Kantoren',
     'icoon'     => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg>',
-    'tekst'     => 'Kantoren van 100 m² of groter moeten verplicht minimaal label C hebben. STAP Energie begeleidt u van opname tot certificaat en adviseert over het verbetertraject.',
+    'tekst'     => 'Kantoren van 100 m² of groter moeten verplicht minimaal label C hebben. STAP Energie begeleidt je van opname tot certificaat en adviseert over het verbetertraject.',
     'cta_tekst' => 'Meer over kantoren →',
     'cta_url'   => '/kantoren/',
     'cta_stijl' => 'outline',
@@ -128,7 +128,7 @@ $kaarten_items   = [
   [
     'titel'     => 'Vastgoed & makelaars',
     'icoon'     => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V8l8-5 8 5v13"/><path d="M9 21v-6h6v6"/></svg>',
-    'tekst'     => 'Een actueel energielabel is bij verkoop en verhuur verplicht. STAP Energie levert snel en betrouwbaar labels voor uw vastgoedportefeuille.',
+    'tekst'     => 'Een actueel energielabel is bij verkoop en verhuur verplicht. STAP Energie levert snel en betrouwbaar labels voor jouw vastgoedportefeuille.',
     'cta_tekst' => 'Meer over vastgoed →',
     'cta_url'   => '/vastgoed/',
     'cta_stijl' => 'outline',
@@ -152,7 +152,7 @@ $kaarten_items   = [
   [
     'titel'     => 'Andere organisatie?',
     'icoon'     => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>',
-    'tekst'     => 'Elke organisatie is anders. Neem contact op en STAP Energie kijkt samen met u wat de meest waardevolle energiestap is voor uw specifieke situatie.',
+    'tekst'     => 'Elke organisatie is anders. Neem contact op en STAP Energie kijkt samen met je wat de meest waardevolle energiestap is voor jouw specifieke situatie.',
     'cta_tekst' => 'Neem contact op →',
     'cta_url'   => '#aanvraag',
     'cta_stijl' => 'outline',
@@ -162,7 +162,7 @@ include $root . 'includes/components/section-kaarten.php';
 
 // ── Waarom STAP Energie
 $kaarten_variant = 'wit';
-$kaarten_label   = 'Eerlijk advies, altijd in uw belang';
+$kaarten_label   = 'Eerlijk advies, altijd in je belang';
 $kaarten_titel   = 'Waarom STAP Energie?';
 $kaarten_intro   = 'STAP Energie werkt samen met zorgvuldig geselecteerde leveranciers en installatiepartners — maar ons advies is altijd onpartijdig.';
 $kaarten_cols    = 3;
@@ -170,17 +170,17 @@ $kaarten_items   = [
   [
     'titel' => 'Onafhankelijk advies',
     'icoon' => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622C17.176 19.29 21 14.591 21 9c0-1.042-.133-2.052-.382-3.016z"/></svg>',
-    'tekst' => 'STAP Energie heeft geen merkvoorkeur. Wij selecteren op kwaliteit en kiezen de partij die het beste bij uw situatie past — niet de partij die ons het meeste oplevert.',
+    'tekst' => 'STAP Energie heeft geen merkvoorkeur. Wij selecteren op kwaliteit en kiezen de partij die het beste bij jouw situatie past — niet de partij die ons het meeste oplevert.',
   ],
   [
     'titel' => 'Gedegen marktkennis',
     'icoon' => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>',
-    'tekst' => 'Met jarenlange ervaring in energie-inkooptrajecten voor MKB en industrie kent STAP Energie de markt van binnenuit. Wij begrijpen waarom prijzen bewegen en wat dat betekent voor uw strategie.',
+    'tekst' => 'Met jarenlange ervaring in energie-inkooptrajecten voor MKB en industrie kent STAP Energie de markt van binnenuit. Wij begrijpen waarom prijzen bewegen en wat dat betekent voor je strategie.',
   ],
   [
     'titel' => 'Één aanspreekpunt',
     'icoon' => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>',
-    'tekst' => 'Energie-inkoop, energielabels en verduurzaming — STAP Energie overziet het complete energievraagstuk. U heeft altijd één vast aanspreekpunt die uw situatie kent.',
+    'tekst' => 'Energie-inkoop, energielabels en verduurzaming — STAP Energie overziet het complete energievraagstuk. Je hebt altijd één vast aanspreekpunt die je situatie kent.',
   ],
 ];
 include $root . 'includes/components/section-kaarten.php';
@@ -188,19 +188,19 @@ include $root . 'includes/components/section-kaarten.php';
 // ── Energiemarkt two-col
 $two_col_variant   = 'grijs';
 $two_col_label     = 'Energie-inkoopadvies';
-$two_col_titel     = 'De energiemarkt beweegt — weet u waarom?';
+$two_col_titel     = 'De energiemarkt beweegt — weet je waarom?';
 $two_col_tekst     = '';
 $two_col_omgekeerd = false;
 $two_col_links     = '
   <p style="color:var(--subtekst);line-height:1.7;margin-bottom:14px;">Energieprijzen zijn geen vast gegeven. Ze worden bepaald door een samenspel van factoren: de vulgraad van gasopslagen in Europa, geopolitieke spanningen, seizoenspatronen en de groeiende rol van duurzame opwek. Wie begrijpt hoe die factoren samenhangen, kan beter inschatten wanneer het verstandig is om een contract af te sluiten — en voor hoe lang.</p>
-  <p style="color:var(--subtekst);line-height:1.7;margin-bottom:14px;">Daarbij geldt: wat voor gas geldt, geldt niet automatisch voor elektriciteit. De optimale contractvorm verschilt per type energie én per verbruiksprofiel. Hoe meer u uw verbruik kunt sturen en spreiden, hoe meer contractvrijheid u zich kunt permitteren.</p>
-  <p style="color:var(--subtekst);line-height:1.7;margin-bottom:20px;">Duurzame opwek — zoals zonne-energie — speelt daarin een steeds grotere rol. Zelf energie opwekken verlaagt uw afhankelijkheid van de markt, versterkt uw energiepositie op de lange termijn én is financieel gewoon aantrekkelijk. Niet omdat het moet van de overheid, maar omdat het verstandig is.</p>';
+  <p style="color:var(--subtekst);line-height:1.7;margin-bottom:14px;">Daarbij geldt: wat voor gas geldt, geldt niet automatisch voor elektriciteit. De optimale contractvorm verschilt per type energie én per verbruiksprofiel. Hoe meer je je verbruik kunt sturen en spreiden, hoe meer contractvrijheid je je kunt permitteren.</p>
+  <p style="color:var(--subtekst);line-height:1.7;margin-bottom:20px;">Duurzame opwek — zoals zonne-energie — speelt daarin een steeds grotere rol. Zelf energie opwekken verlaagt je afhankelijkheid van de markt, versterkt je energiepositie op de lange termijn én is financieel gewoon aantrekkelijk. Niet omdat het moet van de overheid, maar omdat het verstandig is.</p>';
 $two_col_cta       = ['tekst' => 'Meer over energie-inkoopadvies →', 'url' => '/energie-inkoop-advies/', 'stijl' => 'outline'];
 $two_col_rechts    = '
   <div style="display:flex;flex-direction:column;gap:20px;">
     <div class="icon-tekst">
       <div class="icon-tekst__icoon"><svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
-      <div class="icon-tekst__content"><div class="icon-tekst__titel">Marktdynamiek begrijpen</div><div class="icon-tekst__tekst">Gasopslagstanden, geopolitieke ontwikkelingen en seizoenen bepalen mede uw energieprijs. Wie dit begrijpt, kan beter timen.</div></div>
+      <div class="icon-tekst__content"><div class="icon-tekst__titel">Marktdynamiek begrijpen</div><div class="icon-tekst__tekst">Gasopslagstanden, geopolitieke ontwikkelingen en seizoenen bepalen mede je energieprijs. Wie dit begrijpt, kan beter timen.</div></div>
     </div>
     <div class="icon-tekst">
       <div class="icon-tekst__icoon"><svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg></div>
@@ -208,11 +208,11 @@ $two_col_rechts    = '
     </div>
     <div class="icon-tekst">
       <div class="icon-tekst__icoon"><svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg></div>
-      <div class="icon-tekst__content"><div class="icon-tekst__titel">Verbruik sturen = meer vrijheid</div><div class="icon-tekst__tekst">Hoe flexibeler uw verbruik, hoe beter u kunt profiteren van dynamische contractvormen en lagere piekprijzen.</div></div>
+      <div class="icon-tekst__content"><div class="icon-tekst__titel">Verbruik sturen = meer vrijheid</div><div class="icon-tekst__tekst">Hoe flexibeler je verbruik, hoe beter je kunt profiteren van dynamische contractvormen en lagere piekprijzen.</div></div>
     </div>
     <div class="icon-tekst">
       <div class="icon-tekst__icoon"><svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div>
-      <div class="icon-tekst__content"><div class="icon-tekst__titel">Zelf energie opwekken als strategie</div><div class="icon-tekst__tekst">Eigen opwekking geeft u prijszekerheid, minder marktafhankelijkheid en lagere kosten. Een zakelijk verstandige keuze — niet alleen een groene.</div></div>
+      <div class="icon-tekst__content"><div class="icon-tekst__titel">Zelf energie opwekken als strategie</div><div class="icon-tekst__tekst">Eigen opwekking geeft je prijszekerheid, minder marktafhankelijkheid en lagere kosten. Een zakelijk verstandige keuze, niet alleen een groene.</div></div>
     </div>
   </div>';
 include $root . 'includes/components/section-two-col.php';
@@ -225,9 +225,9 @@ $two_col_tekst     = '';
 $two_col_omgekeerd = true;
 $two_col_cta       = [];
 $two_col_links     = '
-  <p style="color:var(--subtekst);line-height:1.7;margin-bottom:14px;">Een energielabel laat zien hoe uw gebouw presteert in vergelijking met andere, vergelijkbare panden. Dat maakt het een krachtige nulmeting: het geeft u een objectieve uitgangswaarde voor een verbetertraject.</p>
-  <p style="color:var(--subtekst);line-height:1.7;margin-bottom:14px;">Vanaf die nulmeting kunt u gefaseerd verbeteren — denk aan betere isolatie, efficiëntere installaties of de overstap naar hernieuwbare opwekking. Elk verbeterproject verlaagt uw energiekosten én verbetert uw label.</p>
-  <p style="color:var(--subtekst);line-height:1.7;margin-bottom:20px;">Wilt u nóg meer inzicht? Dan kunt u het energielabel koppelen aan aanvullende indicatoren die iets zeggen over zowel de gebouwprestatie als het werkelijke gebruik, zoals de <strong>WEII-indicator</strong>. Die combinatie geeft u een volledig beeld: hoe presteert het gebouw, én hoe efficiënt wordt het gebruikt?</p>
+  <p style="color:var(--subtekst);line-height:1.7;margin-bottom:14px;">Een energielabel laat zien hoe jouw gebouw presteert in vergelijking met andere, vergelijkbare panden. Dat maakt het een krachtige nulmeting: het geeft je een objectieve uitgangswaarde voor een verbetertraject.</p>
+  <p style="color:var(--subtekst);line-height:1.7;margin-bottom:14px;">Vanaf die nulmeting kun je gefaseerd verbeteren — denk aan betere isolatie, efficiëntere installaties of de overstap naar hernieuwbare opwekking. Elk verbeterproject verlaagt je energiekosten én verbetert je label.</p>
+  <p style="color:var(--subtekst);line-height:1.7;margin-bottom:20px;">Wil je nóg meer inzicht? Dan kun je het energielabel koppelen aan aanvullende indicatoren die iets zeggen over zowel de gebouwprestatie als het werkelijke gebruik, zoals de <strong>WEII-indicator</strong>. Die combinatie geeft je een volledig beeld: hoe presteert het gebouw, én hoe efficiënt wordt het gebruikt?</p>
   <div style="display:flex;gap:12px;flex-wrap:wrap;">
     <a href="/energielabels/utiliteit/" class="btn btn--primair">Energielabel bedrijfspand</a>
     <a href="/energielabels/woningen/" class="btn btn--outline">Energielabel woning</a>
@@ -259,10 +259,10 @@ $stappen_titel   = 'Zo werkt STAP Energie';
 $stappen_intro   = 'Helder proces, geen verrassingen. Van eerste contact tot advies op maat.';
 $stappen_cols    = 4;
 $stappen_items   = [
-  ['nummer' => 1, 'titel' => 'Kennismakingsgesprek',   'tekst' => 'We beginnen altijd met een kort gesprek om uw situatie te begrijpen. Wat is uw verbruiksprofiel, wat zijn uw doelstellingen en wat zijn de meest urgente vraagstukken?'],
-  ['nummer' => 2, 'titel' => 'Offerte & opdracht',      'tekst' => 'U ontvangt een heldere offerte op basis van het kennismakingsgesprek. Na akkoord gaan wij officieel voor u aan de slag — geen verrassingen achteraf.'],
-  ['nummer' => 3, 'titel' => 'Analyse & nulmeting',     'tekst' => 'Op basis van uw verbruiksdata, contracten en gebouwinformatie stellen wij een helder beeld op van uw huidige situatie. Dat is de basis voor elk goed advies.'],
-  ['nummer' => 4, 'titel' => 'Advies & begeleiding',    'tekst' => 'U ontvangt een concreet, onderbouwd advies en wij begeleiden de uitvoering. Energiemarkten veranderen — wij zorgen dat uw strategie actueel blijft.'],
+  ['nummer' => 1, 'titel' => 'Kennismakingsgesprek',   'tekst' => 'We beginnen altijd met een kort gesprek om jouw situatie te begrijpen. Wat is jouw verbruiksprofiel, wat zijn jouw doelstellingen en wat zijn de meest urgente vraagstukken?'],
+  ['nummer' => 2, 'titel' => 'Offerte & opdracht',      'tekst' => 'Je ontvangt een heldere offerte op basis van het kennismakingsgesprek. Na akkoord gaan wij officieel voor je aan de slag — geen verrassingen achteraf.'],
+  ['nummer' => 3, 'titel' => 'Analyse & nulmeting',     'tekst' => 'Op basis van jouw verbruiksdata, contracten en gebouwinformatie stellen wij een helder beeld op van jouw huidige situatie. Dat is de basis voor elk goed advies.'],
+  ['nummer' => 4, 'titel' => 'Advies & begeleiding',    'tekst' => 'Je ontvangt een concreet, onderbouwd advies en wij begeleiden de uitvoering. Energiemarkten veranderen — wij zorgen dat je strategie actueel blijft.'],
 ];
 include $root . 'includes/components/section-stappen.php';
 

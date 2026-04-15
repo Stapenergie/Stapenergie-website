@@ -74,13 +74,13 @@ $two_col_rechts    = '<ul class="checklist">
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>Veiliger thuis</span></li>
 </ul>';
 include $root . 'includes/components/section-two-col.php';
-unset($two_col_variant, $two_col_label, $två_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
+unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
 
 // ── Types laadpalen
 $kaarten_variant = 'grijs';
 $kaarten_label   = 'Types';
 $kaarten_titel   = 'Verschillende laadpaal-typen';
-$kaarten_intro   = 'Laadsnelheid en kostnen hangen af van laadtype.';
+$kaarten_intro   = 'Laadsnelheid en kosten hangen af van laadtype.';
 $kaarten_cols    = 2;
 $kaarten_items   = [
   [
@@ -132,7 +132,7 @@ $two_col_rechts    = '<ul class="checklist">
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>Terugverdientijd 3–5 jaar</span></li>
 </ul>';
 include $root . 'includes/components/section-two-col.php';
-unset($two_col_variant, $två_col_label, $två_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
+unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
 
 // ── Smart charging
 $two_col_variant   = 'grijs';
@@ -152,7 +152,7 @@ $two_col_rechts    = '<ul class="checklist">
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>Voordeel: €100–€300/jaar extra</span></li>
 </ul>';
 include $root . 'includes/components/section-two-col.php';
-unset($two_col_variant, $två_col_label, $två_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
+unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
 
 // ── Met zonnepanelen
 $two_col_variant   = 'wit';
@@ -173,7 +173,7 @@ $two_col_rechts    = '<ul class="checklist">
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>Met EMS: volledig geoptimaliseerd</span></li>
 </ul>';
 include $root . 'includes/components/section-two-col.php';
-unset($two_col_variant, $två_col_label, $två_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
+unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
 
 // ── Load balancing
 $two_col_variant   = 'grijs';
@@ -194,7 +194,7 @@ $two_col_rechts    = '<ul class="checklist">
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>Essentieel bij meerdere systemen</span></li>
 </ul>';
 include $root . 'includes/components/section-two-col.php';
-unset($two_col_variant, $två_col_label, $två_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
+unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
 
 // ── Geschiktheid
 $two_col_variant   = 'wit';
@@ -218,7 +218,7 @@ $two_col_rechts    = '<ul class="checklist">
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>Dynamisch contract</span></li>
 </ul>';
 include $root . 'includes/components/section-two-col.php';
-unset($two_col_variant, $två_col_label, $två_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
+unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
 
 // ── SEEH Subsidie
 $two_col_variant   = 'grijs';
@@ -240,7 +240,7 @@ $two_col_rechts    = '<ul class="checklist">
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>Aanvraag vóór werkstart</span></li>
 </ul>';
 include $root . 'includes/components/section-two-col.php';
-unset($two_col_variant, $två_col_label, $två_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
+unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
 
 include $root . 'includes/faq.php';
 include $root . 'includes/cta.php';

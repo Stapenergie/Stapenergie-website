@@ -10,7 +10,7 @@ $hero_variant  = 'sub';
 $hero_bg       = '/images/hero-verduurzaming-hub.jpg';
 $hero_eyebrow  = 'Verduurzaming & Subsidie';
 $hero_titel    = 'Eerst besparen,<br>dan opwekken';
-$hero_lead     = 'De meeste bedrijven beginnen bij de verkeerde stap. Ze investeren in zonnepanelen terwijl de verwarming nog de hele dag onnodig draait. Wij beginnen bij de vraag: waar zit uw verbruik eigenlijk?';
+$hero_lead     = 'De meeste bedrijven beginnen bij de verkeerde stap. Ze investeren in zonnepanelen terwijl de verwarming nog de hele dag onnodig draait. Wij beginnen bij de vraag: waar zit jouw verbruik eigenlijk?';
 $hero_usps     = [
     'Onafhankelijk — geen productbelang',
     'Juiste volgorde, geen onnodige investering',
@@ -35,23 +35,23 @@ $faq_items = [
     ],
     [
         'vraag'    => 'Moet ik alles in één keer aanpakken?',
-        'antwoord' => 'Nee — en dat zou ook zelden slim zijn. Een goed verduurzamingsplan sluit aan bij de onderhoudsmomenten die u toch al gepland heeft. Kozijnen die worden vervangen? Dan ook meteen beter glas. Dak dat aan onderhoud toe is? Dan ook isoleren. Wie de juiste volgorde aanhoudt, heeft nooit spijt van een eerder genomen maatregel.',
+        'antwoord' => 'Nee — en dat zou ook zelden slim zijn. Een goed verduurzamingsplan sluit aan bij de onderhoudsmomenten die je toch al gepland hebt. Kozijnen die worden vervangen? Dan ook meteen beter glas. Dak dat aan onderhoud toe is? Dan ook isoleren. Wie de juiste volgorde aanhoudt, heeft nooit spijt van een eerder genomen maatregel.',
     ],
     [
         'vraag'    => 'Welke subsidies zijn er voor mijn bedrijf?',
-        'antwoord' => 'Voor zakelijke verduurzaming zijn de ISDE (warmtepompen, isolatie), de EIA (energiezuinige bedrijfsmiddelen) en de SDE++ (hernieuwbare energieopwekking) de meest relevante regelingen. Welke combinatie het meest oplevert, hangt af van uw situatie, uw belastingpositie en de geplande maatregelen. STAP Energie brengt dat voor u in kaart.',
+        'antwoord' => 'Voor zakelijke verduurzaming zijn de ISDE (warmtepompen, isolatie), de EIA (energiezuinige bedrijfsmiddelen) en de SDE++ (hernieuwbare energieopwekking) de meest relevante regelingen. Welke combinatie het meest oplevert, hangt af van jouw situatie, jouw belastingpositie en de geplande maatregelen. STAP Energie brengt dat voor je in kaart.',
     ],
     [
         'vraag'    => 'Heb ik een energielabel nodig voor ik begin met verduurzamen?',
-        'antwoord' => 'Een energielabel is een uitstekende nulmeting — het geeft u een objectief beeld van hoe uw gebouw presteert en waar de grootste winst te behalen is. Het is niet wettelijk verplicht als startpunt voor verduurzaming, maar het maakt uw beslissingen een stuk scherper. Zeker voor kantoren van 100 m² of groter, die al een labelplicht hebben, is het een logische eerste stap.',
+        'antwoord' => 'Een energielabel is een uitstekende nulmeting — het geeft je een objectief beeld van hoe jouw gebouw presteert en waar de grootste winst te behalen is. Het is niet wettelijk verplicht als startpunt voor verduurzaming, maar het maakt jouw beslissingen een stuk scherper. Zeker voor kantoren van 100 m² of groter, die al een labelplicht hebben, is het een logische eerste stap.',
     ],
     [
         'vraag'    => 'Wat kost een adviesgesprek bij STAP Energie?',
-        'antwoord' => "Een eerste kennismakingsgesprek is vrijblijvend en gratis. Daarin brengen we uw situatie in kaart en kijken we samen welke stap voor u het meest logisch is. Op basis van dat gesprek ontvangt u een heldere offerte — zonder verborgen kosten.",
+        'antwoord' => "Een eerste kennismakingsgesprek is vrijblijvend en gratis. Daarin brengen we jouw situatie in kaart en kijken we samen welke stap voor je het meest logisch is. Op basis van dat gesprek ontvang je een heldere offerte — zonder verborgen kosten.",
     ],
     [
         'vraag'    => 'Mijn leverancier stelt warmtepompen voor. Is dat een goed advies?',
-        'antwoord' => 'Misschien — maar het hangt af van uw situatie. Een warmtepomp werkt het best in een goed geïsoleerd gebouw. Zonder voldoende isolatiewaarde betaalt u waarschijnlijk meer dan nodig. Dat is precies waarom wij beginnen met inzicht en volgorde, niet met een product. Als de warmtepomp de juiste stap is, adviseren we die ook — maar pas op het juiste moment.',
+        'antwoord' => 'Misschien — maar het hangt af van jouw situatie. Een warmtepomp werkt het best in een goed geïsoleerd gebouw. Zonder voldoende isolatiewaarde betaal je waarschijnlijk meer dan nodig. Dat is precies waarom wij beginnen met inzicht en volgorde, niet met een product. Als de warmtepomp de juiste stap is, adviseren we die ook — maar pas op het juiste moment.',
     ],
 ];
 ?>
@@ -71,7 +71,7 @@ $kaarten_cols    = 3;
 $kaarten_items = [
     [
         'foto'     => '/images/dienst-inkoop.jpg',
-        'foto_alt' => 'Lagere energiekosten voor uw bedrijf',
+        'foto_alt' => 'Lagere energiekosten voor je bedrijf',
         'titel'    => 'Lagere kosten',
         'tekst'    => 'Energie is voor de meeste bedrijven de grootste variabele kostenpost. Wie zijn verbruik structureel verlaagt, betaalt minder — ongeacht waar de energieprijs naartoe beweegt.',
     ],
@@ -79,11 +79,11 @@ $kaarten_items = [
         'foto'     => '/images/hero-bedrijfspand.jpg',
         'foto_alt' => 'Minder afhankelijk van de energiemarkt',
         'titel'    => 'Minder afhankelijk',
-        'tekst'    => 'Een besluit in Moskou, een storm in de Noordzee — de energieprijs wordt bepaald door factoren waar u geen invloed op heeft. Wie zijn eigen verbruik verlaagt en deels zelf opwekt, verkleint die afhankelijkheid structureel.',
+        'tekst'    => 'Een besluit in Moskou, een storm in de Noordzee — de energieprijs wordt bepaald door factoren waar je geen invloed op hebt. Wie zijn eigen verbruik verlaagt en deels zelf opwekt, verkleint die afhankelijkheid structureel.',
     ],
     [
         'foto'     => '/images/erik-zakelijk.jpg',
-        'foto_alt' => 'Betere financierbaarheid van uw vastgoed',
+        'foto_alt' => 'Betere financierbaarheid van jouw vastgoed',
         'titel'    => 'Betere financierbaarheid',
         'tekst'    => 'Banken sturen stil maar consequent op verduurzaming. Bij een financieringsaanvraag wordt steeds vaker gevraagd naar energieverbruik en gebouwprestatie. Een slecht energieprofiel kost u rente — of het gesprek überhaupt.',
     ],
@@ -132,8 +132,8 @@ $stappen_cols    = 3;
 $stappen = [
     [
         'nummer' => '1',
-        'titel'  => 'Inzicht in uw verbruik',
-        'tekst'  => 'Weet wat u verbruikt — wanneer, waarvoor en hoeveel. In verrassend veel gevallen heeft men hier geen idee van. Een energielabel of verbruiksanalyse geeft u de nulmeting die elk goed plan nodig heeft.',
+        'titel'  => 'Inzicht in jouw verbruik',
+        'tekst'  => 'Weet wat je verbruikt — wanneer, waarvoor en hoeveel. In verrassend veel gevallen heeft men hier geen idee van. Een energielabel of verbruiksanalyse geeft je de nulmeting die elk goed plan nodig heeft.',
         'extra'  => '<a href="' . $root . 'energielabels/" class="stap__link">Meer over energielabels →</a>',
     ],
     [
@@ -145,7 +145,7 @@ $stappen = [
     [
         'nummer' => '3',
         'titel'  => 'Kleine, goedkope maatregelen',
-        'tekst'  => 'LED-verlichting (als u dat al niet heeft, is het gewoon hygiëne). Bewegingssensoren. CO₂-gestuurde ventilatie. Tijdklokken op installaties die onnodig draaien. Lage investering, korte terugverdientijd, direct resultaat.',
+        'tekst'  => 'LED-verlichting (als je dat al niet hebt, is het gewoon hygiëne). Bewegingssensoren. CO₂-gestuurde ventilatie. Tijdklokken op installaties die onnodig draaien. Lage investering, korte terugverdientijd, direct resultaat.',
         'extra'  => '',
     ],
     [
@@ -163,7 +163,7 @@ $stappen = [
     [
         'nummer' => '6',
         'titel'  => 'Opwekken en opslaan',
-        'tekst'  => 'Zonnepanelen en batterijen. De kroon op een goed verduurzamingstraject — maar pas zinvol als de vraagkant is aangepakt. Anders investeert u te veel in opwek voor een verbruik dat u had kunnen halveren.',
+        'tekst'  => 'Zonnepanelen en batterijen. De kroon op een goed verduurzamingstraject — maar pas zinvol als de vraagkant is aangepakt. Anders investeer je te veel in opwek voor een verbruik dat je had kunnen halveren.',
         'extra'  => '',
     ],
 ];
@@ -175,14 +175,14 @@ unset($stappen_label, $stappen_titel, $stappen_intro, $stappen_variant, $stappen
 /* ── SECTIE 4: Subsidies ── */
 $kaarten_label   = 'Subsidies';
 $kaarten_titel   = 'Wat er nu beschikbaar is';
-$kaarten_intro   = 'Subsidies verlagen de terugverdientijd van maatregelen aanzienlijk — maar welke regeling het meest oplevert, hangt af van uw situatie. De belangrijkste regelingen op een rij.';
+$kaarten_intro   = 'Subsidies verlagen de terugverdientijd van maatregelen aanzienlijk — maar welke regeling het meest oplevert, hangt af van jouw situatie. De belangrijkste regelingen op een rij.';
 $kaarten_variant = 'wit';
 $kaarten_cols    = 2;
 $kaarten_items = [
     [
         'titel'     => 'Voor particulieren',
         'badge'     => 'Particulier',
-        'tekst'     => 'Als woningeigenaar heeft u toegang tot de SEEH (subsidie voor spouwmuur-, vloer- en dakisolatie), de ISDE (warmtepompen en zonneboilers) en de Energiebespaarlening via het Warmtefonds. Gemeenten bieden soms aanvullende regelingen.',
+        'tekst'     => 'Als woningeigenaar heb je toegang tot de SEEH (subsidie voor spouwmuur-, vloer- en dakisolatie), de ISDE (warmtepompen en zonneboilers) en de Energiebespaarlening via het Warmtefonds. Gemeenten bieden soms aanvullende regelingen.',
         'cta_tekst' => 'Meer voor particulieren →',
         'cta_url'   => $root . 'verduurzaming-subsidie/particulieren/',
         'cta_stijl' => 'link',
@@ -205,7 +205,7 @@ unset($kaarten_label, $kaarten_titel, $kaarten_intro, $kaarten_variant, $kaarten
 /* ── SECTIE 5: Segment-keuze ── */
 $kaarten_label   = 'Voor wie';
 $kaarten_titel   = 'Particulier of zakelijk?';
-$kaarten_intro   = 'De aanpak, subsidiemogelijkheden en volgorde verschillen per situatie. Kies uw situatie voor gerichte informatie.';
+$kaarten_intro   = 'De aanpak, subsidiemogelijkheden en volgorde verschillen per situatie. Kies jouw situatie voor gerichte informatie.';
 $kaarten_variant = 'grijs';
 $kaarten_cols    = 2;
 $kaarten_items = [
@@ -213,7 +213,7 @@ $kaarten_items = [
         'foto'      => '/images/hero-woningen.jpg',
         'foto_alt'  => 'Verduurzaming voor woningeigenaren',
         'titel'     => 'Woningeigenaar',
-        'tekst'     => 'U wilt uw woning verduurzamen en weten welke maatregelen het meest opleveren — en welke subsidies u kunt combineren.',
+        'tekst'     => 'Je wilt jouw woning verduurzamen en weten welke maatregelen het meest opleveren — en welke subsidies je kunt combineren.',
         'cta_tekst' => 'Naar particulieren →',
         'cta_url'   => $root . 'verduurzaming-subsidie/particulieren/',
         'cta_stijl' => 'secundair',
@@ -222,7 +222,7 @@ $kaarten_items = [
         'foto'       => '/images/dienst-verduurzaming.jpg',
         'foto_alt'   => 'Verduurzaming voor bedrijven en vastgoed',
         'titel'      => 'Bedrijf of vastgoed',
-        'tekst'      => 'U heeft een bedrijfspand, kantoor of vastgoedportefeuille en wilt weten hoe u slim én in de juiste volgorde verduurzaamt.',
+        'tekst'      => 'Je hebt een bedrijfspand, kantoor of vastgoedportefeuille en wilt weten hoe je slim én in de juiste volgorde verduurzaamt.',
         'cta_tekst'  => 'Vraag een adviesgesprek aan →',
         'cta_url'    => '#contact',
         'cta_stijl'  => 'primair',
@@ -241,8 +241,8 @@ $f_pagina = 'verduurzaming-subsidie';
 <section id="contact" class="sectie sectie--wit">
     <div class="sectie__inner">
         <span class="sectie__label">Contact</span>
-        <h2 class="sectie__titel">Waar begint u?</h2>
-        <p class="sectie__intro">Een eerste gesprek is vrijblijvend. We brengen uw situatie in kaart en kijken samen welke stap het meest logisch is — zonder verkoopbelang.</p>
+        <h2 class="sectie__titel">Waar begin je?</h2>
+        <p class="sectie__intro">Een eerste gesprek is vrijblijvend. We brengen jouw situatie in kaart en kijken samen welke stap het meest logisch is — zonder verkoopbelang.</p>
     </div>
     <?php include $root . 'includes/formulier.php'; ?>
 </section>
@@ -252,7 +252,7 @@ $f_pagina = 'verduurzaming-subsidie';
 
 <?php
 $cta_titel = 'Niet alles hoeft in één keer.';
-$cta_tekst = "Maar beginnen met de goede vraag scheelt u soms tienduizenden euro's. Neem contact op voor een vrijblijvend adviesgesprek.";
+$cta_tekst = "Maar beginnen met de goede vraag scheelt je soms tienduizenden euro's. Neem contact op voor een vrijblijvend adviesgesprek.";
 $cta_url   = '#contact';
 $cta_knop  = 'Gratis adviesgesprek aanvragen';
 include $root . 'includes/cta.php';

@@ -5,7 +5,7 @@
  */
 $root        = dirname(dirname(__FILE__)) . '/';
 $title       = 'Energielabel Aanvragen | Officieel & Erkend | STAP Energie';
-$description = 'Officieel energielabel voor uw woning of bedrijfspand. Gecertificeerd EPA-adviseur, vaste prijzen, heel Nederland. Reactie binnen twee werkdagen.';
+$description = 'Officieel energielabel voor je woning of bedrijfspand. Gecertificeerd EPA-adviseur, vaste prijzen, heel Nederland. Reactie binnen twee werkdagen.';
 $canonical   = 'https://stapenergie.nl/energielabels/';
 
 $breadcrumbs = [
@@ -13,7 +13,7 @@ $breadcrumbs = [
   ['label' => 'Energielabels'],
 ];
 
-$cta_titel     = 'Klaar om uw energielabel aan te vragen?';
+$cta_titel     = 'Klaar om je energielabel aan te vragen?';
 $cta_subtitel  = 'Vul het aanvraagformulier in en STAP Energie neemt binnen twee werkdagen contact op.';
 $cta_knop      = 'Energielabel aanvragen →';
 $cta_knop_url  = '#aanvraag';
@@ -23,13 +23,13 @@ $faq_label = 'Veelgestelde vragen';
 $faq_titel = 'Alles over het energielabel';
 $faq_items = [
   ['vraag' => 'Wanneer is een energielabel verplicht?',
-   'antwoord' => 'Een energielabel is verplicht bij verkoop, verhuur of oplevering van een woning of bedrijfspand. Zonder geldig label riskeert u een boete van de Inspectie Leefomgeving en Transport (ILT).'],
+   'antwoord' => 'Een energielabel is verplicht bij verkoop, verhuur of oplevering van een woning of bedrijfspand. Zonder geldig label riskeer je een boete van de Inspectie Leefomgeving en Transport (ILT).'],
   ['vraag' => 'Hoe lang is een energielabel geldig?',
-   'antwoord' => 'Een energielabel is 10 jaar geldig na registratie in EP-online. Na verduurzamingsmaatregelen kunt u uw label laten aanpassen via herlabelen.'],
+   'antwoord' => 'Een energielabel is 10 jaar geldig na registratie in EP-online. Na verduurzamingsmaatregelen kun je je label laten aanpassen via herlabelen.'],
   ['vraag' => 'Wat is het verschil tussen een woning- en een utiliteitslabel?',
    'antwoord' => 'Het woninglabel geldt voor alle woningen. Het utiliteitslabel geldt voor kantoren, winkels, zorggebouwen en andere niet-woningen. De methodiek verschilt per gebouwtype.'],
   ['vraag' => 'Hoe lang duurt de opname?',
-   'antwoord' => 'Een woningopname duurt gemiddeld 1 à 2 uur. Voor een bedrijfspand hangt de duur af van de omvang en het type gebouw. Na de opname ontvangt u het label doorgaans binnen één week.'],
+   'antwoord' => 'Een woningopname duurt gemiddeld 1 à 2 uur. Voor een bedrijfspand hangt de duur af van de omvang en het type gebouw. Na de opname ontvang je het label doorgaans binnen één week.'],
   ['vraag' => 'Wat kost een energielabel?',
    'antwoord' => 'De prijs hangt af van het type en de oppervlakte. Voor woningen starten de prijzen vanaf € 195 incl. btw. Voor bedrijfspanden vanaf € 495 excl. btw.'],
 ];
@@ -47,7 +47,7 @@ include $root . 'includes/components/section-highlight.php';
 $hero_variant  = 'sub';
 $hero_bg       = '/images/hero-bedrijfspand.jpg';
 $hero_eyebrow  = 'Officieel & erkend energielabel';
-$hero_titel    = 'Energielabel voor uw woning of <em>bedrijfspand</em>';
+$hero_titel    = 'Energielabel voor je woning of <em>bedrijfspand</em>';
 $hero_lead     = 'Verplicht bij verkoop, verhuur en oplevering. STAP Energie verzorgt officiële energielabels voor woningen én utiliteit — gecertificeerd, snel en voor een vaste prijs.';
 $hero_usps     = [
   'Officieel erkend & geregistreerd in EP-online',
@@ -69,7 +69,7 @@ include $root . 'includes/labelcheck.php';
 
 // ── Segmentkaarten
 $kaarten_variant = 'wit';
-$kaarten_label   = 'Kies uw situatie';
+$kaarten_label   = 'Kies je situatie';
 $kaarten_titel   = 'Energielabel voor woning of bedrijfspand';
 $kaarten_intro   = 'Afhankelijk van het type gebouw gelden andere regels, methodieken en prijzen.';
 $kaarten_cols    = 2;
@@ -109,7 +109,7 @@ include $root . 'includes/components/section-kaarten.php';
 <section class="sectie sectie--grijs" id="aanvraag">
   <div class="sectie__inner">
     <span class="sectie__label">Aanvragen</span>
-    <h2 class="sectie__titel">Vraag direct uw energielabel aan</h2>
+    <h2 class="sectie__titel">Vraag direct je energielabel aan</h2>
     <p class="sectie__intro">Vul het formulier in — wij nemen binnen twee werkdagen contact op.</p>
     <?php
     $f_dienst = 'label';
@@ -129,9 +129,9 @@ $stappen_intro   = 'Transparant, snel en zonder gedoe — STAP Energie regelt he
 $stappen_cols    = 4;
 $stappen_items   = [
   ['nummer' => 1, 'titel' => 'Aanvraag indienen',   'tekst' => 'Vul het formulier in of bel direct. Binnen twee werkdagen nemen we contact op voor een afspraak.'],
-  ['nummer' => 2, 'titel' => 'Voorbereiding',        'tekst' => 'U ontvangt een overzicht van wat u kunt klaarzetten voor een soepele opname.'],
+  ['nummer' => 2, 'titel' => 'Voorbereiding',        'tekst' => 'Je ontvangt een overzicht van wat je kunt klaarzetten voor een soepele opname.'],
   ['nummer' => 3, 'titel' => 'Opname ter plaatse',   'tekst' => 'Een gecertificeerd EPA-adviseur komt langs voor een grondige inspectie.'],
-  ['nummer' => 4, 'titel' => 'Label ontvangen',      'tekst' => 'Binnen één week ontvangt u het officieel geregistreerde label + adviesrapport.'],
+  ['nummer' => 4, 'titel' => 'Label ontvangen',      'tekst' => 'Binnen één week ontvang je het officieel geregistreerde label + adviesrapport.'],
 ];
 include $root . 'includes/components/section-stappen.php';
 
@@ -143,7 +143,7 @@ $two_col_tekst   = 'Een energielabel geeft aan hoe energiezuinig een gebouw is �
 $two_col_rechts  = '
   <div class="infobox infobox--info" style="margin-bottom:16px;">
     <span class="infobox__icoon">ℹ️</span>
-    <div class="infobox__tekst"><strong>Wist u dat?</strong> Een woning met label A is gemiddeld 2–5% meer waard dan een vergelijkbare woning met label C of lager.</div>
+    <div class="infobox__tekst"><strong>Wist je dat?</strong> Een woning met label A is gemiddeld 2–5% meer waard dan een vergelijkbare woning met label C of lager.</div>
   </div>
   <ul class="checklist">
     <li class="checklist__item"><span class="checklist__vink">✓</span><span>Verplicht bij verkoop, verhuur en oplevering</span></li>
@@ -156,7 +156,7 @@ include $root . 'includes/components/section-two-col.php';
 // ── Wetgeving tabs
 $tabs_variant = 'grijs';
 $tabs_label   = 'Regelgeving';
-$tabs_titel   = 'Wanneer bent u verplicht?';
+$tabs_titel   = 'Wanneer ben je verplicht?';
 $tabs_intro   = 'Het energielabel is wettelijk verplicht in diverse situaties. De regels gelden voor zowel woningeigenaren als zakelijke gebouweigenaren.';
 $tabs_id      = 'wetgeving';
 $tabs_items   = [
@@ -164,13 +164,13 @@ $tabs_items   = [
     'tab_label' => '🏠 Particulier / Woningen',
     'items'     => [
       ['icoon' => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>',
-       'titel' => 'Verplicht bij verkoop en verhuur', 'tekst' => 'Bij overdracht of verhuur van een woning bent u wettelijk verplicht een geldig label te overhandigen. Boete bij ontbreken: tot € 435.'],
+       'titel' => 'Verplicht bij verkoop en verhuur', 'tekst' => 'Bij overdracht of verhuur van een woning ben je wettelijk verplicht een geldig label te overhandigen. Boete bij ontbreken: tot € 435.'],
       ['icoon' => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>',
        'titel' => 'Hogere verkoopwaarde', 'tekst' => 'Een woning met label A is gemiddeld 2–5% meer waard. Kopers en banken letten steeds meer op het label.'],
       ['icoon' => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="8" width="18" height="13" rx="1"/><path d="M16 8V6a4 4 0 00-8 0v2"/></svg>',
        'titel' => 'Hypotheekvoordeel bij A/B label', 'tekst' => 'Grootbanken bieden tot 0,3% rentevoordeel op hypotheken voor woningen met label A of B.'],
       ['icoon' => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 21V8l8-5 8 5v13"/><path d="M9 21v-6h6v6"/></svg>',
-       'titel' => 'Herlabelen na verduurzaming', 'tekst' => 'Na isolatie, nieuwe ramen of een warmtepomp kunt u uw label laten aanpassen. Mogelijk binnen 24 maanden na de opname.'],
+       'titel' => 'Herlabelen na verduurzaming', 'tekst' => 'Na isolatie, nieuwe ramen of een warmtepomp kun je je label laten aanpassen. Mogelijk binnen 24 maanden na de opname.'],
     ],
   ],
   [
@@ -218,7 +218,7 @@ include $root . 'includes/components/section-kaarten.php';
 $two_col_variant   = 'grijs';
 $two_col_label     = 'Subsidie & verduurzaming';
 $two_col_titel     = 'Beter label na verduurzaming';
-$two_col_tekst     = 'Heeft u na de opname maatregelen getroffen? Dan kunt u uw label laten verbeteren via herlabelen. STAP Energie adviseert u ook over beschikbare subsidies zoals ISDE, het Warmtefonds en de Nationaal Isolatie Programma.';
+$two_col_tekst     = 'Heb je na de opname maatregelen getroffen? Dan kun je je label laten verbeteren via herlabelen. STAP Energie adviseert je ook over beschikbare subsidies zoals ISDE, het Warmtefonds en de Nationaal Isolatie Programma.';
 $two_col_cta       = ['tekst' => 'Bekijk verduurzaming & subsidies →', 'url' => '/verduurzaming-subsidie/', 'stijl' => 'primair'];
 $two_col_rechts    = '
   <ul class="checklist">
@@ -233,7 +233,7 @@ include $root . 'includes/components/section-two-col.php';
 $two_col_variant   = 'wit';
 $two_col_label     = 'Werkgebied';
 $two_col_titel     = 'Actief in Leusden, Amersfoort en omgeving';
-$two_col_tekst     = 'STAP Energie is gevestigd in Leusden en actief in de gehele regio Utrecht. Voor particulieren in Leusden, Amersfoort, Woudenberg en Achterveld is STAP Energie uw lokale specialist. Voor zakelijke klanten werken we door heel Nederland.';
+$two_col_tekst     = 'STAP Energie is gevestigd in Leusden en actief in de gehele regio Utrecht. Voor particulieren in Leusden, Amersfoort, Woudenberg en Achterveld is STAP Energie jouw lokale specialist. Voor zakelijke klanten werken we door heel Nederland.';
 $two_col_rechts    = '
   <ul class="checklist">
     <li class="checklist__item"><span class="checklist__vink">✓</span><span>Leusden & Amersfoort — thuismarkt</span></li>

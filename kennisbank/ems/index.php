@@ -74,7 +74,7 @@ $two_col_rechts    = '<ul class="checklist">
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>Laagste energiekosten</span></li>
 </ul>';
 include $root . 'includes/components/section-two-col.php';
-unset($two_col_variant, $två_col_label, $två_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $två_col_rechts);
+unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
 
 // ── Hoe werkt het
 $two_col_variant   = 'grijs';
@@ -98,7 +98,7 @@ $two_col_rechts    = '<ul class="checklist">
   <li class="checklist__item"><span class="checklist__vink">5</span><span>Controleer resultaat</span></li>
 </ul>';
 include $root . 'includes/components/section-two-col.php';
-unset($two_col_variant, $två_col_label, $två_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
+unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
 
 // ── Use cases
 $kaarten_variant = 'wit';
@@ -158,7 +158,7 @@ $two_col_rechts    = '<ul class="checklist">
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>Besparing: €300–€600/jaar</span></li>
 </ul>';
 include $root . 'includes/components/section-two-col.php';
-unset($two_col_variant, $två_col_label, $två_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $två_col_rechts);
+unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
 
 // ── Dynamisch contract essentieel
 $two_col_variant   = 'wit';
@@ -179,7 +179,7 @@ $two_col_rechts    = '<ul class="checklist">
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>Zonder: EMS loont niet</span></li>
 </ul>';
 include $root . 'includes/components/section-two-col.php';
-unset($two_col_variant, $två_col_label, $två_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $två_col_rechts);
+unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
 
 // ── Kompatibiliteit
 $two_col_variant   = 'grijs';
@@ -198,7 +198,7 @@ $two_col_rechts    = '<ul class="checklist">
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>STAP adviseert op match</span></li>
 </ul>';
 include $root . 'includes/components/section-two-col.php';
-unset($two_col_variant, $två_col_label, $två_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $två_col_rechts);
+unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
 
 // ── Voor wie geschikt
 $two_col_variant   = 'wit';
@@ -223,7 +223,7 @@ $two_col_rechts    = '<ul class="checklist">
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>Tech-savvy</span></li>
 </ul>';
 include $root . 'includes/components/section-two-col.php';
-unset($two_col_variant, $två_col_label, $två_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $två_col_rechts);
+unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
 
 // ── Privacy en veiligheid
 $two_col_variant   = 'grijs';
@@ -242,7 +242,7 @@ $two_col_rechts    = '<ul class="checklist">
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>Gevestigde merk kiezen</span></li>
 </ul>';
 include $root . 'includes/components/section-two-col.php';
-unset($two_col_variant, $två_col_label, $två_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $två_col_rechts);
+unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
 
 include $root . 'includes/faq.php';
 include $root . 'includes/cta.php';

@@ -69,7 +69,7 @@ $two_col_rechts    = '<ul class="checklist">
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>Keuze hangt af van isolatie</span></li>
 </ul>';
 include $root . 'includes/components/section-two-col.php';
-unset($two_col_variant, $two_col_label, $två_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
+unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
 
 // ── Types ketels
 $kaarten_variant = 'grijs';
@@ -133,7 +133,7 @@ $two_col_rechts    = '<ul class="checklist">
   <li class="checklist__item"><span class="checklist__vink">✗</span><span>Gasprijzen stijgen</span></li>
 </ul>';
 include $root . 'includes/components/section-two-col.php';
-unset($two_col_variant, $two_col_label, $två_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
+unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
 
 // ── Hybride
 $two_col_variant   = 'grijs';
@@ -153,7 +153,7 @@ $two_col_rechts    = '<ul class="checklist">
   <li class="checklist__item"><span class="checklist__vink">-</span><span>Elektra omhoog</span></li>
 </ul>';
 include $root . 'includes/components/section-two-col.php';
-unset($two_col_variant, $two_col_label, $två_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
+unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
 
 // ── Volledig warmtepomp
 $two_col_variant   = 'wit';
@@ -173,7 +173,7 @@ $two_col_rechts    = '<ul class="checklist">
   <li class="checklist__item"><span class="checklist__vink">✗</span><span>Vereist isolatie + elektra</span></li>
 </ul>';
 include $root . 'includes/components/section-two-col.php';
-unset($two_col_variant, $two_col_label, $två_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
+unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
 
 // ── Subsidie
 $two_col_variant   = 'grijs';
@@ -192,7 +192,7 @@ $two_col_rechts    = '<ul class="checklist">
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>Doubling regel: +subsidie</span></li>
 </ul>';
 include $root . 'includes/components/section-two-col.php';
-unset($two_col_variant, $two_col_label, $två_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
+unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
 
 // ── Hoe kiezen?
 $two_col_variant   = 'wit';
@@ -211,7 +211,7 @@ $two_col_rechts    = '<ul class="checklist">
   <li class="checklist__item"><span class="checklist__vink">4</span><span>Adviseur helpt verder</span></li>
 </ul>';
 include $root . 'includes/components/section-two-col.php';
-unset($two_col_variant, $two_col_label, $två_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
+unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
 
 include $root . 'includes/faq.php';
 include $root . 'includes/cta.php';

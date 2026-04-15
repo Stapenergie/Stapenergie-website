@@ -5,7 +5,7 @@
  */
 $root        = dirname(dirname(__FILE__)) . '/';
 $title       = 'Energielabel voor Makelaars | Snel Geleverd | STAP Energie';
-$description = 'Energielabels snel geregeld voor makelaars en hun klanten. Betrouwbaar, officieel geregistreerd, vaste levertijd. Geen verrassingen voor u of uw koper.';
+$description = 'Energielabels snel geregeld voor makelaars en hun klanten. Betrouwbaar, officieel geregistreerd, vaste levertijd. Geen verrassingen voor je of je koper.';
 $canonical   = 'https://stapenergie.nl/makelaars/';
 
 $breadcrumbs = [
@@ -14,7 +14,7 @@ $breadcrumbs = [
   ['label' => 'Makelaars'],
 ];
 
-$cta_titel     = 'Labels snel geregeld voor uw klanten?';
+$cta_titel     = 'Labels snel geregeld voor je klanten?';
 $cta_subtitel  = 'Neem contact op en STAP Energie denkt graag mee over een vaste samenwerking.';
 $cta_knop      = 'Neem contact op →';
 $cta_knop_url  = '#contact';
@@ -24,11 +24,11 @@ $faq_label = 'Veelgestelde vragen';
 $faq_titel = 'Veelgestelde vragen van makelaars';
 $faq_items = [
   ['vraag' => 'Hoe snel kan STAP Energie een label leveren?',
-   'antwoord' => 'In de meeste gevallen is de opname binnen één tot twee weken in te plannen. Na de opname ontvangt uw klant het label doorgaans binnen één week. Heeft u haast vanwege een nakende overdracht? Geef dat aan bij de aanvraag.'],
+   'antwoord' => 'In de meeste gevallen is de opname binnen één tot twee weken in te plannen. Na de opname ontvangt je klant het label doorgaans binnen één week. Heb je haast vanwege een nakende overdracht? Geef dat aan bij de aanvraag.'],
   ['vraag' => 'Kan ik als makelaar een aanvraag doen namens mijn klant?',
-   'antwoord' => 'Ja. U kunt de aanvraag indienen via het formulier op deze pagina, of doorverwijzen naar de klant. STAP Energie stemt de opname af met de eigenaar of huurder en houdt u op de hoogte.'],
+   'antwoord' => 'Ja. Je kunt de aanvraag indienen via het formulier op deze pagina, of doorverwijzen naar de klant. STAP Energie stemt de opname af met de eigenaar of huurder en houdt je op de hoogte.'],
   ['vraag' => 'Wat als mijn klant vergeten is een label aan te vragen voor de overdracht?',
-   'antwoord' => 'Dan helpen wij zo snel mogelijk. Geef de urgentie aan in uw aanvraag. STAP Energie kijkt wat er qua planning mogelijk is. Een spoedopname is in overleg bespreekbaar.'],
+   'antwoord' => 'Dan helpen wij zo snel mogelijk. Geef de urgentie aan in je aanvraag. STAP Energie kijkt wat er qua planning mogelijk is. Een spoedopname is in overleg bespreekbaar.'],
   ['vraag' => 'Kan STAP Energie ook labels leveren voor bedrijfspanden die mijn klanten verkopen?',
    'antwoord' => 'Ja. STAP Energie verzorgt zowel woninglabels als utiliteitslabels. Voor kantoren, winkels en andere bedrijfspanden is de procedure anders dan voor woningen, maar het resultaat is hetzelfde: een officieel geregistreerd label in EP-online.'],
   ['vraag' => 'Biedt STAP Energie speciale tarieven voor makelaars die regelmatig labels aanvragen?',
@@ -43,8 +43,8 @@ include $root . 'includes/breadcrumb.php';
 $hero_variant  = 'sub';
 $hero_bg       = '/images/hero-bedrijfspand.jpg';
 $hero_eyebrow  = 'Energielabels voor makelaars';
-$hero_titel    = 'Uw klant verkoopt. Het label moet er zijn. <em>STAP regelt het.</em>';
-$hero_lead     = 'Een energielabel is bij elke woningtransactie verplicht. Als makelaar wilt u dat geregeld hebben voordat het een probleem wordt. STAP Energie levert snel, betrouwbaar en officieel.';
+$hero_titel    = 'Je klant verkoopt. Het label moet er zijn. <em>STAP regelt het.</em>';
+$hero_lead     = 'Een energielabel is bij elke woningtransactie verplicht. Als makelaar wil je dat geregeld hebben voordat het een probleem wordt. STAP Energie levert snel, betrouwbaar en officieel.';
 $hero_usps     = [
   'Gecertificeerd EPA-adviseur',
   'Officieel geregistreerd in EP-online',
@@ -66,7 +66,7 @@ $two_col_omgekeerd = false;
 $two_col_links     = '
   <p style="color:var(--subtekst);line-height:1.7;margin-bottom:14px;">Een energielabel is verplicht bij de overdracht van een woning. Toch wordt het regelmatig op het laatste moment aangevraagd — soms pas als de koopakte al getekend is. Dat geeft stress voor alle betrokken partijen.</p>
   <p style="color:var(--subtekst);line-height:1.7;margin-bottom:14px;">STAP Energie werkt samen met makelaars die dat willen voorkomen. Snelle levering, heldere communicatie en een vaste aanspreekpersoon. Geen callcenter, geen onzekere levertijden.</p>
-  <p style="color:var(--subtekst);line-height:1.7;margin-bottom:20px;">Bent u makelaar en wilt u betrouwbare labellevering voor uw klanten regelen? Neem contact op om de mogelijkheden te bespreken.</p>';
+  <p style="color:var(--subtekst);line-height:1.7;margin-bottom:20px;">Ben je makelaar en wil je betrouwbare labellevering voor je klanten regelen? Neem contact op om de mogelijkheden te bespreken.</p>';
 $two_col_cta       = ['tekst' => 'Neem contact op →', 'url' => '#contact', 'stijl' => 'primair'];
 $two_col_rechts    = '
   <ul class="checklist">
@@ -123,13 +123,13 @@ include $root . 'includes/components/section-kaarten.php';
 $stappen_variant = 'wit';
 $stappen_label   = 'Hoe het werkt';
 $stappen_titel   = 'Van aanvraag tot officieel label';
-$stappen_intro   = 'Helder en snel. U hoeft er weinig voor te doen.';
+$stappen_intro   = 'Helder en snel. Je hoeft er weinig voor te doen.';
 $stappen_cols    = 4;
 $stappen         = [
-  ['nummer' => 1, 'titel' => 'Aanvraag indienen',  'tekst' => 'U of uw klant vult het formulier in. STAP Energie neemt binnen twee werkdagen contact op voor een afspraak.'],
+  ['nummer' => 1, 'titel' => 'Aanvraag indienen',  'tekst' => 'Je of je klant vult het formulier in. STAP Energie neemt binnen twee werkdagen contact op voor een afspraak.'],
   ['nummer' => 2, 'titel' => 'Opname inplannen',   'tekst' => 'De opname wordt ingepland in afstemming met de bewoner of eigenaar. Doorgaans binnen één tot twee weken.'],
   ['nummer' => 3, 'titel' => 'Opname ter plaatse', 'tekst' => 'Een gecertificeerd EPA-adviseur neemt de woning of het pand op. Gemiddeld 1 a 2 uur voor een woning.'],
-  ['nummer' => 4, 'titel' => 'Label ontvangen',    'tekst' => 'Binnen één week na de opname ontvangt uw klant het officieel geregistreerde energielabel.'],
+  ['nummer' => 4, 'titel' => 'Label ontvangen',    'tekst' => 'Binnen één week na de opname ontvangt je klant het officieel geregistreerde energielabel.'],
 ];
 include $root . 'includes/components/section-stappen.php';
 unset($stappen, $stappen_variant, $stappen_label, $stappen_titel, $stappen_intro, $stappen_cols);

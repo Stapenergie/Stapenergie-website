@@ -14,7 +14,7 @@ $breadcrumbs = [
 ];
 
 $cta_titel     = 'Kennismaken?';
-$cta_subtitel  = 'Plan een vrijblijvend gesprek. Wij beginnen met uw situatie — niet met een standaard verhaal.';
+$cta_subtitel  = 'Plan een vrijblijvend gesprek. Wij beginnen met je situatie — niet met een standaard verhaal.';
 $cta_knop      = 'Plan een kennismakingsgesprek →';
 $cta_knop_url  = '/#contact';
 $cta_garanties = ['15+ jaar ervaring in de energiemarkt', 'Geen productbelang', 'Reactie binnen twee werkdagen'];
@@ -23,7 +23,7 @@ $faq_label = 'Veelgestelde vragen';
 $faq_titel = 'Vragen over STAP Energie';
 $faq_items = [
   ['vraag' => 'Is STAP Energie echt onafhankelijk?',
-   'antwoord' => 'STAP Energie verkoopt geen energiecontracten, geen installaties en geen producten. Wij adviseren — en onze beloning is niet afhankelijk van de keuze die u maakt. Wij werken nooit voor leveranciers of installateurs. Dat maakt het advies anders dan wat u krijgt van een partij die er belang bij heeft dat u tekent.'],
+   'antwoord' => 'STAP Energie verkoopt geen energiecontracten, geen installaties en geen producten. Wij adviseren — en onze beloning is niet afhankelijk van de keuze die je maakt. Wij werken nooit voor leveranciers of installateurs. Dat maakt het advies anders dan wat je krijgt van een partij die er belang bij heeft dat je tekent.'],
   ['vraag' => 'Wat is de achtergrond van Erik Dolman?',
    'antwoord' => 'Erik Dolman werkte 17 jaar aan de leverancierszijde van de energiemarkt. Bij SEFE Energy sloot hij de eerste contracten in Nederland, bouwde hij een partnerkanaal op van nul naar 125 actieve partners, en trainde hij verkoopteams. Bij NieuweStroom leidde hij de verkooporganisatie die groeide naar 100.000 aansluitingen. Hij heeft in de Raad van Toezicht van CIRE gezeten en mede de gedragscode van de energiesector opgesteld. In 2025 richtte hij STAP Energie op om die kennis in te zetten voor de klant.'],
   ['vraag' => 'Voor wie werkt STAP Energie?',
@@ -31,7 +31,7 @@ $faq_items = [
   ['vraag' => 'In welke regio werkt STAP Energie?',
    'antwoord' => 'STAP Energie is gevestigd in Leusden. Particuliere energielabels worden uitgevoerd in een straal van circa 10 km rond Leusden, waaronder Amersfoort, Woudenberg en Scherpenzeel. Zakelijke diensten — energie-inkoopadvies, verduurzamingsadvies en utiliteitslabels — worden aangeboden door heel Nederland.'],
   ['vraag' => 'Wat kost een kennismakingsgesprek?',
-   'antwoord' => 'Een eerste kennismakingsgesprek is vrijblijvend en gratis. Daarin brengen we uw situatie in kaart en kijken we samen welke stap het meest logisch is. Op basis van dat gesprek ontvangt u een heldere offerte — zonder verborgen kosten.'],
+   'antwoord' => 'Een eerste kennismakingsgesprek is vrijblijvend en gratis. Daarin brengen we je situatie in kaart en kijken we samen welke stap het meest logisch is. Op basis van dat gesprek ontvangt je een heldere offerte — zonder verborgen kosten.'],
 ];
 
 include $root . 'includes/head.php';
@@ -42,12 +42,12 @@ include $root . 'includes/breadcrumb.php';
 $hero_variant  = 'sub';
 $hero_bg       = '/images/hero-zakelijk.jpg';
 $hero_eyebrow  = 'Over STAP Energie';
-$hero_titel    = 'Iemand aan uw kant. <em>Die de andere kant van binnenuit kent.</em>';
+$hero_titel    = 'Iemand aan je kant. <em>Die de andere kant van binnenuit kent.</em>';
 $hero_lead     = 'De energiemarkt is ingericht vanuit het perspectief van de leverancier. STAP Energie is opgericht om dat te doorbreken — met insider-kennis, uitsluitend ingezet voor de klant.';
 $hero_usps     = [
   '15+ jaar ervaring aan de leverancierszijde',
   'Gecertificeerd EPA-adviseur',
-  'Geen productbelang — advies in uw belang',
+  'Geen productbelang — advies in je belang',
   'Gevestigd in Leusden, actief door heel Nederland',
 ];
 $hero_cta      = 'Plan een kennismakingsgesprek →';
@@ -71,7 +71,7 @@ $two_col_rechts    = '
   <ul class="checklist">
     <li class="checklist__item"><span class="checklist__vink">✓</span><span>Wij werken nooit voor leveranciers of installateurs</span></li>
     <li class="checklist__item"><span class="checklist__vink">✓</span><span>Geen provisie die ons advies stuurt</span></li>
-    <li class="checklist__item"><span class="checklist__vink">✓</span><span>Wij beginnen altijd bij uw situatie, niet bij onze dienst</span></li>
+    <li class="checklist__item"><span class="checklist__vink">✓</span><span>Wij beginnen altijd bij je situatie, niet bij onze dienst</span></li>
     <li class="checklist__item"><span class="checklist__vink">✓</span><span>Insider-kennis ingezet voor de klant</span></li>
   </ul>';
 include $root . 'includes/components/section-two-col.php';
@@ -88,7 +88,7 @@ $kaarten_items   = [
     'titel'      => 'Missie',
     'uitgelicht' => false,
     'icoon'      => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>',
-    'tekst'      => 'STAP Energie geeft ondernemers en eigenaren grip op hun energiepositie — door onafhankelijk advies van iemand die de markt van binnenuit kent. Grip betekent: begrijpen wat u betaalt, weten wat u kunt veranderen en beslissingen nemen die bij uw situatie passen. Niet bij het product van een leverancier.',
+    'tekst'      => 'STAP Energie geeft ondernemers en eigenaren grip op hun energiepositie — door onafhankelijk advies van iemand die de markt van binnenuit kent. Grip betekent: begrijpen wat je betaalt, weten wat je kunt veranderen en beslissingen nemen die bij je situatie passen. Niet bij het product van een leverancier.',
   ],
   [
     'titel'      => 'Visie',
@@ -182,7 +182,7 @@ $kaarten_items   = [
     'titel'      => 'Energie-inkoopadvies',
     'uitgelicht' => true,
     'icoon'      => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>',
-    'tekst'      => 'De strategische laag. Contractvorm kiezen die past bij uw risicoprofiel. Weten wanneer en hoe in te kopen. Dit is waar de informatieasymmetrie het grootst is — en waar Eriks achtergrond het sterkst is.',
+    'tekst'      => 'De strategische laag. Contractvorm kiezen die past bij je risicoprofiel. Weten wanneer en hoe in te kopen. Dit is waar de informatieasymmetrie het grootst is — en waar Eriks achtergrond het sterkst is.',
     'cta_tekst'  => 'Meer over energie-inkoop →',
     'cta_url'    => '/energie-inkoop-advies/',
     'cta_stijl'  => 'solid',

@@ -69,7 +69,7 @@ $two_col_rechts    = '<ul class="checklist">
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>20–30 jaar levensduur</span></li>
 </ul>';
 include $root . 'includes/components/section-two-col.php';
-unset($two_col_variant, $two_col_label, $två_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
+unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
 
 // ── Types systemen
 $kaarten_variant = 'grijs';
@@ -121,7 +121,7 @@ $two_col_rechts    = '<ul class="checklist">
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>Terugverdien 5–8 jaar</span></li>
 </ul>';
 include $root . 'includes/components/section-two-col.php';
-unset($two_col_variant, $two_col_label, $två_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
+unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
 
 // ── Besparing
 $two_col_variant   = 'grijs';
@@ -140,7 +140,7 @@ $two_col_rechts    = '<ul class="checklist">
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>Winter gasketel back-up</span></li>
 </ul>';
 include $root . 'includes/components/section-two-col.php';
-unset($two_col_variant, $two_col_label, $två_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
+unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
 
 // ── Combinatie zonnepanelen
 $two_col_variant   = 'wit';
@@ -158,7 +158,7 @@ $two_col_rechts    = '<ul class="checklist">
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>Met EMS, volledig geoptime</span></li>
 </ul>';
 include $root . 'includes/components/section-two-col.php';
-unset($two_col_variant, $two_col_label, $två_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
+unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
 
 // ── Voor wie geschikt?
 $two_col_variant   = 'grijs';
@@ -179,7 +179,7 @@ $two_col_rechts    = '<ul class="checklist">
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>Al zonnepanelen (of gepland)</span></li>
 </ul>';
 include $root . 'includes/components/section-two-col.php';
-unset($two_col_variant, $two_col_label, $två_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
+unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
 
 // ── Installatie & Onderhoud
 $two_col_variant   = 'wit';
@@ -197,7 +197,7 @@ $two_col_rechts    = '<ul class="checklist">
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>Zelden reparatie nodig</span></li>
 </ul>';
 include $root . 'includes/components/section-two-col.php';
-unset($two_col_variant, $two_col_label, $två_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
+unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
 
 include $root . 'includes/faq.php';
 include $root . 'includes/cta.php';

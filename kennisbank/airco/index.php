@@ -59,7 +59,7 @@ $two_col_label     = 'Werkingsprincipe';
 $two_col_titel     = 'Hoe werkt een split-systeem (airco)?';
 $two_col_links     = '<p>Een split-systeem bestaat uit buitenunit en binnenunit met warmtepomp-technologie.</p>
 <p><strong>Voor verwarming:</strong> Haalt warmte uit buitenlucht, brengt het naar binnen (zoals warmtepomp). COP 3–5.</p>
-<p><strong>Voor koeling:</strong> Werkt omgekeerd — haalt warmte uit binnenluis, brengt het naar buiten (als koelkast).</p>
+<p><strong>Voor koeling:</strong> Werkt omgekeerd — haalt warmte uit binnenlucht, brengt het naar buiten (als koelkast).</p>
 <p><strong>Verschil met centrale warmtepomp:</strong> Split-systeem werkt voor één ruimte (of meerdere units voor elk). Centrale warmtepomp voor hele huis. Beide dezelfde efficiëntie.</p>
 <p><strong>Voordeel verwarming + koeling:</strong> Eén systeem voor beide functies — flexibel.</p>';
 $two_col_cta       = [];
@@ -70,7 +70,7 @@ $two_col_rechts    = '<ul class="checklist">
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>Flexibel in gebruik</span></li>
 </ul>';
 include $root . 'includes/components/section-two-col.php';
-unset($two_col_variant, $två_col_label, $två_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
+unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
 
 // ── Types systemen
 $kaarten_variant = 'grijs';
@@ -133,7 +133,7 @@ $two_col_rechts    = '<ul class="checklist">
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>Levensduur 15–20 jaar</span></li>
 </ul>';
 include $root . 'includes/components/section-two-col.php';
-unset($two_col_variant, $två_col_label, $två_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
+unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
 
 // ── Verwarming
 $two_col_variant   = 'grijs';
@@ -156,7 +156,7 @@ $two_col_rechts    = '<ul class="checklist">
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>Ook zomerse koeling</span></li>
 </ul>';
 include $root . 'includes/components/section-two-col.php';
-unset($two_col_variant, $två_col_label, $två_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
+unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
 
 // ── Koeling
 $two_col_variant   = 'wit';
@@ -175,7 +175,7 @@ $two_col_rechts    = '<ul class="checklist">
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>Nuttig in klimaatverandering</span></li>
 </ul>';
 include $root . 'includes/components/section-two-col.php';
-unset($two_col_variant, $två_col_label, $två_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
+unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
 
 // ── Combinatie warmtepomp
 $two_col_variant   = 'grijs';
@@ -196,7 +196,7 @@ $two_col_rechts    = '<ul class="checklist">
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>Load-balancing nodig</span></li>
 </ul>';
 include $root . 'includes/components/section-two-col.php';
-unset($two_col_variant, $två_col_label, $två_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
+unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
 
 // ── Voor wie geschikt
 $two_col_variant   = 'wit';
@@ -219,7 +219,7 @@ $two_col_rechts    = '<ul class="checklist">
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>Elektra-capaciteit beschikbaar</span></li>
 </ul>';
 include $root . 'includes/components/section-two-col.php';
-unset($two_col_variant, $två_col_label, $två_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
+unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
 
 // ── Onderhoudskosten
 $two_col_variant   = 'grijs';
@@ -238,7 +238,7 @@ $two_col_rechts    = '<ul class="checklist">
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>Zelden reparaties</span></li>
 </ul>';
 include $root . 'includes/components/section-two-col.php';
-unset($two_col_variant, $två_col_label, $två_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
+unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);
 
 include $root . 'includes/faq.php';
 include $root . 'includes/cta.php';

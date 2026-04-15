@@ -14,7 +14,7 @@ $breadcrumbs = [
   ['label' => 'Vastgoed'],
 ];
 
-$cta_titel     = 'Energielabels voor uw vastgoedportefeuille?';
+$cta_titel     = 'Energielabels voor jouw vastgoedportefeuille?';
 $cta_subtitel  = 'Neem contact op voor een volumeofferte of een vrijblijvend kennismakingsgesprek.';
 $cta_knop      = 'Vraag een offerte aan →';
 $cta_knop_url  = '#contact';
@@ -24,11 +24,11 @@ $faq_label = 'Veelgestelde vragen';
 $faq_titel = 'Vragen van vastgoedeigenaren en beleggers';
 $faq_items = [
   ['vraag' => 'Moet elk pand in mijn portefeuille een geldig energielabel hebben?',
-   'antwoord' => 'Niet per se tegelijk, maar wel op het moment van verkoop, verhuur of oplevering. Als u een pand wilt verkopen of een nieuw huurcontract wilt afsluiten, is een geldig label wettelijk verplicht. Het is verstandig om vooruit te lopen op transacties en labels op orde te houden.'],
+   'antwoord' => 'Niet per se tegelijk, maar wel op het moment van verkoop, verhuur of oplevering. Als je een pand wilt verkopen of een nieuw huurcontract wilt afsluiten, is een geldig label wettelijk verplicht. Het is verstandig om vooruit te lopen op transacties en labels op orde te houden.'],
   ['vraag' => 'Geldt er een verhuurverbod voor panden met een slecht label?',
    'antwoord' => 'Voor woningen is een verhuurverbod voor label E, F en G voorzien voor 2029 — de exacte invoeringsdatum staat nog niet vast. Voor kantoren groter dan 100 m² geldt nu al een verplicht minimumklasse C. Voor andere utiliteitsgebouwen gelden vooralsnog geen expliciete verboden, maar de regelgeving trekt aan.'],
   ['vraag' => 'Hoe snel kan STAP Energie een label opnemen en registreren?',
-   'antwoord' => 'In de meeste gevallen is een opname binnen één tot twee weken in te plannen. Na de opname ontvangt u het label doorgaans binnen één week. Heeft u haast vanwege een nakende transactie? Geef dat aan in uw aanvraag.'],
+   'antwoord' => 'In de meeste gevallen is een opname binnen één tot twee weken in te plannen. Na de opname ontvang je het label doorgaans binnen één week. Heb je haast vanwege een nakende transactie? Geef dat aan in je aanvraag.'],
   ['vraag' => 'Biedt STAP Energie volumetarieven voor meerdere panden?',
    'antwoord' => 'Ja. Bij drie of meer panden biedt STAP Energie een volumetarief. Voor grotere portefeuilles stellen wij een maatwerkofferte op. Neem contact op voor een offerte.'],
   ['vraag' => 'Wat als mijn huurder nog in het pand zit tijdens de opname?',
@@ -45,7 +45,7 @@ include $root . 'includes/breadcrumb.php';
 $hero_variant  = 'sub';
 $hero_bg       = '/images/segment-vastgoed.jpg';
 $hero_eyebrow  = 'Energielabels voor vastgoed';
-$hero_titel    = 'Labels op orde houden in uw portefeuille. <em>Zonder gedoe.</em>';
+$hero_titel    = 'Labels op orde houden in jouw portefeuille. <em>Zonder gedoe.</em>';
 $hero_lead     = 'Voor vastgoedeigenaren en beleggers is een geldig energielabel een terugkerende verplichting. STAP Energie regelt het snel, officieel en transparant geprijsd.';
 $hero_usps     = [
   'Gecertificeerd EPA-adviseur',
@@ -64,7 +64,7 @@ include $root . 'includes/trust.php';
 $kaarten_variant = 'wit';
 $kaarten_label   = 'Voor wie';
 $kaarten_titel   = 'STAP Energie werkt voor de gehele vastgoedmarkt';
-$kaarten_intro   = 'Of u nu een handjevol panden heeft of een grote portefeuille beheert — STAP Energie past het aanbod aan op uw situatie.';
+$kaarten_intro   = 'Of je nu een handjevol panden hebt of een grote portefeuille beheert, STAP Energie past het aanbod aan op je situatie.';
 $kaarten_cols    = 3;
 $kaarten_items   = [
   [

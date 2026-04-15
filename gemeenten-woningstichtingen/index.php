@@ -14,8 +14,8 @@ $breadcrumbs = [
   ['label' => 'Gemeenten & Woningstichtingen'],
 ];
 
-$cta_titel     = 'Uw portefeuille op orde brengen?';
-$cta_subtitel  = 'Neem contact op voor een gesprek over uw situatie en een offerte op maat.';
+$cta_titel     = 'Je portefeuille op orde brengen?';
+$cta_subtitel  = 'Neem contact op voor een gesprek over je situatie en een offerte op maat.';
 $cta_knop      = 'Neem contact op →';
 $cta_knop_url  = '#contact';
 $cta_garanties = ['Gecertificeerd EPA-adviseur', 'Portefeuilleaanpak mogelijk', 'Reactie binnen twee werkdagen'];
@@ -24,7 +24,7 @@ $faq_label = 'Veelgestelde vragen';
 $faq_titel = 'Vragen van gemeenten en woningstichtingen';
 $faq_items = [
   ['vraag' => 'Hoe werkt een portefeuilleaanpak voor energielabels?',
-   'antwoord' => 'STAP Energie brengt samen met u in kaart welke panden als eerste aandacht vragen — op basis van huidige labelstatus, geplande transacties en verduurzamingsdoelen. Vervolgens plannen wij de opnames gecoordineerd in, zodat u zo min mogelijk last heeft van de logistiek.'],
+   'antwoord' => 'STAP Energie brengt samen met je in kaart welke panden als eerste aandacht vragen — op basis van huidige labelstatus, geplande transacties en verduurzamingsdoelen. Vervolgens plannen wij de opnames gecoordineerd in, zodat je zo min mogelijk last heeft van de logistiek.'],
   ['vraag' => 'Wat is de verplichting voor huurwoningen met een slecht energielabel?',
    'antwoord' => 'Voor woningen met label E, F of G is een verhuurverbod voorzien. De exacte invoeringsdatum staat nog niet definitief vast, maar het beleid trekt aan. Woningcorporaties doen er verstandig aan hun portefeuille nu in kaart te brengen en prioriteiten te stellen.'],
   ['vraag' => 'Kan STAP Energie ook bijdragen aan ons verduurzamingsplan?',
@@ -32,7 +32,7 @@ $faq_items = [
   ['vraag' => 'Werkt STAP Energie samen met gemeenten en corporaties op projectbasis?',
    'antwoord' => 'Ja. STAP Energie werkt zowel op losse opdrachten als op projectbasis. Voor grotere portefeuilles of meerjarige samenwerking stellen wij een maatwerkofferte op.'],
   ['vraag' => 'Welke subsidies zijn beschikbaar voor verduurzaming van huurwoningen?',
-   'antwoord' => 'Voor woningcorporaties zijn onder meer de ISDE, het Nationaal Isolatie Programma en specifieke regelingen via RVO beschikbaar. Welke combinatie het meest oplevert, hangt af van uw portefeuillesamenstelling en verduurzamingsstrategie. STAP Energie brengt dat in kaart.'],
+   'antwoord' => 'Voor woningcorporaties zijn onder meer de ISDE, het Nationaal Isolatie Programma en specifieke regelingen via RVO beschikbaar. Welke combinatie het meest oplevert, hangt af van je portefeuillesamenstelling en verduurzamingsstrategie. STAP Energie brengt dat in kaart.'],
 ];
 
 include $root . 'includes/head.php';
@@ -68,7 +68,7 @@ $kaarten_items   = [
   [
     'titel'      => 'Portefeuille energielabels',
     'icoon'      => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 7h8M8 12h5M8 17h3"/></svg>',
-    'tekst'      => 'STAP Energie brengt de labelstatus van uw volledige portefeuille in kaart, bepaalt prioriteiten op basis van geplande transacties en verduurzamingsdoelen, en verzorgt de opnames gecoordineerd.',
+    'tekst'      => 'STAP Energie brengt de labelstatus van je volledige portefeuille in kaart, bepaalt prioriteiten op basis van geplande transacties en verduurzamingsdoelen, en verzorgt de opnames gecoordineerd.',
     'cta_tekst'  => 'Meer over energielabels →',
     'cta_url'    => '/energielabels/',
     'cta_stijl'  => 'outline',
@@ -93,7 +93,7 @@ $two_col_id        = 'aanpak';
 $two_col_links     = '
   <p style="color:var(--subtekst);line-height:1.7;margin-bottom:14px;">Een losse labelaanvraag per pand kost onevenredig veel tijd en coordinatie. STAP Energie werkt voor grotere opdrachtgevers met een gestructureerde aanpak: eerst overzicht, dan prioriteiten stellen, dan plannen.</p>
   <p style="color:var(--subtekst);line-height:1.7;margin-bottom:14px;">Welke panden hebben een verlopen label? Welke transacties staan op de agenda? Welke woningen zitten in de risicozone voor het aankomende verhuurverbod? Op basis van die vragen stellen wij samen een planning op.</p>
-  <p style="color:var(--subtekst);line-height:1.7;margin-bottom:20px;">Wij rapporteren per oplevering en houden u op de hoogte van de voortgang. U heeft altijd een vast aanspreekpunt.</p>';
+  <p style="color:var(--subtekst);line-height:1.7;margin-bottom:20px;">Wij rapporteren per oplevering en houden je op de hoogte van de voortgang. Je hebt altijd een vast aanspreekpunt.</p>';
 $two_col_cta       = ['tekst' => 'Plan een kennismakingsgesprek →', 'url' => '#contact', 'stijl' => 'primair'];
 $two_col_rechts    = '
   <ul class="checklist">
@@ -131,7 +131,7 @@ include $root . 'includes/components/section-two-col.php';
   <div class="sectie__inner">
     <span class="sectie__label">Contact</span>
     <h2 class="sectie__titel">Plan een kennismakingsgesprek</h2>
-    <p class="sectie__intro">Vul het formulier in en STAP Energie neemt binnen twee werkdagen contact op om uw situatie te bespreken.</p>
+    <p class="sectie__intro">Vul het formulier in en STAP Energie neemt binnen twee werkdagen contact op om je situatie te bespreken.</p>
     <?php
     $f_dienst = '';
     $f_type   = 'zakelijk';

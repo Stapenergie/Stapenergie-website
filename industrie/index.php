@@ -14,8 +14,8 @@ $breadcrumbs = [
   ['label' => 'Industrie'],
 ];
 
-$cta_titel     = 'Weten wat STAP voor uw organisatie kan betekenen?';
-$cta_subtitel  = 'Plan een vrijblijvend kennismakingsgesprek. Wij beginnen met uw situatie, niet met een standaard verhaal.';
+$cta_titel     = 'Weten wat STAP voor je organisatie kan betekenen?';
+$cta_subtitel  = 'Plan een vrijblijvend kennismakingsgesprek. Wij beginnen met je situatie, niet met een standaard verhaal.';
 $cta_knop      = 'Plan een kennismakingsgesprek →';
 $cta_knop_url  = '#contact';
 $cta_garanties = ['Onafhankelijk advies', 'Kennis van leverancier- en inkoopzijde', 'Reactie binnen twee werkdagen'];
@@ -28,11 +28,11 @@ $faq_items = [
   ['vraag' => 'Kan STAP Energie ondersteunen bij een Europese aanbesteding voor energie?',
    'antwoord' => 'Ja. STAP Energie heeft ervaring met Europese aanbestedingstrajecten voor energie. Wij ondersteunen bij het opstellen van het bestek, de beoordeling van offertes en de contractonderhandelingen.'],
   ['vraag' => 'Wat is het verschil tussen een vast, variabel en dynamisch contract voor grotere afnemers?',
-   'antwoord' => 'Bij grote volumes heeft de keuze voor contractvorm een directe impact op de energiekosten. Een vast contract geeft zekerheid maar biedt geen flexibiliteit bij prijsdalingen. Een variabel of dynamisch contract geeft meer mogelijkheden voor actief inkoopbeheer, maar vereist ook meer monitoring. STAP Energie adviseert welke aanpak past bij uw verbruiksprofiel en risicobereidheid.'],
+   'antwoord' => 'Bij grote volumes heeft de keuze voor contractvorm een directe impact op de energiekosten. Een vast contract geeft zekerheid maar biedt geen flexibiliteit bij prijsdalingen. Een variabel of dynamisch contract geeft meer mogelijkheden voor actief inkoopbeheer, maar vereist ook meer monitoring. STAP Energie adviseert welke aanpak past bij je verbruiksprofiel en risicobereidheid.'],
   ['vraag' => 'Zijn er subsidies beschikbaar voor verduurzaming van industriele processen?',
-   'antwoord' => 'Ja. Voor industriele bedrijven zijn onder meer de SDE++ (hernieuwbare energieopwekking), de EIA (energiezuinige bedrijfsmiddelen) en de DEI+ (demonstratieprojecten energie-innovatie) relevant. Welke regelingen van toepassing zijn, hangt af van uw sector en de aard van de investeringen.'],
+   'antwoord' => 'Ja. Voor industriele bedrijven zijn onder meer de SDE++ (hernieuwbare energieopwekking), de EIA (energiezuinige bedrijfsmiddelen) en de DEI+ (demonstratieprojecten energie-innovatie) relevant. Welke regelingen van toepassing zijn, hangt af van je sector en de aard van de investeringen.'],
   ['vraag' => 'Hoe begint een traject met STAP Energie?',
-   'antwoord' => 'Altijd met een kennismakingsgesprek. Wij beginnen met uw situatie: wat is uw verbruiksprofiel, welke contracten lopen er, wat zijn uw doelstellingen? Op basis daarvan stellen wij een helder adviestraject voor, met een offerte vooraf.'],
+   'antwoord' => 'Altijd met een kennismakingsgesprek. Wij beginnen met je situatie: wat is je verbruiksprofiel, welke contracten lopen er, wat zijn je doelstellingen? Op basis daarvan stellen wij een helder adviestraject voor, met een offerte vooraf.'],
 ];
 
 include $root . 'includes/head.php';
@@ -44,7 +44,7 @@ $hero_variant  = 'sub';
 $hero_bg       = '/images/hero-zakelijk.jpg';
 $hero_eyebrow  = 'Energie-inkoopadvies voor de industrie';
 $hero_titel    = 'Grote volumes, complexe contracten. <em>Wij kennen de andere kant van de tafel.</em>';
-$hero_lead     = 'Industriele bedrijven betalen voor energie op een heel andere manier dan het MKB. Volumes zijn groter, contracten zijn complexer en de marktdynamiek raakt u harder. STAP Energie heeft 15+ jaar ervaring aan de leverancierszijde en weet precies hoe die markt werkt.';
+$hero_lead     = 'Industriele bedrijven betalen voor energie op een heel andere manier dan het MKB. Volumes zijn groter, contracten zijn complexer en de marktdynamiek raakt je harder. STAP Energie heeft 15+ jaar ervaring aan de leverancierszijde en weet precies hoe die markt werkt.';
 $hero_usps     = [
   '15+ jaar ervaring aan de leverancierszijde',
   'Kennis van complexe inkoopstructuren en Europese aanbestedingen',
@@ -65,18 +65,18 @@ $two_col_titel     = 'De markt van binnenuit gekend';
 $two_col_omgekeerd = false;
 $two_col_links     = '
   <p style="color:var(--subtekst);line-height:1.7;margin-bottom:14px;">Erik Dolman werkte 15+ jaar aan de leverancierszijde van de energiemarkt. Bij SEFE Energy en NieuweStroom sloot hij contracten af met grote industriele afnemers en bouwde hij kennis op over hoe leveranciers denken, rekenen en onderhandelen.</p>
-  <p style="color:var(--subtekst);line-height:1.7;margin-bottom:14px;">Die kennis zet STAP Energie nu in voor u. Niet als tussenpersoon die prijs vergelijkt, maar als adviseur die begrijpt wat er werkelijk in een contract staat en wat het op de lange termijn betekent voor uw kosten.</p>
-  <p style="color:var(--subtekst);line-height:1.7;margin-bottom:20px;">Geen merkvoorkeur. Geen verborgen agenda. Gewoon advies dat in uw belang is.</p>';
+  <p style="color:var(--subtekst);line-height:1.7;margin-bottom:14px;">Die kennis zet STAP Energie nu in voor je. Niet als tussenpersoon die prijs vergelijkt, maar als adviseur die begrijpt wat er werkelijk in een contract staat en wat het op de lange termijn betekent voor je kosten.</p>
+  <p style="color:var(--subtekst);line-height:1.7;margin-bottom:20px;">Geen merkvoorkeur. Geen verborgen agenda. Gewoon advies dat in jouw belang is.</p>';
 $two_col_cta       = ['tekst' => 'Meer over energie-inkoopadvies →', 'url' => '/energie-inkoop-advies/', 'stijl' => 'outline'];
 $two_col_rechts    = '
   <div style="display:flex;flex-direction:column;gap:20px;">
     <div class="icon-tekst">
       <div class="icon-tekst__icoon"><svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
-      <div class="icon-tekst__content"><div class="icon-tekst__titel">Contractanalyse als startpunt</div><div class="icon-tekst__tekst">Wij beginnen altijd met uw bestaande contracten. Wat staat er werkelijk in? Wat zijn de risico\'s? Wat kan beter?</div></div>
+      <div class="icon-tekst__content"><div class="icon-tekst__titel">Contractanalyse als startpunt</div><div class="icon-tekst__tekst">Wij beginnen altijd met je bestaande contracten. Wat staat er werkelijk in? Wat zijn de risico's? Wat kan beter?</div></div>
     </div>
     <div class="icon-tekst">
       <div class="icon-tekst__icoon"><svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg></div>
-      <div class="icon-tekst__content"><div class="icon-tekst__titel">Verbruiksprofiel als basis</div><div class="icon-tekst__tekst">Hoe verbruikt u energie? Kunt u verbruik sturen of verschuiven? Dat bepaalt welke contractvorm het meest voordelig is.</div></div>
+      <div class="icon-tekst__content"><div class="icon-tekst__titel">Verbruiksprofiel als basis</div><div class="icon-tekst__tekst">Hoe verbruik je energie? Kun je verbruik sturen of verschuiven? Dat bepaalt welke contractvorm het meest voordelig is.</div></div>
     </div>
     <div class="icon-tekst">
       <div class="icon-tekst__icoon"><svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
@@ -89,14 +89,14 @@ include $root . 'includes/components/section-two-col.php';
 $kaarten_variant = 'grijs';
 $kaarten_label   = 'Onze diensten voor de industrie';
 $kaarten_titel   = 'Energie-inkoop, verduurzaming en energielabels';
-$kaarten_intro   = 'STAP Energie overziet het complete energievraagstuk voor uw organisatie.';
+$kaarten_intro   = 'STAP Energie overziet het complete energievraagstuk voor je organisatie.';
 $kaarten_cols    = 3;
 $kaarten_items   = [
   [
     'titel'      => 'Energie-inkoopadvies',
     'uitgelicht' => true,
     'icoon'      => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>',
-    'tekst'      => 'Contractanalyse, inkoopstrategie en begeleiding bij aanbestedingen. Voor volumes waarbij de contractkeuze direct impact heeft op uw resultaat.',
+    'tekst'      => 'Contractanalyse, inkoopstrategie en begeleiding bij aanbestedingen. Voor volumes waarbij de contractkeuze direct impact heeft op jouw resultaat.',
     'cta_tekst'  => 'Meer over energie-inkoop →',
     'cta_url'    => '/energie-inkoop-advies/',
     'cta_stijl'  => 'solid',
@@ -104,7 +104,7 @@ $kaarten_items   = [
   [
     'titel'     => 'Verduurzaming & subsidies',
     'icoon'     => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>',
-    'tekst'     => 'SDE++, EIA en DEI+ in kaart gebracht voor uw situatie. Eigen opwekking verlaagt uw marktafhankelijkheid structureel.',
+    'tekst'     => 'SDE++, EIA en DEI+ in kaart gebracht voor jouw situatie. Eigen opwekking verlaagt je marktafhankelijkheid structureel.',
     'cta_tekst' => 'Meer over verduurzaming →',
     'cta_url'   => '/verduurzaming-subsidie/',
     'cta_stijl' => 'outline',

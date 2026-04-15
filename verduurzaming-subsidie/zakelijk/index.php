@@ -5,7 +5,7 @@
  */
 $root        = dirname(dirname(dirname(__FILE__))) . '/';
 $title       = 'Verduurzaming & Subsidie voor Bedrijven 2026 | STAP Energie';
-$description = 'Subsidies voor zakelijke verduurzaming: ISDE, EIA en SDE++. STAP Energie brengt de juiste combinatie in kaart voor uw bedrijfspand, kantoor of vastgoed.';
+$description = 'Subsidies voor zakelijke verduurzaming: ISDE, EIA en SDE++. STAP Energie brengt de juiste combinatie in kaart voor jouw bedrijfspand, kantoor of vastgoed.';
 $canonical   = 'https://stapenergie.nl/verduurzaming-subsidie/zakelijk/';
 
 $breadcrumbs = [
@@ -14,7 +14,7 @@ $breadcrumbs = [
   ['label' => 'Zakelijk'],
 ];
 
-$cta_titel     = 'Welke subsidies passen bij uw situatie?';
+$cta_titel     = 'Welke subsidies passen bij jouw situatie?';
 $cta_subtitel  = 'STAP Energie brengt de juiste combinatie in kaart. Een eerste gesprek is vrijblijvend.';
 $cta_knop      = 'Plan een adviesgesprek →';
 $cta_knop_url  = '#contact';
@@ -24,17 +24,17 @@ $faq_label = 'Veelgestelde vragen';
 $faq_titel = 'Veelgestelde vragen over zakelijke verduurzaming';
 $faq_items = [
   ['vraag' => 'Kan ik EIA en ISDE combineren voor dezelfde maatregel?',
-   'antwoord' => 'Dat hangt af van de maatregel en uw belastingpositie. EIA is een belastingvoordeel op de investering; ISDE is een directe subsidie op bepaalde apparatuur. In sommige gevallen is stapeling mogelijk, maar er gelden voorwaarden. STAP Energie brengt de meest voordelige combinatie voor uw situatie in kaart.'],
+   'antwoord' => 'Dat hangt af van de maatregel en jouw belastingpositie. EIA is een belastingvoordeel op de investering; ISDE is een directe subsidie op bepaalde apparatuur. In sommige gevallen is stapeling mogelijk, maar er gelden voorwaarden. STAP Energie brengt de meest voordelige combinatie voor jouw situatie in kaart.'],
   ['vraag' => 'Hoe werkt de EIA precies?',
-   'antwoord' => 'De Energie-investeringsaftrek (EIA) laat u 40% van de investering aftrekken van de fiscale winst. U betaalt daarmee effectief circa 11% minder belasting over het geïnvesteerde bedrag (bij 27,5% vpb-tarief). De investering moet op de Energielijst van RVO staan. U meldt vooraf — niet achteraf.'],
+   'antwoord' => 'De Energie-investeringsaftrek (EIA) laat je 40% van de investering aftrekken van de fiscale winst. Je betaalt daarmee effectief circa 11% minder belasting over het geïnvesteerde bedrag (bij 27,5% vpb-tarief). De investering moet op de Energielijst van RVO staan. Je meldt vooraf — niet achteraf.'],
   ['vraag' => 'Voor welke investeringen geldt de SDE++?',
-   'antwoord' => 'SDE++ is bedoeld voor grootschalige opwekking van hernieuwbare energie: zonnepanelen, windenergie, warmtepompen op industrieel niveau, groene waterstof. Het is geen subsidie maar een exploitatietoeslag: u ontvangt jarenlang een bijdrage op de geproduceerde energie. De aanvraagrondes zijn jaarlijks en concurrentieel.'],
+   'antwoord' => 'SDE++ is bedoeld voor grootschalige opwekking van hernieuwbare energie: zonnepanelen, windenergie, warmtepompen op industrieel niveau, groene waterstof. Het is geen subsidie maar een exploitatietoeslag: je ontvangt jarenlang een bijdrage op de geproduceerde energie. De aanvraagrondes zijn jaarlijks en concurrentieel.'],
   ['vraag' => 'Geldt de labelplicht voor kantoren ook voor mijn pand?',
-   'antwoord' => 'Als uw kantoor groter is dan 100 m² en u er zakelijke activiteiten in uitoefent, geldt de labelplicht minimaal C. Was uw label al op C of hoger? Dan voldoet u. Heeft u label D of lager, dan bent u verplicht te verbeteren. STAP Energie verzorgt zowel het label als het verduurzamingsadvies.'],
+   'antwoord' => 'Als je kantoor groter is dan 100 m² en je er zakelijke activiteiten in uitoefent, geldt de labelplicht minimaal C. Was je label al op C of hoger? Dan voldoe je. Heb je label D of lager, dan ben je verplicht te verbeteren. STAP Energie verzorgt zowel het label als het verduurzamingsadvies.'],
   ['vraag' => 'Hoe begin ik als ik nog geen goed beeld heb van mijn energieverbruik?',
-   'antwoord' => 'Dan begint u met een verbruiksanalyse of energielabel. Die geeft inzicht in waar het verbruik zit, wat de zwakste plekken van het gebouw zijn en welke maatregelen het meeste opleveren. Op basis daarvan stellen wij een adviestraject voor.'],
+   'antwoord' => 'Dan begin je met een verbruiksanalyse of energielabel. Die geeft inzicht in waar het verbruik zit, wat de zwakste plekken van het gebouw zijn en welke maatregelen het meeste opleveren. Op basis daarvan stellen wij een adviestraject voor.'],
   ['vraag' => 'Wat kost een adviesgesprek bij STAP Energie?',
-   'antwoord' => 'Een eerste kennismakingsgesprek is vrijblijvend en gratis. Daarin brengen we uw situatie in kaart en kijken we samen welke stap het meest logisch is. Op basis van dat gesprek ontvangt u een heldere offerte — zonder verborgen kosten.'],
+   'antwoord' => 'Een eerste kennismakingsgesprek is vrijblijvend en gratis. Daarin brengen we jouw situatie in kaart en kijken we samen welke stap het meest logisch is. Op basis van dat gesprek ontvang je een heldere offerte — zonder verborgen kosten.'],
 ];
 
 include $root . 'includes/head.php';
@@ -45,12 +45,12 @@ include $root . 'includes/breadcrumb.php';
 $hero_variant  = 'sub';
 $hero_bg       = '/images/hero-zakelijk.jpg';
 $hero_eyebrow  = 'Verduurzaming & Subsidie voor bedrijven';
-$hero_titel    = 'De juiste subsidie voor uw bedrijf. <em>In de juiste volgorde.</em>';
-$hero_lead     = 'Voor zakelijke verduurzaming zijn drie hoofdregelingen beschikbaar: ISDE, EIA en SDE++. Welke combinatie het meest oplevert, hangt af van uw verbruiksprofiel, uw belastingpositie en de aard van de investering. STAP Energie brengt dat in kaart.';
+$hero_titel    = 'De juiste subsidie voor jouw bedrijf. <em>In de juiste volgorde.</em>';
+$hero_lead     = 'Voor zakelijke verduurzaming zijn drie hoofdregelingen beschikbaar: ISDE, EIA en SDE++. Welke combinatie het meest oplevert, hangt af van jouw verbruiksprofiel, jouw belastingpositie en de aard van de investering. STAP Energie brengt dat in kaart.';
 $hero_usps     = [
   '15+ jaar ervaring aan de energiemarkt',
-  'ISDE, EIA en SDE++ in kaart gebracht voor uw situatie',
-  'Geen productbelang — advies in uw belang',
+  'ISDE, EIA en SDE++ in kaart gebracht voor jouw situatie',
+  'Geen productbelang — advies in je belang',
   'Reactie binnen twee werkdagen',
 ];
 $hero_cta      = 'Plan een adviesgesprek →';
@@ -64,7 +64,7 @@ include $root . 'includes/trust.php';
 $kaarten_variant = 'grijs';
 $kaarten_label   = 'Subsidies 2026';
 $kaarten_titel   = 'De drie hoofdregelingen voor zakelijke verduurzaming';
-$kaarten_intro   = 'Elk met een andere systematiek, andere doelgroep en andere voorwaarden. Een goede subsidieaanvraag begint met begrijpen welke regeling voor uw situatie past.';
+$kaarten_intro   = 'Elk met een andere systematiek, andere doelgroep en andere voorwaarden. Een goede subsidieaanvraag begint met begrijpen welke regeling voor jouw situatie past.';
 $kaarten_cols    = 3;
 $kaarten_id      = 'subsidies';
 $kaarten_items   = [
@@ -82,7 +82,7 @@ $kaarten_items   = [
     'titel'      => 'EIA — belastingvoordeel',
     'uitgelicht' => true,
     'icoon'      => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>',
-    'tekst'      => 'De Energie-investeringsaftrek geeft 40% extra aftrek op de investering, bovenop de normale afschrijving. U betaalt daarmee effectief circa 11% minder belasting over het geïnvesteerde bedrag. Geldt voor investeringen op de Energielijst van RVO. Melden vóór de investering — niet achteraf.',
+    'tekst'      => 'De Energie-investeringsaftrek geeft 40% extra aftrek op de investering, bovenop de normale afschrijving. Je betaalt daarmee effectief circa 11% minder belasting over het geïnvesteerde bedrag. Geldt voor investeringen op de Energielijst van RVO. Melden vóór de investering — niet achteraf.',
     'extra'      => '<div style="margin-top:12px;"><span class="badge badge--groen">40% extra aftrek</span></div>',
     'cta_tekst'  => 'Meer over EIA →',
     'cta_url'    => 'https://www.rvo.nl/subsidies-financiering/eia',
@@ -109,14 +109,14 @@ $two_col_titel     = 'Subsidie is een middel, niet een startpunt';
 $two_col_omgekeerd = false;
 $two_col_links     = '
   <p style="color:var(--subtekst);line-height:1.7;margin-bottom:14px;">Veel bedrijven beginnen bij de subsidie in plaats van bij het probleem. Ze zoeken op welke regeling het meeste oplevert, en investeren daarnaar. Dat levert soms goed resultaat — maar vaker niet.</p>
-  <p style="color:var(--subtekst);line-height:1.7;margin-bottom:14px;">De goede volgorde: begin met inzicht in uw verbruik. Waar lekt energie weg? Welke installaties zijn inefficiënt? Welke gebouwdelen vragen om aanpak? Pas als u dat weet, kunt u beoordelen welke maatregelen het meeste opleveren — en welke subsidies daarbij passen.</p>
-  <p style="color:var(--subtekst);line-height:1.7;margin-bottom:20px;">STAP Energie helpt u die analyse te maken, zonder verkoopbelang.</p>';
+  <p style="color:var(--subtekst);line-height:1.7;margin-bottom:14px;">De goede volgorde: begin met inzicht in jouw verbruik. Waar lekt energie weg? Welke installaties zijn inefficiënt? Welke gebouwdelen vragen om aanpak? Pas als je dat weet, kun je beoordelen welke maatregelen het meeste opleveren — en welke subsidies daarbij passen.</p>
+  <p style="color:var(--subtekst);line-height:1.7;margin-bottom:20px;">STAP Energie helpt je die analyse te maken, zonder verkoopbelang.</p>';
 $two_col_cta       = ['tekst' => 'Plan een adviesgesprek →', 'url' => '#contact', 'stijl' => 'primair'];
 $two_col_rechts    = '
   <ul class="checklist">
     <li class="checklist__item"><span class="checklist__vink">✓</span><span>Verbruiksanalyse als nulmeting</span></li>
     <li class="checklist__item"><span class="checklist__vink">✓</span><span>Maatregelen in de juiste volgorde</span></li>
-    <li class="checklist__item"><span class="checklist__vink">✓</span><span>Subsidies op basis van uw investering, niet andersom</span></li>
+    <li class="checklist__item"><span class="checklist__vink">✓</span><span>Subsidies op basis van jouw investering, niet andersom</span></li>
     <li class="checklist__item"><span class="checklist__vink">✓</span><span>EIA vooraf melden — STAP Energie begeleidt de aanvraag</span></li>
     <li class="checklist__item"><span class="checklist__vink">✓</span><span>SDE++ voor grootschalige opwekking</span></li>
     <li class="checklist__item"><span class="checklist__vink">✓</span><span>Labelplicht kantoren in kaart gebracht</span></li>
@@ -149,7 +149,7 @@ unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two
   <div class="sectie__inner">
     <span class="sectie__label">Contact</span>
     <h2 class="sectie__titel">Plan een vrijblijvend adviesgesprek</h2>
-    <p class="sectie__intro">STAP Energie brengt uw situatie in kaart en adviseert welke subsidies en maatregelen voor u het meeste opleveren.</p>
+    <p class="sectie__intro">STAP Energie brengt jouw situatie in kaart en adviseert welke subsidies en maatregelen voor je het meeste opleveren.</p>
     <?php
     $f_dienst = '';
     $f_type   = 'zakelijk';
@@ -172,7 +172,7 @@ $kaarten_items   = [
   [
     'titel'     => 'Energielabel bedrijfspand',
     'icoon'     => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 7h8M8 12h5M8 17h3"/></svg>',
-    'tekst'     => 'Een officieel utiliteitslabel voor uw kantoor, winkel of bedrijfspand. Verplicht bij verkoop en verhuur, noodzakelijk voor de labelplicht C bij kantoren.',
+    'tekst'     => 'Een officieel utiliteitslabel voor je kantoor, winkel of bedrijfspand. Verplicht bij verkoop en verhuur, noodzakelijk voor de labelplicht C bij kantoren.',
     'cta_tekst' => 'Naar utiliteitslabels',
     'cta_url'   => '/energielabels/utiliteit/',
     'cta_stijl' => 'outline',
@@ -180,7 +180,7 @@ $kaarten_items   = [
   [
     'titel'     => 'Verduurzaming voor particulieren',
     'icoon'     => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>',
-    'tekst'     => 'Ook als woningeigenaar zijn er subsidies beschikbaar. Bekijk het overzicht van ISDE, SEEH en andere regelingen voor uw woning.',
+    'tekst'     => 'Ook als woningeigenaar zijn er subsidies beschikbaar. Bekijk het overzicht van ISDE, SEEH en andere regelingen voor jouw woning.',
     'cta_tekst' => 'Naar verduurzaming particulieren',
     'cta_url'   => '/verduurzaming-subsidie/particulieren/',
     'cta_stijl' => 'outline',
