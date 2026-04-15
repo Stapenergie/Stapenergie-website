@@ -38,7 +38,7 @@
         <a href="tel:0600000000">06 &ndash; XX XX XX XX</a>
         <a href="/cdn-cgi/l/email-protection#6900070f06291a1d08190c070c1b0e000c470705"><span class="__cf_email__" data-cfemail="442d2a222b0437302534212a2136232d216a2a28">[email&#160;protected]</span></a>
         <a href="/">stapenergie.nl</a>
-        <a href="/over-erik/">Over ons</a>
+        <a href="/over-ons/">Over ons</a>
         <a href="/privacyverklaring/">Privacy &amp; AVG</a>
       </div>
     </div>

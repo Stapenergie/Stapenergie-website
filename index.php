@@ -158,7 +158,7 @@ include $root . 'includes/components/section-kaarten.php';
           <span class="over-tag">NieuweStroom</span>
           <span class="over-tag">EPA-adviseur in opleiding</span>
         </div>
-        <a href="/over-erik/" class="btn btn--outline" style="margin-top:20px;display:inline-flex;">Meer over Erik →</a>
+        <a href="/over-ons/" class="btn btn--outline" style="margin-top:20px;display:inline-flex;">Meer over ons →</a>
       </div>
     </div>
   </div>

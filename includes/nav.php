@@ -35,8 +35,8 @@
         <a href="/industrie/" class="dd-item">Industrie</a>
       </div>
     </li>
-    <li><a href="#over-erik">Over Erik</a></li>
-    <li><a href="#kennisbank">Kennisbank</a></li>
+    <li><a href="/over-ons/">Over ons</a></li>
+    <li><a href="/kennisbank/">Kennisbank</a></li>
     <li><a href="#contact" class="nav-cta">Gratis gesprek &rarr;</a></li>
   </ul>
   <button class="nav-toggle" id="nav-toggle" aria-label="Menu openen">
