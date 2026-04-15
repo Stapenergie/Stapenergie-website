@@ -142,7 +142,7 @@ include $root . 'includes/components/section-kaarten.php';
         <img src="/images/erik-portret.jpg" alt="Erik Dolman" loading="lazy"
              style="width:100%;border-radius:var(--rl);object-fit:cover;object-position:center 10%;">
         <div class="over-badge">
-          <div class="over-badge__num">16+</div>
+          <div class="over-badge__num">15+</div>
           <div class="over-badge__lbl">jaar energie&shy;ervaring</div>
         </div>
       </div>
@@ -150,15 +150,15 @@ include $root . 'includes/components/section-kaarten.php';
         <span class="sectie__label">Wie is STAP Energie?</span>
         <h2 class="sectie__titel">Erik Dolman,<br>Energiespecialist</h2>
         <blockquote class="over-quote">"De natuur is ons grootste kapitaal. Verduurzamen is een verstandige keuze voor het milieu, comfort én je portemonnee."</blockquote>
-        <p style="color:var(--subtekst);line-height:1.7;margin-bottom:12px;">Als oprichter van STAP Energie breng ik meer dan 16 jaar ervaring in de energiemarkt mee. Van Sales Manager bij SEFE Energy tot NieuweStroom — die kennis zet ik nu in voor jou.</p>
+        <p style="color:var(--subtekst);line-height:1.7;margin-bottom:12px;">Als oprichter van STAP Energie breng ik meer dan 15 jaar ervaring in de energiemarkt mee. Van Sales Manager bij SEFE Energy tot NieuweStroom — die kennis zet ik nu in voor jou.</p>
         <p style="color:var(--subtekst);line-height:1.7;margin-bottom:20px;">Niet met een standaard verhaal, maar met eerlijk en persoonlijk advies dat écht past bij jouw situatie.</p>
         <div class="over-tags">
-          <span class="over-tag">16+ jaar energiesector</span>
+          <span class="over-tag">15+ jaar energiesector</span>
           <span class="over-tag">SEFE Energy</span>
           <span class="over-tag">NieuweStroom</span>
           <span class="over-tag">EPA-adviseur in opleiding</span>
         </div>
-        <a href="/over-ons/" class="btn btn--outline" style="margin-top:20px;display:inline-flex;">Meer over Erik →</a>
+        <a href="/over-erik/" class="btn btn--outline" style="margin-top:20px;display:inline-flex;">Meer over Erik →</a>
       </div>
     </div>
   </div>
