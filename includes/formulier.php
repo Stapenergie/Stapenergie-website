@@ -62,9 +62,9 @@ $f_pagina = $f_pagina ?? 'onbekend';
 
     <!-- Waarvoor -->
     <div>
-      <label for="sf-dienst-select" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Waarvoor wilt u contact?</label>
+      <label for="sf-dienst-select" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Waarvoor wil je contact?</label>
       <select class="sf-select" id="sf-dienst-select" onchange="sfDienstGewijzigd()" required>
-        <option value="" disabled selected>Waarvoor wilt u contact?</option>
+        <option value="" disabled selected>Waarvoor wil je contact?</option>
         <option value="label">Energielabel aanvragen</option>
         <option value="verduurzaming">Verduurzamingsadvies</option>
         <option value="inkoop">Energie inkoop advies</option>
@@ -287,10 +287,10 @@ $f_pagina = $f_pagina ?? 'onbekend';
     var privacy  = document.getElementById('sf-privacy').checked;
     var dienst   = document.getElementById('sf-dienst-select').value;
 
-    if (!voornaam) { sfFout(btn, 'Vul uw voornaam in.', document.getElementById('sf-voornaam')); return; }
+    if (!voornaam) { sfFout(btn, 'Vul je voornaam in.', document.getElementById('sf-voornaam')); return; }
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { sfFout(btn, 'Vul een geldig e-mailadres in.', document.getElementById('sf-email')); return; }
     if (!privacy) { sfFout(btn, 'Ga akkoord met de privacyverklaring om door te gaan.', document.getElementById('sf-privacy')); return; }
-    if (!dienst) { sfFout(btn, 'Geef aan waarvoor u contact wilt.', document.getElementById('sf-dienst-select')); return; }
+    if (!dienst) { sfFout(btn, 'Geef aan waarvoor je contact wilt.', document.getElementById('sf-dienst-select')); return; }
 
     if (btn.disabled) return;
     btn.disabled = true;
@@ -312,7 +312,7 @@ $f_pagina = $f_pagina ?? 'onbekend';
           '<path d="M14 24.5l7 7 13-14" stroke="#1a5c32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>' +
           '</svg>' +
           '<h3>Aanvraag ontvangen!</h3>' +
-          '<p>We nemen <strong>binnen twee werkdagen</strong> contact met u op.<br>U ontvangt ook een bevestiging per e-mail.</p>' +
+          '<p>We nemen <strong>binnen twee werkdagen</strong> contact met je op.<br>Je ontvangt ook een bevestiging per e-mail.</p>' +
           '</div>';
         // Scroll terug naar het formulier zodat de succesmelding zichtbaar is
         card.scrollIntoView({ behavior: 'smooth', block: 'center' });

@@ -219,24 +219,24 @@ stuurMail(
 $voornaamKlant = $voornaam ?: explode(' ', $naam)[0];
 
 $commercieelZin = $commercieelOptIn
-    ? '<p style="margin:0 0 16px;font-size:14px;color:#4a5568;line-height:1.7;">U heeft ook toestemming gegeven om commercieel benaderd te worden. U kunt deze toestemming altijd intrekken via <a href="mailto:' . ONTVANGER . '" style="color:#1a5c32;">' . ONTVANGER . '</a>.</p>'
+    ? '<p style="margin:0 0 16px;font-size:14px;color:#4a5568;line-height:1.7;">Je heeft ook toestemming gegeven om commercieel benaderd te worden. Je kunt deze toestemming altijd intrekken via <a href="mailto:' . ONTVANGER . '" style="color:#1a5c32;">' . ONTVANGER . '</a>.</p>'
     : '';
 
 $prijsZin = $berekendePrijs
-    ? '<p style="margin:0 0 16px;font-size:14px;color:#4a5568;line-height:1.7;">Op basis van uw keuze is de indicatieve prijs <strong style="color:#1a1a1a;">' . htmlspecialchars($berekendePrijs) . '</strong>. Dit is onder voorbehoud van onze opname ter plaatse.</p>'
+    ? '<p style="margin:0 0 16px;font-size:14px;color:#4a5568;line-height:1.7;">Op basis van je keuze is de indicatieve prijs <strong style="color:#1a1a1a;">' . htmlspecialchars($berekendePrijs) . '</strong>. Dit is onder voorbehoud van onze opname ter plaatse.</p>'
     : '';
 
 $bevestigingInhoud = '
-<h2 style="margin:0 0 16px;font-size:20px;color:#1a1a1a;font-weight:700;">Bedankt voor uw aanvraag, ' . htmlspecialchars($voornaamKlant) . '!</h2>
+<h2 style="margin:0 0 16px;font-size:20px;color:#1a1a1a;font-weight:700;">Bedankt voor je aanvraag, ' . htmlspecialchars($voornaamKlant) . '!</h2>
 <p style="margin:0 0 16px;font-size:15px;color:#1a1a1a;line-height:1.7;">
-  Uw aanvraag is goed ontvangen. We nemen <strong>binnen twee werkdagen</strong> contact met u op om uw situatie te bespreken.
+  Je aanvraag is goed ontvangen. We nemen <strong>binnen twee werkdagen</strong> contact met je op om je situatie te bespreken.
 </p>
 ' . $prijsZin . '
 <p style="margin:0 0 24px;font-size:15px;color:#1a1a1a;line-height:1.7;">
   Heeft u in de tussentijd vragen? Bereik ons via <a href="mailto:' . ONTVANGER . '" style="color:#1a5c32;font-weight:500;">' . ONTVANGER . '</a>.
 </p>
 <div style="background:#f0f7f2;border-radius:8px;padding:20px 24px;margin:0 0 24px;">
-  <p style="margin:0 0 12px;font-size:13px;font-weight:700;color:#1a5c32;text-transform:uppercase;letter-spacing:0.5px;">Uw aanvraaggegevens</p>
+  <p style="margin:0 0 12px;font-size:13px;font-weight:700;color:#1a5c32;text-transform:uppercase;letter-spacing:0.5px;">Je aanvraaggegevens</p>
   ' . gegevensRijen(array_filter([
     'Naam'        => htmlspecialchars($naam),
     'E-mail'      => htmlspecialchars($email),
@@ -255,7 +255,7 @@ $bevestigingInhoud = '
   STAP Energie
 </p>';
 
-$bevestigingOnderwerp = '=?UTF-8?B?' . base64_encode('Uw aanvraag bij STAP Energie is ontvangen') . '?=';
+$bevestigingOnderwerp = '=?UTF-8?B?' . base64_encode('Je aanvraag bij STAP Energie is ontvangen') . '?=';
 
 stuurMail(
     $email,
@@ -268,6 +268,6 @@ stuurMail(
 header('Content-Type: application/json');
 echo json_encode([
     'succes'  => true,
-    'bericht' => 'Uw aanvraag is ontvangen. We nemen binnen twee werkdagen contact met u op.',
+    'bericht' => 'Je aanvraag is ontvangen. We nemen binnen twee werkdagen contact met je op.',
 ]);
 exit;

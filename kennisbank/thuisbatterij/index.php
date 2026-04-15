@@ -14,8 +14,8 @@ $breadcrumbs = [
   ['label' => 'Thuisbatterij'],
 ];
 
-$cta_titel     = 'Thuisbatterij geschikt voor u?';
-$cta_subtitel  = 'Plan een vrijblijvend adviesgesprek. Wij beginnen met uw situatie.';
+$cta_titel     = 'Thuisbatterij geschikt voor je?';
+$cta_subtitel  = 'Plan een vrijblijvend adviesgesprek. Wij beginnen met je situatie.';
 $cta_knop      = 'Plan een adviesgesprek →';
 $cta_knop_url  = '/#contact';
 $cta_garanties = ['15+ jaar ervaring in de energiemarkt', 'Geen productbelang', 'Reactie binnen twee werkdagen'];
@@ -43,7 +43,7 @@ include $root . 'includes/breadcrumb.php';
 $hero_variant  = 'sub';
 $hero_bg       = '/images/hero-verduurzaming-hub.jpg';
 $hero_eyebrow  = 'Kennisbank';
-$hero_titel    = 'Thuisbatterij: sla zonnelicht op. <em>Gebruik het wanneer u wilt.</em>';
+$hero_titel    = 'Thuisbatterij: sla zonnelicht op. <em>Gebruik het wanneer je wilt.</em>';
 $hero_lead     = 'Een thuisbatterij slaat overdag zonne-energie op en geeft deze 's avonds af. Dit verhoogt zelf-gebruik naar 60–70% in plaats van 30–40%. Met zonnepanelen en dynamische stroom-contract kan dit €300–€600/jaar besparen. Lees hier alles over kosten, voordeel en geschiktheid.';
 $hero_usps     = [];
 $hero_cta      = 'Plan een adviesgesprek →';
@@ -58,7 +58,7 @@ $two_col_variant   = 'wit';
 $two_col_label     = 'Werkingsprincipe';
 $two_col_titel     = 'Hoe werkt een thuisbatterij?';
 $two_col_links     = '<p>Een thuisbatterij (home battery/power wall) slaat elektriciteit op in lithium-ionbatterijen.</p>
-<p><strong>Proces:</strong> Zonnepanelen produceren elektriciteit → inverter → batterij laadt op. 's Avonds: batterij ontlaadt → uw huis gebruikt deze energie.</p>
+<p><strong>Proces:</strong> Zonnepanelen produceren elektriciteit → inverter → batterij laadt op. 's Avonds: batterij ontlaadt → je huis gebruikt deze energie.</p>
 <p><strong>Zonder batterij:</strong> 30–40% zelf-gebruikt (overdag wanneer zon schijnt), 60% geleverd terug naar het net (tegen lagere prijs met salderingseinde).</p>
 <p><strong>Met batterij:</strong> 60–70% zelf-gebruikt (ook 's avonds), 30–40% terug naar net. Veel beter rendement.</p>
 <p><strong>Met dynamisch contract:</strong> Nog beter — batterij laadt goedkope uren, ontlaadt dure uren → extra besparing.</p>';
@@ -76,7 +76,7 @@ unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two
 $kaarten_variant = 'grijs';
 $kaarten_label   = 'Types';
 $kaarten_titel   = 'Verschillende batterij-typen';
-$kaarten_intro   = 'Thuisbatterijen verschillen in capaciteit, chemie en prijs. Kies op basis van uw verbruik.';
+$kaarten_intro   = 'Thuisbatterijen verschillen in capaciteit, chemie en prijs. Kies op basis van je verbruik.';
 $kaarten_cols    = 3;
 $kaarten_items   = [
   [
@@ -179,7 +179,7 @@ unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two
 $two_col_variant   = 'grijs';
 $two_col_label     = 'Essentieel';
 $two_col_titel     = 'Dynamisch energiecontract: het voordeel';
-$two_col_links     = '<p><strong>Klassiek contract:</strong> Vast tarief (bijv. €0,35/kWh). U betaalt altijd hetzelfde.</p>
+$two_col_links     = '<p><strong>Klassiek contract:</strong> Vast tarief (bijv. €0,35/kWh). Je betaalt altijd hetzelfde.</p>
 <p><strong>Dynamisch contract:</strong> Tarief volgt intraday markt (elk uur ander). Goedkoop 's nachts/weekend, duur 's ochtends/avonds.</p>
 <p><strong>Met batterij + dynamisch:</strong> Laad 's nachts goedkoop (€0,10–€0,20/kWh), ontlaad 's avonds duur (€0,40–€0,60/kWh) → grote marge!</p>
 <p><strong>Voordeel ≈ €300–€600/jaar.</strong> Dit maakt batterij veel interessanter.</p>

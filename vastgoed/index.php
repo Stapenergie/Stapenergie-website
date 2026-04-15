@@ -26,7 +26,7 @@ $faq_items = [
   ['vraag' => 'Moet elk pand in mijn portefeuille een geldig energielabel hebben?',
    'antwoord' => 'Niet per se tegelijk, maar wel op het moment van verkoop, verhuur of oplevering. Als je een pand wilt verkopen of een nieuw huurcontract wilt afsluiten, is een geldig label wettelijk verplicht. Het is verstandig om vooruit te lopen op transacties en labels op orde te houden.'],
   ['vraag' => 'Geldt er een verhuurverbod voor panden met een slecht label?',
-   'antwoord' => 'Voor woningen is een verhuurverbod voor label E, F en G voorzien voor 2029 — de exacte invoeringsdatum staat nog niet vast. Voor kantoren groter dan 100 m² geldt nu al een verplicht minimumklasse C. Voor andere utiliteitsgebouwen gelden vooralsnog geen expliciete verboden, maar de regelgeving trekt aan.'],
+   'antwoord' => 'Voor woningen is een verhuurverbod voor label E, F en G voorzien voor 2029, de exacte invoeringsdatum staat nog niet vast. Voor kantoren groter dan 100 m² geldt nu al een verplicht minimumklasse C. Voor andere utiliteitsgebouwen gelden vooralsnog geen expliciete verboden, maar de regelgeving trekt aan.'],
   ['vraag' => 'Hoe snel kan STAP Energie een label opnemen en registreren?',
    'antwoord' => 'In de meeste gevallen is een opname binnen één tot twee weken in te plannen. Na de opname ontvang je het label doorgaans binnen één week. Heb je haast vanwege een nakende transactie? Geef dat aan in je aanvraag.'],
   ['vraag' => 'Biedt STAP Energie volumetarieven voor meerdere panden?',
@@ -34,7 +34,7 @@ $faq_items = [
   ['vraag' => 'Wat als mijn huurder nog in het pand zit tijdens de opname?',
    'antwoord' => 'Dat is geen probleem. De opname vereist toegang tot alle ruimtes, maar de huurder hoeft niet aanwezig te zijn. STAP Energie plant de afspraak in afstemming met alle betrokkenen.'],
   ['vraag' => 'Kan een label de verkoopprijs van mijn pand beinvloeden?',
-   'antwoord' => 'Ja. Panden met een goed energielabel zijn in de markt aantrekkelijker voor kopers en huurders — zeker nu energielasten een steeds grotere rol spelen in het huurrendement. Een slecht label kan de verkoop vertragen of de prijs drukken.'],
+   'antwoord' => 'Ja. Panden met een goed energielabel zijn in de markt aantrekkelijker voor kopers en huurders, zeker nu energielasten een steeds grotere rol spelen in het huurrendement. Een slecht label kan de verkoop vertragen of de prijs drukken.'],
 ];
 
 include $root . 'includes/head.php';
@@ -138,11 +138,11 @@ include $root . 'includes/components/section-kaarten.php';
 // ── Twee-kolom: regelgeving en risico
 $two_col_variant   = 'wit';
 $two_col_label     = 'Regelgeving';
-$two_col_titel     = 'De eisen worden strenger — het loont om voor te sorteren';
+$two_col_titel     = 'De eisen worden strenger, het loont om voor te sorteren';
 $two_col_omgekeerd = false;
 $two_col_links     = '
   <p style="color:var(--subtekst);line-height:1.7;margin-bottom:14px;">De labelplicht bij verkoop en verhuur bestaat al langer. Maar de regelgeving trekt aan. Voor kantoren geldt al een minimumklasse C. Voor huurwoningen staat een verhuurverbod voor slecht presterende panden in de planning.</p>
-  <p style="color:var(--subtekst);line-height:1.7;margin-bottom:14px;">Wie zijn portefeuille nu op orde brengt, voorkomt een inhaalslag op het slechtste moment — namelijk vlak voor een transactie of bij een inspectie.</p>
+  <p style="color:var(--subtekst);line-height:1.7;margin-bottom:14px;">Wie zijn portefeuille nu op orde brengt, voorkomt een inhaalslag op het slechtste moment, namelijk vlak voor een transactie of bij een inspectie.</p>
   <p style="color:var(--subtekst);line-height:1.7;margin-bottom:20px;">STAP Energie houdt het overzicht en signaleert welke panden als eerste aandacht vragen.</p>';
 $two_col_cta       = [];
 $two_col_rechts    = '

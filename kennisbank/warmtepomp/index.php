@@ -1,10 +1,10 @@
 <?php
 /**
  * kennisbank/warmtepomp/index.php
- * Kennisartikel: Warmtepomp voor uw huis
+ * Kennisartikel: Warmtepomp voor je huis
  */
 $root        = dirname(dirname(dirname(__FILE__))) . '/';
-$title       = 'Warmtepomp voor Uw Huis | Kosten, Subsidie & Types | STAP Energie';
+$title       = 'Warmtepomp voor Je Huis | Kosten, Subsidie & Types | STAP Energie';
 $description = 'Hoe werkt een warmtepomp? Kosten €3.000–€15.000, ISDE-subsidie €2.125–€4.400. Types: lucht, bodem, water. Wanneer loont het?';
 $canonical   = 'https://stapenergie.nl/kennisbank/warmtepomp/';
 
@@ -14,8 +14,8 @@ $breadcrumbs = [
   ['label' => 'Warmtepomp'],
 ];
 
-$cta_titel     = 'Geschikt voor uw woning?';
-$cta_subtitel  = 'Plan een vrijblijvend adviesgesprek. Wij beginnen met uw situatie.';
+$cta_titel     = 'Geschikt voor je woning?';
+$cta_subtitel  = 'Plan een vrijblijvend adviesgesprek. Wij beginnen met je situatie.';
 $cta_knop      = 'Plan een adviesgesprek →';
 $cta_knop_url  = '/#contact';
 $cta_garanties = ['15+ jaar ervaring in de energiemarkt', 'Geen productbelang', 'Reactie binnen twee werkdagen'];
@@ -32,7 +32,7 @@ $faq_items = [
   ['vraag' => 'Hybride of volledig elektrisch?',
    'antwoord' => 'Een hybride warmtepomp combineert elektrische verwarming met je huidige gasketel. Volledig elektrisch betekent dat je gas helemaal verlaat. Hybride is makkelijker voor slechter geïsoleerde huizen, volledig elektrisch is schoner en gunstiger in de toekomst (gasprijzen stijgen).'],
   ['vraag' => 'Hoe oud mag mijn woning zijn voor een warmtepomp?',
-   'antwoord' => 'Theoretisch kan elke woning een warmtepomp krijgen, maar het werkt beter in goed geïsoleerde huizen. Voor zeer oude, slecht geïsoleerde woningen kan een hybride aanpak voordelig zijn, of eerst isolatie verbeteren. STAP Energie adviseert altijd op basis van uw specifieke situatie.'],
+   'antwoord' => 'Theoretisch kan elke woning een warmtepomp krijgen, maar het werkt beter in goed geïsoleerde huizen. Voor zeer oude, slecht geïsoleerde woningen kan een hybride aanpak voordelig zijn, of eerst isolatie verbeteren. STAP Energie adviseert altijd op basis van je specifieke situatie.'],
 ];
 
 include $root . 'includes/head.php';
@@ -44,7 +44,7 @@ $hero_variant  = 'sub';
 $hero_bg       = '/images/hero-verduurzaming-hub.jpg';
 $hero_eyebrow  = 'Kennisbank';
 $hero_titel    = 'Warmtepomp: efficiënte verwarming met <em>elektrische energie</em>';
-$hero_lead     = 'Een warmtepomp vervangt uw gasketel en haalt warmte uit lucht, grond of water. Lager energieverbruik, lagere kosten en geen gas meer. Lees hier hoe het werkt, wat het kost en wanneer het zinvol is.';
+$hero_lead     = 'Een warmtepomp vervangt je gasketel en haalt warmte uit lucht, grond of water. Lager energieverbruik, lagere kosten en geen gas meer. Lees hier hoe het werkt, wat het kost en wanneer het zinvol is.';
 $hero_usps     = [];
 $hero_cta      = 'Plan een adviesgesprek →';
 $hero_cta_url  = '/#contact';
@@ -57,7 +57,7 @@ include $root . 'includes/trust.php';
 $two_col_variant   = 'wit';
 $two_col_label     = 'Werkingsprincipe';
 $two_col_titel     = 'Hoe werkt een warmtepomp?';
-$two_col_links     = '<p>Een warmtepomp werkt als een omgekeerde koelkast. In plaats van warmte uit het huis te zuigen, haalt het warmte uit de buitenlucht, grond of water — zelfs bij lage temperaturen. Het koudemiddel verdampt en neemt warmte op, wordt gecomprimeerd (waardoor het heter wordt) en geeft de warmte af aan uw water en radiators.</p>
+$two_col_links     = '<p>Een warmtepomp werkt als een omgekeerde koelkast. In plaats van warmte uit het huis te zuigen, haalt het warmte uit de buitenlucht, grond of water — zelfs bij lage temperaturen. Het koudemiddel verdampt en neemt warmte op, wordt gecomprimeerd (waardoor het heter wordt) en geeft de warmte af aan je water en radiators.</p>
 <p><strong>Efficiëntie:</strong> Voor elke kilowattuur elektriciteit die u verbruikt, levert een moderne warmtepomp 3 tot 5 kilowattuur warmte (de COP, Coefficient of Performance). Dit is veel beter dan een elektrische verwarming (1:1) en veel schoner dan gas.</p>';
 $two_col_cta       = [];
 $two_col_rechts    = '<ul class="checklist">
@@ -74,7 +74,7 @@ unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two
 $kaarten_variant = 'grijs';
 $kaarten_label   = 'Types';
 $kaarten_titel   = 'Verschillende soorten warmtepompen';
-$kaarten_intro   = 'Afhankelijk van uw situatie kiest u voor een lucht-, bodem- of water-warmtepomp. Elke variant heeft eigen voordelen en beperkingen.';
+$kaarten_intro   = 'Afhankelijk van je situatie kiest u voor een lucht-, bodem- of water-warmtepomp. Elke variant heeft eigen voordelen en beperkingen.';
 $kaarten_cols    = 3;
 $kaarten_items   = [
   [
@@ -115,7 +115,7 @@ unset($kaarten_variant, $kaarten_label, $kaarten_titel, $kaarten_intro, $kaarten
 $two_col_variant   = 'wit';
 $two_col_label     = 'Investering';
 $two_col_titel     = 'Wat kost een warmtepomp?';
-$two_col_links     = '<p>De totale kosten hangen af van het type, de installateur en uw situatie.</p>
+$two_col_links     = '<p>De totale kosten hangen af van het type, de installateur en je situatie.</p>
 <p><strong>Lucht-warmtepomp:</strong> €3.000–€7.000 (binnenunit + buitenunit + montage)</p>
 <p><strong>Bodem-warmtepomp:</strong> €10.000–€15.000 (met boorwerk)</p>
 <p><strong>Daarnaast:</strong> vervangen van radiators of radiatoren aanpassen (€2.000–€5.000), elektra aanpassen voor hoger vermogen (€500–€2.000).</p>
@@ -188,14 +188,14 @@ $two_col_variant   = 'wit';
 $two_col_label     = 'Keuze';
 $two_col_titel     = 'Volledig elektrisch of hybride?';
 $two_col_links     = '<p><strong>Volledig elektrische warmtepomp:</strong> Werkt alleen op elektriciteit. Schoon, geen gas meer, onderhoudskosten laag. Vereist goede isolatie en/of veel elektrisch vermogen.</p>
-<p><strong>Hybride warmtepomp:</strong> Combineert elektrische verwarming (warmtepomp) met uw bestaande gasketel. Gasketel springt in bij extreme kou. Minder strenge eisen aan isolatie, makkelijker te installeren, maar u blijft gas gebruiken.</p>
+<p><strong>Hybride warmtepomp:</strong> Combineert elektrische verwarming (warmtepomp) met je bestaande gasketel. Gasketel springt in bij extreme kou. Minder strenge eisen aan isolatie, makkelijker te installeren, maar u blijft gas gebruiken.</p>
 <p><strong>Toekomstbestendigheid:</strong> Gasprijzen stijgen. Volledig elektrisch is op lange termijn voordeliger — maar hybride kan nu al besparing geven.</p>';
 $two_col_cta       = ['tekst' => 'Plan adviesgesprek →', 'url' => '/#contact', 'stijl' => 'primair'];
 $two_col_rechts    = '<ul class="checklist">
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>Volledig: beter geïsoleerde woningen</span></li>
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>Hybride: overgangsoptie, minder risico</span></li>
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>Beide krijgen ISDE-subsidie</span></li>
-  <li class="checklist__item"><span class="checklist__vink">✓</span><span>Keuze hangt af van uw isolatie</span></li>
+  <li class="checklist__item"><span class="checklist__vink">✓</span><span>Keuze hangt af van je isolatie</span></li>
 </ul>';
 include $root . 'includes/components/section-two-col.php';
 unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two_col_links, $two_col_cta, $two_col_rechts);

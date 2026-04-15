@@ -15,7 +15,7 @@ $breadcrumbs = [
 ];
 
 $cta_titel     = 'CV-ketel vervangen?';
-$cta_subtitel  = 'Plan een vrijblijvend adviesgesprek. Wij beginnen met uw situatie.';
+$cta_subtitel  = 'Plan een vrijblijvend adviesgesprek. Wij beginnen met je situatie.';
 $cta_knop      = 'Plan een adviesgesprek →';
 $cta_knop_url  = '/#contact';
 $cta_garanties = ['15+ jaar ervaring in de energiemarkt', 'Geen productbelang', 'Reactie binnen twee werkdagen'];
@@ -24,13 +24,13 @@ $faq_label = 'Veelgestelde vragen';
 $faq_titel = 'Veelgestelde vragen over CV-ketels';
 $faq_items = [
   ['vraag' => 'Wanneer moet mijn CV-ketel vervangen?',
-   'antwoord' => 'CV-ketels houden gemiddeld 15–20 jaar mee. Tekenen: veel reparaties nodig, lage efficiëntie, lekkages, of ketel is ouder dan 15 jaar. Check ook: voldoet uw huisinstallatie nog aan normen?'],
+   'antwoord' => 'CV-ketels houden gemiddeld 15–20 jaar mee. Tekenen: veel reparaties nodig, lage efficiëntie, lekkages, of ketel is ouder dan 15 jaar. Check ook: voldoet je huisinstallatie nog aan normen?'],
   ['vraag' => 'Waarom een HR-ketel i.p.v. normale ketel?',
    'antwoord' => 'HR-ketels (Hoge Rendement) recupereren warmte uit rookgassen. Dit geeft 90%+ rendement ipv 85%. Spaart gas en geld. Ook veel stiller en compacter.'],
   ['vraag' => 'Wat is het verschil tussen HR, hybride en volledig warmtepomp?',
    'antwoord' => 'HR-ketel: alleen gas, 90%+ rendement. Hybride: gas + elektrisch (warmtepomp-assist), 95%+. Volledig warmtepomp: alleen elektriciteit, nog zuiniger maar vereist isolatie en elektrisch vermogen.'],
   ['vraag' => 'Kan ik van HR-ketel overstappen naar warmtepomp later?',
-   'antwoord' => 'Ja! HR-ketel nu (goedkoop), warmtepomp over 10 jaar (goede investering dan). Hybride is een tussenstap — u kunt telkens upgraden zonder volledig systeem opnieuw.'],
+   'antwoord' => 'Ja! HR-ketel nu (goedkoop), warmtepomp over 10 jaar (goede investering dan). Hybride is een tussenstap — je kunt telkens upgraden zonder volledig systeem opnieuw.'],
   ['vraag' => 'Hoe lang duurt cv-ketel vervangen?',
    'antwoord' => 'HR-ketel: meestal 1–2 dagen (plug-and-play). Hybride/warmtepomp: 2–5 dagen (extra werk, radiators/elektra). Geen gas-onderbreking van meer dan 1 dag.'],
 ];
@@ -44,7 +44,7 @@ $hero_variant  = 'sub';
 $hero_bg       = '/images/hero-verduurzaming-hub.jpg';
 $hero_eyebrow  = 'Kennisbank';
 $hero_titel    = 'CV-ketel vervangen: alle opties. <em>Van gas naar groen.</em>';
-$hero_lead     = 'Uw CV-ketel is aan vervanging toe? U hebt keuzes: een nieuwe HR-ketel (snel, goedkoop), hybride (gas + electric), of volledig over op warmtepomp. Lees alles over kosten, subsidies en wat het beste voor u is.';
+$hero_lead     = 'Je CV-ketel is aan vervanging toe? Je hebt keuzes: een nieuwe HR-ketel (snel, goedkoop), hybride (gas + electric), of volledig over op warmtepomp. Lees alles over kosten, subsidies en wat het beste voor je is.';
 $hero_usps     = [];
 $hero_cta      = 'Plan een adviesgesprek →';
 $hero_cta_url  = '/#contact';
@@ -57,8 +57,8 @@ include $root . 'includes/trust.php';
 $two_col_variant   = 'wit';
 $two_col_label     = 'Keuze';
 $two_col_titel     = 'Drie opties: HR, Hybride, of Warmtepomp';
-$two_col_links     = '<p>Bij vervangen van uw CV-ketel hebt u drie richtingen:</p>
-<p><strong>1. Nieuwe HR-ketel:</strong> Upgrade uw huidige gasketel naar modern hoge-rendement model. Snel, goedkoop, weinig gedoe. Blijft gas gebruiken.</p>
+$two_col_links     = '<p>Bij vervangen van je CV-ketel hebt u drie richtingen:</p>
+<p><strong>1. Nieuwe HR-ketel:</strong> Upgrade je huidige gasketel naar modern hoge-rendement model. Snel, goedkoop, weinig gedoe. Blijft gas gebruiken.</p>
 <p><strong>2. Hybride warmtepomp:</strong> Combinatie van elektrisch (warmtepomp) voor normale dagen + gasketel voor piekbelasting/winter. Best of both worlds: minder gas, elektrisch voordeel, veilig.</p>
 <p><strong>3. Volledig warmtepomp:</strong> Compleet weg van gas, 100% elektrisch. Schoon, laagste operationele kosten, maar vereist goede isolatie en vermogen.</p>';
 $two_col_cta       = [];
@@ -139,7 +139,7 @@ unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two
 $two_col_variant   = 'grijs';
 $two_col_label     = 'Optie 2';
 $two_col_titel     = 'Hybride Warmtepomp: beste balans';
-$two_col_links     = '<p><strong>Wat:</strong> Warmtepomp (elektriciteit) gekoppeld aan uw bestaande gasketel. Warmtepomp neemt normale dag-belasting, gasketel springt in bij extreme kou.</p>
+$two_col_links     = '<p><strong>Wat:</strong> Warmtepomp (elektriciteit) gekoppeld aan je bestaande gasketel. Warmtepomp neemt normale dag-belasting, gasketel springt in bij extreme kou.</p>
 <p><strong>Kosten:</strong> €3.000–€7.000 (warmtepomp-eenheid + montage).</p>
 <p><strong>Voordelen:</strong> 40–60% minder gas gebruik. ISDE-subsidie €2.125–€3.600. Laag risico (gas-backup). Werkt ook in slechter geïsoleerde huizen.</p>
 <p><strong>Nadelen:</strong> Nog steeds gas (maar veel minder). Elektriciteitsrekening omhoog.</p>
@@ -198,11 +198,11 @@ unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two
 $two_col_variant   = 'wit';
 $two_col_label     = 'Keuzehelper';
 $two_col_titel     = 'Hoe kies je?';
-$two_col_links     = '<p><strong>Check uw situatie:</strong></p>
+$two_col_links     = '<p><strong>Check je situatie:</strong></p>
 <p><strong>1. Isolatiegraad:</strong> Label A/B geïsoleerd? → warmtepomp full is goed. Label C/D/E? → hybride beter. Label F/G slecht? → HR-ketel + isolatie eerst.</p>
 <p><strong>2. Budget:</strong> Weinig? → HR-ketel nu, warmtepomp later. Meer? → hybride of volledig meteen.</p>
 <p><strong>3. Toekomstverwachting:</strong> Gas duurder? → weg van gas is slim. Risico-avers? → hybride hybrid middenpositie.</p>
-<p><strong>STAP Energie adviseert u op basis van uw huistype en doelen — geen vooroordeel.</strong></p>';
+<p><strong>STAP Energie adviseert u op basis van je huistype en doelen — geen vooroordeel.</strong></p>';
 $two_col_cta       = ['tekst' => 'Plan adviesgesprek →', 'url' => '/#contact', 'stijl' => 'primair'];
 $two_col_rechts    = '<ul class="checklist">
   <li class="checklist__item"><span class="checklist__vink">1</span><span>Check isolatie (label)</span></li>

@@ -29,13 +29,13 @@ $faq_items = [
   ['vraag' => 'Is een energielabel verplicht bij verkoop van mijn woning?',
    'antwoord' => 'Ja. Bij de overdracht ben je wettelijk verplicht een geldig energielabel aan de koper te overhandigen. Zonder label riskeer je een boete van de ILT.'],
   ['vraag' => 'Wat heb ik nodig voor de opname?',
-   'antwoord' => 'Toegang tot alle ruimtes — inclusief zolder, kelder en kruipruimte — is vereist. Wenselijk zijn ook bouwtekeningen, installatieverantwoording en facturen van isolatiemaatregelen.'],
+   'antwoord' => 'Toegang tot alle ruimtes, inclusief zolder, kelder en kruipruimte, is vereist. Wenselijk zijn ook bouwtekeningen, installatieverantwoording en facturen van isolatiemaatregelen.'],
   ['vraag' => 'Kan ik mijn energielabel verbeteren na verduurzaming?',
-   'antwoord' => 'Ja. Na isolatie, HR++-glas of een warmtepomp kun je je label laten aanpassen via herlabelen — mogelijk binnen 24 maanden na de oorspronkelijke opnamedatum.'],
+   'antwoord' => 'Ja. Na isolatie, HR++-glas of een warmtepomp kun je je label laten aanpassen via herlabelen, mogelijk binnen 24 maanden na de oorspronkelijke opnamedatum.'],
   ['vraag' => 'Verschilt het label voor een verhuurwoning van een koopwoning?',
-   'antwoord' => 'Nee. Het energielabel beschrijft de energieprestatie van het gebouw op basis van de vaste kenmerken — ongeacht het gebruik of de eigendomsvorm.'],
+   'antwoord' => 'Nee. Het energielabel beschrijft de energieprestatie van het gebouw op basis van de vaste kenmerken, ongeacht het gebruik of de eigendomsvorm.'],
   ['vraag' => 'Hoe snel kan ik een afspraak inplannen?',
-   'antwoord' => 'In de meeste gevallen kun je binnen één week terecht. Heb je haast — bijvoorbeeld vanwege een nakende verkooptransactie — geef dit dan aan in je aanvraag. STAP Energie kijkt wat qua planning mogelijk is.'],
+   'antwoord' => 'In de meeste gevallen kun je binnen één week terecht. Heb je haast, bijvoorbeeld vanwege een nakende verkooptransactie, geef dit dan aan in je aanvraag. STAP Energie kijkt wat qua planning mogelijk is.'],
 ];
 
 include $root . 'includes/head.php';
@@ -46,11 +46,11 @@ include $root . 'includes/breadcrumb.php';
 $hero_variant  = 'sub';
 $hero_bg       = '/images/hero-woningen.jpg';
 $hero_eyebrow  = 'Gecertificeerd EPA-adviseur';
-$hero_titel    = 'Energielabel voor jouw woning — <em>officieel, snel en persoonlijk</em>';
-$hero_lead     = 'Of je nu verkoopt, verhuurt of wilt weten hoe energiezuinig jouw woning is — STAP Energie verzorgt het officiële energielabel. Vaste prijs, geen verrassingen.';
+$hero_titel    = 'Energielabel voor jouw woning, <em>officieel, snel en persoonlijk</em>';
+$hero_lead     = 'Of je nu verkoopt, verhuurt of wilt weten hoe energiezuinig jouw woning is, STAP Energie verzorgt het officiële energielabel. Vaste prijs, geen verrassingen.';
 $hero_usps     = [
   'Officieel geregistreerd in EP-online',
-  'Vaste prijzen — geen verborgen kosten',
+  'Vaste prijzen, geen verborgen kosten',
   'Binnen één week je label op zak',
   'Persoonlijk advies zonder extra kosten',
 ];
@@ -124,13 +124,13 @@ include $root . 'includes/components/section-kaarten.php';
 $kaarten_variant = 'grijs';
 $kaarten_label   = '-- Wat we voor je doen';
 $kaarten_titel   = 'Alle diensten voor woningeigenaren';
-$kaarten_intro   = 'Van verplicht energielabel tot een volledig verduurzamingsplan — en binnenkort ook een handige energievergelijker.';
+$kaarten_intro   = 'Van verplicht energielabel tot een volledig verduurzamingsplan, en binnenkort ook een handige energievergelijker.';
 $kaarten_cols    = 3;
 $kaarten_items   = [
   [
     'titel'     => 'Energielabel woning',
     'icoon'     => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 7h8M8 12h5M8 17h3"/></svg>',
-    'tekst'     => 'Verplicht bij verkoop en verhuur. Officieel geregistreerd in EP-online. Snel op afspraak bij u thuis.',
+    'tekst'     => 'Verplicht bij verkoop en verhuur. Officieel geregistreerd in EP-online. Snel op afspraak bij je thuis.',
     'cta_tekst' => 'Meer info en aanvragen →',
     'cta_url'   => '/energielabels/woningen/',
     'cta_stijl' => 'outline',
@@ -138,7 +138,7 @@ $kaarten_items   = [
   [
     'titel'     => 'Verduurzaming & Subsidie',
     'icoon'     => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
-    'tekst'     => 'Persoonlijk stappenplan voor jouw woning. Alle beschikbare subsidies in kaart — ISDE, SEEH, gemeentelijke regelingen.',
+    'tekst'     => 'Persoonlijk stappenplan voor jouw woning. Alle beschikbare subsidies in kaart, ISDE, SEEH, gemeentelijke regelingen.',
     'cta_tekst' => 'Meer info →',
     'cta_url'   => '/verduurzaming-subsidie/',
     'cta_stijl' => 'outline',
@@ -173,7 +173,7 @@ include $root . 'includes/components/section-kaarten.php';
 $stappen_variant = 'grijs';
 $stappen_label   = 'Zo werkt het';
 $stappen_titel   = 'Van aanvraag tot officieel label in 4 stappen';
-$stappen_intro   = 'Transparant, snel en zonder gedoe — STAP Energie regelt het van begin tot eind.';
+$stappen_intro   = 'Transparant, snel en zonder gedoe, STAP Energie regelt het van begin tot eind.';
 $stappen_cols    = 4;
 $stappen_items   = [
   ['nummer' => 1, 'titel' => 'Aanvraag indienen',   'tekst' => 'Vul het formulier in. Binnen twee werkdagen nemen we contact op voor een afspraak.'],
@@ -187,12 +187,12 @@ include $root . 'includes/components/section-stappen.php';
 $kaarten_variant = 'grijs';
 $kaarten_label   = 'Wanneer verplicht?';
 $kaarten_titel   = 'In welke situatie heb je een woninglabel nodig?';
-$kaarten_intro   = 'Een energielabel is in diverse situaties wettelijk verplicht — voor particuliere én zakelijke woningeigenaren.';
+$kaarten_intro   = 'Een energielabel is in diverse situaties wettelijk verplicht, voor particuliere én zakelijke woningeigenaren.';
 $kaarten_cols    = 4;
 $kaarten_items   = [
   [
     'titel' => 'Verkoop van jouw woning',
-    'tekst' => 'Bij overdracht bent u verplicht een geldig label te overhandigen.',
+    'tekst' => 'Bij overdracht ben je verplicht een geldig label te overhandigen.',
     'icoon' => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>',
     'extra' => '<div style="margin-top:8px;"><span class="badge badge--groen">Particulier</span></div>',
   ],
@@ -220,7 +220,7 @@ include $root . 'includes/components/section-kaarten.php';
 // ── Doelgroepen
 $kaarten_variant = 'wit';
 $kaarten_label   = 'Voor iedereen met een woning';
-$kaarten_titel   = 'Particulier of zakelijk — het label is hetzelfde';
+$kaarten_titel   = 'Particulier of zakelijk, het label is hetzelfde';
 $kaarten_intro   = 'Het energielabel voor een woning is technisch identiek, ongeacht wie de eigenaar is.';
 $kaarten_cols    = 2;
 $kaarten_items   = [
@@ -264,7 +264,7 @@ $tabs_items   = [
       ['icoon' => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>',
        'titel' => 'Verplicht bij verkoop', 'tekst' => 'Bij overdracht is een geldig label wettelijk verplicht. Geen label: boete tot €435 van de ILT.'],
       ['icoon' => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>',
-       'titel' => 'Geldigheid 10 jaar', 'tekst' => 'Na registratie is het label 10 jaar geldig. Na verduurzaming kunt u herlabelen.'],
+       'titel' => 'Geldigheid 10 jaar', 'tekst' => 'Na registratie is het label 10 jaar geldig. Na verduurzaming kun je herlabelen.'],
       ['icoon' => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="8" width="18" height="13" rx="1"/><path d="M16 8V6a4 4 0 00-8 0v2"/></svg>',
        'titel' => 'Hypotheekvoordeel', 'tekst' => 'Bij label A of B bieden grootbanken tot 0,3% rentevoordeel op je hypotheek.'],
     ],
@@ -287,7 +287,7 @@ include $root . 'includes/components/section-tabs.php';
 $kaarten_variant = 'wit';
 $kaarten_label   = '-- Verder verduurzamen';
 $kaarten_titel   = 'Wat komt er na jouw energielabel?';
-$kaarten_intro   = 'Een energielabel geeft inzicht — maar de echte winst zit in de vervolgstap. STAP Energie helpt je begrijpen welke maatregelen het meeste opleveren voor jouw situatie.';
+$kaarten_intro   = 'Een energielabel geeft inzicht, maar de echte winst zit in de vervolgstap. STAP Energie helpt je begrijpen welke maatregelen het meeste opleveren voor jouw situatie.';
 $kaarten_cols    = 4;
 $kaarten_noot    = '';
 
@@ -297,7 +297,7 @@ $kaarten_noot    = '';
   <div class="sectie__inner">
     <span class="sectie__label">-- Verder verduurzamen</span>
     <h2 class="sectie__titel">Wat komt er na jouw energielabel?</h2>
-    <p class="sectie__intro">Een energielabel geeft inzicht — maar de echte winst zit in de vervolgstap. STAP Energie helpt je begrijpen welke maatregelen het meeste opleveren voor jouw situatie.</p>
+    <p class="sectie__intro">Een energielabel geeft inzicht, maar de echte winst zit in de vervolgstap. STAP Energie helpt je begrijpen welke maatregelen het meeste opleveren voor jouw situatie.</p>
 
     <p class="sectie__label" style="margin-bottom:16px;">-- Populaire vervolgstappen na een energielabel</p>
     <div class="sectie-kaarten__grid sectie-kaarten__grid--4" style="margin-bottom:40px;">
@@ -307,12 +307,12 @@ $kaarten_noot    = '';
       <?php $card = ['titel'=>'HR-ketel vervangen','type'=>'Verwarming','icoon'=>'<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>','tekst'=>'Een verouderde cv-ketel vervangen door een moderne HR-ketel of hybride warmtepomp is vaak een slimme tussenstap.','cta_tekst'=>'Meer lezen →','cta_url'=>'/kennisbank/cv-ketel/','cta_stijl'=>'outline']; include $root . 'includes/components/card.php'; ?>
     </div>
 
-    <p class="sectie__label" style="margin-bottom:16px;">-- Slimmer wonen — de volgende stap</p>
+    <p class="sectie__label" style="margin-bottom:16px;">-- Slimmer wonen, de volgende stap</p>
     <div class="sectie-kaarten__grid sectie-kaarten__grid--4">
       <?php $card = ['titel'=>'Thuisbatterij','type'=>'Opslag','icoon'=>'<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="14" rx="2"/><path d="M10 7V5a2 2 0 014 0v2"/><line x1="10" y1="11" x2="14" y2="11"/><line x1="12" y1="9" x2="12" y2="13"/></svg>','tekst'=>"Sla zelf opgewekte zonne-energie op voor gebruik 's avonds of bij piekprijzen. Interessant bij dynamisch energiecontract.",'cta_tekst'=>'Meer lezen →','cta_url'=>'/kennisbank/thuisbatterij/','cta_stijl'=>'outline']; include $root . 'includes/components/card.php'; ?>
-      <?php $card = ['titel'=>'Laadpaal thuis','type'=>'Mobiliteit','icoon'=>'<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18.01"/><path d="M9 7h6M9 11h4"/></svg>','tekst'=>'Laad je elektrische auto slim thuis op — bij voorkeur op je eigen zonne-energie. Subsidie beschikbaar via SEEH-regeling.','cta_tekst'=>'Meer lezen →','cta_url'=>'/kennisbank/laadpaal/','cta_stijl'=>'outline']; include $root . 'includes/components/card.php'; ?>
+      <?php $card = ['titel'=>'Laadpaal thuis','type'=>'Mobiliteit','icoon'=>'<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18.01"/><path d="M9 7h6M9 11h4"/></svg>','tekst'=>'Laad je elektrische auto slim thuis op, bij voorkeur op je eigen zonne-energie. Subsidie beschikbaar via SEEH-regeling.','cta_tekst'=>'Meer lezen →','cta_url'=>'/kennisbank/laadpaal/','cta_stijl'=>'outline']; include $root . 'includes/components/card.php'; ?>
       <?php $card = ['titel'=>'Airco / warmte-koud','type'=>'Klimaat','icoon'=>'<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg>','tekst'=>'Een moderne airco koelt in de zomer én verwarmt efficiënt in de winter. Werkt als aanvulling op een warmtepomp of als alternatief.','cta_tekst'=>'Meer lezen →','cta_url'=>'/kennisbank/airco/','cta_stijl'=>'outline']; include $root . 'includes/components/card.php'; ?>
-      <?php $card = ['titel'=>'Energiemanagementsysteem','type'=>'Slim beheer','icoon'=>'<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>','tekst'=>'Een EMS koppelt uw zonnepanelen, batterij, laadpaal en warmtepomp slim aan elkaar. Zo gebruikt u altijd de goedkoopste energie.','cta_tekst'=>'Meer lezen →','cta_url'=>'/kennisbank/ems/','cta_stijl'=>'outline']; include $root . 'includes/components/card.php'; ?>
+      <?php $card = ['titel'=>'Energiemanagementsysteem','type'=>'Slim beheer','icoon'=>'<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>','tekst'=>'Een EMS koppelt je zonnepanelen, batterij, laadpaal en warmtepomp slim aan elkaar. Zo gebruik je altijd de goedkoopste energie.','cta_tekst'=>'Meer lezen →','cta_url'=>'/kennisbank/ems/','cta_stijl'=>'outline']; include $root . 'includes/components/card.php'; ?>
     </div>
   </div>
 </section>

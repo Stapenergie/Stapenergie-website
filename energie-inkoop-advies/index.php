@@ -2,7 +2,7 @@
 $root = dirname(dirname(__FILE__)) . '/';
 
 $page_titel     = 'Energie-inkoop advies voor bedrijven | STAP Energie';
-$page_beschrijving = 'Wij nemen jouw energie-inkoop over. Contractanalyse, volledig contractbeheer en collectieve inkoop — onafhankelijk, transparant en afgestemd op jouw bedrijfsproces.';
+$page_beschrijving = 'Wij nemen jouw energie-inkoop over. Contractanalyse, volledig contractbeheer en collectieve inkoop, onafhankelijk, transparant en afgestemd op jouw bedrijfsproces.';
 $page_canonical = 'https://stapenergie.nl/energie-inkoop-advies/';
 
 include $root . 'includes/head.php';
@@ -46,7 +46,7 @@ unset($trust_items);
 
 <?php
 /* -------------------------------------------------- */
-/* SECTIE 3 — HET PROBLEEM                            */
+/* SECTIE 3, HET PROBLEEM                            */
 /* -------------------------------------------------- */
 $twocol_variant = 'grijs';
 $twocol_label   = 'Waarom het misgaat';
@@ -60,7 +60,7 @@ unset($twocol_variant, $twocol_label, $twocol_titel, $twocol_links, $twocol_rech
 
 <?php
 /* -------------------------------------------------- */
-/* SECTIE 4 — ONZE DIENSTEN                           */
+/* SECTIE 4, ONZE DIENSTEN                           */
 /* -------------------------------------------------- */
 $kaarten_label   = 'Wat wij doen';
 $kaarten_titel   = 'Van losse analyse tot volledig contractbeheer';
@@ -92,7 +92,7 @@ unset($kaarten_label, $kaarten_titel, $kaarten_variant, $kaarten_cols, $kaarten_
 
 <?php
 /* -------------------------------------------------- */
-/* SECTIE 5 — HOE WIJ KIJKEN (contrast)               */
+/* SECTIE 5, HOE WIJ KIJKEN (contrast)               */
 /* -------------------------------------------------- */
 $contrast_variant = 'grijs';
 $contrast_label   = 'Onze aanpak';
@@ -125,7 +125,7 @@ unset($contrast_variant, $contrast_label, $contrast_titel, $contrast_intro, $con
 
 <?php
 /* -------------------------------------------------- */
-/* SECTIE 6 — WERKWIJZE                               */
+/* SECTIE 6, WERKWIJZE                               */
 /* -------------------------------------------------- */
 $stappen_label   = 'Werkwijze';
 $stappen_titel   = 'Van eerste gesprek tot zorgeloos contractbeheer';
@@ -155,7 +155,7 @@ unset($stappen_label, $stappen_titel, $stappen_variant, $stappen_cols, $stappen)
 
 <?php
 /* -------------------------------------------------- */
-/* SECTIE 7 — WAAROM STAP                             */
+/* SECTIE 7, WAAROM STAP                             */
 /* -------------------------------------------------- */
 $kaarten_label   = 'Waarom STAP';
 $kaarten_titel   = 'Wij kennen de markt van binnenuit';
@@ -177,7 +177,7 @@ unset($kaarten_label, $kaarten_titel, $kaarten_variant, $kaarten_cols, $kaarten_
 
 <?php
 /* -------------------------------------------------- */
-/* SECTIE 8 — FORMULIER                               */
+/* SECTIE 8, FORMULIER                               */
 /* -------------------------------------------------- */
 ?>
 <section id="analyse" class="sectie sectie--wit">
@@ -191,12 +191,12 @@ unset($kaarten_label, $kaarten_titel, $kaarten_variant, $kaarten_cols, $kaarten_
 
 <?php
 /* -------------------------------------------------- */
-/* SECTIE 9 — FAQ                                     */
+/* SECTIE 9, FAQ                                     */
 /* -------------------------------------------------- */
 $faq_items = [
     [
         'vraag'  => 'Wat is het verschil tussen STAP en een energieleverancier?',
-        'antwoord' => 'Een leverancier verkoopt energie. Wij kopen het voor u in. Onafhankelijk, zonder belang bij een bepaalde leverancier.',
+        'antwoord' => 'Een leverancier verkoopt energie. Wij kopen het voor je in. Onafhankelijk, zonder belang bij een bepaalde leverancier.',
     ],
     [
         'vraag'  => 'Waarom heb je een volmacht nodig?',
@@ -225,7 +225,7 @@ unset($faq_items);
 
 <?php
 /* -------------------------------------------------- */
-/* SECTIE 10 — AFSLUITENDE CTA                        */
+/* SECTIE 10, AFSLUITENDE CTA                        */
 /* -------------------------------------------------- */
 $cta_titel  = "Energie-inkoop van jouw bordje. Permanent.";
 $cta_tekst  = 'Start met een gratis contractanalyse en ontdek wat er beter kan.';

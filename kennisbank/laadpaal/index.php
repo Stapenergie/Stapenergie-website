@@ -15,7 +15,7 @@ $breadcrumbs = [
 ];
 
 $cta_titel     = 'Laadpaal thuis installeren?';
-$cta_subtitel  = 'Plan een vrijblijvend adviesgesprek. Wij beginnen met uw situatie.';
+$cta_subtitel  = 'Plan een vrijblijvend adviesgesprek. Wij beginnen met je situatie.';
 $cta_knop      = 'Plan een adviesgesprek →';
 $cta_knop_url  = '/#contact';
 $cta_garanties = ['15+ jaar ervaring in de energiemarkt', 'Geen productbelang', 'Reactie binnen twee werkdagen'];
@@ -138,7 +138,7 @@ unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two
 $two_col_variant   = 'grijs';
 $two_col_label     = 'Optimalisering';
 $two_col_titel     = 'Smart charging: intelligente laadtiming';
-$two_col_links     = '<p><strong>Standaard laadpaal:</strong> U laadt wanneer u wilt. Geen optimalisatie.</p>
+$two_col_links     = '<p><strong>Standaard laadpaal:</strong> Je laadt wanneer je wilt. Geen optimalisatie.</p>
 <p><strong>Smart laadpaal:</strong> Laadpaal communiceert met netwerk/auto. Mogelijkheden:</p>
 <p>→ <strong>Laad in goedkope uren:</strong> Dynamisch contract? Laadpaal laadt 's nachts goedkoop (€0,10–€0,20/kWh), niet duur (€0,40–€0,50/kWh).<br>
 → <strong>Zonnepanelen:</strong> Laad 's middags wanneer zon schijnt — gratis stroom!<br>
@@ -158,7 +158,7 @@ unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two
 $two_col_variant   = 'wit';
 $two_col_label     = 'Combinatie';
 $two_col_titel     = 'Laadpaal + zonnepanelen: optimaal';
-$two_col_links     = '<p><strong>Scenario:</strong> U hebt zonnepanelen en elektrische auto.</p>
+$two_col_links     = '<p><strong>Scenario:</strong> Je hebt zonnepanelen en elektrische auto.</p>
 <p><strong>Ideaal:</strong> 's Middags wanneer zon schijnt, auto laden. Dit geeft:</p>
 <p>→ Gratis laad-stroom (of zeer goedkoop)<br>
 → Vermindert teruglevering naar net (dus minder subsidie-verlies bij saldering)<br>
@@ -179,7 +179,7 @@ unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two
 $two_col_variant   = 'grijs';
 $two_col_label     = 'Technisch';
 $two_col_titel     = 'Load-balancing: meerdere systemen delen stroom';
-$two_col_links     = '<p><strong>Situatie:</strong> U hebt warmtepomp + laadpaal + thuisbatterij = veel stroomvraag tegelijk.</p>
+$two_col_links     = '<p><strong>Situatie:</strong> Je hebt warmtepomp + laadpaal + thuisbatterij = veel stroomvraag tegelijk.</p>
 <p><strong>Probleem:</strong> Elektrische aansluiting heeft beperkte capaciteit (meestal 1–3 fases van 25–40 Ampère). Alles tegelijk is overbelasting.</p>
 <p><strong>Oplossing: Load-balancing:</strong> Intelligente sturing verdeelt beschikbare stroom:</p>
 <p>→ Warmtepomp krijgt priority (verwarming is essentieel)<br>
@@ -199,7 +199,7 @@ unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two
 // ── Geschiktheid
 $two_col_variant   = 'wit';
 $two_col_label     = 'Voorzorg';
-$two_col_titel     = 'Is laadpaal thuis voor u geschikt?';
+$two_col_titel     = 'Is laadpaal thuis voor je geschikt?';
 $two_col_links     = '<p><strong>Ideaal als u:</strong></p>
 <p>✓ Elektrische auto hebt (of plant)<br>
 ✓ Oprit/garage met stroom hebt<br>

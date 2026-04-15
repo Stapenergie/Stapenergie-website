@@ -14,8 +14,8 @@ $breadcrumbs = [
   ['label' => 'Zonneboiler'],
 ];
 
-$cta_titel     = 'Zonneboiler geschikt voor u?';
-$cta_subtitel  = 'Plan een vrijblijvend adviesgesprek. Wij beginnen met uw situatie.';
+$cta_titel     = 'Zonneboiler geschikt voor je?';
+$cta_subtitel  = 'Plan een vrijblijvend adviesgesprek. Wij beginnen met je situatie.';
 $cta_knop      = 'Plan een adviesgesprek →';
 $cta_knop_url  = '/#contact';
 $cta_garanties = ['15+ jaar ervaring in de energiemarkt', 'Geen productbelang', 'Reactie binnen twee werkdagen'];
@@ -32,7 +32,7 @@ $faq_items = [
   ['vraag' => 'Hoeveel warmwatergebruik is nodig?',
    'antwoord' => 'Zonneboiler loont best voor gezinnen met hoog dagelijks warm-watergebruik (douche, bad, wasmachine). Kleine gezinnen/alleenstaanden: minder rendement.'],
   ['vraag' => 'Hoe oud moet mijn huisinstallatie zijn?',
-   'antwoord' => 'Zonneboiler werkt met elke boiler. Moet wel kompatibel (serpentijn of inhoud). Oude cv-installaties kunnen aangepast worden (kosten ±€500). STAP Energie adviseert op basis van uw systeem.'],
+   'antwoord' => 'Zonneboiler werkt met elke boiler. Moet wel kompatibel (serpentijn of inhoud). Oude cv-installaties kunnen aangepast worden (kosten ±€500). STAP Energie adviseert op basis van je systeem.'],
 ];
 
 include $root . 'includes/head.php';
@@ -44,7 +44,7 @@ $hero_variant  = 'sub';
 $hero_bg       = '/images/hero-verduurzaming-hub.jpg';
 $hero_eyebrow  = 'Kennisbank';
 $hero_titel    = 'Zonneboiler: kosteloos warm water. <em>Door de zon verwarmd.</em>';
-$hero_lead     = 'Een zonneboiler haalt warmte uit zonneschijn en warmt uw water op. Dit bespaard 50–60% gas voor warm water. Kost €1.500–€3.500 en wordt terugbetaald in 5–8 jaar. Ideaal als u al zonnepanelen hebt of veel warm water gebruikt.';
+$hero_lead     = 'Een zonneboiler haalt warmte uit zonneschijn en warmt je water op. Dit bespaard 50–60% gas voor warm water. Kost €1.500–€3.500 en wordt terugbetaald in 5–8 jaar. Ideaal als u al zonnepanelen hebt of veel warm water gebruikt.';
 $hero_usps     = [];
 $hero_cta      = 'Plan een adviesgesprek →';
 $hero_cta_url  = '/#contact';
@@ -60,7 +60,7 @@ $two_col_titel     = 'Hoe werkt een zonneboiler?';
 $two_col_links     = '<p>Een zonneboiler bestaat uit zonnecollectoren op het dak (niet te verwarren met zonnepanelen — dit zijn thermische panelen, geen elektriciteit).</p>
 <p><strong>Proces:</strong> Zonnestraling warmt vloeistof in de collector op. Deze warme vloeistof stroomt naar een boilertenk waar het water opwarmt via een warmtewisselaar (serpentijn).</p>
 <p><strong>Voordeel:</strong> Directe warmte-overdracht, geen omzettingsverlies. Efficiëntie: 60–80% van inkomende zonnenergie.</p>
-<p><strong>Winter/nacht:</strong> Elektrische verwarming of gasketel springt in. Dus u hebt altijd warm water.</p>';
+<p><strong>Winter/nacht:</strong> Elektrische verwarming of gasketel springt in. Dus je hebt altijd warm water.</p>';
 $two_col_cta       = [];
 $two_col_rechts    = '<ul class="checklist">
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>Directe warmte van zon</span></li>
@@ -75,7 +75,7 @@ unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two
 $kaarten_variant = 'grijs';
 $kaarten_label   = 'Types';
 $kaarten_titel   = 'Verschillende zonneboiler-systemen';
-$kaarten_intro   = 'Er zijn enkele varianten. Welke past best hangt af van uw situatie.';
+$kaarten_intro   = 'Er zijn enkele varianten. Welke past best hangt af van je situatie.';
 $kaarten_cols    = 2;
 $kaarten_items   = [
   [

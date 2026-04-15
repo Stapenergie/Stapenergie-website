@@ -48,7 +48,7 @@ $hero_lead     = 'Industriele bedrijven betalen voor energie op een heel andere 
 $hero_usps     = [
   '15+ jaar ervaring aan de leverancierszijde',
   'Kennis van complexe inkoopstructuren en Europese aanbestedingen',
-  'Onafhankelijk — geen merkvoorkeur',
+  'Onafhankelijk, geen merkvoorkeur',
   'Reactie binnen twee werkdagen',
 ];
 $hero_cta      = 'Plan een kennismakingsgesprek →';
@@ -112,7 +112,7 @@ $kaarten_items   = [
   [
     'titel'     => 'Energielabels utiliteit',
     'icoon'     => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 7h8M8 12h5M8 17h3"/></svg>',
-    'tekst'     => 'Verplicht bij verkoop, verhuur en oplevering van bedrijfspanden. STAP Energie verzorgt officieel geregistreerde labels voor uw industriele gebouwen.',
+    'tekst'     => 'Verplicht bij verkoop, verhuur en oplevering van bedrijfspanden. STAP Energie verzorgt officieel geregistreerde labels voor je industriële gebouwen.',
     'cta_tekst' => 'Meer over utiliteitslabels →',
     'cta_url'   => '/energielabels/utiliteit/',
     'cta_stijl' => 'outline',

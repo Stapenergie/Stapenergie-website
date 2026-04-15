@@ -13,8 +13,8 @@ $breadcrumbs = [
   ['label' => 'Kennisbank'],
 ];
 
-$cta_titel     = 'Vragen over uw specifieke situatie?';
-$cta_subtitel  = 'Artikel lezen is een goede start. Maar uw situatie is altijd specifiek. Plan een vrijblijvend adviesgesprek.';
+$cta_titel     = 'Vragen over je specifieke situatie?';
+$cta_subtitel  = 'Artikel lezen is een goede start. Maar je situatie is altijd specifiek. Plan een vrijblijvend adviesgesprek.';
 $cta_knop      = 'Plan een adviesgesprek →';
 $cta_knop_url  = '/#contact';
 $cta_garanties = ['15+ jaar ervaring in de energiemarkt', 'Geen productbelang', 'Reactie binnen twee werkdagen'];
@@ -28,7 +28,7 @@ $hero_variant  = 'sub';
 $hero_bg       = '/images/hero-verduurzaming-hub.jpg';
 $hero_eyebrow  = 'Kennisbank';
 $hero_titel    = 'Praktische gidsen over verduurzaming. <em>Zonder verkoopbelang.</em>';
-$hero_lead     = 'Welke maatregel past bij uw woning? Wat kost een warmtepomp echt? Wanneer zijn zonnepanelen de moeite waard? In de kennisbank van STAP Energie vindt u eerlijke informatie — zonder producten te verkopen.';
+$hero_lead     = 'Welke maatregel past bij je woning? Wat kost een warmtepomp echt? Wanneer zijn zonnepanelen de moeite waard? In de kennisbank van STAP Energie vindt u eerlijke informatie — zonder producten te verkopen.';
 $hero_usps     = [];
 $hero_cta      = 'Bekijk alle onderwerpen';
 $hero_cta_url  = '#onderwerpen';
@@ -75,7 +75,7 @@ $kaarten_items   = [
     'titel'     => 'Zonneboiler',
     'icoon'     => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>',
     'badge'     => 'Warm water',
-    'tekst'     => 'Een zonneboiler verlaagt uw gasverbruik voor warm water tot 60%. Lees wanneer het een slimme keuze is.',
+    'tekst'     => 'Een zonneboiler verlaagt je gasverbruik voor warm water tot 60%. Lees wanneer het een slimme keuze is.',
     'cta_tekst' => 'Lees het artikel →',
     'cta_url'   => '/kennisbank/zonneboiler/',
     'cta_stijl' => 'outline',
@@ -84,7 +84,7 @@ $kaarten_items   = [
     'titel'     => 'CV-ketel vervangen',
     'icoon'     => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
     'badge'     => 'Verwarming',
-    'tekst'     => 'Uw ketel aan vervanging toe? Vervangen door een moderne HR-ketel, hybride warmtepomp of volledig elektrisch — wat past het beste?',
+    'tekst'     => 'Je ketel aan vervanging toe? Vervangen door een moderne HR-ketel, hybride warmtepomp of volledig elektrisch — wat past het beste?',
     'cta_tekst' => 'Lees het artikel →',
     'cta_url'   => '/kennisbank/cv-ketel/',
     'cta_stijl' => 'outline',
@@ -102,7 +102,7 @@ $kaarten_items   = [
     'titel'     => 'Laadpaal thuis',
     'icoon'     => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18.01"/><path d="M9 7h6M9 11h4"/></svg>',
     'badge'     => 'Mobiliteit',
-    'tekst'     => 'Een eigen laadpaal laden op zonne-energie: kosten, installatie, subsidie en de slimste combinatie met uw energiesysteem.',
+    'tekst'     => 'Een eigen laadpaal laden op zonne-energie: kosten, installatie, subsidie en de slimste combinatie met je energiesysteem.',
     'cta_tekst' => 'Lees het artikel →',
     'cta_url'   => '/kennisbank/laadpaal/',
     'cta_stijl' => 'outline',

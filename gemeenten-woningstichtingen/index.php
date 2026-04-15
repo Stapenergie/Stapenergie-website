@@ -24,7 +24,7 @@ $faq_label = 'Veelgestelde vragen';
 $faq_titel = 'Vragen van gemeenten en woningstichtingen';
 $faq_items = [
   ['vraag' => 'Hoe werkt een portefeuilleaanpak voor energielabels?',
-   'antwoord' => 'STAP Energie brengt samen met je in kaart welke panden als eerste aandacht vragen — op basis van huidige labelstatus, geplande transacties en verduurzamingsdoelen. Vervolgens plannen wij de opnames gecoordineerd in, zodat je zo min mogelijk last heeft van de logistiek.'],
+   'antwoord' => 'STAP Energie brengt samen met je in kaart welke panden als eerste aandacht vragen, op basis van huidige labelstatus, geplande transacties en verduurzamingsdoelen. Vervolgens plannen wij de opnames gecoordineerd in, zodat je zo min mogelijk last heeft van de logistiek.'],
   ['vraag' => 'Wat is de verplichting voor huurwoningen met een slecht energielabel?',
    'antwoord' => 'Voor woningen met label E, F of G is een verhuurverbod voorzien. De exacte invoeringsdatum staat nog niet definitief vast, maar het beleid trekt aan. Woningcorporaties doen er verstandig aan hun portefeuille nu in kaart te brengen en prioriteiten te stellen.'],
   ['vraag' => 'Kan STAP Energie ook bijdragen aan ons verduurzamingsplan?',
@@ -44,10 +44,10 @@ $hero_variant  = 'sub';
 $hero_bg       = '/images/segment-gemeenten.jpg';
 $hero_eyebrow  = 'Energielabels voor gemeenten & woningstichtingen';
 $hero_titel    = 'Grote portefeuille, veel verplichtingen. <em>STAP brengt overzicht.</em>';
-$hero_lead     = 'Gemeenten en woningstichtingen beheren tientallen tot honderden panden. STAP Energie helpt met een gecoordineerde aanpak voor energielabels en verduurzaming — op portefeuilleniveau, niet pand voor pand.';
+$hero_lead     = 'Gemeenten en woningstichtingen beheren tientallen tot honderden panden. STAP Energie helpt met een gecoordineerde aanpak voor energielabels en verduurzaming, op portefeuilleniveau, niet pand voor pand.';
 $hero_usps     = [
   'Gecertificeerd EPA-adviseur',
-  'Portefeuilleaanpak — gecoordineerde planning',
+  'Portefeuilleaanpak, gecoordineerde planning',
   'Energielabels en verduurzamingsadvies gecombineerd',
   'Volumetarief bij meerdere panden',
 ];
@@ -99,7 +99,7 @@ $two_col_rechts    = '
   <ul class="checklist">
     <li class="checklist__item"><span class="checklist__vink">✓</span><span>Eerst inzicht in labelstatus per pand</span></li>
     <li class="checklist__item"><span class="checklist__vink">✓</span><span>Prioriteiten op basis van transacties en regelgeving</span></li>
-    <li class="checklist__item"><span class="checklist__vink">✓</span><span>Gecoordineerde planning — zo min mogelijk overlast</span></li>
+    <li class="checklist__item"><span class="checklist__vink">✓</span><span>Gecoordineerde planning, zo min mogelijk overlast</span></li>
     <li class="checklist__item"><span class="checklist__vink">✓</span><span>Volumetarief bij meerdere panden</span></li>
     <li class="checklist__item"><span class="checklist__vink">✓</span><span>Vaste aanspreekpersoon gedurende het traject</span></li>
     <li class="checklist__item"><span class="checklist__vink">✓</span><span>Gecombineerd met verduurzamingsadvies mogelijk</span></li>
@@ -113,7 +113,7 @@ $two_col_label     = 'Regelgeving';
 $two_col_titel     = 'De verplichtingen voor huurwoningen worden strenger';
 $two_col_omgekeerd = true;
 $two_col_links     = '
-  <p style="color:var(--subtekst);line-height:1.7;margin-bottom:14px;">Voor woningcorporaties en gemeenten met huurwoningen trekt de regelgeving aan. Een verhuurverbod voor woningen met label E, F of G is voorzien — de exacte invoeringsdatum staat nog niet definitief vast, maar de richting is duidelijk.</p>
+  <p style="color:var(--subtekst);line-height:1.7;margin-bottom:14px;">Voor woningcorporaties en gemeenten met huurwoningen trekt de regelgeving aan. Een verhuurverbod voor woningen met label E, F of G is voorzien, de exacte invoeringsdatum staat nog niet definitief vast, maar de richting is duidelijk.</p>
   <p style="color:var(--subtekst);line-height:1.7;margin-bottom:14px;">Wie nu in kaart brengt welke woningen in de risicozone zitten, kan tijdig prioriteiten stellen en subsidies benutten. Wie wacht, maakt het zichzelf moeilijker en duurder.</p>';
 $two_col_cta       = ['tekst' => 'Meer over verduurzaming en subsidies →', 'url' => '/verduurzaming-subsidie/', 'stijl' => 'outline'];
 $two_col_rechts    = '

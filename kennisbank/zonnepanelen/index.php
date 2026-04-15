@@ -4,7 +4,7 @@
  * Kennisartikel: Zonnepanelen
  */
 $root        = dirname(dirname(dirname(__FILE__))) . '/';
-$title       = 'Zonnepanelen voor Uw Huis | Kosten, Rendement & Saldering | STAP Energie';
+$title       = 'Zonnepanelen voor Je Huis | Kosten, Rendement & Saldering | STAP Energie';
 $description = 'Zonnepanelen: 8–12 panelen, €5.000–€8.000, terugverdiening 7–9 jaar. Btw-nultarief. Salderingsregeling fasering. Combinatie met thuisbatterij.';
 $canonical   = 'https://stapenergie.nl/kennisbank/zonnepanelen/';
 
@@ -14,8 +14,8 @@ $breadcrumbs = [
   ['label' => 'Zonnepanelen'],
 ];
 
-$cta_titel     = 'Zonnepanelen geschikt voor u?';
-$cta_subtitel  = 'Plan een vrijblijvend adviesgesprek. Wij beginnen met uw situatie.';
+$cta_titel     = 'Zonnepanelen geschikt voor je?';
+$cta_subtitel  = 'Plan een vrijblijvend adviesgesprek. Wij beginnen met je situatie.';
 $cta_knop      = 'Plan een adviesgesprek →';
 $cta_knop_url  = '/#contact';
 $cta_garanties = ['15+ jaar ervaring in de energiemarkt', 'Geen productbelang', 'Reactie binnen twee werkdagen'];
@@ -24,7 +24,7 @@ $faq_label = 'Veelgestelde vragen';
 $faq_titel = 'Veelgestelde vragen over zonnepanelen';
 $faq_items = [
   ['vraag' => 'Hoeveel panelen heeft een gemiddeld huis nodig?',
-   'antwoord' => 'Een typisch Nederlands eengezinshuis heeft 8–12 zonnepanelen nodig (3–4 kWp vermogen). Dit is afhankelijk van dak, oriëntatie, schaduw en energieverbruik. STAP Energie doet een site-analyse voor u.'],
+   'antwoord' => 'Een typisch Nederlands eengezinshuis heeft 8–12 zonnepanelen nodig (3–4 kWp vermogen). Dit is afhankelijk van dak, oriëntatie, schaduw en energieverbruik. STAP Energie doet een site-analyse voor je.'],
   ['vraag' => 'Wat is de salderingsregeling en hoe verandert die?',
    'antwoord' => 'Saldering betekent: zonne-opbrengst wordt verrekend met stroomverbruik uit het net (tegen dezelfde prijs). Dit geldt nu voor particulieren. Vanaf 2027 geldt deels tegoed tegen lagere nettarief. Volledig einde 2030. Dit maakt thuisbatterij steeds interessanter.'],
   ['vraag' => 'Hoeveel opbrengst per jaar?',
@@ -43,7 +43,7 @@ include $root . 'includes/breadcrumb.php';
 $hero_variant  = 'sub';
 $hero_bg       = '/images/hero-verduurzaming-hub.jpg';
 $hero_eyebrow  = 'Kennisbank';
-$hero_titel    = 'Zonnepanelen: uw eigen elektriciteit. <em>Gratis en schoon.</em>';
+$hero_titel    = 'Zonnepanelen: je eigen elektriciteit. <em>Gratis en schoon.</em>';
 $hero_lead     = 'Zonnepanelen zetten zonneschijn om in stroom. Voor een typisch huis zijn 8–12 panelen nodig, kost €5.000–€8.000, en terugbetaald zich in 7–9 jaar. Daarna zuivere winst. Lees hier alles over kosten, opbrengst en combinaties.';
 $hero_usps     = [];
 $hero_cta      = 'Plan een adviesgesprek →';
@@ -194,7 +194,7 @@ unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two
 // ── Dak en situatie
 $two_col_variant   = 'wit';
 $two_col_label     = 'Voorzorg';
-$two_col_titel     = 'Is uw dak geschikt?';
+$two_col_titel     = 'Is je dak geschikt?';
 $two_col_links     = '<p><strong>Ideale situatie:</strong></p>
 <p>Zuid-oriëntering (meeste zon)<br>
 Minimaal 3–4 m² ruimte<br>

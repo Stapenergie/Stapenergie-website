@@ -3,12 +3,12 @@
  * index.php — Homepage STAP Energie
  */
 $root        = dirname(__FILE__) . '/';
-$title       = 'STAP Energie — Energielabels & Verduurzamingsadvies';
+$title       = 'STAP Energie, Energielabels & Verduurzamingsadvies';
 $description = 'Onafhankelijk energieadvies voor ondernemers en woningeigenaren. Officiële energielabels, verduurzaming & subsidies en energie-inkoopadvies. Heel Nederland.';
 $canonical   = 'https://stapenergie.nl/';
 
 $cta_titel     = 'Klaar voor jouw eerste STAP?';
-$cta_subtitel  = 'Gratis kennismakingsgesprek — geen verplichtingen, wel direct waarde. We reageren binnen twee werkdagen.';
+$cta_subtitel  = 'Gratis kennismakingsgesprek, geen verplichtingen, wel direct waarde. We reageren binnen twee werkdagen.';
 $cta_knop      = 'Gratis gesprek inplannen';
 $cta_knop_url  = '#contact';
 $cta_garanties = ['Geen verplichtingen', 'Reactie binnen twee werkdagen', 'Heel Nederland'];
@@ -23,9 +23,9 @@ $hero_label     = 'Energielabel, inkoop & verduurzamingsadvies';
 $hero_titel     = 'Duurzame impact<br>maken is <em>leuk</em>';
 $hero_desc      = 'STAP Energie helpt ondernemers en woningeigenaren stap voor stap verduurzamen. Van energielabel tot een concreet plan op maat.';
 $hero_checks    = [
-  'Officieel erkend energielabel — geregistreerd in EP-online',
+  'Officieel erkend energielabel, geregistreerd in EP-online',
   '16+ jaar ervaring in de energiemarkt',
-  'Reactie binnen twee werkdagen — heel Nederland',
+  'Reactie binnen twee werkdagen, heel Nederland',
 ];
 $hero_link      = ['url' => '#diensten', 'tekst' => 'Bekijk alle diensten →'];
 $hero_formulier = true;
@@ -62,7 +62,7 @@ include $root . 'includes/hero.php';
 $kaarten_variant = 'grijs';
 $kaarten_label   = 'Wat we doen';
 $kaarten_titel   = 'Onze diensten';
-$kaarten_intro   = 'Van verplicht energielabel tot een volledig verduurzamingsplan — STAP Energie regelt het.';
+$kaarten_intro   = 'Van verplicht energielabel tot een volledig verduurzamingsplan, STAP Energie regelt het.';
 $kaarten_cols    = 2;
 $kaarten_id      = 'diensten';
 $kaarten_items   = [
@@ -110,7 +110,7 @@ include $root . 'includes/components/section-kaarten.php';
 $kaarten_variant = 'wit';
 $kaarten_label   = 'Kies jouw situatie';
 $kaarten_titel   = 'Voor wie is STAP Energie?';
-$kaarten_intro   = 'Of je nu ondernemer bent of woningeigenaar — STAP Energie heeft een passend aanbod voor jou.';
+$kaarten_intro   = 'Of je nu ondernemer bent of woningeigenaar, STAP Energie heeft een passend aanbod voor jou.';
 $kaarten_cols    = 2;
 $kaarten_id      = 'voor-wie';
 $kaarten_items   = [
@@ -150,7 +150,7 @@ include $root . 'includes/components/section-kaarten.php';
         <span class="sectie__label">Wie is STAP Energie?</span>
         <h2 class="sectie__titel">Erik Dolman,<br>Energiespecialist</h2>
         <blockquote class="over-quote">"De natuur is ons grootste kapitaal. Verduurzamen is een verstandige keuze voor het milieu, comfort én je portemonnee."</blockquote>
-        <p style="color:var(--subtekst);line-height:1.7;margin-bottom:12px;">Als oprichter van STAP Energie breng ik meer dan 15 jaar ervaring in de energiemarkt mee. Van Sales Manager bij SEFE Energy tot NieuweStroom — die kennis zet ik nu in voor jou.</p>
+        <p style="color:var(--subtekst);line-height:1.7;margin-bottom:12px;">Als oprichter van STAP Energie breng ik meer dan 15 jaar ervaring in de energiemarkt mee. Van Sales Manager bij SEFE Energy tot NieuweStroom, die kennis zet ik nu in voor jou.</p>
         <p style="color:var(--subtekst);line-height:1.7;margin-bottom:20px;">Niet met een standaard verhaal, maar met eerlijk en persoonlijk advies dat écht past bij jouw situatie.</p>
         <div class="over-tags">
           <span class="over-tag">15+ jaar energiesector</span>

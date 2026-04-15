@@ -12,7 +12,7 @@ $hero_eyebrow  = 'Verduurzaming & Subsidie';
 $hero_titel    = 'Eerst besparen,<br>dan opwekken';
 $hero_lead     = 'De meeste bedrijven beginnen bij de verkeerde stap. Ze investeren in zonnepanelen terwijl de verwarming nog de hele dag onnodig draait. Wij beginnen bij de vraag: waar zit jouw verbruik eigenlijk?';
 $hero_usps     = [
-    'Onafhankelijk — geen productbelang',
+    'Onafhankelijk, geen productbelang',
     'Juiste volgorde, geen onnodige investering',
     'Subsidies volledig in kaart gebracht',
 ];
@@ -31,11 +31,11 @@ $breadcrumb = [
 $faq_items = [
     [
         'vraag'    => 'Hoeveel kan ik besparen door installaties beter in te regelen?',
-        'antwoord' => 'Tussen de 10 en 30 procent energiebesparing is haalbaar zonder ook maar iets te kopen — puur door installaties goed in te stellen. Tijdklokken die op een willekeurig tijdstip staan na een stroomstoring, ventilatie die ook op zondag blijft draaien, klimaatsystemen op een vaste temperatuur terwijl het buiten al warm is. Dit soort verspilling zit in bijna elk pand, en het herstellen ervan kost vaak niet meer dan een paar honderd euro.',
+        'antwoord' => 'Tussen de 10 en 30 procent energiebesparing is haalbaar zonder ook maar iets te kopen, puur door installaties goed in te stellen. Tijdklokken die op een willekeurig tijdstip staan na een stroomstoring, ventilatie die ook op zondag blijft draaien, klimaatsystemen op een vaste temperatuur terwijl het buiten al warm is. Dit soort verspilling zit in bijna elk pand, en het herstellen ervan kost vaak niet meer dan een paar honderd euro.',
     ],
     [
         'vraag'    => 'Moet ik alles in één keer aanpakken?',
-        'antwoord' => 'Nee — en dat zou ook zelden slim zijn. Een goed verduurzamingsplan sluit aan bij de onderhoudsmomenten die je toch al gepland hebt. Kozijnen die worden vervangen? Dan ook meteen beter glas. Dak dat aan onderhoud toe is? Dan ook isoleren. Wie de juiste volgorde aanhoudt, heeft nooit spijt van een eerder genomen maatregel.',
+        'antwoord' => 'Nee, en dat zou ook zelden slim zijn. Een goed verduurzamingsplan sluit aan bij de onderhoudsmomenten die je toch al gepland hebt. Kozijnen die worden vervangen? Dan ook meteen beter glas. Dak dat aan onderhoud toe is? Dan ook isoleren. Wie de juiste volgorde aanhoudt, heeft nooit spijt van een eerder genomen maatregel.',
     ],
     [
         'vraag'    => 'Welke subsidies zijn er voor mijn bedrijf?',
@@ -43,15 +43,15 @@ $faq_items = [
     ],
     [
         'vraag'    => 'Heb ik een energielabel nodig voor ik begin met verduurzamen?',
-        'antwoord' => 'Een energielabel is een uitstekende nulmeting — het geeft je een objectief beeld van hoe jouw gebouw presteert en waar de grootste winst te behalen is. Het is niet wettelijk verplicht als startpunt voor verduurzaming, maar het maakt jouw beslissingen een stuk scherper. Zeker voor kantoren van 100 m² of groter, die al een labelplicht hebben, is het een logische eerste stap.',
+        'antwoord' => 'Een energielabel is een uitstekende nulmeting, het geeft je een objectief beeld van hoe jouw gebouw presteert en waar de grootste winst te behalen is. Het is niet wettelijk verplicht als startpunt voor verduurzaming, maar het maakt jouw beslissingen een stuk scherper. Zeker voor kantoren van 100 m² of groter, die al een labelplicht hebben, is het een logische eerste stap.',
     ],
     [
         'vraag'    => 'Wat kost een adviesgesprek bij STAP Energie?',
-        'antwoord' => "Een eerste kennismakingsgesprek is vrijblijvend en gratis. Daarin brengen we jouw situatie in kaart en kijken we samen welke stap voor je het meest logisch is. Op basis van dat gesprek ontvang je een heldere offerte — zonder verborgen kosten.",
+        'antwoord' => "Een eerste kennismakingsgesprek is vrijblijvend en gratis. Daarin brengen we jouw situatie in kaart en kijken we samen welke stap voor je het meest logisch is. Op basis van dat gesprek ontvang je een heldere offerte, zonder verborgen kosten.",
     ],
     [
         'vraag'    => 'Mijn leverancier stelt warmtepompen voor. Is dat een goed advies?',
-        'antwoord' => 'Misschien — maar het hangt af van jouw situatie. Een warmtepomp werkt het best in een goed geïsoleerd gebouw. Zonder voldoende isolatiewaarde betaal je waarschijnlijk meer dan nodig. Dat is precies waarom wij beginnen met inzicht en volgorde, niet met een product. Als de warmtepomp de juiste stap is, adviseren we die ook — maar pas op het juiste moment.',
+        'antwoord' => 'Misschien, maar het hangt af van jouw situatie. Een warmtepomp werkt het best in een goed geïsoleerd gebouw. Zonder voldoende isolatiewaarde betaal je waarschijnlijk meer dan nodig. Dat is precies waarom wij beginnen met inzicht en volgorde, niet met een product. Als de warmtepomp de juiste stap is, adviseren we die ook, maar pas op het juiste moment.',
     ],
 ];
 ?>
@@ -73,19 +73,19 @@ $kaarten_items = [
         'foto'     => '/images/dienst-inkoop.jpg',
         'foto_alt' => 'Lagere energiekosten voor je bedrijf',
         'titel'    => 'Lagere kosten',
-        'tekst'    => 'Energie is voor de meeste bedrijven de grootste variabele kostenpost. Wie zijn verbruik structureel verlaagt, betaalt minder — ongeacht waar de energieprijs naartoe beweegt.',
+        'tekst'    => 'Energie is voor de meeste bedrijven de grootste variabele kostenpost. Wie zijn verbruik structureel verlaagt, betaalt minder, ongeacht waar de energieprijs naartoe beweegt.',
     ],
     [
         'foto'     => '/images/hero-bedrijfspand.jpg',
         'foto_alt' => 'Minder afhankelijk van de energiemarkt',
         'titel'    => 'Minder afhankelijk',
-        'tekst'    => 'Een besluit in Moskou, een storm in de Noordzee — de energieprijs wordt bepaald door factoren waar je geen invloed op hebt. Wie zijn eigen verbruik verlaagt en deels zelf opwekt, verkleint die afhankelijkheid structureel.',
+        'tekst'    => 'Een besluit in Moskou, een storm in de Noordzee, de energieprijs wordt bepaald door factoren waar je geen invloed op hebt. Wie zijn eigen verbruik verlaagt en deels zelf opwekt, verkleint die afhankelijkheid structureel.',
     ],
     [
         'foto'     => '/images/erik-zakelijk.jpg',
         'foto_alt' => 'Betere financierbaarheid van jouw vastgoed',
         'titel'    => 'Betere financierbaarheid',
-        'tekst'    => 'Banken sturen stil maar consequent op verduurzaming. Bij een financieringsaanvraag wordt steeds vaker gevraagd naar energieverbruik en gebouwprestatie. Een slecht energieprofiel kost u rente — of het gesprek überhaupt.',
+        'tekst'    => 'Banken sturen stil maar consequent op verduurzaming. Bij een financieringsaanvraag wordt steeds vaker gevraagd naar energieverbruik en gebouwprestatie. Een slecht energieprofiel kost je rente, of het gesprek überhaupt.',
     ],
 ];
 include $root . 'includes/components/section-kaarten.php';
@@ -93,10 +93,10 @@ unset($kaarten_label, $kaarten_titel, $kaarten_intro, $kaarten_variant, $kaarten
 ?>
 
 <?php
-/* ── SECTIE 2: De valkuil — section-contrast ── */
+/* ── SECTIE 2: De valkuil, section-contrast ── */
 $contrast_variant = 'wit';
 $contrast_label   = 'De gebruikelijke aanpak';
-$contrast_titel   = 'Zo werkt de markt — en waarom dat raar is';
+$contrast_titel   = 'Zo werkt de markt, en waarom dat raar is';
 $contrast_intro   = 'De meeste verduurzamingstrajecten beginnen bij een leverancier die al weet wat hij verkoopt. Het antwoord staat vast; alleen de vraag moet nog worden geformuleerd.';
 $contrast_links = [
     'tag'   => 'Gebruikelijke route',
@@ -106,7 +106,7 @@ $contrast_links = [
         'Investering wordt gedaan in opwek, terwijl het pand nog lekt',
         'Vijf jaar later blijkt de volgorde niet te kloppen',
     ],
-    'noot'  => 'Het probleem is niet de maatregel — het is het moment.',
+    'noot'  => 'Het probleem is niet de maatregel, het is het moment.',
 ];
 $contrast_rechts = [
     'tag'   => 'De STAP-aanpak',
@@ -114,7 +114,7 @@ $contrast_rechts = [
         'Eerst inzicht: waar zit het verbruik, wat kost het echt?',
         'Vervolgens de goede volgorde bepalen',
         'Kleine maatregelen die direct renderen',
-        'Grote investeringen op het juiste moment — niet te vroeg',
+        'Grote investeringen op het juiste moment, niet te vroeg',
     ],
     'noot'  => 'Wie de volgorde goed heeft, heeft nooit spijt van een eerder genomen stap.',
 ];
@@ -126,20 +126,20 @@ unset($contrast_variant, $contrast_label, $contrast_titel, $contrast_intro, $con
 /* ── SECTIE 3: Het stappenplan ── */
 $stappen_label   = 'Het stappenplan';
 $stappen_titel   = 'Eerst reduceren, dan opwekken';
-$stappen_intro   = 'Goed inregelen wat er al staat levert tussen de 10 en 30 procent besparing op — zonder ook maar iets te kopen. Wie dat overslaat en direct naar de zonnepanelen gaat, investeert in de verkeerde volgorde.';
+$stappen_intro   = 'Goed inregelen wat er al staat levert tussen de 10 en 30 procent besparing op, zonder ook maar iets te kopen. Wie dat overslaat en direct naar de zonnepanelen gaat, investeert in de verkeerde volgorde.';
 $stappen_variant = 'grijs';
 $stappen_cols    = 3;
 $stappen = [
     [
         'nummer' => '1',
         'titel'  => 'Inzicht in jouw verbruik',
-        'tekst'  => 'Weet wat je verbruikt — wanneer, waarvoor en hoeveel. In verrassend veel gevallen heeft men hier geen idee van. Een energielabel of verbruiksanalyse geeft je de nulmeting die elk goed plan nodig heeft.',
+        'tekst'  => 'Weet wat je verbruikt, wanneer, waarvoor en hoeveel. In verrassend veel gevallen heeft men hier geen idee van. Een energielabel of verbruiksanalyse geeft je de nulmeting die elk goed plan nodig heeft.',
         'extra'  => '<a href="' . $root . 'energielabels/" class="stap__link">Meer over energielabels →</a>',
     ],
     [
         'nummer' => '2',
         'titel'  => 'Installaties goed inregelen',
-        'tekst'  => 'Tijdklokken die na een stroomstoring verkeerd staan. Ventilatie die loopt als het gebouw leeg is. Een klimaatsysteem altijd op dezelfde temperatuur. Dit kost u tientallen procenten energieverspilling — herstellen kost vaak niet meer dan een paar honderd euro.',
+        'tekst'  => 'Tijdklokken die na een stroomstoring verkeerd staan. Ventilatie die loopt als het gebouw leeg is. Een klimaatsysteem altijd op dezelfde temperatuur. Dit kost je tientallen procenten energieverspilling, herstellen kost vaak niet meer dan een paar honderd euro.',
         'extra'  => '',
     ],
     [
@@ -151,19 +151,19 @@ $stappen = [
     [
         'nummer' => '4',
         'titel'  => 'Bouwkundige aanpak',
-        'tekst'  => 'Dakisolatie, gevelisolatie, HR++-glas. Duur als losse investering — maar slim gepland op het moment dat er toch al onderhoud staat. Wie het dak vervangt en het dan niet isoleert, heeft een jaar later spijt.',
+        'tekst'  => 'Dakisolatie, gevelisolatie, HR++-glas. Duur als losse investering, maar slim gepland op het moment dat er toch al onderhoud staat. Wie het dak vervangt en het dan niet isoleert, heeft een jaar later spijt.',
         'extra'  => '',
     ],
     [
         'nummer' => '5',
         'titel'  => 'Installatietechnische verbetering',
-        'tekst'  => 'Warmtepomp, warmteterugwinning, vraaggestuurde ventilatie, weersafhankelijke temperatuurregeling. Dit zijn de maatregelen die het meest opleveren — maar alleen als de bouwschil al op orde is.',
+        'tekst'  => 'Warmtepomp, warmteterugwinning, vraaggestuurde ventilatie, weersafhankelijke temperatuurregeling. Dit zijn de maatregelen die het meest opleveren, maar alleen als de bouwschil al op orde is.',
         'extra'  => '',
     ],
     [
         'nummer' => '6',
         'titel'  => 'Opwekken en opslaan',
-        'tekst'  => 'Zonnepanelen en batterijen. De kroon op een goed verduurzamingstraject — maar pas zinvol als de vraagkant is aangepakt. Anders investeer je te veel in opwek voor een verbruik dat je had kunnen halveren.',
+        'tekst'  => 'Zonnepanelen en batterijen. De kroon op een goed verduurzamingstraject, maar pas zinvol als de vraagkant is aangepakt. Anders investeer je te veel in opwek voor een verbruik dat je had kunnen halveren.',
         'extra'  => '',
     ],
 ];
@@ -175,7 +175,7 @@ unset($stappen_label, $stappen_titel, $stappen_intro, $stappen_variant, $stappen
 /* ── SECTIE 4: Subsidies ── */
 $kaarten_label   = 'Subsidies';
 $kaarten_titel   = 'Wat er nu beschikbaar is';
-$kaarten_intro   = 'Subsidies verlagen de terugverdientijd van maatregelen aanzienlijk — maar welke regeling het meest oplevert, hangt af van jouw situatie. De belangrijkste regelingen op een rij.';
+$kaarten_intro   = 'Subsidies verlagen de terugverdientijd van maatregelen aanzienlijk, maar welke regeling het meest oplevert, hangt af van jouw situatie. De belangrijkste regelingen op een rij.';
 $kaarten_variant = 'wit';
 $kaarten_cols    = 2;
 $kaarten_items = [
@@ -213,7 +213,7 @@ $kaarten_items = [
         'foto'      => '/images/hero-woningen.jpg',
         'foto_alt'  => 'Verduurzaming voor woningeigenaren',
         'titel'     => 'Woningeigenaar',
-        'tekst'     => 'Je wilt jouw woning verduurzamen en weten welke maatregelen het meest opleveren — en welke subsidies je kunt combineren.',
+        'tekst'     => 'Je wilt jouw woning verduurzamen en weten welke maatregelen het meest opleveren, en welke subsidies je kunt combineren.',
         'cta_tekst' => 'Naar particulieren →',
         'cta_url'   => $root . 'verduurzaming-subsidie/particulieren/',
         'cta_stijl' => 'secundair',
@@ -242,7 +242,7 @@ $f_pagina = 'verduurzaming-subsidie';
     <div class="sectie__inner">
         <span class="sectie__label">Contact</span>
         <h2 class="sectie__titel">Waar begin je?</h2>
-        <p class="sectie__intro">Een eerste gesprek is vrijblijvend. We brengen jouw situatie in kaart en kijken samen welke stap het meest logisch is — zonder verkoopbelang.</p>
+        <p class="sectie__intro">Een eerste gesprek is vrijblijvend. We brengen jouw situatie in kaart en kijken samen welke stap het meest logisch is, zonder verkoopbelang.</p>
     </div>
     <?php include $root . 'includes/formulier.php'; ?>
 </section>

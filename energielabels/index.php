@@ -48,12 +48,12 @@ $hero_variant  = 'sub';
 $hero_bg       = '/images/hero-bedrijfspand.jpg';
 $hero_eyebrow  = 'Officieel & erkend energielabel';
 $hero_titel    = 'Energielabel voor je woning of <em>bedrijfspand</em>';
-$hero_lead     = 'Verplicht bij verkoop, verhuur en oplevering. STAP Energie verzorgt officiële energielabels voor woningen én utiliteit — gecertificeerd, snel en voor een vaste prijs.';
+$hero_lead     = 'Verplicht bij verkoop, verhuur en oplevering. STAP Energie verzorgt officiële energielabels voor woningen én utiliteit, gecertificeerd, snel en voor een vaste prijs.';
 $hero_usps     = [
   'Officieel erkend & geregistreerd in EP-online',
-  'Basisopname — bestaande bouw (woningen én utiliteit)',
+  'Basisopname, bestaande bouw (woningen én utiliteit)',
   'Label 10 jaar geldig na afgifte',
-  'Reactie binnen twee werkdagen — heel Nederland',
+  'Reactie binnen twee werkdagen, heel Nederland',
 ];
 $hero_cta      = 'Label aanvragen →';
 $hero_cta_url  = '#aanvraag';
@@ -110,7 +110,7 @@ include $root . 'includes/components/section-kaarten.php';
   <div class="sectie__inner">
     <span class="sectie__label">Aanvragen</span>
     <h2 class="sectie__titel">Vraag direct je energielabel aan</h2>
-    <p class="sectie__intro">Vul het formulier in — wij nemen binnen twee werkdagen contact op.</p>
+    <p class="sectie__intro">Vul het formulier in, wij nemen binnen twee werkdagen contact op.</p>
     <?php
     $f_dienst = 'label';
     $f_type   = '';
@@ -125,7 +125,7 @@ include $root . 'includes/components/section-kaarten.php';
 $stappen_variant = 'grijs';
 $stappen_label   = 'Zo werkt het';
 $stappen_titel   = 'Van aanvraag naar officieel label in 4 stappen';
-$stappen_intro   = 'Transparant, snel en zonder gedoe — STAP Energie regelt het van begin tot eind.';
+$stappen_intro   = 'Transparant, snel en zonder gedoe, STAP Energie regelt het van begin tot eind.';
 $stappen_cols    = 4;
 $stappen_items   = [
   ['nummer' => 1, 'titel' => 'Aanvraag indienen',   'tekst' => 'Vul het formulier in of bel direct. Binnen twee werkdagen nemen we contact op voor een afspraak.'],
@@ -139,7 +139,7 @@ include $root . 'includes/components/section-stappen.php';
 $two_col_variant = 'wit';
 $two_col_label   = 'Wat is een energielabel?';
 $two_col_titel   = 'Een officieel bewijs van energieprestatie';
-$two_col_tekst   = 'Een energielabel geeft aan hoe energiezuinig een gebouw is — op een schaal van A++++ (meest zuinig) tot G (minst zuinig). Het label is gebaseerd op isolatie, verwarmingssysteem, ventilatie en hernieuwbare energie. Het is officieel geregistreerd in EP-online en 10 jaar geldig.';
+$two_col_tekst   = 'Een energielabel geeft aan hoe energiezuinig een gebouw is, op een schaal van A++++ (meest zuinig) tot G (minst zuinig). Het label is gebaseerd op isolatie, verwarmingssysteem, ventilatie en hernieuwbare energie. Het is officieel geregistreerd in EP-online en 10 jaar geldig.';
 $two_col_rechts  = '
   <div class="infobox infobox--info" style="margin-bottom:16px;">
     <span class="infobox__icoon">ℹ️</span>
@@ -148,7 +148,7 @@ $two_col_rechts  = '
   <ul class="checklist">
     <li class="checklist__item"><span class="checklist__vink">✓</span><span>Verplicht bij verkoop, verhuur en oplevering</span></li>
     <li class="checklist__item"><span class="checklist__vink">✓</span><span>Geregistreerd in het landelijke EP-online register</span></li>
-    <li class="checklist__item"><span class="checklist__vink">✓</span><span>10 jaar geldig — herlabelen na verduurzaming mogelijk</span></li>
+    <li class="checklist__item"><span class="checklist__vink">✓</span><span>10 jaar geldig, herlabelen na verduurzaming mogelijk</span></li>
     <li class="checklist__item"><span class="checklist__vink">✓</span><span>Invloed op hypotheekrente, huurprijs en verkoopwaarde</span></li>
   </ul>';
 include $root . 'includes/components/section-two-col.php';
@@ -181,7 +181,7 @@ $tabs_items   = [
       ['icoon' => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2z"/><path d="M12 6v6l4 2"/></svg>',
        'titel' => 'Energielabelplicht kantoren', 'tekst' => 'Kantoren met meer dan 100 m² moeten voldoen aan minimaal label C. Bij niet-voldoen kan de gemeente gebruik verbieden.'],
       ['icoon' => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622C17.176 19.29 21 14.591 21 9c0-1.042-.133-2.052-.382-3.016z"/></svg>',
-       'titel' => 'EPBD IV — strengere eisen 2026', 'tekst' => 'Nieuwe Europese regelgeving stelt vanaf 2026 hogere eisen aan het energielabel van utiliteitsgebouwen. Monumenten zijn niet langer vrijgesteld.'],
+       'titel' => 'EPBD IV, strengere eisen 2026', 'tekst' => 'Nieuwe Europese regelgeving stelt vanaf 2026 hogere eisen aan het energielabel van utiliteitsgebouwen. Monumenten zijn niet langer vrijgesteld.'],
       ['icoon' => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>',
        'titel' => 'Invloed op huurprijs utiliteit', 'tekst' => 'Het label beïnvloedt de markthuurwaarde van commercieel vastgoed. Beleggers en huurders stellen steeds hogere eisen.'],
     ],
@@ -193,7 +193,7 @@ include $root . 'includes/components/section-tabs.php';
 $kaarten_variant = 'wit';
 $kaarten_label   = 'Waarom een energielabel?';
 $kaarten_titel   = 'De voordelen van een goed label';
-$kaarten_intro   = 'Een energielabel is meer dan een verplichting — het is een instrument dat direct invloed heeft op waarde, kosten en kansen.';
+$kaarten_intro   = 'Een energielabel is meer dan een verplichting, het is een instrument dat direct invloed heeft op waarde, kosten en kansen.';
 $kaarten_cols    = 3;
 $kaarten_items   = [
   [
@@ -222,8 +222,8 @@ $two_col_tekst     = 'Heb je na de opname maatregelen getroffen? Dan kun je je l
 $two_col_cta       = ['tekst' => 'Bekijk verduurzaming & subsidies →', 'url' => '/verduurzaming-subsidie/', 'stijl' => 'primair'];
 $two_col_rechts    = '
   <ul class="checklist">
-    <li class="checklist__item"><span class="checklist__vink">✓</span><span>ISDE subsidie — isolatie, warmtepomp, zonneboiler</span></li>
-    <li class="checklist__item"><span class="checklist__vink">✓</span><span>Warmtefonds — laagrentende lening voor verduurzaming</span></li>
+    <li class="checklist__item"><span class="checklist__vink">✓</span><span>ISDE subsidie, isolatie, warmtepomp, zonneboiler</span></li>
+    <li class="checklist__item"><span class="checklist__vink">✓</span><span>Warmtefonds, laagrentende lening voor verduurzaming</span></li>
     <li class="checklist__item"><span class="checklist__vink">✓</span><span>Nationaal Isolatie Programma</span></li>
     <li class="checklist__item"><span class="checklist__vink">✓</span><span>Herlabelen binnen 24 maanden na opname</span></li>
   </ul>';
@@ -236,7 +236,7 @@ $two_col_titel     = 'Actief in Leusden, Amersfoort en omgeving';
 $two_col_tekst     = 'STAP Energie is gevestigd in Leusden en actief in de gehele regio Utrecht. Voor particulieren in Leusden, Amersfoort, Woudenberg en Achterveld is STAP Energie jouw lokale specialist. Voor zakelijke klanten werken we door heel Nederland.';
 $two_col_rechts    = '
   <ul class="checklist">
-    <li class="checklist__item"><span class="checklist__vink">✓</span><span>Leusden & Amersfoort — thuismarkt</span></li>
+    <li class="checklist__item"><span class="checklist__vink">✓</span><span>Leusden & Amersfoort, thuismarkt</span></li>
     <li class="checklist__item"><span class="checklist__vink">✓</span><span>Woudenberg, Achterveld, Barneveld, Nijkerk</span></li>
     <li class="checklist__item"><span class="checklist__vink">✓</span><span>Heel Utrecht & Gelderse Vallei</span></li>
     <li class="checklist__item"><span class="checklist__vink">✓</span><span>Zakelijk: heel Nederland</span></li>

@@ -48,7 +48,7 @@ $hero_lead     = 'Een energielabel is bij elke woningtransactie verplicht. Als m
 $hero_usps     = [
   'Gecertificeerd EPA-adviseur',
   'Officieel geregistreerd in EP-online',
-  'Vaste levertijd — doorgaans binnen één week na opname',
+  'Vaste levertijd, doorgaans binnen één week na opname',
   'Zowel woninglabels als utiliteitslabels',
 ];
 $hero_cta      = 'Neem contact op →';
@@ -64,7 +64,7 @@ $two_col_label     = 'Waarom makelaars met STAP werken';
 $two_col_titel     = 'Een label dat er op tijd is, zonder gedoe';
 $two_col_omgekeerd = false;
 $two_col_links     = '
-  <p style="color:var(--subtekst);line-height:1.7;margin-bottom:14px;">Een energielabel is verplicht bij de overdracht van een woning. Toch wordt het regelmatig op het laatste moment aangevraagd — soms pas als de koopakte al getekend is. Dat geeft stress voor alle betrokken partijen.</p>
+  <p style="color:var(--subtekst);line-height:1.7;margin-bottom:14px;">Een energielabel is verplicht bij de overdracht van een woning. Toch wordt het regelmatig op het laatste moment aangevraagd, soms pas als de koopakte al getekend is. Dat geeft stress voor alle betrokken partijen.</p>
   <p style="color:var(--subtekst);line-height:1.7;margin-bottom:14px;">STAP Energie werkt samen met makelaars die dat willen voorkomen. Snelle levering, heldere communicatie en een vaste aanspreekpersoon. Geen callcenter, geen onzekere levertijden.</p>
   <p style="color:var(--subtekst);line-height:1.7;margin-bottom:20px;">Ben je makelaar en wil je betrouwbare labellevering voor je klanten regelen? Neem contact op om de mogelijkheden te bespreken.</p>';
 $two_col_cta       = ['tekst' => 'Neem contact op →', 'url' => '#contact', 'stijl' => 'primair'];

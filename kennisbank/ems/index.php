@@ -14,8 +14,8 @@ $breadcrumbs = [
   ['label' => 'EMS'],
 ];
 
-$cta_titel     = 'EMS voor uw energiesysteem?';
-$cta_subtitel  = 'Plan een vrijblijvend adviesgesprek. Wij beginnen met uw situatie.';
+$cta_titel     = 'EMS voor je energiesysteem?';
+$cta_subtitel  = 'Plan een vrijblijvend adviesgesprek. Wij beginnen met je situatie.';
 $cta_knop      = 'Plan een adviesgesprek →';
 $cta_knop_url  = '/#contact';
 $cta_garanties = ['15+ jaar ervaring in de energiemarkt', 'Geen productbelang', 'Reactie binnen twee werkdagen'];
@@ -30,7 +30,7 @@ $faq_items = [
   ['vraag' => 'Werkt EMS ook zonder zonnepanelen?',
    'antwoord' => 'Ja, maar voordeel is veel kleiner (alleen dynamisch contract). Met zonnepanelen: enorm voordeel. EMS loont beste met 3+ systemen (panelen, batterij, auto, warmtepomp).'],
   ['vraag' => 'Welke apparaten zijn EMS-compatible?',
-   'antwoord' => 'Moderne zonnepanelen-inverters, thuisbatterijen, warmtepompen, EV-chargers hebben meestal EMS-aansluiting. Maar check: niet alle types zijn compatible. STAP Energie adviseert op basis van uw hardware.'],
+   'antwoord' => 'Moderne zonnepanelen-inverters, thuisbatterijen, warmtepompen, EV-chargers hebben meestal EMS-aansluiting. Maar check: niet alle types zijn compatible. STAP Energie adviseert op basis van je hardware.'],
   ['vraag' => 'Hoeveel kan ik besparen met EMS?',
    'antwoord' => 'Met dynamisch contract + 3+ systemen: €300–€600 per jaar mogelijk. Zonder panelen of dynamisch: veel minder. EMS loont alleen in "smart home" scenario.'],
 ];
@@ -43,7 +43,7 @@ include $root . 'includes/breadcrumb.php';
 $hero_variant  = 'sub';
 $hero_bg       = '/images/hero-verduurzaming-hub.jpg';
 $hero_eyebrow  = 'Kennisbank';
-$hero_titel    = 'EMS: laat uw energie zelf <em>denken en handelen.</em>';
+$hero_titel    = 'EMS: laat je energie zelf <em>denken en handelen.</em>';
 $hero_lead     = 'Een Energy Management System (EMS) verbindt zonnepanelen, batterij, EV-charger en warmtepomp. Het optimaliseer automatisch wanneer elk systeem aan/uit gaat voor de laagste energiekosten. Met dynamisch contract kan dit €300–€600/jaar besparen. Lees hier hoe het werkt.';
 $hero_usps     = [];
 $hero_cta      = 'Plan een adviesgesprek →';
@@ -57,7 +57,7 @@ include $root . 'includes/trust.php';
 $two_col_variant   = 'wit';
 $two_col_label     = 'Concept';
 $two_col_titel     = 'Wat is een Energy Management System?';
-$two_col_links     = '<p>Een EMS is software + hardware die al uw energiesystemen verbindt en stuurt:</p>
+$two_col_links     = '<p>Een EMS is software + hardware die al je energiesystemen verbindt en stuurt:</p>
 <p><strong>Systemen die EMS aanstuurt:</strong><br>
 → Zonnepanelen (monitoring opbrengst)<br>
 → Thuisbatterij (laden/ontladen timing)<br>
@@ -79,7 +79,7 @@ unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two
 // ── Hoe werkt het
 $two_col_variant   = 'grijs';
 $two_col_label     = 'Werkingslogica';
-$two_col_titel     = 'Hoe stuurt EMS uw energie?';
+$two_col_titel     = 'Hoe stuurt EMS je energie?';
 $two_col_links     = '<p><strong>Basis-algoritme:</strong></p>
 <p>1. <strong>Monitoren:</strong> EMS leest elk moment de elektriciteitsmarkt (prijs per kWh) en zonneschijn (panelen output).<br>
 2. <strong>Voorspellen:</strong> Op basis van weer, tijd van dag en contract, voorspelt EMS komende uren.<br>
@@ -145,7 +145,7 @@ $two_col_links     = '<p><strong>EMS hardware + software:</strong></p>
 Premium (meer features): €1.000–€2.000<br>
 Installatie + aansluiting: €300–€500<br>
 Jaarlijks abonnement (app/updates): €50–€150</p>
-<p><strong>Besparing:</strong> Sterk afhankelijk van uw setup:<br>
+<p><strong>Besparing:</strong> Sterk afhankelijk van je setup:<br>
 Met zonnepanelen + batterij + dynamisch contract: €300–€600/jaar<br>
 Met alleen zonnepanelen: €100–€200/jaar<br>
 Zonder zonnepanelen: veel minder</p>
@@ -189,7 +189,7 @@ $two_col_links     = '<p><strong>Zonnepanelen-inverter:</strong> Moderne inverte
 <p><strong>Thuisbatterij:</strong> Tesla Powerwall, LG Chem, Huawei, Pylontech: ja. Budget-merken soms niet.</p>
 <p><strong>EV-Charger:</strong> Wallbox, Pulsar, Easee: EMS-capable. Goedkope chargers: meestal niet.</p>
 <p><strong>Warmtepomp:</strong> Moderne warmtepompen (Nibe, Vaillant, IVT) hebben EMS-interface. Oudere: misschien niet.</p>
-<p><strong>Advies:</strong> Controleer kompatibiliteit bij aankoop. STAP Energie adviseert op basis van uw plan.</p>';
+<p><strong>Advies:</strong> Controleer kompatibiliteit bij aankoop. STAP Energie adviseert op basis van je plan.</p>';
 $two_col_cta       = [];
 $two_col_rechts    = '<ul class="checklist">
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>Moderne apparaten meestal compatible</span></li>

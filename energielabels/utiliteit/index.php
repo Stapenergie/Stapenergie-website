@@ -24,12 +24,12 @@ $faq_label = 'Veelgestelde vragen';
 $faq_titel = 'Alles over het energielabel voor bedrijfspanden';
 $faq_items = [
   ['vraag' => 'Geldt de label-C-plicht ook als ik mijn kantoor huur?',
-   'antwoord' => 'Ja. De label-C-verplichting geldt voor het pand — ongeacht of je eigenaar of huurder bent. Het is echter primair de verantwoordelijkheid van de eigenaar om het label te regelen. Huurders doen er verstandig aan dit te bespreken met de verhuurder.'],
+   'antwoord' => 'Ja. De label-C-verplichting geldt voor het pand, ongeacht of je eigenaar of huurder bent. Het is echter primair de verantwoordelijkheid van de eigenaar om het label te regelen. Huurders doen er verstandig aan dit te bespreken met de verhuurder.'],
   ['vraag' => 'Wat gebeurt er als ik geen geldig energielabel heb?',
    'antwoord' => 'Bij ontbreken van een verplicht energielabel riskeer je een boete van de Rijksdienst voor Ondernemend Nederland (RVO) of de gemeente. Voor kantoren zonder label C of beter kan de gemeente het gebruik verbieden.'],
   ['vraag' => 'Hoe lang duurt de opname bij een bedrijfspand?',
    'antwoord' => 'De duur van de opname hangt af van de omvang en complexiteit van het pand. Voor een klein kantoor of winkel duurt de opname doorgaans 1 à 2 uur. Grotere panden kunnen een halve dag vergen.'],
-  ['vraag' => 'Mijn pand is recent gerenoveerd — geldt het oude label nog?',
+  ['vraag' => 'Mijn pand is recent gerenoveerd, geldt het oude label nog?',
    'antwoord' => 'Na een renovatie vervalt het bestaande energielabel. Je hebt een nieuwe opname nodig. Dit is echter ook een kans: door de verbeteringen scoort je pand waarschijnlijk aanzienlijk beter dan voorheen.'],
   ['vraag' => 'Welk energielabel is verplicht voor kantoren?',
    'antwoord' => 'Kantoorgebouwen met een gebruiksoppervlakte van 100 m² of meer moeten minimaal energielabel C bezitten. Kantoren die hier niet aan voldoen mogen in principe niet meer als kantoor worden gebruikt.'],
@@ -54,7 +54,7 @@ $hero_variant  = 'sub';
 $hero_bg       = '/images/hero-bedrijfspand.jpg';
 $hero_eyebrow  = 'Officieel & erkend energielabel';
 $hero_titel    = 'Energielabel voor je <em>bedrijfspand</em>';
-$hero_lead     = 'Verplicht bij verkoop, verhuur en oplevering. STAP Energie verzorgt officiële energielabels voor kantoren, winkels, scholen, zorginstellingen en meer — persoonlijk, transparant en snel.';
+$hero_lead     = 'Verplicht bij verkoop, verhuur en oplevering. STAP Energie verzorgt officiële energielabels voor kantoren, winkels, scholen, zorginstellingen en meer, persoonlijk, transparant en snel.';
 $hero_usps     = [
   'Gecertificeerd EPA-adviseur',
   'Reactie binnen twee werkdagen',
@@ -188,7 +188,7 @@ include $root . 'includes/components/section-kaarten.php';
   <div class="sectie__inner">
     <span class="sectie__label">Aanvragen</span>
     <h2 class="sectie__titel">Vraag direct je energielabel aan</h2>
-    <p class="sectie__intro">Vul het formulier in — wij nemen binnen twee werkdagen contact op met een offerte op maat.</p>
+    <p class="sectie__intro">Vul het formulier in, wij nemen binnen twee werkdagen contact op met een offerte op maat.</p>
     <?php
     $f_dienst = 'label';
     $f_type   = 'zakelijk';
@@ -232,7 +232,7 @@ $kaarten_items   = [
   ],
   [
     'titel' => 'Herlabelen na verbetering',
-    'tekst' => 'Heb je verduurzamingsmaatregelen getroffen? Dan kun je je label laten verbeteren via herlabelen — voordeliger dan een volledig nieuwe opname.',
+    'tekst' => 'Heb je verduurzamingsmaatregelen getroffen? Dan kun je je label laten verbeteren via herlabelen, voordeliger dan een volledig nieuwe opname.',
     'icoon' => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4v5h5"/><path d="M20 20v-5h-5"/><path d="M4 9a9 9 0 0115 0"/><path d="M20 15a9 9 0 01-15 0"/></svg>',
   ],
 ];
@@ -250,24 +250,24 @@ include $root . 'includes/components/section-highlight.php';
 $stappen_variant = 'grijs';
 $stappen_label   = 'Voorbereiding';
 $stappen_titel   = 'Wat kun je alvast voorbereiden?';
-$stappen_intro   = 'Hoe meer documentatie je aanlevert, hoe nauwkeuriger de opname en hoe gunstiger het label dat aantoonbaar haalbaar is. Zonder documentatie rekenen wij met conservatieve aannames — dat werkt in je nadeel.';
+$stappen_intro   = 'Hoe meer documentatie je aanlevert, hoe nauwkeuriger de opname en hoe gunstiger het label dat aantoonbaar haalbaar is. Zonder documentatie rekenen wij met conservatieve aannames, dat werkt in je nadeel.';
 $stappen_cols    = 3;
 $stappen_items   = [
   [
     'nummer' => 1,
     'titel'  => 'Bouwtekeningen en plattegronden',
     'tekst'  => 'Gevels, doorsneden, verdiepingsplattegronden en eventuele renovatietekeningen. Hoe recenter en gedetailleerder, hoe beter. Dit vormt de basis voor een nauwkeurige opname van de thermische schil en het gebouwoppervlak.',
-    'extra'  => '<span class="doc-tip">Heb je ook het bouwjaar of renovatiejaar paraat? Neem dit mee — inclusief bewijs zoals een omgevingsvergunning of koopakte.</span>',
+    'extra'  => '<span class="doc-tip">Heb je ook het bouwjaar of renovatiejaar paraat? Neem dit mee, inclusief bewijs zoals een omgevingsvergunning of koopakte.</span>',
   ],
   [
     'nummer' => 2,
     'titel'  => 'Installatieschema\'s en technische documentatie',
-    'tekst'  => 'Systeemschema\'s, inregelrapporten en inspectierapporten van de verwarmings-, koel- en ventilatiesystemen. Het fabricagejaar van installaties is hierbij belangrijk — dit bepaalt mede het berekende rendement.',
+    'tekst'  => 'Systeemschema\'s, inregelrapporten en inspectierapporten van de verwarmings-, koel- en ventilatiesystemen. Het fabricagejaar van installaties is hierbij belangrijk, dit bepaalt mede het berekende rendement.',
   ],
   [
     'nummer' => 3,
     'titel'  => 'Facturen en leverbonnen van isolatiematerialen',
-    'tekst'  => 'Facturen of leverbonnen van isolatiewerkzaamheden — met vermelding van merk, type en hoeveelheden. De factuur moet controleerbaar gekoppeld zijn aan het adres of de bouwlocatie.',
+    'tekst'  => 'Facturen of leverbonnen van isolatiewerkzaamheden, met vermelding van merk, type en hoeveelheden. De factuur moet controleerbaar gekoppeld zijn aan het adres of de bouwlocatie.',
   ],
   [
     'nummer' => 4,
@@ -278,7 +278,7 @@ $stappen_items   = [
   [
     'nummer' => 5,
     'titel'  => 'Bouwjaar en renovatiejaar (met bewijs)',
-    'tekst'  => 'Het bouwjaar is bepalend voor standaardwaarden als er geen gedetailleerde informatie beschikbaar is. Als uw pand gerenoveerd is, is het renovatiejaar minstens zo relevant — dit kan het label aanzienlijk verbeteren.',
+    'tekst'  => 'Het bouwjaar is bepalend voor standaardwaarden als er geen gedetailleerde informatie beschikbaar is. Als je pand gerenoveerd is, is het renovatiejaar minstens zo relevant, dit kan het label aanzienlijk verbeteren.',
     'extra'  => '<span class="doc-tip">Bewijs: omgevingsvergunning, bouwvergunning, koopakte of taxatierapport.</span>',
   ],
   [
@@ -293,13 +293,13 @@ include $root . 'includes/components/section-stappen.php';
 $two_col_variant = 'wit';
 $two_col_label   = 'Werkgebied';
 $two_col_titel   = 'Actief in jouw regio';
-$two_col_tekst   = 'STAP Energie is gevestigd in Leusden en actief door heel Nederland. Voor zakelijke klanten in de regio Utrecht zijn wij jouw lokale specialist — snel ter plaatse, persoonlijk contact.';
+$two_col_tekst   = 'STAP Energie is gevestigd in Leusden en actief door heel Nederland. Voor zakelijke klanten in de regio Utrecht zijn wij jouw lokale specialist, snel ter plaatse, persoonlijk contact.';
 $two_col_rechts  = '
   <ul class="checklist">
     <li class="checklist__item"><span class="checklist__vink">✓</span><span>Leusden, Amersfoort & regio Utrecht</span></li>
     <li class="checklist__item"><span class="checklist__vink">✓</span><span>Woudenberg, Barneveld, Nijkerk, Ede</span></li>
     <li class="checklist__item"><span class="checklist__vink">✓</span><span>Randstad & heel Nederland op aanvraag</span></li>
-    <li class="checklist__item"><span class="checklist__vink">✓</span><span>Persoonlijk contact — geen callcenter</span></li>
+    <li class="checklist__item"><span class="checklist__vink">✓</span><span>Persoonlijk contact, geen callcenter</span></li>
   </ul>';
 include $root . 'includes/components/section-two-col.php';
 
@@ -313,7 +313,7 @@ $kaarten_items   = [
   [
     'type'      => 'Energie-inkoop',
     'titel'     => 'Bespaar structureel op je energiekosten',
-    'tekst'     => 'Met een gunstig energiecontract op maat bespaart je als zakelijke gebruiker aanzienlijk op je energierekening. STAP Energie vergelijkt en onderhandelt voor je — zonder extra kosten.',
+    'tekst'     => 'Met een gunstig energiecontract op maat bespaart je als zakelijke gebruiker aanzienlijk op je energierekening. STAP Energie vergelijkt en onderhandelt voor je, zonder extra kosten.',
     'cta_tekst' => 'Meer over energie-inkoop →',
     'cta_url'   => '/energie-inkoop-advies/',
     'cta_stijl' => 'outline',

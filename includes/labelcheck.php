@@ -8,8 +8,8 @@
  *   $lc_subtitel (string) — standaard toelichting
  *   $lc_id       (string) — unieke ID als widget meerdere keren op pagina staat
  */
-$lc_titel    = $lc_titel    ?? 'Check uw energielabel';
-$lc_subtitel = $lc_subtitel ?? 'Vul uw postcode en huisnummer in en ontdek direct of er een geldig energielabel geregistreerd staat voor uw adres.';
+$lc_titel    = $lc_titel    ?? 'Check je energielabel';
+$lc_subtitel = $lc_subtitel ?? 'Vul je postcode en huisnummer in en ontdek direct of er een geldig energielabel geregistreerd staat voor je adres.';
 $lc_id       = $lc_id       ?? 'lc';
 ?>
 <section class="labelcheck">
@@ -109,7 +109,7 @@ $lc_id       = $lc_id       ?? 'lc';
         resultaat.className = 'labelcheck__resultaat labelcheck__resultaat--fout zichtbaar';
         resultaat.innerHTML =
           '<h5>Check tijdelijk niet beschikbaar</h5>' +
-          '<p>De directe check is momenteel niet bereikbaar. U kunt ook zelf zoeken via <a href="https://www.ep-online.nl" target="_blank" rel="noopener">ep-online.nl</a> of direct een aanvraag indienen.</p>' +
+          '<p>De directe check is momenteel niet bereikbaar. Je kunt ook zelf zoeken via <a href="https://www.ep-online.nl" target="_blank" rel="noopener">ep-online.nl</a> of direct een aanvraag indienen.</p>' +
           '<p style="margin-top:.5rem;"><a href="#aanvraag">Aanvraag indienen &rarr;</a></p>';
       });
   }

@@ -26,11 +26,11 @@ $faq_items = [
   ['vraag' => 'Is een energielabel verplicht bij verkoop van mijn woning?',
    'antwoord' => 'Ja. Bij de overdracht ben je wettelijk verplicht een geldig energielabel aan de koper te overhandigen. Zonder label riskeer je een boete van de ILT.'],
   ['vraag' => 'Wat heb ik nodig voor de opname?',
-   'antwoord' => 'Toegang tot alle ruimtes — inclusief zolder, kelder en kruipruimte — is vereist. Daarnaast is het wenselijk om de volgende documenten bij de hand te hebben: bouwtekeningen of plattegronden van de woning, installatiedocumentatie (cv-ketel, warmtepomp, ventilatie), facturen van verbouwingen of renovaties, facturen van isolatiemaatregelen (spouwmuur, vloer, dak, ramen) en overige bewijsstukken van energiebesparende maatregelen. Hoe meer documentatie beschikbaar is, hoe nauwkeuriger de opname en hoe beter het uiteindelijke label. STAP Energie informeert je na de aanvraag precies wat je kunt klaarzetten.'],
+   'antwoord' => 'Toegang tot alle ruimtes, inclusief zolder, kelder en kruipruimte, is vereist. Daarnaast is het wenselijk om de volgende documenten bij de hand te hebben: bouwtekeningen of plattegronden van de woning, installatiedocumentatie (cv-ketel, warmtepomp, ventilatie), facturen van verbouwingen of renovaties, facturen van isolatiemaatregelen (spouwmuur, vloer, dak, ramen) en overige bewijsstukken van energiebesparende maatregelen. Hoe meer documentatie beschikbaar is, hoe nauwkeuriger de opname en hoe beter het uiteindelijke label. STAP Energie informeert je na de aanvraag precies wat je kunt klaarzetten.'],
   ['vraag' => 'Kan ik mijn energielabel verbeteren na verduurzaming?',
-   'antwoord' => 'Ja. Na isolatie, HR++-glas of een warmtepomp kun je je label laten aanpassen via herlabelen — mogelijk binnen 24 maanden na de oorspronkelijke opnamedatum.'],
+   'antwoord' => 'Ja. Na isolatie, HR++-glas of een warmtepomp kun je je label laten aanpassen via herlabelen, mogelijk binnen 24 maanden na de oorspronkelijke opnamedatum.'],
   ['vraag' => 'Hoe snel kan ik een afspraak inplannen?',
-   'antwoord' => 'In de meeste gevallen kun je binnen één week terecht. Heb je haast — bijvoorbeeld vanwege een nakende verkooptransactie — geef dit dan aan in je aanvraag. STAP Energie kijkt wat qua planning mogelijk is.'],
+   'antwoord' => 'In de meeste gevallen kun je binnen één week terecht. Heb je haast, bijvoorbeeld vanwege een nakende verkooptransactie, geef dit dan aan in je aanvraag. STAP Energie kijkt wat qua planning mogelijk is.'],
 ];
 
 include $root . 'includes/head.php';
@@ -44,10 +44,10 @@ $hero_variant  = 'sub';
 $hero_bg       = '/images/hero-woningen.jpg';
 $hero_eyebrow  = 'Gecertificeerd EPA-adviseur';
 $hero_titel    = 'Energielabel voor je woning,<br><em>officieel, snel en persoonlijk</em>';
-$hero_lead     = 'Of je nu verkoopt, verhuurt of wilt weten hoe energiezuinig je woning is — STAP Energie verzorgt het officiële energielabel. Vaste prijs, geen verrassingen.';
+$hero_lead     = 'Of je nu verkoopt, verhuurt of wilt weten hoe energiezuinig je woning is, STAP Energie verzorgt het officiële energielabel. Vaste prijs, geen verrassingen.';
 $hero_usps     = [
   'Officieel geregistreerd in EP-online',
-  'Vaste prijzen — geen verborgen kosten',
+  'Vaste prijzen, geen verborgen kosten',
   'Binnen één week je label op zak',
   'Persoonlijk advies zonder extra kosten',
 ];
@@ -135,7 +135,7 @@ include $root . 'includes/hero.php';
   <div class="sectie-inner">
     <span class="sectie-label">Zo werkt het</span>
     <h2 class="sectie-titel">Van aanvraag tot officieel label in 4 stappen</h2>
-    <p class="sectie-intro">Transparant, snel en zonder gedoe — STAP Energie regelt het van begin tot eind.</p>
+    <p class="sectie-intro">Transparant, snel en zonder gedoe, STAP Energie regelt het van begin tot eind.</p>
     <div class="card-grid card-grid--4 stappen-grid">
       <div class="stap"><div class="stap-nr">1</div><h3>Aanvraag indienen</h3><p>Vul het formulier in. Binnen twee werkdagen nemen we contact op voor een afspraak.</p></div>
       <div class="stap"><div class="stap-nr">2</div><h3>Voorbereiding</h3><p>Je ontvangt een overzicht van wat je kunt klaarzetten voor een soepele opname.</p></div>
@@ -150,7 +150,7 @@ include $root . 'includes/hero.php';
   <div class="sectie-inner">
     <span class="sectie-label">Wanneer verplicht?</span>
     <h2 class="sectie-titel">In welke situatie heb je een woninglabel nodig?</h2>
-    <p class="sectie-intro">Een energielabel is in diverse situaties wettelijk verplicht — voor particuliere én zakelijke woningeigenaren.</p>
+    <p class="sectie-intro">Een energielabel is in diverse situaties wettelijk verplicht, voor particuliere én zakelijke woningeigenaren.</p>
     <div class="card-grid card-grid--4">
       <div class="situatie-card">
         <div class="situatie-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg></div>
@@ -185,7 +185,7 @@ include $root . 'includes/hero.php';
   <div class="sectie-inner">
     <span class="sectie-label">Wat betekent het?</span>
     <h2 class="sectie-titel">De energieklassen A++++ t/m G</h2>
-    <p class="sectie-intro">Elke klasse beschrijft de energieprestatie van je woning — van nul-op-de-meter tot energieslurper.</p>
+    <p class="sectie-intro">Elke klasse beschrijft de energieprestatie van je woning, van nul-op-de-meter tot energieslurper.</p>
     <div class="labelschaal-layout">
       <div class="labelschaal-uitleg">
         <h3>Wat bepaalt je label?</h3>
@@ -193,7 +193,7 @@ include $root . 'includes/hero.php';
         <h3>Wat levert een beter label op?</h3>
         <p>Een hogere energieklasse betekent lagere energielasten, hogere verkoopwaarde en bij label A of B mogelijk rentevoordeel op je hypotheek.</p>
         <h3>Herlabelen na verduurzaming</h3>
-        <p>Na verduurzamingsmaatregelen kun je je label laten aanpassen via herlabelen — mogelijk binnen 24 maanden na de oorspronkelijke opnamedatum.</p>
+        <p>Na verduurzamingsmaatregelen kun je je label laten aanpassen via herlabelen, mogelijk binnen 24 maanden na de oorspronkelijke opnamedatum.</p>
         <a href="/verduurzaming-subsidie/" class="btn-groen" style="display:inline-flex;width:auto;margin-top:8px;padding:11px 22px;border-radius:var(--r);font-weight:600;font-size:.9rem;">Verduurzaming &amp; subsidies →</a>
       </div>
       <div class="label-lijst">
@@ -217,7 +217,7 @@ include $root . 'includes/hero.php';
 <section class="sectie sectie-wit">
   <div class="sectie-inner">
     <span class="sectie-label">Voor iedereen met een woning</span>
-    <h2 class="sectie-titel">Particulier of zakelijk — het label is hetzelfde</h2>
+    <h2 class="sectie-titel">Particulier of zakelijk, het label is hetzelfde</h2>
     <p class="sectie-intro">Het energielabel voor een woning is technisch identiek, ongeacht wie de eigenaar is.</p>
     <div class="card-grid card-grid--2">
       <div class="doelgroep-card">
@@ -258,18 +258,18 @@ include $root . 'includes/hero.php';
           <div class="wet-icon wet-icon-groen"><svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.6" stroke-linecap="round"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg></div>
           <h3>Voor particuliere eigenaren</h3>
         </div>
-        <div class="wet-rij"><span class="wet-dot">→</span><p><strong>Verplicht bij verkoop</strong> — Bij overdracht is een geldig label wettelijk verplicht.</p></div>
-        <div class="wet-rij"><span class="wet-dot">→</span><p><strong>Geldigheid 10 jaar</strong> — Na registratie is het label 10 jaar geldig.</p></div>
-        <div class="wet-rij"><span class="wet-dot">→</span><p><strong>Hypotheekvoordeel</strong> — Bij label A of B bieden grootbanken tot 0,3% rentevoordeel.</p></div>
+        <div class="wet-rij"><span class="wet-dot">→</span><p><strong>Verplicht bij verkoop</strong>, Bij overdracht is een geldig label wettelijk verplicht.</p></div>
+        <div class="wet-rij"><span class="wet-dot">→</span><p><strong>Geldigheid 10 jaar</strong>, Na registratie is het label 10 jaar geldig.</p></div>
+        <div class="wet-rij"><span class="wet-dot">→</span><p><strong>Hypotheekvoordeel</strong>, Bij label A of B bieden grootbanken tot 0,3% rentevoordeel.</p></div>
       </div>
       <div class="wet-blok">
         <div class="wet-head">
           <div class="wet-icon wet-icon-blauw"><svg viewBox="0 0 24 24" fill="none" stroke="#1e3a8a" stroke-width="1.6" stroke-linecap="round"><rect x="2" y="7" width="20" height="15" rx="1"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg></div>
           <h3>Voor zakelijke verhuurders</h3>
         </div>
-        <div class="wet-rij"><span class="wet-dot">→</span><p><strong>Verplicht per verhuurde woning</strong> — Bij elke nieuwe verhuur is een geldig label verplicht.</p></div>
-        <div class="wet-rij"><span class="wet-dot">→</span><p><strong>Verhuurverbod label E/F/G (2029)</strong> — Woningen met een slecht label mogen vóór 2029 maximaal label D hebben.</p></div>
-        <div class="wet-rij"><span class="wet-dot">→</span><p><strong>WWS-koppeling</strong> — Vanaf 2024 telt het label mee in het woningwaarderingstelsel.</p></div>
+        <div class="wet-rij"><span class="wet-dot">→</span><p><strong>Verplicht per verhuurde woning</strong>, Bij elke nieuwe verhuur is een geldig label verplicht.</p></div>
+        <div class="wet-rij"><span class="wet-dot">→</span><p><strong>Verhuurverbod label E/F/G (2029)</strong>, Woningen met een slecht label mogen vóór 2029 maximaal label D hebben.</p></div>
+        <div class="wet-rij"><span class="wet-dot">→</span><p><strong>WWS-koppeling</strong>, Vanaf 2024 telt het label mee in het woningwaarderingstelsel.</p></div>
       </div>
     </div>
   </div>

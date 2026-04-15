@@ -1,10 +1,10 @@
 <?php
 /**
  * kennisbank/isolatie/index.php
- * Kennisartikel: Isolatie van uw woning
+ * Kennisartikel: Isolatie van je woning
  */
 $root        = dirname(dirname(dirname(__FILE__))) . '/';
-$title       = 'Isolatie van Uw Huis | Types, Kosten & ISDE-Subsidie | STAP Energie';
+$title       = 'Isolatie van Je Huis | Types, Kosten & ISDE-Subsidie | STAP Energie';
 $description = 'Isolatie: spouwmuur, vloer, dak, ramen. Kosten per type. ISDE-subsidie met doubling rule. ROI 5–10 jaar. Funderingselement van verduurzaming.';
 $canonical   = 'https://stapenergie.nl/kennisbank/isolatie/';
 
@@ -15,7 +15,7 @@ $breadcrumbs = [
 ];
 
 $cta_titel     = 'Isolatie checken?';
-$cta_subtitel  = 'Plan een vrijblijvend adviesgesprek. Wij beginnen met uw situatie.';
+$cta_subtitel  = 'Plan een vrijblijvend adviesgesprek. Wij beginnen met je situatie.';
 $cta_knop      = 'Plan een adviesgesprek →';
 $cta_knop_url  = '/#contact';
 $cta_garanties = ['15+ jaar ervaring in de energiemarkt', 'Geen productbelang', 'Reactie binnen twee werkdagen'];
@@ -28,7 +28,7 @@ $faq_items = [
   ['vraag' => 'Welk isolatietype geeft de meeste besparing?',
    'antwoord' => 'Dakisolatie geeft meist voordeel (dak verliest veel warmte). Daarna spouwmuurvulling (goedkoop, veel effect). Vloerisolatie helpt ook, maar is duurder. HR++ ramen als laatste. Combineren geeft best resultaat.'],
   ['vraag' => 'Hoeveel wordt mijn energielabel beter?',
-   'antwoord' => 'Sterk afhankelijk van huistype en huidigestatus. Een goed geïsoleerd huis kan van label D naar B gaan. Een slecht huis van F naar D. STAP Energie berekent dit voor uw woning.'],
+   'antwoord' => 'Sterk afhankelijk van huistype en huidigestatus. Een goed geïsoleerd huis kan van label D naar B gaan. Een slecht huis van F naar D. STAP Energie berekent dit voor je woning.'],
   ['vraag' => 'Kan ik isolatie zelf doen?',
    'antwoord' => 'Eenvoudige maatregelen (glaswol in zolder) zijn DIY-vriendelijk. Spouwmuurvulling vereist professionele apparatuur. Vloer- en dakisolatie meestal ook professioneel. Voor ISDE-subsidie moet het professioneel gebeuren.'],
   ['vraag' => 'Hoe lang duurt isolatiewerk?',
@@ -79,7 +79,7 @@ unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two
 $kaarten_variant = 'grijs';
 $kaarten_label   = 'Types';
 $kaarten_titel   = 'Verschillende isolatietechnieken';
-$kaarten_intro   = 'Voor elk onderdeel van uw huis is isolatie mogelijk. Elk type heeft eigen kosten, besparing en complexiteit.';
+$kaarten_intro   = 'Voor elk onderdeel van je huis is isolatie mogelijk. Elk type heeft eigen kosten, besparing en complexiteit.';
 $kaarten_cols    = 3;
 $kaarten_items   = [
   [
@@ -145,7 +145,7 @@ $two_col_links     = '<p><strong>ISDE (Investeringssubsidie Duurzame Energie)</s
 <strong>Dakisolatie:</strong> €200–€800<br>
 <strong>Ramen:</strong> €500–€2.000<br>
 <strong>Vloer:</strong> €250–€750</p>
-<p><strong>Het doubling voordeel:</strong> Installeert u binnen 24 maanden nadat isolatie is aangevraagd ook een warmtepomp of hybride ketel? Dan verdubbelt uw subsidie voor beide maatregelen. Dit kan €4.000+ extra opbrengen.</p>
+<p><strong>Het doubling voordeel:</strong> Installeert u binnen 24 maanden nadat isolatie is aangevraagd ook een warmtepomp of hybride ketel? Dan verdubbelt je subsidie voor beide maatregelen. Dit kan €4.000+ extra opbrengen.</p>
 <p><strong>Strategie:</strong> Aanvragen isolatie eerst, installeer dan warmtepomp → maximaal subsidie.</p>';
 $two_col_cta       = ['tekst' => 'Meer over ISDE →', 'url' => '/verduurzaming-subsidie/', 'stijl' => 'primair'];
 $two_col_rechts    = '<ul class="checklist">
@@ -180,7 +180,7 @@ unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two
 $two_col_variant   = 'wit';
 $two_col_label     = 'Financieel';
 $two_col_titel     = 'Besparing en terugverdienperiode';
-$two_col_links     = '<p>Isolatie bespaart jaarlijks op energiekosten. De hoogte hangt af van uw huisenergielabel, gasgebruik en gaskosten.</p>
+$two_col_links     = '<p>Isolatie bespaart jaarlijks op energiekosten. De hoogte hangt af van je huisenergielabel, gasgebruik en gaskosten.</p>
 <p><strong>Typische besparing:</strong></p>
 <p>Een gemiddeld huis (label D, €2.000/jaar gas) kan door volledige isolatie €600–€1.200/jaar besparen.</p>
 <p><strong>Terugverdienperiode:</strong> 5–10 jaar (afhankelijk van maatregelen en gaskosten). Na terugbetaling is het zuivere winst.</p>
@@ -204,7 +204,7 @@ $two_col_links     = '<p>Isolatiematerialen verschillen in R-waarde (warmteweers
 <p><strong>Dak:</strong> Glaswol, rockwool, of PUR. Typisch 3–6 m²K/W nodig.</p>
 <p><strong>Ramen:</strong> HR++ betekent U-waarde ≤1,2 W/m²K. HR+++ is ≤0,8 W/m²K (beter).</p>
 <p><strong>Vloer:</strong> Polyurethaan of EPS-schuim, 4–6 cm dik.</p>
-<p>Vakinstalleuren kiezen geschikte materialen en dikte voor uw situatie.</p>';
+<p>Vakinstalleuren kiezen geschikte materialen en dikte voor je situatie.</p>';
 $two_col_cta       = [];
 $two_col_rechts    = '<ul class="checklist">
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>Glaswol/rockwool: budget-friendly</span></li>

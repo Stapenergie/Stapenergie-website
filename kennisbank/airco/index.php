@@ -14,8 +14,8 @@ $breadcrumbs = [
   ['label' => 'Airco'],
 ];
 
-$cta_titel     = 'Airco voor uw woning?';
-$cta_subtitel  = 'Plan een vrijblijvend adviesgesprek. Wij beginnen met uw situatie.';
+$cta_titel     = 'Airco voor je woning?';
+$cta_subtitel  = 'Plan een vrijblijvend adviesgesprek. Wij beginnen met je situatie.';
 $cta_knop      = 'Plan een adviesgesprek →';
 $cta_knop_url  = '/#contact';
 $cta_garanties = ['15+ jaar ervaring in de energiemarkt', 'Geen productbelang', 'Reactie binnen twee werkdagen'];
@@ -139,7 +139,7 @@ unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two
 $two_col_variant   = 'grijs';
 $two_col_label     = 'Functie';
 $two_col_titel     = 'Split-systeem als aanvullende verwarming';
-$two_col_links     = '<p><strong>Scenario:</strong> U hebt warmtepomp voor hele huis, maar één kamer is ongemakkelijk warm (of ver weg).</p>
+$two_col_links     = '<p><strong>Scenario:</strong> Je hebt warmtepomp voor hele huis, maar één kamer is ongemakkelijk warm (of ver weg).</p>
 <p><strong>Oplossing:</strong> Aanvullende split-airco voor die ruimte.</p>
 <p><strong>Voordelen:</strong><br>
 → COP 3–5 (efficiënt)<br>
@@ -181,7 +181,7 @@ unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two
 $two_col_variant   = 'grijs';
 $two_col_label     = 'Synergie';
 $two_col_titel     = 'Split-airco + centrale warmtepomp';
-$two_col_links     = '<p><strong>Scenario:</strong> U hebt centrale warmtepomp, maar één kamer blijft koud of u wilt aanvullende koeling.</p>
+$two_col_links     = '<p><strong>Scenario:</strong> Je hebt centrale warmtepomp, maar één kamer blijft koud of je wilt aanvullende koeling.</p>
 <p><strong>Voordelen combinatie:</strong><br>
 → Centrale warmtepomp als baseline (efficient voor heel huis)<br>
 → Split-airco als fijnregeling (extra warmte/koeling per kamer)<br>
