@@ -31,3 +31,34 @@
 .has-dd.open .dropdown { display: block; }
 .dd-item { display: flex; align-items: center; padding: .65rem 1rem; border-radius: var(--r); font-size: var(--tekst-sub); font-weight: 500; color: var(--subtekst); transition: color .15s, background .15s; min-height: 44px; }
 .dd-item:hover { color: var(--groen); background: var(--groen-licht); }
+
+/* ══════════════════════════════════
+   MOBIEL
+══════════════════════════════════ */
+@media (max-width: 768px) {
+  .nav-toggle { display: flex; }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-bottom: 1px solid var(--rand);
+    padding: 1rem 5%;
+    box-shadow: var(--shadow-lg);
+    z-index: 199;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links li { width: 100%; }
+  .nav-links a { padding: .75rem 0; display: block; font-size: 1rem; border-bottom: 1px solid var(--rand); width: 100%; }
+  .nav-links li:last-child a { border-bottom: none; }
+  .nav-cta { margin-top: .5rem; text-align: center; border-radius: var(--r) !important; }
+  .dropdown { position: static; transform: none; box-shadow: none; border: none; border-radius: 0; padding: 0 0 0 1rem; min-width: 0; }
+  .dropdown::before, .dropdown::after { display: none; }
+  .has-dd.open .dropdown { display: block; }
+  .dd-item { font-size: .95rem; min-height: 40px; border-bottom: 1px solid var(--rand); }
+}
