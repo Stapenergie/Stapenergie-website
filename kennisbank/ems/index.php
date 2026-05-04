@@ -23,8 +23,8 @@ $cta_garanties = ['15+ jaar ervaring in de energiemarkt', 'Geen productbelang', 
 $faq_label = 'Veelgestelde vragen';
 $faq_titel = 'Veelgestelde vragen over EMS';
 $faq_items = [
-  ['vraag' => 'Hoe weet het EMS wat het beste moment is om te laden/ontladen?',
-   'antwoord' => 'Met dynamisch contract: EMS leest elk uur de elektriciteitsmarkt (via API). Goedkope uren = lading batterij/auto, dure uren = ontlading. Zonder dynamisch: EMS kan alleen baseren op zonneschijn (minder slim).'],
+  ['vraag' => 'Hoe weet het EMS wat het beste moment is om te laden of ontladen?',
+   'antwoord' => 'Met dynamisch contract: EMS leest elk uur de elektriciteitsmarkt (via API). Goedkope uren = lading batterij en auto, dure uren = ontlading. Zonder dynamisch: EMS kan alleen baseren op zonneschijn (minder slim).'],
   ['vraag' => 'Kan EMS ook mijn gasverbruik optimaliseren?',
    'antwoord' => 'Deels: EMS bestuurt warmtepomp-sturing (warmte opslaan in boiler tijdens goedkope stroom). Maar gas (hr-ketel) heeft geen EMS-aansluiting. Hybride warmtepomp (gas+elektra) biedt meer mogelijkheden.'],
   ['vraag' => 'Werkt EMS ook zonder zonnepanelen?',
@@ -44,7 +44,7 @@ $hero_variant  = 'sub';
 $hero_bg       = '/images/hero-verduurzaming-hub.jpg';
 $hero_eyebrow  = 'Kennisbank';
 $hero_titel    = 'EMS: laat je energie zelf <em>denken en handelen.</em>';
-$hero_lead     = 'Een Energy Management System (EMS) verbindt zonnepanelen, batterij, EV-charger en warmtepomp. Het optimaliseer automatisch wanneer elk systeem aan/uit gaat voor de laagste energiekosten. Met dynamisch contract kan dit €300–€600/jaar besparen. Lees hier hoe het werkt.';
+$hero_lead     = 'Een Energy Management System (EMS) verbindt zonnepanelen, batterij, EV-charger en warmtepomp. Het optimaliseer automatisch wanneer elk systeem aan of uit gaat voor de laagste energiekosten. Met dynamisch contract kan dit €300–€600/jaar besparen. Lees hier hoe het werkt.';
 $hero_usps     = [];
 $hero_cta      = 'Plan een adviesgesprek →';
 $hero_cta_url  = '/#contact';
@@ -60,11 +60,11 @@ $two_col_titel     = 'Wat is een Energy Management System?';
 $two_col_links     = '<p>Een EMS is software + hardware die al je energiesystemen verbindt en stuurt:</p>
 <p><strong>Systemen die EMS aanstuurt:</strong><br>
 → Zonnepanelen (monitoring opbrengst)<br>
-→ Thuisbatterij (laden/ontladen timing)<br>
+→ Thuisbatterij (laden of ontladen timing)<br>
 → EV-charger (auto laden wanneer slim)<br>
 → Warmtepomp (verwarming- timing)<br>
 → Elektra-meter (real-time monitoring)</p>
-<p><strong>Voornaamste functie:</strong> Automatisch inschakelen/uitschakelen van systemen op momenten met goedkope stroom (dynamisch contract) of veel zon (zonnepanelen).</p>
+<p><strong>Voornaamste functie:</strong> Automatisch inschakelen of uitschakelen van systemen op momenten met goedkope stroom (dynamisch contract) of veel zon (zonnepanelen).</p>
 <p><strong>Gevolg:</strong> Lagere energierekening, beter zelf-gebruik, minder belasting op net.</p>';
 $two_col_cta       = [];
 $two_col_rechts    = '<ul class="checklist">
@@ -87,7 +87,7 @@ $two_col_links     = '<p><strong>Basis-algoritme:</strong></p>
    - Goedkope uren (€0,10–€0,20)? Batterij laden, auto laden, warmtepomp extra opwarmen.<br>
    - Dure uren (€0,40–€0,60)? Batterij ontladen, auto afladen, warmtepomp rustig.<br>
    - Zon schijnt? Zonnepanelen prioriteit, batterij laden, auto laden.<br>
-4. <strong>Sturen:</strong> Geeft commando\'s aan elk systeem.<br>
+4. <strong>Sturen:</strong> Geeft commando’s aan elk systeem.<br>
 5. <strong>Controleren:</strong> Monitored resultaat, past aan.</p>';
 $two_col_cta       = [];
 $two_col_rechts    = '<ul class="checklist">
@@ -110,7 +110,7 @@ $kaarten_items   = [
   [
     'titel'     => 'Zonnig middag + auto laden',
     'icoon'     => '☀️🚗',
-    'tekst'     => 'Vandaag veel zon, 's middags zonnepanelen produceren veel. EMS zegt: laad nu de auto! Gratis stroom. Auto vollangs om 15u (veel zon), gereed voor avond.',
+    'tekst'     => 'Vandaag veel zon, ’s middags zonnepanelen produceren veel. EMS zegt: laad nu de auto. Gratis stroom. Auto vol om 15u, gereed voor de avond.',
   ],
   [
     'titel'     => 'Dure avond + batterij ontladen',
@@ -144,7 +144,7 @@ $two_col_links     = '<p><strong>EMS hardware + software:</strong></p>
 <p>Basis-EMS: €500–€1.000<br>
 Premium (meer features): €1.000–€2.000<br>
 Installatie + aansluiting: €300–€500<br>
-Jaarlijks abonnement (app/updates): €50–€150</p>
+Jaarlijks abonnement (app en updates): €50–€150</p>
 <p><strong>Besparing:</strong> Sterk afhankelijk van je setup:<br>
 Met zonnepanelen + batterij + dynamisch contract: €300–€600/jaar<br>
 Met alleen zonnepanelen: €100–€200/jaar<br>
@@ -166,7 +166,7 @@ $two_col_label     = 'Essentieel';
 $two_col_titel     = 'Dynamisch contract: de basis van EMS-voordeel';
 $two_col_links     = '<p><strong>Zonder dynamisch contract:</strong> Elke kWh kost hetzelfde (bijv. €0,35). EMS kan enkel op basis van zonneschijn optimaliseren. Voordeel klein.</p>
 <p><strong>Met dynamisch contract:</strong> Prijs varieert elk uur (bijv. €0,10 in nacht, €0,50 in piek). EMS wordt veel slimmer:</p>
-<p>→ Laadt batteries/auto in goedkope uren (€0,10)<br>
+<p>→ Laadt batterij en auto in goedkope uren (€0,10)<br>
 → Ontlaadt in dure uren (€0,50)<br>
 → Marge: €0,40 per kWh = groot voordeel!<br>
 → Met 3+ systemen: €300–€600/jaar mogelijk</p>
@@ -212,8 +212,8 @@ $two_col_links     = '<p><strong>Zeer geschikt als u:</strong></p>
 ✓ Smart home-mindset hebt</p>
 <p><strong>Minder geschikt als u:</strong></p>
 <p>✗ Vaste tarief-contract wilt houden<br>
-✗ Alleen zonnepanelen (geen batterij/auto)<br>
-✗ Geen interesse in apps/monitoring<br>
+✗ Alleen zonnepanelen (geen batterij of auto)<br>
+✗ Geen interesse in apps en monitoring<br>
 ✗ Budget beperkt</p>';
 $two_col_cta       = ['tekst' => 'Plan adviesgesprek →', 'url' => '/#contact', 'stijl' => 'primair'];
 $two_col_rechts    = '<ul class="checklist">
@@ -230,8 +230,8 @@ $two_col_variant   = 'grijs';
 $two_col_label     = 'Zorg';
 $two_col_titel     = 'Privacy en veiligheid van EMS-data';
 $two_col_links     = '<p><strong>Data die EMS verzamelt:</strong> Realtime energiegebruik per systeem, stroom-marktprijzen, weersgegevens.</p>
-<p><strong>Privacy:</strong> Dit gegevens gaat naar cloud-server van EMS-leverancier. Controleer privacybeleid!</p>
-<p><strong>Veiligheid:</strong> EMS-hardware moet veilig zeggen tegen cyberaanvallen. Moderne EMS hebben encryptie en updates.</p>
+<p><strong>Privacy:</strong> Deze gegevens gaan naar cloud-server van EMS-leverancier. Controleer privacybeleid!</p>
+<p><strong>Veiligheid:</strong> EMS-hardware moet bestand zijn tegen cyberaanvallen. Moderne EMS hebben encryptie en updates.</p>
 <p><strong>Lokaal vs. Cloud:</strong> Sommige EMS kunnen lokaal werken (minder privacy-risk). Check bij aankoop.</p>
 <p><strong>STAP Energie advies:</strong> Kies betrouwbare merk met sterke security-record.</p>';
 $two_col_cta       = [];

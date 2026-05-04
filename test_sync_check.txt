@@ -1,0 +1,4 @@
+test sync — line 1
+line 2 with longer content to verify byte count
+line 3
+end - now with much more text added at the bottom to grow the file beyond original size, lots more content here

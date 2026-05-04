@@ -28,7 +28,7 @@ $faq_items = [
   ['vraag' => 'Hoe veel kost elektriciteit voor EV-laden?',
    'antwoord' => 'Elektrische auto verbruikt ≈15–20 kWh per 100 km. Bij €0,25/kWh = €3,75–€5 per 100 km. Auto op benzine: €8–€12 per 100 km. Dus EV veel goedkoper.'],
   ['vraag' => 'Kan ik EV laden met mijn zonnepanelen?',
-   'antwoord' => 'Ja! Smart charging: laad 's middags wanneer zon schijnt. Met dynamisch contract: laad in goedkope uren. Met smart home/EMS: automatisch optimaliseren.'],
+   'antwoord' => 'Ja. Smart charging: laad 's middags wanneer de zon schijnt. Met dynamisch contract: laad in goedkope uren. Met smart home of EMS: automatisch optimaliseren.'],
   ['vraag' => 'Is laadpaal thuis veiliger dan openbare?',
    'antwoord' => 'Ja. Thuis: veilig, bekend voeding, eigen beheer. Openbaar: veiliger dan vorig decennium, maar thuis altijd preferent (betrouwbaarder, goedkoper).'],
   ['vraag' => 'Kan ik laadpaal zelf installeren?',
@@ -44,7 +44,7 @@ $hero_variant  = 'sub';
 $hero_bg       = '/images/hero-verduurzaming-hub.jpg';
 $hero_eyebrow  = 'Kennisbank';
 $hero_titel    = 'Laadpaal thuis: schoon en goedkoop tanken. <em>Auto laden op zonne-energie.</em>';
-$hero_lead     = 'Elektrische auto's zijn schoon en goedkoop in gebruik. Thuis een laadpaal installeren maakt het nog beter — oplaad 's nachts met dynamische stroom of overdag met zonnepanelen. Kost €800–€2.500, subsidie beschikbaar.';
+$hero_lead     = 'Elektrische auto's zijn schoon en goedkoop in gebruik. Thuis een laadpaal installeren maakt het nog beter. Laden 's nachts met dynamische stroom of overdag met zonnepanelen. Kost €800–€2.500, subsidie beschikbaar.';
 $hero_usps     = [];
 $hero_cta      = 'Plan een adviesgesprek →';
 $hero_cta_url  = '/#contact';
@@ -87,7 +87,7 @@ $kaarten_items   = [
     'titel'     => '1-Fase Laadpaal (11 kW)',
     'icoon'     => '🔌',
     'badge'     => 'Standaard',
-    'tekst'     => 'Gebruikt huishoudstroom (1 fase). Voor de meeste elektrische auto\'s geschikt. Laadt gemiddeld 6–8 uur voledig op.',
+    'tekst'     => 'Gebruikt huishoudstroom (1 fase). Voor de meeste elektrische auto's geschikt. Laadt gemiddeld 6–8 uur volledig op.',
     'prijsrijen' => [
       ['label' => 'Kosten',             'bedrag' => '€ 800–€ 1.200'],
       ['label' => 'Laadtijd',           'bedrag' => '6–8 uur volledig'],
@@ -139,10 +139,10 @@ $two_col_variant   = 'grijs';
 $two_col_label     = 'Optimalisering';
 $two_col_titel     = 'Smart charging: intelligente laadtiming';
 $two_col_links     = '<p><strong>Standaard laadpaal:</strong> Je laadt wanneer je wilt. Geen optimalisatie.</p>
-<p><strong>Smart laadpaal:</strong> Laadpaal communiceert met netwerk/auto. Mogelijkheden:</p>
+<p><strong>Smart laadpaal:</strong> Laadpaal communiceert met netwerk en auto. Mogelijkheden:</p>
 <p>→ <strong>Laad in goedkope uren:</strong> Dynamisch contract? Laadpaal laadt 's nachts goedkoop (€0,10–€0,20/kWh), niet duur (€0,40–€0,50/kWh).<br>
-→ <strong>Zonnepanelen:</strong> Laad 's middags wanneer zon schijnt — gratis stroom!<br>
-→ <strong>Load-balancing:</strong> Laadpaal deelt stroom met warmtepomp/thuisbatterij — geen overbelasting.</p>
+→ <strong>Zonnepanelen:</strong> Laad 's middags wanneer de zon schijnt. Gratis stroom.<br>
+→ <strong>Load-balancing:</strong> laadpaal deelt stroom met warmtepomp en thuisbatterij, geen overbelasting.</p>
 <p><strong>Voordeel:</strong> €100–€300 extra besparing per jaar mogelijk.</p>';
 $two_col_cta       = [];
 $two_col_rechts    = '<ul class="checklist">
@@ -159,11 +159,11 @@ $two_col_variant   = 'wit';
 $two_col_label     = 'Combinatie';
 $two_col_titel     = 'Laadpaal + zonnepanelen: optimaal';
 $two_col_links     = '<p><strong>Scenario:</strong> Je hebt zonnepanelen en elektrische auto.</p>
-<p><strong>Ideaal:</strong> 's Middags wanneer zon schijnt, auto laden. Dit geeft:</p>
+<p><strong>Ideaal:</strong> 's middags wanneer de zon schijnt, auto laden. Dat geeft:</p>
 <p>→ Gratis laad-stroom (of zeer goedkoop)<br>
 → Vermindert teruglevering naar net (dus minder subsidie-verlies bij saldering)<br>
 → Maximaal zelf-gebruik van zonnepanelen</p>
-<p><strong>Met thuisbatterij nog beter:</strong> Batterij 's middags laden van zon, auto 's middags laden van zon, 's avonds batterij gebruiken.</p>
+<p><strong>Met thuisbatterij nog beter:</strong> batterij 's middags laden van zon, auto 's middags laden van zon, 's avonds batterij gebruiken.</p>
 <p><strong>Met EMS (Energy Management System):</strong> Alles geoptimaliseerd: zonnepanelen → batterij → auto → verwarming.</p>';
 $two_col_cta       = ['tekst' => 'Meer over zonnepanelen →', 'url' => '/kennisbank/zonnepanelen/', 'stijl' => 'primair'];
 $two_col_rechts    = '<ul class="checklist">
@@ -183,7 +183,7 @@ $two_col_links     = '<p><strong>Situatie:</strong> Je hebt warmtepomp + laadpaa
 <p><strong>Probleem:</strong> Elektrische aansluiting heeft beperkte capaciteit (meestal 1–3 fases van 25–40 Ampère). Alles tegelijk is overbelasting.</p>
 <p><strong>Oplossing: Load-balancing:</strong> Intelligente sturing verdeelt beschikbare stroom:</p>
 <p>→ Warmtepomp krijgt priority (verwarming is essentieel)<br>
-→ Laadpaal krijgt rest wanneer wartepomp niet volledig draait<br>
+→ Laadpaal krijgt rest wanneer warmtepomp niet volledig draait<br>
 → Batterij laadt wanneer beide stil staan</p>
 <p><strong>Voordeel:</strong> Geen overbelasting, alles werkt efficiënt.</p>';
 $two_col_cta       = [];
@@ -202,7 +202,7 @@ $two_col_label     = 'Voorzorg';
 $two_col_titel     = 'Is laadpaal thuis voor je geschikt?';
 $two_col_links     = '<p><strong>Ideaal als u:</strong></p>
 <p>✓ Elektrische auto hebt (of plant)<br>
-✓ Oprit/garage met stroom hebt<br>
+✓ Oprit of garage met stroom hebt<br>
 ✓ Overdag thuis parkeert of 's nachts laadt<br>
 ✓ Zonnepanelen hebt (of plant)<br>
 ✓ Dynamisch contract neemt</p>
@@ -213,7 +213,7 @@ $two_col_links     = '<p><strong>Ideaal als u:</strong></p>
 $two_col_cta       = ['tekst' => 'Plan adviesgesprek →', 'url' => '/#contact', 'stijl' => 'primair'];
 $two_col_rechts    = '<ul class="checklist">
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>EV thuis parkeren</span></li>
-  <li class="checklist__item"><span class="checklist__vink">✓</span><span>Stroom in oprit/garage</span></li>
+  <li class="checklist__item"><span class="checklist__vink">✓</span><span>Stroom in oprit of garage</span></li>
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>Zonnepanelen ideaal</span></li>
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>Dynamisch contract</span></li>
 </ul>';

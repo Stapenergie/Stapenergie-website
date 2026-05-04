@@ -30,7 +30,7 @@ $faq_items = [
   ['vraag' => 'Hoeveel opbrengst per jaar?',
    'antwoord' => 'Gemiddeld 900–1.100 kWh per kWp per jaar. Bij 4 kWp dus 3.600–4.400 kWh/jaar. Dit is 40–50% van jaarlijks huishoudverbruik (7.000–9.000 kWh). Met thuisbatterij hoger percentage zelf-gebruikt.'],
   ['vraag' => 'Werken zonnepanelen ook in winter of bewolkt weer?',
-   'antwoord' => 'Ja, zonnepanelen produceren ook bij bewolking, maar 75% minder dan bij zon. In winter minder productie (korte dagen, lage zon). Summer/autumn is productie piek (maart–september).'],
+   'antwoord' => 'Ja, zonnepanelen produceren ook bij bewolking, maar 75% minder dan bij zon. In winter minder productie (korte dagen, lage zon). In de zomer en het najaar is de productie het hoogst (maart tot september).'],
   ['vraag' => 'Kan ik zonnepanelen zelf installeren?',
    'antwoord' => 'Technisch ja (DIY-panelen bestaan), maar NOT-aanbevolen: netaansluiting vereist gecertificeerde installateur, garantie vervalt, risico op elektrische onveiligheid. Beter: professioneel laten doen.'],
 ];
@@ -57,13 +57,13 @@ include $root . 'includes/trust.php';
 $two_col_variant   = 'wit';
 $two_col_label     = 'Werkingsprincipe';
 $two_col_titel     = 'Hoe werken zonnepanelen?';
-$two_col_links     = '<p>Een zonnepaneel bevat siliciumcellen die fotonen (licht) omzetten in elektriciteit. Dit gebeurt direct — geen warmteverlies.</p>
+$two_col_links     = '<p>Een zonnepaneel bevat siliciumcellen die fotonen (licht) omzetten in elektriciteit. Dit gebeurt direct, zonder warmteverlies.</p>
 <p><strong>Systeem:</strong> Panelen op dak → inverter (wisselstroom) → huishoudkast → gebruik in huis of teruglevering naar net.</p>
 <p><strong>Opbrengst:</strong> Gemiddeld 900–1.100 kWh per kWp per jaar in Nederland. Veel in zomer (zon hoog), minder in winter (zon laag).</p>
-<p><strong>Met batterij:</strong> 's Avonds en 's nachts verbruikt u opgeslagen energie ipv. duur stroom van net. Dit verhoogt rendement aanzienlijk.</p>';
+<p><strong>Met batterij:</strong> ’s Avonds en ’s nachts verbruikt u opgeslagen energie ipv. duur stroom van net. Dit verhoogt rendement aanzienlijk.</p>';
 $two_col_cta       = [];
 $two_col_rechts    = '<ul class="checklist">
-  <li class="checklist__item"><span class="checklist__vink">✓</span><span>Direkte omzetting zon → elektriciteit</span></li>
+  <li class="checklist__item"><span class="checklist__vink">✓</span><span>Directe omzetting zon → elektriciteit</span></li>
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>Geen onderhoud nodig (zelf-schoon)</span></li>
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>25–30 jaar rendabel</span></li>
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>Efficiëntie modules: 20–22%</span></li>
@@ -157,7 +157,7 @@ unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two
 // ── Salderingsregeling
 $two_col_variant   = 'wit';
 $two_col_label     = 'Regelgeving';
-$two_col_titel     = 'De salderingsregeling — fasering 2027–2030';
+$two_col_titel     = 'De salderingsregeling, fasering 2027–2030';
 $two_col_links     = '<p><strong>Saldering huishoudens (nu):</strong> Zonneopbrengst teruggeleverd tegen dezelfde tarief als u koopt (full netting). Dit is voordelig.</p>
 <p><strong>Verandering 2027:</strong> Teruggeleverde stroom krijgt lagere prijs (deels saldering). Dit vermindert rendement.</p>
 <p><strong>2030 en verder:</strong> Volledige einde saldering. Teruggeleide stroom tegen veel lager markt-tarief.</p>
@@ -178,8 +178,8 @@ $two_col_label     = 'Synergie';
 $two_col_titel     = 'Zonnepanelen + thuisbatterij = optimaal';
 $two_col_links     = '<p><strong>Thuisbatterij combineert goed met zonnepanelen:</strong></p>
 <p><strong>Zonder batterij:</strong> 30–40% zelf-gebruikt, rest naar net (tegen lagere opbrengst bij salderingseinde).</p>
-<p><strong>Met batterij:</strong> Zonne-energie 's middags opgeslagen, 's avonds/nacht gebruikt → 60–70% zelf-gebruik, veel meer voordeel.</p>
-<p><strong>EV-laden + zonnepanelen:</strong> Ook interessant: auto 's middags laden met zonneenergie, geen netbelasting.</p>
+<p><strong>Met batterij:</strong> Zonne-energie ’s middags opgeslagen, ’s avonds en ’s nachts gebruikt → 60–70% zelf-gebruik, veel meer voordeel.</p>
+<p><strong>EV-laden + zonnepanelen:</strong> Ook interessant: auto ’s middags laden met zonne-energie, geen netbelasting.</p>
 <p><strong>EMS (Energy Management System):</strong> Optimaliseert zonneopbrengst, batterijladen, EV-laden en verwarming voor laagste kosten.</p>';
 $two_col_cta       = [];
 $two_col_rechts    = '<ul class="checklist">
@@ -198,14 +198,14 @@ $two_col_titel     = 'Is je dak geschikt?';
 $two_col_links     = '<p><strong>Ideale situatie:</strong></p>
 <p>Zuid-oriëntering (meeste zon)<br>
 Minimaal 3–4 m² ruimte<br>
-Geen schaduw van bomen/buren<br>
+Geen schaduw van bomen of buren<br>
 Dak ouder dan 10 jaar? → eerst vervangen<br>
 Staaldak? → onderbeaming nodig</p>
-<p><strong>Als niet ideaal:</strong> STAP Energie doet site-analyse. Ook west/oost-oriëntatie kan werken, alleen iets minder opbrengst (20–30%).</p>
+<p><strong>Als niet ideaal:</strong> STAP Energie doet site-analyse. Ook west- of oostoriëntatie kan werken, alleen iets minder opbrengst (20–30%).</p>
 <p><strong>Appartement?</strong> Mogelijk op balkon (klein systeem), maar meestal niet rendabel. Gebouw-zonnepanelen soms beter.</p>';
 $two_col_cta       = ['tekst' => 'Plan adviesgesprek →', 'url' => '/#contact', 'stijl' => 'primair'];
 $two_col_rechts    = '<ul class="checklist">
-  <li class="checklist__item"><span class="checklist__vink">✓</span><span>Zuid ideaal, west/oost ook goed</span></li>
+  <li class="checklist__item"><span class="checklist__vink">✓</span><span>Zuid ideaal, west of oost ook goed</span></li>
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>Minimaal 3–4 m² ruimte</span></li>
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>Geen schaduw van bomen</span></li>
   <li class="checklist__item"><span class="checklist__vink">✓</span><span>Dak in goede staat</span></li>
