@@ -5,7 +5,7 @@
  */
 $root        = dirname(dirname(dirname(__FILE__))) . '/';
 $title       = 'Thuisbatterij (Home Battery) | Kosten, Rendement & Subsidie | STAP Energie';
-$description = 'Thuisbatterij: slaat zonne-energie op voor 's avonds. €4.000–€8.000, terugverdientijd 8–12 jaar. Best met dynamische stroomcontract. Combinatie zonnepanelen.';
+$description = 'Thuisbatterij: slaat zonne-energie op voor ’s avonds. €4.000–€8.000, terugverdientijd 8–12 jaar. Best met dynamische stroomcontract. Combinatie zonnepanelen.';
 $canonical   = 'https://stapenergie.nl/kennisbank/thuisbatterij/';
 
 $breadcrumbs = [
@@ -24,13 +24,13 @@ $faq_label = 'Veelgestelde vragen';
 $faq_titel = 'Veelgestelde vragen over thuisbatterijen';
 $faq_items = [
   ['vraag' => 'Hoeveel energie kan een thuisbatterij opslaan?',
-   'antwoord' => 'Gemiddeld 5–13 kWh (kilowatt-uur). Een typisch huishouden gebruikt 7–9 kWh per dag. Dus een batterij stelt u in staat om 's middags opgeslagen zonne-energie 's avonds en 's nachts te gebruiken.'],
+   'antwoord' => 'Gemiddeld 5–13 kWh (kilowatt-uur). Een typisch huishouden gebruikt 7–9 kWh per dag. Dus een batterij stelt u in staat om ’s middags opgeslagen zonne-energie ’s avonds en ’s nachts te gebruiken.'],
   ['vraag' => 'Hoe lang houden batterijen mee?',
    'antwoord' => 'Moderne lithium-batterijen houden 10–15 jaar mee. Ze verouderen door laad- en ontlaadcycli (niet door tijd). Met 300–500 cycli per jaar gaat een batterij 20–50 jaar mee, maar capaciteit neemt af.'],
   ['vraag' => 'Wat is een dynamische stroomcontract?',
    'antwoord' => 'Met een dynamische contract betaalt u elk uur een ander tarief (volgt marktprijs). Slimme batterij-besturing laadt goedkoop en ontlaadt duur → forse besparing. Zonder dynamisch contract, voordeel is minder groot.'],
   ['vraag' => 'Kan ik zelf mijn batterij laden?',
-   'antwoord' => 'Ja, als u stroom van het net wilt kopen voor 's nachts. Met dynamisch contract: laden in goedkope uren, ontladen in dure uren = winst. Zonder: gewoon laden als het veel kost. Leidt niet tot besparing.'],
+   'antwoord' => 'Ja, als u stroom van het net wilt kopen voor ’s nachts. Met dynamisch contract: laden in goedkope uren, ontladen in dure uren = winst. Zonder: gewoon laden als het veel kost. Leidt niet tot besparing.'],
   ['vraag' => 'Werkt batterij ook zonder zonnepanelen?',
    'antwoord' => 'Ja, technisch wel. Maar voordeel is veel kleiner (alleen dynamisch contract). Met zonnepanelen: maximaal voordeel. Dus batterij is vooral zinvol met panelen of dynamic contract.'],
 ];
@@ -44,7 +44,7 @@ $hero_variant  = 'sub';
 $hero_bg       = '/images/hero-verduurzaming-hub.jpg';
 $hero_eyebrow  = 'Kennisbank';
 $hero_titel    = 'Thuisbatterij: sla zonnelicht op. <em>Gebruik het wanneer je wilt.</em>';
-$hero_lead     = 'Een thuisbatterij slaat overdag zonne-energie op en geeft deze 's avonds af. Dit verhoogt zelf-gebruik naar 60–70% in plaats van 30–40%. Met zonnepanelen en dynamische stroom-contract kan dit €300–€600/jaar besparen. Lees hier alles over kosten, voordeel en geschiktheid.';
+$hero_lead     = 'Een thuisbatterij slaat overdag zonne-energie op en geeft deze ’s avonds af. Dit verhoogt zelf-gebruik naar 60–70% in plaats van 30–40%. Met zonnepanelen en dynamische stroom-contract kan dit €300–€600/jaar besparen. Lees hier alles over kosten, voordeel en geschiktheid.';
 $hero_usps     = [];
 $hero_cta      = 'Plan een adviesgesprek →';
 $hero_cta_url  = '/#contact';
@@ -58,9 +58,9 @@ $two_col_variant   = 'wit';
 $two_col_label     = 'Werkingsprincipe';
 $two_col_titel     = 'Hoe werkt een thuisbatterij?';
 $two_col_links     = '<p>Een thuisbatterij (home battery/power wall) slaat elektriciteit op in lithium-ionbatterijen.</p>
-<p><strong>Proces:</strong> Zonnepanelen produceren elektriciteit → inverter → batterij laadt op. 's Avonds: batterij ontlaadt → je huis gebruikt deze energie.</p>
+<p><strong>Proces:</strong> Zonnepanelen produceren elektriciteit → inverter → batterij laadt op. ’s Avonds: batterij ontlaadt → je huis gebruikt deze energie.</p>
 <p><strong>Zonder batterij:</strong> 30–40% zelf-gebruikt (overdag wanneer zon schijnt), 60% geleverd terug naar het net (tegen lagere prijs met salderingseinde).</p>
-<p><strong>Met batterij:</strong> 60–70% zelf-gebruikt (ook 's avonds), 30–40% terug naar net. Veel beter rendement.</p>
+<p><strong>Met batterij:</strong> 60–70% zelf-gebruikt (ook ’s avonds), 30–40% terug naar net. Veel beter rendement.</p>
 <p><strong>Met dynamisch contract:</strong> Nog beter. Batterij laadt goedkope uren, ontlaadt dure uren → extra besparing.</p>';
 $two_col_cta       = [];
 $two_col_rechts    = '<ul class="checklist">
@@ -160,8 +160,8 @@ unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two
 $two_col_variant   = 'wit';
 $two_col_label     = 'Synergie';
 $two_col_titel     = 'Batterij + zonnepanelen = ideaal';
-$two_col_links     = '<p><strong>Zonder batterij:</strong> Zonnepanelen leveren overdag, 's avonds duur stroom van net.</p>
-<p><strong>Met batterij:</strong> Zonnepanelen leveren → batterij opslaan → 's avonds gebruiken. Veel beter zelf-gebruik.</p>
+$two_col_links     = '<p><strong>Zonder batterij:</strong> Zonnepanelen leveren overdag, ’s avonds duur stroom van net.</p>
+<p><strong>Met batterij:</strong> Zonnepanelen leveren → batterij opslaan → ’s avonds gebruiken. Veel beter zelf-gebruik.</p>
 <p><strong>Effect:</strong> Van 30–40% zelf-gebruik naar 60–70%. Dit bespaart veel geld.</p>
 <p><strong>Met EMS + dynamisch contract:</strong> Nog beter. EMS bestuurt alles intelligent (laden goedkoop, ontladen duur).</p>
 <p><strong>Kort gezegd:</strong> een batterij loont vooral met zonnepanelen. Zonder panelen is het voordeel klein.</p>';
@@ -180,8 +180,8 @@ $two_col_variant   = 'grijs';
 $two_col_label     = 'Essentieel';
 $two_col_titel     = 'Dynamisch energiecontract: het voordeel';
 $two_col_links     = '<p><strong>Klassiek contract:</strong> Vast tarief (bijv. €0,35/kWh). Je betaalt altijd hetzelfde.</p>
-<p><strong>Dynamisch contract:</strong> Tarief volgt intraday markt (elk uur ander). Goedkoop 's nachts en in het weekend, duur 's ochtends en 's avonds.</p>
-<p><strong>Met batterij + dynamisch:</strong> Laad 's nachts goedkoop (€0,10–€0,20/kWh), ontlaad 's avonds duur (€0,40–€0,60/kWh): grote marge.</p>
+<p><strong>Dynamisch contract:</strong> Tarief volgt intraday markt (elk uur ander). Goedkoop ’s nachts en in het weekend, duur ’s ochtends en ’s avonds.</p>
+<p><strong>Met batterij + dynamisch:</strong> Laad ’s nachts goedkoop (€0,10–€0,20/kWh), ontlaad ’s avonds duur (€0,40–€0,60/kWh): grote marge.</p>
 <p><strong>Voordeel ≈ €300–€600/jaar.</strong> Dit maakt batterij veel interessanter.</p>
 <p><strong>Aanbieders:</strong> ANWB, Energiedirect, Feit, Easyenergy, anderen.</p>';
 $two_col_cta       = [];
@@ -202,7 +202,7 @@ $two_col_links     = '<p><strong>Zeer geschikt als u:</strong></p>
 <p>✓ Al zonnepanelen hebt (of plant)<br>
 ✓ Dynamisch energiecontract neemt<br>
 ✓ Huis met hoog dage-energieverbruik<br>
-✓ 's Avonds thuis bent (verbruikt lokale energie)</p>
+✓ ’s Avonds thuis bent (verbruikt lokale energie)</p>
 <p><strong>Minder geschikt als u:</strong></p>
 <p>✗ Geen zonnepanelen hebt<br>
 ✗ Vaste tarief-contract wilt houden<br>
@@ -238,5 +238,4 @@ unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two
 
 include $root . 'includes/faq.php';
 include $root . 'includes/cta.php';
-include $root . 'includes/footer.php';
-?>
+include 
