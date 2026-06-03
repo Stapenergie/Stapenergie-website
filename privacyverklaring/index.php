@@ -33,7 +33,7 @@ include $root . 'includes/breadcrumb.php';
         Leusden, Nederland<br>
         E-mail: <a href="mailto:info@stapenergie.nl">info@stapenergie.nl</a><br>
         Website: <a href="https://stapenergie.nl">stapenergie.nl</a><br>
-        KvK-nummer: in aanvraag</p>
+        KvK-nummer: in oprichting</p>
 
         <h2>2. Welke persoonsgegevens verwerken wij?</h2>
         <p>Wij verwerken alleen gegevens die u zelf aan ons verstrekt via het contactformulier op onze website. Het gaat om de volgende gegevens:</p>

@@ -35,7 +35,7 @@
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
-        <a href="tel:0600000000">06 &ndash; XX XX XX XX</a>
+        <a href="tel:0648180599">06 &ndash; 48 18 05 99</a>
         <a href="/cdn-cgi/l/email-protection#6900070f06291a1d08190c070c1b0e000c470705"><span class="__cf_email__" data-cfemail="442d2a222b0437302534212a2136232d216a2a28">[email&#160;protected]</span></a>
         <a href="/">stapenergie.nl</a>
         <a href="/over-ons/">Over ons</a>
@@ -43,7 +43,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span class="footer-copy">&copy; 2026 STAP Energie &mdash; KvK: in aanvraag</span>
+      <span class="footer-copy">&copy; 2026 STAP Energie &mdash; KvK: in oprichting</span>
       <span class="footer-copy">Heel Nederland &middot; Snel &middot; Persoonlijk</span>
     </div>
   </div>

@@ -18,7 +18,7 @@ $cta_titel     = 'CV-ketel vervangen?';
 $cta_subtitel  = 'Plan een vrijblijvend adviesgesprek. Wij beginnen met je situatie.';
 $cta_knop      = 'Plan een adviesgesprek →';
 $cta_knop_url  = '/#contact';
-$cta_garanties = ['15+ jaar ervaring in de energiemarkt', 'Geen productbelang', 'Reactie binnen twee werkdagen'];
+$cta_garanties = ['ruim 15 jaar ervaring in de energiemarkt', 'Geen productbelang', 'Reactie binnen twee werkdagen'];
 
 $faq_label = 'Veelgestelde vragen';
 $faq_titel = 'Veelgestelde vragen over CV-ketels';

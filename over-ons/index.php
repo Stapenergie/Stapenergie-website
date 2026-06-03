@@ -17,7 +17,7 @@ $cta_titel     = 'Kennismaken?';
 $cta_subtitel  = 'Plan een vrijblijvend gesprek. Wij beginnen met je situatie, niet met een standaard verhaal.';
 $cta_knop      = 'Plan een kennismakingsgesprek →';
 $cta_knop_url  = '/#contact';
-$cta_garanties = ['15+ jaar ervaring in de energiemarkt', 'Geen productbelang', 'Reactie binnen twee werkdagen'];
+$cta_garanties = ['ruim 15 jaar ervaring in de energiemarkt', 'Geen productbelang', 'Reactie binnen twee werkdagen'];
 
 $faq_label = 'Veelgestelde vragen';
 $faq_titel = 'Vragen over STAP Energie';

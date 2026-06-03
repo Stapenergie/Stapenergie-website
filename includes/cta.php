@@ -20,7 +20,7 @@ $cta_garanties = $cta_garanties ?? ['Gecertificeerd EPA-adviseur', 'Officieel ge
     <p><?= htmlspecialchars($cta_subtitel) ?></p>
     <div class="cta-knoppen">
       <a href="<?= htmlspecialchars($cta_knop_url) ?>" class="btn-primair"><?= htmlspecialchars($cta_knop) ?></a>
-      <a href="tel:06XXXXXXXX" class="btn-sec">Bel ons direct</a>
+      <a href="tel:0648180599" class="btn-sec">Bel ons direct</a>
     </div>
     <?php if ($cta_garanties): ?>
       <div class="cta-garanties">

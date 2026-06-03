@@ -3,8 +3,8 @@
  * index.php — Homepage STAP Energie
  */
 $root        = dirname(__FILE__) . '/';
-$title       = 'STAP Energie, Energielabels & Verduurzamingsadvies';
-$description = 'Onafhankelijk energieadvies voor ondernemers en woningeigenaren. Officiële energielabels, verduurzaming & subsidies en energie-inkoopadvies. Heel Nederland.';
+$title       = 'STAP Energie | Onafhankelijk Energie-inkoopadvies voor het MKB';
+$description = 'Onafhankelijk energie-inkoopadvies voor MKB-ondernemers. Contractoptimalisatie, slimmer inkopen, energielabels en verduurzaming. Ruim 15 jaar ervaring aan de leverancierszijde. Heel Nederland.';
 $canonical   = 'https://stapenergie.nl/';
 
 $cta_titel     = 'Klaar voor jouw eerste STAP?';
@@ -19,13 +19,13 @@ include $root . 'includes/nav.php';
 // ── Hero groot (homepage variant met formulier)
 $hero_variant   = 'groot';
 $hero_bg        = '/images/hero.jpg';
-$hero_label     = 'Energielabel, inkoop & verduurzamingsadvies';
-$hero_titel     = 'Duurzame impact<br>maken is <em>leuk</em>';
-$hero_desc      = 'STAP Energie helpt ondernemers en woningeigenaren stap voor stap verduurzamen. Van energielabel tot een concreet plan op maat.';
+$hero_label     = 'De onafhankelijke energieaannemer voor het MKB';
+$hero_titel     = 'Jij onderneemt.<br>Wij regelen <em>je energie</em>.';
+$hero_desc      = 'STAP Energie is de onafhankelijke energieaannemer voor MKB-ondernemers. Wij regelen je energiezaken, van energie-inkoop en energielabels tot verduurzaming, zodat jij je kunt richten op je bedrijf.';
 $hero_checks    = [
-  'Officieel erkend energielabel, geregistreerd in EP-online',
-  '16+ jaar ervaring in de energiemarkt',
-  'Reactie binnen twee werkdagen, heel Nederland',
+  'Ruim 15 jaar energiemarktervaring',
+  'Wij zijn niet sexy maar geven wel goed advies',
+  'Reactie binnen twee werkdagen, werkzaam door heel Nederland',
 ];
 $hero_link      = ['url' => '#diensten', 'tekst' => 'Bekijk alle diensten →'];
 $hero_formulier = true;
@@ -62,10 +62,19 @@ include $root . 'includes/hero.php';
 $kaarten_variant = 'grijs';
 $kaarten_label   = 'Wat we doen';
 $kaarten_titel   = 'Onze diensten';
-$kaarten_intro   = 'Van verplicht energielabel tot een volledig verduurzamingsplan, STAP Energie regelt het.';
+$kaarten_intro   = 'Van slimme energie-inkoop tot officieel energielabel en verduurzamingsplan. STAP Energie regelt het.';
 $kaarten_cols    = 2;
 $kaarten_id      = 'diensten';
 $kaarten_items   = [
+  [
+    'titel'     => 'Energie-inkoopadvies',
+    'foto'      => '/images/dienst-inkoop.jpg',
+    'foto_alt'  => 'Energie-inkoopadvies',
+    'tekst'     => 'Op het juiste moment inkopen, slim contracteren en structureel besparen. Onafhankelijk advies van iemand die weet hoe leveranciers denken.',
+    'cta_tekst' => 'Meer info →',
+    'cta_url'   => '/energie-inkoop-advies/',
+    'cta_stijl' => 'outline',
+  ],
   [
     'titel'     => 'Energielabels',
     'foto'      => '/images/hero.jpg',
@@ -82,15 +91,6 @@ $kaarten_items   = [
     'tekst'     => 'Persoonlijk stappenplan op maat én alle subsidies in kaart. Verduurzamen wordt een stuk aantrekkelijker.',
     'cta_tekst' => 'Meer info →',
     'cta_url'   => '/verduurzaming-subsidie/',
-    'cta_stijl' => 'outline',
-  ],
-  [
-    'titel'     => 'Energie inkoop advies',
-    'foto'      => '/images/dienst-inkoop.jpg',
-    'foto_alt'  => 'Energie inkoop advies',
-    'tekst'     => 'Op het juiste moment inkopen. Slim contracteren en structureel besparen op energiekosten.',
-    'cta_tekst' => 'Meer info →',
-    'cta_url'   => '/energie-inkoop-advies/',
     'cta_stijl' => 'outline',
   ],
   [
@@ -148,15 +148,15 @@ include $root . 'includes/components/section-kaarten.php';
       </div>
       <div class="sectie-two-col__content">
         <span class="sectie__label">Wie is STAP Energie?</span>
-        <h2 class="sectie__titel">Erik Dolman,<br>Energiespecialist</h2>
-        <blockquote class="over-quote">"De natuur is ons grootste kapitaal. Verduurzamen is een verstandige keuze voor het milieu, comfort én je portemonnee."</blockquote>
-        <p style="color:var(--subtekst);line-height:1.7;margin-bottom:12px;">Als oprichter van STAP Energie breng ik meer dan 15 jaar ervaring in de energiemarkt mee. Van Sales Manager bij SEFE Energy tot NieuweStroom, die kennis zet ik nu in voor jou.</p>
+        <h2 class="sectie__titel">Erik Dolman,<br>Energieaannemer & Inkoopspecialist</h2>
+        <blockquote class="over-quote">"STAP Energie is voor mij de plek waar ervaring, ondernemerschap en overtuiging samenkomen. Niet als abstract ideaal maar als concrete business: onafhankelijk energieadvies voor ondernemers die behoefte hebben aan iemand die de markt kent."</blockquote>
+        <p style="color:var(--subtekst);line-height:1.7;margin-bottom:12px;">Als oprichter van STAP Energie breng ik ruim 15 jaar ervaring in de energiemarkt mee. Van Sales Manager bij SEFE Energy tot NieuweStroom, die kennis zet ik nu in voor jou.</p>
         <p style="color:var(--subtekst);line-height:1.7;margin-bottom:20px;">Niet met een standaard verhaal, maar met eerlijk en persoonlijk advies dat écht past bij jouw situatie.</p>
         <div class="over-tags">
           <span class="over-tag">15+ jaar energiesector</span>
           <span class="over-tag">SEFE Energy</span>
           <span class="over-tag">NieuweStroom</span>
-          <span class="over-tag">EPA-adviseur in opleiding</span>
+          <span class="over-tag">EPA-adviseur</span>
         </div>
         <a href="/over-ons/" class="btn btn--outline" style="margin-top:20px;display:inline-flex;">Meer over ons →</a>
       </div>

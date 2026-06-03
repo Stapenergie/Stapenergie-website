@@ -24,7 +24,7 @@
  * $hero_cta      = 'Label aanvragen →'
  * $hero_cta_url  = '#aanvraag'
  * $hero_cta2     = 'Bel direct'           (optioneel tweede knop)
- * $hero_cta2_url = 'tel:06XXXXXXXX'
+ * $hero_cta2_url = 'tel:0648180599'
  */
 
 $hero_variant    = $hero_variant    ?? 'sub';
@@ -40,7 +40,7 @@ $hero_link       = $hero_link       ?? [];
 $hero_cta        = $hero_cta        ?? '';
 $hero_cta_url    = $hero_cta_url    ?? '#aanvraag';
 $hero_cta2       = $hero_cta2       ?? 'Bel direct';
-$hero_cta2_url   = $hero_cta2_url   ?? 'tel:06XXXXXXXX';
+$hero_cta2_url   = $hero_cta2_url   ?? 'tel:0648180599';
 $hero_formulier  = $hero_formulier  ?? false;
 ?>
 

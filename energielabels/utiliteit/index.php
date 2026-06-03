@@ -64,7 +64,7 @@ $hero_usps     = [
 $hero_cta      = 'Aanvraag indienen →';
 $hero_cta_url  = '#aanvraag';
 $hero_cta2     = 'Bel direct';
-$hero_cta2_url = 'tel:06XXXXXXXX';
+$hero_cta2_url = 'tel:0648180599';
 include $root . 'includes/hero.php';
 include $root . 'includes/trust.php';
 

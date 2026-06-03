@@ -49,7 +49,7 @@ $hero_titel    = 'Energie is jouw grootste variabele kostenpost. <em>Het hoeft n
 $hero_lead     = 'De meeste mkb-bedrijven betalen te veel voor energie. Niet door pech, maar doordat het contract nooit grondig is doorgelicht. STAP Energie kijkt wat er beter kan.';
 $hero_usps     = [
   'Onafhankelijk advies: aan jouw kant van de tafel',
-  '15+ jaar ervaring in de energiemarkt',
+  'ruim 15 jaar ervaring in de energiemarkt',
   'Energie-inkoop, energielabels en verduurzaming',
   'Reactie binnen twee werkdagen',
 ];
