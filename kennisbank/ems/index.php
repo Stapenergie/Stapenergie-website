@@ -84,8 +84,8 @@ $two_col_links     = '<p><strong>Basis-algoritme:</strong></p>
 <p>1. <strong>Monitoren:</strong> EMS leest elk moment de elektriciteitsmarkt (prijs per kWh) en zonneschijn (panelen output).<br>
 2. <strong>Voorspellen:</strong> Op basis van weer, tijd van dag en contract, voorspelt EMS komende uren.<br>
 3. <strong>Besluiten:</strong> Bepaalt optimaal moment voor elk systeem:<br>
-   - Goedkope uren (€0,10–€0,20)? Batterij laden, auto laden, warmtepomp extra opwarmen.<br>
-   - Dure uren (€0,40–€0,60)? Batterij ontladen, auto afladen, warmtepomp rustig.<br>
+   - Goedkope uren (-€0,10–€0,10)? Batterij laden, auto laden, warmtepomp extra opwarmen.<br>
+   - Dure uren (€0,20–€0,60)? Batterij ontladen, auto afladen, warmtepomp rustig.<br>
    - Zon schijnt? Zonnepanelen prioriteit, batterij laden, auto laden.<br>
 4. <strong>Sturen:</strong> Geeft commando’s aan elk systeem.<br>
 5. <strong>Controleren:</strong> Monitored resultaat, past aan.</p>';
@@ -120,7 +120,7 @@ $kaarten_items   = [
   [
     'titel'     => 'Goedkope nacht + warmtepomp opwarmen',
     'icoon'     => '🌙🔥',
-    'tekst'     => '22u-6u: stroom goedkoop (€0,12/kWh). EMS stelt warmtepomp aan om boiler extra op te warmen. Opgeslagen warmte hele dag gebruiken.',
+    'tekst'     => '22u-6u: stroom goedkoop (€0,01/kWh). EMS stelt warmtepomp aan om boiler extra op te warmen. Opgeslagen warmte hele dag gebruiken.',
   ],
   [
     'titel'     => 'Batterij vol + stroom terugleveren',
