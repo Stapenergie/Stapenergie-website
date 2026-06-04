@@ -18,9 +18,11 @@
       </div>
       <div class="footer-col">
         <h4>Diensten</h4>
+        <a href="/energie-inkoop-advies/">Energie-inkoopadvies</a>
         <a href="/energielabels/">Energielabels</a>
         <a href="/verduurzaming-subsidie/">Verduurzaming &amp; Subsidie</a>
-        <a href="/energie-inkoop-advies/">Energie inkoop advies</a>
+        <a href="/verduurzaming-subsidie/zakelijk/">Verduurzaming Zakelijk</a>
+        <a href="/verduurzaming-subsidie/particulieren/">Verduurzaming Particulieren</a>
       </div>
       <div class="footer-col">
         <h4>Voor wie</h4>
@@ -34,16 +36,28 @@
         <a href="/industrie/">Industrie</a>
       </div>
       <div class="footer-col">
+        <h4>Kennisbank</h4>
+        <a href="/kennisbank/warmtepomp/">Warmtepomp</a>
+        <a href="/kennisbank/isolatie/">Isolatie</a>
+        <a href="/kennisbank/zonnepanelen/">Zonnepanelen</a>
+        <a href="/kennisbank/zonneboiler/">Zonneboiler</a>
+        <a href="/kennisbank/cv-ketel/">CV-ketel</a>
+        <a href="/kennisbank/thuisbatterij/">Thuisbatterij</a>
+        <a href="/kennisbank/laadpaal/">Laadpaal</a>
+        <a href="/kennisbank/airco/">Airco</a>
+        <a href="/kennisbank/ems/">Energiemanagement (EMS)</a>
+      </div>
+      <div class="footer-col">
         <h4>Contact</h4>
-        <a href="tel:0648180599">06 &ndash; 48 18 05 99</a>
-        <a href="/cdn-cgi/l/email-protection#6900070f06291a1d08190c070c1b0e000c470705"><span class="__cf_email__" data-cfemail="442d2a222b0437302534212a2136232d216a2a28">[email&#160;protected]</span></a>
+        <a href="tel:0617099733">06 &ndash; 17 09 97 33</a>
+        <a href="mailto:info@stapenergie.nl">info@stapenergie.nl</a>
         <a href="/">stapenergie.nl</a>
         <a href="/over-ons/">Over ons</a>
         <a href="/privacyverklaring/">Privacy &amp; AVG</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span class="footer-copy">&copy; 2026 STAP Energie &mdash; KvK: in oprichting</span>
+      <span class="footer-copy">&copy; 2026 STAP Energie &middot; KvK: in oprichting</span>
       <span class="footer-copy">Heel Nederland &middot; Snel &middot; Persoonlijk</span>
     </div>
   </div>

@@ -4,7 +4,7 @@
  */
 $root        = dirname(__FILE__) . '/';
 $title       = 'STAP Energie | Onafhankelijk Energie-inkoopadvies voor het MKB';
-$description = 'Onafhankelijk energie-inkoopadvies voor MKB-ondernemers. Contractoptimalisatie, slimmer inkopen, energielabels en verduurzaming. Ruim 15 jaar ervaring aan de leverancierszijde. Heel Nederland.';
+$description = 'Onafhankelijk energie-inkoopadvies voor MKB-ondernemers. Contractoptimalisatie, slimmer inkopen, energielabels en verduurzaming. 15+ jaar ervaring aan de leverancierszijde. Heel Nederland.';
 $canonical   = 'https://stapenergie.nl/';
 
 $cta_titel     = 'Klaar voor jouw eerste STAP?';
@@ -23,7 +23,7 @@ $hero_label     = 'De onafhankelijke energieaannemer voor het MKB';
 $hero_titel     = 'Jij onderneemt.<br>Wij regelen <em>je energie</em>.';
 $hero_desc      = 'STAP Energie is de onafhankelijke energieaannemer voor MKB-ondernemers. Wij regelen je energiezaken, van energie-inkoop en energielabels tot verduurzaming, zodat jij je kunt richten op je bedrijf.';
 $hero_checks    = [
-  'Ruim 15 jaar energiemarktervaring',
+  '15+ jaar energiemarktervaring',
   'Wij zijn niet sexy maar geven wel goed advies',
   'Reactie binnen twee werkdagen, werkzaam door heel Nederland',
 ];
@@ -40,7 +40,7 @@ include $root . 'includes/hero.php';
   <div class="usp-inner">
     <div class="usp-item">
       <div class="usp-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 1l2 4h4l-3 3 1 4-4-2-4 2 1-4-3-3h4z" fill="currentColor"/></svg></div>
-      <div><strong>Officieel erkend</strong><span>Geregistreerd in EP-online</span></div>
+      <div><strong>Onafhankelijk energie-inkoopadvies</strong><span>Werkt uitsluitend voor jou</span></div>
     </div>
     <div class="usp-item">
       <div class="usp-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.4"/><path d="M9 5v4l2.5 1.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
@@ -79,7 +79,7 @@ $kaarten_items   = [
     'titel'     => 'Energielabels',
     'foto'      => '/images/hero.jpg',
     'foto_alt'  => 'Energielabels',
-    'tekst'     => 'Verplicht bij verkoop, verhuur en voor bedrijfspanden. Snel en officieel geregistreerd in EP-online.',
+    'tekst'     => 'Verplicht bij verkoop, verhuur en voor bedrijfspanden. Snel geregeld voor een vaste prijs.',
     'cta_tekst' => 'Meer info →',
     'cta_url'   => '/energielabels/',
     'cta_stijl' => 'outline',
@@ -150,7 +150,7 @@ include $root . 'includes/components/section-kaarten.php';
         <span class="sectie__label">Wie is STAP Energie?</span>
         <h2 class="sectie__titel">Erik Dolman,<br>Energieaannemer & Inkoopspecialist</h2>
         <blockquote class="over-quote">"STAP Energie is voor mij de plek waar ervaring, ondernemerschap en overtuiging samenkomen. Niet als abstract ideaal maar als concrete business: onafhankelijk energieadvies voor ondernemers die behoefte hebben aan iemand die de markt kent."</blockquote>
-        <p style="color:var(--subtekst);line-height:1.7;margin-bottom:12px;">Als oprichter van STAP Energie breng ik ruim 15 jaar ervaring in de energiemarkt mee. Van Sales Manager bij SEFE Energy tot NieuweStroom, die kennis zet ik nu in voor jou.</p>
+        <p style="color:var(--subtekst);line-height:1.7;margin-bottom:12px;">Als oprichter van STAP Energie breng ik 15+ jaar ervaring in de energiemarkt mee. Van Sales Manager bij SEFE Energy tot NieuweStroom, die kennis zet ik nu in voor jou.</p>
         <p style="color:var(--subtekst);line-height:1.7;margin-bottom:20px;">Niet met een standaard verhaal, maar met eerlijk en persoonlijk advies dat écht past bij jouw situatie.</p>
         <div class="over-tags">
           <span class="over-tag">15+ jaar energiesector</span>

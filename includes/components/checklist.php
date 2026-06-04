@@ -7,7 +7,7 @@
  *   $checklist['items']   array   verplicht — ['tekst1', 'tekst2', ...]
  *
  * Gebruik:
- *   $checklist = ['items' => ['Gecertificeerd EPA-adviseur', 'Vaste prijzen']];
+ *   $checklist = ['items' => ['Energieaannemer voor het MKB', 'Vaste prijzen']];
  *   include $root . 'includes/components/checklist.php';
  */
 $cl = $checklist ?? [];

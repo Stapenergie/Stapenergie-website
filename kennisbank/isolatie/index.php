@@ -18,13 +18,13 @@ $cta_titel     = 'Isolatie checken?';
 $cta_subtitel  = 'Plan een vrijblijvend adviesgesprek. Wij beginnen met je situatie.';
 $cta_knop      = 'Plan een adviesgesprek →';
 $cta_knop_url  = '/#contact';
-$cta_garanties = ['ruim 15 jaar ervaring in de energiemarkt', 'Geen productbelang', 'Reactie binnen twee werkdagen'];
+$cta_garanties = ['15+ jaar ervaring in de energiemarkt', 'Geen productbelang', 'Reactie binnen twee werkdagen'];
 
 $faq_label = 'Veelgestelde vragen';
 $faq_titel = 'Veelgestelde vragen over isolatie';
 $faq_items = [
   ['vraag' => 'Wat is de doubling rule?',
-   'antwoord' => 'De ISDE-subsidie verdubbelt als u binnen 24 maanden nadat u isolatie aanvraagt ook een warmtepomp of hybride ketel installeert. Dus eerst isolatie aanvragen, dan warmtepomp — u krijgt méér subsidie totaal.'],
+   'antwoord' => 'De ISDE-subsidie verdubbelt als je binnen 24 maanden nadat je isolatie aanvraagt ook een warmtepomp of hybride ketel installeert. Dus eerst isolatie aanvragen, dan warmtepomp, je krijgt méér subsidie totaal.'],
   ['vraag' => 'Welk isolatietype geeft de meeste besparing?',
    'antwoord' => 'Dakisolatie geeft meist voordeel (dak verliest veel warmte). Daarna spouwmuurvulling (goedkoop, veel effect). Vloerisolatie helpt ook, maar is duurder. HR++ ramen als laatste. Combineren geeft best resultaat.'],
   ['vraag' => 'Hoeveel wordt mijn energielabel beter?',

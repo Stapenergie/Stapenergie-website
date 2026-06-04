@@ -5,7 +5,7 @@
  */
 $root        = dirname(dirname(__FILE__)) . '/';
 $title       = 'Energielabel Aanvragen | Officieel & Erkend | STAP Energie';
-$description = 'Officieel energielabel voor je woning of bedrijfspand. Gecertificeerd EPA-adviseur, vaste prijzen, heel Nederland. Reactie binnen twee werkdagen.';
+$description = 'Officieel energielabel voor je woning of bedrijfspand. Energieaannemer voor het MKB, vaste prijzen, heel Nederland. Reactie binnen twee werkdagen.';
 $canonical   = 'https://stapenergie.nl/energielabels/';
 
 $breadcrumbs = [
@@ -17,7 +17,7 @@ $cta_titel     = 'Klaar om je energielabel aan te vragen?';
 $cta_subtitel  = 'Vul het aanvraagformulier in en STAP Energie neemt binnen twee werkdagen contact op.';
 $cta_knop      = 'Energielabel aanvragen →';
 $cta_knop_url  = '#aanvraag';
-$cta_garanties = ['Gecertificeerd EPA-adviseur', 'Officieel geregistreerd in EP-online', 'Reactie binnen twee werkdagen'];
+$cta_garanties = ['Energieaannemer voor het MKB', 'Officieel geregistreerd in EP-online', 'Reactie binnen twee werkdagen'];
 
 $faq_label = 'Veelgestelde vragen';
 $faq_titel = 'Alles over het energielabel';
@@ -48,7 +48,7 @@ $hero_variant  = 'sub';
 $hero_bg       = '/images/hero-bedrijfspand.jpg';
 $hero_eyebrow  = 'Officieel & erkend energielabel';
 $hero_titel    = 'Energielabel voor je woning of <em>bedrijfspand</em>';
-$hero_lead     = 'Verplicht bij verkoop, verhuur en oplevering. STAP Energie verzorgt officiële energielabels voor woningen én utiliteit, gecertificeerd, snel en voor een vaste prijs.';
+$hero_lead     = 'Verplicht bij verkoop, verhuur en oplevering. STAP Energie verzorgt officiële energielabels voor woningen én utiliteit, snel en voor een vaste prijs.';
 $hero_usps     = [
   'Officieel erkend & geregistreerd in EP-online',
   'Basisopname, bestaande bouw (woningen én utiliteit)',
@@ -58,11 +58,18 @@ $hero_usps     = [
 $hero_cta      = 'Label aanvragen →';
 $hero_cta_url  = '#aanvraag';
 $hero_cta2     = 'Bel direct';
-$hero_cta2_url = 'tel:0648180599';
+$hero_cta2_url = 'tel:0617099733';
 include $root . 'includes/hero.php';
 
 // ── Trust balk
-include $root . 'includes/trust.php';
+$trust_items = [
+    ['svg' => '<path d="M8 1.5l1.8 3.6 4 .6-2.9 2.8.7 4L8 10.4l-3.6 1.9.7-4L2.2 5.7l4-.6z"/>', 'label' => 'Officieel erkend', 'sub' => 'Geregistreerd in EP-online'],
+    ['svg' => '<circle cx="8" cy="8" r="6.5"/><path d="M8 4.5v4l2.5 1.5"/>', 'label' => 'Reactie binnen twee werkdagen', 'sub' => 'Snel en persoonlijk'],
+    ['svg' => '<rect x="2" y="4" width="12" height="9" rx="1"/><path d="M5 4V3a3 3 0 016 0v1"/>', 'label' => 'Vaste prijzen', 'sub' => 'Geen verborgen kosten'],
+    ['svg' => '<path d="M2 8c0-3.3 2.7-6 6-6s6 2.7 6 6-2.7 6-6 6-6-2.7-6-6z"/><path d="M5.5 8l1.5 1.5 3.5-3.5"/>', 'label' => 'Energieaannemer voor het MKB', 'sub' => 'Heel Nederland'],
+  ];
+  include $root . 'includes/trust.php';
+unset($trust_items);
 
 // ── Labelcheck
 include $root . 'includes/labelcheck.php';
@@ -130,7 +137,7 @@ $stappen_cols    = 4;
 $stappen_items   = [
   ['nummer' => 1, 'titel' => 'Aanvraag indienen',   'tekst' => 'Vul het formulier in of bel direct. Binnen twee werkdagen nemen we contact op voor een afspraak.'],
   ['nummer' => 2, 'titel' => 'Voorbereiding',        'tekst' => 'Je ontvangt een overzicht van wat je kunt klaarzetten voor een soepele opname.'],
-  ['nummer' => 3, 'titel' => 'Opname ter plaatse',   'tekst' => 'Een gecertificeerd EPA-adviseur komt langs voor een grondige inspectie.'],
+  ['nummer' => 3, 'titel' => 'Opname ter plaatse',   'tekst' => 'Een EPA-adviseur komt langs voor een grondige inspectie.'],
   ['nummer' => 4, 'titel' => 'Label ontvangen',      'tekst' => 'Binnen één week ontvang je het officieel geregistreerde label + adviesrapport.'],
 ];
 include $root . 'includes/components/section-stappen.php';

@@ -49,7 +49,7 @@ $hero_titel    = 'Energie is jouw grootste variabele kostenpost. <em>Het hoeft n
 $hero_lead     = 'De meeste mkb-bedrijven betalen te veel voor energie. Niet door pech, maar doordat het contract nooit grondig is doorgelicht. STAP Energie kijkt wat er beter kan.';
 $hero_usps     = [
   'Onafhankelijk advies: aan jouw kant van de tafel',
-  'ruim 15 jaar ervaring in de energiemarkt',
+  '15+ jaar ervaring in de energiemarkt',
   'Energie-inkoop, energielabels en verduurzaming',
   'Reactie binnen twee werkdagen',
 ];
@@ -136,12 +136,12 @@ $two_col_titel     = 'Verplicht bij verkoop, verhuur en oplevering';
 $two_col_omgekeerd = true;
 $two_col_links     = '
   <p style="color:var(--subtekst);line-height:1.7;margin-bottom:14px;">Bij elke transactie met je bedrijfspand is een geldig energielabel wettelijk verplicht. Maar het label is meer dan een administratieve verplichting. Het geeft een objectieve nulmeting van hoe je pand presteert en vormt een goed vertrekpunt voor een verbetertraject.</p>
-  <p style="color:var(--subtekst);line-height:1.7;margin-bottom:20px;">STAP Energie verzorgt officiële energielabels voor kantoren, winkels, opslagruimtes en andere utiliteitsgebouwen. Gecertificeerd, snel en transparant geprijsd.</p>';
+  <p style="color:var(--subtekst);line-height:1.7;margin-bottom:20px;">STAP Energie verzorgt officiële energielabels voor kantoren, winkels, opslagruimtes en andere utiliteitsgebouwen. Snel en transparant geprijsd.</p>';
 $two_col_cta       = ['tekst' => 'Meer over energielabels utiliteit →', 'url' => '/energielabels/utiliteit/', 'stijl' => 'outline'];
 $two_col_rechts    = '
   <ul class="checklist">
     <li class="checklist__item"><span class="checklist__vink">✓</span><span>Verplicht bij verkoop, verhuur en oplevering</span></li>
-    <li class="checklist__item"><span class="checklist__vink">✓</span><span>Gecertificeerd EPA-adviseur, officieel geregistreerd in EP-online</span></li>
+    <li class="checklist__item"><span class="checklist__vink">✓</span><span>Energieaannemer voor het MKB</span></li>
     <li class="checklist__item"><span class="checklist__vink">✓</span><span>Kantoren groter dan 100 m² verplicht minimaal label C</span></li>
     <li class="checklist__item"><span class="checklist__vink">✓</span><span>Label 10 jaar geldig na registratie</span></li>
     <li class="checklist__item"><span class="checklist__vink">✓</span><span>Herlabelen na verduurzaming mogelijk</span></li>

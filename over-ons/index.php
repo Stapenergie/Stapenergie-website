@@ -5,7 +5,7 @@
  */
 $root        = dirname(dirname(__FILE__)) . '/';
 $title       = 'Over STAP Energie | Missie, Visie & Oprichter Erik Dolman';
-$description = 'STAP Energie geeft ondernemers grip op hun energiepositie, door onafhankelijk advies van iemand die de markt van binnenuit kent. Lees wie we zijn en waarom we bestaan.';
+$description = 'STAP Energie is de onafhankelijke energieaannemer voor het MKB en geeft ondernemers grip op hun energiepositie, door onafhankelijk advies van iemand die de markt van binnenuit kent. Lees wie we zijn en waarom we bestaan.';
 $canonical   = 'https://stapenergie.nl/over-ons/';
 
 $breadcrumbs = [
@@ -17,7 +17,7 @@ $cta_titel     = 'Kennismaken?';
 $cta_subtitel  = 'Plan een vrijblijvend gesprek. Wij beginnen met je situatie, niet met een standaard verhaal.';
 $cta_knop      = 'Plan een kennismakingsgesprek →';
 $cta_knop_url  = '/#contact';
-$cta_garanties = ['ruim 15 jaar ervaring in de energiemarkt', 'Geen productbelang', 'Reactie binnen twee werkdagen'];
+$cta_garanties = ['15+ jaar ervaring in de energiemarkt', 'Geen productbelang', 'Reactie binnen twee werkdagen'];
 
 $faq_label = 'Veelgestelde vragen';
 $faq_titel = 'Vragen over STAP Energie';
@@ -46,7 +46,7 @@ $hero_titel    = 'Iemand aan je kant. <em>Die de andere kant van binnenuit kent.
 $hero_lead     = 'De energiemarkt is ingericht vanuit het perspectief van de leverancier. STAP Energie is opgericht om dat te doorbreken, met insider-kennis, uitsluitend ingezet voor de klant.';
 $hero_usps     = [
   '15+ jaar ervaring aan de leverancierszijde',
-  'Gecertificeerd EPA-adviseur',
+  'Energieaannemer voor het MKB',
   'Geen productbelang, advies in je belang',
   'Gevestigd in Leusden, actief door heel Nederland',
 ];
@@ -60,7 +60,7 @@ include $root . 'includes/trust.php';
 // ── Waarom STAP Energie bestaat
 $two_col_variant   = 'wit';
 $two_col_label     = 'Waarom wij bestaan';
-$two_col_titel     = 'De markt begint altijd bij het product. Wij beginnen bij u.';
+$two_col_titel     = 'De markt begint altijd bij het product. Wij beginnen bij jou.';
 $two_col_omgekeerd = false;
 $two_col_links     = '
   <p style="color:var(--subtekst);line-height:1.7;margin-bottom:14px;">Een gasleverancier verkoopt gas. Een installateur verkoopt installaties. Niemand begint bij de vraag: wat heeft deze ondernemer, in dit pand, met dit bedrijfsproces, werkelijk nodig? Dat is geen toeval, het is een businessmodel.</p>
@@ -149,7 +149,7 @@ $two_col_omgekeerd = false;
 $two_col_links     = '
   <p style="color:var(--subtekst);line-height:1.7;margin-bottom:14px;">Erik Dolman werkte 17 jaar aan de leverancierszijde van de energiemarkt. Bij SEFE Energy, een van de grootste aardgasleveranciers ter wereld, sloot hij de eerste contracten in Nederland, bouwde hij een partnerkanaal op van nul naar 125 actieve partners en trainde hij verkoopteams. Bij NieuweStroom leidde hij de verkooporganisatie die groeide naar 100.000 aansluitingen.</p>
   <p style="color:var(--subtekst);line-height:1.7;margin-bottom:14px;">Hij heeft in de Raad van Toezicht van CIRE gezeten, het integriteitsregister van de energiesector, en mede de gedragscode opgesteld die de sector nog steeds hanteert. Hij weet hoe leveranciers contracten structureren, welke clausules in hun voordeel werken en hoe verkoopteams zijn getraind om klanten te binden.</p>
-  <p style="color:var(--subtekst);line-height:1.7;margin-bottom:20px;">In 2025 richtte hij STAP Energie op. Niet als extra partij in de markt, maar als adviseur die die kennis uitsluitend inzet voor de klant. Gecertificeerd EPA-adviseur, gevestigd in Leusden, actief door heel Nederland.</p>';
+  <p style="color:var(--subtekst);line-height:1.7;margin-bottom:20px;">In 2025 richtte hij STAP Energie op. Niet als extra partij in de markt, maar als adviseur die die kennis uitsluitend inzet voor de klant. Energieaannemer voor het MKB, gevestigd in Leusden, actief door heel Nederland.</p>';
 $two_col_cta       = ['tekst' => 'Plan een kennismakingsgesprek →', 'url' => '/#contact', 'stijl' => 'primair'];
 $two_col_rechts    = '
   <div class="over-img-wrap" style="max-width:420px;">

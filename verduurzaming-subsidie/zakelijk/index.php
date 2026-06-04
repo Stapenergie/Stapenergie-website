@@ -18,7 +18,7 @@ $cta_titel     = 'Welke subsidies passen bij jouw situatie?';
 $cta_subtitel  = 'STAP Energie brengt de juiste combinatie in kaart. Een eerste gesprek is vrijblijvend.';
 $cta_knop      = 'Plan een adviesgesprek →';
 $cta_knop_url  = '#contact';
-$cta_garanties = ['ruim 15 jaar ervaring in de energiemarkt', 'Geen productbelang', 'Reactie binnen twee werkdagen'];
+$cta_garanties = ['15+ jaar ervaring in de energiemarkt', 'Geen productbelang', 'Reactie binnen twee werkdagen'];
 
 $faq_label = 'Veelgestelde vragen';
 $faq_titel = 'Veelgestelde vragen over zakelijke verduurzaming';
@@ -48,7 +48,7 @@ $hero_eyebrow  = 'Verduurzaming & Subsidie voor bedrijven';
 $hero_titel    = 'De juiste subsidie voor jouw bedrijf. <em>In de juiste volgorde.</em>';
 $hero_lead     = 'Voor zakelijke verduurzaming zijn drie hoofdregelingen beschikbaar: ISDE, EIA en SDE++. Welke combinatie het meest oplevert, hangt af van jouw verbruiksprofiel, jouw belastingpositie en de aard van de investering. STAP Energie brengt dat in kaart.';
 $hero_usps     = [
-  '15+ jaar ervaring aan de energiemarkt',
+  '15+ jaar ervaring in de energiemarkt',
   'ISDE, EIA en SDE++ in kaart gebracht voor jouw situatie',
   'Geen productbelang, advies in je belang',
   'Reactie binnen twee werkdagen',

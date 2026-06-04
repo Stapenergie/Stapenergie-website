@@ -18,7 +18,7 @@ $cta_titel     = 'CV-ketel vervangen?';
 $cta_subtitel  = 'Plan een vrijblijvend adviesgesprek. Wij beginnen met je situatie.';
 $cta_knop      = 'Plan een adviesgesprek →';
 $cta_knop_url  = '/#contact';
-$cta_garanties = ['ruim 15 jaar ervaring in de energiemarkt', 'Geen productbelang', 'Reactie binnen twee werkdagen'];
+$cta_garanties = ['15+ jaar ervaring in de energiemarkt', 'Geen productbelang', 'Reactie binnen twee werkdagen'];
 
 $faq_label = 'Veelgestelde vragen';
 $faq_titel = 'Veelgestelde vragen over CV-ketels';
@@ -30,7 +30,7 @@ $faq_items = [
   ['vraag' => 'Wat is het verschil tussen HR, hybride en volledig warmtepomp?',
    'antwoord' => 'HR-ketel: alleen gas, 90%+ rendement. Hybride: gas + elektrisch (warmtepomp-assist), 95%+. Volledig warmtepomp: alleen elektriciteit, nog zuiniger maar vereist isolatie en elektrisch vermogen.'],
   ['vraag' => 'Kan ik van HR-ketel overstappen naar warmtepomp later?',
-   'antwoord' => 'Ja! HR-ketel nu (goedkoop), warmtepomp over 10 jaar (goede investering dan). Hybride is een tussenstap — je kunt telkens upgraden zonder volledig systeem opnieuw.'],
+   'antwoord' => 'Ja. HR-ketel nu (goedkoop), warmtepomp over 10 jaar (goede investering dan). Hybride is een tussenstap — je kunt telkens upgraden zonder volledig systeem opnieuw.'],
   ['vraag' => 'Hoe lang duurt cv-ketel vervangen?',
    'antwoord' => 'HR-ketel: meestal 1–2 dagen (plug-and-play). Hybride/warmtepomp: 2–5 dagen (extra werk, radiators/elektra). Geen gas-onderbreking van meer dan 1 dag.'],
 ];
@@ -44,7 +44,7 @@ $hero_variant  = 'sub';
 $hero_bg       = '/images/hero-verduurzaming-hub.jpg';
 $hero_eyebrow  = 'Kennisbank';
 $hero_titel    = 'CV-ketel vervangen: alle opties. <em>Van gas naar groen.</em>';
-$hero_lead     = 'Je CV-ketel is aan vervanging toe? Je hebt keuzes: een nieuwe HR-ketel (snel, goedkoop), hybride (gas + electric), of volledig over op warmtepomp. Lees alles over kosten, subsidies en wat het beste voor je is.';
+$hero_lead     = 'Je CV-ketel is aan vervanging toe? Je hebt keuzes: een nieuwe HR-ketel (snel, goedkoop), hybride (gas + elektrisch), of volledig over op warmtepomp. Lees alles over kosten, subsidies en wat het beste voor je is.';
 $hero_usps     = [];
 $hero_cta      = 'Plan een adviesgesprek →';
 $hero_cta_url  = '/#contact';
@@ -182,7 +182,7 @@ $two_col_titel     = 'ISDE-Subsidie en terugverdientijd';
 $two_col_links     = '<p><strong>HR-ketel:</strong> €0 subsidie. Terugverdientijd: 10+ jaar (alleen gas-besparing).</p>
 <p><strong>Hybride warmtepomp:</strong> €2.125–€3.600 ISDE. Terugverdientijd: 5–8 jaar.</p>
 <p><strong>Volledig warmtepomp:</strong> €2.125–€4.400 ISDE. Terugverdientijd: 8–12 jaar (sterk afhankelijk van isolatie).</p>
-<p><strong>Dubbeling regel:</strong> Combineer isolatie + warmtepomp binnen 24 maanden → dubbele subsidie!</p>
+<p><strong>Dubbeling regel:</strong> Combineer isolatie + warmtepomp binnen 24 maanden levert dubbele subsidie op.</p>
 <p><strong>Warmtefonds:</strong> Laagrentende lening beschikbaar voor alle opties.</p>';
 $two_col_cta       = ['tekst' => 'Meer over subsidies →', 'url' => '/verduurzaming-subsidie/', 'stijl' => 'primair'];
 $two_col_rechts    = '<ul class="checklist">

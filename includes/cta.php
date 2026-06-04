@@ -12,7 +12,7 @@ $cta_titel     = $cta_titel     ?? 'Klaar om de volgende stap te zetten?';
 $cta_subtitel  = $cta_subtitel  ?? 'Vul het aanvraagformulier in en STAP Energie neemt binnen twee werkdagen contact op.';
 $cta_knop      = $cta_knop      ?? 'Aanvraag indienen →';
 $cta_knop_url  = $cta_knop_url  ?? '#aanvraag';
-$cta_garanties = $cta_garanties ?? ['Gecertificeerd EPA-adviseur', 'Officieel geregistreerd in EP-online', 'Reactie binnen twee werkdagen'];
+$cta_garanties = $cta_garanties ?? ['Energieaannemer voor het MKB', 'Onafhankelijk energie-inkoopadvies', 'Reactie binnen twee werkdagen'];
 ?>
 <section class="cta-sectie">
   <div class="cta-inner">
@@ -20,7 +20,7 @@ $cta_garanties = $cta_garanties ?? ['Gecertificeerd EPA-adviseur', 'Officieel ge
     <p><?= htmlspecialchars($cta_subtitel) ?></p>
     <div class="cta-knoppen">
       <a href="<?= htmlspecialchars($cta_knop_url) ?>" class="btn-primair"><?= htmlspecialchars($cta_knop) ?></a>
-      <a href="tel:0648180599" class="btn-sec">Bel ons direct</a>
+      <a href="tel:0617099733" class="btn-sec">Bel ons direct</a>
     </div>
     <?php if ($cta_garanties): ?>
       <div class="cta-garanties">

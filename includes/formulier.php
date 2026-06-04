@@ -18,7 +18,7 @@ $f_pagina = $f_pagina ?? 'onbekend';
 <!-- CSS: zie /assets/css/formulier.css -->
 <div class="sf-card">
   <h3>Vraag vrijblijvend aan</h3>
-  <p class="sf-sub">Energielabel, inkoop &amp; verduurzamingsadvies &mdash; reactie binnen twee werkdagen.</p>
+  <p class="sf-sub">Energielabel, inkoop &amp; verduurzamingsadvies, reactie binnen twee werkdagen.</p>
 
   <form class="sf-stack" id="sf-form" novalidate>
     <input type="hidden" name="pagina" id="sf-pagina" value="">
@@ -92,7 +92,7 @@ $f_pagina = $f_pagina ?? 'onbekend';
       </div>
       <select class="sf-select" id="sf-periode-particulier" name="gewenste_periode" style="margin-top:.1rem;">
         <option value="" selected>Gewenste periode (optioneel)</option>
-        <option value="Spoedaanvraag (binnen 1 week)">Spoedaanvraag &mdash; binnen 1 week</option>
+        <option value="Spoedaanvraag (binnen 1 week)">Spoedaanvraag, binnen 1 week</option>
         <option value="Binnen 1 maand">Binnen 1 maand</option>
         <option value="Geen voorkeur">Geen voorkeur</option>
       </select>
@@ -123,7 +123,7 @@ $f_pagina = $f_pagina ?? 'onbekend';
       </div>
       <select class="sf-select" id="sf-periode-zakelijk" name="gewenste_periode" style="margin-top:.1rem;">
         <option value="" selected>Gewenste periode (optioneel)</option>
-        <option value="Spoedaanvraag (binnen 1 week)">Spoedaanvraag &mdash; binnen 1 week</option>
+        <option value="Spoedaanvraag (binnen 1 week)">Spoedaanvraag, binnen 1 week</option>
         <option value="Binnen 1 maand">Binnen 1 maand</option>
         <option value="Geen voorkeur">Geen voorkeur</option>
       </select>
@@ -311,7 +311,7 @@ $f_pagina = $f_pagina ?? 'onbekend';
           '<circle cx="24" cy="24" r="24" fill="#e8f5ed"/>' +
           '<path d="M14 24.5l7 7 13-14" stroke="#1a5c32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>' +
           '</svg>' +
-          '<h3>Aanvraag ontvangen!</h3>' +
+          '<h3>Aanvraag ontvangen</h3>' +
           '<p>We nemen <strong>binnen twee werkdagen</strong> contact met je op.<br>Je ontvangt ook een bevestiging per e-mail.</p>' +
           '</div>';
         // Scroll terug naar het formulier zodat de succesmelding zichtbaar is

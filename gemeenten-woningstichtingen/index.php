@@ -18,7 +18,7 @@ $cta_titel     = 'Je portefeuille op orde brengen?';
 $cta_subtitel  = 'Neem contact op voor een gesprek over je situatie en een offerte op maat.';
 $cta_knop      = 'Neem contact op →';
 $cta_knop_url  = '#contact';
-$cta_garanties = ['Gecertificeerd EPA-adviseur', 'Portefeuilleaanpak mogelijk', 'Reactie binnen twee werkdagen'];
+$cta_garanties = ['Energieaannemer voor het MKB', 'Portefeuilleaanpak mogelijk', 'Reactie binnen twee werkdagen'];
 
 $faq_label = 'Veelgestelde vragen';
 $faq_titel = 'Vragen van gemeenten en woningstichtingen';
@@ -46,7 +46,7 @@ $hero_eyebrow  = 'Energielabels voor gemeenten & woningstichtingen';
 $hero_titel    = 'Grote portefeuille, veel verplichtingen. <em>STAP brengt overzicht.</em>';
 $hero_lead     = 'Gemeenten en woningstichtingen beheren tientallen tot honderden panden. STAP Energie helpt met een gecoordineerde aanpak voor energielabels en verduurzaming, op portefeuilleniveau, niet pand voor pand.';
 $hero_usps     = [
-  'Gecertificeerd EPA-adviseur',
+  'Energieaannemer voor het MKB',
   'Portefeuilleaanpak, gecoordineerde planning',
   'Energielabels en verduurzamingsadvies gecombineerd',
   'Volumetarief bij meerdere panden',

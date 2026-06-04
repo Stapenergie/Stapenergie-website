@@ -52,7 +52,7 @@ $hero_titel    = 'Energie: jouw grootste variabele kostenpost. <em>En jouw groot
 $hero_lead     = 'STAP Energie helpt bedrijven omschakelen naar een duurzamer, economischer en comfortabeler energiesysteem. Niet als ver toekomstperspectief, maar als verstandige keuze voor nu.';
 $hero_usps     = [
   'Onafhankelijk: ons advies is altijd in je belang, zonder merkvoorkeur',
-  'Gecertificeerd EPA-adviseur voor energielabels',
+  'Energieaannemer voor het MKB voor energielabels',
   'Reactie binnen twee werkdagen',
   'MKB, kantoren, vastgoed en industrie',
 ];
@@ -144,7 +144,7 @@ $kaarten_items   = [
   [
     'titel'     => 'Industrie',
     'icoon'     => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20V8l6-4v4l6-4v4l6-4v16"/><path d="M2 20h20"/></svg>',
-    'tekst'     => 'Industriële bedrijven hebben door hun volumes en complexe verbruiksprofielen baat bij een gedegen inkoopstrategie. STAP Energie heeft ervaring met Europese aanbestedingstrajecten.',
+    'tekst'     => 'Industriële bedrijven hebben door hun volumes en complexe verbruiksprofielen baat bij een gedegen inkoopstrategie. STAP Energie kan ondersteunen bij Europese aanbestedingstrajecten.',
     'cta_tekst' => 'Meer over industrie →',
     'cta_url'   => '/industrie/',
     'cta_stijl' => 'outline',
@@ -175,7 +175,7 @@ $kaarten_items   = [
   [
     'titel' => 'Gedegen marktkennis',
     'icoon' => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>',
-    'tekst' => 'Met jarenlange ervaring in energie-inkooptrajecten voor MKB en industrie kent STAP Energie de markt van binnenuit. Wij begrijpen waarom prijzen bewegen en wat dat betekent voor je strategie.',
+    'tekst' => 'Met 15+ jaar marktervaring kent de oprichter van STAP Energie, Erik, de markt van binnenuit. Wij begrijpen waarom prijzen bewegen en wat dat betekent voor je strategie.',
   ],
   [
     'titel' => 'Één aanspreekpunt',

@@ -2,7 +2,7 @@
 $root = dirname(dirname(__FILE__)) . '/';
 
 $page_titel     = 'Energie-inkoop advies voor bedrijven | STAP Energie';
-$page_beschrijving = 'Wij nemen jouw energie-inkoop over. Contractanalyse, volledig contractbeheer en collectieve inkoop, onafhankelijk, transparant en afgestemd op jouw bedrijfsproces.';
+$page_beschrijving = 'Als energieaannemer nemen wij jouw energie-inkoop over. Contractanalyse, volledig contractbeheer en collectieve inkoop, onafhankelijk, transparant en afgestemd op jouw bedrijfsproces.';
 $page_canonical = 'https://stapenergie.nl/energie-inkoop-advies/';
 
 include $root . 'includes/head.php';
@@ -22,7 +22,7 @@ $hero_variant  = 'split';
 $hero_bg       = '/images/hero-energie-inkoop.jpg';
 $hero_eyebrow  = 'Energie-inkoop advies';
 $hero_titel    = 'Jouw factuur vertelt wat je betaalt. Wij weten of jouw contract ook klopt.';
-$hero_lead     = 'Wij nemen jouw energie-inkoop over. Met kennis van de markt, zonder verborgen agenda, en met ruimte om echt te begrijpen hoe jouw bedrijf werkt.';
+$hero_lead     = 'Als energieaannemer nemen wij jouw energie-inkoop over. Met kennis van de markt, zonder verborgen agenda, en met ruimte om echt te begrijpen hoe jouw bedrijf werkt.';
 $hero_usps     = [
     'Gratis contractanalyse als startpunt',
     'Geen verborgen vergoedingen',

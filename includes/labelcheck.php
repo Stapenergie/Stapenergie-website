@@ -93,7 +93,7 @@ $lc_id       = $lc_id       ?? 'lc';
           resultaat.innerHTML =
             '<h5>&#10003; Geldig energielabel gevonden</h5>' +
             '<p>Label: <strong>' + (data.label || 'onbekend') + '</strong>' +
-            (data.geldig_tot ? ' &mdash; geldig tot ' + data.geldig_tot : '') + '.</p>' +
+            (data.geldig_tot ? ', geldig tot ' + data.geldig_tot : '') + '.</p>' +
             '<p style="margin-top:.5rem;"><a href="/verduurzaming-subsidie/">Bekijk verduurzamingsmogelijkheden &rarr;</a></p>';
         } else {
           resultaat.className = 'labelcheck__resultaat labelcheck__resultaat--geen zichtbaar';

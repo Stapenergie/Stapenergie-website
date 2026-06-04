@@ -18,7 +18,7 @@ $cta_titel     = 'Thuisbatterij geschikt voor je?';
 $cta_subtitel  = 'Plan een vrijblijvend adviesgesprek. Wij beginnen met je situatie.';
 $cta_knop      = 'Plan een adviesgesprek →';
 $cta_knop_url  = '/#contact';
-$cta_garanties = ['ruim 15 jaar ervaring in de energiemarkt', 'Geen productbelang', 'Reactie binnen twee werkdagen'];
+$cta_garanties = ['15+ jaar ervaring in de energiemarkt', 'Geen productbelang', 'Reactie binnen twee werkdagen'];
 
 $faq_label = 'Veelgestelde vragen';
 $faq_titel = 'Veelgestelde vragen over thuisbatterijen';
@@ -30,7 +30,7 @@ $faq_items = [
   ['vraag' => 'Wat is een dynamische stroomcontract?',
    'antwoord' => 'Met een dynamische contract betaalt u elk uur een ander tarief (volgt marktprijs). Slimme batterij-besturing laadt goedkoop en ontlaadt duur → forse besparing. Zonder dynamisch contract, voordeel is minder groot.'],
   ['vraag' => 'Kan ik zelf mijn batterij laden?',
-   'antwoord' => 'Ja, als u stroom van het net wilt kopen voor ’s nachts. Met dynamisch contract: laden in goedkope uren, ontladen in dure uren = winst. Zonder: gewoon laden als het veel kost. Leidt niet tot besparing.'],
+   'antwoord' => 'Ja, als je stroom van het net wilt kopen voor ’s nachts. Met dynamisch contract: laden in goedkope uren, ontladen in dure uren = winst. Zonder: gewoon laden als het veel kost. Leidt niet tot besparing.'],
   ['vraag' => 'Werkt batterij ook zonder zonnepanelen?',
    'antwoord' => 'Ja, technisch wel. Maar voordeel is veel kleiner (alleen dynamisch contract). Met zonnepanelen: maximaal voordeel. Dus batterij is vooral zinvol met panelen of dynamic contract.'],
 ];
@@ -238,4 +238,6 @@ unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two
 
 include $root . 'includes/faq.php';
 include $root . 'includes/cta.php';
-include 
+
+include $root . 'includes/footer.php';
+?>

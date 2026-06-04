@@ -18,7 +18,7 @@ $cta_titel     = 'Laadpaal thuis installeren?';
 $cta_subtitel  = 'Plan een vrijblijvend adviesgesprek. Wij beginnen met je situatie.';
 $cta_knop      = 'Plan een adviesgesprek →';
 $cta_knop_url  = '/#contact';
-$cta_garanties = ['ruim 15 jaar ervaring in de energiemarkt', 'Geen productbelang', 'Reactie binnen twee werkdagen'];
+$cta_garanties = ['15+ jaar ervaring in de energiemarkt', 'Geen productbelang', 'Reactie binnen twee werkdagen'];
 
 $faq_label = 'Veelgestelde vragen';
 $faq_titel = 'Veelgestelde vragen over laadpalen';
@@ -244,4 +244,6 @@ unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two
 
 include $root . 'includes/faq.php';
 include $root . 'includes/cta.php';
-include $root . 'includes/f
+
+include $root . 'includes/footer.php';
+?>

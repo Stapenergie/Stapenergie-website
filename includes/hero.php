@@ -17,14 +17,14 @@
  * VARIANT: hero--sub (subpagina's)
  * ────────────────────────────────
  * $hero_variant  = 'sub'  (standaard)
- * $hero_eyebrow  = 'Gecertificeerd EPA-adviseur'
+ * $hero_eyebrow  = 'Energieaannemer voor het MKB'
  * $hero_titel    = 'Energielabel voor uw woning — <em>snel en persoonlijk</em>'
  * $hero_lead     = 'Of u nu verkoopt...'
  * $hero_usps     = ['Officieel geregistreerd in EP-online', ...]
  * $hero_cta      = 'Label aanvragen →'
  * $hero_cta_url  = '#aanvraag'
  * $hero_cta2     = 'Bel direct'           (optioneel tweede knop)
- * $hero_cta2_url = 'tel:0648180599'
+ * $hero_cta2_url = 'tel:0617099733'
  */
 
 $hero_variant    = $hero_variant    ?? 'sub';
@@ -40,7 +40,7 @@ $hero_link       = $hero_link       ?? [];
 $hero_cta        = $hero_cta        ?? '';
 $hero_cta_url    = $hero_cta_url    ?? '#aanvraag';
 $hero_cta2       = $hero_cta2       ?? 'Bel direct';
-$hero_cta2_url   = $hero_cta2_url   ?? 'tel:0648180599';
+$hero_cta2_url   = $hero_cta2_url   ?? 'tel:0617099733';
 $hero_formulier  = $hero_formulier  ?? false;
 ?>
 

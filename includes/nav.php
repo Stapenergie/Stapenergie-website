@@ -15,9 +15,11 @@
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="flex-shrink:0"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
       <div class="dropdown">
+        <a href="/energie-inkoop-advies/" class="dd-item">Energie-inkoopadvies</a>
         <a href="/energielabels/" class="dd-item">Energielabels</a>
         <a href="/verduurzaming-subsidie/" class="dd-item">Verduurzaming &amp; Subsidie</a>
-        <a href="/energie-inkoop-advies/" class="dd-item">Energie inkoop advies</a>
+        <a href="/verduurzaming-subsidie/zakelijk/" class="dd-item">Verduurzaming Zakelijk</a>
+        <a href="/verduurzaming-subsidie/particulieren/" class="dd-item">Verduurzaming Particulieren</a>
       </div>
     </li>
     <li class="has-dd">
@@ -36,7 +38,23 @@
       </div>
     </li>
     <li><a href="/over-ons/">Over ons</a></li>
-    <li><a href="/kennisbank/">Kennisbank</a></li>
+    <li class="has-dd">
+      <a href="/kennisbank/">Kennisbank
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="flex-shrink:0"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <div class="dropdown">
+        <a href="/kennisbank/" class="dd-item">Overzicht</a>
+        <a href="/kennisbank/warmtepomp/" class="dd-item">Warmtepomp</a>
+        <a href="/kennisbank/isolatie/" class="dd-item">Isolatie</a>
+        <a href="/kennisbank/zonnepanelen/" class="dd-item">Zonnepanelen</a>
+        <a href="/kennisbank/zonneboiler/" class="dd-item">Zonneboiler</a>
+        <a href="/kennisbank/cv-ketel/" class="dd-item">CV-ketel</a>
+        <a href="/kennisbank/thuisbatterij/" class="dd-item">Thuisbatterij</a>
+        <a href="/kennisbank/laadpaal/" class="dd-item">Laadpaal</a>
+        <a href="/kennisbank/airco/" class="dd-item">Airco</a>
+        <a href="/kennisbank/ems/" class="dd-item">Energiemanagement (EMS)</a>
+      </div>
+    </li>
     <li><a href="#contact" class="nav-cta">Gratis gesprek &rarr;</a></li>
   </ul>
   <button class="nav-toggle" id="nav-toggle" aria-label="Menu openen">

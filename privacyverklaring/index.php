@@ -22,7 +22,7 @@ include $root . 'includes/breadcrumb.php';
   <section class="sectie sectie--wit">
     <div class="sectie__inner sectie__inner--smal">
       <h1 class="sectie__titel">Privacyverklaring</h1>
-      <p class="sectie__intro">Versie 1.0 — april 2026</p>
+      <p class="sectie__intro">Versie 1.0, april 2026</p>
 
       <div class="prose">
 
@@ -60,10 +60,10 @@ include $root . 'includes/breadcrumb.php';
         <h2>4. Grondslag voor de verwerking</h2>
         <p>De verwerking van uw gegevens is gebaseerd op:</p>
         <ul>
-          <li><strong>Uitvoering van een overeenkomst</strong> — wanneer u een dienst bij ons afneemt</li>
-          <li><strong>Gerechtvaardigde belangen</strong> — voor het beantwoorden van uw contactverzoek</li>
-          <li><strong>Toestemming</strong> — voor commerciële berichten, indien u daarvoor toestemming heeft gegeven</li>
-          <li><strong>Wettelijke verplichting</strong> — voor registratie van energielabels in het nationale register EP-online</li>
+          <li><strong>Uitvoering van een overeenkomst</strong>: wanneer u een dienst bij ons afneemt</li>
+          <li><strong>Gerechtvaardigde belangen</strong>: voor het beantwoorden van uw contactverzoek</li>
+          <li><strong>Toestemming</strong>: voor commerciële berichten, indien u daarvoor toestemming heeft gegeven</li>
+          <li><strong>Wettelijke verplichting</strong>: voor registratie van energielabels in het nationale register EP-online</li>
         </ul>
 
         <h2>5. Hoe lang bewaren wij uw gegevens?</h2>
@@ -77,9 +77,9 @@ include $root . 'includes/breadcrumb.php';
         <h2>6. Met wie delen wij uw gegevens?</h2>
         <p>Wij verkopen uw gegevens niet aan derden. Wij delen uw gegevens alleen indien dit noodzakelijk is voor de uitvoering van onze dienstverlening:</p>
         <ul>
-          <li><strong>EP-online (RVO)</strong> — voor de registratie van energielabels, wettelijk verplicht</li>
-          <li><strong>Hostingpartij</strong> — onze website wordt gehost bij mijn.host, die als verwerker optreedt</li>
-          <li><strong>E-mailprovider</strong> — voor het verzenden van bevestigings- en notificatiemails</li>
+          <li><strong>EP-online (RVO)</strong>: voor de registratie van energielabels, wettelijk verplicht</li>
+          <li><strong>Hostingpartij</strong>: onze website wordt gehost bij mijn.host, die als verwerker optreedt</li>
+          <li><strong>E-mailprovider</strong>: voor het verzenden van bevestigings- en notificatiemails</li>
         </ul>
         <p>Met verwerkers die uw gegevens namens ons verwerken, sluiten wij een verwerkersovereenkomst.</p>
 
@@ -91,13 +91,13 @@ include $root . 'includes/breadcrumb.php';
         <h2>8. Uw rechten</h2>
         <p>Op grond van de Algemene Verordening Gegevensbescherming (AVG) heeft u de volgende rechten:</p>
         <ul>
-          <li><strong>Inzagerecht</strong> — u kunt opvragen welke gegevens wij van u verwerken</li>
-          <li><strong>Rectificatierecht</strong> — u kunt onjuiste gegevens laten corrigeren</li>
-          <li><strong>Recht op verwijdering</strong> — u kunt verzoeken uw gegevens te wissen, tenzij wij deze wettelijk verplicht zijn te bewaren</li>
-          <li><strong>Recht op beperking</strong> — u kunt de verwerking laten beperken in bepaalde gevallen</li>
-          <li><strong>Recht op dataportabiliteit</strong> — u kunt een kopie van uw gegevens in een gangbaar formaat opvragen</li>
-          <li><strong>Recht van bezwaar</strong> — u kunt bezwaar maken tegen de verwerking op basis van gerechtvaardigde belangen</li>
-          <li><strong>Recht om toestemming in te trekken</strong> — u kunt uw toestemming voor commercieel contact te allen tijde intrekken</li>
+          <li><strong>Inzagerecht</strong>: u kunt opvragen welke gegevens wij van u verwerken</li>
+          <li><strong>Rectificatierecht</strong>: u kunt onjuiste gegevens laten corrigeren</li>
+          <li><strong>Recht op verwijdering</strong>: u kunt verzoeken uw gegevens te wissen, tenzij wij deze wettelijk verplicht zijn te bewaren</li>
+          <li><strong>Recht op beperking</strong>: u kunt de verwerking laten beperken in bepaalde gevallen</li>
+          <li><strong>Recht op dataportabiliteit</strong>: u kunt een kopie van uw gegevens in een gangbaar formaat opvragen</li>
+          <li><strong>Recht van bezwaar</strong>: u kunt bezwaar maken tegen de verwerking op basis van gerechtvaardigde belangen</li>
+          <li><strong>Recht om toestemming in te trekken</strong>: u kunt uw toestemming voor commercieel contact te allen tijde intrekken</li>
         </ul>
         <p>Stuur uw verzoek naar <a href="mailto:info@stapenergie.nl">info@stapenergie.nl</a>. Wij reageren binnen vier weken.</p>
 

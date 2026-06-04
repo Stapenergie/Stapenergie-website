@@ -18,7 +18,7 @@ $cta_titel     = 'Regel je kantoorlabel vandaag nog';
 $cta_subtitel  = 'Vul het aanvraagformulier in en STAP Energie neemt binnen twee werkdagen contact op met een offerte op maat.';
 $cta_knop      = 'Direct aanvragen →';
 $cta_knop_url  = '#aanvragen';
-$cta_garanties = ['Gecertificeerd EPA-adviseur', 'Vaste transparante tarieven', 'Reactie binnen twee werkdagen'];
+$cta_garanties = ['Energieaannemer voor het MKB', 'Vaste transparante tarieven', 'Reactie binnen twee werkdagen'];
 
 $faq_label = 'Veelgestelde vragen';
 $faq_titel = 'Alles over de label C-plicht voor kantoren';
@@ -54,10 +54,10 @@ $hero_eyebrow  = 'Label C-plicht kantoren';
 $hero_titel    = 'Energielabel kantoor aanvragen, <em>snel en transparant geprijsd</em>';
 $hero_lead     = 'Elk kantoor groter dan 100 m² moet minimaal energielabel C hebben. Voldoet je pand niet? Dan mag je het niet meer als kantoor gebruiken. STAP Energie regelt het label snel, transparant geprijsd en persoonlijk.';
 $hero_usps     = [
-  'Gecertificeerd EPA-adviseur',
+  'Energieaannemer voor het MKB',
   'Vaste transparante tarieven',
   'Reactie binnen twee werkdagen',
-  'Officieel geregistreerd in EP-online',
+  'Onafhankelijk energie-inkoopadvies',
 ];
 $hero_cta      = 'Direct aanvragen →';
 $hero_cta_url  = '#aanvragen';
@@ -170,7 +170,7 @@ $stappen_cols    = 4;
 $stappen_items   = [
   ['nummer' => 1, 'titel' => 'Aanvraag & offerte',      'tekst' => 'Je vult het formulier in. Binnen twee werkdagen neemt STAP Energie contact op voor een bevestiging en afspraakplanning.'],
   ['nummer' => 2, 'titel' => 'Documenten aanleveren',   'tekst' => 'Je ontvangt een overzicht van benodigde documenten. Hoe meer je aanlevert, hoe nauwkeuriger de opname.'],
-  ['nummer' => 3, 'titel' => 'Inspectie op locatie',    'tekst' => 'Een gecertificeerd EPA-adviseur bezoekt je kantoor. De opname duurt afhankelijk van de omvang enkele uren.'],
+  ['nummer' => 3, 'titel' => 'Inspectie op locatie',    'tekst' => 'Een EPA-adviseur bezoekt je kantoor. De opname duurt afhankelijk van de omvang enkele uren.'],
   ['nummer' => 4, 'titel' => 'Label ontvangen',         'tekst' => 'Je ontvangt het officieel geregistreerde energielabel. Geldig voor 10 jaar na afgifte.'],
 ];
 include $root . 'includes/components/section-stappen.php';
@@ -210,7 +210,7 @@ $kaarten_items   = [
   [
     'type'      => 'Energie-inkoop',
     'titel'     => 'Bespaar op je energiecontract',
-    'tekst'     => 'Naast een beter label kun je ook direct besparen op je energiekosten. STAP Energie vergelijkt energiecontracten voor zakelijke gebruikers en onderhandelt voor je, zonder extra kosten.',
+    'tekst'     => 'Naast een beter label kun je ook direct besparen op je energiekosten. STAP Energie vergelijkt energiecontracten voor zakelijke gebruikers en regelt de energie-inkoop. Zo kun jij jouw energierekening direct verlagen.',
     'cta_tekst' => 'Meer over energie-inkoop →',
     'cta_url'   => '/energie-inkoop-advies/',
     'cta_stijl' => 'outline',

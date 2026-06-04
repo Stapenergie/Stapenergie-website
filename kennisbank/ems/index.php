@@ -18,7 +18,7 @@ $cta_titel     = 'EMS voor je energiesysteem?';
 $cta_subtitel  = 'Plan een vrijblijvend adviesgesprek. Wij beginnen met je situatie.';
 $cta_knop      = 'Plan een adviesgesprek →';
 $cta_knop_url  = '/#contact';
-$cta_garanties = ['ruim 15 jaar ervaring in de energiemarkt', 'Geen productbelang', 'Reactie binnen twee werkdagen'];
+$cta_garanties = ['15+ jaar ervaring in de energiemarkt', 'Geen productbelang', 'Reactie binnen twee werkdagen'];
 
 $faq_label = 'Veelgestelde vragen';
 $faq_titel = 'Veelgestelde vragen over EMS';
@@ -168,7 +168,7 @@ $two_col_links     = '<p><strong>Zonder dynamisch contract:</strong> Elke kWh ko
 <p><strong>Met dynamisch contract:</strong> Prijs varieert elk uur (bijv. €0,10 in nacht, €0,50 in piek). EMS wordt veel slimmer:</p>
 <p>→ Laadt batterij en auto in goedkope uren (€0,10)<br>
 → Ontlaadt in dure uren (€0,50)<br>
-→ Marge: €0,40 per kWh = groot voordeel!<br>
+→ Marge: €0,40 per kWh is een groot voordeel.<br>
 → Met 3+ systemen: €300–€600/jaar mogelijk</p>
 <p><strong>Aanbieders dynamische contracten:</strong> ANWB, Energiedirect, Feit, Easyenergy.</p>';
 $two_col_cta       = [];
@@ -230,7 +230,7 @@ $two_col_variant   = 'grijs';
 $two_col_label     = 'Zorg';
 $two_col_titel     = 'Privacy en veiligheid van EMS-data';
 $two_col_links     = '<p><strong>Data die EMS verzamelt:</strong> Realtime energiegebruik per systeem, stroom-marktprijzen, weersgegevens.</p>
-<p><strong>Privacy:</strong> Deze gegevens gaan naar cloud-server van EMS-leverancier. Controleer privacybeleid!</p>
+<p><strong>Privacy:</strong> Deze gegevens gaan naar cloud-server van EMS-leverancier. Controleer het privacybeleid.</p>
 <p><strong>Veiligheid:</strong> EMS-hardware moet bestand zijn tegen cyberaanvallen. Moderne EMS hebben encryptie en updates.</p>
 <p><strong>Lokaal vs. Cloud:</strong> Sommige EMS kunnen lokaal werken (minder privacy-risk). Check bij aankoop.</p>
 <p><strong>STAP Energie advies:</strong> Kies betrouwbare merk met sterke security-record.</p>';

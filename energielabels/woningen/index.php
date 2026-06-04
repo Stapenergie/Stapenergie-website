@@ -1,6 +1,6 @@
 <?php
 $root        = dirname(dirname(dirname(__FILE__))) . '/';
-$title       = 'Energielabel Woning Aanvragen | Officieel & Gecertificeerd | STAP Energie';
+$title       = 'Energielabel Woning Aanvragen | Officieel & Erkend | STAP Energie';
 $description = 'Energielabel voor je woning aanvragen? STAP Energie verzorgt officiële energielabels voor alle woningtypen. Vaste prijzen, snel geregeld, heel Nederland.';
 $canonical   = 'https://stapenergie.nl/energielabels/woningen/';
 
@@ -11,10 +11,10 @@ $breadcrumbs = [
 ];
 
 $cta_titel     = 'Klaar om je woninglabel aan te vragen?';
-$cta_subtitel  = 'Vul het aanvraagformulier in en STAP Energie neemt binnen twee werkdagen contact op. Vaste prijs, gecertificeerd adviseur, geen gedoe.';
+$cta_subtitel  = 'Vul het aanvraagformulier in en STAP Energie neemt binnen twee werkdagen contact op. Vaste prijs, adviseur, geen gedoe.';
 $cta_knop      = 'Label aanvragen →';
 $cta_knop_url  = '#aanvraag';
-$cta_garanties = ['Gecertificeerd EPA-adviseur', 'Officieel geregistreerd in EP-online', 'Binnen één week gereed'];
+$cta_garanties = ['Energieaannemer voor het MKB', 'Officieel geregistreerd in EP-online', 'Binnen één week gereed'];
 
 $faq_label = 'Veelgestelde vragen';
 $faq_titel = 'Alles wat je wilt weten over je woninglabel';
@@ -42,7 +42,7 @@ include $root . 'includes/breadcrumb.php';
 // Hero variabelen
 $hero_variant  = 'sub';
 $hero_bg       = '/images/hero-woningen.jpg';
-$hero_eyebrow  = 'Gecertificeerd EPA-adviseur';
+$hero_eyebrow  = 'Energieaannemer voor het MKB';
 $hero_titel    = 'Energielabel voor je woning,<br><em>officieel, snel en persoonlijk</em>';
 $hero_lead     = 'Of je nu verkoopt, verhuurt of wilt weten hoe energiezuinig je woning is, STAP Energie verzorgt het officiële energielabel. Vaste prijs, geen verrassingen.';
 $hero_usps     = [
@@ -54,11 +54,17 @@ $hero_usps     = [
 $hero_cta      = 'Label aanvragen →';
 $hero_cta_url  = '#aanvraag';
 $hero_cta2     = 'Bel direct';
-$hero_cta2_url = 'tel:0648180599';
+$hero_cta2_url = 'tel:0617099733';
 include $root . 'includes/hero.php';
 ?>
 
-<?php include $root . 'includes/trust.php'; ?>
+<?php $trust_items = [
+    ['svg' => '<path d="M8 1.5l1.8 3.6 4 .6-2.9 2.8.7 4L8 10.4l-3.6 1.9.7-4L2.2 5.7l4-.6z"/>', 'label' => 'Officieel erkend', 'sub' => 'Geregistreerd in EP-online'],
+    ['svg' => '<circle cx="8" cy="8" r="6.5"/><path d="M8 4.5v4l2.5 1.5"/>', 'label' => 'Reactie binnen twee werkdagen', 'sub' => 'Snel en persoonlijk'],
+    ['svg' => '<rect x="2" y="4" width="12" height="9" rx="1"/><path d="M5 4V3a3 3 0 016 0v1"/>', 'label' => 'Vaste prijzen', 'sub' => 'Geen verborgen kosten'],
+    ['svg' => '<path d="M2 8c0-3.3 2.7-6 6-6s6 2.7 6 6-2.7 6-6 6-6-2.7-6-6z"/><path d="M5.5 8l1.5 1.5 3.5-3.5"/>', 'label' => 'Energieaannemer voor het MKB', 'sub' => 'Heel Nederland'],
+  ];
+  include $root . 'includes/trust.php'; unset($trust_items); ?>
 
 <!-- WONINGTYPE CARDS -->
 <section class="sectie sectie-wit" id="prijzen">
@@ -139,7 +145,7 @@ include $root . 'includes/hero.php';
     <div class="card-grid card-grid--4 stappen-grid">
       <div class="stap"><div class="stap-nr">1</div><h3>Aanvraag indienen</h3><p>Vul het formulier in. Binnen twee werkdagen nemen we contact op voor een afspraak.</p></div>
       <div class="stap"><div class="stap-nr">2</div><h3>Voorbereiding</h3><p>Je ontvangt een overzicht van wat je kunt klaarzetten voor een soepele opname.</p></div>
-      <div class="stap"><div class="stap-nr">3</div><h3>Opname aan huis</h3><p>Een gecertificeerd EPA-adviseur komt langs. Gemiddeld 1 à 2 uur.</p></div>
+      <div class="stap"><div class="stap-nr">3</div><h3>Opname aan huis</h3><p>Een EPA-adviseur komt langs. Gemiddeld 1 à 2 uur.</p></div>
       <div class="stap"><div class="stap-nr">4</div><h3>Label &amp; adviesrapport</h3><p>Binnen één week ontvang je het officieel geregistreerde label én een verduurzamingsadvies.</p></div>
     </div>
   </div>

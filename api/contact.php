@@ -227,7 +227,7 @@ $prijsZin = $berekendePrijs
     : '';
 
 $bevestigingInhoud = '
-<h2 style="margin:0 0 16px;font-size:20px;color:#1a1a1a;font-weight:700;">Bedankt voor je aanvraag, ' . htmlspecialchars($voornaamKlant) . '!</h2>
+<h2 style="margin:0 0 16px;font-size:20px;color:#1a1a1a;font-weight:700;">Bedankt voor je aanvraag, ' . htmlspecialchars($voornaamKlant) . '.</h2>
 <p style="margin:0 0 16px;font-size:15px;color:#1a1a1a;line-height:1.7;">
   Je aanvraag is goed ontvangen. We nemen <strong>binnen twee werkdagen</strong> contact met je op om je situatie te bespreken.
 </p>

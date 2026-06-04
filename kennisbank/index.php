@@ -17,7 +17,7 @@ $cta_titel     = 'Vragen over je specifieke situatie?';
 $cta_subtitel  = 'Artikel lezen is een goede start. Maar je situatie is altijd specifiek. Plan een vrijblijvend adviesgesprek.';
 $cta_knop      = 'Plan een adviesgesprek →';
 $cta_knop_url  = '/#contact';
-$cta_garanties = ['ruim 15 jaar ervaring in de energiemarkt', 'Geen productbelang', 'Reactie binnen twee werkdagen'];
+$cta_garanties = ['15+ jaar ervaring in de energiemarkt', 'Geen productbelang', 'Reactie binnen twee werkdagen'];
 
 include $root . 'includes/head.php';
 include $root . 'includes/nav.php';
@@ -28,7 +28,7 @@ $hero_variant  = 'sub';
 $hero_bg       = '/images/hero-verduurzaming-hub.jpg';
 $hero_eyebrow  = 'Kennisbank';
 $hero_titel    = 'Praktische gidsen over verduurzaming. <em>Zonder verkoopbelang.</em>';
-$hero_lead     = 'Welke maatregel past bij je woning? Wat kost een warmtepomp echt? Wanneer zijn zonnepanelen de moeite waard? In de kennisbank van STAP Energie vindt u eerlijke informatie — zonder producten te verkopen.';
+$hero_lead     = 'Welke maatregel past bij je woning? Wat kost een warmtepomp echt? Wanneer zijn zonnepanelen de moeite waard? In de kennisbank van STAP Energie vind je eerlijke informatie — zonder producten te verkopen.';
 $hero_usps     = [];
 $hero_cta      = 'Bekijk alle onderwerpen';
 $hero_cta_url  = '#onderwerpen';

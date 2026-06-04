@@ -4,8 +4,8 @@
  * Energielabel bedrijfspand (utiliteit)
  */
 $root        = dirname(dirname(dirname(__FILE__))) . '/';
-$title       = 'Energielabel Bedrijfspand | Officieel & Gecertificeerd | STAP Energie';
-$description = 'Officieel energielabel voor je bedrijfspand. Gecertificeerd EPA-adviseur, vaste prijzen, heel Nederland. Kantoren, winkels, scholen, zorg en meer.';
+$title       = 'Energielabel Bedrijfspand | Officieel & Erkend | STAP Energie';
+$description = 'Officieel energielabel voor je bedrijfspand. Energieaannemer voor het MKB, vaste prijzen, heel Nederland. Kantoren, winkels, scholen, zorg en meer.';
 $canonical   = 'https://stapenergie.nl/energielabels/utiliteit/';
 
 $breadcrumbs = [
@@ -18,7 +18,7 @@ $cta_titel     = 'Klaar om je bedrijfspand te laten opnemen?';
 $cta_subtitel  = 'Vul het aanvraagformulier in en STAP Energie neemt binnen twee werkdagen contact op met een offerte op maat.';
 $cta_knop      = 'Aanvraag indienen →';
 $cta_knop_url  = '#aanvraag';
-$cta_garanties = ['Gecertificeerd EPA-adviseur', 'Officieel geregistreerd in EP-online', 'Reactie binnen twee werkdagen'];
+$cta_garanties = ['Energieaannemer voor het MKB', 'Officieel geregistreerd in EP-online', 'Reactie binnen twee werkdagen'];
 
 $faq_label = 'Veelgestelde vragen';
 $faq_titel = 'Alles over het energielabel voor bedrijfspanden';
@@ -56,7 +56,7 @@ $hero_eyebrow  = 'Officieel & erkend energielabel';
 $hero_titel    = 'Energielabel voor je <em>bedrijfspand</em>';
 $hero_lead     = 'Verplicht bij verkoop, verhuur en oplevering. STAP Energie verzorgt officiële energielabels voor kantoren, winkels, scholen, zorginstellingen en meer, persoonlijk, transparant en snel.';
 $hero_usps     = [
-  'Gecertificeerd EPA-adviseur',
+  'Energieaannemer voor het MKB',
   'Reactie binnen twee werkdagen',
   'Heel Nederland',
   'Officieel geregistreerd in EP-online',
@@ -64,9 +64,16 @@ $hero_usps     = [
 $hero_cta      = 'Aanvraag indienen →';
 $hero_cta_url  = '#aanvraag';
 $hero_cta2     = 'Bel direct';
-$hero_cta2_url = 'tel:0648180599';
+$hero_cta2_url = 'tel:0617099733';
 include $root . 'includes/hero.php';
-include $root . 'includes/trust.php';
+$trust_items = [
+    ['svg' => '<path d="M8 1.5l1.8 3.6 4 .6-2.9 2.8.7 4L8 10.4l-3.6 1.9.7-4L2.2 5.7l4-.6z"/>', 'label' => 'Officieel erkend', 'sub' => 'Geregistreerd in EP-online'],
+    ['svg' => '<circle cx="8" cy="8" r="6.5"/><path d="M8 4.5v4l2.5 1.5"/>', 'label' => 'Reactie binnen twee werkdagen', 'sub' => 'Snel en persoonlijk'],
+    ['svg' => '<rect x="2" y="4" width="12" height="9" rx="1"/><path d="M5 4V3a3 3 0 016 0v1"/>', 'label' => 'Vaste prijzen', 'sub' => 'Geen verborgen kosten'],
+    ['svg' => '<path d="M2 8c0-3.3 2.7-6 6-6s6 2.7 6 6-2.7 6-6 6-6-2.7-6-6z"/><path d="M5.5 8l1.5 1.5 3.5-3.5"/>', 'label' => 'Energieaannemer voor het MKB', 'sub' => 'Heel Nederland'],
+  ];
+  include $root . 'includes/trust.php';
+unset($trust_items);
 
 // ── Wanneer labelplichtig
 $kaarten_variant = 'wit';
@@ -208,7 +215,7 @@ $stappen_cols    = 4;
 $stappen_items   = [
   ['nummer' => 1, 'titel' => 'Aanvraag indienen',      'tekst' => 'Vul het formulier in of bel direct. Binnen twee werkdagen nemen wij contact op voor een offerte en afspraakplanning.'],
   ['nummer' => 2, 'titel' => 'Documenten aanleveren',   'tekst' => 'Je ontvangt een overzicht van benodigde documenten. Hoe meer je aanlevert, hoe nauwkeuriger de opname en hoe gunstiger het label.'],
-  ['nummer' => 3, 'titel' => 'Inspectie op locatie',    'tekst' => 'Een gecertificeerd EPA-adviseur bezoekt je pand. De opname duurt afhankelijk van de omvang enkele uren tot een halve dag.'],
+  ['nummer' => 3, 'titel' => 'Inspectie op locatie',    'tekst' => 'Een EPA-adviseur bezoekt je pand. De opname duurt afhankelijk van de omvang enkele uren tot een halve dag.'],
   ['nummer' => 4, 'titel' => 'Label ontvangen',         'tekst' => 'Je ontvangt het officieel geregistreerde energielabel. Geldig voor 10 jaar na afgifte.'],
 ];
 include $root . 'includes/components/section-stappen.php';
@@ -313,7 +320,7 @@ $kaarten_items   = [
   [
     'type'      => 'Energie-inkoop',
     'titel'     => 'Bespaar structureel op je energiekosten',
-    'tekst'     => 'Met een gunstig energiecontract op maat bespaart je als zakelijke gebruiker aanzienlijk op je energierekening. STAP Energie vergelijkt en onderhandelt voor je, zonder extra kosten.',
+    'tekst'     => 'Met een gunstig energiecontract op maat verlaag je als zakelijke gebruiker je energierekening. STAP Energie vergelijkt energiecontracten en regelt de energie-inkoop voor je.',
     'cta_tekst' => 'Meer over energie-inkoop →',
     'cta_url'   => '/energie-inkoop-advies/',
     'cta_stijl' => 'outline',

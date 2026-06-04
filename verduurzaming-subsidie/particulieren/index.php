@@ -23,7 +23,7 @@ $hero_variant  = 'sub';
 $hero_bg       = '/images/hero-verduurzaming.jpg';
 $hero_eyebrow  = 'Verduurzaming & Subsidie';
 $hero_titel    = 'Subsidie voor het verduurzamen van je woning';
-$hero_lead     = 'Warmtepomp, isolatie, zonneboiler — voor de meeste ingrepen betaalt de overheid een deel mee. In 2026 is daar ruim €500 miljoen voor gereserveerd. Toch laat een groot deel van de woningeigenaren geld liggen. Niet omdat ze niet willen verduurzamen, maar omdat de regels net iets ingewikkelder zijn dan de folder doet vermoeden.';
+$hero_lead     = 'Warmtepomp, isolatie, zonneboiler, voor de meeste ingrepen betaalt de overheid een deel mee. In 2026 is daar ruim €500 miljoen voor gereserveerd. Toch laat een groot deel van de woningeigenaren geld liggen. Niet omdat ze niet willen verduurzamen, maar omdat de regels net iets ingewikkelder zijn dan de folder doet vermoeden.';
 $hero_cta      = 'Bekijk alle subsidies';
 $hero_cta_url  = '#subsidies';
 include $root . 'includes/hero.php';
@@ -40,7 +40,7 @@ $kaarten_items   = [
   [
     'titel'     => 'Isolatie',
     'icoon'     => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>',
-    'tekst'     => 'Dak, vloer, spouwmuur, glas — voor alle vijf typen geldt een vast bedrag per m². Voer je binnen 24 maanden twee of meer maatregelen uit, of combineer je isolatie met een warmtepomp of zonneboiler? Dan verdubbelt het bedrag. Eén van de weinige subsidies waarbij meer doen letterlijk meer oplevert.',
+    'tekst'     => 'Dak, vloer, spouwmuur, glas, voor alle vijf typen geldt een vast bedrag per m². Voer je binnen 24 maanden twee of meer maatregelen uit, of combineer je isolatie met een warmtepomp of zonneboiler? Dan verdubbelt het bedrag. Eén van de weinige subsidies waarbij meer doen letterlijk meer oplevert.',
     'extra'     => '<div style="margin-top:12px;"><span class="badge badge--groen">ISDE</span></div>',
     'cta_tekst' => 'Meer over isolatie',
     'cta_url'   => '/kennisbank/isolatie/',
@@ -58,7 +58,7 @@ $kaarten_items   = [
   [
     'titel'     => 'Zonneboiler & PVT-panelen',
     'icoon'     => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>',
-    'tekst'     => 'Een zonneboiler gebruikt zonwarmte voor je warmwater — onzichtbaar op het dak, merkbaar op de rekening. PVT-panelen combineren dat met stroomopwekking in één systeem. Meer opbrengst per m² dak dan losse systemen. Beide vallen onder de ISDE; voor een zonneboiler begin je al bij €300 subsidie.',
+    'tekst'     => 'Een zonneboiler gebruikt zonwarmte voor je warmwater, onzichtbaar op het dak, merkbaar op de rekening. PVT-panelen combineren dat met stroomopwekking in één systeem. Meer opbrengst per m² dak dan losse systemen. Beide vallen onder de ISDE; voor een zonneboiler begin je al bij €300 subsidie.',
     'extra'     => '<div style="margin-top:12px;"><span class="badge badge--groen">ISDE</span></div>',
     'cta_tekst' => 'Meer over zonneboilers & PVT',
     'cta_url'   => '/kennisbank/zonneboiler/',
@@ -67,7 +67,7 @@ $kaarten_items   = [
   [
     'titel'     => 'Zonnepanelen (PV-installatie)',
     'icoon'     => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>',
-    'tekst'     => 'Standaard zonnepanelen vallen sinds 2023 niet meer onder de ISDE. Wat er nog wel is: een btw-nultarief op de aanschaf. De salderingsregeling — waarbij teruggeleverde stroom weggestreept wordt tegen je verbruik — wordt stapsgewijs afgebouwd. Zonnepanelen blijven de moeite waard, maar reken altijd met actuele cijfers.',
+    'tekst'     => 'Standaard zonnepanelen vallen sinds 2023 niet meer onder de ISDE. Wat er nog wel is: een btw-nultarief op de aanschaf. De salderingsregeling, waarbij teruggeleverde stroom weggestreept wordt tegen je verbruik, wordt stapsgewijs afgebouwd. Zonnepanelen blijven de moeite waard, maar reken altijd met actuele cijfers.',
     'extra'     => '<div style="margin-top:12px;"><span class="badge badge--blauw">Btw-nultarief</span></div>',
     'cta_tekst' => 'Meer over zonnepanelen',
     'cta_url'   => '/kennisbank/zonnepanelen/',
@@ -76,7 +76,7 @@ $kaarten_items   = [
   [
     'titel'     => 'Overige maatregelen',
     'icoon'     => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14"/></svg>',
-    'tekst'     => 'De ISDE dekt meer dan alleen de grote ingrepen. Aansluiting op een warmtenet levert €3.775 op, inclusief verwijdering van de gasaansluiting. Een elektrische kookplaat: €400. Nieuw in 2026: energiezuinige ventilatie is subsidiabel, mits gecombineerd met een isolatiemaatregel — eenmalig €400 extra.',
+    'tekst'     => 'De ISDE dekt meer dan alleen de grote ingrepen. Aansluiting op een warmtenet levert €3.775 op, inclusief verwijdering van de gasaansluiting. Een elektrische kookplaat: €400. Nieuw in 2026: energiezuinige ventilatie is subsidiabel, mits gecombineerd met een isolatiemaatregel, eenmalig €400 extra.',
     'extra'     => '<div style="margin-top:12px;"><span class="badge badge--groen">ISDE</span></div>',
     'cta_tekst' => 'Volledig overzicht op rvo.nl',
     'cta_url'   => 'https://www.rvo.nl/subsidies-financiering/isde/woningeigenaren',
@@ -89,7 +89,7 @@ include $root . 'includes/components/section-kaarten.php';
 ?>
 <section class="sectie sectie--groen-licht">
   <div class="sectie__inner sectie__inner--smal">
-    <p class="sectie-highlight__tekst"><strong>Slim combineren loont:</strong> combineer je twee of meer maatregelen binnen 24 maanden? Dan verdubbelt je isolatiesubsidie — ook als je isolatie combineert met een warmtepomp of zonneboiler. Weinig mensen weten dit op het moment dat ze de eerste offerte aanvragen.</p>
+    <p class="sectie-highlight__tekst"><strong>Slim combineren loont:</strong> combineer je twee of meer maatregelen binnen 24 maanden? Dan verdubbelt je isolatiesubsidie, ook als je isolatie combineert met een warmtepomp of zonneboiler. Weinig mensen weten dit op het moment dat ze de eerste offerte aanvragen.</p>
   </div>
 </section>
 <?php
@@ -98,7 +98,7 @@ include $root . 'includes/components/section-kaarten.php';
 $stappen_variant = 'wit';
 $stappen_label   = 'Aanvragen';
 $stappen_titel   = 'Hoe de aanvraag werkt';
-$stappen_intro   = 'ISDE vraag je altijd achteraf aan — nadat de maatregel is uitgevoerd en betaald. Aanvragen doe je zelf via rvo.nl, gratis en zonder tussenpersoon.';
+$stappen_intro   = 'ISDE vraag je altijd achteraf aan, nadat de maatregel is uitgevoerd en betaald. Aanvragen doe je zelf via rvo.nl, gratis en zonder tussenpersoon.';
 $stappen_cols    = 4;
 $stappen_items   = [
   [
@@ -134,12 +134,12 @@ include $root . 'includes/components/section-stappen.php';
       <?php $card = [
         'titel' => 'Zonnepanelen zonder ISDE',
         'icoon' => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>',
-        'tekst' => 'Zonnepanelen en subsidie worden in veel gesprekken als vanzelfsprekend in één adem genoemd. Dat klopt al een paar jaar niet meer. Standaard PV-panelen vallen buiten de ISDE. Het btw-nultarief is er nog wel, en de salderingsregeling loopt nog — maar daalt elk jaar verder. PVT-panelen, die naast stroom ook warmte opwekken, vallen wél onder de ISDE.',
+        'tekst' => 'Zonnepanelen en subsidie worden in veel gesprekken als vanzelfsprekend in één adem genoemd. Dat klopt al een paar jaar niet meer. Standaard PV-panelen vallen buiten de ISDE. Het btw-nultarief is er nog wel, en de salderingsregeling loopt nog, maar daalt elk jaar verder. PVT-panelen, die naast stroom ook warmte opwekken, vallen wél onder de ISDE.',
       ]; include $root . 'includes/components/card.php'; ?>
       <?php $card = [
         'titel' => 'Doe-het-zelf telt niet mee',
         'icoon' => '<svg viewBox="0 0 24 24" fill="none" stroke="#1a5c32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>',
-        'tekst' => 'ISDE is bedoeld voor professioneel uitgevoerde werkzaamheden. Je moet kunnen aantonen dat een gecertificeerde installateur het werk heeft gedaan — ook als het materiaal zelf perfect voldoet aan alle eisen. Zelf isoleren levert geen subsidie op.',
+        'tekst' => 'ISDE is bedoeld voor professioneel uitgevoerde werkzaamheden. Je moet kunnen aantonen dat een gecertificeerde installateur het werk heeft gedaan, ook als het materiaal zelf perfect voldoet aan alle eisen. Zelf isoleren levert geen subsidie op.',
       ]; include $root . 'includes/components/card.php'; ?>
     </div>
   </div>
@@ -154,13 +154,13 @@ include $root . 'includes/components/section-stappen.php';
     <h2 class="sectie__titel">Weten waar je begint, scheelt achteraf</h2>
     <div class="sectie-two-col">
       <div class="sectie-two-col__tekst">
-        <p>Een energielabel is meer dan een letter op papier. Het officiële rapport dat erbij hoort bevat concrete adviezen over welke maatregelen voor jouw woning het meeste opleveren — van isolatiewaarden tot installaties. Inclusief een verduurzamingsrapport met nuttige aanbevelingen om je woning stap voor stap energiezuiniger te maken.</p>
+        <p>Een energielabel is meer dan een letter op papier. Het officiële rapport dat erbij hoort bevat concrete adviezen over welke maatregelen voor jouw woning het meeste opleveren, van isolatiewaarden tot installaties. Inclusief een verduurzamingsrapport met nuttige aanbevelingen om je woning stap voor stap energiezuiniger te maken.</p>
         <p>Zo weet je vooraf waar de subsidie-euro\'s het hardst werken, in plaats van dat je achteraf terugrekent.</p>
         <p>STAP verzorgt officiële energielabels met verduurzamingsrapport voor woningen in de regio Leusden, Amersfoort en omgeving. Doorgaans binnen twee werkdagen beschikbaar.</p>
         <a href="/energielabels/woningen/" class="knop knop--primair">Vraag een energielabel aan</a>
       </div>
       <div class="sectie-two-col__media">
-        <img src="/images/erik-advies.jpg" alt="STAP Energie energieadviseur" loading="lazy">
+        <img src="/images/erik-portret.jpg" alt="STAP Energie energieadviseur" loading="lazy">
       </div>
     </div>
   </div>
@@ -173,15 +173,15 @@ $faq_titel = 'Veelgestelde vragen over verduurzamingssubsidie';
 $faq_items = [
   [
     'vraag'    => 'Voor welke maatregelen kan ik ISDE aanvragen?',
-    'antwoord' => 'Warmtepompen, zonneboilers, PVT-panelen, vijf typen isolatie, elektrische kookplaten, aansluiting op een warmtenet en — nieuw in 2026 — energiezuinige ventilatie gecombineerd met isolatie. Het volledige overzicht staat op <a href="https://www.rvo.nl/subsidies-financiering/isde/woningeigenaren" target="_blank" rel="noopener">rvo.nl</a>.',
+    'antwoord' => 'Warmtepompen, zonneboilers, PVT-panelen, vijf typen isolatie, elektrische kookplaten, aansluiting op een warmtenet en, nieuw in 2026, energiezuinige ventilatie gecombineerd met isolatie. Het volledige overzicht staat op <a href="https://www.rvo.nl/subsidies-financiering/isde/woningeigenaren" target="_blank" rel="noopener">rvo.nl</a>.',
   ],
   [
     'vraag'    => 'Moet ik eigenaar én bewoner zijn?',
-    'antwoord' => 'Ja. ISDE is uitsluitend voor eigenaar-bewoners. Een tweede woning, vakantiewoning of verhuurde woning komt niet in aanmerking — ook niet als je er zelf de kosten voor maakt.',
+    'antwoord' => 'Ja. ISDE is uitsluitend voor eigenaar-bewoners. Een tweede woning, vakantiewoning of verhuurde woning komt niet in aanmerking, ook niet als je er zelf de kosten voor maakt.',
   ],
   [
     'vraag'    => 'Kan ik subsidie aanvragen voor zonnepanelen?',
-    'antwoord' => 'Standaard PV-panelen vallen niet meer onder de ISDE. Het btw-nultarief geldt nog wel. PVT-panelen — die naast stroom ook warmte opwekken — vallen wél onder de ISDE.',
+    'antwoord' => 'Standaard PV-panelen vallen niet meer onder de ISDE. Het btw-nultarief geldt nog wel. PVT-panelen, die naast stroom ook warmte opwekken, vallen wél onder de ISDE.',
   ],
   [
     'vraag'    => 'Ik heb al betaald. Kan ik nog aanvragen?',

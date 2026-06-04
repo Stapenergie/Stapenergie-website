@@ -18,7 +18,7 @@ $cta_titel     = 'Zonneboiler geschikt voor je?';
 $cta_subtitel  = 'Plan een vrijblijvend adviesgesprek. Wij beginnen met je situatie.';
 $cta_knop      = 'Plan een adviesgesprek →';
 $cta_knop_url  = '/#contact';
-$cta_garanties = ['ruim 15 jaar ervaring in de energiemarkt', 'Geen productbelang', 'Reactie binnen twee werkdagen'];
+$cta_garanties = ['15+ jaar ervaring in de energiemarkt', 'Geen productbelang', 'Reactie binnen twee werkdagen'];
 
 $faq_label = 'Veelgestelde vragen';
 $faq_titel = 'Veelgestelde vragen over zonneboilers';
@@ -28,7 +28,7 @@ $faq_items = [
   ['vraag' => 'Wat is het verschil tussen zonneboiler en PVT-panelen?',
    'antwoord' => 'Zonneboiler gebruikt warmte direct via vloeistof in buizen. PVT-panelen (Photovoltaic-Thermal) doen zowel elektriciteit (stroom) en warmte in één paneel. PVT is efficiënter totaal, maar duurder.'],
   ['vraag' => 'Kan ik zonneboiler combineren met warmtepomp?',
-   'antwoord' => 'Ja! Zonneboiler wärmt water op, warmtepomp kan dit water verder verwarmen of gebruiken voor verwarming. Goede synergie, beide gunstig subsidie.'],
+   'antwoord' => 'Ja. Zonneboiler warmt water op, warmtepomp kan dit water verder verwarmen of gebruiken voor verwarming. Goede synergie, beide gunstig subsidie.'],
   ['vraag' => 'Hoeveel warmwatergebruik is nodig?',
    'antwoord' => 'Zonneboiler loont best voor gezinnen met hoog dagelijks warm-watergebruik (douche, bad, wasmachine). Kleine gezinnen/alleenstaanden: minder rendement.'],
   ['vraag' => 'Hoe oud moet mijn huisinstallatie zijn?',
@@ -44,7 +44,7 @@ $hero_variant  = 'sub';
 $hero_bg       = '/images/hero-verduurzaming-hub.jpg';
 $hero_eyebrow  = 'Kennisbank';
 $hero_titel    = 'Zonneboiler: kosteloos warm water. <em>Door de zon verwarmd.</em>';
-$hero_lead     = 'Een zonneboiler haalt warmte uit zonneschijn en warmt je water op. Dit bespaard 50–60% gas voor warm water. Kost €1.500–€3.500 en wordt terugbetaald in 5–8 jaar. Ideaal als u al zonnepanelen hebt of veel warm water gebruikt.';
+$hero_lead     = 'Een zonneboiler haalt warmte uit zonneschijn en warmt je water op. Dit bespaart 50–60% gas voor warm water. Kost €1.500–€3.500 en wordt terugbetaald in 5–8 jaar. Ideaal als je al zonnepanelen hebt of veel warm water gebruikt.';
 $hero_usps     = [];
 $hero_cta      = 'Plan een adviesgesprek →';
 $hero_cta_url  = '/#contact';
@@ -146,7 +146,7 @@ unset($two_col_variant, $two_col_label, $two_col_titel, $two_col_omgekeerd, $two
 $two_col_variant   = 'wit';
 $two_col_label     = 'Synergie';
 $two_col_titel     = 'Zonneboiler + zonnepanelen';
-$two_col_links     = '<p><strong>Goede combinatie:</strong> Als u al zonnepanelen hebt (of plant), een zonneboiler toevoegen vergroot voordeel.</p>
+$two_col_links     = '<p><strong>Goede combinatie:</strong> Als je al zonnepanelen hebt (of plant), een zonneboiler toevoegen vergroot het voordeel.</p>
 <p><strong>Totale energiebesparing:</strong> Zonnepanelen voor elektriciteit + zonneboiler voor warm water = veel minder afhankelijk van het net.</p>
 <p><strong>Elektrische waterverwarming in zomer:</strong> Zonneboiler levert warmte. Zonnepanelen leveren elektriciteit. Samen optimaal.</p>
 <p><strong>Met batterij & EMS:</strong> Nog slimmer: EMS voert elektriciteit van zonnepanelen prioriteit warmwater, daarna rest.</p>';
