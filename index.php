@@ -95,7 +95,7 @@ $kaarten_items   = [
   ],
   [
     'titel'     => 'Weet je het niet zeker?',
-    'foto'      => '/images/erik-zakelijk.jpg',
+    'foto'      => '/images/erik-zakelijk-kaart.jpg',
     'foto_alt'  => 'Kennismakingsgesprek met Erik',
     'tekst'     => 'Plan een gratis kennismakingsgesprek zonder verplichtingen. Ik denk graag met je mee over de beste eerste stap.',
     'cta_tekst' => 'Plan gesprek →',
