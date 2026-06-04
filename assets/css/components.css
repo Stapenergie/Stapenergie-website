@@ -19,7 +19,7 @@
 .card--uitgelicht { border: 2px solid var(--groen); }
 .card--klikbaar { cursor: pointer; }
 
-.card__foto { width: 100%; height: 200px; object-fit: cover; display: block; }
+.card__foto { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; display: block; }
 
 .card__body { padding: 24px; display: flex; flex-direction: column; flex: 1; }
 .card__icoon { width: 44px; height: 44px; min-width: 44px; max-width: 44px; background: var(--groen-card); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; overflow: hidden; flex-shrink: 0; }
