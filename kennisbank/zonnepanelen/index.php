@@ -15,7 +15,7 @@ $breadcrumbs = [
 ];
 
 $cta_titel     = 'Zonnepanelen geschikt voor je?';
-$cta_subtitel  = 'Plan een vrijblijvend adviesgesprek. Wij beginnen met je situatie.';
+$cta_subtitel  = 'Plan een vrijblijvend adviesgesprek. Wij beginnen met jouw situatie.';
 $cta_knop      = 'Plan een adviesgesprek →';
 $cta_knop_url  = '/#contact';
 $cta_garanties = ['15+ jaar ervaring in de energiemarkt', 'Geen productbelang', 'Reactie binnen twee werkdagen'];
