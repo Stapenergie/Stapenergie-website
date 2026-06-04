@@ -4,6 +4,7 @@ env:
 name: STAP Energie Deploy Pipeline
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -11,6 +12,7 @@ on:
       - '**.html'
       - '**.php'
       - '**.css'
+      - '**.htaccess'
       - 'images/**'
       - 'content/**.json'
       - '.github/workflows/deploy.yml'
