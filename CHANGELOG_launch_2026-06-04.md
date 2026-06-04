@@ -33,3 +33,7 @@ Doorgevoerd na akkoord van Erik. Niets gedeployed; wijzigingen staan in de bronc
 - Zonnepanelen-kennisbankpagina: inhoudelijke herziening (foute bedragen/verbruiken, te technisch) — apart oppakken.
 - `test_sync_check.txt` definitief verwijderen bij deploy.
 - Open VRAAG-punten uit het rapport die geen "doen" kregen (bv. educatieve bandbreedtes) zijn als akkoord/bevestigd verwerkt.
+
+## Aanvulling — tegelfoto homepage + CSS-cache
+- Homepage-tegel "Weet je het niet zeker?": foto werd op brede schermen tot een lage strook geknepen (vaste `height:200px`), waardoor het hoofd werd afgekapt. Opgelost door `.card__foto` van vaste hoogte naar `aspect-ratio: 16/10` (toont foto vrijwel volledig, consistent op mobiel en desktop). Originele foto `erik-zakelijk.jpg` behouden; losse `erik-zakelijk-kaart.jpg` ongebruikt.
+- ROOT CAUSE van het "niets verandert"-rondje: CSS laadt met cache-bust `?v=N` in `includes/head.php`. Zonder ophogen blijft de oude CSS gecachet. Opgehoogd: `components.css?v=10`, `footer.css?v=3`. **Regel: bij elke CSS-edit het ?v= ophogen.**
