@@ -26,11 +26,11 @@
 <link rel="stylesheet" href="/assets/css/trust.css?v=6">
 <link rel="stylesheet" href="/assets/css/cards.css?v=2">
 <link rel="stylesheet" href="/assets/css/sections.css?v=12">
-<link rel="stylesheet" href="/assets/css/components.css?v=9">
+<link rel="stylesheet" href="/assets/css/components.css?v=10">
 <link rel="stylesheet" href="/assets/css/faq.css?v=4">
 <link rel="stylesheet" href="/assets/css/formulier.css?v=5">
 <link rel="stylesheet" href="/assets/css/cta.css?v=2">
-<link rel="stylesheet" href="/assets/css/footer.css?v=2">
+<link rel="stylesheet" href="/assets/css/footer.css?v=3">
 <link rel="stylesheet" href="/assets/css/labelcheck.css?v=2">
 </head>
 <body>
