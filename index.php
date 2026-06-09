@@ -2,6 +2,42 @@
 /**
  * index.php — Homepage STAP Energie
  */
+
+// ── /robots.txt en /sitemap.xml: de catch-all rewrite stuurt deze hierheen,
+//    dus serveren we ze hier direct met het juiste content-type.
+$__uri = strtok($_SERVER['REQUEST_URI'] ?? '', '?');
+if ($__uri === '/robots.txt') {
+    header('Content-Type: text/plain; charset=UTF-8');
+    echo "User-agent: *\n";
+    echo "Allow: /\n";
+    echo "Disallow: /api/\n";
+    echo "Disallow: /config/\n";
+    echo "Disallow: /includes/\n\n";
+    echo "Sitemap: https://stapenergie.nl/sitemap.xml\n";
+    exit;
+}
+if ($__uri === '/sitemap.xml') {
+    header('Content-Type: application/xml; charset=UTF-8');
+    $__base  = 'https://stapenergie.nl';
+    $__paths = [
+        '/', '/energie-inkoop-advies/', '/energielabels/', '/energielabels/utiliteit/',
+        '/energielabels/woningen/', '/verduurzaming-subsidie/', '/verduurzaming-subsidie/zakelijk/',
+        '/verduurzaming-subsidie/particulieren/', '/zakelijk/', '/particulieren/', '/mkb/',
+        '/vastgoed/', '/makelaars/', '/kantoren/', '/gemeenten-woningstichtingen/', '/industrie/',
+        '/over-ons/', '/kennisbank/', '/kennisbank/warmtepomp/', '/kennisbank/isolatie/',
+        '/kennisbank/zonnepanelen/', '/kennisbank/zonneboiler/', '/kennisbank/cv-ketel/',
+        '/kennisbank/thuisbatterij/', '/kennisbank/laadpaal/', '/kennisbank/airco/',
+        '/kennisbank/ems/', '/privacyverklaring/',
+    ];
+    echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
+    echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
+    foreach ($__paths as $__p) {
+        echo '  <url><loc>' . $__base . $__p . '</loc></url>' . "\n";
+    }
+    echo '</urlset>' . "\n";
+    exit;
+}
+
 $root        = dirname(__FILE__) . '/';
 $title       = 'STAP Energie | Onafhankelijk Energie-inkoopadvies voor het MKB';
 $description = 'Onafhankelijk energie-inkoopadvies voor MKB-ondernemers. Contractoptimalisatie, slimmer inkopen, energielabels en verduurzaming. 15+ jaar ervaring aan de leverancierszijde. Heel Nederland.';
