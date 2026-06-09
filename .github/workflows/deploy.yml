@@ -13,6 +13,8 @@ on:
       - '**.php'
       - '**.css'
       - '**.htaccess'
+      - '**.txt'
+      - '**.xml'
       - 'images/**'
       - 'content/**.json'
       - '.github/workflows/deploy.yml'
