@@ -40,7 +40,7 @@ if ($__uri === '/sitemap.xml') {
 
 $root        = dirname(__FILE__) . '/';
 $title       = 'STAP Energie | Onafhankelijk Energie-inkoopadvies voor het MKB';
-$description = 'Onafhankelijk energie-inkoopadvies voor MKB-ondernemers. Contractoptimalisatie, slimmer inkopen, energielabels en verduurzaming. 15+ jaar ervaring aan de leverancierszijde. Heel Nederland.';
+$description = 'Onafhankelijk energie-inkoopadvies voor MKB-ondernemers. Slimmer inkopen, betere contracten, energielabels en verduurzaming. 15+ jaar marktervaring.';
 $canonical   = 'https://stapenergie.nl/';
 
 $cta_titel     = 'Klaar voor jouw eerste STAP?';
@@ -55,6 +55,7 @@ include $root . 'includes/nav.php';
 // ── Hero groot (homepage variant met formulier)
 $hero_variant   = 'groot';
 $hero_bg        = '/images/hero.jpg';
+$hero_alt       = 'Luchtfoto van een bedrijventerrein met kantoorpanden en zonnepanelen op de daken bij zonsopkomst';
 $hero_label     = 'De onafhankelijke energieaannemer voor het MKB';
 $hero_titel     = 'Jij onderneemt.<br>Wij regelen <em>je energie</em>.';
 $hero_desc      = 'STAP Energie is de onafhankelijke energieaannemer voor MKB-ondernemers. Wij regelen je energiezaken, van energie-inkoop en energielabels tot verduurzaming, zodat jij je kunt richten op je bedrijf.';

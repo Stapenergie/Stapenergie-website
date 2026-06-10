@@ -29,6 +29,7 @@
 
 $hero_variant    = $hero_variant    ?? 'sub';
 $hero_bg         = $hero_bg         ?? '';
+$hero_alt        = $hero_alt        ?? '';
 $hero_label      = $hero_label      ?? '';
 $hero_eyebrow    = $hero_eyebrow    ?? '';
 $hero_titel      = $hero_titel      ?? '';
@@ -48,7 +49,7 @@ $hero_formulier  = $hero_formulier  ?? false;
 <!-- HERO GROOT (homepage) -->
 <section class="hero hero--groot" id="hero">
   <?php if ($hero_bg): ?>
-    <img src="<?= htmlspecialchars($hero_bg) ?>" alt="" class="hero-bg" fetchpriority="high">
+    <img src="<?= htmlspecialchars($hero_bg) ?>" alt="<?= htmlspecialchars($hero_alt) ?>" class="hero-bg" fetchpriority="high">
   <?php endif; ?>
   <div class="hero-overlay"></div>
   <div class="hero-inner">
