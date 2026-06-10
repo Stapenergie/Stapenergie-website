@@ -32,5 +32,8 @@
 <link rel="stylesheet" href="/assets/css/cta.css?v=2">
 <link rel="stylesheet" href="/assets/css/footer.css?v=3">
 <link rel="stylesheet" href="/assets/css/labelcheck.css?v=2">
+<?php if (!empty($head_extra)): ?>
+<?= $head_extra ?>
+<?php endif; ?>
 </head>
 <body>

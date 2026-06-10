@@ -44,6 +44,7 @@
       </a>
       <div class="dropdown">
         <a href="/kennisbank/" class="dd-item">Overzicht</a>
+        <a href="/kennisbank/analyses/" class="dd-item">Analyses</a>
         <a href="/kennisbank/warmtepomp/" class="dd-item">Warmtepomp</a>
         <a href="/kennisbank/isolatie/" class="dd-item">Isolatie</a>
         <a href="/kennisbank/zonnepanelen/" class="dd-item">Zonnepanelen</a>
