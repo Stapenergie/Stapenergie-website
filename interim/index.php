@@ -82,7 +82,7 @@ include $root . 'includes/hero.php';
 <section class="sectie sectie--wit">
   <div class="interim">
     <h2>Waar ik kan worden ingezet</h2>
-    <p>Als generalistische energiespecialist ben ik breed inzetbaar. Een paar terreinen waar mijn ervaring direct van pas komt: het opzetten en professionaliseren van commerciële teams in het energiedomein, van structuur tot prestatie. Prijs- en inkoopstrategie en verdienmodellen, van contractvormen en marges tot een scherpe en uitlegbare propositie. De implementatie van energiemanagementsystemen, meerdere keren begeleid van keuze tot inrichting. Positionering en herpositionering, waar ik vaak heb meegedacht en meerdere trajecten van dichtbij heb vormgegeven. En aanbestedingsondersteuning bij tendertrajecten van grotere organisaties.</p>
+    <p>Als generalistische energiespecialist ben ik breed inzetbaar. Een paar terreinen waar mijn ervaring direct van pas komt: het opzetten en professionaliseren van commerciële teams in het energiedomein, van structuur tot prestatie. Prijs- en inkoopstrategie en verdienmodellen, van contractvormen en marges tot een scherpe en uitlegbare propositie. De implementatie van energiemanagementsystemen heb ik meerdere keren begeleid van keuze tot inrichting. Positionering en herpositionering, heb bij meerdere trajecten meedeacht en van dichtbij vormgegeven. En aanbestedingsondersteuning bij tendertrajecten van grotere organisaties.</p>
     <p>Zit jouw vraagstuk daar niet precies tussen? Grote kans dat zeventien jaar in de energiemarkt er alsnog raakvlak mee heeft. Leg het me voor.</p>
 
     <h2>Trackrecord</h2>
