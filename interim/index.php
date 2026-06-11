@@ -52,9 +52,9 @@ $head_extra = '<meta name="robots" content="index, follow, max-image-preview:lar
   . '<script type="application/ld+json">' . json_encode($ld, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) . '</script>';
 
 $cta_titel     = 'Een vraagstuk waar dit van pas komt?';
-$cta_subtitel  = 'Leg het me vrijblijvend voor, dan kijken we samen of en hoe mijn ervaring kan helpen.';
-$cta_knop      = 'Neem contact op →';
-$cta_knop_url  = '/#contact';
+$cta_subtitel  = 'Bel of mail me direct, dan kijken we samen of en hoe mijn ervaring kan helpen.';
+$cta_knop      = 'Mail direct →';
+$cta_knop_url  = 'mailto:info@stapenergie.nl';
 $cta_garanties = ['17 jaar in de energiemarkt', 'Direct inzetbaar, geen tussenlaag', 'Vrijblijvend gesprek'];
 
 include $root . 'includes/head.php';
@@ -86,7 +86,9 @@ include $root . 'includes/hero.php';
     <p>Zit jouw vraagstuk daar niet precies tussen? Grote kans dat zeventien jaar in de energiemarkt er alsnog raakvlak mee heeft. Leg het me voor.</p>
 
     <h2>Trackrecord</h2>
-    <p>Zeventien jaar aan de leverancierszijde van de energiemarkt. Bij SEFE Energy bouwde ik vanaf 2012 het partnerkanaal op, van nul naar 125 actieve partners. Bij NieuweStroom leidde ik als Manager Sales de verkooporganisatie naar 100.000 aansluitingen en 30 medewerkers. Die ervaring zet ik nu in voor jouw vraagstuk.</p>
+    <p>Zeventien jaar in de energiemarkt, aan zowel de directe als de indirecte kant. Ik begon in 2012 bij SEFE Energy, waar ik meebouwde aan de Nederlandse organisatie en het eerste contract in Nederland mijn handtekening droeg. Daar bouwde ik het partnerkanaal op van nul naar 125 actieve partners, goed voor 75 procent van de omzet. In 2023 stapte ik over naar NieuweStroom als Manager Sales en liet ik de verkooporganisatie groeien naar 100.000 aansluitingen en 30 medewerkers.</p>
+    <p>De markt ken ik ook van binnenuit op het gebied van spelregels en integriteit. In 2019 werkte ik mee aan de gedragscode consumentenzaken van Energie-Nederland, die de branche nog steeds hanteert. Ook ben ik lid geweest van de Raad van Toezicht van CIRE, het integriteitsregister van de energiesector.</p>
+    <p>In die jaren leerde ik hoe contracten, marges en clausules werken, hoe je commerciële teams opbouwt en laat presteren, hoe je energiemanagementsystemen implementeert, en hoe je een propositie positioneert en herpositioneert als de markt verandert. Die combinatie is schaars. Er zijn genoeg specialisten op een deelterrein; er zijn weinig mensen die de commerciële, strategische en organisatorische kant van de energiemarkt in samenhang overzien. Dat is precies wat ik aan tafel breng.</p>
 
     <h2>Hoe het werkt</h2>
     <p>Je huurt mij direct in, voor de periode en de inzet die passen. Korte lijnen, geen overhead, en iemand die de markt en de mensen erin kent.</p>
